@@ -1,0 +1,150 @@
+{
+  "name": "MAGIC",
+  "version": 1,
+  "width": 32,
+  "height": 32,
+  "status": "approved portrait; not integrated into a native game project",
+  "method": "Recovered declared palette indices from the 32×32 chart; visually reviewed source and flags; explicitly redrew chin cell (13,28) as solid light using native pixel authoring. Not a zero-flag recovery; no whole-image resizing.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      0,
+      ""
+    ],
+    [
+      13,
+      "######"
+    ],
+    [
+      11,
+      "##########"
+    ],
+    [
+      9,
+      "###sssss######"
+    ],
+    [
+      8,
+      "##sss####ss###s#"
+    ],
+    [
+      7,
+      "##s#########s#ss#"
+    ],
+    [
+      7,
+      "#s#####sssoo###s##"
+    ],
+    [
+      6,
+      "#s###sssooooooo####"
+    ],
+    [
+      6,
+      "####sooooooooooo####"
+    ],
+    [
+      5,
+      "####soooooooooooos###"
+    ],
+    [
+      5,
+      "###soooooooooooooos###"
+    ],
+    [
+      5,
+      "##soo####oooo####oos##"
+    ],
+    [
+      5,
+      "s#oosoosssoosssoosoo#s"
+    ],
+    [
+      5,
+      "s#o#######oo#######o#s"
+    ],
+    [
+      5,
+      "####ooosso##ossooo####"
+    ],
+    [
+      4,
+      "so#o#oo##oo#soo##oo#o#os"
+    ],
+    [
+      4,
+      "so#o#oso#oo#ooo#oso#o#os"
+    ],
+    [
+      4,
+      "soso#ooooo#oo#ooooo#osos"
+    ],
+    [
+      4,
+      "#osoo#####oooo#####ooso#"
+    ],
+    [
+      5,
+      "#soooooso#ss#osooooss#"
+    ],
+    [
+      6,
+      "#soossooossooossoos#"
+    ],
+    [
+      6,
+      "#soos#ssssssss#soos#"
+    ],
+    [
+      7,
+      "#soo##oooooo##oos#"
+    ],
+    [
+      7,
+      "#sooos#oooo#sooos#"
+    ],
+    [
+      8,
+      "#soooossssoooos#"
+    ],
+    [
+      9,
+      "#soooossoooos#"
+    ],
+    [
+      10,
+      "#soooooooos#"
+    ],
+    [
+      10,
+      "##soooooos##"
+    ],
+    [
+      11,
+      "#osssssso#"
+    ],
+    [
+      12,
+      "#oooooo#"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}

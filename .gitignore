@@ -1,0 +1,43 @@
+# Generated game builds and exports
+build/
+dist/
+out/
+*.gb
+*.gbc
+*.pocket
+
+# Local emulator saves and snapshots
+*.sav
+*.srm
+*.rtc
+*.state
+*.state.*
+
+# Dependencies, local toolchains, and caches
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.cache/
+.local/
+
+# Local environment files; retain shareable examples
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.*.example
+
+# Logs, editor backups, and OS metadata
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Keep native .gbsproj/.gbsres resources, custom plugins, authored art,
+# editable pixel data, generation studies, and portrait review evidence tracked.

@@ -1,0 +1,159 @@
+{
+  "name": "CHOMPA",
+  "version": 2,
+  "width": 32,
+  "height": 32,
+  "status": "revised portrait concept; pending user approval; not integrated into a native game project",
+  "method": "New close-up likeness study and grid reconstruction followed by explicit native whole-cell authoring of beanie, glasses, chin beard and neck. Raw rejection preserved; not a passed exact extraction.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF",
+    "g": "#A6CE39FF"
+  },
+  "threeColorPalette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#F2C18DFF",
+    "o": "#F2C18DFF",
+    "g": "#A6CE39FF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#E0F8CF",
+    "o": "#E0F8CF",
+    "g": "#86C06C"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      12,
+      "####"
+    ],
+    [
+      10,
+      "##gggg###"
+    ],
+    [
+      9,
+      "#ggggggggg##"
+    ],
+    [
+      8,
+      "#g#####gggggg#"
+    ],
+    [
+      8,
+      "##ggggg##ggggg#"
+    ],
+    [
+      7,
+      "#ggggggggg##gggg#"
+    ],
+    [
+      6,
+      "#gggggggggggg##ggg#"
+    ],
+    [
+      6,
+      "#gg##sss##ggggg##g#"
+    ],
+    [
+      5,
+      "#gg#ssoooss##ggggg#g#"
+    ],
+    [
+      5,
+      "#g#soooooooss##gggg#g#"
+    ],
+    [
+      5,
+      "#g#ooooooooooss#gggg##"
+    ],
+    [
+      4,
+      "#g#sooooo#######s#gggg#"
+    ],
+    [
+      4,
+      "#g#ooosos#ooooo####gggg#"
+    ],
+    [
+      4,
+      "#g#os##o##o##oo#os##ggg#"
+    ],
+    [
+      5,
+      "#########oo#oo#oos#gggg#"
+    ],
+    [
+      4,
+      "###oo#o#o#ooooo#ooos#ggg#"
+    ],
+    [
+      5,
+      "##oo#o#o#######ooos##gg#"
+    ],
+    [
+      5,
+      "##oooo#ooo##ooooooo#o#g#"
+    ],
+    [
+      6,
+      "######s#s#osoooooos#og#"
+    ],
+    [
+      6,
+      "###o##ssoooosooooosoo#"
+    ],
+    [
+      6,
+      "#oosooosoooo#sooooso##"
+    ],
+    [
+      6,
+      "#oososo#####ssoooos##"
+    ],
+    [
+      7,
+      "#os#s#oooo#osooosso#"
+    ],
+    [
+      7,
+      "#oos#oo###oooooos#o#"
+    ],
+    [
+      8,
+      "#oos#sssoooooos##o#"
+    ],
+    [
+      8,
+      "#ssoossoooosos##o#"
+    ],
+    [
+      9,
+      "#sooooooss#s##so#"
+    ],
+    [
+      10,
+      "ss##########so#"
+    ],
+    [
+      11,
+      "#s########ss#"
+    ],
+    [
+      14,
+      "ssssooos"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}

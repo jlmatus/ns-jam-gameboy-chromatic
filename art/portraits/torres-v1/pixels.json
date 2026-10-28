@@ -1,0 +1,150 @@
+{
+  "name": "TORRES",
+  "version": 1,
+  "width": 32,
+  "height": 32,
+  "status": "approved portrait; not integrated into a native game project",
+  "method": "Recovered declared palette indices from the 32×32 chart, then explicitly re-authored mixed eye, ear, temple and beard cells as whole native pixels. Raw grid rejection preserved; not a passed exact extraction and not whole-image downscaling.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      0,
+      ""
+    ],
+    [
+      14,
+      "#####"
+    ],
+    [
+      12,
+      "#########"
+    ],
+    [
+      10,
+      "#############"
+    ],
+    [
+      9,
+      "###############"
+    ],
+    [
+      8,
+      "#################"
+    ],
+    [
+      7,
+      "######o#s##ss#####"
+    ],
+    [
+      7,
+      "#####soossooosos###"
+    ],
+    [
+      6,
+      "####ssssoooooooooss#"
+    ],
+    [
+      6,
+      "###sssooooooooooooo##"
+    ],
+    [
+      6,
+      "#ssssooo####sooossoo#"
+    ],
+    [
+      6,
+      "#sssooo#oos##oos###o#"
+    ],
+    [
+      6,
+      "##ssooooos#ssosssoo##"
+    ],
+    [
+      5,
+      "#oo#oooos##o#sooso#so#"
+    ],
+    [
+      4,
+      "#osossooooosssooo##o#o"
+    ],
+    [
+      4,
+      "#oosssoooooosoooosssoo"
+    ],
+    [
+      4,
+      "#osos#soooooosoooooooo"
+    ],
+    [
+      5,
+      "#oss#soooooso#ooosooo"
+    ],
+    [
+      5,
+      "#oos#ssoooooos#s#ooos"
+    ],
+    [
+      6,
+      "##s##ssooos####sooo#"
+    ],
+    [
+      7,
+      "#o#ss#so##ooos##oo#"
+    ],
+    [
+      8,
+      "o##s##o#ssssso#os#"
+    ],
+    [
+      8,
+      "os####s#ooooos#s##"
+    ],
+    [
+      8,
+      "oo#####ooos#sos##"
+    ],
+    [
+      9,
+      "oo#####soo#oos##"
+    ],
+    [
+      9,
+      "ooo#####s###s##"
+    ],
+    [
+      10,
+      "ooss#########"
+    ],
+    [
+      11,
+      "oosss######"
+    ],
+    [
+      12,
+      "ossooo##s"
+    ],
+    [
+      15,
+      "oooos"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}

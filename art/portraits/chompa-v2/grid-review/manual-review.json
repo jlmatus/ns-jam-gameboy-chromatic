@@ -1,0 +1,1998 @@
+{
+  "rawStatus": "reject-grid-fidelity",
+  "rawReport": "chompa.json",
+  "geometry": {
+    "cellsPerAxis": 32,
+    "acquiredCells": 1024,
+    "horizontalGuides": 33,
+    "verticalGuides": 33
+  },
+  "rawRejectedCoordinates": [
+    [
+      15,
+      14
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      15,
+      15
+    ],
+    [
+      16,
+      15
+    ],
+    [
+      18,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      8,
+      17
+    ],
+    [
+      9,
+      17
+    ],
+    [
+      10,
+      17
+    ],
+    [
+      10,
+      18
+    ],
+    [
+      11,
+      19
+    ],
+    [
+      14,
+      19
+    ],
+    [
+      9,
+      21
+    ],
+    [
+      10,
+      26
+    ],
+    [
+      10,
+      28
+    ],
+    [
+      11,
+      28
+    ],
+    [
+      13,
+      28
+    ],
+    [
+      12,
+      29
+    ]
+  ],
+  "rawReviewCoordinates": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      0,
+      11
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      0,
+      16
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      18,
+      16
+    ],
+    [
+      0,
+      18
+    ],
+    [
+      1,
+      18
+    ],
+    [
+      0,
+      19
+    ],
+    [
+      0,
+      20
+    ],
+    [
+      0,
+      21
+    ],
+    [
+      0,
+      23
+    ],
+    [
+      0,
+      26
+    ],
+    [
+      0,
+      27
+    ],
+    [
+      1,
+      27
+    ],
+    [
+      0,
+      29
+    ],
+    [
+      1,
+      29
+    ],
+    [
+      0,
+      30
+    ],
+    [
+      1,
+      30
+    ],
+    [
+      7,
+      30
+    ]
+  ],
+  "adjudication": "The generated chart is rejected. Twenty flagged occupied interiors were visually inspected with the full source, native candidate, overlay and cell sheet. Final features use deliberately authored whole-cell glasses, connected hat fill with one brim seam, and a broader under-chin beard. No mixed features are silently averaged into a claimed exact recovery. Twenty-six flagged empty cells were reviewed as margin fringing; raw flags remain unchanged.",
+  "occupiedCellDecisions": [
+    {
+      "x": 15,
+      "y": 14,
+      "rawStatus": "reject",
+      "candidate": "o",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "rawStatus": "reject",
+      "candidate": "o",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 18,
+      "y": 16,
+      "rawStatus": "review",
+      "candidate": "o",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "rawStatus": "reject",
+      "candidate": "o",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "o",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 11,
+      "y": 19,
+      "rawStatus": "reject",
+      "candidate": "o",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 14,
+      "y": 19,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 10,
+      "y": 26,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 10,
+      "y": 28,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 11,
+      "y": 28,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 13,
+      "y": 28,
+      "rawStatus": "reject",
+      "candidate": "s",
+      "final": "#",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    },
+    {
+      "x": 12,
+      "y": 29,
+      "rawStatus": "reject",
+      "candidate": "#",
+      "final": "s",
+      "reason": "Explicit native feature construction or whole-cell flattening after source review."
+    }
+  ],
+  "nativeAuthoringOperations": [
+    {
+      "x": 12,
+      "y": 2,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 2,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 16,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 17,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 18,
+      "y": 3,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 16,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 18,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 19,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 20,
+      "y": 4,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 16,
+      "y": 5,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 17,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 18,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 19,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 20,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 21,
+      "y": 5,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 16,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 17,
+      "y": 6,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 18,
+      "y": 6,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 19,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 21,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 22,
+      "y": 6,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 15,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 16,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 18,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 19,
+      "y": 7,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 20,
+      "y": 7,
+      "before": "#",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 21,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 22,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 23,
+      "y": 7,
+      "before": "g",
+      "after": "g",
+      "reason": "Rebuild beanie interior as one connected lime cluster."
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 16,
+      "y": 5,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 17,
+      "y": 6,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 18,
+      "y": 6,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 19,
+      "y": 7,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 20,
+      "y": 7,
+      "before": "g",
+      "after": "#",
+      "reason": "One stepped beanie brim seam; remove competing interior marks."
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "before": "s",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "before": "s",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "before": "s",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 14,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 15,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 16,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 17,
+      "y": 17,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 18,
+      "y": 17,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "before": "s",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "before": "s",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 6,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 7,
+      "y": 17,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "before": "s",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 6,
+      "y": 18,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 7,
+      "y": 18,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 8,
+      "y": 18,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "before": "o",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "before": "#",
+      "after": "o",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 18,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 6,
+      "y": 19,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 7,
+      "y": 19,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 8,
+      "y": 19,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 10,
+      "y": 19,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 19,
+      "before": "o",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "before": "#",
+      "after": "#",
+      "reason": "Explicitly draw angular lens rims, hooded pupils and bridge as whole native cells."
+    },
+    {
+      "x": 11,
+      "y": 19,
+      "before": "#",
+      "after": "#",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 14,
+      "y": 19,
+      "before": "s",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "before": "s",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 10,
+      "y": 26,
+      "before": "s",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 10,
+      "y": 28,
+      "before": "#",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 11,
+      "y": 28,
+      "before": "#",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 13,
+      "y": 28,
+      "before": "s",
+      "after": "#",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 12,
+      "y": 29,
+      "before": "#",
+      "after": "s",
+      "reason": "Replace mixed cheek/chin source marks with an intentional single-cell color."
+    },
+    {
+      "x": 12,
+      "y": 28,
+      "before": "s",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 13,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 14,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 15,
+      "y": 28,
+      "before": "s",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 16,
+      "y": 28,
+      "before": "s",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 17,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 18,
+      "y": 28,
+      "before": "s",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 19,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 21,
+      "y": 28,
+      "before": "#",
+      "after": "#",
+      "reason": "Dense short beard below the chin; avoid scattered checkerboard stubble."
+    },
+    {
+      "x": 13,
+      "y": 29,
+      "before": "s",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 14,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 15,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 16,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 17,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 18,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 19,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 20,
+      "y": 29,
+      "before": "#",
+      "after": "#",
+      "reason": "Continue the broad under-chin beard band."
+    },
+    {
+      "x": 0,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 1,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 2,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 3,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 4,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 5,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 6,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 7,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 8,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 9,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 10,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 11,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 12,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 13,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 14,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 15,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 16,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 17,
+      "y": 30,
+      "before": "s",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 18,
+      "y": 30,
+      "before": "s",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 19,
+      "y": 30,
+      "before": "s",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "before": "o",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 22,
+      "y": 30,
+      "before": "#",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 24,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 25,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 26,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 27,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 28,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 29,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 30,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 31,
+      "y": 30,
+      "before": ".",
+      "after": ".",
+      "reason": "Redraw a short neck inside the portrait frame."
+    },
+    {
+      "x": 14,
+      "y": 30,
+      "before": ".",
+      "after": "s",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 15,
+      "y": 30,
+      "before": ".",
+      "after": "s",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 16,
+      "y": 30,
+      "before": ".",
+      "after": "s",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 17,
+      "y": 30,
+      "before": ".",
+      "after": "s",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 18,
+      "y": 30,
+      "before": ".",
+      "after": "o",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 19,
+      "y": 30,
+      "before": ".",
+      "after": "o",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "before": ".",
+      "after": "o",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "before": ".",
+      "after": "s",
+      "reason": "Short neck under the broader chin; bottom row remains transparent."
+    }
+  ],
+  "reviewSheet": {
+    "file": "occupied-review-cells.png",
+    "order": "left-to-right, top-to-bottom, ten cells per row",
+    "coordinates": [
+      [
+        15,
+        14
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        18,
+        15
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        18,
+        16
+      ],
+      [
+        8,
+        17
+      ],
+      [
+        9,
+        17
+      ],
+      [
+        10,
+        17
+      ],
+      [
+        10,
+        18
+      ],
+      [
+        11,
+        19
+      ],
+      [
+        14,
+        19
+      ],
+      [
+        9,
+        21
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        10,
+        28
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        13,
+        28
+      ],
+      [
+        12,
+        29
+      ]
+    ]
+  },
+  "paletteVariants": "Color concept: four opaque colors. Restricted version: lime, ink and skin light, merging skin-shadow and skin-light indices. Native source encodes only the restricted variant.",
+  "integration": "Not imported; no ROM, emulator or hardware verification."
+}

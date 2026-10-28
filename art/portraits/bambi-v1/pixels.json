@@ -1,0 +1,150 @@
+{
+  "name": "BAMBI",
+  "version": 1,
+  "width": 32,
+  "height": 32,
+  "status": "approved portrait; not integrated into a native game project",
+  "method": "Recovered one declared palette index per chart cell after visual review of the source, native candidate, overlay, and flagged guide-edge crops. No whole-image downscaling.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      0,
+      ""
+    ],
+    [
+      13,
+      "#####"
+    ],
+    [
+      11,
+      "#########"
+    ],
+    [
+      9,
+      "######sss####"
+    ],
+    [
+      8,
+      "########ssss###"
+    ],
+    [
+      7,
+      "##ss######soos###"
+    ],
+    [
+      7,
+      "##sos####ooooos###"
+    ],
+    [
+      6,
+      "##sooossooooooos###"
+    ],
+    [
+      6,
+      "##oooooooooooooss###"
+    ],
+    [
+      6,
+      "#soooooooooooooos###"
+    ],
+    [
+      6,
+      "#sooooooooooooooo###"
+    ],
+    [
+      6,
+      "#sooooooooooooooos##"
+    ],
+    [
+      6,
+      "soos###oooo####soo##"
+    ],
+    [
+      5,
+      "s#oooosssoosssoooso#s"
+    ],
+    [
+      5,
+      "o#oo###ssooss###sso#oo"
+    ],
+    [
+      5,
+      "o#osos##ooos#o#o#so#so"
+    ],
+    [
+      5,
+      "osoooooooossooooooo#so"
+    ],
+    [
+      5,
+      "#oooooosooosooooooos#"
+    ],
+    [
+      5,
+      "#ooooosooooossooooos#"
+    ],
+    [
+      5,
+      "sooooss#sss#ossoooos#"
+    ],
+    [
+      5,
+      "sooossoo###ooossoooss"
+    ],
+    [
+      5,
+      "#soos#oooooooo#sooos#"
+    ],
+    [
+      5,
+      "#sooo#sssssss#soooss#"
+    ],
+    [
+      6,
+      "#soosoooooooosooss#"
+    ],
+    [
+      6,
+      "##soooossssooooss##"
+    ],
+    [
+      7,
+      "###sooossoooos###"
+    ],
+    [
+      8,
+      "###sooooooss###"
+    ],
+    [
+      9,
+      "###sosssos###"
+    ],
+    [
+      10,
+      "s##ssss###s"
+    ],
+    [
+      12,
+      "s######s"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}

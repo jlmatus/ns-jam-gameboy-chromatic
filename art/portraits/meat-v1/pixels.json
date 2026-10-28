@@ -1,0 +1,153 @@
+{
+  "name": "MEAT",
+  "version": 1,
+  "width": 32,
+  "height": 32,
+  "status": "fictional placeholder; pending user approval; not integrated into a native game project",
+  "likeness": "Invented appearance; no photograph of MEAT was supplied.",
+  "photoReference": null,
+  "replaceWhenPhotoAvailable": true,
+  "method": "Built-in Image Generation study and grid reconstruction followed by explicit whole-cell cleanup at the chin and cheek. Raw rejection preserved; not a passed exact extraction.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      0,
+      ""
+    ],
+    [
+      13,
+      "######"
+    ],
+    [
+      10,
+      "############"
+    ],
+    [
+      9,
+      "##############"
+    ],
+    [
+      8,
+      "################"
+    ],
+    [
+      7,
+      "###########sss####"
+    ],
+    [
+      7,
+      "##sss#####ssoss###"
+    ],
+    [
+      6,
+      "###sosssssoooooss###"
+    ],
+    [
+      6,
+      "##soooooooooooooss##"
+    ],
+    [
+      6,
+      "#ssoooooooooooooos##"
+    ],
+    [
+      6,
+      "#sos##oooooooooooss#"
+    ],
+    [
+      6,
+      "#sooo###oooooooooos#"
+    ],
+    [
+      6,
+      "#ooooos#sooo####so##"
+    ],
+    [
+      5,
+      "ssoos##sssoos##oooo#ss"
+    ],
+    [
+      4,
+      "so#os#o##ssooss###so#oos"
+    ],
+    [
+      4,
+      "so#oooo##oooos#o#o#o#sos"
+    ],
+    [
+      4,
+      "sosoooooosooosoooooo#sos"
+    ],
+    [
+      5,
+      "#sooooosooossoooooossos"
+    ],
+    [
+      5,
+      "#ooooossooooossoooos##"
+    ],
+    [
+      6,
+      "sooooss#sss#ossooos#"
+    ],
+    [
+      6,
+      "sooosooo###oooosooso"
+    ],
+    [
+      6,
+      "sooss#ooooooo##soos"
+    ],
+    [
+      6,
+      "ssooo##sssss##ososs"
+    ],
+    [
+      7,
+      "sooos#oooooo#oooss"
+    ],
+    [
+      7,
+      "#sooosssssssoooss#"
+    ],
+    [
+      8,
+      "#soooosssooooss#"
+    ],
+    [
+      9,
+      "#sooossooooss#"
+    ],
+    [
+      10,
+      "#soooooooss#"
+    ],
+    [
+      11,
+      "##ssssos##"
+    ],
+    [
+      12,
+      "s######o"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}
