@@ -1,0 +1,35 @@
+{
+  "_resourceType": "scene",
+  "id": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+  "_index": 0,
+  "type": "BASKETBALL",
+  "name": "Managua Court",
+  "symbol": "scene_managua_court",
+  "x": 0,
+  "y": 0,
+  "width": 50,
+  "height": 18,
+  "backgroundId": "6231bc9a-9779-5931-9790-7f4ddda5e771",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "jam-court"
+  ],
+  "spritePaletteIds": [
+    "jam-home",
+    "jam-away",
+    "jam-ball",
+    "jam-marker",
+    "jam-net",
+    "default-sprite",
+    "default-sprite",
+    "default-sprite"
+  ],
+  "autoFadeSpeed": 1,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "",
+  "playerSpriteSheetId": "25e7d402-46fc-4bf4-8739-68ce25071799"
+}

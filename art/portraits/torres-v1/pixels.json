@@ -3,8 +3,8 @@
   "version": 1,
   "width": 32,
   "height": 32,
-  "status": "approved portrait; not integrated into a native game project",
-  "method": "Recovered declared palette indices from the 32×32 chart, then explicitly re-authored mixed eye, ear, temple and beard cells as whole native pixels. Raw grid rejection preserved; not a passed exact extraction and not whole-image downscaling.",
+  "status": "approved portrait; integrated into native selection menu",
+  "method": "Recovered declared palette indices from the 32\u00d732 chart, then explicitly re-authored mixed eye, ear, temple and beard cells as whole native pixels. Raw grid rejection preserved; not a passed exact extraction and not whole-image downscaling.",
   "palette": {
     ".": "#00000000",
     "#": "#22303AFF",

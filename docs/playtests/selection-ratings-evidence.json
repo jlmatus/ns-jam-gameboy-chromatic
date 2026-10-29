@@ -1,0 +1,1352 @@
+{
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "sizeBytes": 131072,
+    "sha256": "d40b377142f3b6688709f3c74975a07ad9d5c9a0fdeeaa823d21acf4332bb017",
+    "title": "NICASOURCEJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 2,
+    "declaredRomSizeBytes": 131072,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 172,
+    "computedHeaderChecksum": 172,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "recording": {
+    "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2",
+    "sessionId": "aa5c43d465fc45a290ebfaa289ea85f3",
+    "status": "stopped",
+    "branchId": "branch-0001",
+    "frame": 2308,
+    "totalFrames": 2308,
+    "bytesUsed": 754757,
+    "limits": {
+      "sampleEveryFrames": 10,
+      "recentFrameCount": 64,
+      "maxBytes": 67108864,
+      "maxFrames": 36000,
+      "maxWallTimeMs": 900000
+    },
+    "eventCount": 711,
+    "eventDigest": "ba74ece50c373593041e37e123ab915075b94a3084f41df2599a656f44466983",
+    "branches": [
+      {
+        "branchId": "branch-0001",
+        "frame": 2308
+      }
+    ],
+    "outcome": "passed",
+    "reason": "All six portraits/ratings inspected; MEAT 00 + CHOMPA 74 Winners Stay lineup launched after prolonged menu time; movement, pass, pause and return-to-lineup verified; CHOMPA Warm-up lineup launched, human three and CPU two observed, no sampled OAM overages."
+  },
+  "inputs": {
+    "initialFrames": 120,
+    "actions": [
+      {
+        "rpc": 44,
+        "startFrame": 120,
+        "endFrame": 126,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 45,
+        "startFrame": 126,
+        "endFrame": 132,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 46,
+        "startFrame": 132,
+        "endFrame": 138,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 47,
+        "startFrame": 138,
+        "endFrame": 144,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 48,
+        "startFrame": 144,
+        "endFrame": 150,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 49,
+        "startFrame": 150,
+        "endFrame": 156,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 50,
+        "startFrame": 156,
+        "endFrame": 162,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 51,
+        "startFrame": 162,
+        "endFrame": 168,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 52,
+        "startFrame": 168,
+        "endFrame": 174,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 53,
+        "startFrame": 174,
+        "endFrame": 180,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 54,
+        "startFrame": 180,
+        "endFrame": 360,
+        "frames": 180,
+        "buttons": []
+      },
+      {
+        "rpc": 55,
+        "startFrame": 360,
+        "endFrame": 366,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 56,
+        "startFrame": 366,
+        "endFrame": 372,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 57,
+        "startFrame": 372,
+        "endFrame": 378,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 58,
+        "startFrame": 378,
+        "endFrame": 384,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 59,
+        "startFrame": 384,
+        "endFrame": 390,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 60,
+        "startFrame": 390,
+        "endFrame": 396,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 61,
+        "startFrame": 396,
+        "endFrame": 402,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 62,
+        "startFrame": 402,
+        "endFrame": 408,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 63,
+        "startFrame": 408,
+        "endFrame": 414,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 64,
+        "startFrame": 414,
+        "endFrame": 420,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 65,
+        "startFrame": 420,
+        "endFrame": 426,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 66,
+        "startFrame": 426,
+        "endFrame": 432,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 67,
+        "startFrame": 432,
+        "endFrame": 438,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 68,
+        "startFrame": 438,
+        "endFrame": 444,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 69,
+        "startFrame": 444,
+        "endFrame": 450,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 70,
+        "startFrame": 450,
+        "endFrame": 456,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 71,
+        "startFrame": 456,
+        "endFrame": 462,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 72,
+        "startFrame": 462,
+        "endFrame": 468,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 73,
+        "startFrame": 468,
+        "endFrame": 474,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 74,
+        "startFrame": 474,
+        "endFrame": 480,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 75,
+        "startFrame": 480,
+        "endFrame": 486,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 76,
+        "startFrame": 486,
+        "endFrame": 492,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 77,
+        "startFrame": 492,
+        "endFrame": 498,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 78,
+        "startFrame": 498,
+        "endFrame": 504,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 79,
+        "startFrame": 504,
+        "endFrame": 510,
+        "frames": 6,
+        "buttons": [
+          "start"
+        ]
+      },
+      {
+        "rpc": 80,
+        "startFrame": 510,
+        "endFrame": 590,
+        "frames": 80,
+        "buttons": []
+      },
+      {
+        "rpc": 83,
+        "startFrame": 590,
+        "endFrame": 625,
+        "frames": 35,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 84,
+        "startFrame": 625,
+        "endFrame": 631,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 85,
+        "startFrame": 631,
+        "endFrame": 701,
+        "frames": 70,
+        "buttons": []
+      },
+      {
+        "rpc": 86,
+        "startFrame": 701,
+        "endFrame": 707,
+        "frames": 6,
+        "buttons": [
+          "select"
+        ]
+      },
+      {
+        "rpc": 87,
+        "startFrame": 707,
+        "endFrame": 713,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 88,
+        "startFrame": 713,
+        "endFrame": 719,
+        "frames": 6,
+        "buttons": [
+          "b"
+        ]
+      },
+      {
+        "rpc": 89,
+        "startFrame": 719,
+        "endFrame": 725,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 93,
+        "startFrame": 725,
+        "endFrame": 731,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 94,
+        "startFrame": 731,
+        "endFrame": 737,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 95,
+        "startFrame": 737,
+        "endFrame": 743,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 96,
+        "startFrame": 743,
+        "endFrame": 749,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 97,
+        "startFrame": 749,
+        "endFrame": 755,
+        "frames": 6,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 98,
+        "startFrame": 755,
+        "endFrame": 761,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 99,
+        "startFrame": 761,
+        "endFrame": 767,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 100,
+        "startFrame": 767,
+        "endFrame": 773,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 101,
+        "startFrame": 773,
+        "endFrame": 779,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 102,
+        "startFrame": 779,
+        "endFrame": 785,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 103,
+        "startFrame": 785,
+        "endFrame": 791,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 104,
+        "startFrame": 791,
+        "endFrame": 797,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 105,
+        "startFrame": 797,
+        "endFrame": 803,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 106,
+        "startFrame": 803,
+        "endFrame": 809,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 107,
+        "startFrame": 809,
+        "endFrame": 815,
+        "frames": 6,
+        "buttons": [
+          "left"
+        ]
+      },
+      {
+        "rpc": 108,
+        "startFrame": 815,
+        "endFrame": 821,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 109,
+        "startFrame": 821,
+        "endFrame": 827,
+        "frames": 6,
+        "buttons": [
+          "a"
+        ]
+      },
+      {
+        "rpc": 110,
+        "startFrame": 827,
+        "endFrame": 833,
+        "frames": 6,
+        "buttons": []
+      },
+      {
+        "rpc": 111,
+        "startFrame": 833,
+        "endFrame": 839,
+        "frames": 6,
+        "buttons": [
+          "start"
+        ]
+      },
+      {
+        "rpc": 112,
+        "startFrame": 839,
+        "endFrame": 924,
+        "frames": 85,
+        "buttons": [
+          "right"
+        ]
+      },
+      {
+        "rpc": 113,
+        "startFrame": 924,
+        "endFrame": 948,
+        "frames": 24,
+        "buttons": [
+          "b"
+        ]
+      },
+      {
+        "rpc": 114,
+        "startFrame": 948,
+        "endFrame": 1108,
+        "frames": 160,
+        "buttons": []
+      },
+      {
+        "rpc": 115,
+        "startFrame": 1108,
+        "endFrame": 2308,
+        "frames": 1200,
+        "buttons": []
+      }
+    ]
+  },
+  "oam": [
+    {
+      "view": "oam",
+      "frame": 590,
+      "totalObjects": 40,
+      "visibleObjects": 15,
+      "matchedObjects": 15,
+      "returnedObjects": 15,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 0,
+          "y": 54,
+          "tile": 128,
+          "attributes": 4,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 68,
+          "y": 83,
+          "tile": 124,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 75,
+          "y": 96,
+          "tile": 64,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 67,
+          "y": 96,
+          "tile": 62,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 75,
+          "y": 80,
+          "tile": 68,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 67,
+          "y": 80,
+          "tile": 66,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 62,
+          "y": 88,
+          "tile": 102,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 54,
+          "y": 88,
+          "tile": 64,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 62,
+          "y": 72,
+          "tile": 118,
+          "attributes": 8,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 54,
+          "y": 72,
+          "tile": 116,
+          "attributes": 8,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 59,
+          "y": 62,
+          "tile": 126,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 94,
+          "y": 61,
+          "tile": 32,
+          "attributes": 8,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 86,
+          "y": 61,
+          "tile": 30,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 94,
+          "y": 45,
+          "tile": 34,
+          "attributes": 8,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 86,
+          "y": 45,
+          "tile": 36,
+          "attributes": 8,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 5,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          72,
+          73,
+          74,
+          75,
+          76,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 2308,
+      "totalObjects": 40,
+      "visibleObjects": 15,
+      "matchedObjects": 15,
+      "returnedObjects": 15,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 0,
+          "y": 54,
+          "tile": 128,
+          "attributes": 4,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 68,
+          "y": 83,
+          "tile": 124,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 74,
+          "y": 95,
+          "tile": 108,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 66,
+          "y": 95,
+          "tile": 106,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 74,
+          "y": 79,
+          "tile": 96,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 66,
+          "y": 79,
+          "tile": 94,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 62,
+          "y": 88,
+          "tile": 92,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 54,
+          "y": 88,
+          "tile": 102,
+          "attributes": 40,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 62,
+          "y": 72,
+          "tile": 98,
+          "attributes": 40,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 54,
+          "y": 72,
+          "tile": 104,
+          "attributes": 40,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 59,
+          "y": 62,
+          "tile": 126,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 94,
+          "y": 60,
+          "tile": 0,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 86,
+          "y": 60,
+          "tile": 2,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 94,
+          "y": 44,
+          "tile": 4,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 86,
+          "y": 44,
+          "tile": 6,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 5,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          72,
+          73,
+          74,
+          75,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98
+        ]
+      }
+    }
+  ],
+  "samples": [
+    {
+      "frame": 120,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/05933341712489be07767a2aa6449ec512e4e6a642ed43d75c33e63934e6b7e9.png",
+      "sha256": "05933341712489be07767a2aa6449ec512e4e6a642ed43d75c33e63934e6b7e9",
+      "retainedPath": "docs/playtests/selection-ratings-120.png"
+    },
+    {
+      "frame": 126,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/a6a02ffa02fb4e4d704f3dc3bfcc212dcf4128c853c62bf0189f557275954ecb.png",
+      "sha256": "a6a02ffa02fb4e4d704f3dc3bfcc212dcf4128c853c62bf0189f557275954ecb"
+    },
+    {
+      "frame": 132,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/a6a02ffa02fb4e4d704f3dc3bfcc212dcf4128c853c62bf0189f557275954ecb.png",
+      "sha256": "a6a02ffa02fb4e4d704f3dc3bfcc212dcf4128c853c62bf0189f557275954ecb",
+      "retainedPath": "docs/playtests/selection-ratings-132.png"
+    },
+    {
+      "frame": 138,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/75a4a8cf4c888e519e484a72b3b2316a0b525a2a35f0039284ef267e3840906d.png",
+      "sha256": "75a4a8cf4c888e519e484a72b3b2316a0b525a2a35f0039284ef267e3840906d"
+    },
+    {
+      "frame": 144,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/75a4a8cf4c888e519e484a72b3b2316a0b525a2a35f0039284ef267e3840906d.png",
+      "sha256": "75a4a8cf4c888e519e484a72b3b2316a0b525a2a35f0039284ef267e3840906d",
+      "retainedPath": "docs/playtests/selection-ratings-144.png"
+    },
+    {
+      "frame": 150,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/372158e2bb398a2b5088c0ec70cb25cfff84f3935d69d371943cf263b22585f4.png",
+      "sha256": "372158e2bb398a2b5088c0ec70cb25cfff84f3935d69d371943cf263b22585f4"
+    },
+    {
+      "frame": 156,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/372158e2bb398a2b5088c0ec70cb25cfff84f3935d69d371943cf263b22585f4.png",
+      "sha256": "372158e2bb398a2b5088c0ec70cb25cfff84f3935d69d371943cf263b22585f4",
+      "retainedPath": "docs/playtests/selection-ratings-156.png"
+    },
+    {
+      "frame": 162,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c.png",
+      "sha256": "d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c"
+    },
+    {
+      "frame": 168,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c.png",
+      "sha256": "d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c",
+      "retainedPath": "docs/playtests/selection-ratings-168.png"
+    },
+    {
+      "frame": 174,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114.png",
+      "sha256": "23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114"
+    },
+    {
+      "frame": 180,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114.png",
+      "sha256": "23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114",
+      "retainedPath": "docs/playtests/selection-ratings-180.png"
+    },
+    {
+      "frame": 360,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114.png",
+      "sha256": "23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114"
+    },
+    {
+      "frame": 366,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/973e37c7bcb036027ddd3eaa3c5c02f03604dd8e3f7a389ebbb1520c5fae2b5e.png",
+      "sha256": "973e37c7bcb036027ddd3eaa3c5c02f03604dd8e3f7a389ebbb1520c5fae2b5e"
+    },
+    {
+      "frame": 372,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/973e37c7bcb036027ddd3eaa3c5c02f03604dd8e3f7a389ebbb1520c5fae2b5e.png",
+      "sha256": "973e37c7bcb036027ddd3eaa3c5c02f03604dd8e3f7a389ebbb1520c5fae2b5e"
+    },
+    {
+      "frame": 378,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e.png",
+      "sha256": "f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e"
+    },
+    {
+      "frame": 384,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e.png",
+      "sha256": "f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e"
+    },
+    {
+      "frame": 390,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/c1d60ef9d39e5ddeacb605f7a46f47347318c5996e33f43c6f79a7eeffeae351.png",
+      "sha256": "c1d60ef9d39e5ddeacb605f7a46f47347318c5996e33f43c6f79a7eeffeae351"
+    },
+    {
+      "frame": 396,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/c1d60ef9d39e5ddeacb605f7a46f47347318c5996e33f43c6f79a7eeffeae351.png",
+      "sha256": "c1d60ef9d39e5ddeacb605f7a46f47347318c5996e33f43c6f79a7eeffeae351"
+    },
+    {
+      "frame": 402,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1199c03151ad5b8a1eca136336b222f0fe9a79e1fe121fae30f776b92c9b2190.png",
+      "sha256": "1199c03151ad5b8a1eca136336b222f0fe9a79e1fe121fae30f776b92c9b2190"
+    },
+    {
+      "frame": 408,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1199c03151ad5b8a1eca136336b222f0fe9a79e1fe121fae30f776b92c9b2190.png",
+      "sha256": "1199c03151ad5b8a1eca136336b222f0fe9a79e1fe121fae30f776b92c9b2190"
+    },
+    {
+      "frame": 414,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab.png",
+      "sha256": "1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab"
+    },
+    {
+      "frame": 420,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab.png",
+      "sha256": "1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab"
+    },
+    {
+      "frame": 426,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/3e809a87b90490e2865f5c45b82b7fcb43225411e793ccfbec59fb90cd9926cb.png",
+      "sha256": "3e809a87b90490e2865f5c45b82b7fcb43225411e793ccfbec59fb90cd9926cb"
+    },
+    {
+      "frame": 432,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/3e809a87b90490e2865f5c45b82b7fcb43225411e793ccfbec59fb90cd9926cb.png",
+      "sha256": "3e809a87b90490e2865f5c45b82b7fcb43225411e793ccfbec59fb90cd9926cb"
+    },
+    {
+      "frame": 438,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/76b8394122633431b34e4ba1f1f428dae5bd399c08ca94653f1dcb927fe05e73.png",
+      "sha256": "76b8394122633431b34e4ba1f1f428dae5bd399c08ca94653f1dcb927fe05e73"
+    },
+    {
+      "frame": 444,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/76b8394122633431b34e4ba1f1f428dae5bd399c08ca94653f1dcb927fe05e73.png",
+      "sha256": "76b8394122633431b34e4ba1f1f428dae5bd399c08ca94653f1dcb927fe05e73"
+    },
+    {
+      "frame": 450,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414.png",
+      "sha256": "7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414"
+    },
+    {
+      "frame": 456,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414.png",
+      "sha256": "7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414"
+    },
+    {
+      "frame": 462,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9f7cccba0bbc2dfaf3f9f318def2d2456390388fffd84a46079dce47e06900ce.png",
+      "sha256": "9f7cccba0bbc2dfaf3f9f318def2d2456390388fffd84a46079dce47e06900ce"
+    },
+    {
+      "frame": 468,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9f7cccba0bbc2dfaf3f9f318def2d2456390388fffd84a46079dce47e06900ce.png",
+      "sha256": "9f7cccba0bbc2dfaf3f9f318def2d2456390388fffd84a46079dce47e06900ce"
+    },
+    {
+      "frame": 474,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c.png",
+      "sha256": "379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c"
+    },
+    {
+      "frame": 480,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c.png",
+      "sha256": "379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c"
+    },
+    {
+      "frame": 486,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2.png",
+      "sha256": "9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2"
+    },
+    {
+      "frame": 492,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2.png",
+      "sha256": "9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2"
+    },
+    {
+      "frame": 498,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/96c88fcb462565252268809969d0b79b10341d92a570a02f9d021f097e4cd342.png",
+      "sha256": "96c88fcb462565252268809969d0b79b10341d92a570a02f9d021f097e4cd342"
+    },
+    {
+      "frame": 504,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/96c88fcb462565252268809969d0b79b10341d92a570a02f9d021f097e4cd342.png",
+      "sha256": "96c88fcb462565252268809969d0b79b10341d92a570a02f9d021f097e4cd342",
+      "retainedPath": "docs/playtests/selection-ratings-504.png"
+    },
+    {
+      "frame": 510,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/ef42a64bbd4e61391d5ab5bf11e4036979d50e8f72097e211393b92af6f061a0.png",
+      "sha256": "ef42a64bbd4e61391d5ab5bf11e4036979d50e8f72097e211393b92af6f061a0"
+    },
+    {
+      "frame": 590,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/81c543199feae3877d9f3e245daa03eb31b4b9d2186a8c5d8d2c5f35d563321b.png",
+      "sha256": "81c543199feae3877d9f3e245daa03eb31b4b9d2186a8c5d8d2c5f35d563321b",
+      "retainedPath": "docs/playtests/selection-ratings-590.png"
+    },
+    {
+      "frame": 625,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9523ba0dcca1b0c84bc44b9e1dc0a707762b8a7b28883922d796ad5b1eda99c2.png",
+      "sha256": "9523ba0dcca1b0c84bc44b9e1dc0a707762b8a7b28883922d796ad5b1eda99c2"
+    },
+    {
+      "frame": 631,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1eca9db00071376d10eae78191837107f4448fa23f227b731c6f76a4da8db4fb.png",
+      "sha256": "1eca9db00071376d10eae78191837107f4448fa23f227b731c6f76a4da8db4fb"
+    },
+    {
+      "frame": 666,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/21d5afae16a82f2aa4f6e8bc5a25e9e9138939b4d12fa43b93a18fa5b3055609.png",
+      "sha256": "21d5afae16a82f2aa4f6e8bc5a25e9e9138939b4d12fa43b93a18fa5b3055609"
+    },
+    {
+      "frame": 701,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/f6f80654c68491ae3a725fff7a5e44a91a9829bd84e3d8ff9534a861d2ea9d6a.png",
+      "sha256": "f6f80654c68491ae3a725fff7a5e44a91a9829bd84e3d8ff9534a861d2ea9d6a"
+    },
+    {
+      "frame": 707,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/a19485c38da9fc51f04c99f1fa2f2c946527c45aaed55b60808995be2f651dd3.png",
+      "sha256": "a19485c38da9fc51f04c99f1fa2f2c946527c45aaed55b60808995be2f651dd3"
+    },
+    {
+      "frame": 713,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/a19485c38da9fc51f04c99f1fa2f2c946527c45aaed55b60808995be2f651dd3.png",
+      "sha256": "a19485c38da9fc51f04c99f1fa2f2c946527c45aaed55b60808995be2f651dd3"
+    },
+    {
+      "frame": 719,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114.png",
+      "sha256": "23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114"
+    },
+    {
+      "frame": 725,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114.png",
+      "sha256": "23e97c8e59b6ce365b647143ffaae211fdbff51902381980fefe9ce5b2dce114"
+    },
+    {
+      "frame": 731,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c.png",
+      "sha256": "d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c"
+    },
+    {
+      "frame": 737,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c.png",
+      "sha256": "d1962c657a24600ceccbf049148a3189c63343fa6fa9277782b3281eb8ba8e4c"
+    },
+    {
+      "frame": 743,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/66f0270852d07198a30b68d2858a08ca4065a2a152a5cee25a2e75136a6ddc1d.png",
+      "sha256": "66f0270852d07198a30b68d2858a08ca4065a2a152a5cee25a2e75136a6ddc1d"
+    },
+    {
+      "frame": 749,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/66f0270852d07198a30b68d2858a08ca4065a2a152a5cee25a2e75136a6ddc1d.png",
+      "sha256": "66f0270852d07198a30b68d2858a08ca4065a2a152a5cee25a2e75136a6ddc1d"
+    },
+    {
+      "frame": 755,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e.png",
+      "sha256": "f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e"
+    },
+    {
+      "frame": 761,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e.png",
+      "sha256": "f25d365c8b2eb7b3b9acd9458332a4cae6c169ab44d0bcd86a6bbaca32f9d03e"
+    },
+    {
+      "frame": 767,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab.png",
+      "sha256": "1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab"
+    },
+    {
+      "frame": 773,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab.png",
+      "sha256": "1d6f95d0793c49aa10313dccb2a935a2b22a698e5fedc710a44ff4aa119242ab"
+    },
+    {
+      "frame": 779,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414.png",
+      "sha256": "7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414"
+    },
+    {
+      "frame": 785,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414.png",
+      "sha256": "7306836db72483a9195f933308f236a80cb2b33d4c04abe29171df3592397414"
+    },
+    {
+      "frame": 791,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2.png",
+      "sha256": "9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2"
+    },
+    {
+      "frame": 797,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2.png",
+      "sha256": "9eff5f05ef09c9f64c36e1c25ab8e8e532b880a6c45398d170f8d180954f0ed2"
+    },
+    {
+      "frame": 803,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c.png",
+      "sha256": "379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c"
+    },
+    {
+      "frame": 809,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c.png",
+      "sha256": "379eab4cb5e4edebba016b3491813c29d49986be9bdee8879a80b85ee3ac238c"
+    },
+    {
+      "frame": 815,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/930e10ffdd04433c1ff2e8be500f1cb718cb75ba96aebeabb8612b85011df781.png",
+      "sha256": "930e10ffdd04433c1ff2e8be500f1cb718cb75ba96aebeabb8612b85011df781"
+    },
+    {
+      "frame": 821,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/930e10ffdd04433c1ff2e8be500f1cb718cb75ba96aebeabb8612b85011df781.png",
+      "sha256": "930e10ffdd04433c1ff2e8be500f1cb718cb75ba96aebeabb8612b85011df781"
+    },
+    {
+      "frame": 827,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/5ac3a46f8f98acfa8228b77a11af25df09929786f3f762a961b9d36dc373b40d.png",
+      "sha256": "5ac3a46f8f98acfa8228b77a11af25df09929786f3f762a961b9d36dc373b40d"
+    },
+    {
+      "frame": 833,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/5ac3a46f8f98acfa8228b77a11af25df09929786f3f762a961b9d36dc373b40d.png",
+      "sha256": "5ac3a46f8f98acfa8228b77a11af25df09929786f3f762a961b9d36dc373b40d",
+      "retainedPath": "docs/playtests/selection-ratings-833.png"
+    },
+    {
+      "frame": 839,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/133c992e1f6cac735dff17234809c4eda9d4532fdbedc2ea70c609e2c6b952fb.png",
+      "sha256": "133c992e1f6cac735dff17234809c4eda9d4532fdbedc2ea70c609e2c6b952fb"
+    },
+    {
+      "frame": 924,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/99a86abc4b999b91a007cfb1aa1eef011bc983110314eda49a80bf268743a573.png",
+      "sha256": "99a86abc4b999b91a007cfb1aa1eef011bc983110314eda49a80bf268743a573"
+    },
+    {
+      "frame": 948,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/83992497ff7a9d94fd160b995af8e4f96666ba87cb4a5e0cb79b9df1f452eb16.png",
+      "sha256": "83992497ff7a9d94fd160b995af8e4f96666ba87cb4a5e0cb79b9df1f452eb16"
+    },
+    {
+      "frame": 988,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/39a9f2eaec96c358ebb65a0633c49955e5babfea608fe8ff16452c96ec1e051b.png",
+      "sha256": "39a9f2eaec96c358ebb65a0633c49955e5babfea608fe8ff16452c96ec1e051b"
+    },
+    {
+      "frame": 1028,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/eaa52c1d5082789a5feb1caf799f1c6c90b5a3ddf49e5a33e076bf669d65efa8.png",
+      "sha256": "eaa52c1d5082789a5feb1caf799f1c6c90b5a3ddf49e5a33e076bf669d65efa8"
+    },
+    {
+      "frame": 1068,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/dddea52bb5cd06d59e1bdbb38d9b7e0cf03488e29a6e2670bc1dc1f46985c30b.png",
+      "sha256": "dddea52bb5cd06d59e1bdbb38d9b7e0cf03488e29a6e2670bc1dc1f46985c30b"
+    },
+    {
+      "frame": 1108,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/72853617b717ff12dedf1a6b186d131f3ca2b563e4e876f61fad1d3410f4866c.png",
+      "sha256": "72853617b717ff12dedf1a6b186d131f3ca2b563e4e876f61fad1d3410f4866c",
+      "retainedPath": "docs/playtests/selection-ratings-1108.png"
+    },
+    {
+      "frame": 1508,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/dd99b53ca058f66e7dc5ebdce2b41defccf5fc76dc2e912d3f8cac3a01de8608.png",
+      "sha256": "dd99b53ca058f66e7dc5ebdce2b41defccf5fc76dc2e912d3f8cac3a01de8608"
+    },
+    {
+      "frame": 1908,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/108b5c47a39fa951619b05243d11d17ebf24a3647d4ee79349a60ed9a82a46ba.png",
+      "sha256": "108b5c47a39fa951619b05243d11d17ebf24a3647d4ee79349a60ed9a82a46ba"
+    },
+    {
+      "frame": 2308,
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/build/roster-playtest-v2/frames/513172f1bbbdb31abbf2c1c8eaa02334dbfa48e02dcbf0a6c39a8569334913bb.png",
+      "sha256": "513172f1bbbdb31abbf2c1c8eaa02334dbfa48e02dcbf0a6c39a8569334913bb",
+      "retainedPath": "docs/playtests/selection-ratings-2308.png"
+    }
+  ]
+}

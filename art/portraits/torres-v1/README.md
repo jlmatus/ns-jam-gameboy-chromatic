@@ -21,4 +21,6 @@ The final version uses explicit native pixel cleanup at 11 eye, ear, temple, and
 
 ## Integration
 
-The 32×32 portrait requires a compatible custom layout or background composition, rather than the standard 16×16 avatar/static profile. Future integration must assign the displayed palette and verify hardware limits. The game remains in planning. No asset import, ROM build, emulator test, or hardware check has been performed.
+The approved 32×32 source cells are integrated as native window tiles, with their displayed palette verified in ROM menu frames. Physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

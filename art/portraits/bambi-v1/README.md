@@ -1,6 +1,6 @@
 # BAMBI — portrait concept v1
 
-Standalone face portrait based on the user-provided screenshot, matching the approved MATUS portrait's 32×32 size and three-color palette. **Portrait approved by the user.** No uniform has been invented, and no game project has been created or modified.
+Standalone face portrait based on the user-provided screenshot, matching the approved MATUS portrait's 32×32 size and three-color palette. **Portrait approved by the user.** No uniform was invented for this portrait.
 
 ## Files
 
@@ -17,4 +17,6 @@ Standalone face portrait based on the user-provided screenshot, matching the app
 
 The chart contains 32×32 cells with all 33 guides acquired on each axis. All 511 occupied cells passed the diagnostic. The raw report flagged 64 empty cells for guide-edge fidelity; these were reviewed and accepted separately in `grid-review/manual-review.json`. The raw result remains `review-grid-fidelity`, not a zero-flag pass.
 
-The final PNG maps each cell to an exact palette index and binary alpha, without shrinking the whole chart. Its editable data reproduces the reviewed portrait. Future game integration requires a compatible 32×32 layout or background composition, palette assignment, and runtime validation. No asset import, ROM build, emulator test, or hardware check has been performed.
+The approved 32×32 source cells are integrated as native window tiles, with their displayed palette verified in ROM menu frames. Physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

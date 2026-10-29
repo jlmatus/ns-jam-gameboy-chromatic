@@ -1,0 +1,122 @@
+[
+  {
+    "name": "MATUS",
+    "pages": [
+      {
+        "tiles": 102,
+        "bank0": 64,
+        "bank1": 38
+      },
+      {
+        "tiles": 58,
+        "bank0": 58,
+        "bank1": 0
+      },
+      {
+        "tiles": 63,
+        "bank0": 63,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "MAGIC",
+    "pages": [
+      {
+        "tiles": 107,
+        "bank0": 64,
+        "bank1": 43
+      },
+      {
+        "tiles": 58,
+        "bank0": 58,
+        "bank1": 0
+      },
+      {
+        "tiles": 60,
+        "bank0": 60,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "BAMBI",
+    "pages": [
+      {
+        "tiles": 108,
+        "bank0": 64,
+        "bank1": 44
+      },
+      {
+        "tiles": 62,
+        "bank0": 62,
+        "bank1": 0
+      },
+      {
+        "tiles": 62,
+        "bank0": 62,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "TORRES",
+    "pages": [
+      {
+        "tiles": 103,
+        "bank0": 64,
+        "bank1": 39
+      },
+      {
+        "tiles": 62,
+        "bank0": 62,
+        "bank1": 0
+      },
+      {
+        "tiles": 62,
+        "bank0": 62,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "CHOMPA",
+    "pages": [
+      {
+        "tiles": 107,
+        "bank0": 64,
+        "bank1": 43
+      },
+      {
+        "tiles": 58,
+        "bank0": 58,
+        "bank1": 0
+      },
+      {
+        "tiles": 62,
+        "bank0": 62,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "MEAT",
+    "pages": [
+      {
+        "tiles": 106,
+        "bank0": 64,
+        "bank1": 42
+      },
+      {
+        "tiles": 59,
+        "bank0": 59,
+        "bank1": 0
+      },
+      {
+        "tiles": 59,
+        "bank0": 59,
+        "bank1": 0
+      }
+    ]
+  }
+]

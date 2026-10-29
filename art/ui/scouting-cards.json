@@ -1,0 +1,222 @@
+{
+  "layout": "Selected scouting-card concept, adapted to native 160x144",
+  "labelStatus": "approved by user; derived from supplied ratings; numeric ratings unchanged",
+  "palette": [
+    "#FFF5C9",
+    "#EFA42E",
+    "#C8C6A2",
+    "#102333"
+  ],
+  "players": [
+    {
+      "name": "MATUS",
+      "source": "matus-v1",
+      "jersey": "13",
+      "position": "GUARD",
+      "playstyle": "3PT PLAYMAKER",
+      "featured": [
+        [
+          "SPD",
+          7
+        ],
+        [
+          "3PT",
+          10
+        ],
+        [
+          "PASS",
+          10
+        ],
+        [
+          "STEAL",
+          8
+        ]
+      ],
+      "ratings": [
+        7,
+        10,
+        10,
+        8,
+        2,
+        3,
+        5,
+        9
+      ]
+    },
+    {
+      "name": "MAGIC",
+      "source": "magic-v1",
+      "jersey": "32",
+      "position": "BIG",
+      "playstyle": "RIM PROTECTOR",
+      "featured": [
+        [
+          "SPD",
+          4
+        ],
+        [
+          "BLOCK",
+          10
+        ],
+        [
+          "DUNK",
+          9
+        ],
+        [
+          "POWER",
+          7
+        ]
+      ],
+      "ratings": [
+        4,
+        5,
+        5,
+        3,
+        10,
+        9,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "BAMBI",
+      "source": "bambi-v1",
+      "jersey": "23",
+      "position": "WING",
+      "playstyle": "POWER FINISHER",
+      "featured": [
+        [
+          "SPD",
+          4
+        ],
+        [
+          "POWER",
+          10
+        ],
+        [
+          "DUNK",
+          7
+        ],
+        [
+          "PASS",
+          6
+        ]
+      ],
+      "ratings": [
+        4,
+        5,
+        6,
+        4,
+        4,
+        7,
+        10,
+        7
+      ]
+    },
+    {
+      "name": "TORRES",
+      "source": "torres-v1",
+      "jersey": "7",
+      "position": "GUARD",
+      "playstyle": "SPEED SLASHER",
+      "featured": [
+        [
+          "SPD",
+          10
+        ],
+        [
+          "DUNK",
+          8
+        ],
+        [
+          "STEAL",
+          7
+        ],
+        [
+          "PASS",
+          7
+        ]
+      ],
+      "ratings": [
+        10,
+        3,
+        7,
+        7,
+        4,
+        8,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "CHOMPA",
+      "source": "chompa-v2",
+      "jersey": "74",
+      "position": "BIG",
+      "playstyle": "STRETCH BIG",
+      "featured": [
+        [
+          "SPD",
+          5
+        ],
+        [
+          "3PT",
+          8
+        ],
+        [
+          "POWER",
+          9
+        ],
+        [
+          "BLOCK",
+          7
+        ]
+      ],
+      "ratings": [
+        5,
+        8,
+        5,
+        3,
+        7,
+        7,
+        9,
+        6
+      ]
+    },
+    {
+      "name": "MEAT",
+      "source": "meat-v1",
+      "jersey": "00",
+      "position": "GUARD",
+      "playstyle": "TWO-WAY SLASHER",
+      "featured": [
+        [
+          "SPD",
+          9
+        ],
+        [
+          "STEAL",
+          8
+        ],
+        [
+          "DUNK",
+          8
+        ],
+        [
+          "BLOCK",
+          6
+        ]
+      ],
+      "ratings": [
+        9,
+        2,
+        5,
+        8,
+        6,
+        8,
+        6,
+        4
+      ]
+    }
+  ]
+}

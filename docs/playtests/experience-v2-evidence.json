@@ -1,0 +1,546 @@
+{
+  "date": "2026-10-28",
+  "native": {
+    "rom": {
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "sizeBytes": 131072,
+      "sha256": "4699e47c66034e5b0ef5c84bb52cb97a29de87410830140e957750ba183378df",
+      "title": "NICASOURCEJAM",
+      "colorMode": "gbc-only",
+      "colorFlag": 192,
+      "cartridgeType": 30,
+      "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+      "mapper": "MBC5",
+      "romSizeCode": 2,
+      "declaredRomSizeBytes": 131072,
+      "ramSizeCode": 3,
+      "declaredRamSizeBytes": 32768,
+      "nintendoLogoValid": true,
+      "headerChecksum": 172,
+      "computedHeaderChecksum": 172,
+      "headerChecksumValid": true,
+      "valid": true
+    },
+    "builder": "gb-studio-cli",
+    "command": "/Users/jmatus/Library/Application Support/modretro-chromatic/node/darwin-arm64/node-v24.15.0-darwin-arm64/bin/node",
+    "stderr": "(node:28723) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)\n",
+    "debugArtifacts": {
+      "directory": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug",
+      "noiPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug/symbols.noi",
+      "globalsPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug/globals.i",
+      "romSha256": "4699e47c66034e5b0ef5c84bb52cb97a29de87410830140e957750ba183378df",
+      "noiSha256": "fac6e99a085ce1cd22d6ecc704f704ed9e2b54622d05b15d295838b823446448",
+      "globalsSha256": "9b1a928094e6548cfaf7b5151aeccc846e77e230f823f06ae43583ccd6d0ecf4",
+      "internalRomFilename": "nicasource-jam.gbc",
+      "sourceDebugAbi": {
+        "layout": "gbvm-farptr3-uword16-v1",
+        "sha256": "85e65e9be4efe6b794debf0d0a299c88a2f888a48eaf0b35efed6d3c9a2269f0"
+      },
+      "sourceProvenance": {
+        "formatVersion": 1,
+        "projectPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/project.gbsproj",
+        "projectRevision": "cf32839c320e157159b9b721472da0c2220860cb6653d0754f255b0fa4655002",
+        "revisionAlgorithm": "sha256-merkle-v2",
+        "sourceFingerprint": "70ce817f4a315ee2a15b0ec149af06378585eeabb632bb90d8eb958502b4eac6",
+        "compilerSha256": "78961636939edb44b0539ae26badfa07055be38124dbf08e3b84ec5608a2e627"
+      }
+    }
+  },
+  "web": {
+    "exitCode": 0,
+    "exportIdentity": {
+      "rom": {
+        "path": "rom/nicasource-jam.gbc",
+        "sha256": "e8168da5b2cc3cfe5195217198c14d1f8630e9028caeac6bdec131b6993adb0b",
+        "sizeBytes": 131072
+      },
+      "index": {
+        "path": "index.html",
+        "sha256": "b912aa6d1bc9978364e50d230083016b73f2e74f308fca4062fd3f6cfa98bb70",
+        "sizeBytes": 1174
+      },
+      "inventorySha256": "32ecaa5c5b61d4b30da7e0ddc0fbd09e8289b23f82c519ce277551945585ebc0",
+      "files": 9,
+      "logicalBytes": 311268
+    },
+    "sourceRevision": "51181c3887a075105b1a73d1afa189295bc232b22124df75bef49f9015a60aee",
+    "success": false,
+    "error": "Browser recording close acknowledgement is UNKNOWN.",
+    "existingListenerPreserved": true,
+    "browserObservation": "Existing URL loaded larger players and inward basket profiles. Handheld Select showed PAUSED SELECT PLAY. Saved-progress error was dismissed without deleting history; autosaving remains paused. The managed preview broker's close acknowledgement remains unresolved."
+  },
+  "samples": {
+    "movement": [
+      {
+        "frame": 140,
+        "width": 160,
+        "height": 144,
+        "sha256": "6abf9c09d13390f5a8959c29503809dc5996c9784211db3fdd849b6cd115ffed",
+        "rgbaSha256": "e09d6cee67482b49bd772acefe79b4b5288fdd572010a95db5396253df5ab683",
+        "sampledButtons": [
+          "right"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/6abf9c09d13390f5a8959c29503809dc5996c9784211db3fdd849b6cd115ffed.png"
+      },
+      {
+        "frame": 160,
+        "width": 160,
+        "height": 144,
+        "sha256": "bc8fb6f0be68067f25b4dc94903ed3f6ce5a9d6e219f8e96d98bdd2c15ae4e10",
+        "rgbaSha256": "5b42437d4a5b3f1b6375d06a02906e14beda90de3341c1c62948a7f5f2c1a701",
+        "sampledButtons": [
+          "right"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/bc8fb6f0be68067f25b4dc94903ed3f6ce5a9d6e219f8e96d98bdd2c15ae4e10.png"
+      },
+      {
+        "frame": 180,
+        "width": 160,
+        "height": 144,
+        "sha256": "df0f7077a173644b7b5bfa9a649cca1541bc58d8be39f207dc242227d37e6c0b",
+        "rgbaSha256": "bfc9998866544e8ad305e12d62af2b44ae44c0f4d1a6b0b4990ba112f466c355",
+        "sampledButtons": [
+          "right"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/df0f7077a173644b7b5bfa9a649cca1541bc58d8be39f207dc242227d37e6c0b.png"
+      }
+    ],
+    "swish": [
+      {
+        "frame": 245,
+        "width": 160,
+        "height": 144,
+        "sha256": "c931e76d1a8975151c56e849e87050206f011ac29809a011f28b8e655e8c9425",
+        "rgbaSha256": "29024489187b7d0a6135e5797cc35565529a60f438be83a99693d8619ca2cee1",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/c931e76d1a8975151c56e849e87050206f011ac29809a011f28b8e655e8c9425.png"
+      },
+      {
+        "frame": 249,
+        "width": 160,
+        "height": 144,
+        "sha256": "d455b09fc822803df54448a759333314e763f12594f54ee9c6b252af67ec6c62",
+        "rgbaSha256": "36b23b4cf91b246ff7ad06ca6c3aac4d839538c2251bf4567dd00d78526a3e62",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/d455b09fc822803df54448a759333314e763f12594f54ee9c6b252af67ec6c62.png"
+      },
+      {
+        "frame": 252,
+        "width": 160,
+        "height": 144,
+        "sha256": "0c36af255ad45de53208a7544af4a69f57a35b070419a61e95a6235ca22a5822",
+        "rgbaSha256": "19b3ec08c10e635a8567b01080247521680d5b384204f2699cd07f32262cb975",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/0c36af255ad45de53208a7544af4a69f57a35b070419a61e95a6235ca22a5822.png"
+      },
+      {
+        "frame": 256,
+        "width": 160,
+        "height": 144,
+        "sha256": "8e5abc728b9bb66869584f65a80a8be7412e1275ddc0e80ce531820faa2d42f3",
+        "rgbaSha256": "3a38407bcddac8b5624db810f59180236d0afba5009bd8607491555a6ec3c8f3",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/8e5abc728b9bb66869584f65a80a8be7412e1275ddc0e80ce531820faa2d42f3.png"
+      },
+      {
+        "frame": 259,
+        "width": 160,
+        "height": 144,
+        "sha256": "b13c274d6fea6c8f1da4d3a73409643e49c420edbfdca85761bec8b95d286510",
+        "rgbaSha256": "f31bdb5ed286cb25ef93c8ca1f0d44c930d9191013f57b9864a742fd1a609920",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/b13c274d6fea6c8f1da4d3a73409643e49c420edbfdca85761bec8b95d286510.png"
+      },
+      {
+        "frame": 263,
+        "width": 160,
+        "height": 144,
+        "sha256": "5c78c605dcfbdcd4f55dc2289c7bf81f435f0d88717c868d48a3a737f869c8f6",
+        "rgbaSha256": "863c27e6d19df5c7f4438e32e7c8bab7260b12c1a176424f45486bc52904f518",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/5c78c605dcfbdcd4f55dc2289c7bf81f435f0d88717c868d48a3a737f869c8f6.png"
+      },
+      {
+        "frame": 266,
+        "width": 160,
+        "height": 144,
+        "sha256": "ca05a8e22e6c041f29ad7866b5c81fad1eaeb392b7ef314324093dcb25fcccd6",
+        "rgbaSha256": "4a737515ca960fb53d6099296d7e3d9569c05b17d26f8b20161721fe2bab3ced",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/ca05a8e22e6c041f29ad7866b5c81fad1eaeb392b7ef314324093dcb25fcccd6.png"
+      },
+      {
+        "frame": 270,
+        "width": 160,
+        "height": 144,
+        "sha256": "34539c2435bb1a0b5e2ae5fb463b45c42f04a2b6b63d0606c37e2c4e82556f0d",
+        "rgbaSha256": "bdd968ff4bb5aa4e0cc33472b4b8b1c9d254d649c6e4e19e2793e3c2e0601848",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/34539c2435bb1a0b5e2ae5fb463b45c42f04a2b6b63d0606c37e2c4e82556f0d.png"
+      }
+    ],
+    "score": [
+      {
+        "frame": 274,
+        "width": 160,
+        "height": 144,
+        "sha256": "e2d5f7f08fcbe7ce0386e75cdf690e8280afb4dd982e7a556664ab85fbf6afaf",
+        "rgbaSha256": "eb284646affb78ca5882b4a5670124b1fea146c9c095091182a2335ce515d552",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/e2d5f7f08fcbe7ce0386e75cdf690e8280afb4dd982e7a556664ab85fbf6afaf.png"
+      },
+      {
+        "frame": 278,
+        "width": 160,
+        "height": 144,
+        "sha256": "bfacf8e25dcdf7797e83dc2a5c9047ad8539357cb6b1f1dfb07d42c0ef7743ea",
+        "rgbaSha256": "a9772f52797cccd5cc44b17beef99ebbffec5bf1841f6cf53e7dab6eedc4103b",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/bfacf8e25dcdf7797e83dc2a5c9047ad8539357cb6b1f1dfb07d42c0ef7743ea.png"
+      },
+      {
+        "frame": 282,
+        "width": 160,
+        "height": 144,
+        "sha256": "4cfcb9bcafb7a900566491f64149f59a7544916e037c25a470fa3c9fc143c368",
+        "rgbaSha256": "eeb2911bd3a6f1be63b974f3b8fd5d698d3e792dd048df0332cab8bf02e0540e",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/4cfcb9bcafb7a900566491f64149f59a7544916e037c25a470fa3c9fc143c368.png"
+      },
+      {
+        "frame": 286,
+        "width": 160,
+        "height": 144,
+        "sha256": "bfacf8e25dcdf7797e83dc2a5c9047ad8539357cb6b1f1dfb07d42c0ef7743ea",
+        "rgbaSha256": "a9772f52797cccd5cc44b17beef99ebbffec5bf1841f6cf53e7dab6eedc4103b",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/bfacf8e25dcdf7797e83dc2a5c9047ad8539357cb6b1f1dfb07d42c0ef7743ea.png"
+      }
+    ],
+    "miss": [
+      {
+        "frame": 682,
+        "width": 160,
+        "height": 144,
+        "sha256": "e941c67b82177bf586548438592e03027070ad58c7235792d2d6f94d82dda482",
+        "rgbaSha256": "f3ced437fa94fe222c153f1bcb274fef1018fa83a1ad6ad6b40da2304f15c013",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/e941c67b82177bf586548438592e03027070ad58c7235792d2d6f94d82dda482.png"
+      },
+      {
+        "frame": 697,
+        "width": 160,
+        "height": 144,
+        "sha256": "1742c1e032f557b1e03a273cedd332c517f9a667df480610543b42121569ab93",
+        "rgbaSha256": "cef033dafc470d9cd2d44addbfa6d61ad57e1060a0d8cc0d053315890cfc9b8c",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/1742c1e032f557b1e03a273cedd332c517f9a667df480610543b42121569ab93.png"
+      },
+      {
+        "frame": 712,
+        "width": 160,
+        "height": 144,
+        "sha256": "4d92e94d42f262e5e1274b39aff7f906a4d17b2eb138871c29b674b2e7887f3f",
+        "rgbaSha256": "0066e2f1f32bdaf7d517ea15ebdb6b2acbdc09650f8edf87f86ce9e08a18d63e",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/4d92e94d42f262e5e1274b39aff7f906a4d17b2eb138871c29b674b2e7887f3f.png"
+      },
+      {
+        "frame": 727,
+        "width": 160,
+        "height": 144,
+        "sha256": "4bcac91f4e908f552e22c53dff9d3237f7f6eaf2c638e6aabc2082baff7b20c7",
+        "rgbaSha256": "1fc5703f44c577a7045d262d012027dc9ea13eea75963dec9b20a85a5e63eed8",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/4bcac91f4e908f552e22c53dff9d3237f7f6eaf2c638e6aabc2082baff7b20c7.png"
+      },
+      {
+        "frame": 742,
+        "width": 160,
+        "height": 144,
+        "sha256": "3c1390a58b8cfe0d88dc6046bb1e1b02c7347f8257e64df97a6c62513e7d9855",
+        "rgbaSha256": "531725e0dbd6d1141b08124e35e27df02bbb9351e353f31c3da3472d6ddfefe9",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/3c1390a58b8cfe0d88dc6046bb1e1b02c7347f8257e64df97a6c62513e7d9855.png"
+      },
+      {
+        "frame": 757,
+        "width": 160,
+        "height": 144,
+        "sha256": "1f950dcad64ea2b68e09c4068cdeda2441c806b3481bad05719283ab524f98f0",
+        "rgbaSha256": "f25a6d161f7c924fa6450abdbbfed3f1570799b3eeee4da37d01e1491749d304",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/1f950dcad64ea2b68e09c4068cdeda2441c806b3481bad05719283ab524f98f0.png"
+      },
+      {
+        "frame": 772,
+        "width": 160,
+        "height": 144,
+        "sha256": "6f4d696fb4ed4db2b59809a803a23afeeaa707227f018f32d7d09af89827b3c6",
+        "rgbaSha256": "a652717cde9779b48793598c88224993f0e652d2c38e9bf77c6dbeada948ff47",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/experience-final/frames/6f4d696fb4ed4db2b59809a803a23afeeaa707227f018f32d7d09af89827b3c6.png"
+      }
+    ]
+  },
+  "states": {
+    "beforeShot": {
+      "view": "memory",
+      "frame": 180,
+      "region": "wram",
+      "offset": 509,
+      "length": 75,
+      "address": "0xc1fd",
+      "hex": "a302a0010000e80234010000ac02bc010000a00338010000c602a00100000000000000000000000a00000000000000005400020000240000000000e1ac5300000000000000000000000000"
+    },
+    "atRim": {
+      "view": "memory",
+      "frame": 242,
+      "region": "wram",
+      "offset": 509,
+      "length": 75,
+      "address": "0xc1fd",
+      "hex": "a302a0010000b003780100006003500100004c04780100003d046501a302a00160046001ff00022d24270000030100008e000000000003270000000fd36900000000000100000000000000"
+    },
+    "afterScore": {
+      "view": "memory",
+      "frame": 286,
+      "region": "wram",
+      "offset": 509,
+      "length": 75,
+      "address": "0xc1fd",
+      "hex": "a302a00100002c0478010000dc03500100007c047801000060046001a302a00160046001ff00040e1c27000003010300b8000000000006370c01010fd36900000000000100000001000000"
+    },
+    "pauseBefore": {
+      "view": "memory",
+      "frame": 773,
+      "region": "wram",
+      "offset": 509,
+      "length": 75,
+      "address": "0xc1fd",
+      "hex": "9001a0010000f402680100005003bc010000d00364010009a80364019001a001600460010300000a082e0300030003028c0180000003043600000072ff1500000000000300010002000000"
+    },
+    "pauseAfter": {
+      "view": "memory",
+      "frame": 863,
+      "region": "wram",
+      "offset": 509,
+      "length": 75,
+      "address": "0xc1fd",
+      "hex": "9001a0010000f402680100005003bc010000d00364010009a80364019001a001600460010300000a082e0300030003028c0122000003043600000072ff1500000000000300010002000000"
+    }
+  },
+  "oam": {
+    "view": "oam",
+    "frame": 270,
+    "totalObjects": 40,
+    "visibleObjects": 19,
+    "matchedObjects": 19,
+    "returnedObjects": 19,
+    "truncated": false,
+    "objects": [
+      {
+        "index": 0,
+        "x": 116,
+        "y": 54,
+        "tile": 102,
+        "attributes": 12,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 1,
+        "x": 116,
+        "y": 61,
+        "tile": 96,
+        "attributes": 2,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 2,
+        "x": 8,
+        "y": 88,
+        "tile": 48,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 88,
+        "tile": 50,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 4,
+        "x": 8,
+        "y": 72,
+        "tile": 52,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 5,
+        "x": 0,
+        "y": 72,
+        "tile": 54,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 6,
+        "x": 102,
+        "y": 78,
+        "tile": 92,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 7,
+        "x": 94,
+        "y": 78,
+        "tile": 94,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 8,
+        "x": 102,
+        "y": 62,
+        "tile": 80,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 9,
+        "x": 94,
+        "y": 62,
+        "tile": 82,
+        "attributes": 0,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 10,
+        "x": 127,
+        "y": 78,
+        "tile": 66,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 11,
+        "x": 119,
+        "y": 78,
+        "tile": 68,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 12,
+        "x": 127,
+        "y": 62,
+        "tile": 70,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 13,
+        "x": 119,
+        "y": 62,
+        "tile": 72,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 14,
+        "x": 5,
+        "y": 62,
+        "tile": 98,
+        "attributes": 3,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 15,
+        "x": 82,
+        "y": 68,
+        "tile": 16,
+        "attributes": 1,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 16,
+        "x": 74,
+        "y": 68,
+        "tile": 18,
+        "attributes": 1,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 17,
+        "x": 82,
+        "y": 52,
+        "tile": 8,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      },
+      {
+        "index": 18,
+        "x": 74,
+        "y": 52,
+        "tile": 10,
+        "attributes": 9,
+        "width": 8,
+        "height": 16,
+        "visible": true
+      }
+    ],
+    "scanlineSummary": {
+      "peakObjects": 10,
+      "hardwareLimit": 10,
+      "overLimitScanlines": 0,
+      "peakScanlines": [
+        72,
+        73,
+        74,
+        75,
+        76
+      ]
+    }
+  }
+}

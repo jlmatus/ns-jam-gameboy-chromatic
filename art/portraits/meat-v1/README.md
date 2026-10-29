@@ -1,8 +1,8 @@
-# MEAT — provisional portrait v1
+# MEAT — default portrait v1
 
-**Invented placeholder; no photo reference is available. Pending user approval.** This design is not a verified likeness of the real player. Its haircut, facial features, expression, and skin palette are provisional art choices. The lively expression is inspired by the confirmed signature label **BIG ENERGY**; no gameplay behavior is implied.
+**Approved default portrait; jersey 00.** No photo reference is available, so the selected appearance is an accepted invented design rather than a verified likeness. The lively expression is inspired by the confirmed signature label **BIG ENERGY**; no gameplay behavior is implied. Preserve jersey `"00"` as a string.
 
-The portrait follows the approved roster's 32×32 size and three-color style. No uniform, jersey number, or player ratings have been invented or changed.
+The portrait follows the approved roster's 32×32 size and three-color style. Jersey 00 is supplied by the user. No uniform or player ratings have been invented or changed.
 
 ## Files
 
@@ -23,4 +23,6 @@ The final portrait has exactly three opaque colors, binary alpha, and a matching
 
 ## Integration
 
-Replace or revise the placeholder when a real reference is supplied. A 32×32 portrait needs a compatible custom layout or background composition, rather than the standard 16×16 avatar/static profile. No project import, ROM build, emulator test, or hardware check has been performed. The game remains in planning.
+The approved invented design remains the default. Its exact 32×32 source cells are integrated as native window tiles and verified in the built ROM. Physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

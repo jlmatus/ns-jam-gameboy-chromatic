@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "action": "input",
+  "preview": {
+    "url": "http://127.0.0.1:62764/19f57fe31dc6f74b19613a24933bd8240e2dea218046bc4e05500f35f806400d/",
+    "port": 62764,
+    "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+    "reused": true,
+    "listenerId": "8c109accd1bf990c41a5dbed0d1471f3",
+    "startedAt": "2026-10-28T20:31:33.672Z",
+    "kind": "in-process-http",
+    "listening": true,
+    "closureState": "open",
+    "annotations": {
+      "injected": true,
+      "fingerprint": "1c40ebea1e27944cc890c49c20ab8f64141d73ca2fdfaa39743d2832943e2451"
+    }
+  },
+  "binding": {
+    "listenerId": "8c109accd1bf990c41a5dbed0d1471f3",
+    "viewId": "b67ea0aa-eda1-4cc8-aa81-48a04e363be6",
+    "romSha256": "3966d9c13fb54110a7949ec8e0348ef8655d39cecfa0afabb2eabf16263851c1",
+    "runtimeSha256": "69aa17be45fec5fde585af4f39ed850b5d64107ec094a6482f316fef2fe7c945",
+    "sourceRevision": "ecbd6701e4a30d25bf91c40837e4b3f90cf14656d3036a19d9b038b9de14f5fa",
+    "inputGeneration": 1
+  },
+  "receipt": {
+    "id": "9999d9c4-0e21-4e20-8a82-0f095d962fba",
+    "generation": 1,
+    "outcome": "completed",
+    "reason": "duration",
+    "applied": true,
+    "requestedDurationMs": 1200,
+    "observedHoldMs": 1200.2999999523163,
+    "startFrame": 823,
+    "endFrame": 895,
+    "mcpButtonsReleased": true
+  }
+}

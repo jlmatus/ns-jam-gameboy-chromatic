@@ -3,8 +3,8 @@
   "version": 1,
   "width": 32,
   "height": 32,
-  "status": "approved portrait; not integrated into a native game project",
-  "method": "Recovered declared palette indices from the 32×32 chart; visually reviewed source and flags; explicitly redrew chin cell (13,28) as solid light using native pixel authoring. Not a zero-flag recovery; no whole-image resizing.",
+  "status": "approved portrait; integrated into native selection menu",
+  "method": "Recovered declared palette indices from the 32\u00d732 chart; visually reviewed source and flags; explicitly redrew chin cell (13,28) as solid light using native pixel authoring. Not a zero-flag recovery; no whole-image resizing.",
   "palette": {
     ".": "#00000000",
     "#": "#22303AFF",

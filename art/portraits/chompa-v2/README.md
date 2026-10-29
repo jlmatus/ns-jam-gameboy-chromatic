@@ -1,6 +1,6 @@
-# CHOMPA — portrait revision v2
+# CHOMPA — default portrait v2
 
-Revised 32×32 face portrait based on the closer beanie photograph. **Pending user approval.** Fuller cheeks and jaw, hooded eyes, angular glasses, a relaxed smile, chin stubble, and a lime beanie distinguish the revised likeness. V1 artwork remains intact for comparison.
+Revised 32×32 face portrait based on the closer beanie photograph. **Approved default portrait; jersey 74.** Fuller cheeks and jaw, hooded eyes, angular glasses, a relaxed smile, chin stubble, and a lime beanie distinguish the revised likeness. `chompa-32.png` is the selected default color portrait; the three-color version is an integration variant. V1 artwork remains intact for comparison.
 
 ## Files
 
@@ -23,4 +23,6 @@ The restricted palette retains the green beanie by merging skin shadow into skin
 
 ## Integration
 
-The color concept's four opaque colors exceed one hardware object's three opaque colors. The restricted variant is provided for future sprite-palette evaluation. A 32×32 portrait also needs a compatible custom layout or background composition; it is not a standard 16×16 avatar/static import. No project import, ROM build, or runtime verification has been performed. The game remains in planning.
+The full-color default is integrated as native background/window tiles, whose four-color palette preserves both skin shades and the green beanie. The three-color sprite variant remains available. Native ROM menu frames have been verified; physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

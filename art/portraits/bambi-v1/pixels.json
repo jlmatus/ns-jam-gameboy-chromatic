@@ -3,7 +3,7 @@
   "version": 1,
   "width": 32,
   "height": 32,
-  "status": "approved portrait; not integrated into a native game project",
+  "status": "approved portrait; integrated into native selection menu",
   "method": "Recovered one declared palette index per chart cell after visual review of the source, native candidate, overlay, and flagged guide-edge crops. No whole-image downscaling.",
   "palette": {
     ".": "#00000000",

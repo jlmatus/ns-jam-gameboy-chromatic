@@ -1,0 +1,5224 @@
+{
+  "native": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "sizeBytes": 262144,
+    "sha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+    "title": "NICASOURCEJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 3,
+    "declaredRomSizeBytes": 262144,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 171,
+    "computedHeaderChecksum": 171,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "source": {
+    "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+    "projectRevision": "c1f67df3ca91793ab9455d583cafccd59f6159be9e1c85836d895a50e696a670",
+    "sourceFingerprint": "e4b4e70ba75b35461442286ba841bdb7e04a0d4f742a8e09ab6eac892cdf13f7",
+    "compilerSha256": "78961636939edb44b0539ae26badfa07055be38124dbf08e3b84ec5608a2e627",
+    "engineAbiVersion": "gbvm-farptr3-uword16-v1:85e65e9be4efe6b794debf0d0a299c88a2f888a48eaf0b35efed6d3c9a2269f0"
+  },
+  "recording": {
+    "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+    "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+    "status": "stopped",
+    "branchId": "branch-0001",
+    "frame": 617,
+    "totalFrames": 617,
+    "bytesUsed": 1037903,
+    "limits": {
+      "sampleEveryFrames": 2,
+      "recentFrameCount": 64,
+      "maxBytes": 67108864,
+      "maxFrames": 36000,
+      "maxWallTimeMs": 900000
+    },
+    "eventCount": 641,
+    "eventDigest": "529b6da1366caa8a0855952b479fc72844c0115ded8300a10435e8324185bdab",
+    "branches": [
+      {
+        "branchId": "branch-0001",
+        "frame": 617
+      }
+    ],
+    "outcome": "passed",
+    "reason": "Final interval-guard ROM through frame 617: close-range human gather/rise/release/follow/landing, made basket and animated net, visible ball, four-way turning and movement. Exact crowded regression at frame 511 reduced peak 11 to 10 with zero over-limit scanlines."
+  },
+  "trace": [
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 132,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 41.863167,
+        "gameTimeMs": 2210.0372314453125
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 132,
+        "totalFrames": 132,
+        "bytesUsed": 67066,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 77,
+        "eventDigest": "b47229153acad1a4bbd1260247e7ca16b72f10cc8a9b23dae652e4fa3b7dbde9",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 132
+          }
+        ]
+      },
+      "startFrame": 120,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 132,
+          "width": 160,
+          "height": 144,
+          "sha256": "c1f704bf3bfe0ec9c366d69a685cc46deacaef28d41723278c9d33ac9ccc10d2",
+          "rgbaSha256": "196d2c02187eb6817f41c0c770b418c7c17407e7a7e03472a375baef69bf99c7",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/c1f704bf3bfe0ec9c366d69a685cc46deacaef28d41723278c9d33ac9ccc10d2.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 0,
+        "toActionIndex": 7,
+        "fromFrame": 120,
+        "toFrame": 132,
+        "fromPrefixPin": {
+          "eventCount": 63,
+          "eventDigest": "0f36c2911d0f3ca8191b4a898bac81a766d426c1f6ee5a038d313a0f02aa6d0e",
+          "byteLength": 33721,
+          "sha256": "8506a94e5d7f4497bf2c5bb6447b9345c40d27bdbaabd0998efce4689594a411"
+        },
+        "prefixPin": {
+          "eventCount": 77,
+          "eventDigest": "b47229153acad1a4bbd1260247e7ca16b72f10cc8a9b23dae652e4fa3b7dbde9",
+          "byteLength": 39418,
+          "sha256": "42781f89f31b601f9ee7a5f241663e6b7b571511f29f862667e1ea2f8b572ea3"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 120,
+        "frame": 132,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 0,
+          "toActionIndex": 7,
+          "fromFrame": 120,
+          "toFrame": 132,
+          "fromPrefixPin": {
+            "eventCount": 63,
+            "eventDigest": "0f36c2911d0f3ca8191b4a898bac81a766d426c1f6ee5a038d313a0f02aa6d0e",
+            "byteLength": 33721,
+            "sha256": "8506a94e5d7f4497bf2c5bb6447b9345c40d27bdbaabd0998efce4689594a411"
+          },
+          "prefixPin": {
+            "eventCount": 77,
+            "eventDigest": "b47229153acad1a4bbd1260247e7ca16b72f10cc8a9b23dae652e4fa3b7dbde9",
+            "byteLength": 39418,
+            "sha256": "42781f89f31b601f9ee7a5f241663e6b7b571511f29f862667e1ea2f8b572ea3"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 144,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 46.434959,
+        "gameTimeMs": 2410.94970703125
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 144,
+        "totalFrames": 144,
+        "bytesUsed": 72767,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 91,
+        "eventDigest": "53e499ed7d140813c1b71b10fee0531d2d181500ec96b481c7b4398dabcede39",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 144
+          }
+        ]
+      },
+      "startFrame": 132,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 144,
+          "width": 160,
+          "height": 144,
+          "sha256": "c1f704bf3bfe0ec9c366d69a685cc46deacaef28d41723278c9d33ac9ccc10d2",
+          "rgbaSha256": "196d2c02187eb6817f41c0c770b418c7c17407e7a7e03472a375baef69bf99c7",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/c1f704bf3bfe0ec9c366d69a685cc46deacaef28d41723278c9d33ac9ccc10d2.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 7,
+        "toActionIndex": 14,
+        "fromFrame": 132,
+        "toFrame": 144,
+        "fromPrefixPin": {
+          "eventCount": 77,
+          "eventDigest": "b47229153acad1a4bbd1260247e7ca16b72f10cc8a9b23dae652e4fa3b7dbde9",
+          "byteLength": 39418,
+          "sha256": "42781f89f31b601f9ee7a5f241663e6b7b571511f29f862667e1ea2f8b572ea3"
+        },
+        "prefixPin": {
+          "eventCount": 91,
+          "eventDigest": "53e499ed7d140813c1b71b10fee0531d2d181500ec96b481c7b4398dabcede39",
+          "byteLength": 45119,
+          "sha256": "f19cdd84292287ee0863e6f01b2346eed33a33f621b906da7185f289cdc1a417"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 132,
+        "frame": 144,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 7,
+          "toActionIndex": 14,
+          "fromFrame": 132,
+          "toFrame": 144,
+          "fromPrefixPin": {
+            "eventCount": 77,
+            "eventDigest": "b47229153acad1a4bbd1260247e7ca16b72f10cc8a9b23dae652e4fa3b7dbde9",
+            "byteLength": 39418,
+            "sha256": "42781f89f31b601f9ee7a5f241663e6b7b571511f29f862667e1ea2f8b572ea3"
+          },
+          "prefixPin": {
+            "eventCount": 91,
+            "eventDigest": "53e499ed7d140813c1b71b10fee0531d2d181500ec96b481c7b4398dabcede39",
+            "byteLength": 45119,
+            "sha256": "f19cdd84292287ee0863e6f01b2346eed33a33f621b906da7185f289cdc1a417"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 156,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 51.795167,
+        "gameTimeMs": 2611.8621826171875
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 156,
+        "totalFrames": 156,
+        "bytesUsed": 85371,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 105,
+        "eventDigest": "42af63d0ee5c6198fe24d64a115b1f7dcd56b184a206dab5705de071b156b0b2",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 156
+          }
+        ]
+      },
+      "startFrame": 144,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 156,
+          "width": 160,
+          "height": 144,
+          "sha256": "fca2637fce30c39352310c8fa58f409ca07044bdb34a46d8dcb6ff7e29138d9c",
+          "rgbaSha256": "9035c5b4d8f35289e5e7028caa7391446bcd528928b71dba1a89e7408fd5899e",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/fca2637fce30c39352310c8fa58f409ca07044bdb34a46d8dcb6ff7e29138d9c.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 14,
+        "toActionIndex": 21,
+        "fromFrame": 144,
+        "toFrame": 156,
+        "fromPrefixPin": {
+          "eventCount": 91,
+          "eventDigest": "53e499ed7d140813c1b71b10fee0531d2d181500ec96b481c7b4398dabcede39",
+          "byteLength": 45119,
+          "sha256": "f19cdd84292287ee0863e6f01b2346eed33a33f621b906da7185f289cdc1a417"
+        },
+        "prefixPin": {
+          "eventCount": 105,
+          "eventDigest": "42af63d0ee5c6198fe24d64a115b1f7dcd56b184a206dab5705de071b156b0b2",
+          "byteLength": 50835,
+          "sha256": "547a8325d73b5d07abccc21095843179dc0295b2b65d5a9c243bd0060064227c"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 144,
+        "frame": 156,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 14,
+          "toActionIndex": 21,
+          "fromFrame": 144,
+          "toFrame": 156,
+          "fromPrefixPin": {
+            "eventCount": 91,
+            "eventDigest": "53e499ed7d140813c1b71b10fee0531d2d181500ec96b481c7b4398dabcede39",
+            "byteLength": 45119,
+            "sha256": "f19cdd84292287ee0863e6f01b2346eed33a33f621b906da7185f289cdc1a417"
+          },
+          "prefixPin": {
+            "eventCount": 105,
+            "eventDigest": "42af63d0ee5c6198fe24d64a115b1f7dcd56b184a206dab5705de071b156b0b2",
+            "byteLength": 50835,
+            "sha256": "547a8325d73b5d07abccc21095843179dc0295b2b65d5a9c243bd0060064227c"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 168,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 56.584667,
+        "gameTimeMs": 2812.774658203125
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 168,
+        "totalFrames": 168,
+        "bytesUsed": 91089,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 119,
+        "eventDigest": "01a5259544ccc01a3f3d7d1167c081c345d637a8c7ef2af1a98ee612a0e903c9",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 168
+          }
+        ]
+      },
+      "startFrame": 156,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 168,
+          "width": 160,
+          "height": 144,
+          "sha256": "fca2637fce30c39352310c8fa58f409ca07044bdb34a46d8dcb6ff7e29138d9c",
+          "rgbaSha256": "9035c5b4d8f35289e5e7028caa7391446bcd528928b71dba1a89e7408fd5899e",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/fca2637fce30c39352310c8fa58f409ca07044bdb34a46d8dcb6ff7e29138d9c.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 21,
+        "toActionIndex": 28,
+        "fromFrame": 156,
+        "toFrame": 168,
+        "fromPrefixPin": {
+          "eventCount": 105,
+          "eventDigest": "42af63d0ee5c6198fe24d64a115b1f7dcd56b184a206dab5705de071b156b0b2",
+          "byteLength": 50835,
+          "sha256": "547a8325d73b5d07abccc21095843179dc0295b2b65d5a9c243bd0060064227c"
+        },
+        "prefixPin": {
+          "eventCount": 119,
+          "eventDigest": "01a5259544ccc01a3f3d7d1167c081c345d637a8c7ef2af1a98ee612a0e903c9",
+          "byteLength": 56553,
+          "sha256": "f39b97d0aac170c4b68fef87c428603a838b58749594916e900010f2352e9955"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 156,
+        "frame": 168,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 21,
+          "toActionIndex": 28,
+          "fromFrame": 156,
+          "toFrame": 168,
+          "fromPrefixPin": {
+            "eventCount": 105,
+            "eventDigest": "42af63d0ee5c6198fe24d64a115b1f7dcd56b184a206dab5705de071b156b0b2",
+            "byteLength": 50835,
+            "sha256": "547a8325d73b5d07abccc21095843179dc0295b2b65d5a9c243bd0060064227c"
+          },
+          "prefixPin": {
+            "eventCount": 119,
+            "eventDigest": "01a5259544ccc01a3f3d7d1167c081c345d637a8c7ef2af1a98ee612a0e903c9",
+            "byteLength": 56553,
+            "sha256": "f39b97d0aac170c4b68fef87c428603a838b58749594916e900010f2352e9955"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 180,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 62.565001,
+        "gameTimeMs": 3013.6871337890625
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 180,
+        "totalFrames": 180,
+        "bytesUsed": 103641,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 133,
+        "eventDigest": "93ddb9037b2222b9b89653b097cc55931c518436792da3eb984a88f526225f43",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 180
+          }
+        ]
+      },
+      "startFrame": 168,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 180,
+          "width": 160,
+          "height": 144,
+          "sha256": "9cc79f9460e5c9699f265c63d8490a5b5c93d008fde5071dd9d6cc575ed4f9e8",
+          "rgbaSha256": "be430ad55be88713fcab782dba911f08bc0cb6d21ba6e43a5aa5438ea232215d",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/9cc79f9460e5c9699f265c63d8490a5b5c93d008fde5071dd9d6cc575ed4f9e8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 28,
+        "toActionIndex": 35,
+        "fromFrame": 168,
+        "toFrame": 180,
+        "fromPrefixPin": {
+          "eventCount": 119,
+          "eventDigest": "01a5259544ccc01a3f3d7d1167c081c345d637a8c7ef2af1a98ee612a0e903c9",
+          "byteLength": 56553,
+          "sha256": "f39b97d0aac170c4b68fef87c428603a838b58749594916e900010f2352e9955"
+        },
+        "prefixPin": {
+          "eventCount": 133,
+          "eventDigest": "93ddb9037b2222b9b89653b097cc55931c518436792da3eb984a88f526225f43",
+          "byteLength": 62277,
+          "sha256": "a4fc2667ba79e8d3165d2d6756039c4a5191ee4f7bb50e8f5cca595ef0b7d51e"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 168,
+        "frame": 180,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 28,
+          "toActionIndex": 35,
+          "fromFrame": 168,
+          "toFrame": 180,
+          "fromPrefixPin": {
+            "eventCount": 119,
+            "eventDigest": "01a5259544ccc01a3f3d7d1167c081c345d637a8c7ef2af1a98ee612a0e903c9",
+            "byteLength": 56553,
+            "sha256": "f39b97d0aac170c4b68fef87c428603a838b58749594916e900010f2352e9955"
+          },
+          "prefixPin": {
+            "eventCount": 133,
+            "eventDigest": "93ddb9037b2222b9b89653b097cc55931c518436792da3eb984a88f526225f43",
+            "byteLength": 62277,
+            "sha256": "a4fc2667ba79e8d3165d2d6756039c4a5191ee4f7bb50e8f5cca595ef0b7d51e"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 192,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 67.239751,
+        "gameTimeMs": 3214.599609375
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 192,
+        "totalFrames": 192,
+        "bytesUsed": 109359,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 147,
+        "eventDigest": "16c9732fa64202be57f57cc5c27b05d0d142a6b170d087a4ced32f5ea26e49be",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 192
+          }
+        ]
+      },
+      "startFrame": 180,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 192,
+          "width": 160,
+          "height": 144,
+          "sha256": "9cc79f9460e5c9699f265c63d8490a5b5c93d008fde5071dd9d6cc575ed4f9e8",
+          "rgbaSha256": "be430ad55be88713fcab782dba911f08bc0cb6d21ba6e43a5aa5438ea232215d",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/9cc79f9460e5c9699f265c63d8490a5b5c93d008fde5071dd9d6cc575ed4f9e8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 35,
+        "toActionIndex": 42,
+        "fromFrame": 180,
+        "toFrame": 192,
+        "fromPrefixPin": {
+          "eventCount": 133,
+          "eventDigest": "93ddb9037b2222b9b89653b097cc55931c518436792da3eb984a88f526225f43",
+          "byteLength": 62277,
+          "sha256": "a4fc2667ba79e8d3165d2d6756039c4a5191ee4f7bb50e8f5cca595ef0b7d51e"
+        },
+        "prefixPin": {
+          "eventCount": 147,
+          "eventDigest": "16c9732fa64202be57f57cc5c27b05d0d142a6b170d087a4ced32f5ea26e49be",
+          "byteLength": 67995,
+          "sha256": "f43ef4e14ce05e84faf269d5b90c869f4d371b2bd83ed4b6862d0f03630a1286"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 180,
+        "frame": 192,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 35,
+          "toActionIndex": 42,
+          "fromFrame": 180,
+          "toFrame": 192,
+          "fromPrefixPin": {
+            "eventCount": 133,
+            "eventDigest": "93ddb9037b2222b9b89653b097cc55931c518436792da3eb984a88f526225f43",
+            "byteLength": 62277,
+            "sha256": "a4fc2667ba79e8d3165d2d6756039c4a5191ee4f7bb50e8f5cca595ef0b7d51e"
+          },
+          "prefixPin": {
+            "eventCount": 147,
+            "eventDigest": "16c9732fa64202be57f57cc5c27b05d0d142a6b170d087a4ced32f5ea26e49be",
+            "byteLength": 67995,
+            "sha256": "f43ef4e14ce05e84faf269d5b90c869f4d371b2bd83ed4b6862d0f03630a1286"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 204,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 72.225293,
+        "gameTimeMs": 3415.5120849609375
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 204,
+        "totalFrames": 204,
+        "bytesUsed": 121317,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 161,
+        "eventDigest": "6d3ac53a42a3dc4a01480219fea09a071869af5315f239dcd2a973949f0e95bf",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 204
+          }
+        ]
+      },
+      "startFrame": 192,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 204,
+          "width": 160,
+          "height": 144,
+          "sha256": "47900769cf6ce3cee9a1d86e442aa289de3988ba4926996c46118d562ce53a40",
+          "rgbaSha256": "39140dbc5f6d9869c2550f496f2a18723dcbe3de1ad87538080e650743f4ae6e",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/47900769cf6ce3cee9a1d86e442aa289de3988ba4926996c46118d562ce53a40.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 42,
+        "toActionIndex": 49,
+        "fromFrame": 192,
+        "toFrame": 204,
+        "fromPrefixPin": {
+          "eventCount": 147,
+          "eventDigest": "16c9732fa64202be57f57cc5c27b05d0d142a6b170d087a4ced32f5ea26e49be",
+          "byteLength": 67995,
+          "sha256": "f43ef4e14ce05e84faf269d5b90c869f4d371b2bd83ed4b6862d0f03630a1286"
+        },
+        "prefixPin": {
+          "eventCount": 161,
+          "eventDigest": "6d3ac53a42a3dc4a01480219fea09a071869af5315f239dcd2a973949f0e95bf",
+          "byteLength": 73719,
+          "sha256": "afea4ccd076113911f5282dc63a2b261535a9cbe82990c9e6c9f5019ba9d1a3b"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 192,
+        "frame": 204,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 42,
+          "toActionIndex": 49,
+          "fromFrame": 192,
+          "toFrame": 204,
+          "fromPrefixPin": {
+            "eventCount": 147,
+            "eventDigest": "16c9732fa64202be57f57cc5c27b05d0d142a6b170d087a4ced32f5ea26e49be",
+            "byteLength": 67995,
+            "sha256": "f43ef4e14ce05e84faf269d5b90c869f4d371b2bd83ed4b6862d0f03630a1286"
+          },
+          "prefixPin": {
+            "eventCount": 161,
+            "eventDigest": "6d3ac53a42a3dc4a01480219fea09a071869af5315f239dcd2a973949f0e95bf",
+            "byteLength": 73719,
+            "sha256": "afea4ccd076113911f5282dc63a2b261535a9cbe82990c9e6c9f5019ba9d1a3b"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 216,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 76.741002,
+        "gameTimeMs": 3616.424560546875
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 216,
+        "totalFrames": 216,
+        "bytesUsed": 127035,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 175,
+        "eventDigest": "3d2cd2ec40192f1d253eb848241802de29311a8090f2e239032dd99f4378e4df",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 216
+          }
+        ]
+      },
+      "startFrame": 204,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 216,
+          "width": 160,
+          "height": 144,
+          "sha256": "47900769cf6ce3cee9a1d86e442aa289de3988ba4926996c46118d562ce53a40",
+          "rgbaSha256": "39140dbc5f6d9869c2550f496f2a18723dcbe3de1ad87538080e650743f4ae6e",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/47900769cf6ce3cee9a1d86e442aa289de3988ba4926996c46118d562ce53a40.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 49,
+        "toActionIndex": 56,
+        "fromFrame": 204,
+        "toFrame": 216,
+        "fromPrefixPin": {
+          "eventCount": 161,
+          "eventDigest": "6d3ac53a42a3dc4a01480219fea09a071869af5315f239dcd2a973949f0e95bf",
+          "byteLength": 73719,
+          "sha256": "afea4ccd076113911f5282dc63a2b261535a9cbe82990c9e6c9f5019ba9d1a3b"
+        },
+        "prefixPin": {
+          "eventCount": 175,
+          "eventDigest": "3d2cd2ec40192f1d253eb848241802de29311a8090f2e239032dd99f4378e4df",
+          "byteLength": 79437,
+          "sha256": "c015483fa0fc61460111ada632bc3986e2f4206e37ac73a93ef90ed9e8ad1695"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 204,
+        "frame": 216,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 49,
+          "toActionIndex": 56,
+          "fromFrame": 204,
+          "toFrame": 216,
+          "fromPrefixPin": {
+            "eventCount": 161,
+            "eventDigest": "6d3ac53a42a3dc4a01480219fea09a071869af5315f239dcd2a973949f0e95bf",
+            "byteLength": 73719,
+            "sha256": "afea4ccd076113911f5282dc63a2b261535a9cbe82990c9e6c9f5019ba9d1a3b"
+          },
+          "prefixPin": {
+            "eventCount": 175,
+            "eventDigest": "3d2cd2ec40192f1d253eb848241802de29311a8090f2e239032dd99f4378e4df",
+            "byteLength": 79437,
+            "sha256": "c015483fa0fc61460111ada632bc3986e2f4206e37ac73a93ef90ed9e8ad1695"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 228,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "up"
+      ],
+      "sampledButtons": [
+        "up"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 81.878877,
+        "gameTimeMs": 3817.3370361328125
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 228,
+        "totalFrames": 228,
+        "bytesUsed": 134336,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 189,
+        "eventDigest": "46da65adbb776e69c7416f0355a76f41264c66025acf268c2fda8a5bc1be39f9",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 228
+          }
+        ]
+      },
+      "startFrame": 216,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "up"
+      ],
+      "samples": [
+        {
+          "frame": 228,
+          "width": 160,
+          "height": 144,
+          "sha256": "7acdb01e39cf53600597f13eb1fcbb63752b09282d2736b01a99db188ccd69b8",
+          "rgbaSha256": "7a8c2fcec746eb20ad1888beea391aee5622e3dddee072e4fab2d8abf3d6c9ae",
+          "sampledButtons": [
+            "up"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/7acdb01e39cf53600597f13eb1fcbb63752b09282d2736b01a99db188ccd69b8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 56,
+        "toActionIndex": 63,
+        "fromFrame": 216,
+        "toFrame": 228,
+        "fromPrefixPin": {
+          "eventCount": 175,
+          "eventDigest": "3d2cd2ec40192f1d253eb848241802de29311a8090f2e239032dd99f4378e4df",
+          "byteLength": 79437,
+          "sha256": "c015483fa0fc61460111ada632bc3986e2f4206e37ac73a93ef90ed9e8ad1695"
+        },
+        "prefixPin": {
+          "eventCount": 189,
+          "eventDigest": "46da65adbb776e69c7416f0355a76f41264c66025acf268c2fda8a5bc1be39f9",
+          "byteLength": 85164,
+          "sha256": "3151cb6e3ec55a195033e50398a339de23495882897ce4224557081fc3d1f6df"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 216,
+        "frame": 228,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "up"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 56,
+          "toActionIndex": 63,
+          "fromFrame": 216,
+          "toFrame": 228,
+          "fromPrefixPin": {
+            "eventCount": 175,
+            "eventDigest": "3d2cd2ec40192f1d253eb848241802de29311a8090f2e239032dd99f4378e4df",
+            "byteLength": 79437,
+            "sha256": "c015483fa0fc61460111ada632bc3986e2f4206e37ac73a93ef90ed9e8ad1695"
+          },
+          "prefixPin": {
+            "eventCount": 189,
+            "eventDigest": "46da65adbb776e69c7416f0355a76f41264c66025acf268c2fda8a5bc1be39f9",
+            "byteLength": 85164,
+            "sha256": "3151cb6e3ec55a195033e50398a339de23495882897ce4224557081fc3d1f6df"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "up"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 240,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 86.480752,
+        "gameTimeMs": 4018.24951171875
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 240,
+        "totalFrames": 240,
+        "bytesUsed": 140055,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 203,
+        "eventDigest": "8c202c086b1d01713677bc57bd7bddc4262516ad9f13ecb105e0138539e42136",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 240
+          }
+        ]
+      },
+      "startFrame": 228,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 240,
+          "width": 160,
+          "height": 144,
+          "sha256": "7acdb01e39cf53600597f13eb1fcbb63752b09282d2736b01a99db188ccd69b8",
+          "rgbaSha256": "7a8c2fcec746eb20ad1888beea391aee5622e3dddee072e4fab2d8abf3d6c9ae",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/7acdb01e39cf53600597f13eb1fcbb63752b09282d2736b01a99db188ccd69b8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 63,
+        "toActionIndex": 70,
+        "fromFrame": 228,
+        "toFrame": 240,
+        "fromPrefixPin": {
+          "eventCount": 189,
+          "eventDigest": "46da65adbb776e69c7416f0355a76f41264c66025acf268c2fda8a5bc1be39f9",
+          "byteLength": 85164,
+          "sha256": "3151cb6e3ec55a195033e50398a339de23495882897ce4224557081fc3d1f6df"
+        },
+        "prefixPin": {
+          "eventCount": 203,
+          "eventDigest": "8c202c086b1d01713677bc57bd7bddc4262516ad9f13ecb105e0138539e42136",
+          "byteLength": 90883,
+          "sha256": "b6f0fec75642bc157fd37ba02fdf7e7d8c88b510267790aef9ea198c489925cc"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 228,
+        "frame": 240,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 63,
+          "toActionIndex": 70,
+          "fromFrame": 228,
+          "toFrame": 240,
+          "fromPrefixPin": {
+            "eventCount": 189,
+            "eventDigest": "46da65adbb776e69c7416f0355a76f41264c66025acf268c2fda8a5bc1be39f9",
+            "byteLength": 85164,
+            "sha256": "3151cb6e3ec55a195033e50398a339de23495882897ce4224557081fc3d1f6df"
+          },
+          "prefixPin": {
+            "eventCount": 203,
+            "eventDigest": "8c202c086b1d01713677bc57bd7bddc4262516ad9f13ecb105e0138539e42136",
+            "byteLength": 90883,
+            "sha256": "b6f0fec75642bc157fd37ba02fdf7e7d8c88b510267790aef9ea198c489925cc"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 252,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 91.552669,
+        "gameTimeMs": 4219.1619873046875
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 252,
+        "totalFrames": 252,
+        "bytesUsed": 148698,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 217,
+        "eventDigest": "98f30b3c135c6dcb7fd94efd82b1af66fee4b6fe89aa1b3f46a564db2053241c",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 252
+          }
+        ]
+      },
+      "startFrame": 240,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 252,
+          "width": 160,
+          "height": 144,
+          "sha256": "d006a13f65862546607cbf3c2c3ca8df8c8c15f3946931d8ed95b6ad9c29addc",
+          "rgbaSha256": "16d57962b3d5b77116e040fa273d1583d2110922e4582b17c640e2ae707b9db3",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/d006a13f65862546607cbf3c2c3ca8df8c8c15f3946931d8ed95b6ad9c29addc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 70,
+        "toActionIndex": 77,
+        "fromFrame": 240,
+        "toFrame": 252,
+        "fromPrefixPin": {
+          "eventCount": 203,
+          "eventDigest": "8c202c086b1d01713677bc57bd7bddc4262516ad9f13ecb105e0138539e42136",
+          "byteLength": 90883,
+          "sha256": "b6f0fec75642bc157fd37ba02fdf7e7d8c88b510267790aef9ea198c489925cc"
+        },
+        "prefixPin": {
+          "eventCount": 217,
+          "eventDigest": "98f30b3c135c6dcb7fd94efd82b1af66fee4b6fe89aa1b3f46a564db2053241c",
+          "byteLength": 96607,
+          "sha256": "aaee5f2bada8df93da562c03eced3e79302c2a115d167e447f55e6a963ecb814"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 240,
+        "frame": 252,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 70,
+          "toActionIndex": 77,
+          "fromFrame": 240,
+          "toFrame": 252,
+          "fromPrefixPin": {
+            "eventCount": 203,
+            "eventDigest": "8c202c086b1d01713677bc57bd7bddc4262516ad9f13ecb105e0138539e42136",
+            "byteLength": 90883,
+            "sha256": "b6f0fec75642bc157fd37ba02fdf7e7d8c88b510267790aef9ea198c489925cc"
+          },
+          "prefixPin": {
+            "eventCount": 217,
+            "eventDigest": "98f30b3c135c6dcb7fd94efd82b1af66fee4b6fe89aa1b3f46a564db2053241c",
+            "byteLength": 96607,
+            "sha256": "aaee5f2bada8df93da562c03eced3e79302c2a115d167e447f55e6a963ecb814"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 264,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 95.365253,
+        "gameTimeMs": 4420.074462890625
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 264,
+        "totalFrames": 264,
+        "bytesUsed": 154416,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 231,
+        "eventDigest": "b2bf3e81c373c802618870d2ddfec886f172f65aa1d80eb67af9c8e378fcd8fd",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 264
+          }
+        ]
+      },
+      "startFrame": 252,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 264,
+          "width": 160,
+          "height": 144,
+          "sha256": "d006a13f65862546607cbf3c2c3ca8df8c8c15f3946931d8ed95b6ad9c29addc",
+          "rgbaSha256": "16d57962b3d5b77116e040fa273d1583d2110922e4582b17c640e2ae707b9db3",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/d006a13f65862546607cbf3c2c3ca8df8c8c15f3946931d8ed95b6ad9c29addc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 77,
+        "toActionIndex": 84,
+        "fromFrame": 252,
+        "toFrame": 264,
+        "fromPrefixPin": {
+          "eventCount": 217,
+          "eventDigest": "98f30b3c135c6dcb7fd94efd82b1af66fee4b6fe89aa1b3f46a564db2053241c",
+          "byteLength": 96607,
+          "sha256": "aaee5f2bada8df93da562c03eced3e79302c2a115d167e447f55e6a963ecb814"
+        },
+        "prefixPin": {
+          "eventCount": 231,
+          "eventDigest": "b2bf3e81c373c802618870d2ddfec886f172f65aa1d80eb67af9c8e378fcd8fd",
+          "byteLength": 102325,
+          "sha256": "1616d7aa17e239e743d99f60ffd812f1f4baef5f8d62ccba92c5d07c18f875ff"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 252,
+        "frame": 264,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 77,
+          "toActionIndex": 84,
+          "fromFrame": 252,
+          "toFrame": 264,
+          "fromPrefixPin": {
+            "eventCount": 217,
+            "eventDigest": "98f30b3c135c6dcb7fd94efd82b1af66fee4b6fe89aa1b3f46a564db2053241c",
+            "byteLength": 96607,
+            "sha256": "aaee5f2bada8df93da562c03eced3e79302c2a115d167e447f55e6a963ecb814"
+          },
+          "prefixPin": {
+            "eventCount": 231,
+            "eventDigest": "b2bf3e81c373c802618870d2ddfec886f172f65aa1d80eb67af9c8e378fcd8fd",
+            "byteLength": 102325,
+            "sha256": "1616d7aa17e239e743d99f60ffd812f1f4baef5f8d62ccba92c5d07c18f875ff"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 276,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 101.775753,
+        "gameTimeMs": 4620.9869384765625
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 276,
+        "totalFrames": 276,
+        "bytesUsed": 173904,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 245,
+        "eventDigest": "e3369ee7507566088af70143309f69668ba525a5a5e920ade6330891e1cb8e1d",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 276
+          }
+        ]
+      },
+      "startFrame": 264,
+      "advancedFrames": 12,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 276,
+          "width": 160,
+          "height": 144,
+          "sha256": "599cd9fda3a5b00958e02cb5b928334a9811ebbc1f7ba5e2e35f4314b14c482b",
+          "rgbaSha256": "4d3021c7a2646f1a3ed73386950e58e5e003d9daad7a0b414b4c91aa905a84f1",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/599cd9fda3a5b00958e02cb5b928334a9811ebbc1f7ba5e2e35f4314b14c482b.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 84,
+        "toActionIndex": 91,
+        "fromFrame": 264,
+        "toFrame": 276,
+        "fromPrefixPin": {
+          "eventCount": 231,
+          "eventDigest": "b2bf3e81c373c802618870d2ddfec886f172f65aa1d80eb67af9c8e378fcd8fd",
+          "byteLength": 102325,
+          "sha256": "1616d7aa17e239e743d99f60ffd812f1f4baef5f8d62ccba92c5d07c18f875ff"
+        },
+        "prefixPin": {
+          "eventCount": 245,
+          "eventDigest": "e3369ee7507566088af70143309f69668ba525a5a5e920ade6330891e1cb8e1d",
+          "byteLength": 108049,
+          "sha256": "23dc9fb67f8f3e77f20e9bd6abd40d3671a1538901d4d5228103c0cf9fbd6a91"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 264,
+        "frame": 276,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 84,
+          "toActionIndex": 91,
+          "fromFrame": 264,
+          "toFrame": 276,
+          "fromPrefixPin": {
+            "eventCount": 231,
+            "eventDigest": "b2bf3e81c373c802618870d2ddfec886f172f65aa1d80eb67af9c8e378fcd8fd",
+            "byteLength": 102325,
+            "sha256": "1616d7aa17e239e743d99f60ffd812f1f4baef5f8d62ccba92c5d07c18f875ff"
+          },
+          "prefixPin": {
+            "eventCount": 245,
+            "eventDigest": "e3369ee7507566088af70143309f69668ba525a5a5e920ade6330891e1cb8e1d",
+            "byteLength": 108049,
+            "sha256": "23dc9fb67f8f3e77f20e9bd6abd40d3671a1538901d4d5228103c0cf9fbd6a91"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 288,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 108.995795,
+        "gameTimeMs": 4821.8994140625
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 288,
+        "totalFrames": 288,
+        "bytesUsed": 196374,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 259,
+        "eventDigest": "704c5bc3e0dd95bd215c2364dd110dd2586c5f4d5571ff79535937a8a5730864",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 288
+          }
+        ]
+      },
+      "startFrame": 276,
+      "advancedFrames": 12,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 288,
+          "width": 160,
+          "height": 144,
+          "sha256": "672873be9e0fd2ff4b2283bcbe4cc5c78a4fb66a512c5620a88d4941b113c4d0",
+          "rgbaSha256": "727f52dfb4b28a8208faad1ab2740b158a6ca189048ee87992e0665edc5756b6",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/672873be9e0fd2ff4b2283bcbe4cc5c78a4fb66a512c5620a88d4941b113c4d0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 91,
+        "toActionIndex": 98,
+        "fromFrame": 276,
+        "toFrame": 288,
+        "fromPrefixPin": {
+          "eventCount": 245,
+          "eventDigest": "e3369ee7507566088af70143309f69668ba525a5a5e920ade6330891e1cb8e1d",
+          "byteLength": 108049,
+          "sha256": "23dc9fb67f8f3e77f20e9bd6abd40d3671a1538901d4d5228103c0cf9fbd6a91"
+        },
+        "prefixPin": {
+          "eventCount": 259,
+          "eventDigest": "704c5bc3e0dd95bd215c2364dd110dd2586c5f4d5571ff79535937a8a5730864",
+          "byteLength": 113767,
+          "sha256": "3f63c2319a207851fa22452d98b2d422ae3b71e78d5bdb6cee4d79c821caba18"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 12,
+        "startFrame": 276,
+        "frame": 288,
+        "advancedFrames": 12,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 91,
+          "toActionIndex": 98,
+          "fromFrame": 276,
+          "toFrame": 288,
+          "fromPrefixPin": {
+            "eventCount": 245,
+            "eventDigest": "e3369ee7507566088af70143309f69668ba525a5a5e920ade6330891e1cb8e1d",
+            "byteLength": 108049,
+            "sha256": "23dc9fb67f8f3e77f20e9bd6abd40d3671a1538901d4d5228103c0cf9fbd6a91"
+          },
+          "prefixPin": {
+            "eventCount": 259,
+            "eventDigest": "704c5bc3e0dd95bd215c2364dd110dd2586c5f4d5571ff79535937a8a5730864",
+            "byteLength": 113767,
+            "sha256": "3f63c2319a207851fa22452d98b2d422ae3b71e78d5bdb6cee4d79c821caba18"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 393,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "right",
+        "start"
+      ],
+      "sampledButtons": [
+        "right",
+        "start"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 171.291212,
+        "gameTimeMs": 6579.883575439453
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 393,
+        "totalFrames": 393,
+        "bytesUsed": 391646,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 367,
+        "eventDigest": "3c462941f5a0951ad9f4d44c1127a8f8ee4319e5fcc3213c999d5e7a161ec2c4",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 393
+          }
+        ]
+      },
+      "startFrame": 288,
+      "advancedFrames": 105,
+      "appliedButtons": [
+        "right",
+        "start"
+      ],
+      "samples": [
+        {
+          "frame": 393,
+          "width": 160,
+          "height": 144,
+          "sha256": "2f65f4cf8cf718eb0656ccd9f8f7320ae09311bd68db7d0f9dd416a5c2ed7b62",
+          "rgbaSha256": "b48d2ae6b561733012852a62b7e917c4bcb6630bc161ba92073e7db73cfcf01c",
+          "sampledButtons": [
+            "right",
+            "start"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/2f65f4cf8cf718eb0656ccd9f8f7320ae09311bd68db7d0f9dd416a5c2ed7b62.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 98,
+        "toActionIndex": 152,
+        "fromFrame": 288,
+        "toFrame": 393,
+        "fromPrefixPin": {
+          "eventCount": 259,
+          "eventDigest": "704c5bc3e0dd95bd215c2364dd110dd2586c5f4d5571ff79535937a8a5730864",
+          "byteLength": 113767,
+          "sha256": "3f63c2319a207851fa22452d98b2d422ae3b71e78d5bdb6cee4d79c821caba18"
+        },
+        "prefixPin": {
+          "eventCount": 367,
+          "eventDigest": "3c462941f5a0951ad9f4d44c1127a8f8ee4319e5fcc3213c999d5e7a161ec2c4",
+          "byteLength": 159583,
+          "sha256": "277c5baafefc5d489d09636a45c1a203d47cb72d5d1eb3718e6a5af08ca58805"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 105,
+        "startFrame": 288,
+        "frame": 393,
+        "advancedFrames": 105,
+        "appliedButtons": [
+          "right",
+          "start"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 98,
+          "toActionIndex": 152,
+          "fromFrame": 288,
+          "toFrame": 393,
+          "fromPrefixPin": {
+            "eventCount": 259,
+            "eventDigest": "704c5bc3e0dd95bd215c2364dd110dd2586c5f4d5571ff79535937a8a5730864",
+            "byteLength": 113767,
+            "sha256": "3f63c2319a207851fa22452d98b2d422ae3b71e78d5bdb6cee4d79c821caba18"
+          },
+          "prefixPin": {
+            "eventCount": 367,
+            "eventDigest": "3c462941f5a0951ad9f4d44c1127a8f8ee4319e5fcc3213c999d5e7a161ec2c4",
+            "byteLength": 159583,
+            "sha256": "277c5baafefc5d489d09636a45c1a203d47cb72d5d1eb3718e6a5af08ca58805"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "right",
+          "start"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 395,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 173.115296,
+        "gameTimeMs": 6613.368988037109
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 395,
+        "totalFrames": 395,
+        "bytesUsed": 396928,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 373,
+        "eventDigest": "e95be844ea06cf429822b8000eb28690b9969086717f053c6b545814067983c1",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 395
+          }
+        ]
+      },
+      "startFrame": 393,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 395,
+          "width": 160,
+          "height": 144,
+          "sha256": "4afed810e9b9efb0c9b35e848446b270c827f502f1bdff05800ae75071a60246",
+          "rgbaSha256": "3d16f642cbda2b5835b5ebaac5d4231400b1832c566019f72efe51e2a0343880",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/4afed810e9b9efb0c9b35e848446b270c827f502f1bdff05800ae75071a60246.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 152,
+        "toActionIndex": 155,
+        "fromFrame": 393,
+        "toFrame": 395,
+        "fromPrefixPin": {
+          "eventCount": 367,
+          "eventDigest": "3c462941f5a0951ad9f4d44c1127a8f8ee4319e5fcc3213c999d5e7a161ec2c4",
+          "byteLength": 159583,
+          "sha256": "277c5baafefc5d489d09636a45c1a203d47cb72d5d1eb3718e6a5af08ca58805"
+        },
+        "prefixPin": {
+          "eventCount": 373,
+          "eventDigest": "e95be844ea06cf429822b8000eb28690b9969086717f053c6b545814067983c1",
+          "byteLength": 161918,
+          "sha256": "cc50c5b897541e6c4242ceceebffd514b3cdd6b6536f1e8dc3979346fed37d52"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 2,
+        "startFrame": 393,
+        "frame": 395,
+        "advancedFrames": 2,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 152,
+          "toActionIndex": 155,
+          "fromFrame": 393,
+          "toFrame": 395,
+          "fromPrefixPin": {
+            "eventCount": 367,
+            "eventDigest": "3c462941f5a0951ad9f4d44c1127a8f8ee4319e5fcc3213c999d5e7a161ec2c4",
+            "byteLength": 159583,
+            "sha256": "277c5baafefc5d489d09636a45c1a203d47cb72d5d1eb3718e6a5af08ca58805"
+          },
+          "prefixPin": {
+            "eventCount": 373,
+            "eventDigest": "e95be844ea06cf429822b8000eb28690b9969086717f053c6b545814067983c1",
+            "byteLength": 161918,
+            "sha256": "cc50c5b897541e6c4242ceceebffd514b3cdd6b6536f1e8dc3979346fed37d52"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 419,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 190.451173,
+        "gameTimeMs": 7015.193939208984
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 419,
+        "totalFrames": 419,
+        "bytesUsed": 454254,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 407,
+        "eventDigest": "90a3c9852765416bcc5cc5b69dab312faa4a8d9b1e7ba54fb160c08abfc6879e",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 419
+          }
+        ]
+      },
+      "startFrame": 395,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "samples": [
+        {
+          "frame": 401,
+          "width": 160,
+          "height": 144,
+          "sha256": "353385df1952b0409b9b878b3d064880a5f141bf0acb075889d9f1e4184a1246",
+          "rgbaSha256": "6eac4cc8062073b4bb0fdc97a14e36602a83211c88652eed735abf46f53c0af9",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/353385df1952b0409b9b878b3d064880a5f141bf0acb075889d9f1e4184a1246.png"
+        },
+        {
+          "frame": 407,
+          "width": 160,
+          "height": 144,
+          "sha256": "88f232e6856e927613dca6be53ac268dde0371dcb3908f56128c3589c4e1d353",
+          "rgbaSha256": "2675b864859a16db1581558d43cbfb450f854b0f8c4a2fb2bc5d7d91f52eaf09",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/88f232e6856e927613dca6be53ac268dde0371dcb3908f56128c3589c4e1d353.png"
+        },
+        {
+          "frame": 413,
+          "width": 160,
+          "height": 144,
+          "sha256": "06a22faf5b97faf0a33b8a520d5fcc77621cb5dc41addb535e998b8cc66610fe",
+          "rgbaSha256": "14ee2dde9ce7c653efc23a3809139b600c6c5e21546e060cd15810483407b5b1",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/06a22faf5b97faf0a33b8a520d5fcc77621cb5dc41addb535e998b8cc66610fe.png"
+        },
+        {
+          "frame": 419,
+          "width": 160,
+          "height": 144,
+          "sha256": "5b19188cf18c72fbaeff3c13e3b06a2478d33f80a7772813935f8870471a7bcf",
+          "rgbaSha256": "25fe3764b1a87e33670fb487b311076ed8ff892900cf0ab9b5bacd653a39dfcc",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/5b19188cf18c72fbaeff3c13e3b06a2478d33f80a7772813935f8870471a7bcf.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 155,
+        "toActionIndex": 172,
+        "fromFrame": 395,
+        "toFrame": 419,
+        "fromPrefixPin": {
+          "eventCount": 373,
+          "eventDigest": "e95be844ea06cf429822b8000eb28690b9969086717f053c6b545814067983c1",
+          "byteLength": 161918,
+          "sha256": "cc50c5b897541e6c4242ceceebffd514b3cdd6b6536f1e8dc3979346fed37d52"
+        },
+        "prefixPin": {
+          "eventCount": 407,
+          "eventDigest": "90a3c9852765416bcc5cc5b69dab312faa4a8d9b1e7ba54fb160c08abfc6879e",
+          "byteLength": 176175,
+          "sha256": "5636409d73adb19f0077c004dfd704616cc97fa61c341c99cf32430e5c9911d9"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 24,
+        "startFrame": 395,
+        "frame": 419,
+        "advancedFrames": 24,
+        "appliedButtons": [
+          "b"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 155,
+          "toActionIndex": 172,
+          "fromFrame": 395,
+          "toFrame": 419,
+          "fromPrefixPin": {
+            "eventCount": 373,
+            "eventDigest": "e95be844ea06cf429822b8000eb28690b9969086717f053c6b545814067983c1",
+            "byteLength": 161918,
+            "sha256": "cc50c5b897541e6c4242ceceebffd514b3cdd6b6536f1e8dc3979346fed37d52"
+          },
+          "prefixPin": {
+            "eventCount": 407,
+            "eventDigest": "90a3c9852765416bcc5cc5b69dab312faa4a8d9b1e7ba54fb160c08abfc6879e",
+            "byteLength": 176175,
+            "sha256": "5636409d73adb19f0077c004dfd704616cc97fa61c341c99cf32430e5c9911d9"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "b"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 4
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 511,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 242.360963,
+        "gameTimeMs": 8555.522918701172
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 511,
+        "totalFrames": 511,
+        "bytesUsed": 630488,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 509,
+        "eventDigest": "c45b7356f225d11b2f4315cf279178180d4a62827996951e30718bb998e6107f",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 511
+          }
+        ]
+      },
+      "startFrame": 419,
+      "advancedFrames": 92,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 430,
+          "width": 160,
+          "height": 144,
+          "sha256": "de167ca577043d8cafaa4b428208a30339917cce46193230153eb5d4058b0f53",
+          "rgbaSha256": "876a5707792984154cdd40491dee4a2e5861ee749a9f4affdd3f3464bf33175b",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/de167ca577043d8cafaa4b428208a30339917cce46193230153eb5d4058b0f53.png"
+        },
+        {
+          "frame": 442,
+          "width": 160,
+          "height": 144,
+          "sha256": "aaa80c4a9cd54d93ea34b21230af92caf1b514d513d962aa8fa010dd988db10a",
+          "rgbaSha256": "f38030fd0fc3789083690a00ca3880affef3553a4e00f59459c1791ba4abdc2f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/aaa80c4a9cd54d93ea34b21230af92caf1b514d513d962aa8fa010dd988db10a.png"
+        },
+        {
+          "frame": 453,
+          "width": 160,
+          "height": 144,
+          "sha256": "d74887c7f0c390ff087069b2f57f2b9479f2134925445c720482c5910bcb75f7",
+          "rgbaSha256": "50e5d064098ae9e9670f531f7dfa1e9c70d9cbd7da26966de8f49a2e45d1243f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/d74887c7f0c390ff087069b2f57f2b9479f2134925445c720482c5910bcb75f7.png"
+        },
+        {
+          "frame": 465,
+          "width": 160,
+          "height": 144,
+          "sha256": "84c60dfe8b9d79f5f7bf27df9ca8dddda48340ed739fd5deae91a176121b477c",
+          "rgbaSha256": "f4efb552f677c5b650d6bac556391f9150b62f960ad403d80cb3afed24cf8103",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/84c60dfe8b9d79f5f7bf27df9ca8dddda48340ed739fd5deae91a176121b477c.png"
+        },
+        {
+          "frame": 476,
+          "width": 160,
+          "height": 144,
+          "sha256": "29ee790c39ed08f032255817839638f025f44fbc90cea3f70592ef15fc32c740",
+          "rgbaSha256": "a97d830a54b56812b999f607f9978b099dd18f5a769f0618cc5c6f086ab2e5eb",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/29ee790c39ed08f032255817839638f025f44fbc90cea3f70592ef15fc32c740.png"
+        },
+        {
+          "frame": 488,
+          "width": 160,
+          "height": 144,
+          "sha256": "6b4c8f39b1b914eef4ec1785cbbaf236d8d3ae405106b9a9f771915247c8007d",
+          "rgbaSha256": "2371616174b1e10dcd68464a3c7fa67dfcb05f64399ed5bb5c56bf125dc07816",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/6b4c8f39b1b914eef4ec1785cbbaf236d8d3ae405106b9a9f771915247c8007d.png"
+        },
+        {
+          "frame": 499,
+          "width": 160,
+          "height": 144,
+          "sha256": "b88fa04a31e66bcdbf3547827421af11f96595f8398d6d32a413ad52aefb15a7",
+          "rgbaSha256": "1298225894c9697c957dd4f2afec03e371591633644ed33a962b6eced9d7e5a9",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/b88fa04a31e66bcdbf3547827421af11f96595f8398d6d32a413ad52aefb15a7.png"
+        },
+        {
+          "frame": 511,
+          "width": 160,
+          "height": 144,
+          "sha256": "2dee5fa442c493ace2798c7e477b994714bf6b46fae024954d2608c8f06dd6c7",
+          "rgbaSha256": "7be7615c5382ea7037e811b446e4307875139a36801077ecbc8b1649966cd5c4",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/2dee5fa442c493ace2798c7e477b994714bf6b46fae024954d2608c8f06dd6c7.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 172,
+        "toActionIndex": 223,
+        "fromFrame": 419,
+        "toFrame": 511,
+        "fromPrefixPin": {
+          "eventCount": 407,
+          "eventDigest": "90a3c9852765416bcc5cc5b69dab312faa4a8d9b1e7ba54fb160c08abfc6879e",
+          "byteLength": 176175,
+          "sha256": "5636409d73adb19f0077c004dfd704616cc97fa61c341c99cf32430e5c9911d9"
+        },
+        "prefixPin": {
+          "eventCount": 509,
+          "eventDigest": "c45b7356f225d11b2f4315cf279178180d4a62827996951e30718bb998e6107f",
+          "byteLength": 219394,
+          "sha256": "9f9909f815ab53d04cdd2dc495979c355fd25a6ded311c09a31e0313543ecc93"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 92,
+        "startFrame": 419,
+        "frame": 511,
+        "advancedFrames": 92,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 172,
+          "toActionIndex": 223,
+          "fromFrame": 419,
+          "toFrame": 511,
+          "fromPrefixPin": {
+            "eventCount": 407,
+            "eventDigest": "90a3c9852765416bcc5cc5b69dab312faa4a8d9b1e7ba54fb160c08abfc6879e",
+            "byteLength": 176175,
+            "sha256": "5636409d73adb19f0077c004dfd704616cc97fa61c341c99cf32430e5c9911d9"
+          },
+          "prefixPin": {
+            "eventCount": 509,
+            "eventDigest": "c45b7356f225d11b2f4315cf279178180d4a62827996951e30718bb998e6107f",
+            "byteLength": 219394,
+            "sha256": "9f9909f815ab53d04cdd2dc495979c355fd25a6ded311c09a31e0313543ecc93"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 8
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 543,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 261.235755,
+        "gameTimeMs": 9091.289520263672
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 543,
+        "totalFrames": 543,
+        "bytesUsed": 667054,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 545,
+        "eventDigest": "9f0a0c0e5705c6245002e686328ca98faf37935db357c6202fb7989a29896d4a",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 543
+          }
+        ]
+      },
+      "startFrame": 511,
+      "advancedFrames": 32,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 527,
+          "width": 160,
+          "height": 144,
+          "sha256": "dd600f8a672a6408c17dd83ac601ea3d75d5e5cad8938d8bb309e08b21ef087d",
+          "rgbaSha256": "95bdcb1735ad8ee348ad120dc576fcfd5ed30b5d65421f7d1b647e85d3176c43",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/dd600f8a672a6408c17dd83ac601ea3d75d5e5cad8938d8bb309e08b21ef087d.png"
+        },
+        {
+          "frame": 543,
+          "width": 160,
+          "height": 144,
+          "sha256": "4dcc70e76e65015cd51237b89bca232948a6a0427947c2e31d4327f00cf6a57f",
+          "rgbaSha256": "6ccc6ed894955c28e852d5190b78a6dcf533cd3aaf32963ca91e0cdc6aed10f3",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/4dcc70e76e65015cd51237b89bca232948a6a0427947c2e31d4327f00cf6a57f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 223,
+        "toActionIndex": 241,
+        "fromFrame": 511,
+        "toFrame": 543,
+        "fromPrefixPin": {
+          "eventCount": 509,
+          "eventDigest": "c45b7356f225d11b2f4315cf279178180d4a62827996951e30718bb998e6107f",
+          "byteLength": 219394,
+          "sha256": "9f9909f815ab53d04cdd2dc495979c355fd25a6ded311c09a31e0313543ecc93"
+        },
+        "prefixPin": {
+          "eventCount": 545,
+          "eventDigest": "9f0a0c0e5705c6245002e686328ca98faf37935db357c6202fb7989a29896d4a",
+          "byteLength": 234730,
+          "sha256": "3c06a1c0d34e13345f7e037cceac919d7ef388b9fbb3f41ef28067e04d24c9e5"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 32,
+        "startFrame": 511,
+        "frame": 543,
+        "advancedFrames": 32,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 223,
+          "toActionIndex": 241,
+          "fromFrame": 511,
+          "toFrame": 543,
+          "fromPrefixPin": {
+            "eventCount": 509,
+            "eventDigest": "c45b7356f225d11b2f4315cf279178180d4a62827996951e30718bb998e6107f",
+            "byteLength": 219394,
+            "sha256": "9f9909f815ab53d04cdd2dc495979c355fd25a6ded311c09a31e0313543ecc93"
+          },
+          "prefixPin": {
+            "eventCount": 545,
+            "eventDigest": "9f0a0c0e5705c6245002e686328ca98faf37935db357c6202fb7989a29896d4a",
+            "byteLength": 234730,
+            "sha256": "3c06a1c0d34e13345f7e037cceac919d7ef388b9fbb3f41ef28067e04d24c9e5"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 561,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "up"
+      ],
+      "sampledButtons": [
+        "up"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 272.490464,
+        "gameTimeMs": 9392.658233642578
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 561,
+        "totalFrames": 561,
+        "bytesUsed": 699203,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 567,
+        "eventDigest": "3b39cbbf0d301b2bdf060d3cc18d74c17691f27a9053d6e25bde6a96d2288dc4",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 561
+          }
+        ]
+      },
+      "startFrame": 543,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "up"
+      ],
+      "samples": [
+        {
+          "frame": 552,
+          "width": 160,
+          "height": 144,
+          "sha256": "473de85f2580cc18fe1adf078c39fd78ebc53052fe2da089944e34d320889ae7",
+          "rgbaSha256": "1af5ebaa256f14404561e39691142cb515f8b0cbe50539fc835d5e02da7200ea",
+          "sampledButtons": [
+            "up"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/473de85f2580cc18fe1adf078c39fd78ebc53052fe2da089944e34d320889ae7.png"
+        },
+        {
+          "frame": 561,
+          "width": 160,
+          "height": 144,
+          "sha256": "694883f1e279d4793d8c4487f77364a7c0e450ee967746450a9847819c60e817",
+          "rgbaSha256": "313343d48616184af20e23d9d25581d8b96de2e3d03d491e88a24edb1e546147",
+          "sampledButtons": [
+            "up"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/694883f1e279d4793d8c4487f77364a7c0e450ee967746450a9847819c60e817.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 241,
+        "toActionIndex": 252,
+        "fromFrame": 543,
+        "toFrame": 561,
+        "fromPrefixPin": {
+          "eventCount": 545,
+          "eventDigest": "9f0a0c0e5705c6245002e686328ca98faf37935db357c6202fb7989a29896d4a",
+          "byteLength": 234730,
+          "sha256": "3c06a1c0d34e13345f7e037cceac919d7ef388b9fbb3f41ef28067e04d24c9e5"
+        },
+        "prefixPin": {
+          "eventCount": 567,
+          "eventDigest": "3b39cbbf0d301b2bdf060d3cc18d74c17691f27a9053d6e25bde6a96d2288dc4",
+          "byteLength": 243878,
+          "sha256": "dbc4ad61fdf7f3dd25dfb035e3050ae449e4aaa7b95b4bc0e9502cc2ac40e474"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 543,
+        "frame": 561,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "up"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 241,
+          "toActionIndex": 252,
+          "fromFrame": 543,
+          "toFrame": 561,
+          "fromPrefixPin": {
+            "eventCount": 545,
+            "eventDigest": "9f0a0c0e5705c6245002e686328ca98faf37935db357c6202fb7989a29896d4a",
+            "byteLength": 234730,
+            "sha256": "3c06a1c0d34e13345f7e037cceac919d7ef388b9fbb3f41ef28067e04d24c9e5"
+          },
+          "prefixPin": {
+            "eventCount": 567,
+            "eventDigest": "3b39cbbf0d301b2bdf060d3cc18d74c17691f27a9053d6e25bde6a96d2288dc4",
+            "byteLength": 243878,
+            "sha256": "dbc4ad61fdf7f3dd25dfb035e3050ae449e4aaa7b95b4bc0e9502cc2ac40e474"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "up"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 579,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "down"
+      ],
+      "sampledButtons": [
+        "down"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 283.607798,
+        "gameTimeMs": 9694.026947021484
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 579,
+        "totalFrames": 579,
+        "bytesUsed": 732395,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 589,
+        "eventDigest": "153cd821dd6972a4c704dc331e663378b93c1049cc6a0fd90bdc0dddb763e38f",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 579
+          }
+        ]
+      },
+      "startFrame": 561,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "down"
+      ],
+      "samples": [
+        {
+          "frame": 570,
+          "width": 160,
+          "height": 144,
+          "sha256": "392767bc30dde7c886b3fd1068bb217fdd045020178b324869cf07585832c828",
+          "rgbaSha256": "33686e15b80ab0300055f49460a588d9e2a3e9c5123eb5cb083272d0c4af7e48",
+          "sampledButtons": [
+            "down"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/392767bc30dde7c886b3fd1068bb217fdd045020178b324869cf07585832c828.png"
+        },
+        {
+          "frame": 579,
+          "width": 160,
+          "height": 144,
+          "sha256": "9c5cd0f1365c522f9af7385a36db1deda98f8b68dc1e9f65cfabb7b4340756ec",
+          "rgbaSha256": "8cd8adef1aacc7a008068c871ae94d9e9a29c6a847534231a3d034889f732cc5",
+          "sampledButtons": [
+            "down"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/9c5cd0f1365c522f9af7385a36db1deda98f8b68dc1e9f65cfabb7b4340756ec.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 252,
+        "toActionIndex": 263,
+        "fromFrame": 561,
+        "toFrame": 579,
+        "fromPrefixPin": {
+          "eventCount": 567,
+          "eventDigest": "3b39cbbf0d301b2bdf060d3cc18d74c17691f27a9053d6e25bde6a96d2288dc4",
+          "byteLength": 243878,
+          "sha256": "dbc4ad61fdf7f3dd25dfb035e3050ae449e4aaa7b95b4bc0e9502cc2ac40e474"
+        },
+        "prefixPin": {
+          "eventCount": 589,
+          "eventDigest": "153cd821dd6972a4c704dc331e663378b93c1049cc6a0fd90bdc0dddb763e38f",
+          "byteLength": 253036,
+          "sha256": "5a66e2f0c8a0f3f990f742f3ea652a31de64badfcf580f3d71a5f6777e912a9f"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 561,
+        "frame": 579,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "down"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 252,
+          "toActionIndex": 263,
+          "fromFrame": 561,
+          "toFrame": 579,
+          "fromPrefixPin": {
+            "eventCount": 567,
+            "eventDigest": "3b39cbbf0d301b2bdf060d3cc18d74c17691f27a9053d6e25bde6a96d2288dc4",
+            "byteLength": 243878,
+            "sha256": "dbc4ad61fdf7f3dd25dfb035e3050ae449e4aaa7b95b4bc0e9502cc2ac40e474"
+          },
+          "prefixPin": {
+            "eventCount": 589,
+            "eventDigest": "153cd821dd6972a4c704dc331e663378b93c1049cc6a0fd90bdc0dddb763e38f",
+            "byteLength": 253036,
+            "sha256": "5a66e2f0c8a0f3f990f742f3ea652a31de64badfcf580f3d71a5f6777e912a9f"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "down"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 597,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "left"
+      ],
+      "sampledButtons": [
+        "left"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 297.239089,
+        "gameTimeMs": 9995.39566040039
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 597,
+        "totalFrames": 597,
+        "bytesUsed": 765452,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 611,
+        "eventDigest": "d247e399dc0dc507154d776a1aa41931ae9d685950b0cfb70fd9fd52486433a1",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 597
+          }
+        ]
+      },
+      "startFrame": 579,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "left"
+      ],
+      "samples": [
+        {
+          "frame": 588,
+          "width": 160,
+          "height": 144,
+          "sha256": "82f2e1b7629ac42c4e3217cd4a4f33b69e1843bac3c45dc0b544137d0ef23e5e",
+          "rgbaSha256": "f5ab074178902cbea63f538bce3b90721b1a138a0ee0150c5c39f83d06f3e07f",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/82f2e1b7629ac42c4e3217cd4a4f33b69e1843bac3c45dc0b544137d0ef23e5e.png"
+        },
+        {
+          "frame": 597,
+          "width": 160,
+          "height": 144,
+          "sha256": "40e60f79b184f5107ae50a97ad0b52e8cc31ade9f2ed717af9cf46dc22980386",
+          "rgbaSha256": "b4ce485da0bb00cc661d4c96d4837856aa5c280b7c71226e408b1e25f5986ce6",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/40e60f79b184f5107ae50a97ad0b52e8cc31ade9f2ed717af9cf46dc22980386.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 263,
+        "toActionIndex": 274,
+        "fromFrame": 579,
+        "toFrame": 597,
+        "fromPrefixPin": {
+          "eventCount": 589,
+          "eventDigest": "153cd821dd6972a4c704dc331e663378b93c1049cc6a0fd90bdc0dddb763e38f",
+          "byteLength": 253036,
+          "sha256": "5a66e2f0c8a0f3f990f742f3ea652a31de64badfcf580f3d71a5f6777e912a9f"
+        },
+        "prefixPin": {
+          "eventCount": 611,
+          "eventDigest": "d247e399dc0dc507154d776a1aa41931ae9d685950b0cfb70fd9fd52486433a1",
+          "byteLength": 262196,
+          "sha256": "b319addd1609a5519383d36650f9824240c9b7575427469ae2f9c1df6028338b"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 579,
+        "frame": 597,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "left"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 263,
+          "toActionIndex": 274,
+          "fromFrame": 579,
+          "toFrame": 597,
+          "fromPrefixPin": {
+            "eventCount": 589,
+            "eventDigest": "153cd821dd6972a4c704dc331e663378b93c1049cc6a0fd90bdc0dddb763e38f",
+            "byteLength": 253036,
+            "sha256": "5a66e2f0c8a0f3f990f742f3ea652a31de64badfcf580f3d71a5f6777e912a9f"
+          },
+          "prefixPin": {
+            "eventCount": 611,
+            "eventDigest": "d247e399dc0dc507154d776a1aa41931ae9d685950b0cfb70fd9fd52486433a1",
+            "byteLength": 262196,
+            "sha256": "b319addd1609a5519383d36650f9824240c9b7575427469ae2f9c1df6028338b"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "left"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 615,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 308.577172,
+        "gameTimeMs": 10296.764373779297
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 615,
+        "totalFrames": 615,
+        "bytesUsed": 799337,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 633,
+        "eventDigest": "7f691397520a4b4dff64ed093bedac04aea1f1c58e85f7d1f65958b9cb0e6cb1",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 615
+          }
+        ]
+      },
+      "startFrame": 597,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "right"
+      ],
+      "samples": [
+        {
+          "frame": 606,
+          "width": 160,
+          "height": 144,
+          "sha256": "ff09dd1e056b831dc53610216cc46b33a83932d431209805741bc7a9aba2d23c",
+          "rgbaSha256": "cea76b371fb08f8bee7cb869d4fb13eba4593b43d68553cd73f2b0f8d26ffc26",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/ff09dd1e056b831dc53610216cc46b33a83932d431209805741bc7a9aba2d23c.png"
+        },
+        {
+          "frame": 615,
+          "width": 160,
+          "height": 144,
+          "sha256": "b86302e107e547d1dc27760f20ea5da810c734c30a2ffa7b30679019c7093fe0",
+          "rgbaSha256": "dc442d5e37b9a9d8569b7d7c73dec21a989528ec05139851312e7c21774be3f9",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/b86302e107e547d1dc27760f20ea5da810c734c30a2ffa7b30679019c7093fe0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 274,
+        "toActionIndex": 285,
+        "fromFrame": 597,
+        "toFrame": 615,
+        "fromPrefixPin": {
+          "eventCount": 611,
+          "eventDigest": "d247e399dc0dc507154d776a1aa41931ae9d685950b0cfb70fd9fd52486433a1",
+          "byteLength": 262196,
+          "sha256": "b319addd1609a5519383d36650f9824240c9b7575427469ae2f9c1df6028338b"
+        },
+        "prefixPin": {
+          "eventCount": 633,
+          "eventDigest": "7f691397520a4b4dff64ed093bedac04aea1f1c58e85f7d1f65958b9cb0e6cb1",
+          "byteLength": 271359,
+          "sha256": "6667f9c3bde1825cdadba47ccafd22a1db30100016c685245e413b3fca67b9cb"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 597,
+        "frame": 615,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "right"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 274,
+          "toActionIndex": 285,
+          "fromFrame": 597,
+          "toFrame": 615,
+          "fromPrefixPin": {
+            "eventCount": 611,
+            "eventDigest": "d247e399dc0dc507154d776a1aa41931ae9d685950b0cfb70fd9fd52486433a1",
+            "byteLength": 262196,
+            "sha256": "b319addd1609a5519383d36650f9824240c9b7575427469ae2f9c1df6028338b"
+          },
+          "prefixPin": {
+            "eventCount": 633,
+            "eventDigest": "7f691397520a4b4dff64ed093bedac04aea1f1c58e85f7d1f65958b9cb0e6cb1",
+            "byteLength": 271359,
+            "sha256": "6667f9c3bde1825cdadba47ccafd22a1db30100016c685245e413b3fca67b9cb"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "right"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    },
+    {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 617,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "3f94ee236bd2d53caa49af5c460335cfc35105ab1d9a39ce4f9e5913ec5f4196",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 310.910256,
+        "gameTimeMs": 10330.249786376953
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 617,
+        "totalFrames": 617,
+        "bytesUsed": 807058,
+        "limits": {
+          "sampleEveryFrames": 2,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 639,
+        "eventDigest": "006aedaacd94f83c056936f3840600768479d212323b012db3a32655543d2293",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 617
+          }
+        ]
+      },
+      "startFrame": 615,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 616,
+          "width": 160,
+          "height": 144,
+          "sha256": "3597ff52666f8dffa776b1163a77025f2ccb4ab07bdc4276a5129111ddf1dc9a",
+          "rgbaSha256": "6c5f50d20a4af0ee29c50bfa940bcecdc811588bcd40eb1fc5efc4385a4f3ebc",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/3597ff52666f8dffa776b1163a77025f2ccb4ab07bdc4276a5129111ddf1dc9a.png"
+        },
+        {
+          "frame": 617,
+          "width": 160,
+          "height": 144,
+          "sha256": "d7c39b3b5e468f9c75f72d40e1e70ecce2128d17d84a64a7b4baec943b8650b1",
+          "rgbaSha256": "e3d16ce1b1f1b3a4335cb74100201b07e843bebdb7cf49ad2fc7a0d5d23e30e4",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/d7c39b3b5e468f9c75f72d40e1e70ecce2128d17d84a64a7b4baec943b8650b1.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+        "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+        "branchId": "branch-0001",
+        "fromActionIndex": 285,
+        "toActionIndex": 288,
+        "fromFrame": 615,
+        "toFrame": 617,
+        "fromPrefixPin": {
+          "eventCount": 633,
+          "eventDigest": "7f691397520a4b4dff64ed093bedac04aea1f1c58e85f7d1f65958b9cb0e6cb1",
+          "byteLength": 271359,
+          "sha256": "6667f9c3bde1825cdadba47ccafd22a1db30100016c685245e413b3fca67b9cb"
+        },
+        "prefixPin": {
+          "eventCount": 639,
+          "eventDigest": "006aedaacd94f83c056936f3840600768479d212323b012db3a32655543d2293",
+          "byteLength": 273686,
+          "sha256": "3ead861d06062be5fed2135dc0ec4d6aaae817122aa43e07396316a2f5268afb"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 2,
+        "startFrame": 615,
+        "frame": 617,
+        "advancedFrames": 2,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+          "sessionId": "ae6cd29ecbba44ddb246395b678eadc6",
+          "branchId": "branch-0001",
+          "fromActionIndex": 285,
+          "toActionIndex": 288,
+          "fromFrame": 615,
+          "toFrame": 617,
+          "fromPrefixPin": {
+            "eventCount": 633,
+            "eventDigest": "7f691397520a4b4dff64ed093bedac04aea1f1c58e85f7d1f65958b9cb0e6cb1",
+            "byteLength": 271359,
+            "sha256": "6667f9c3bde1825cdadba47ccafd22a1db30100016c685245e413b3fca67b9cb"
+          },
+          "prefixPin": {
+            "eventCount": 639,
+            "eventDigest": "006aedaacd94f83c056936f3840600768479d212323b012db3a32655543d2293",
+            "byteLength": 273686,
+            "sha256": "3ead861d06062be5fed2135dc0ec4d6aaae817122aa43e07396316a2f5268afb"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 2
+      }
+    }
+  ],
+  "oamSamples": [
+    {
+      "view": "oam",
+      "frame": 511,
+      "totalObjects": 40,
+      "visibleObjects": 26,
+      "matchedObjects": 26,
+      "returnedObjects": 26,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 106,
+          "y": 44,
+          "tile": 0,
+          "attributes": 12,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 90,
+          "y": 86,
+          "tile": 4,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 82,
+          "y": 86,
+          "tile": 6,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 90,
+          "y": 70,
+          "tile": 8,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 82,
+          "y": 70,
+          "tile": 10,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 90,
+          "y": 54,
+          "tile": 12,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 82,
+          "y": 54,
+          "tile": 14,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 119,
+          "y": 86,
+          "tile": 6,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 111,
+          "y": 86,
+          "tile": 4,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 119,
+          "y": 70,
+          "tile": 58,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 111,
+          "y": 70,
+          "tile": 60,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 119,
+          "y": 54,
+          "tile": 168,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 111,
+          "y": 54,
+          "tile": 166,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 118,
+          "y": 78,
+          "tile": 6,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 110,
+          "y": 78,
+          "tile": 4,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 118,
+          "y": 62,
+          "tile": 148,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 110,
+          "y": 62,
+          "tile": 150,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 118,
+          "y": 46,
+          "tile": 14,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 110,
+          "y": 46,
+          "tile": 116,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 99,
+          "y": 67,
+          "tile": 4,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 20,
+          "x": 91,
+          "y": 67,
+          "tile": 6,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 21,
+          "x": 99,
+          "y": 51,
+          "tile": 8,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 22,
+          "x": 91,
+          "y": 51,
+          "tile": 164,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 23,
+          "x": 99,
+          "y": 35,
+          "tile": 166,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 24,
+          "x": 91,
+          "y": 35,
+          "tile": 168,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 25,
+          "x": 106,
+          "y": 56,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 10,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          56,
+          57,
+          58,
+          59
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 543,
+      "totalObjects": 40,
+      "visibleObjects": 15,
+      "matchedObjects": 15,
+      "returnedObjects": 15,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 142,
+          "y": 44,
+          "tile": 0,
+          "attributes": 4,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 63,
+          "y": 82,
+          "tile": 40,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 55,
+          "y": 82,
+          "tile": 42,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 63,
+          "y": 66,
+          "tile": 44,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 55,
+          "y": 66,
+          "tile": 8,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 63,
+          "y": 50,
+          "tile": 14,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 55,
+          "y": 50,
+          "tile": 16,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 24,
+          "y": 60,
+          "tile": 4,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 16,
+          "y": 60,
+          "tile": 6,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 24,
+          "y": 44,
+          "tile": 42,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 16,
+          "y": 44,
+          "tile": 44,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 24,
+          "y": 28,
+          "tile": 166,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 16,
+          "y": 28,
+          "tile": 168,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 47,
+          "y": 83,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 3,
+          "y": 50,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 6,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 561,
+      "totalObjects": 40,
+      "visibleObjects": 20,
+      "matchedObjects": 20,
+      "returnedObjects": 20,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 65,
+          "y": 74,
+          "tile": 40,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 57,
+          "y": 74,
+          "tile": 42,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 65,
+          "y": 58,
+          "tile": 54,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 57,
+          "y": 58,
+          "tile": 56,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 65,
+          "y": 42,
+          "tile": 10,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 57,
+          "y": 42,
+          "tile": 12,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 104,
+          "y": 72,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 96,
+          "y": 72,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 104,
+          "y": 56,
+          "tile": 100,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 96,
+          "y": 56,
+          "tile": 36,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 104,
+          "y": 40,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 96,
+          "y": 40,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 17,
+          "y": 69,
+          "tile": 40,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 9,
+          "y": 69,
+          "tile": 42,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 17,
+          "y": 53,
+          "tile": 44,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 9,
+          "y": 53,
+          "tile": 46,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 17,
+          "y": 37,
+          "tile": 52,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 9,
+          "y": 37,
+          "tile": 54,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 88,
+          "y": 73,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 14,
+          "y": 31,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 7,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 579,
+      "totalObjects": 40,
+      "visibleObjects": 20,
+      "matchedObjects": 20,
+      "returnedObjects": 20,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 66,
+          "y": 94,
+          "tile": 40,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 58,
+          "y": 94,
+          "tile": 42,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 66,
+          "y": 78,
+          "tile": 54,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 58,
+          "y": 78,
+          "tile": 56,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 66,
+          "y": 62,
+          "tile": 10,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 58,
+          "y": 62,
+          "tile": 12,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 32,
+          "y": 86,
+          "tile": 40,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 24,
+          "y": 86,
+          "tile": 42,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 32,
+          "y": 70,
+          "tile": 44,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 24,
+          "y": 70,
+          "tile": 46,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 32,
+          "y": 54,
+          "tile": 48,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 24,
+          "y": 54,
+          "tile": 50,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 104,
+          "y": 72,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 96,
+          "y": 72,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 104,
+          "y": 56,
+          "tile": 100,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 96,
+          "y": 56,
+          "tile": 36,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 104,
+          "y": 40,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 96,
+          "y": 40,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 88,
+          "y": 73,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 29,
+          "y": 48,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 7,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          62,
+          63,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 597,
+      "totalObjects": 40,
+      "visibleObjects": 20,
+      "matchedObjects": 20,
+      "returnedObjects": 20,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 65,
+          "y": 95,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 57,
+          "y": 95,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 65,
+          "y": 79,
+          "tile": 62,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 57,
+          "y": 79,
+          "tile": 64,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 65,
+          "y": 63,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 57,
+          "y": 63,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 23,
+          "y": 88,
+          "tile": 18,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 15,
+          "y": 88,
+          "tile": 16,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 23,
+          "y": 72,
+          "tile": 100,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 15,
+          "y": 72,
+          "tile": 102,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 23,
+          "y": 56,
+          "tile": 26,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 15,
+          "y": 56,
+          "tile": 24,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 104,
+          "y": 72,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 96,
+          "y": 72,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 104,
+          "y": 56,
+          "tile": 100,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 96,
+          "y": 56,
+          "tile": 36,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 104,
+          "y": 40,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 96,
+          "y": 40,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 88,
+          "y": 73,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 20,
+          "y": 50,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 7,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          63,
+          64,
+          65,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 615,
+      "totalObjects": 40,
+      "visibleObjects": 26,
+      "matchedObjects": 26,
+      "returnedObjects": 26,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 64,
+          "y": 95,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 56,
+          "y": 95,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 64,
+          "y": 79,
+          "tile": 62,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 56,
+          "y": 79,
+          "tile": 64,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 64,
+          "y": 63,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 56,
+          "y": 63,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 8,
+          "y": 95,
+          "tile": 18,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 0,
+          "y": 95,
+          "tile": 16,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 8,
+          "y": 79,
+          "tile": 152,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 0,
+          "y": 79,
+          "tile": 154,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 8,
+          "y": 63,
+          "tile": 26,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 0,
+          "y": 63,
+          "tile": 122,
+          "attributes": 32,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 60,
+          "y": 88,
+          "tile": 16,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 52,
+          "y": 88,
+          "tile": 18,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 60,
+          "y": 72,
+          "tile": 20,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 52,
+          "y": 72,
+          "tile": 22,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 60,
+          "y": 56,
+          "tile": 24,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 52,
+          "y": 56,
+          "tile": 26,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 104,
+          "y": 72,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 96,
+          "y": 72,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 20,
+          "x": 104,
+          "y": 56,
+          "tile": 100,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 21,
+          "x": 96,
+          "y": 56,
+          "tile": 36,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 22,
+          "x": 104,
+          "y": 40,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 23,
+          "x": 96,
+          "y": 40,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 24,
+          "x": 88,
+          "y": 73,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 25,
+          "x": 57,
+          "y": 50,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 9,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          63,
+          64,
+          65,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ]
+      }
+    },
+    {
+      "view": "oam",
+      "frame": 617,
+      "totalObjects": 40,
+      "visibleObjects": 26,
+      "matchedObjects": 26,
+      "returnedObjects": 26,
+      "truncated": false,
+      "objects": [
+        {
+          "index": 0,
+          "x": 65,
+          "y": 95,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "x": 57,
+          "y": 95,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "x": 65,
+          "y": 79,
+          "tile": 62,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "x": 57,
+          "y": 79,
+          "tile": 64,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "x": 65,
+          "y": 63,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "x": 57,
+          "y": 63,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "x": 9,
+          "y": 95,
+          "tile": 4,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "x": 1,
+          "y": 95,
+          "tile": 6,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "x": 9,
+          "y": 79,
+          "tile": 112,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "x": 1,
+          "y": 79,
+          "tile": 114,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "x": 9,
+          "y": 63,
+          "tile": 116,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "x": 1,
+          "y": 63,
+          "tile": 14,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "x": 64,
+          "y": 88,
+          "tile": 4,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "x": 56,
+          "y": 88,
+          "tile": 6,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "x": 64,
+          "y": 72,
+          "tile": 8,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "x": 56,
+          "y": 72,
+          "tile": 10,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "x": 64,
+          "y": 56,
+          "tile": 12,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "x": 56,
+          "y": 56,
+          "tile": 14,
+          "attributes": 0,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "x": 104,
+          "y": 72,
+          "tile": 18,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "x": 96,
+          "y": 72,
+          "tile": 16,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 20,
+          "x": 104,
+          "y": 56,
+          "tile": 100,
+          "attributes": 1,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 21,
+          "x": 96,
+          "y": 56,
+          "tile": 36,
+          "attributes": 9,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 22,
+          "x": 104,
+          "y": 40,
+          "tile": 26,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 23,
+          "x": 96,
+          "y": 40,
+          "tile": 172,
+          "attributes": 33,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 24,
+          "x": 88,
+          "y": 71,
+          "tile": 174,
+          "attributes": 2,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        },
+        {
+          "index": 25,
+          "x": 61,
+          "y": 50,
+          "tile": 176,
+          "attributes": 3,
+          "width": 8,
+          "height": 16,
+          "visible": true
+        }
+      ],
+      "scanlineSummary": {
+        "peakObjects": 9,
+        "hardwareLimit": 10,
+        "overLimitScanlines": 0,
+        "peakScanlines": [
+          63,
+          64,
+          65,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86
+        ]
+      }
+    }
+  ],
+  "clips": [
+    {
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/shooting-close.gif",
+      "sha256": "a845ee41958646e6264780ea8ead24f654cf279444d5b4bc31b6dc91a3ed94f3",
+      "frameCount": 64,
+      "sourceFrameCount": 67,
+      "startFrame": 395,
+      "endFrame": 511,
+      "durationMs": 1960,
+      "branchId": "branch-0001",
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+      "width": 160,
+      "height": 144,
+      "recordingFinalFrame": 617,
+      "lastEvidenceFrame": 617,
+      "partialRecording": false
+    },
+    {
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/turning-final.gif",
+      "sha256": "097ef7a56d1c47ef7c1e19e8a920d682950e1872472a41a3629388254a92d1b3",
+      "frameCount": 39,
+      "sourceFrameCount": 43,
+      "startFrame": 543,
+      "endFrame": 617,
+      "durationMs": 1260,
+      "branchId": "branch-0001",
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery",
+      "width": 160,
+      "height": 144,
+      "recordingFinalFrame": 617,
+      "lastEvidenceFrame": 617,
+      "partialRecording": false
+    }
+  ],
+  "regression": {
+    "before": {
+      "peakObjects": 11,
+      "hardwareLimit": 10,
+      "overLimitScanlines": 4,
+      "peakScanlines": [
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    "after": {
+      "peakObjects": 10,
+      "hardwareLimit": 10,
+      "overLimitScanlines": 0,
+      "peakScanlines": [
+        56,
+        57,
+        58,
+        59
+      ]
+    }
+  },
+  "priorHumanCheckpoint": {
+    "frame": 41432,
+    "stateId": "7de5c4a33c15af2834bba295e4ea55e56133add6fce2edb7913b4587f8b5fa51"
+  },
+  "intermediateCheckpoint": {
+    "frame": 20771,
+    "stateId": "b3bb853d25e9c32517741062754345e4c719cdfbf552029fa0bb3d226db54a78"
+  },
+  "retainedCaptures": [
+    {
+      "frame": 395,
+      "width": 160,
+      "height": 144,
+      "sha256": "4afed810e9b9efb0c9b35e848446b270c827f502f1bdff05800ae75071a60246",
+      "rgbaSha256": "3d16f642cbda2b5835b5ebaac5d4231400b1832c566019f72efe51e2a0343880",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/4afed810e9b9efb0c9b35e848446b270c827f502f1bdff05800ae75071a60246.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-395.png"
+    },
+    {
+      "frame": 401,
+      "width": 160,
+      "height": 144,
+      "sha256": "353385df1952b0409b9b878b3d064880a5f141bf0acb075889d9f1e4184a1246",
+      "rgbaSha256": "6eac4cc8062073b4bb0fdc97a14e36602a83211c88652eed735abf46f53c0af9",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/353385df1952b0409b9b878b3d064880a5f141bf0acb075889d9f1e4184a1246.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-401.png"
+    },
+    {
+      "frame": 419,
+      "width": 160,
+      "height": 144,
+      "sha256": "5b19188cf18c72fbaeff3c13e3b06a2478d33f80a7772813935f8870471a7bcf",
+      "rgbaSha256": "25fe3764b1a87e33670fb487b311076ed8ff892900cf0ab9b5bacd653a39dfcc",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/5b19188cf18c72fbaeff3c13e3b06a2478d33f80a7772813935f8870471a7bcf.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-419.png"
+    },
+    {
+      "frame": 430,
+      "width": 160,
+      "height": 144,
+      "sha256": "de167ca577043d8cafaa4b428208a30339917cce46193230153eb5d4058b0f53",
+      "rgbaSha256": "876a5707792984154cdd40491dee4a2e5861ee749a9f4affdd3f3464bf33175b",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/de167ca577043d8cafaa4b428208a30339917cce46193230153eb5d4058b0f53.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-430.png"
+    },
+    {
+      "frame": 442,
+      "width": 160,
+      "height": 144,
+      "sha256": "aaa80c4a9cd54d93ea34b21230af92caf1b514d513d962aa8fa010dd988db10a",
+      "rgbaSha256": "f38030fd0fc3789083690a00ca3880affef3553a4e00f59459c1791ba4abdc2f",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/aaa80c4a9cd54d93ea34b21230af92caf1b514d513d962aa8fa010dd988db10a.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-442.png"
+    },
+    {
+      "frame": 465,
+      "width": 160,
+      "height": 144,
+      "sha256": "84c60dfe8b9d79f5f7bf27df9ca8dddda48340ed739fd5deae91a176121b477c",
+      "rgbaSha256": "f4efb552f677c5b650d6bac556391f9150b62f960ad403d80cb3afed24cf8103",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/84c60dfe8b9d79f5f7bf27df9ca8dddda48340ed739fd5deae91a176121b477c.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-465.png"
+    },
+    {
+      "frame": 511,
+      "width": 160,
+      "height": 144,
+      "sha256": "2dee5fa442c493ace2798c7e477b994714bf6b46fae024954d2608c8f06dd6c7",
+      "rgbaSha256": "7be7615c5382ea7037e811b446e4307875139a36801077ecbc8b1649966cd5c4",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/2dee5fa442c493ace2798c7e477b994714bf6b46fae024954d2608c8f06dd6c7.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-511.png"
+    },
+    {
+      "frame": 561,
+      "width": 160,
+      "height": 144,
+      "sha256": "694883f1e279d4793d8c4487f77364a7c0e450ee967746450a9847819c60e817",
+      "rgbaSha256": "313343d48616184af20e23d9d25581d8b96de2e3d03d491e88a24edb1e546147",
+      "sampledButtons": [
+        "up"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/694883f1e279d4793d8c4487f77364a7c0e450ee967746450a9847819c60e817.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-561.png"
+    },
+    {
+      "frame": 579,
+      "width": 160,
+      "height": 144,
+      "sha256": "9c5cd0f1365c522f9af7385a36db1deda98f8b68dc1e9f65cfabb7b4340756ec",
+      "rgbaSha256": "8cd8adef1aacc7a008068c871ae94d9e9a29c6a847534231a3d034889f732cc5",
+      "sampledButtons": [
+        "down"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/9c5cd0f1365c522f9af7385a36db1deda98f8b68dc1e9f65cfabb7b4340756ec.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-579.png"
+    },
+    {
+      "frame": 615,
+      "width": 160,
+      "height": 144,
+      "sha256": "b86302e107e547d1dc27760f20ea5da810c734c30a2ffa7b30679019c7093fe0",
+      "rgbaSha256": "dc442d5e37b9a9d8569b7d7c73dec21a989528ec05139851312e7c21774be3f9",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/b86302e107e547d1dc27760f20ea5da810c734c30a2ffa7b30679019c7093fe0.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-615.png"
+    },
+    {
+      "frame": 617,
+      "width": 160,
+      "height": 144,
+      "sha256": "d7c39b3b5e468f9c75f72d40e1e70ecce2128d17d84a64a7b4baec943b8650b1",
+      "rgbaSha256": "e3d16ce1b1f1b3a4335cb74100201b07e843bebdb7cf49ad2fc7a0d5d23e30e4",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/athletic-motion-delivery/frames/d7c39b3b5e468f9c75f72d40e1e70ecce2128d17d84a64a7b4baec943b8650b1.png",
+      "retainedPath": "docs/playtests/athletic-motion/native-617.png"
+    }
+  ],
+  "web": {
+    "url": "http://127.0.0.1:54386/7edbeff73936d0b0b097e544538d19ef8daef8be79196abf996d35eb3f98d069/",
+    "rom": {
+      "path": "rom/nicasource-jam.gbc",
+      "sha256": "f2e21470603b309d343c96fbdcc698acf5f69b35135a95515e0deaf7c440bafb",
+      "sizeBytes": 262144
+    },
+    "sourceRevision": "ce754e15a78e5729a91c2b79c3d0165598d6d9aecf7992b8b94d788d2e25e2b2"
+  },
+  "browserCheck": {
+    "selection": "passed",
+    "difficulty": "Warm-up",
+    "movementAndTurning": "passed",
+    "nativePause": "paused; P resumes",
+    "consoleWarnings": 0,
+    "consoleErrors": 0,
+    "capture": "athletic-motion/browser-paused.png"
+  }
+}

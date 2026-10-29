@@ -1,0 +1,11 @@
+{
+  "_resourceType": "palette",
+  "id": "jam-marker",
+  "name": "Human indicator",
+  "colors": [
+    "F8CE58",
+    "F8CE58",
+    "F8CE58",
+    "182738"
+  ]
+}

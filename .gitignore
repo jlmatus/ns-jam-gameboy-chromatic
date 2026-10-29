@@ -2,6 +2,7 @@
 build/
 dist/
 out/
+/game/artifacts/recording-archives/
 *.gb
 *.gbc
 *.pocket
@@ -12,6 +13,9 @@ out/
 *.rtc
 *.state
 *.state.*
+*.gbstate
+*.gbstate.json
+save-states/
 
 # Dependencies, local toolchains, and caches
 node_modules/

@@ -1,0 +1,1030 @@
+{
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "sizeBytes": 262144,
+    "sha256": "f6301052dfa7f1df7f633ae76b8c5f1536c847359fa8e1645522df28e4eccbab",
+    "title": "NICASOURCEJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 3,
+    "declaredRomSizeBytes": 262144,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 171,
+    "computedHeaderChecksum": 171,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "boot": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "frame": 120,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "f6301052dfa7f1df7f633ae76b8c5f1536c847359fa8e1645522df28e4eccbab",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 22.224834,
+      "gameTimeMs": 2009.124755859375
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast",
+      "sessionId": "9355be5554d74566a5f249628dea484a",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 120,
+      "totalFrames": 120,
+      "bytesUsed": 23578,
+      "limits": {
+        "sampleEveryFrames": 6,
+        "recentFrameCount": 64,
+        "maxBytes": 67108864,
+        "maxFrames": 36000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 23,
+      "eventDigest": "122d0ec8befd08de44c47b85279012dd9b97898d26b9b173d8c4498507a69a49",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 120
+        }
+      ]
+    },
+    "debugMode": "rom"
+  },
+  "samples": [
+    {
+      "frame": 120,
+      "width": 160,
+      "height": 144,
+      "sha256": "3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082",
+      "rgbaSha256": "e0f78017c5a7ca5ce878b881dbd744117c3693460780f75e036f6e539719b6b7",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082.png"
+    },
+    {
+      "frame": 132,
+      "width": 160,
+      "height": 144,
+      "sha256": "fa0aad9be47743609c3839073a5643b34b14b9b21e009efad6a77b65b77a8645",
+      "rgbaSha256": "960ef942e0e15e8ceb0d29fa846f718e08171f8417d506cc7e9c9617e28217a3",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/fa0aad9be47743609c3839073a5643b34b14b9b21e009efad6a77b65b77a8645.png"
+    },
+    {
+      "frame": 144,
+      "width": 160,
+      "height": 144,
+      "sha256": "fa0aad9be47743609c3839073a5643b34b14b9b21e009efad6a77b65b77a8645",
+      "rgbaSha256": "960ef942e0e15e8ceb0d29fa846f718e08171f8417d506cc7e9c9617e28217a3",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/fa0aad9be47743609c3839073a5643b34b14b9b21e009efad6a77b65b77a8645.png"
+    },
+    {
+      "frame": 156,
+      "width": 160,
+      "height": 144,
+      "sha256": "97cadd67a3eff6e1b6e0f0664141edd3e3868e7348e3ed41b0eb09016435bc49",
+      "rgbaSha256": "1ff7e81a06bf3a0efe88abd3dc569c6f8662a3254d940726fb79d2e5994fef73",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/97cadd67a3eff6e1b6e0f0664141edd3e3868e7348e3ed41b0eb09016435bc49.png"
+    },
+    {
+      "frame": 168,
+      "width": 160,
+      "height": 144,
+      "sha256": "97cadd67a3eff6e1b6e0f0664141edd3e3868e7348e3ed41b0eb09016435bc49",
+      "rgbaSha256": "1ff7e81a06bf3a0efe88abd3dc569c6f8662a3254d940726fb79d2e5994fef73",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/97cadd67a3eff6e1b6e0f0664141edd3e3868e7348e3ed41b0eb09016435bc49.png"
+    },
+    {
+      "frame": 180,
+      "width": 160,
+      "height": 144,
+      "sha256": "3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082",
+      "rgbaSha256": "e0f78017c5a7ca5ce878b881dbd744117c3693460780f75e036f6e539719b6b7",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082.png"
+    },
+    {
+      "frame": 192,
+      "width": 160,
+      "height": 144,
+      "sha256": "3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082",
+      "rgbaSha256": "e0f78017c5a7ca5ce878b881dbd744117c3693460780f75e036f6e539719b6b7",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082.png"
+    },
+    {
+      "frame": 204,
+      "width": 160,
+      "height": 144,
+      "sha256": "2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0",
+      "rgbaSha256": "56fca46f88689a0a393f4cdecb08a870851d163751c60a612775a29eb817bb17",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0.png"
+    },
+    {
+      "frame": 216,
+      "width": 160,
+      "height": 144,
+      "sha256": "2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0",
+      "rgbaSha256": "56fca46f88689a0a393f4cdecb08a870851d163751c60a612775a29eb817bb17",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0.png"
+    },
+    {
+      "frame": 228,
+      "width": 160,
+      "height": 144,
+      "sha256": "298dfc50afc6f732eaff33524bd9f8a4ac39038e91752b9d4ba03a8af34c0933",
+      "rgbaSha256": "ff0960fd3bb0c8e05b54bb231a8839bb299541b58a2ff7dbbcc90b469205a72b",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/298dfc50afc6f732eaff33524bd9f8a4ac39038e91752b9d4ba03a8af34c0933.png"
+    },
+    {
+      "frame": 240,
+      "width": 160,
+      "height": 144,
+      "sha256": "298dfc50afc6f732eaff33524bd9f8a4ac39038e91752b9d4ba03a8af34c0933",
+      "rgbaSha256": "ff0960fd3bb0c8e05b54bb231a8839bb299541b58a2ff7dbbcc90b469205a72b",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/298dfc50afc6f732eaff33524bd9f8a4ac39038e91752b9d4ba03a8af34c0933.png"
+    },
+    {
+      "frame": 252,
+      "width": 160,
+      "height": 144,
+      "sha256": "91b3a8708fa36d14a5af7f63d88945a11cbd3997a24ec2d8c0814bf4ab6dc3be",
+      "rgbaSha256": "eefacb0393acdb6adfd4931c15697384da321a5f407f3539abe726a5dd3369d1",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/91b3a8708fa36d14a5af7f63d88945a11cbd3997a24ec2d8c0814bf4ab6dc3be.png"
+    },
+    {
+      "frame": 264,
+      "width": 160,
+      "height": 144,
+      "sha256": "91b3a8708fa36d14a5af7f63d88945a11cbd3997a24ec2d8c0814bf4ab6dc3be",
+      "rgbaSha256": "eefacb0393acdb6adfd4931c15697384da321a5f407f3539abe726a5dd3369d1",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/91b3a8708fa36d14a5af7f63d88945a11cbd3997a24ec2d8c0814bf4ab6dc3be.png"
+    },
+    {
+      "frame": 276,
+      "width": 160,
+      "height": 144,
+      "sha256": "2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0",
+      "rgbaSha256": "56fca46f88689a0a393f4cdecb08a870851d163751c60a612775a29eb817bb17",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0.png"
+    },
+    {
+      "frame": 288,
+      "width": 160,
+      "height": 144,
+      "sha256": "2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0",
+      "rgbaSha256": "56fca46f88689a0a393f4cdecb08a870851d163751c60a612775a29eb817bb17",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0.png"
+    },
+    {
+      "frame": 300,
+      "width": 160,
+      "height": 144,
+      "sha256": "2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a",
+      "rgbaSha256": "8e64834f276663e195aa5411cd2a129d8fcb48c4b4d8e6fe9ec5335b88b96dcb",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a.png"
+    },
+    {
+      "frame": 312,
+      "width": 160,
+      "height": 144,
+      "sha256": "2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a",
+      "rgbaSha256": "8e64834f276663e195aa5411cd2a129d8fcb48c4b4d8e6fe9ec5335b88b96dcb",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a.png"
+    },
+    {
+      "frame": 324,
+      "width": 160,
+      "height": 144,
+      "sha256": "6eb3e953ee0884c8f5dac5ed6a54327133e1c670b9632d686bcf1d933521cabf",
+      "rgbaSha256": "013bdb25ec189f183e4c1205c1b090c03e12c2b7e3c8479c990f6d0898cde223",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/6eb3e953ee0884c8f5dac5ed6a54327133e1c670b9632d686bcf1d933521cabf.png"
+    },
+    {
+      "frame": 336,
+      "width": 160,
+      "height": 144,
+      "sha256": "6eb3e953ee0884c8f5dac5ed6a54327133e1c670b9632d686bcf1d933521cabf",
+      "rgbaSha256": "013bdb25ec189f183e4c1205c1b090c03e12c2b7e3c8479c990f6d0898cde223",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/6eb3e953ee0884c8f5dac5ed6a54327133e1c670b9632d686bcf1d933521cabf.png"
+    },
+    {
+      "frame": 348,
+      "width": 160,
+      "height": 144,
+      "sha256": "cc9931405b23cb2319fba73ac3bb8b3fb2d55dd142ddc7f24805d701ee938732",
+      "rgbaSha256": "a48d4f51367b601d20b028cedb5e8844191cd2dedecbf8b6e5554c373d0decb6",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/cc9931405b23cb2319fba73ac3bb8b3fb2d55dd142ddc7f24805d701ee938732.png"
+    },
+    {
+      "frame": 360,
+      "width": 160,
+      "height": 144,
+      "sha256": "cc9931405b23cb2319fba73ac3bb8b3fb2d55dd142ddc7f24805d701ee938732",
+      "rgbaSha256": "a48d4f51367b601d20b028cedb5e8844191cd2dedecbf8b6e5554c373d0decb6",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/cc9931405b23cb2319fba73ac3bb8b3fb2d55dd142ddc7f24805d701ee938732.png"
+    },
+    {
+      "frame": 372,
+      "width": 160,
+      "height": 144,
+      "sha256": "2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a",
+      "rgbaSha256": "8e64834f276663e195aa5411cd2a129d8fcb48c4b4d8e6fe9ec5335b88b96dcb",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a.png"
+    },
+    {
+      "frame": 384,
+      "width": 160,
+      "height": 144,
+      "sha256": "2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a",
+      "rgbaSha256": "8e64834f276663e195aa5411cd2a129d8fcb48c4b4d8e6fe9ec5335b88b96dcb",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a.png"
+    },
+    {
+      "frame": 396,
+      "width": 160,
+      "height": 144,
+      "sha256": "1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a",
+      "rgbaSha256": "93240b01855389629d38e5e83a200d7d6a5bd754d2c5a14a1130736ff1c8be27",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png"
+    },
+    {
+      "frame": 408,
+      "width": 160,
+      "height": 144,
+      "sha256": "1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a",
+      "rgbaSha256": "93240b01855389629d38e5e83a200d7d6a5bd754d2c5a14a1130736ff1c8be27",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png"
+    },
+    {
+      "frame": 420,
+      "width": 160,
+      "height": 144,
+      "sha256": "e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab",
+      "rgbaSha256": "fa95dca9b78b42a6087d8e0ae02a9e8407c7bcd4cfb30916d9670ca3465ceb81",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab.png"
+    },
+    {
+      "frame": 432,
+      "width": 160,
+      "height": 144,
+      "sha256": "e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab",
+      "rgbaSha256": "fa95dca9b78b42a6087d8e0ae02a9e8407c7bcd4cfb30916d9670ca3465ceb81",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab.png"
+    },
+    {
+      "frame": 444,
+      "width": 160,
+      "height": 144,
+      "sha256": "c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3",
+      "rgbaSha256": "49bb22f6ff24020f383428c065a673cc6e76a219f6d4fa0bdd4325b49b191f98",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3.png"
+    },
+    {
+      "frame": 456,
+      "width": 160,
+      "height": 144,
+      "sha256": "c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3",
+      "rgbaSha256": "49bb22f6ff24020f383428c065a673cc6e76a219f6d4fa0bdd4325b49b191f98",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3.png"
+    },
+    {
+      "frame": 468,
+      "width": 160,
+      "height": 144,
+      "sha256": "1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a",
+      "rgbaSha256": "93240b01855389629d38e5e83a200d7d6a5bd754d2c5a14a1130736ff1c8be27",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png"
+    },
+    {
+      "frame": 480,
+      "width": 160,
+      "height": 144,
+      "sha256": "1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a",
+      "rgbaSha256": "93240b01855389629d38e5e83a200d7d6a5bd754d2c5a14a1130736ff1c8be27",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png"
+    },
+    {
+      "frame": 492,
+      "width": 160,
+      "height": 144,
+      "sha256": "de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5",
+      "rgbaSha256": "c9c65ccaa4f1199a6e11a429af958bb3ea5bc9b6aa0f2108ec89b96753f4d20e",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5.png"
+    },
+    {
+      "frame": 504,
+      "width": 160,
+      "height": 144,
+      "sha256": "de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5",
+      "rgbaSha256": "c9c65ccaa4f1199a6e11a429af958bb3ea5bc9b6aa0f2108ec89b96753f4d20e",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5.png"
+    },
+    {
+      "frame": 516,
+      "width": 160,
+      "height": 144,
+      "sha256": "4856046d28d02e130a945a6640a2999f4f39f370ca73918b0a8e9d25475ee575",
+      "rgbaSha256": "ee396d0ddfd334c79eb93d5caecf025cbe2d1cf5211213c616057f7ca3ddd079",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/4856046d28d02e130a945a6640a2999f4f39f370ca73918b0a8e9d25475ee575.png"
+    },
+    {
+      "frame": 528,
+      "width": 160,
+      "height": 144,
+      "sha256": "4856046d28d02e130a945a6640a2999f4f39f370ca73918b0a8e9d25475ee575",
+      "rgbaSha256": "ee396d0ddfd334c79eb93d5caecf025cbe2d1cf5211213c616057f7ca3ddd079",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/4856046d28d02e130a945a6640a2999f4f39f370ca73918b0a8e9d25475ee575.png"
+    },
+    {
+      "frame": 540,
+      "width": 160,
+      "height": 144,
+      "sha256": "0da2fa97ce2b0e11231fc5565740b7cc9538d49b52ad236b3bcfca07b937a6d1",
+      "rgbaSha256": "582f7a142ba9206d49867c55db43e948ef0289ca749f74e261e8b2070362b6c0",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/0da2fa97ce2b0e11231fc5565740b7cc9538d49b52ad236b3bcfca07b937a6d1.png"
+    },
+    {
+      "frame": 552,
+      "width": 160,
+      "height": 144,
+      "sha256": "0da2fa97ce2b0e11231fc5565740b7cc9538d49b52ad236b3bcfca07b937a6d1",
+      "rgbaSha256": "582f7a142ba9206d49867c55db43e948ef0289ca749f74e261e8b2070362b6c0",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/0da2fa97ce2b0e11231fc5565740b7cc9538d49b52ad236b3bcfca07b937a6d1.png"
+    },
+    {
+      "frame": 564,
+      "width": 160,
+      "height": 144,
+      "sha256": "de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5",
+      "rgbaSha256": "c9c65ccaa4f1199a6e11a429af958bb3ea5bc9b6aa0f2108ec89b96753f4d20e",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5.png"
+    },
+    {
+      "frame": 576,
+      "width": 160,
+      "height": 144,
+      "sha256": "de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5",
+      "rgbaSha256": "c9c65ccaa4f1199a6e11a429af958bb3ea5bc9b6aa0f2108ec89b96753f4d20e",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5.png"
+    },
+    {
+      "frame": 588,
+      "width": 160,
+      "height": 144,
+      "sha256": "57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3",
+      "rgbaSha256": "2cbc32063f1fe8200e718f4d53c1d6a9b04977718be2c27f77f4d261944e9a25",
+      "sampledButtons": [
+        "right"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png"
+    },
+    {
+      "frame": 600,
+      "width": 160,
+      "height": 144,
+      "sha256": "57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3",
+      "rgbaSha256": "2cbc32063f1fe8200e718f4d53c1d6a9b04977718be2c27f77f4d261944e9a25",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png"
+    },
+    {
+      "frame": 612,
+      "width": 160,
+      "height": 144,
+      "sha256": "52f94b32ac86c06bddada62d44010e08db818fa7643a6e3222056cbd7d42d236",
+      "rgbaSha256": "8d971ac0b888a55b30100502fcf0a404f9913cf8e731692e5b9fb6774a1d9f6f",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/52f94b32ac86c06bddada62d44010e08db818fa7643a6e3222056cbd7d42d236.png"
+    },
+    {
+      "frame": 624,
+      "width": 160,
+      "height": 144,
+      "sha256": "52f94b32ac86c06bddada62d44010e08db818fa7643a6e3222056cbd7d42d236",
+      "rgbaSha256": "8d971ac0b888a55b30100502fcf0a404f9913cf8e731692e5b9fb6774a1d9f6f",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/52f94b32ac86c06bddada62d44010e08db818fa7643a6e3222056cbd7d42d236.png"
+    },
+    {
+      "frame": 636,
+      "width": 160,
+      "height": 144,
+      "sha256": "7e9045e1cd8012572e60e6543c1c459876f53537d93a8ed52ec1a1966063a581",
+      "rgbaSha256": "819cadc8968ecd4a71b585596dad32d922ea66a25875732890465e131ceb7066",
+      "sampledButtons": [
+        "select"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/7e9045e1cd8012572e60e6543c1c459876f53537d93a8ed52ec1a1966063a581.png"
+    },
+    {
+      "frame": 648,
+      "width": 160,
+      "height": 144,
+      "sha256": "7e9045e1cd8012572e60e6543c1c459876f53537d93a8ed52ec1a1966063a581",
+      "rgbaSha256": "819cadc8968ecd4a71b585596dad32d922ea66a25875732890465e131ceb7066",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/7e9045e1cd8012572e60e6543c1c459876f53537d93a8ed52ec1a1966063a581.png"
+    },
+    {
+      "frame": 660,
+      "width": 160,
+      "height": 144,
+      "sha256": "57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3",
+      "rgbaSha256": "2cbc32063f1fe8200e718f4d53c1d6a9b04977718be2c27f77f4d261944e9a25",
+      "sampledButtons": [
+        "b"
+      ],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png"
+    },
+    {
+      "frame": 672,
+      "width": 160,
+      "height": 144,
+      "sha256": "57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3",
+      "rgbaSha256": "2cbc32063f1fe8200e718f4d53c1d6a9b04977718be2c27f77f4d261944e9a25",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png"
+    }
+  ],
+  "steps": [
+    {
+      "startFrame": 120,
+      "endFrame": 132,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 132,
+      "endFrame": 144,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 144,
+      "endFrame": 156,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 156,
+      "endFrame": 168,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 168,
+      "endFrame": 180,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 180,
+      "endFrame": 192,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 192,
+      "endFrame": 204,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 204,
+      "endFrame": 216,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 216,
+      "endFrame": 228,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 228,
+      "endFrame": 240,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 240,
+      "endFrame": 252,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 252,
+      "endFrame": 264,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 264,
+      "endFrame": 276,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 276,
+      "endFrame": 288,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 288,
+      "endFrame": 300,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 300,
+      "endFrame": 312,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 312,
+      "endFrame": 324,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 324,
+      "endFrame": 336,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 336,
+      "endFrame": 348,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 348,
+      "endFrame": 360,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 360,
+      "endFrame": 372,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 372,
+      "endFrame": 384,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 384,
+      "endFrame": 396,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 396,
+      "endFrame": 408,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 408,
+      "endFrame": 420,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 420,
+      "endFrame": 432,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 432,
+      "endFrame": 444,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 444,
+      "endFrame": 456,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 456,
+      "endFrame": 468,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 468,
+      "endFrame": 480,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 480,
+      "endFrame": 492,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 492,
+      "endFrame": 504,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 504,
+      "endFrame": 516,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 516,
+      "endFrame": 528,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 528,
+      "endFrame": 540,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 540,
+      "endFrame": 552,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 552,
+      "endFrame": 564,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 564,
+      "endFrame": 576,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 576,
+      "endFrame": 588,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 588,
+      "endFrame": 600,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 600,
+      "endFrame": 612,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 612,
+      "endFrame": 624,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 624,
+      "endFrame": 636,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 636,
+      "endFrame": 648,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 648,
+      "endFrame": 660,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 660,
+      "endFrame": 672,
+      "frames": 12,
+      "buttons": []
+    }
+  ],
+  "selectionChecks": [
+    {
+      "player": "MATUS",
+      "page": 0,
+      "frame": 120,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/3d569874a8981453698f5d1caee203fbb0efbf9dfc4953981e69b022b881e082.png",
+      "retained": "docs/playtests/scouting-cards/matus-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MATUS",
+      "page": 1,
+      "frame": 144,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/fa0aad9be47743609c3839073a5643b34b14b9b21e009efad6a77b65b77a8645.png",
+      "retained": "docs/playtests/scouting-cards/matus-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MATUS",
+      "page": 2,
+      "frame": 168,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/97cadd67a3eff6e1b6e0f0664141edd3e3868e7348e3ed41b0eb09016435bc49.png",
+      "retained": "docs/playtests/scouting-cards/matus-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MAGIC",
+      "page": 0,
+      "frame": 216,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2fcd6a000a27af1d522bbe5a4abd43177fbedf1b124bad3c94dadbf399b459c0.png",
+      "retained": "docs/playtests/scouting-cards/magic-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MAGIC",
+      "page": 1,
+      "frame": 240,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/298dfc50afc6f732eaff33524bd9f8a4ac39038e91752b9d4ba03a8af34c0933.png",
+      "retained": "docs/playtests/scouting-cards/magic-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MAGIC",
+      "page": 2,
+      "frame": 264,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/91b3a8708fa36d14a5af7f63d88945a11cbd3997a24ec2d8c0814bf4ab6dc3be.png",
+      "retained": "docs/playtests/scouting-cards/magic-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "BAMBI",
+      "page": 0,
+      "frame": 312,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/2b1b7375a6c760212ae89245e478d76436b9846aaa6694de3b7bb8133474294a.png",
+      "retained": "docs/playtests/scouting-cards/bambi-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "BAMBI",
+      "page": 1,
+      "frame": 336,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/6eb3e953ee0884c8f5dac5ed6a54327133e1c670b9632d686bcf1d933521cabf.png",
+      "retained": "docs/playtests/scouting-cards/bambi-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "BAMBI",
+      "page": 2,
+      "frame": 360,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/cc9931405b23cb2319fba73ac3bb8b3fb2d55dd142ddc7f24805d701ee938732.png",
+      "retained": "docs/playtests/scouting-cards/bambi-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "TORRES",
+      "page": 0,
+      "frame": 408,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png",
+      "retained": "docs/playtests/scouting-cards/torres-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "TORRES",
+      "page": 1,
+      "frame": 432,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab.png",
+      "retained": "docs/playtests/scouting-cards/torres-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "TORRES",
+      "page": 2,
+      "frame": 456,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3.png",
+      "retained": "docs/playtests/scouting-cards/torres-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "CHOMPA",
+      "page": 0,
+      "frame": 504,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/de3ad22fb14d644f8c492ad8867ec65ccb0fee036bac3af861f06efda81ce9a5.png",
+      "retained": "docs/playtests/scouting-cards/chompa-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "CHOMPA",
+      "page": 1,
+      "frame": 528,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/4856046d28d02e130a945a6640a2999f4f39f370ca73918b0a8e9d25475ee575.png",
+      "retained": "docs/playtests/scouting-cards/chompa-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "CHOMPA",
+      "page": 2,
+      "frame": 552,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/0da2fa97ce2b0e11231fc5565740b7cc9538d49b52ad236b3bcfca07b937a6d1.png",
+      "retained": "docs/playtests/scouting-cards/chompa-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MEAT",
+      "page": 0,
+      "frame": 600,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png",
+      "retained": "docs/playtests/scouting-cards/meat-0.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MEAT",
+      "page": 1,
+      "frame": 624,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/52f94b32ac86c06bddada62d44010e08db818fa7643a6e3222056cbd7d42d236.png",
+      "retained": "docs/playtests/scouting-cards/meat-1.png",
+      "mismatches": 0,
+      "maxError": 0
+    },
+    {
+      "player": "MEAT",
+      "page": 2,
+      "frame": 648,
+      "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/7e9045e1cd8012572e60e6543c1c459876f53537d93a8ed52ec1a1966063a581.png",
+      "retained": "docs/playtests/scouting-cards/meat-2.png",
+      "mismatches": 0,
+      "maxError": 0
+    }
+  ]
+}

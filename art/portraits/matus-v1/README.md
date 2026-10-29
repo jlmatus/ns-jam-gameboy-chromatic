@@ -1,6 +1,6 @@
 # MATUS — portrait concept v1
 
-Standalone character-face exploration based on the user-provided `joe.jpeg`. No uniform has been invented. **Portrait approved by the user.** The game remains in planning; this portrait has not been integrated.
+Standalone character-face exploration based on the user-provided `joe.jpeg`. No uniform has been invented. **Portrait approved by the user.** The portrait is integrated into the native selection menu.
 
 ## Review files
 
@@ -19,4 +19,6 @@ The ModRetro Chromatic pixel-art skill guided the workflow. Image Generation pro
 
 The final 32×32 portrait uses the skill's native-authoring fallback: explicit whole-pixel cells, designed from the reference studies rather than resized from their raster output. No chart cells were silently removed or treated as a passed recovery.
 
-The approved artwork is preserved as the style reference for subsequent player portraits. The 32×32 canvas does not match GB Studio's standard 16×16 static sprite or avatar profile. Future integration must select a compatible custom layout or background composition, assign the displayed palette, and check hardware limits. No asset import, ROM build, emulator test, or physical-device check has been performed.
+The approved 32×32 source cells are integrated as native window tiles, with their displayed palette verified in ROM menu frames. MATUS remains the portrait style reference. Physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

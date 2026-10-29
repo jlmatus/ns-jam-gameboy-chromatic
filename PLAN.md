@@ -2,7 +2,39 @@
 
 Build **NICASOURCE JAM**, a native Game Boy Color game for ModRetro Chromatic, using the ModRetro Chromatic Plugin and an editable native project. One human controls a player alongside a CPU teammate against two CPU opponents. Start with a small playable basketball prototype, then complete the match flow, arcade features, presentation, and cartridge records.
 
-This is a roadmap, not evidence of implemented gameplay. The repository currently contains planning documents and portrait concepts; no game project or playable ROM exists yet.
+The first playable prototype is implemented in `game/`: a native GBC-only ROM and official browser export. See `docs/playtests/first-playable.md` for verification. Unchecked milestones below still describe future work.
+
+The second presentation pass addresses the user's first playtest: 16×32 bodies,
+inward-facing baskets, a visible rim/net scoring sequence, animated nets, clearer
+ball priority, and tighter court/camera spacing. See `docs/playtests/experience-v2.md`.
+This is still a development prototype; the first rules build did not establish
+finished-game feel or presentation quality.
+
+## Current Milestone: Player Selection and Ratings
+
+Implemented the six-player native selection flow, approved portraits, unique lineups,
+all supplied ratings, three CPU levels, lineup review, and return to selection from
+pause. All 1,080 valid lineup/difficulty combinations pass host checks. Native ROM and
+browser verification include selection, reviewed lineups, gameplay, pause, and
+return to the picker. See `docs/playtests/selection-ratings.md` for evidence and
+`docs/design/ratings.md` for formulas and controls.
+The selected second layout is implemented: 64×64 portraits, bold type, larger
+names, rating bars, and two detail pages. The user approved ratings-based
+playstyle labels for all six players. See `docs/playtests/scouting-card-layout.md`.
+The user accepted the cards. The first gameplay tuning pass reduces automatic
+CPU takeaways and easy-mode opponent accuracy, protects catches, and gives the
+existing body sprites side-facing profiles. See `docs/playtests/gameplay-balance.md`.
+The four-quarter match-flow milestone remains queued; further tuning follows playtests.
+
+The next user review requested better proportions, turning, shooting, and framing.
+The latest candidate adds athletic 40-pixel bodies, front/back poses, a closer
+native court projection, and staged shots with an attached ball and landing.
+See `docs/playtests/athletic-motion.md`. Visual acceptance remains with the user.
+
+The current contact pass uses the six confirmed heights/builds, positioning-based
+human reaches, defensive shoves, power drives, gradual body separation, and
+bounded recovery. CPU diagonal movement and retreat speed are corrected. See
+`docs/playtests/body-contact.md` for exact-ROM evidence and acceptance limits.
 
 ## Scope
 
@@ -10,21 +42,28 @@ This is a roadmap, not evidence of implemented gameplay. The repository currentl
 - **First playable milestone:** one court, one human and three CPU players, movement in court depth and length, possession, passing, shooting, rebounds, and scoring. Temporary body sprites and uniforms are sufficient while proving the game mechanics.
 - **Out:** multiplayer, additional rosters, and extra game modes for the initial release. Physical cartridge flashing remains a separate requested action.
 
+## Confirmed Decisions
+
+- **Controls and timing:** use NBA Jam '99's default Game Boy Color mapping and four three-minute quarters. The exact mapping and manual references are recorded in [README.md](README.md#confirmed-controls-and-timing).
+- **Default portraits:** CHOMPA uses [v2](art/portraits/chompa-v2/README.md), and MEAT uses [v1](art/portraits/meat-v1/README.md). Both are approved defaults; MEAT's appearance is an accepted invented design.
+- **Jerseys:** CHOMPA is `"74"`; MEAT is `"00"`. Store and render the numbers as strings to retain both zeros.
+- **Persistent records:** defer the saved-statistics selection and win/loss attribution decisions until the complete match loop is playable. Track the live match score now; design cartridge persistence later.
+
 ## Action items
 
-- [ ] **Establish the native build workflow.** Resolve the plugin's Node runtime mismatch, create and select the intended `.gbsproj`, and verify a genuine ROM build, cartridge inspection, emulator boot, and built-in browser preview. Record working prerequisites, versions, and output paths.
-- [ ] **Prove court and runtime feasibility.** Prototype four independently moving players, court boundaries, a ball with separate ground position and flight height, depth ordering, and camera tracking. Measure native performance and sprite budgets. Prefer existing scene/events; evaluate a focused project-local engine extension if needed. Engine ejection requires a separate decision.
-- [ ] **Implement possession and scoring.** Add dribbling, pass targets, catch/interception rules, shot arcs, two- and three-point scoring, rebounds, and possession resets. Verify loose balls, simultaneous catches, missed shots, and out-of-bounds recovery without softlocks.
-- [ ] **Build the 2-on-2 CPU behavior.** Add teammate spacing, pass reception, shooting decisions, defense, rebounding, steals, and blocks. Implement the three CPU levels through reaction and decision tuning. Reach the first playable milestone with all four players active.
-- [ ] **Add roster selection and ratings.** Let the user choose a controlled player, CPU teammate, two opponents, and difficulty. Integrate the portrait concepts with compatible native layouts. Preserve all supplied rating values; define and test their gameplay effects. Treat signature labels as flavor until their mechanics are specified.
-- [ ] **Complete the match flow.** Add title/menu navigation, four quarters, clocks, intermissions, pause/resume, tie handling, results, and replay. Decide quarter duration and controller mapping through the prototype; avoid controls that require buttons unavailable on Game Boy Color.
+- [x] **Establish the native build workflow.** Managed Node 24 plugin session, editable `game/project.gbsproj`, official ROM build/header inspection, PyBoy boot, and built-in browser preview. Verified commands and dependency versions are in README.
+- [x] **Prove prototype court and runtime feasibility.** Four independently moving players, bounded court, ball ground/height coordinates, depth-sorted render slots, and horizontal camera tracking run in the ROM. A project-local scene extension preserves the stock engine. The sampled crowded frame used ten OAM objects, with nine on its busiest scanline and no over-limit scanlines. Browser input advanced 72 frames during a 1.2-second hold. Broader performance and physical-hardware validation remain later work.
+- [x] **Implement prototype possession and scoring.** Dribbling, flight/ground ball coordinates, fixed pass targets, deterministic catch arbitration, interceptions, charged shots, two/three-point scoring, rebounds, and possession resets. Player boundaries and bounded loose-ball recovery are implemented; full out-of-bounds/inbound rules remain future match work.
+- [x] **Implement the basic 2-on-2 CPU behavior.** All four players are active: teammate spacing/pass reception/shooting, opponent marking/steals/shooting, rebounding, CPU shot blocking, and three selectable difficulty levels. Further balance and feel tuning remain later work.
+- [x] **Add roster selection and ratings.** Native menus choose the human, teammate, two distinct opponents, and difficulty; review starts practice. Approved portraits and all six jersey strings are integrated. Every supplied rating is preserved and has a tested effect. See `docs/design/ratings.md`; signature labels remain flavor. Full match clocks and animated dunks remain separate milestones.
+- [ ] **Complete the match flow.** Add title/menu navigation, four three-minute quarters, clocks, intermissions, SELECT pause/resume, tie handling, results, and replay. Use A for pass/steal, B for shoot/block, and START for turbo; verify the original input feel through the prototype.
 - [ ] **Add the arcade features.** Implement turbo, exaggerated dunks, the close-up Dunk Cam, and hot-hand activation/reset with a flaming-net effect. Make camera transitions preserve possession, score, clocks, and player positions. Keep the basic game playable while effects are added.
-- [ ] **Finish presentation.** Create readable body sprites and animations for movement, dribbling, passing, shooting, dunks, and defense; apply the real uniform references. Add court art, HUD, effects, and sound. Finalize pending portraits and retain MEAT's placeholder status until a likeness reference or explicit design approval is available.
-- [ ] **Implement cartridge records.** Define win-loss attribution and the tracked statistics for each player, then add a versioned save format and results updates. Verify new cartridges, reloads, record resets, and invalid save data; avoid duplicate updates when reopening a results screen.
-- [ ] **Validate and deliver the game.** Run repeatable gameplay checks on the exact ROM, including full matches, all CPU levels, overtime/ties, rebounds, interrupted camera sequences, and save/reload. Measure performance in crowded scenes and test on physical Chromatic before claiming hardware readiness. Deliver the tested ROM alongside its editable project.
+- [ ] **Finish presentation.** Create readable body sprites and animations for movement, dribbling, passing, shooting, dunks, and defense; apply the real uniform references. Add court art, HUD, effects, and sound. Integrate the approved default portraits and jerseys, including CHOMPA 74 and MEAT 00.
+- [ ] **Validate the complete playable game.** Run repeatable checks on the exact ROM for full matches, all CPU levels, overtime/ties, rebounds, pause/resume, and interrupted camera sequences. Measure crowded-scene performance and test on physical Chromatic before claiming hardware readiness. Deliver a playable build with its editable project before designing saved records.
+- [ ] **Add cartridge records later.** After the game is playable, revisit which statistics to retain and how wins/losses are credited to teammates and opponents. Then implement a versioned save format and verify new cartridges, reloads, record resets, invalid data, and duplicate results updates. The decisions and save schema do not block the playable game.
 
-## Open questions
+## Remaining Decisions
 
-- Which A/B/Select mapping and quarter duration feel best on the handheld? These should be settled during the first playable prototype.
-- Which statistics should be saved, and how should wins/losses be credited to CPU teammates and opponents?
-- What are the final uniform references and CHOMPA/MEAT portrait choices, and the missing CHOMPA/MEAT jersey numbers?
+- Obtain the real team uniform references and finalize court/HUD presentation.
+- Define tie handling, detailed possession rules, and signature behavior. Rating formulas and initial difficulty behavior are implemented; continue tuning from playtests.
+- Revisit saved statistics and record attribution after the complete game is playable, as explicitly deferred above.

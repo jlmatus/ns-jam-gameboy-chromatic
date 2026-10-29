@@ -1,0 +1,11 @@
+{
+  "_resourceType": "palette",
+  "id": "jam-ball",
+  "name": "Ball",
+  "colors": [
+    "FFD270",
+    "E89328",
+    "E89328",
+    "302820"
+  ]
+}

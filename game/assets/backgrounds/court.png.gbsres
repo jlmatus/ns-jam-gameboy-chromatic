@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "6231bc9a-9779-5931-9790-7f4ddda5e771",
+  "name": "Managua prototype court",
+  "symbol": "bg_managua_prototype_court",
+  "tileColors": "",
+  "filename": "court.png",
+  "width": 50,
+  "height": 18,
+  "imageWidth": 400,
+  "imageHeight": 144,
+  "autoColor": false
+}

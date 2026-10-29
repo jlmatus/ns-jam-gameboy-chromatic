@@ -21,4 +21,6 @@ The empty-cell flags were visually reviewed as guide-edge artifacts. Chin cell `
 
 ## Integration
 
-The 32×32 portrait needs a compatible custom sprite layout or background composition; it does not match the standard 16×16 avatar/static profile. Future integration must assign the displayed palette and verify hardware limits. The game remains in planning. No asset import, ROM build, emulator test, or hardware check has been performed.
+The approved 32×32 source cells are integrated as native window tiles, with their displayed palette verified in ROM menu frames. Physical hardware remains untested.
+
+Integrated into the native selection menu using the approved source cells. See `docs/design/ratings.md` for native palette/tile packing.

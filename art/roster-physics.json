@@ -1,0 +1,11 @@
+{
+  "notes": "Heights/builds confirmed by the user. Weights were not supplied and remain unknown. Mass is an arcade build class, not an invented kilogram value. Power ratings retain their supplied values.",
+  "players": [
+    {"name":"MATUS","height_cm":160,"weight_kg":null,"build":"stocky"},
+    {"name":"MAGIC","height_cm":190,"weight_kg":null,"build":"lean"},
+    {"name":"BAMBI","height_cm":173,"weight_kg":null,"build":"heavy","description":"stocky, kind of fat"},
+    {"name":"TORRES","height_cm":170,"weight_kg":null,"build":"lean"},
+    {"name":"CHOMPA","height_cm":185,"weight_kg":null,"build":"broad"},
+    {"name":"MEAT","height_cm":173,"weight_kg":null,"build":"lean"}
+  ]
+}

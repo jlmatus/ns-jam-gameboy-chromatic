@@ -1,0 +1,20 @@
+[
+  {
+    "displayedOption": 1,
+    "name": "portrait-spotlight",
+    "file": "concept-1-portrait-spotlight.png",
+    "status": "generated layout reference; not native pixels or a ROM capture"
+  },
+  {
+    "displayedOption": 2,
+    "name": "scouting-card",
+    "file": "concept-2-scouting-card.png",
+    "status": "generated layout reference; not native pixels or a ROM capture"
+  },
+  {
+    "displayedOption": 3,
+    "name": "roster-carousel",
+    "file": "concept-3-roster-carousel.png",
+    "status": "generated layout reference; not native pixels or a ROM capture"
+  }
+]

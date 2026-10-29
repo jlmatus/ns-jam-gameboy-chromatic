@@ -1,0 +1,548 @@
+{
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "sizeBytes": 262144,
+    "sha256": "f6301052dfa7f1df7f633ae76b8c5f1536c847359fa8e1645522df28e4eccbab",
+    "title": "NICASOURCEJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 3,
+    "declaredRomSizeBytes": 262144,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 171,
+    "computedHeaderChecksum": 171,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "recording": {
+    "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast",
+    "sessionId": "9355be5554d74566a5f249628dea484a",
+    "status": "stopped",
+    "branchId": "branch-0001",
+    "frame": 928,
+    "totalFrames": 928,
+    "bytesUsed": 259127,
+    "limits": {
+      "sampleEveryFrames": 6,
+      "recentFrameCount": 64,
+      "maxBytes": 67108864,
+      "maxFrames": 36000,
+      "maxWallTimeMs": 900000
+    },
+    "eventCount": 433,
+    "eventDigest": "347d3145e9bd16f2358bdf2c8b2e1770a121eb18466adb48872a4edd1bd92f65",
+    "branches": [
+      {
+        "branchId": "branch-0001",
+        "frame": 928
+      }
+    ],
+    "outcome": "passed",
+    "reason": "All18 card/detail views exactly matched source-cell palettes and generated native tile layout. Verified full selection, A from info page, review, start, movement, pause, B return, and restored court sprites/HUD."
+  },
+  "steps": [
+    {
+      "startFrame": 120,
+      "endFrame": 132,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 132,
+      "endFrame": 144,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 144,
+      "endFrame": 156,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 156,
+      "endFrame": 168,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 168,
+      "endFrame": 180,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 180,
+      "endFrame": 192,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 192,
+      "endFrame": 204,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 204,
+      "endFrame": 216,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 216,
+      "endFrame": 228,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 228,
+      "endFrame": 240,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 240,
+      "endFrame": 252,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 252,
+      "endFrame": 264,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 264,
+      "endFrame": 276,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 276,
+      "endFrame": 288,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 288,
+      "endFrame": 300,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 300,
+      "endFrame": 312,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 312,
+      "endFrame": 324,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 324,
+      "endFrame": 336,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 336,
+      "endFrame": 348,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 348,
+      "endFrame": 360,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 360,
+      "endFrame": 372,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 372,
+      "endFrame": 384,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 384,
+      "endFrame": 396,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 396,
+      "endFrame": 408,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 408,
+      "endFrame": 420,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 420,
+      "endFrame": 432,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 432,
+      "endFrame": 444,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 444,
+      "endFrame": 456,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 456,
+      "endFrame": 468,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 468,
+      "endFrame": 480,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 480,
+      "endFrame": 492,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 492,
+      "endFrame": 504,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 504,
+      "endFrame": 516,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 516,
+      "endFrame": 528,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 528,
+      "endFrame": 540,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 540,
+      "endFrame": 552,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 552,
+      "endFrame": 564,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 564,
+      "endFrame": 576,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 576,
+      "endFrame": 588,
+      "frames": 12,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 588,
+      "endFrame": 600,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 600,
+      "endFrame": 612,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 612,
+      "endFrame": 624,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 624,
+      "endFrame": 636,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 636,
+      "endFrame": 648,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 648,
+      "endFrame": 660,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 660,
+      "endFrame": 672,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 672,
+      "endFrame": 684,
+      "frames": 12,
+      "buttons": [
+        "a"
+      ]
+    },
+    {
+      "startFrame": 684,
+      "endFrame": 696,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 696,
+      "endFrame": 708,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 708,
+      "endFrame": 720,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 720,
+      "endFrame": 732,
+      "frames": 12,
+      "buttons": [
+        "a"
+      ]
+    },
+    {
+      "startFrame": 732,
+      "endFrame": 744,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 744,
+      "endFrame": 756,
+      "frames": 12,
+      "buttons": [
+        "a"
+      ]
+    },
+    {
+      "startFrame": 756,
+      "endFrame": 768,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 768,
+      "endFrame": 780,
+      "frames": 12,
+      "buttons": [
+        "a"
+      ]
+    },
+    {
+      "startFrame": 780,
+      "endFrame": 792,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 792,
+      "endFrame": 804,
+      "frames": 12,
+      "buttons": [
+        "a"
+      ]
+    },
+    {
+      "startFrame": 804,
+      "endFrame": 816,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 816,
+      "endFrame": 828,
+      "frames": 12,
+      "buttons": [
+        "start"
+      ]
+    },
+    {
+      "startFrame": 828,
+      "endFrame": 840,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 840,
+      "endFrame": 880,
+      "frames": 40,
+      "buttons": [
+        "right"
+      ]
+    },
+    {
+      "startFrame": 880,
+      "endFrame": 892,
+      "frames": 12,
+      "buttons": [
+        "select"
+      ]
+    },
+    {
+      "startFrame": 892,
+      "endFrame": 904,
+      "frames": 12,
+      "buttons": []
+    },
+    {
+      "startFrame": 904,
+      "endFrame": 916,
+      "frames": 12,
+      "buttons": [
+        "b"
+      ]
+    },
+    {
+      "startFrame": 916,
+      "endFrame": 928,
+      "frames": 12,
+      "buttons": []
+    }
+  ],
+  "samples": [
+    {
+      "frame": 816,
+      "width": 160,
+      "height": 144,
+      "sha256": "31628b33b27c96ec5204a14065cb78b6d0917e43700f1c3d7374ff9def0a09ee",
+      "rgbaSha256": "193c946c62ef4972745cdf1426bc5abb43142e616988c7287615ebe3c68dcc9c",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/31628b33b27c96ec5204a14065cb78b6d0917e43700f1c3d7374ff9def0a09ee.png",
+      "retained": "docs/playtests/scouting-cards/flow-816.png"
+    },
+    {
+      "frame": 840,
+      "width": 160,
+      "height": 144,
+      "sha256": "a5ecf74b18ff79bc85d94f7bd2344faef50c976998e10c10d77e2277b00e7988",
+      "rgbaSha256": "c9f1999777b02a3bd193f620d3c72e5a21ea6ceb3ae3da8aae1de9a1c10eb850",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/a5ecf74b18ff79bc85d94f7bd2344faef50c976998e10c10d77e2277b00e7988.png",
+      "retained": "docs/playtests/scouting-cards/flow-840.png"
+    },
+    {
+      "frame": 904,
+      "width": 160,
+      "height": 144,
+      "sha256": "38d17c8272b2fc0771414b4b885ed9349091dc50a29a4f938ad8d4cffe00f909",
+      "rgbaSha256": "ef5b58902e1eca088f6e556983fcc22d748ecedea06ece3ca82b5eefb399fad5",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/38d17c8272b2fc0771414b4b885ed9349091dc50a29a4f938ad8d4cffe00f909.png",
+      "retained": "docs/playtests/scouting-cards/flow-904.png"
+    },
+    {
+      "frame": 928,
+      "width": 160,
+      "height": 144,
+      "sha256": "57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3",
+      "rgbaSha256": "2cbc32063f1fe8200e718f4d53c1d6a9b04977718be2c27f77f4d261944e9a25",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/57ab0ff1669bdc8f6b8e43aadf4fe636a45e56ead44fb5da4c47b27239833bf3.png",
+      "retained": "docs/playtests/scouting-cards/flow-928.png"
+    }
+  ]
+}

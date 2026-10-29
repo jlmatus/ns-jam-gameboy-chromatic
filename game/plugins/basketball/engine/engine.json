@@ -1,0 +1,26 @@
+{
+  "version": "4.3.0-e1",
+  "sceneTypes": [
+    {
+      "key": "BASKETBALL",
+      "label": "Basketball (NICASOURCE JAM)",
+      "files": [
+        "include/states/basketball.h",
+        "src/states/basketball.c",
+        "include/jam_sim.h",
+        "src/core/jam_sim.c",
+        "include/jam_hud.h",
+        "include/jam_menu.h",
+        "src/core/jam_menu.c",
+        "include/jam_cards.h",
+        "src/core/jam_cards.c",
+        "src/core/jam_card_matus.c",
+        "src/core/jam_card_magic.c",
+        "src/core/jam_card_bambi.c",
+        "src/core/jam_card_torres.c",
+        "src/core/jam_card_chompa.c",
+        "src/core/jam_card_meat.c"
+      ]
+    }
+  ]
+}
