@@ -9,6 +9,8 @@
 #include "jam_hud.h"
 #include "jam_menu.h"
 #include "jam_cards.h"
+#include "jam_dunk_cam.h"
+void jam_player_palettes(const jam_setup_t *setup) BANKED;
 #include "palette.h"
 #include <string.h>
 
@@ -19,6 +21,7 @@ static uint8_t in_menu;
 static uint8_t menu_tiles[360];
 static uint8_t hud[40];
 static uint8_t previous_hud[40];
+static uint8_t previous_controlled;
 static int16_t old_x[4],old_y[4];
 static uint8_t moving[4];
 static uint8_t facing[4];
@@ -39,12 +42,14 @@ static uint8_t glyph(char c) {
 static void text(uint8_t at,const char *s) { while(*s && at<40) hud[at++]=192+glyph(*s++); }
 static void number(uint8_t at,uint8_t n) { hud[at]=192+27+n/10; hud[at+1]=192+27+n%10; }
 static void draw_hud(void) {
-    uint8_t i,changed=0;
+    uint8_t i,changed=jam.mode==JAM_DUNK;
     for(i=0;i<40;i++) hud[i]=192;
-    text(0,"YOU"); number(4,jam.score[0]); text(7,":"); number(9,jam.score[1]); text(12,"CPU");
+    number(0,jam.score[0]);text(2,":");number(3,jam.score[1]);
+    text(6,jam_roster[jam.setup.roster[jam.controlled]].name);
+    text(13,jam_roster[jam.setup.roster[jam.controlled]].jersey);text(17,"YOU");
     if(jam.paused) text(20,"SELECT PLAY B LINEUP");
     else switch(jam.message) {
-        case JAM_MSG_PASS:text(20,"PASS");break;
+        case JAM_MSG_PASS:text(20,"TO ");text(23,jam_roster[jam.setup.roster[jam.target]].name);text(31,jam_roster[jam.setup.roster[jam.target]].jersey);break;
         case JAM_MSG_STEAL:text(20,"STEAL");break;
         case JAM_MSG_SHOT:text(20,"SHOT");break;
         case JAM_MSG_REBOUND:text(20,"REBOUND");break;
@@ -57,26 +62,44 @@ static void draw_hud(void) {
         case JAM_MSG_SHOVE:text(20,"SHOVE");break;
         case JAM_MSG_RUNOVER:text(20,"POWER DRIVE");break;
         case JAM_MSG_STAND:text(20,"BODY HELD GROUND");break;
+        case JAM_MSG_INBOUND:
+            if(jam.inbound_phase<2)text(20,jam.inbound_phase?"TAKING THE BASELINE":"RETRIEVING BALL");
+            else text(20,jam.next_team?"CPU INBOUND":"A PASS BALL IN");break;
+        case JAM_MSG_DUNK:text(20,"TURBO FINISH");break;
         default:
-            if(jam.owner==0) text(20,"A PASS HOLD B SHOOT");
-            else if(jam.owner==1) text(20,"A CALL FOR PASS");
+            if(jam.owner==(int8_t)jam.controlled) text(20,"A PASS HOLD B SHOOT");
+            else if(jam.owner>=2 && (jam.tick&128)){text(20,"MARK ");text(25,jam_roster[jam.setup.roster[jam.owner]].name);text(32,jam_roster[jam.setup.roster[jam.owner]].jersey);}
             else text(20,(jam.tick&128)?"TURBO A SHOVE":"A STEAL  B BLOCK");
     }
     if(!jam.paused && jam.charge) text(20,jam.charge>=18 && jam.charge<=36 ? "RELEASE NOW         " : "HOLD B - SET SHOT   ");
+    if(jam.mode==JAM_DUNK){
+        for(i=0;i<40;i++)hud[i]=192;
+        text(0,"DUNK CAM");text(9,jam_roster[jam.setup.roster[jam.passer]].name);
+        text(17,jam_roster[jam.setup.roster[jam.passer]].jersey);
+        if(jam.paused)text(20,"SELECT PLAY B LINEUP");
+        else if(jam.dunk_result==JAM_DUNK_BLOCKED)text(20,"REJECTED - NO BASKET");
+        else if(jam.dunk_result==JAM_DUNK_MISSED)text(20,"OFF THE RIM");
+        else if(jam.scored){text(20,"SLAM");number(27,jam.score[0]);text(29,":");number(30,jam.score[1]);}
+        else text(20,jam.dunk_time<8?"GATHER":jam.dunk_time<24?"UP HIGH":jam.dunk_time<32?"TO THE RIM":"SLAM");
+    }
     if(!jam.paused && jam.mode==JAM_FINISH && !jam.scored) {
         for(i=20;i<40;i++)hud[i]=192;
         text(20,jam.flight<8 ? "TO THE RIM" : (jam.shot_good ? "THROUGH THE NET" : "OFF THE RIM"));
     }
-    if(!jam.paused && jam.owner>=0) text(16,jam.owner<2?"YOU":"CPU");
-    if(!jam.paused && !jam.message_time && (jam.players[0].x*5/16<view_x || jam.players[0].x*5/16>view_x+160)) {
+    if(!jam.paused && !jam.message_time && (jam.players[jam.controlled].x*5/16<view_x || jam.players[jam.controlled].x*5/16>view_x+160)) {
         for(i=20;i<40;i++)hud[i]=192;
-        text(20,jam_roster[jam.setup.roster[0]].name);
-        text(27,jam.players[0].x*5/16<view_x ? "GO RIGHT" : "GO LEFT");
+        text(20,jam_roster[jam.setup.roster[jam.controlled]].name);
+        text(27,jam.players[jam.controlled].x*5/16<view_x ? "GO RIGHT" : "GO LEFT");
     }
     for(i=0;i<40;i++)if(hud[i]!=previous_hud[i])changed=1;
     if(changed) {
         VBK_REG=0;
-        set_win_tiles(0,0,20,2,hud);
+        set_win_tiles(0,jam_cam_active?16:0,20,2,hud);
+        for(i=0;i<20;i++)jam_cam_attrs[i]=jam_cam_active?(5|0x80):7;
+        VBK_REG=1;
+        set_win_tiles(0,jam_cam_active?16:0,20,1,jam_cam_attrs);
+        set_win_tiles(0,jam_cam_active?17:1,20,1,jam_cam_attrs);
+        VBK_REG=0;
         for(i=0;i<40;i++)previous_hud[i]=hud[i];
     }
 }
@@ -93,7 +116,7 @@ static int16_t project_x(int16_t x) {return x*5/16;}
 static void draw_players(void) {
     uint8_t order[4]={0,1,2,3},i,j,p,tmp,frame,pose,slot,mirror,jump,wind;
     int16_t desired,focus,human,ball,dx,dy,scan,marker_top;
-    human=project_x(jam.players[0].x);
+    human=project_x(jam.players[jam.controlled].x);
     ball=project_x(jam.ball_x);
     focus=ball;
     if(jam.mode==JAM_HELD && jam.owner>=0)focus+=jam.owner<2 ? 12 : -12;
@@ -105,7 +128,7 @@ static void draw_players(void) {
     }
     if(desired<0)desired=0;
     if(desired>JAM_VIEW_WIDTH-160)desired=JAM_VIEW_WIDTH-160;
-    if(!jam.paused) {
+    if(!jam.paused && jam.mode!=JAM_DUNK) {
         if(view_x<desired){view_x+=4;if(view_x>desired)view_x=desired;}
         if(view_x>desired){view_x-=4;if(view_x<desired)view_x=desired;}
     }
@@ -125,7 +148,7 @@ static void draw_players(void) {
                 facing[p]=(dy>64||dy<-64) && (dx<80&&dx>-80) ? (dy<0?3:2) : (dx<0?1:0);
             }
         }
-        wind=p==0?jam.charge:jam.players[p].windup;
+        wind=p==jam.controlled?jam.charge:jam.players[p].windup;
         mirror=facing[p]==1;
         pose=moving[p]?1+((jam.tick>>3)&1):0;
         if(facing[p]>=2){pose=facing[p]==2?3:4;mirror=moving[p]?((jam.tick>>3)&1):0;}
@@ -135,6 +158,7 @@ static void draw_players(void) {
         if(wind){pose=wind<6?5:6;mirror=p>=2;}
         if(jam.players[p].block_time){pose=jam_jump_height(&jam,p)>5?7:5;mirror=jam.ball_x<jam.players[p].x;}
         if(jam.players[p].shot_time){pose=jam.players[p].shot_time>22?7:(jam.players[p].shot_time>10?8:9);mirror=p>=2;}
+        if(jam.mode==JAM_DUNK && jam.passer==(int8_t)p){pose=jam.dunk_time<8?5:jam.dunk_time<38?7:9;mirror=p>=2;}
         jump=jam_jump_height(&jam,p);
         frame=actors[slot].animations[0].start+((p/2)*6+jam.setup.roster[p])*20+mirror*10+pose;
         actors[slot].frame=actors[slot].frame_start=frame;actors[slot].frame_end=frame+1;
@@ -144,16 +168,17 @@ static void draw_players(void) {
         old_x[p]=jam.players[p].x;old_y[p]=jam.players[p].y;
     }
     actors[5].frame=actors[5].animations[0].start;
-    actors[6].frame=actors[6].animations[0].start;
+    actors[6].frame=actors[6].animations[0].start+jam.setup.roster[jam.controlled];
     ball_screen_x=jam.ball_x;
     ball_screen_x=ball_screen_x*5/16-view_x-4;
     ball_screen_y=jam.ball_y/4-jam.height;
     place(&actors[5],ball_screen_x,ball_screen_y);
     focus=human-view_x-3;if(focus<3)focus=3;if(focus>150)focus=150;
-    place(&actors[6],focus,jam.players[0].y/4-jam_body(&jam,0)->height_px-6-jam_jump_height(&jam,0));
+    place(&actors[6],focus,jam.players[jam.controlled].y/4-jam_body(&jam,jam.controlled)->height_px-6-jam_jump_height(&jam,jam.controlled));
     focus=project_x((view_x<120?JAM_RIM_LEFT:JAM_RIM_RIGHT)*4)-view_x-4;
     pose=0;
     if(jam.mode==JAM_FINISH && jam.shot_good && jam.flight>=8)pose=jam.flight<20?1:2+(jam.tick&1);
+    if(jam.mode==JAM_DUNK && jam.dunk_result==JAM_DUNK_MADE && jam.dunk_time>=28)pose=1+(jam.tick&1);
     if(jam.mode==JAM_RESET && jam.scored && jam.reset_time>8)pose=2+((jam.tick>>2)&1);
     PLAYER.frame=PLAYER.animations[0].start+pose;
     PLAYER.frame_start=PLAYER.frame;PLAYER.frame_end=PLAYER.frame+1;
@@ -219,8 +244,9 @@ static void draw_menu(void) {
 }
 static void start_lineup(void) {
     uint8_t i;
+    jam_dunk_cam_end();
     if(!jam_init_lineup(&jam,&jam_menu.setup))return;
-    in_menu=0;view_x=45;
+    in_menu=0;view_x=45;jam_player_palettes(&jam.setup);
     VBK_REG=0;set_bkg_data(192,40,jam_font);
     for(i=0;i<4;i++){facing[i]=i>=2?1:0;old_x[i]=jam.players[i].x;old_y[i]=jam.players[i].y;moving[i]=0;}
     for(i=0;i<40;i++){hud[i]=7;previous_hud[i]=255;}
@@ -265,10 +291,18 @@ void basketball_update(void) BANKED {
         return;
     }
     if(jam.paused && INPUT_B_PRESSED) {
+        jam_dunk_cam_end();
         jam_menu_init(&jam_menu,&jam.setup);jam_menu.previous_input=buttons;
         in_menu=1;draw_menu();return;
     }
     jam_update(&jam,buttons);
     draw_players();
-    if((jam.tick&7)==0 || INPUT_SELECT_PRESSED || jam.paused) draw_hud();
+    if(jam.mode==JAM_DUNK){
+        if(!jam_cam_active){jam_dunk_cam_begin(&jam);for(buttons=0;buttons<40;buttons++)previous_hud[buttons]=255;}
+        jam_dunk_cam_render(&jam);draw_hud();
+    }else{
+        if(jam_cam_active){jam_dunk_cam_end();for(buttons=0;buttons<40;buttons++)previous_hud[buttons]=255;draw_hud();ui_set_pos(0,128);}
+        else if((jam.tick&7)==0 || INPUT_SELECT_PRESSED || jam.paused || jam.controlled!=previous_controlled)draw_hud();
+    }
+    previous_controlled=jam.controlled;
 }

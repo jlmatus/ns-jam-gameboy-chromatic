@@ -1,0 +1,14 @@
+PASS: catch-based control handoff/charge reset; visible retrieval/baseline inbound, protected throw, pause, return without teleport, both teams
+PASS: 108000 mixed-input updates across every human/level; 114 reaches, 111 shoves, 205 runovers, 406 shots; bounds/ownership/recovery intact
+PASS: real heights/builds; MATUS front swipes 378 vs behind 194 /512; early grace, held reach, shove/fumble, power drives, recovery, diagonal parity
+PASS: gather/rise, attached ball, release/landing, paused animation, interruptible CPU windup
+PASS: Warm-up seeded swipes 72<301, lane picks 78<163, open CPU makes 295/512; catch protection and unchanged human shots
+PASS: 1080 lineup/difficulty combinations, no duplicates, backtracking, confirm, invalid setup
+PASS: all six rating-page cycles, held Select, B close, A pick, page reset
+PASS: all supplied ratings; speed, 3PT, pass, block 215>71, steal 188>123, finishing, power, clutch, difficulty
+Level 0 soak: 48 shots, 22 baskets, 25 rebounds, owner -1 windup 0 mode 2
+Level 1 soak: 54 shots, 18 baskets, 36 rebounds, owner 2 windup 0 mode 0
+Level 2 soak: 52 shots, 15 baskets, 37 rebounds, owner -1 windup 0 mode 1
+PASS: CPU shot blocking and 12000-update soak at each difficulty
+CPU soak: shots=130 baskets=44 steals=44 rebounds=85 score=66:34
+PASS: movement, boundaries, pause, passes, interception, shots, scoring, rebounds, reset, CPU soak

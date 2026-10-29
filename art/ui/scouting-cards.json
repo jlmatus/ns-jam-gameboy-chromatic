@@ -2,15 +2,15 @@
   "layout": "Selected scouting-card concept, adapted to native 160x144",
   "labelStatus": "approved by user; derived from supplied ratings; numeric ratings unchanged",
   "palette": [
-    "#FFF5C9",
+    "#102333",
     "#EFA42E",
-    "#C8C6A2",
-    "#102333"
+    "#287780",
+    "#FFF5D6"
   ],
   "players": [
     {
       "name": "MATUS",
-      "source": "matus-v1",
+      "source": "matus-v2",
       "jersey": "13",
       "position": "GUARD",
       "playstyle": "3PT PLAYMAKER",
@@ -218,5 +218,7 @@
         4
       ]
     }
-  ]
+  ],
+  "portraitBackdrop": "#356270",
+  "backgroundStatus": "Approved by user: dark navy courtside with teal and gold accents; teal portrait panel and dividers, gold face rails, cream text"
 }

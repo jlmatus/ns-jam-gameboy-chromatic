@@ -30,37 +30,12 @@ static uint8_t random_percent(jam_game_t *g) {
     do { roll=random_byte(g); } while(roll>=200);
     return roll%100;
 }
+uint8_t jam_roll_percent(jam_game_t *g) JAM_BANKED {return random_percent(g);}
 static int16_t rim(uint8_t t) { return (t ? JAM_RIM_LEFT : JAM_RIM_RIGHT) * 4; }
 static int16_t near_player(const jam_game_t *g, uint8_t a, uint8_t b) {
     return distance(g->players[a].x,g->players[b].x) + distance(g->players[a].y,g->players[b].y);
 }
 static void message(jam_game_t *g, uint8_t m) { g->message=m; g->message_time=75; }
-static void inbound(jam_game_t *g, uint8_t t) {
-    uint8_t i;
-    static const uint8_t home_x[4]={100,132,188,236};
-    static const uint8_t away_x[4]={132,84,220,188};
-    for(i=0;i<4;i++) {
-        g->players[i].x = (t ? away_x[i] : home_x[i])*4;
-        g->players[i].y = (i & 1 ? 78 : 104)*4;
-        g->players[i].cooldown=0;
-        g->players[i].action=0;
-        g->players[i].block_time=0;
-        g->players[i].shot_time=g->players[i].windup=0;
-        g->players[i].stun=g->players[i].contact_cooldown=g->players[i].reach_time=0;
-        g->players[i].vx=g->players[i].vy=g->players[i].push_x=g->players[i].push_y=0;
-        g->players[i].heading=i<2 ? JAM_FACE_RIGHT : JAM_FACE_LEFT;
-        g->players[i].turbo=0;
-    }
-    g->owner=t ? 2 : 0;
-    g->mode=JAM_HELD;
-    g->height=0;
-    g->grace=120;
-    g->charge=0;
-    g->possession_time=0;
-    g->ball_x=g->players[g->owner].x+20;
-    g->ball_y=g->players[g->owner].y;
-    g->scored=0;
-}
 uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED {
     uint8_t i, used=0;
     if(!setup || setup->difficulty>JAM_WINNERS_STAY) return 0;
@@ -71,7 +46,7 @@ uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED {
     memset(g,0,sizeof(*g));
     g->setup=*setup;
     g->rng=0xace1;
-    inbound(g,0);
+    jam_tipoff(g);
     g->ball_x=g->players[0].x;
     g->ball_y=g->players[0].y;
     return 1;
@@ -85,7 +60,8 @@ uint8_t jam_move_speed(const jam_game_t *g, uint8_t who, uint8_t turbo) JAM_BANK
 }
 uint8_t jam_jump_height(const jam_game_t *g,uint8_t who) JAM_BANKED {
     const jam_player_t *p=&g->players[who];
-    uint8_t t=who==0 ? g->charge : p->windup;
+    uint8_t t=who==g->controlled ? g->charge : p->windup;
+    if(g->mode==JAM_DUNK && g->passer==(int8_t)who)return jam_dunk_jump(g);
     if(p->shot_time) {
         if(p->shot_time>18) {
             t=28-p->shot_time;
@@ -111,6 +87,8 @@ static void give_ball(jam_game_t *g,uint8_t p) {
     g->possession_time=0;
     g->players[p].cooldown=30;
     g->players[p].windup=0;
+    if(p<2 && p!=g->controlled){g->controlled=p;g->charge=0;g->block=0;}
+    g->inbound_pass=0;
 }
 void jam_pass(jam_game_t *g,uint8_t from,uint8_t to) JAM_BANKED {
     if(from>=4 || to>=4 || g->mode!=JAM_HELD || g->owner!=(int8_t)from || from==to || g->players[from].stun) return;
@@ -141,7 +119,9 @@ uint8_t jam_shot_chance(const jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANK
     int16_t depth=distance(g->players[who].y,JAM_RIM_Y*4)/2;
     int16_t chance;
     if((uint32_t)d*d+(uint32_t)depth*depth>88u*88u) {
-        chance=12+r->three_point*6-(d>100?(d-100)/8:0);
+        /* Specialists separate from average shooters; deep heaves cost range. */
+        chance=12+r->three_point*3+(r->three_point*r->three_point*3)/10;
+        if(d>100)chance-=(d-100)/3;
     } else chance=d<48 ? 60+r->dunk*3 : 52+r->dunk*2;
     if(charge>=18 && charge<=36) chance+=10;
     for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(who) && near_player(g,i,who)<64)
@@ -177,7 +157,7 @@ void jam_shoot(jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANKED {
     depth=distance(g->from_y,g->target_y)/2;
     g->shot_points=((uint32_t)d*d+(uint32_t)depth*depth)>88u*88u ? 3 : 2;
     g->block_attempts=0;
-    g->shot_good=(who>=2 ? random_percent(g) : random_byte(g)%100)<jam_shot_chance(g,who,charge);
+    g->shot_good=random_percent(g)<jam_shot_chance(g,who,charge);
     g->mode=JAM_SHOT;
     g->owner=-1;
     g->passer=who;
@@ -208,11 +188,11 @@ static int16_t in_front(const jam_game_t *g,uint8_t defender,uint8_t carrier) {
 static void steal(jam_game_t *g,uint8_t p) {
     int16_t chance,reach;
     if(g->mode!=JAM_HELD || g->owner<0 || team(p)==team(g->owner) || g->players[p].stun || g->players[p].cooldown) return;
-    if(p==0 ? g->possession_time<8 : g->grace) return;
+    if(p==g->controlled ? g->possession_time<8 : g->grace) return;
     reach=p>=2 ? 44+ratings(g,p)->steal*2 : 56+ratings(g,p)->steal*4+(int8_t)jam_body(g,p)->height_px-40;
     if(distance(g->players[p].x,g->players[g->owner].x)>=reach ||
        distance(g->players[p].y,g->players[g->owner].y)>=28+ratings(g,p)->steal*2) return;
-    g->players[p].cooldown=p==0 ? 30-ratings(g,p)->steal*2 : (p==1?65:120-g->setup.difficulty*30);
+    g->players[p].cooldown=p==g->controlled ? 30-ratings(g,p)->steal*2 : (p<2?65:120-g->setup.difficulty*30);
     g->players[p].reach_time=8;
     g->steal_attempts++;
     chance=28+ratings(g,p)->steal*5-ratings(g,g->owner)->passing*2-ratings(g,g->owner)->power;
@@ -228,7 +208,7 @@ static void steal(jam_game_t *g,uint8_t p) {
         give_ball(g,p);
         g->steals++;
         message(g,JAM_MSG_STEAL);
-    } else if(p==0)message(g,JAM_MSG_REACH);
+    } else if(p==g->controlled)message(g,JAM_MSG_REACH);
 }
 static void cpu(jam_game_t *g,uint8_t p) {
     jam_player_t *a=&g->players[p];
@@ -253,10 +233,13 @@ static void cpu(jam_game_t *g,uint8_t p) {
     } else if(g->owner==(int8_t)p) {
         tx=rim(ownteam)+(ownteam ? 72 : -72); ty=JAM_RIM_Y*4;
         if(a->windup) {
+            if(a->windup>=6 && ratings(g,p)->dunk>=6 && jam_try_dunk(g,p))return;
             if(++a->windup>=18) {jam_shoot(g,p,0);a->cooldown=65;}
             return;
         }
-        if(!a->cooldown && distance(a->x,rim(ownteam))<180+ratings(g,p)->three_point*24+difficulty_bonus(g,p)*24) {
+        if(!a->cooldown && distance(a->x,rim(ownteam))<180+ratings(g,p)->three_point*24+difficulty_bonus(g,p)*24 &&
+           (ratings(g,p)->dunk<7 || ratings(g,p)->three_point>5 ||
+            distance(a->x,rim(ownteam))<=jam_dunk_range(g,p)*4)) {
             /* Readable gather/rise before release, without a perfect-timing bonus. */
             a->windup=1; return;
         }
@@ -297,7 +280,7 @@ static void flight(jam_game_t *g) {
     phase=(uint16_t)g->flight*32/g->duration;
     if(g->mode==JAM_SHOT) g->height=interpolate(g->launch_height,JAM_RIM_HEIGHT+8,phase,32)+arc[phase]/3;
     else g->height=16+arc[phase]/6;
-    if(g->mode==JAM_PASS && g->flight>3) {
+    if(g->mode==JAM_PASS && !g->inbound_pass && g->flight>3) {
         for(i=0;i<4;i++) if(!g->players[i].stun && (int8_t)i!=g->passer && team(i)!=team(g->passer)) {
             int16_t reach=20+ratings(g,i)->steal*3-ratings(g,g->passer)->passing;
             int16_t chance=45+ratings(g,i)->steal*4-ratings(g,g->passer)->passing*3;
@@ -359,9 +342,7 @@ static void finish(jam_game_t *g) {
             message(g,g->shot_points==3 ? JAM_MSG_THREE : JAM_MSG_TWO);
         }
         if(t==JAM_FINISH_FRAMES) {
-            g->mode=JAM_RESET;
-            g->reset_time=24;
-            g->next_team=g->shot_team^1;
+            jam_begin_inbound(g,g->shot_team^1);
         }
     } else {
         // Touch the rim, kick back into the court, then fall for a rebound.
@@ -379,13 +360,14 @@ static void finish(jam_game_t *g) {
     }
 }
 void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
-    uint8_t i,j,pressed=(input^g->previous_input)&input,speed;
+    uint8_t i,j,pressed=(input^g->previous_input)&input,speed,human=g->controlled;
     int16_t d,best;
     g->previous_input=input;
     if(pressed&JAM_PAUSE) g->paused^=1;
     if(g->paused) return;
     g->tick++;
     if(g->message_time && !--g->message_time) g->message=JAM_MSG_PLAY;
+    if(g->mode==JAM_DUNK){jam_dunk_update(g,pressed);return;}
     if(g->grace) g->grace--;
     if(g->block) g->block--;
     for(i=0;i<4;i++) {
@@ -406,13 +388,15 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         if(g->mode!=JAM_HELD || g->owner!=(int8_t)i)g->players[i].windup=0;
     }
     if(g->mode==JAM_RESET) {
-        if(!--g->reset_time) inbound(g,g->next_team);
+        if(!--g->reset_time)jam_begin_inbound(g,g->next_team);
         return;
     }
-    if(!g->players[0].stun) {
-        jam_player_t *a=&g->players[0];
+    if(g->mode==JAM_INBOUND){jam_inbound_update(g,pressed);return;}
+    if(g->inbound_pass)jam_inbound_return(g);
+    if(!g->players[human].stun && !(g->inbound_pass && human==g->inbounder)) {
+        jam_player_t *a=&g->players[human];
         a->turbo=(input&JAM_TURBO)!=0;
-        speed=jam_move_speed(g,0,a->turbo);
+        speed=jam_move_speed(g,human,a->turbo);
         if((input&(JAM_MOVE_LEFT|JAM_MOVE_RIGHT)) && (input&(JAM_MOVE_UP|JAM_MOVE_DOWN))) speed=(speed*3)/4;
         if(g->charge)speed=2;
         if(input&JAM_MOVE_LEFT)a->vx-=speed;
@@ -423,31 +407,37 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         else if(a->vy)a->heading=a->vy<0?JAM_FACE_UP:JAM_FACE_DOWN;
         a->x+=a->vx;a->y+=a->vy;
         if(pressed&JAM_A) {
-            if(g->mode==JAM_HELD && g->owner==0)jam_pass(g,0,1);
-            else if(g->mode==JAM_HELD && g->owner==1)jam_pass(g,1,0);
+            if(g->mode==JAM_HELD && g->owner==(int8_t)human)jam_pass(g,human,human^1);
+            else if(g->mode==JAM_HELD && g->owner>=0 && g->owner<2)jam_pass(g,g->owner,human);
         }
         if((input&JAM_A) && g->mode==JAM_HELD && g->owner>=2) {
-            if(input&JAM_TURBO)jam_shove(g,0);else steal(g,0);
+            if(input&JAM_TURBO)jam_shove(g,human);else steal(g,human);
         }
-        if(g->mode==JAM_HELD && g->owner==0) {
+        if(g->mode==JAM_HELD && g->owner==(int8_t)human) {
+            if((pressed&JAM_B) && (input&JAM_TURBO) && jam_try_dunk(g,human))return;
             if(input&JAM_B) {
                 if(g->charge<42)g->charge++;
                 a->action=2;
             }
             if(g->charge && (!(input&JAM_B) || g->charge==42)) {
-                jam_shoot(g,0,g->charge);g->charge=0;
+                jam_shoot(g,human,g->charge);g->charge=0;
             }
         } else {
             g->charge=0;
-            if(pressed&JAM_B){g->block=8+ratings(g,0)->block;a->block_time=g->block;a->action=g->block;}
+            if(pressed&JAM_B){g->block=8+ratings(g,human)->block;a->block_time=g->block;a->action=g->block;}
         }
     } else g->charge=0;
-    for(i=1;i<4;i++)cpu(g,i);
-    for(i=0;i<3;i++)for(j=i+1;j<4;j++)jam_contact(g,i,j);
+    for(i=0;i<4;i++)if(i!=human && !(g->inbound_pass && i==g->inbounder)){
+        cpu(g,i);if(g->mode==JAM_DUNK)return;
+    }
+    for(i=0;i<3;i++)for(j=i+1;j<4;j++)
+        if(!(g->inbound_pass && (i==g->inbounder || j==g->inbounder)))jam_contact(g,i,j);
     for(i=0;i<4;i++) {
         jam_player_t *a=&g->players[i];
-        if(a->x<JAM_LEFT*4) a->x=JAM_LEFT*4;
-        if(a->x>JAM_RIGHT*4) a->x=JAM_RIGHT*4;
+        if(!(g->inbound_pass && i==g->inbounder)) {
+            if(a->x<JAM_LEFT*4)a->x=JAM_LEFT*4;
+            if(a->x>JAM_RIGHT*4)a->x=JAM_RIGHT*4;
+        }
         if(a->y<JAM_TOP*4) a->y=JAM_TOP*4;
         if(a->y>JAM_BOTTOM*4) a->y=JAM_BOTTOM*4;
     }
@@ -461,7 +451,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
             default:g->ball_x+=32;break;
         }
         g->height=7+((g->tick&15)<8 ? (g->tick&7) : 7-(g->tick&7));
-        i=g->owner==0 ? g->charge : g->players[g->owner].windup;
+        i=g->owner==(int8_t)g->controlled ? g->charge : g->players[g->owner].windup;
         if(i) {
             g->height=jam_body(g,g->owner)->height_px-13+(i<6 ? i : (i<12 ? (i-6)*2 : 13))+jam_jump_height(g,g->owner);
             g->ball_x=g->players[g->owner].x+(g->owner<2 ? 24 : -24);

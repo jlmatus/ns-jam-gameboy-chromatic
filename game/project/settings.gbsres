@@ -22,14 +22,14 @@
     "default-ui"
   ],
   "defaultSpritePaletteIds": [
-    "jam-home",
-    "jam-away",
+    "jam-player-matus",
+    "jam-player-magic",
+    "jam-player-bambi",
+    "jam-player-torres",
+    "jam-player-chompa",
+    "jam-player-meat",
     "jam-ball",
-    "jam-marker",
-    "jam-net",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite"
+    "jam-head-chompa"
   ],
   "defaultSpritePaletteId": "default-sprite",
   "defaultUIPaletteId": "default-ui",

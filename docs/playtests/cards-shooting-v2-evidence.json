@@ -1,0 +1,296 @@
+{
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+    "sizeBytes": 262144,
+    "sha256": "77da756f7a9150e532842a5e8393fa714c0cb17b486e72ef95fcd63aff97a60c",
+    "title": "NICASOURCEJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 3,
+    "declaredRomSizeBytes": 262144,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 171,
+    "computedHeaderChecksum": 171,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "source": {
+    "formatVersion": 1,
+    "projectPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/project.gbsproj",
+    "projectRevision": "6f29d8a756978caea68df99daf071ade480eda938d542c25ddcd8b1da8e372ce",
+    "revisionAlgorithm": "sha256-merkle-v2",
+    "sourceFingerprint": "e60999794ffdd9fc0aa7055adc965599b1e989c633b3be000e4eb533b7065ee0",
+    "compilerSha256": "78961636939edb44b0539ae26badfa07055be38124dbf08e3b84ec5608a2e627"
+  },
+  "recording": {
+    "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2",
+    "sessionId": "6d0cb09e281f42aea8bfdb1d85f3f54b",
+    "status": "recording",
+    "branchId": "branch-0001",
+    "frame": 120,
+    "totalFrames": 120,
+    "bytesUsed": 55217,
+    "limits": {
+      "sampleEveryFrames": 2,
+      "recentFrameCount": 64,
+      "maxBytes": 67108864,
+      "maxFrames": 36000,
+      "maxWallTimeMs": 900000
+    },
+    "eventCount": 63,
+    "eventDigest": "a9461600b33e014eece9638e65a1cfbc5c88d1e64067eb45b5507ef49373b373",
+    "branches": [
+      {
+        "branchId": "branch-0001",
+        "frame": 120
+      }
+    ]
+  },
+  "samples": {
+    "matus-0": {
+      "frame": 180,
+      "samples": [
+        {
+          "frame": 180,
+          "width": 160,
+          "height": 144,
+          "sha256": "a0a52cd73dd056ff8bde36ab20af3dbf10518855182b36847290c57cf5d8bcfc",
+          "rgbaSha256": "30c1b941f6e31c58e03e37ac0bb5f07162bea779a266c59fb6fe424dfb6def2e",
+          "sampledButtons": [
+            "select"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/a0a52cd73dd056ff8bde36ab20af3dbf10518855182b36847290c57cf5d8bcfc.png"
+        }
+      ]
+    },
+    "matus-1": {
+      "frame": 132,
+      "samples": [
+        {
+          "frame": 132,
+          "width": 160,
+          "height": 144,
+          "sha256": "c089efb176ba0af1748ad896e27a15a40830cc7af41ffa6693c94421d7fc8c92",
+          "rgbaSha256": "95e96170162b11da286529629b1f8b4572831b7ec6ed6ad5ee8bdd4f0bd4c085",
+          "sampledButtons": [
+            "select"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/c089efb176ba0af1748ad896e27a15a40830cc7af41ffa6693c94421d7fc8c92.png"
+        }
+      ]
+    },
+    "matus-2": {
+      "frame": 156,
+      "samples": [
+        {
+          "frame": 156,
+          "width": 160,
+          "height": 144,
+          "sha256": "1e03f0a148c4c4835d568827264ab019e20d9a96a0973f0a327f0106e654a53a",
+          "rgbaSha256": "a73370cfe58842e88b78f1774b3c1bf427f6cbcf4492d671a2b636917264cd73",
+          "sampledButtons": [
+            "select"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/1e03f0a148c4c4835d568827264ab019e20d9a96a0973f0a327f0106e654a53a.png"
+        }
+      ]
+    },
+    "magic-0": {
+      "frame": 204,
+      "samples": [
+        {
+          "frame": 204,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ]
+    },
+    "bambi-0": {
+      "frame": 228,
+      "samples": [
+        {
+          "frame": 228,
+          "width": 160,
+          "height": 144,
+          "sha256": "86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc",
+          "rgbaSha256": "41f51f7be0be59490c62f571b8ad163c5805bf76334a9da437ca10f7e4d4f197",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc.png"
+        }
+      ]
+    },
+    "torres-0": {
+      "frame": 252,
+      "samples": [
+        {
+          "frame": 252,
+          "width": 160,
+          "height": 144,
+          "sha256": "5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f",
+          "rgbaSha256": "cede454bab2825d3833130f0b3857cf037dd8ebef79a4b896356fdaf2b0ce433",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f.png"
+        }
+      ]
+    },
+    "chompa-0": {
+      "frame": 276,
+      "samples": [
+        {
+          "frame": 276,
+          "width": 160,
+          "height": 144,
+          "sha256": "6dbc029e546c2fdb7e0539499fe6525536458c328d2dcbb1f6b1035eabfa73f9",
+          "rgbaSha256": "ec753c0e1991ba92976aed16f61146eee0a5994bccc914ff7b17785846e91880",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/6dbc029e546c2fdb7e0539499fe6525536458c328d2dcbb1f6b1035eabfa73f9.png"
+        }
+      ]
+    },
+    "meat-0": {
+      "frame": 300,
+      "samples": [
+        {
+          "frame": 300,
+          "width": 160,
+          "height": 144,
+          "sha256": "258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9",
+          "rgbaSha256": "8f81b11c21d2a3a1789aef413a067a3d8b961b5c43c2d9689b5a1ba43837bdbe",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9.png"
+        }
+      ]
+    },
+    "magic-gather": {
+      "frame": 766,
+      "samples": [
+        {
+          "frame": 744,
+          "width": 160,
+          "height": 144,
+          "sha256": "ca843a4dc88037c42f510b7faaa206c5b2b401ba7a5c97cede897c8ff707aee9",
+          "rgbaSha256": "aac3aaafb648bf3d5a291e9d2475b49432e81373869e4405a05a07d030e2fc73",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/ca843a4dc88037c42f510b7faaa206c5b2b401ba7a5c97cede897c8ff707aee9.png"
+        },
+        {
+          "frame": 766,
+          "width": 160,
+          "height": 144,
+          "sha256": "4eb7c085b3ac574717ec17ecd6193c5576d0a3a7654ccde6e989c94428771d94",
+          "rgbaSha256": "b24a41b2b321124b95d9f3530f98af3dba4494422b6aa08e5e1e444dcc890275",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/4eb7c085b3ac574717ec17ecd6193c5576d0a3a7654ccde6e989c94428771d94.png"
+        }
+      ]
+    },
+    "magic-release": {
+      "frame": 778,
+      "samples": [
+        {
+          "frame": 772,
+          "width": 160,
+          "height": 144,
+          "sha256": "eaced82765077f7620671bc9b38e8bc9596153e64c7007e60bac83464e54f5e6",
+          "rgbaSha256": "d5e4d72cee61659e05a82ba8fdcee9bb4932e5a67acfbf56d04d253fc58b21a0",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/eaced82765077f7620671bc9b38e8bc9596153e64c7007e60bac83464e54f5e6.png"
+        },
+        {
+          "frame": 778,
+          "width": 160,
+          "height": 144,
+          "sha256": "18121677049aed315da3ae86e56bfa748b7a32f1c2ee30cc2a821b7efff3503a",
+          "rgbaSha256": "6fcad9350aaa9ff235b77520e94fc4fbc51c6b2bf44e14d33958f2e09380848e",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/18121677049aed315da3ae86e56bfa748b7a32f1c2ee30cc2a821b7efff3503a.png"
+        }
+      ]
+    },
+    "magic-basket-inbound": {
+      "frame": 988,
+      "samples": [
+        {
+          "frame": 928,
+          "width": 160,
+          "height": 144,
+          "sha256": "ba96f81c140b50ae10294c47d383eef52b2d6dc7ee6d27cd04529e2837e1d66f",
+          "rgbaSha256": "728382560ac845dfb0aa482907ebcbe05dda199b942930b963b29667f6815f15",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/ba96f81c140b50ae10294c47d383eef52b2d6dc7ee6d27cd04529e2837e1d66f.png"
+        },
+        {
+          "frame": 988,
+          "width": 160,
+          "height": 144,
+          "sha256": "332949fe5ce62798b749a5df250a71b65c15b58797fdebdc597b8cb1e8988d7c",
+          "rgbaSha256": "9daa8ef5603f15fb480ac3afa47fb0e59bd59328b16a97a5eae12c32c2c01e6d",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/frames/332949fe5ce62798b749a5df250a71b65c15b58797fdebdc597b8cb1e8988d7c.png"
+        }
+      ]
+    }
+  },
+  "clip": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2/magic-three-inbound.gif",
+    "sha256": "00db68105c58f505a22bbcabc84fa411f1f89ea2a84fca5517d09e4b861f144b",
+    "frameCount": 128,
+    "sourceFrameCount": 134,
+    "startFrame": 722,
+    "endFrame": 988,
+    "durationMs": 4470,
+    "branchId": "branch-0001",
+    "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/cards-shooting-v2",
+    "width": 160,
+    "height": 144,
+    "recordingFinalFrame": 988,
+    "lastEvidenceFrame": 988,
+    "partialRecording": false
+  },
+  "correction": "Initial stop-reason text incorrectly calls the MAGIC attempt a miss/rebound. Frame 778 shot_good=1, frame 988 score 3:0, mode JAM_INBOUND. The native sequence verifies a made three and inbound, not a missed attempt.",
+  "web": {
+    "romSha256": "aa8e2e23d7244fdab2429e915660b2da8446e6417ec8dfde0e91a5b4513f7258",
+    "sourceRevision": "3273d520d1c2041a3dcbd609b955fc65f5407974814c9d14d638de0c46b12ea8"
+  },
+  "previousBrowserState": {
+    "id": "201b4b726e72164fa30ea7a6966ed46eeaabeece2095304a4bf6890bd0b36157",
+    "frame": 78537,
+    "romSha256": "f757c724d48d58138c35b78ead6136b832d81a186e49dcab8b40631ee5019027"
+  },
+  "shotVerification": {
+    "samplesPerPlayer": 65534,
+    "makes": {
+      "MAGIC": 28815,
+      "CHOMPA": 42611,
+      "MATUS": 53744
+    },
+    "timedOpenPercent": {
+      "MAGIC": 44,
+      "CHOMPA": 65,
+      "MATUS": 82
+    }
+  }
+}

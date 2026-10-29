@@ -1,0 +1,360 @@
+{
+  "romSha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+  "before": [
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4096,
+      "length": 256,
+      "address": "0x9000",
+      "hex": "fffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00fffffffffffffffffffff7efefffff00ffffffffffffffffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffffffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00fffffffffffffffffffff7efefffff00ffffffffffffffffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffff",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4352,
+      "length": 256,
+      "address": "0x9100",
+      "hex": "ffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00ffffffffffffffffffffffffffffff01fdfcfcfdfdfdfdfffffff7efeffffff0ff7f7f8f8ff7f7ffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffffffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffffff7efefffff00ffffffffffffff",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4608,
+      "length": 256,
+      "address": "0x9200",
+      "hex": "fffffffdfbfbffff07fffefef9f9e7e7ffffffffffffffffc0df1f1fdfdfdfdfffffffffffffffff0000fffffffffffffdfdfdfdfdfdfdfd0101fdfdfdfdfdfdf7f7f7f7f7f7f7f7f0f0f7f7f7f7f7f7e7e7e7e7e7e7e7e70707e7e7e7e7e7e7dfdfdfdfdfdfdfdfc0c0dfdfdfdfdfdffffefffeffffffffffffffffffffffffff00ff00ff00ff00ff00ff00ff00ff00fd01fd01fd01fd01fd01fd01fd01fd01f7f0f7f0f7f0f7f0f7f0f7f0f7f0f7f0ff00ff00ff00ff00ff00ff00ff00f708ff00ff00ff00ff00ff00ff00ff00fd02ff00ff00ff00ff00ff00ff00ff007f80ff00ff00ff00ff00ff00ff00ff00df20e707e707e707e707e707e707e707e707",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4864,
+      "length": 256,
+      "address": "0x9300",
+      "hex": "dfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfffffffffffffffffffffffffffffffffffc0ffc0ffc0ffc0ffc0ffc0ffe0ffe0f000f700f700fb00fb00fb00fb00fb000101fd01fd01fd01fd01ff03fe02ff03f0f0fffcf7f3f7f0f7f0f7f0777087800000ff07fffcc0c0ff80ffc0ff7cff070000ffffff010000ff00ff00ff01ffff0000ff00f7f83f38ff08fe38fff0ff000000ff00ff00ff00ff007f00ff00ff000000ff00ff00ff00ff00ff009f00ff000000ff00ff00ff00ff00ff00ff00bf000000ff00ff00ff00ff00ff00ff00ff000000ff00fd02ff00ff00fd02ff00ff000000ff007f80ff00ff007f80ff00ff000000fd00fd00fe00fe00fe00fe00fe00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5120,
+      "length": 256,
+      "address": "0x9400",
+      "hex": "0000ff00df20ff00ff00df20ff00ff000000ff00f708ff00ff00f708ff00ff000000ff00ff00ff00ff00ff00ff00f7000000ff00fd02ff00ff00fd02ef00ff000000ff00ff00ff00ff00ef00ff00ff000000ff00ff07fc0ccf08ff0cff07ff000000ff7fffc00000ff00ff00ffc0ff7f0000fcf0ff1f0303ff00ff03ff1ffff0e707ff3fe7c7e787e787e78766066101dfdfdfdfdfdfdfdfdfdfffff3f3fffffffe0ffe0ffe0ffe0fff0fff0fff0fff0fb00fd00fd00fd00fd00fd00fd00fe00ff02ff0cff0cff0cff0cff0cff0c7f0cf700ff00ff00ff00ff00ff00ff00ff00f708ff00ff00f708ff00ff00f708ff00fe00ff00ff00ff00ff00ff00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5376,
+      "length": 256,
+      "address": "0x9500",
+      "hex": "ff00f700ff00ff00ff00ff00ff00ff00ff00ff007f00fb00ff00ff00ff00ff00fd02ff00ff00fd02df00f300fd02ff00ff00ff00ff00ff00ff00ff007f00ef007f80ff00ff007f80ff00ff007f80ff00ff007f007f007f007f007f007f009f00df20ff00ff00df20ff00ff00df20ff00ff00ff00ff00ff00ff00ff00fe00f300ff00ff00ff00ff00fb00ef00ff00ff00ff00ff00fb007f00ff00ff00ff00ff00f9003f00ff00ff00ff00ff00ff00ff00fd02ff00ff00fd02ff00ff00fd02ff006700bf00bf003f80bf00bf003f80df00ff3fff1fff1fff1fff1fff1fff1fff1ffff0fff0fff8fff8fff8fff8fff8fff8fe00fe00fe00fe00fe00ff00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5632,
+      "length": 256,
+      "address": "0x9600",
+      "hex": "7f107f107f107f107f10bf10bf20bf20fb00ff00ff00ff00ff00ff00ff00ff00ff007f00e700fd00ff00ff00ff00ff00ff00ff00ff00ff003f00df00f700f9009f009f009f009f009f00ef00ef00ef00ff00ff00ff00ff00ff00ff00f900f700ff00f608fd00f700b7087f00ff00f708df007f00ff00ff00ff00ff00ff00ff00df005f80df00df005f80e700e7006780ff0fff0fff0fff0fff0fff0fff07ff07fffefffefffefffefffefffeffffffffbf20bf20bf20a020e03fc07fc05fc05fff00ff00ff00000000ff00ff00ff00ffff00ff00f708000000ff00ff00ff00ffff00ff00ff00020001f803c001dc01bcff00ff00ff000700f800fe00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5888,
+      "length": 256,
+      "address": "0x9700",
+      "hex": "ff00ff00ff00ff00ff003f00bf00cf00ff00ff00fd02ff00ff00fd02ff00ff00bf00cf00f700fb00fd00fe00ff00ff00ff00ff00ff00ff00ff007f00df00ef00ff00ff007f80ff00ff007f80ff00ff00ff00ff00ff00ff00ff00ff00fe00f800ff00ff00ff00ff00f000c3001f007f00ef00ef00ef0080001700f700f700f700ff00ff00ff000100fc00ff00ff00ff00ff00ff00df20ff000f00c120f800ff00ff00ff00ff00ff00ff00ff007f000f00ff00ff00ff00fe00fd00fb00fb00e700ef00df003f00ff00ff00ff00ff00ff00ff00ff00f708ff00ff00f708ff00ff00ff00ff00ff00fe00fe00f800fb00f700ff00ff00fd020000003f007f803f803f",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4096,
+      "length": 256,
+      "address": "0x9000",
+      "hex": "ff00ff00ff000000001f008700f700fbe700e700678003001be01be003f803f8ff07ff07ff07ff07ff07ff01ff01ff01ff00ff00ff00ff00ff81ff81ff81ff81c05fe05fe05fe05fe08fe08fe08ff08f00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00fc00fc00fb00fb00fb00f7013c017c01fc01fc00fe00fe00fe00fec700f700fb00fb00fd00fd00fd00fe00fd02ff00ff00fd02ff00ff00fd027f00f300fd00fd00fe00ff00ff00ff00ff00ff00ff00ff00ff009f009f00ef00ef00ff00ff00ff00ff00fe00fe00f800f900f300c7008f003f007f00ff00ff00ff00f700fb00fb00fb00fb00fb00fb00fc00c700f300f900fc00fe00ff00ff00ff00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4352,
+      "length": 256,
+      "address": "0x9100",
+      "hex": "ff00ff00ff007f003f00bf009f00df00ff00ff00ff00ff00ff00ff00fc00fc00df00bf00bf007f007f007f00ff00ff00c700cf00bf00bf007f007f007f00ff00803f803f803f803fc01fc01fc01fc01f00f800fc00ff00ff00ff00ff00ff00ff00ff00ff007f007f00bf00bf00bf00df03f805f805f805f801fc01fc01fc02fcff01ff01ff01ff01ff00ff00ff00ff00ff81ff81ffc2ffc2ffc2ffc2ffc2ffc2f08ff08ff003f003f003fc03fc03fc0300f700f700f700e700ef00ef00ef00ef00fe00fe00ff00ff00ff00ff00ff00ffff00ff003f003f003f003f003f00df00fe00fe00fe00fe00ff00ff00ff00ff007f007d027f003f00bd02bf00bf00bd02",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4608,
+      "length": 256,
+      "address": "0x9200",
+      "hex": "f700f700fb00fb00fc00fc00fc00fc00f100f700f700f700f700f700f700f700fc00fc00fc00fc00fc00ff00ff00ff00ff00ff00ff00ff00ff007f007f007f00cf00ef00ef00ef00ef00ef00ef00ef00fb00fb00fc00fc00fb00fb00fb00fb00fe00fe00fe00f800f900f900f900f900c01fc01fe00fe00fe00fe00fe00ff00300df00df00df00c700e700e700e700e702fc02fc00fe00fe00fe01fe01fe01feff00ff00ff00ff00ff003f003f003f00fff2fff4fff4fff4fff4fff4fffcfffcfc01fc01fc01fe01fe01fe01fe00fe0000ef00ef00ef00ef00ef00ef00ef00e71fc01fc01fc01fc01fc02fc00fe00fe0bf00bf00bd02bf00bf00bd02bf003f00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 4864,
+      "length": 256,
+      "address": "0x9300",
+      "hex": "ff00ff00ff00ff00ff00fc00ff00ff007f007f007f007f007f007f807f007f00f100f900f800fe00fe00ff00ff00ff00ff00ff00ff00ff007f003f008f00c7007f007f007f00bf00bf00bf00bf00bf00ff00ff00df20ff00ff00df20ff00ff00ff00ff00ff00ff00fe00fc00f900f300cf00df009f00bf003f007f00ff00ff00ff00ff00ff00ff00ff007f00bf00bf00f900f900f900f900f900f900f900f800f003f003f003f003f003fc01fc01fc0100e700e700e700e700e700e700e700c73f003f003f00df00df00df001fc01fc0ff4fff3fff3fff3fff3fff3fff37ff37fffcfffcfffcfffcfffcfffcfffcfffc00ff00ff00ff00ff007f007f007f807f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5120,
+      "length": 256,
+      "address": "0x9400",
+      "hex": "00f700f700f700f700fb00fb00fb00fc0fe00fe017e017e007f007f007f007f0fe00fe00fe00fe00fd00fd00fd00fb007d027f007f007d02ff00ff00fd02ff00ff00fc00fc00fb00fc00fb00f700f7007f00ff00ff007f80ff00ff007f80ff00f300f800fe00ff00ff00ff00ff00ff00ff007f001f00c300f000ff00ff00ff00ff00ff00ff00ff001f008000ff00ff00bf00df00df00df00dc000100df00e700df20ff00f800c1200f00ff00df20ff00c7000f007f00ff00ff00ff00ff00ff00bf00df00df00e700fb00fd00fe00fe00ff00ff00ff00ff007f007f007f00bf00fc01fc01fe00fc02fe00fe00fc02fe0000df00df00df00df00bf00bf00bf007f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5376,
+      "length": 256,
+      "address": "0x9500",
+      "hex": "1fc02fc02fc02fc00fe00fe00fe017e0ff37ff37ff37ff37ff33ff33ff33ff33fffcfffcfffefffefffefffefffefffe807f807f801f801f801fe01fe01fe01f00fc00ff00ff00ff00ff00ff00ff00ff00ff007f003f00bf00df00c300f900fe09f009f001f801f801f800f800f80600fb00f700c700cf00bf003f00ff00ff00ff00ff00ff00ff00fe00fd00f300ef00ef009f009f007f00ff00ff00ff00ff00e700e700e700e700e700fb00fb00fb003f00df00f700f900fe00ff00ff00ff00ff00f708ff00ff00f7087f00bf00c708bf00cf00c700f700fb00f800fe00ff00ff00fd02ff00ff00fd027f003f00c000007f007c0078007b00770007001f801f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5632,
+      "length": 256,
+      "address": "0x9600",
+      "hex": "007f00ff00ff00ff00ff00ff00ff00ff17e017e007f007f007f009f009f009f0ff33ff03ff01ff01ff01ff01ff01ff01ff80ff80ff80ff80ff80ff80ffc0ffc0e000ef00ef00f700f700f700f700f700ff00ff00ff00ff00ff00ff00ff00f900ff00ff00fe00fb00f700bf007f00ff00ef00bf007f00ff00ff00ff00ff00ff00fb00fb00fb00fd00fd00fd00fd00fd00fb00fe00f708ff00ff00f708ff00ff00ff007f00bf00ef00f300fe00ff00ff00ff00ff00ff00ff00ff00ff00ef00fb008000ff00ff00ff00ff00ff00ff00ff000100f900f900fe00fe00fe00fe00fe00ffc0ffc0ffc0ffc0ffe0ffe0ffe0ffe0f700fb00fb00fb00f800ff00ff00ff00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 597,
+      "region": "vram",
+      "offset": 5888,
+      "length": 256,
+      "address": "0x9700",
+      "hex": "ff00ff00ff00ff000000ff00ff00ff00f708ff00ff00f7080000ff00ff00ff00fd02ff00ff00fd020000ff00ff00ff00ff00ff00fd00df000000ff00ff00ff00ef003f00ff00ff000000ff00ff00ff007f80ff00ff007f800000ff00ff00ff00fd00fe00fe00fe000000ff00ff00ff00df20ff00ff00df200000ff00ff00ff007f00df00fb00ff000000ff00ff00ff00ff00ff00ff003f000000ff00ff00ff00fe00ff00ff00ff000000ff00ff00ff00ff007f007f007f007f00ff00ff00ff00ff3fff3fff3fff3fff1fff1fff1fff1f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "bank": 1
+    }
+  ],
+  "after": [
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4096,
+      "length": 256,
+      "address": "0x9000",
+      "hex": "fffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00fffffffffffffffffffff7efefffff00ffffffffffffffffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffffffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00fffffffffffffffffffff7efefffff00ffffffffffffffffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffff",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4352,
+      "length": 256,
+      "address": "0x9100",
+      "hex": "ffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffdfbfbffff00ffffffffffffffffffffffffffffff00fffffffffffffffffffffbf7f7ffff00ffffffffffffffffffffffffffffff01fdfcfcfdfdfdfdfffffff7efeffffff0ff7f7f8f8ff7f7ffffffefdfdfffff00ffffffffffffffffffffdfbfbfffff00ffffffffffffffffffffbf7f7fffff00fffffffffffffffffffffffefeffff00ffffffffffffffffffff7fffffffff00fffffffffffffffffffffefdfdffff00fffffffffffffffffffff7efefffff00ffffffffffffff",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4608,
+      "length": 256,
+      "address": "0x9200",
+      "hex": "fffffffdfbfbffff07fffefef9f9e7e7ffffffffffffffffc0df1f1fdfdfdfdfffffffffffffffff0000fffffffffffffdfdfdfdfdfdfdfd0101fdfdfdfdfdfdf7f7f7f7f7f7f7f7f0f0f7f7f7f7f7f7e7e7e7e7e7e7e7e70707e7e7e7e7e7e7dfdfdfdfdfdfdfdfc0c0dfdfdfdfdfdffffefffeffffffffffffffffffffffffff00ff00ff00ff00ff00ff00ff00ff00fd01fd01fd01fd01fd01fd01fd01fd01f7f0f7f0f7f0f7f0f7f0f7f0f7f0f7f0ff00ff00ff00ff00ff00ff00ff00f708ff00ff00ff00ff00ff00ff00ff00fd02ff00ff00ff00ff00ff00ff00ff007f80ff00ff00ff00ff00ff00ff00ff00df20e707e707e707e707e707e707e707e707",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4864,
+      "length": 256,
+      "address": "0x9300",
+      "hex": "dfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfffffffffffffffffffffffffffffffffffc0ffc0ffc0ffc0ffc0ffc0ffe0ffe0f000f700f700fb00fb00fb00fb00fb000101fd01fd01fd01fd01ff03fe02ff03f0f0fffcf7f3f7f0f7f0f7f0777087800000ff07fffcc0c0ff80ffc0ff7cff070000ffffff010000ff00ff00ff01ffff0000ff00f7f83f38ff08fe38fff0ff000000ff00ff00ff00ff007f00ff00ff000000ff00ff00ff00ff00ff009f00ff000000ff00ff00ff00ff00ff00ff00bf000000ff00ff00ff00ff00ff00ff00ff000000ff00fd02ff00ff00fd02ff00ff000000ff007f80ff00ff007f80ff00ff000000fd00fd00fe00fe00fe00fe00fe00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5120,
+      "length": 256,
+      "address": "0x9400",
+      "hex": "0000ff00df20ff00ff00df20ff00ff000000ff00f708ff00ff00f708ff00ff000000ff00ff00ff00ff00ff00ff00f7000000ff00fd02ff00ff00fd02ef00ff000000ff00ff00ff00ff00ef00ff00ff000000ff00ff07fc0ccf08ff0cff07ff000000ff7fffc00000ff00ff00ffc0ff7f0000fcf0ff1f0303ff00ff03ff1ffff0e707ff3fe7c7e787e787e78766066101dfdfdfdfdfdfdfdfdfdfffff3f3fffffffe0ffe0ffe0ffe0fff0fff0fff0fff0fb00fd00fd00fd00fd00fd00fd00fe00ff02ff0cff0cff0cff0cff0cff0c7f0cf700ff00ff00ff00ff00ff00ff00ff00f708ff00ff00f708ff00ff00f708ff00fe00ff00ff00ff00ff00ff00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5376,
+      "length": 256,
+      "address": "0x9500",
+      "hex": "ff00f700ff00ff00ff00ff00ff00ff00ff00ff007f00fb00ff00ff00ff00ff00fd02ff00ff00fd02df00f300fd02ff00ff00ff00ff00ff00ff00ff007f00ef007f80ff00ff007f80ff00ff007f80ff00ff007f007f007f007f007f007f009f00df20ff00ff00df20ff00ff00df20ff00ff00ff00ff00ff00ff00ff00fe00f300ff00ff00ff00ff00fb00ef00ff00ff00ff00ff00fb007f00ff00ff00ff00ff00f9003f00ff00ff00ff00ff00ff00ff00fd02ff00ff00fd02ff00ff00fd02ff006700bf00bf003f80bf00bf003f80df00ff3fff1fff1fff1fff1fff1fff1fff1ffff0fff0fff8fff8fff8fff8fff8fff8fe00fe00fe00fe00fe00ff00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5632,
+      "length": 256,
+      "address": "0x9600",
+      "hex": "7f107f107f107f107f10bf10bf20bf20fb00ff00ff00ff00ff00ff00ff00ff00ff007f00e700fd00ff00ff00ff00ff00ff00ff00ff00ff003f00df00f700f9009f009f009f009f009f00ef00ef00ef00ff00ff00ff00ff00ff00ff00f900f700ff00f608fd00f700b7087f00ff00f708df007f00ff00ff00ff00ff00ff00ff00df005f80df00df005f80e700e7006780ff0fff0fff0fff0fff0fff0fff07ff07fffefffefffefffefffefffeffffffffbf20bf20bf20a020e03fc07fc05fc05fff00ff00ff00000000ff00ff00ff00ffff00ff00f708000000ff00ff00ff00ffff00ff00ff00020001f803c001dc01bcff00ff00ff000700f800fe00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5888,
+      "length": 256,
+      "address": "0x9700",
+      "hex": "ff00ff00ff00ff00ff003f00bf00cf00ff00ff00fd02ff00ff00fd02ff00ff00bf00cf00f700fb00fd00fe00ff00ff00ff00ff00ff00ff00ff007f00df00ef00ff00ff007f80ff00ff007f80ff00ff00ff00ff00ff00ff00ff00ff00fe00f800ff00ff00ff00ff00f000c3001f007f00ef00ef00ef0080001700f700f700f700ff00ff00ff000100fc00ff00ff00ff00ff00ff00df20ff000f00c120f800ff00ff00ff00ff00ff00ff00ff007f000f00ff00ff00ff00fe00fd00fb00fb00e700ef00df003f00ff00ff00ff00ff00ff00ff00ff00f708ff00ff00f708ff00ff00ff00ff00ff00fe00fe00f800fb00f700ff00ff00fd020000003f007f803f803f",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4096,
+      "length": 256,
+      "address": "0x9000",
+      "hex": "ff00ff00ff000000001f008700f700fbe700e700678003001be01be003f803f8ff07ff07ff07ff07ff07ff01ff01ff01ff00ff00ff00ff00ff81ff81ff81ff81c05fe05fe05fe05fe08fe08fe08ff08f00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00fc00fc00fb00fb00fb00f7013c017c01fc01fc00fe00fe00fe00fec700f700fb00fb00fd00fd00fd00fe00fd02ff00ff00fd02ff00ff00fd027f00f300fd00fd00fe00ff00ff00ff00ff00ff00ff00ff00ff009f009f00ef00ef00ff00ff00ff00ff00fe00fe00f800f900f300c7008f003f007f00ff00ff00ff00f700fb00fb00fb00fb00fb00fb00fc00c700f300f900fc00fe00ff00ff00ff00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4352,
+      "length": 256,
+      "address": "0x9100",
+      "hex": "ff00ff00ff007f003f00bf009f00df00ff00ff00ff00ff00ff00ff00fc00fc00df00bf00bf007f007f007f00ff00ff00c700cf00bf00bf007f007f007f00ff00803f803f803f803fc01fc01fc01fc01f00f800fc00ff00ff00ff00ff00ff00ff00ff00ff007f007f00bf00bf00bf00df03f805f805f805f801fc01fc01fc02fcff01ff01ff01ff01ff00ff00ff00ff00ff81ff81ffc2ffc2ffc2ffc2ffc2ffc2f08ff08ff003f003f003fc03fc03fc0300f700f700f700e700ef00ef00ef00ef00fe00fe00ff00ff00ff00ff00ff00ffff00ff003f003f003f003f003f00df00fe00fe00fe00fe00ff00ff00ff00ff007f007d027f003f00bd02bf00bf00bd02",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4608,
+      "length": 256,
+      "address": "0x9200",
+      "hex": "f700f700fb00fb00fc00fc00fc00fc00f100f700f700f700f700f700f700f700fc00fc00fc00fc00fc00ff00ff00ff00ff00ff00ff00ff00ff007f007f007f00cf00ef00ef00ef00ef00ef00ef00ef00fb00fb00fc00fc00fb00fb00fb00fb00fe00fe00fe00f800f900f900f900f900c01fc01fe00fe00fe00fe00fe00ff00300df00df00df00c700e700e700e700e702fc02fc00fe00fe00fe01fe01fe01feff00ff00ff00ff00ff003f003f003f00fff2fff4fff4fff4fff4fff4fffcfffcfc01fc01fc01fe01fe01fe01fe00fe0000ef00ef00ef00ef00ef00ef00ef00e71fc01fc01fc01fc01fc02fc00fe00fe0bf00bf00bd02bf00bf00bd02bf003f00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 4864,
+      "length": 256,
+      "address": "0x9300",
+      "hex": "ff00ff00ff00ff00ff00fc00ff00ff007f007f007f007f007f007f807f007f00f100f900f800fe00fe00ff00ff00ff00ff00ff00ff00ff007f003f008f00c7007f007f007f00bf00bf00bf00bf00bf00ff00ff00df20ff00ff00df20ff00ff00ff00ff00ff00ff00fe00fc00f900f300cf00df009f00bf003f007f00ff00ff00ff00ff00ff00ff00ff007f00bf00bf00f900f900f900f900f900f900f900f800f003f003f003f003f003fc01fc01fc0100e700e700e700e700e700e700e700c73f003f003f00df00df00df001fc01fc0ff4fff3fff3fff3fff3fff3fff37ff37fffcfffcfffcfffcfffcfffcfffcfffc00ff00ff00ff00ff007f007f007f807f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5120,
+      "length": 256,
+      "address": "0x9400",
+      "hex": "00f700f700f700f700fb00fb00fb00fc0fe00fe017e017e007f007f007f007f0fe00fe00fe00fe00fd00fd00fd00fb007d027f007f007d02ff00ff00fd02ff00ff00fc00fc00fb00fc00fb00f700f7007f00ff00ff007f80ff00ff007f80ff00f300f800fe00ff00ff00ff00ff00ff00ff007f001f00c300f000ff00ff00ff00ff00ff00ff00ff001f008000ff00ff00bf00df00df00df00dc000100df00e700df20ff00f800c1200f00ff00df20ff00c7000f007f00ff00ff00ff00ff00ff00bf00df00df00e700fb00fd00fe00fe00ff00ff00ff00ff007f007f007f00bf00fc01fc01fe00fc02fe00fe00fc02fe0000df00df00df00df00bf00bf00bf007f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5376,
+      "length": 256,
+      "address": "0x9500",
+      "hex": "1fc02fc02fc02fc00fe00fe00fe017e0ff37ff37ff37ff37ff33ff33ff33ff33fffcfffcfffefffefffefffefffefffe807f807f801f801f801fe01fe01fe01f00fc00ff00ff00ff00ff00ff00ff00ff00ff007f003f00bf00df00c300f900fe09f009f001f801f801f800f800f80600fb00f700c700cf00bf003f00ff00ff00ff00ff00ff00ff00fe00fd00f300ef00ef009f009f007f00ff00ff00ff00ff00e700e700e700e700e700fb00fb00fb003f00df00f700f900fe00ff00ff00ff00ff00f708ff00ff00f7087f00bf00c708bf00cf00c700f700fb00f800fe00ff00ff00fd02ff00ff00fd027f003f00c000007f007c0078007b00770007001f801f",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5632,
+      "length": 256,
+      "address": "0x9600",
+      "hex": "007f00ff00ff00ff00ff00ff00ff00ff17e017e007f007f007f009f009f009f0ff33ff03ff01ff01ff01ff01ff01ff01ff80ff80ff80ff80ff80ff80ffc0ffc0e000ef00ef00f700f700f700f700f700ff00ff00ff00ff00ff00ff00ff00f900ff00ff00fe00fb00f700bf007f00ff00ef00bf007f00ff00ff00ff00ff00ff00fb00fb00fb00fd00fd00fd00fd00fd00fb00fe00f708ff00ff00f708ff00ff00ff007f00bf00ef00f300fe00ff00ff00ff00ff00ff00ff00ff00ff00ef00fb008000ff00ff00ff00ff00ff00ff00ff000100f900f900fe00fe00fe00fe00fe00ffc0ffc0ffc0ffc0ffe0ffe0ffe0ffe0f700fb00fb00fb00f800ff00ff00ff00",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 801,
+      "region": "vram",
+      "offset": 5888,
+      "length": 256,
+      "address": "0x9700",
+      "hex": "ff00ff00ff00ff000000ff00ff00ff00f708ff00ff00f7080000ff00ff00ff00fd02ff00ff00fd020000ff00ff00ff00ff00ff00fd00df000000ff00ff00ff00ef003f00ff00ff000000ff00ff00ff007f80ff00ff007f800000ff00ff00ff00fd00fe00fe00fe000000ff00ff00ff00df20ff00ff00df200000ff00ff00ff007f00df00fb00ff000000ff00ff00ff00ff00ff00ff003f000000ff00ff00ff00fe00ff00ff00ff000000ff00ff00ff00ff007f007f007f007f00ff00ff00ff00ff3fff3fff3fff3fff1fff1fff1fff1f000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "bank": 1
+    }
+  ],
+  "exactCourtTilesRestored": true,
+  "opaqueHUD": [
+    {
+      "view": "vram",
+      "frame": 657,
+      "region": "vram",
+      "offset": 3072,
+      "length": 16,
+      "address": "0x8c00",
+      "hex": "ff00ff00ff00ff00ff00ff00ff00ff00",
+      "bank": 0
+    },
+    {
+      "view": "vram",
+      "frame": 657,
+      "region": "vram",
+      "offset": 6656,
+      "length": 20,
+      "address": "0x9a00",
+      "hex": "8585858585858585858585858585858585858585",
+      "bank": 1
+    },
+    {
+      "view": "vram",
+      "frame": 657,
+      "region": "vram",
+      "offset": 7680,
+      "length": 20,
+      "address": "0x9e00",
+      "hex": "8585858585858585858585858585858585858585",
+      "bank": 1
+    }
+  ]
+}

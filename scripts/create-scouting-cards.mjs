@@ -28,6 +28,11 @@ function text(s,x,y,str,scale=1){
 }
 const centered=(s,y,str,scale=1)=>text(s,Math.floor((160-str.length*8*scale)/16)*8,y,str,scale);
 function meter(s,x,y,value){for(let i=0;i<10;i++)for(let dy=0;dy<5;dy++)for(let dx=0;dx<5;dx++)put(s,x+i*6+dx,y+dy,dy===0||dy===4||dx===0||dx===4?3:(i<value?1:0));}
+function frame(s,portrait){
+  // Quiet courtside bands; detail stays outside the face and rating labels.
+  for(let x=8;x<152;x++){put(s,x,40,2);put(s,x,120,2);}
+  if(portrait)for(let y=48;y<112;y++){put(s,7,y,1);put(s,72,y,1);}
+}
 function tile(s,tx,ty){const bytes=[];for(let y=0;y<8;y++){let a=0,b=0;for(let x=0;x<8;x++){const c=s.pixels[ty*8+y][tx*8+x];a|=(c&1)<<(7-x);b|=(c>>1)<<(7-x);}bytes.push(a,b);}return bytes;}
 function compile(s,includeStages){
   const patterns=[],lookup=new Map();
@@ -43,7 +48,8 @@ const manifest=[];
 for(const [player,p] of spec.players.entries()){
   const portrait=JSON.parse(fs.readFileSync(`art/portraits/${p.source}/pixels.json`,'utf8'));
   const faceColors=Object.fromEntries(Object.entries(portrait.palette).map(([k,v])=>[k,v.slice(0,7).toUpperCase()]));
-  const families=[{slot:6,colors:[spec.palette[0],faceColors.s,faceColors.o,faceColors['#']]}];
+  const portraitBackdrop=spec.portraitBackdrop||spec.palette[0];
+  const families=[{slot:6,colors:[portraitBackdrop,faceColors.s,faceColors.o,faceColors['#']]}];
   const familyFor=colors=>{
     let family=families.find(f=>colors.every(c=>f.colors.includes(c)));
     if(!family){
@@ -55,6 +61,7 @@ for(const [player,p] of spec.players.entries()){
   const pages=[];
   for(let page=0;page<3;page++){
     const s=screen();
+    frame(s,page===0);
     centered(s,1,page===0?stageNames[0]:page===1?'RATINGS 1 OF 2':'RATINGS 2 OF 2');
     centered(s,16,p.name,2);
     // Right and left native arrows, flipped by deliberate source cell placement.
@@ -66,12 +73,12 @@ for(const [player,p] of spec.players.entries()){
       for(let ty=0;ty<8;ty++)for(let tx=0;tx<8;tx++){
         let colors=[];
         for(let y=0;y<4;y++)for(let x=0;x<4;x++){
-          const c=face[ty*4+y][tx*4+x];const color=c==='.'?spec.palette[0]:faceColors[c];if(!colors.includes(color))colors.push(color);
+          const c=face[ty*4+y][tx*4+x];const color=c==='.'?portraitBackdrop:faceColors[c];if(!colors.includes(color))colors.push(color);
         }
         // One CHOMPA edge tile has five colors including transparency. Fill only
         // its transparent cells with the outline shade; all approved opaque cells stay exact.
-        const backdrop=colors.length>4?faceColors['#']:spec.palette[0];
-        if(colors.length>4)colors=colors.filter(c=>c!==spec.palette[0]);
+        const backdrop=colors.length>4?faceColors['#']:portraitBackdrop;
+        if(colors.length>4)colors=colors.filter(c=>c!==portraitBackdrop);
         const family=familyFor(colors);s.pal[6+ty][1+tx]=family.slot;
         for(let y=0;y<4;y++)for(let x=0;x<4;x++){
           const c=face[ty*4+y][tx*4+x],color=c==='.'?backdrop:faceColors[c];

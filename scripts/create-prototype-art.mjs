@@ -65,6 +65,32 @@ for(const [name,rows] of [['ball',['..####..','.sooss#.','#ososs##','#soosss#','
   rows.forEach((r,y)=>[...r].forEach((c,x)=>a.put(x,y+4,pal[c]||pal['.'])));
   a.save(`game/assets/sprites/${name}.png`);
 }
+// The close-up ball occupies the remaining four OBJ tiles; normal art stays exact.
+{
+ const small=PNG.sync.read(fs.readFileSync('game/assets/sprites/ball.png'));
+ const ball=raster(32,16,pal['.']);
+ for(let y=0;y<16;y++)for(let x=0;x<16;x++){
+  const i=(y*16+x)*4;ball.put(x,y,'#'+[...small.data.subarray(i,i+3)].map(v=>v.toString(16).padStart(2,'0')).join(''));
+  const dx=x-7.5,dy=y-7.5;
+  if(dx*dx+dy*dy<=55)ball.put(16+x,y,dx*dx+dy*dy>39||x===7||y===7||Math.abs(x-y)===3?pal['#']:x<7&&y<7?pal.o:pal.s);
+ }
+ ball.save('game/assets/sprites/ball.png');
+}
+// Six readable jersey markers use one hardware object each.
+const marker=raster(96,16,'#65ff00');
+const markerDigits={
+ '0':['111','101','101','101','111'],'1':['010','110','010','010','111'],
+ '2':['110','001','010','100','111'],'3':['110','001','010','001','110'],
+ '4':['101','101','111','001','001'],'7':['111','001','010','010','010']
+};
+['13','32','23','7','74','00'].forEach((jersey,id)=>{
+ for(let y=5;y<12;y++)for(let x=0;x<8;x++)marker.put(id*16+x,y,pal.o);
+ [...jersey].forEach((d,i)=>markerDigits[d].forEach((row,y)=>[...row].forEach((v,x)=>{
+  if(v==='1')marker.put(id*16+(jersey.length===1?2:0)+i*4+x,y+6,pal['#']);
+ })));
+ marker.put(id*16+3,13,pal.o);marker.put(id*16+4,13,pal.o);marker.put(id*16+3,14,pal.o);
+});
+marker.save('game/assets/sprites/marker.png');
 const net=raster(64,16,'#65ff00');
 for(let pose=0;pose<4;pose++) {
   const length=pose===0?10:pose===1?14:12;

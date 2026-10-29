@@ -32,7 +32,7 @@ static void knock_back(jam_game_t *g,uint8_t from,uint8_t to,uint8_t duration) {
     if(distance(a->y,b->y)>distance(a->x,b->x)) {
         b->push_x=dx<0?-4:4;b->push_y=dy<0?-8:8;
     }
-    if(to==0)g->charge=0;
+    if(to==g->controlled)g->charge=0;
 }
 void jam_shove(jam_game_t *g,uint8_t p) JAM_BANKED {
     uint8_t i,target=255;

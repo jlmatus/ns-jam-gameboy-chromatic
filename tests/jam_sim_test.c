@@ -49,8 +49,9 @@ static void shots_rebounds_reset(void) {
     step(&g,JAM_SCORE_FRAME-9,0);assert(g.score[0]==0);
     step(&g,1,0);assert(g.score[0]==2 && g.baskets==1 && g.height<JAM_RIM_HEIGHT-4);
     step(&g,JAM_FINISH_FRAMES-JAM_SCORE_FRAME,0);
-    assert(g.mode==JAM_RESET && g.score[0]==2 && g.baskets==1);
-    step(&g,24,0);assert(g.owner==2 && g.mode==JAM_HELD);
+    assert(g.mode==JAM_INBOUND && g.score[0]==2 && g.baskets==1);
+    for(k=0;k<600 && g.mode!=JAM_HELD;k++)jam_update(&g,0);
+    assert(g.owner==3 && g.mode==JAM_HELD);
     // Exact three-point accounting and one basket per flight.
     jam_init(&g);isolate(&g);g.players[0].x=160*4;
     jam_shoot(&g,0,24);points=g.shot_points;scoring_team=g.shot_team;assert(points==3);
@@ -70,10 +71,10 @@ static void cpu_soak(void) {
     jam_game_t g;uint16_t i;uint8_t p;
     jam_init(&g);jam_pass(&g,0,1);
     for(i=0;i<30000;i++) {
-        jam_update(&g,0);
-        assert(g.mode<=JAM_FINISH);
+        jam_update(&g,g.mode==JAM_HELD && g.owner==g.controlled && (i%48)<24?JAM_B:0);
+        assert(g.mode<=JAM_DUNK);
         if(g.mode==JAM_HELD)assert(g.owner>=0 && g.owner<4);
-        for(p=0;p<4;p++)assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
+        for(p=0;p<4;p++)assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
     }
     printf("CPU soak: shots=%u baskets=%u steals=%u rebounds=%u score=%u:%u\n",g.shots,g.baskets,g.steals,g.rebounds,g.score[0],g.score[1]);
     fflush(stdout);
@@ -82,7 +83,7 @@ static void cpu_soak(void) {
 static void teammate_and_block(void) {
     jam_game_t g;
     jam_init(&g);isolate(&g);
-    g.owner=1;g.players[1].x=245*4;g.players[1].cooldown=0;
+    g.owner=1;g.setup.roster[0]=1;g.setup.roster[1]=0;g.players[1].x=245*4;g.players[1].cooldown=0;
     jam_update(&g,0);assert(g.mode==JAM_HELD && g.players[1].windup==1);
     step(&g,17,0);assert(g.mode==JAM_SHOT && g.passer==1 && g.shot_team==0);
     // Human B can disrupt an opponent's nearby early shot.
@@ -191,8 +192,8 @@ static void cpu_blocking_and_levels(void) {
     for(level=0;level<3;level++) {
         setup.difficulty=level;jam_init_lineup(&g,&setup);jam_pass(&g,0,1);
         for(seed=0;seed<12000;seed++) {
-            jam_update(&g,0);
-            for(p=0;p<4;p++)assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
+            jam_update(&g,g.mode==JAM_HELD && g.owner==g.controlled && (seed%48)<24?JAM_B:0);
+            for(p=0;p<4;p++)assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
         }
         printf("Level %u soak: %u shots, %u baskets, %u rebounds, owner %d windup %u mode %u\n",level,g.shots,g.baskets,g.rebounds,g.owner,g.players[2].windup,g.mode);fflush(stdout);
         assert(g.shots>5 && g.baskets>0);total_rebounds+=g.rebounds;
@@ -321,6 +322,40 @@ static void warm_up_fairness(void) {
     jam_update(&easy,JAM_A);assert(easy.mode==JAM_PASS && easy.passes==2);
     printf("PASS: Warm-up seeded swipes %u<%u, lane picks %u<%u, open CPU makes %u/512; catch protection and unchanged human shots\n",easy_swipes,hard_swipes,easy_picks,hard_picks,cpu_makes);
 }
+static void shooting_accuracy(void) {
+    jam_game_t g;
+    uint16_t seed;
+    uint32_t makes[3]={0,0,0};
+    uint8_t p,chance,open,deep,near,level;
+    static const uint8_t roster[3]={1,4,0}; /* MAGIC, CHOMPA, MATUS. */
+    static const uint8_t expected[3]={44,65,82};
+    for(p=0;p<3;p++) {
+        selected(&g,roster[p]);isolate(&g);
+        g.players[0].x=190*4;g.players[0].y=88*4;
+        g.setup.difficulty=JAM_WARM_UP;
+        chance=jam_shot_chance(&g,0,24);assert(chance==expected[p]);
+        for(seed=1;seed<65535;seed++) {
+            /* Every nonzero 16-bit seed except one: catches modulo bias. */
+            g.rng=seed;g.mode=JAM_HELD;g.owner=0;
+            jam_shoot(&g,0,24);assert(g.shot_points==3);
+            makes[p]+=g.shot_good;
+        }
+        assert(makes[p]*100>=(uint32_t)(chance-1)*65534);
+        assert(makes[p]*100<=(uint32_t)(chance+1)*65534);
+    }
+    assert(makes[0]<makes[1] && makes[1]<makes[2]);
+    selected(&g,1);isolate(&g);g.players[0].y=88*4;
+    g.players[0].x=190*4;open=jam_shot_chance(&g,0,24);
+    g.players[0].x=160*4;deep=jam_shot_chance(&g,0,24);
+    g.players[0].x=50*4;assert(jam_shot_chance(&g,0,24)<deep && deep<open);
+    g.players[0].x=260*4;near=jam_shot_chance(&g,0,24);assert(near>open);
+    g.players[0].x=190*4;g.players[2]=g.players[0];
+    assert(jam_shot_chance(&g,0,24)<open);
+    g.players[2].x=280*4;
+    assert(jam_shot_chance(&g,0,0)<open);
+    for(level=0;level<3;level++) {g.setup.difficulty=level;assert(jam_shot_chance(&g,0,24)==open);}
+    printf("PASS: 196602 seeded timed open threes: MAGIC %lu, CHOMPA %lu, MATUS %lu /65534; unbiased within 1 point of 44/65/82 percent; distance, pressure, timing, finishing, difficulty\n",(unsigned long)makes[0],(unsigned long)makes[1],(unsigned long)makes[2]);
+}
 static void shooting_motion(void) {
     jam_game_t g,before;
     uint8_t i,last,jump;
@@ -343,7 +378,7 @@ static void shooting_motion(void) {
         assert(jump<=last && last-jump<=1);last=jump;
     }
     assert(last==0 && !g.players[0].shot_time);
-    jam_init(&g);isolate(&g);g.owner=1;
+    jam_init(&g);isolate(&g);g.owner=1;g.setup.roster[0]=1;g.setup.roster[1]=0;
     g.players[1].x=245*4;g.players[1].cooldown=0;
     step(&g,12,0);assert(g.mode==JAM_HELD && g.players[1].windup==12);
     jam_pass(&g,1,0);jam_update(&g,0);assert(!g.players[1].windup);
@@ -435,13 +470,14 @@ static void contact_soak(void) {
             if((k%80)<24)input|=JAM_A;
             if((k%96)>=48 && (k%96)<78)input|=JAM_B;
             jam_update(&g,input);
-            assert(g.mode<=JAM_FINISH);
+            assert(g.mode<=JAM_DUNK && g.controlled<2);
+            if(g.mode==JAM_HELD && g.owner<2)assert(g.controlled==g.owner);
             if(g.mode==JAM_HELD)assert(g.owner>=0 && g.owner<4);
-            else assert(g.owner==-1 || g.mode==JAM_RESET);
+            else assert(g.owner==-1 || g.mode==JAM_RESET || g.mode==JAM_INBOUND);
             if(g.mode==JAM_PASS || g.mode==JAM_SHOT)assert(g.duration && g.flight<g.duration);
             for(p=0;p<4;p++) {
                 assert(g.players[p].stun<=18 && g.players[p].contact_cooldown<=40);
-                assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4);
+                assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4);
                 assert(g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
             }
         }
@@ -450,10 +486,132 @@ static void contact_soak(void) {
     assert(attempts && shoves && drives && shots);
     printf("PASS: 108000 mixed-input updates across every human/level; %lu reaches, %lu shoves, %lu runovers, %lu shots; bounds/ownership/recovery intact\n",(unsigned long)attempts,(unsigned long)shoves,(unsigned long)drives,(unsigned long)shots);
 }
+static void possession_control_and_inbounds(void) {
+    jam_game_t g,before;uint8_t i,t;uint16_t n;
+    jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=100*4;
+    jam_update(&g,JAM_A);assert(g.controlled==0 && g.mode==JAM_PASS);
+    step(&g,g.duration-1,JAM_B);
+    assert(g.owner==1 && g.controlled==1 && !g.charge);
+    before=g;jam_update(&g,JAM_MOVE_RIGHT|JAM_B);
+    assert(g.charge==1 && g.players[1].x-before.players[1].x==jam_move_speed(&g,1,0));
+    jam_update(&g,0);assert(g.mode==JAM_SHOT && g.passer==1);
+    jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=100*4;
+    jam_update(&g,JAM_A);step(&g,g.duration+24,JAM_A);
+    assert(g.passes==1 && g.owner==1 && g.controlled==1);
+    jam_update(&g,0);jam_update(&g,JAM_A);
+    assert(g.mode==JAM_PASS && g.passes==2 && g.target==0);
+    for(t=0;t<2;t++) {
+        jam_init(&g);g.ball_x=(t?JAM_RIM_RIGHT:JAM_RIM_LEFT)*4;
+        g.ball_y=JAM_RIM_Y*4;g.height=24;g.score[t^1]=2;before=g;
+        jam_begin_inbound(&g,t);
+        for(i=0;i<4;i++)assert(g.players[i].x==before.players[i].x && g.players[i].y==before.players[i].y);
+        assert(g.mode==JAM_INBOUND && g.owner==-1 && !g.charge);
+        for(n=0;n<600 && g.inbound_phase!=2;n++)jam_update(&g,JAM_MOVE_RIGHT|JAM_B);
+        assert(g.mode==JAM_INBOUND && g.inbound_phase==2 && g.owner==t*2);
+        assert(t?g.players[g.inbounder].x>295*4:g.players[g.inbounder].x<24*4);
+        assert(g.players[g.inbound_receiver].x==(t?256:64)*4 && !g.possession_time);
+        assert(g.score[t^1]==2 && !g.shots);
+        jam_update(&g,JAM_PAUSE);before=g;step(&g,30,0);
+        assert(!memcmp(g.players,before.players,sizeof(g.players)) && g.inbound_time==before.inbound_time);
+        jam_update(&g,JAM_PAUSE);jam_update(&g,0);
+        if(t)for(n=0;n<40 && g.mode==JAM_INBOUND;n++)jam_update(&g,0);
+        else jam_update(&g,JAM_A);
+        assert(g.mode==JAM_PASS && g.inbound_pass && g.target==g.inbound_receiver);
+        before=g;jam_update(&g,0);
+        assert(g.players[g.inbounder].x-before.players[g.inbounder].x==(t?-4:4));
+        for(n=0;n<50 && g.mode==JAM_PASS;n++) {
+            /* The inbound throw is protected even with a defender on the ball. */
+            i=t?0:2;g.players[i].x=g.ball_x;g.players[i].y=g.ball_y;
+            jam_update(&g,JAM_A);
+        }
+        assert(g.mode==JAM_HELD && g.owner==g.inbound_receiver && !g.inbound_pass && !g.steals);
+        assert(g.grace && g.players[g.inbounder].x>=JAM_LEFT*4 && g.players[g.inbounder].x<=JAM_RIGHT*4);
+        if(!t)assert(g.controlled==1);
+    }
+    puts("PASS: catch-based control handoff/charge reset; visible retrieval/baseline inbound, protected throw, pause, return without teleport, both teams");
+}
+static void dunk_fixture(jam_game_t *g,uint8_t id,uint8_t who,uint16_t seed){
+    uint8_t i,tmp;
+    selected(g,id);
+    tmp=g->setup.roster[who];g->setup.roster[who]=id;g->setup.roster[0]=tmp;
+    for(i=0;i<4;i++){g->players[i].x=160*4;g->players[i].y=116*4;g->players[i].cooldown=255;}
+    g->owner=who;g->controlled=who<2?who:0;
+    g->players[who].x=(who<2?JAM_RIM_RIGHT-jam_dunk_range(g,who):JAM_RIM_LEFT+jam_dunk_range(g,who))*4;
+    g->players[who].y=88*4;g->players[who].cooldown=0;g->rng=seed;
+}
+static void arcade_dunks(void){
+    jam_game_t g,before,low;
+    uint16_t seed,makes[6][2]={{0}},high_blocks=0,low_blocks=0;
+    uint8_t id,side,t,p,who,peak;
+    for(side=0;side<2;side++){
+        who=side*2;dunk_fixture(&g,3,who,1);g.passer=who;
+        g.players[who].x=(side?50:270)*4;g.players[who].y=70*4;
+        assert(jam_dunk_view_x(&g,(side?42:278)*4,-42*256)==-34*256);
+        assert(jam_dunk_view_x(&g,(side?40:280)*4,-42*256)==-32*256);
+        assert(jam_dunk_view_y(&g,70*4,44)==44);
+        assert(jam_dunk_view_y(&g,74*4,50)==42);
+        g.players[who].x=(side?48:272)*4;g.players[who].y=88*4;
+        assert(jam_dunk_view_x(&g,(side?40:280)*4,-8*256)==0);
+        assert(jam_dunk_view_y(&g,88*4,52)==36);
+    }
+    for(id=0;id<6;id++)for(side=0;side<2;side++)for(seed=1;seed<=256;seed++){
+        who=side*2;dunk_fixture(&g,id,who,seed);before=g;
+        assert(jam_try_dunk(&g,who) && g.mode==JAM_DUNK && g.owner==-1 && g.shot_points==2);
+        assert(g.dunk_attempts==1 && g.shots==1 && !g.baskets && !g.score[side]);
+        peak=0;
+        for(t=1;t<=JAM_DUNK_END;t++){
+            jam_update(&g,0);
+            if(t<20){uint8_t jump=jam_jump_height(&g,who);assert(jump>=peak);peak=jump;}
+            if(t==20){peak=jam_jump_height(&g,who);assert(peak==30+jam_roster[id].ratings.dunk*2 && peak>14);}
+            if(t<JAM_DUNK_SCORE)assert(!g.score[side] && !g.scored);
+            if(t==JAM_DUNK_SCORE && g.dunk_result==JAM_DUNK_MADE)assert(g.height<JAM_RIM_HEIGHT && g.score[side]==2 && g.baskets==1);
+            for(p=0;p<4;p++)if(p!=who)assert(g.players[p].x==before.players[p].x && g.players[p].y==before.players[p].y);
+        }
+        if(g.dunk_result==JAM_DUNK_MADE){makes[id][side]++;assert(g.mode==JAM_INBOUND && g.next_team==(side^1) && g.dunks==1 && g.baskets==1 && g.score[side]==2);}
+        else assert(g.dunk_result==JAM_DUNK_MISSED && g.mode==JAM_LOOSE && !g.baskets && !g.dunks && !g.score[side]);
+        assert(g.players[who].x==(who<2?JAM_RIM_RIGHT-8:JAM_RIM_LEFT+8)*4 && !jam_jump_height(&g,who));
+    }
+    for(id=0;id<6;id++)for(side=0;side<2;side++)assert(makes[id][side]>0 && makes[id][side]<256);
+    assert(makes[1][0]>makes[0][0]);
+    dunk_fixture(&g,1,0,1);g.players[1].x=JAM_LEFT*4-5;
+    jam_update(&g,JAM_TURBO|JAM_B);assert(g.mode==JAM_DUNK && g.players[1].x==JAM_LEFT*4);
+    step(&g,18,0);jam_update(&g,JAM_PAUSE);before=g;step(&g,100,JAM_MOVE_RIGHT|JAM_A|JAM_B);
+    assert(g.dunk_time==before.dunk_time && g.rng==before.rng && g.ball_x==before.ball_x && g.height==before.height && !g.score[0]);
+    jam_update(&g,JAM_PAUSE);assert(!g.paused && g.dunk_time==before.dunk_time+1);
+    dunk_fixture(&g,1,0,1);jam_update(&g,JAM_B);assert(g.mode==JAM_HELD && g.charge==1 && !g.dunk_attempts);
+    dunk_fixture(&g,1,0,1);g.players[0].x=200*4;jam_update(&g,JAM_TURBO|JAM_B);assert(g.mode==JAM_HELD && g.charge==1 && !g.dunk_attempts);
+    dunk_fixture(&g,1,0,1);g.players[0].x=(JAM_RIM_RIGHT+1)*4;assert(!jam_try_dunk(&g,0));
+    dunk_fixture(&g,1,0,1);g.players[0].y=JAM_BOTTOM*4;assert(!jam_try_dunk(&g,0));
+    dunk_fixture(&g,1,0,1);g.players[0].stun=1;assert(!jam_try_dunk(&g,0));
+    dunk_fixture(&g,1,1,1);g.controlled=0;step(&g,8,0);assert(g.mode==JAM_DUNK && g.passer==1);
+    for(seed=1;seed<=512;seed++){
+        dunk_fixture(&g,3,2,seed);g.players[0].x=(JAM_RIM_LEFT+24)*4;g.players[0].y=88*4;
+        low=g;low.setup.roster[0]=0;low.setup.roster[1]=1;
+        assert(jam_try_dunk(&g,2) && jam_try_dunk(&low,2));
+        step(&g,7,0);step(&low,7,0);jam_update(&g,JAM_B);jam_update(&low,JAM_B);
+        step(&g,56,0);step(&low,56,0);
+        high_blocks+=g.blocks;low_blocks+=low.blocks;
+        if(g.blocks)assert(g.dunk_result==JAM_DUNK_BLOCKED && g.mode==JAM_LOOSE && !g.score[1] && !g.dunks);
+    }
+    assert(high_blocks>low_blocks && low_blocks>0);
+    /* A late reach cannot hit a ball above the defender's real vertical reach.
+       MAGIC can still meet the descending finish; MATUS's jump expires below it. */
+    dunk_fixture(&g,3,2,1);g.players[0].x=(JAM_RIM_LEFT+24)*4;g.players[0].y=88*4;
+    low=g;low.setup.roster[0]=0;low.setup.roster[1]=1;
+    assert(jam_try_dunk(&g,2) && jam_try_dunk(&low,2));
+    step(&g,15,0);step(&low,15,0);jam_update(&g,JAM_B);jam_update(&low,JAM_B);
+    step(&g,48,0);step(&low,48,0);
+    assert(g.blocks==1 && g.dunk_defender==0 && g.dunk_result==JAM_DUNK_BLOCKED);
+    assert(!low.blocks && !(low.block_attempts&1));
+    printf("PASS: 3072 dunk attempts across every player/basket; MAGIC %u vs MATUS %u home makes; block timing MAGIC %u vs MATUS %u /512; turbo trigger, range/depth, fallback shot, CPU dunk, pause, one score below rim, misses/blocks, preserved positions, landing/inbound\n",makes[1][0],makes[0][0],high_blocks,low_blocks);
+}
 int main(void) {
+    arcade_dunks();
+    possession_control_and_inbounds();
     contact_soak();
     physical_defense();
     shooting_motion();
+    shooting_accuracy();
     warm_up_fairness();
     selection_flow();ratings_pages();ratings_and_difficulty();cpu_blocking_and_levels();movement_pause();passing();shots_rebounds_reset();teammate_and_block();pause_during_swish();painted_three_point_line();cpu_soak();
     puts("PASS: movement, boundaries, pause, passes, interception, shots, scoring, rebounds, reset, CPU soak");

@@ -1,0 +1,1189 @@
+{
+  "date": "2026-10-29",
+  "scope": "Arcade finishing: actual dunks, exaggerated jumps, close-up Dunk Cam and state-preserving camera transitions",
+  "native": {
+    "build": {
+      "success": true,
+      "builder": "gb-studio-cli",
+      "exitCode": 0,
+      "rom": {
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "sizeBytes": 2097152,
+        "sha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+        "title": "NICASOURCEJAM",
+        "colorMode": "gbc-only",
+        "colorFlag": 192,
+        "cartridgeType": 30,
+        "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+        "mapper": "MBC5",
+        "romSizeCode": 6,
+        "declaredRomSizeBytes": 2097152,
+        "ramSizeCode": 3,
+        "declaredRamSizeBytes": 32768,
+        "nintendoLogoValid": true,
+        "headerChecksum": 168,
+        "computedHeaderChecksum": 168,
+        "headerChecksumValid": true,
+        "valid": true
+      },
+      "stderr": "(node:42376) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)\nsrc/core/jam_dunk_cam.c:49: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk_cam.c:90: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_contact.c:76: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:22: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:76: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:77: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:174: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:99: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:269: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/states/basketball.c:163: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:400: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\n",
+      "debugArtifacts": {
+        "directory": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug",
+        "noiPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug/symbols.noi",
+        "globalsPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc.debug/globals.i",
+        "romSha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+        "noiSha256": "949db88f468e17d4e571a1a4b72eead0bace323d0046837523a477f061a93da1",
+        "globalsSha256": "9b1a928094e6548cfaf7b5151aeccc846e77e230f823f06ae43583ccd6d0ecf4",
+        "internalRomFilename": "nicasource-jam.gbc",
+        "sourceDebugAbi": {
+          "layout": "gbvm-farptr3-uword16-v1",
+          "sha256": "85e65e9be4efe6b794debf0d0a299c88a2f888a48eaf0b35efed6d3c9a2269f0"
+        },
+        "sourceProvenance": {
+          "formatVersion": 1,
+          "projectPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/project.gbsproj",
+          "projectRevision": "2ef81d060e7ce7fdd88bb906888abb460d72ea52ae1b1138ef2bcf1714046ccb",
+          "revisionAlgorithm": "sha256-merkle-v2",
+          "sourceFingerprint": "9708495e1b6f672bdf03e4627da83a2b5fb439fdde0ebe431c639c001deee3cc",
+          "compilerSha256": "78961636939edb44b0539ae26badfa07055be38124dbf08e3b84ec5608a2e627"
+        }
+      }
+    },
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+      "sessionId": "fb306445ce8f4755ab016e6c8b469cde",
+      "status": "stopped",
+      "branchId": "branch-0008",
+      "frame": 705,
+      "totalFrames": 4807,
+      "bytesUsed": 11126009,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 64,
+        "maxBytes": 67108864,
+        "maxFrames": 36000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 9780,
+      "eventDigest": "efbb15ec398ec3ed3e3ea601861bb593b84c7053d3afb9e3757dc3304474bc12",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 801
+        },
+        {
+          "branchId": "branch-0002",
+          "frame": 1011,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+        },
+        {
+          "branchId": "branch-0003",
+          "frame": 815,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+        },
+        {
+          "branchId": "branch-0004",
+          "frame": 787,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+        },
+        {
+          "branchId": "branch-0005",
+          "frame": 809,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+        },
+        {
+          "branchId": "branch-0006",
+          "frame": 913,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+        },
+        {
+          "branchId": "branch-0007",
+          "frame": 885,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-e5e1c3bf9b7f47a894bfd61b1bcaabb3"
+        },
+        {
+          "branchId": "branch-0008",
+          "frame": 705,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "checkpointId": "checkpoint-e5e1c3bf9b7f47a894bfd61b1bcaabb3"
+        }
+      ],
+      "outcome": "passed",
+      "reason": "Final native ROM 25f922d0: genuine input-driven dunks observed for all six profiles; human right-basket makes, CPU BAMBI left-basket make, TORRES blocked by BAMBI with no score, clean camera/HUD and returns to court/inbounds; pause freezes simulation/RNG and resume finishes; paused B returns to picker. Ordinary misses verified separately by host tests, not this recording. Physical Chromatic not tested."
+    },
+    "cases": [
+      {
+        "player": "MAGIC",
+        "branchId": "branch-0001",
+        "startFrame": 597,
+        "endFrame": 801,
+        "entry": [
+          {
+            "frame": 609,
+            "width": 160,
+            "height": 144,
+            "sha256": "ad360f012e0ac9b829ad372ebdfaa9ccc70ccfce1e59bffef5505fb1e3d180b0",
+            "rgbaSha256": "44eb78a15d9e5997d6f56cca36dc4545dc06b0d09930b39c1b747c482c1449b1",
+            "sampledButtons": [
+              "b",
+              "start"
+            ],
+            "path": "docs/playtests/dunks/magic-entry-609.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/ad360f012e0ac9b829ad372ebdfaa9ccc70ccfce1e59bffef5505fb1e3d180b0.png"
+          }
+        ],
+        "rise": [
+          {
+            "frame": 633,
+            "width": 160,
+            "height": 144,
+            "sha256": "e0e6825a9bb9f4c252d34804ae61c37876bef9ec31b8a73a014d8bfd4b33f9f0",
+            "rgbaSha256": "09a77d92cbd5338f7e558056d23db79384741de7194476d4f6e891e3ac728f24",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-rise-633.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/e0e6825a9bb9f4c252d34804ae61c37876bef9ec31b8a73a014d8bfd4b33f9f0.png"
+          },
+          {
+            "frame": 657,
+            "width": 160,
+            "height": 144,
+            "sha256": "ba23b83c1827f8b47d13a8fd344849ad77e680c7c8fb8f5642e2c1686f848358",
+            "rgbaSha256": "d2dc5043ac96e11eb4a3e9d663ad38b6a3c0c3ddc0fb0992d19740996b9feb66",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-rise-657.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/ba23b83c1827f8b47d13a8fd344849ad77e680c7c8fb8f5642e2c1686f848358.png"
+          }
+        ],
+        "slam": [
+          {
+            "frame": 669,
+            "width": 160,
+            "height": 144,
+            "sha256": "1d846758877a04689bb036e335c2de7a5670faa0b9f51d49582e5aa2f442f9f9",
+            "rgbaSha256": "d84110a5059f56f22d49203e1cdd6eb5abdc143e0caef4864ca79d05e3bf9fb9",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-slam-669.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/1d846758877a04689bb036e335c2de7a5670faa0b9f51d49582e5aa2f442f9f9.png"
+          },
+          {
+            "frame": 681,
+            "width": 160,
+            "height": 144,
+            "sha256": "4f560c66fbb413a90c33ffc4d98cbac48b1fb46a8d189e5575db7820c8ee782a",
+            "rgbaSha256": "6e6ba0c4426f79c8a162daa466bf4b260be4b10bcf275518d9041a79f085de42",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-slam-681.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/4f560c66fbb413a90c33ffc4d98cbac48b1fb46a8d189e5575db7820c8ee782a.png"
+          },
+          {
+            "frame": 693,
+            "width": 160,
+            "height": 144,
+            "sha256": "c4f4b0b372d11946c09ab677fcfa789488adf90883bb9dcfb2bc7e84305c5181",
+            "rgbaSha256": "c6befce771a19542c4524f5b43f251d37803e2e73b17a6ac49cd280fdddb81ec",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-slam-693.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/c4f4b0b372d11946c09ab677fcfa789488adf90883bb9dcfb2bc7e84305c5181.png"
+          },
+          {
+            "frame": 705,
+            "width": 160,
+            "height": 144,
+            "sha256": "1e50d51e3a28cafc5323b90c103e4642d0167b48cffc24eda3bea8dec6280dc7",
+            "rgbaSha256": "2c844192c854c325177387f4803a8f405b100e709e5c222ffb888dbf372631f9",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-slam-705.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/1e50d51e3a28cafc5323b90c103e4642d0167b48cffc24eda3bea8dec6280dc7.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 729,
+            "width": 160,
+            "height": 144,
+            "sha256": "3deed265cbfd1dedad24bdd2d798519f1a0a42a3454ee89b695237122c0853ad",
+            "rgbaSha256": "e5eaf190dcc3889ca8ad234b6ef65ea9445ac36c864a5d681842dc064c49cfb7",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-return-729.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/3deed265cbfd1dedad24bdd2d798519f1a0a42a3454ee89b695237122c0853ad.png"
+          },
+          {
+            "frame": 753,
+            "width": 160,
+            "height": 144,
+            "sha256": "721893f36f79f6fb528cdf3dbed81d07f8b3286687c79a28654591781138682d",
+            "rgbaSha256": "64f28488f3ad63612ce11a971a6ba8ecc04c50b74cbde6c5f1d4f37f660a8c9e",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-return-753.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/721893f36f79f6fb528cdf3dbed81d07f8b3286687c79a28654591781138682d.png"
+          },
+          {
+            "frame": 777,
+            "width": 160,
+            "height": 144,
+            "sha256": "f059e0876e557f5dbb9219002fbfddab3bd01c1827ebcdf433d58f2cc61b4f74",
+            "rgbaSha256": "580f81984166138fac35ff16e04d91faf977de76725dadb33affda784475ae02",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-return-777.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/f059e0876e557f5dbb9219002fbfddab3bd01c1827ebcdf433d58f2cc61b4f74.png"
+          },
+          {
+            "frame": 801,
+            "width": 160,
+            "height": 144,
+            "sha256": "a95bfed0755cd3fe432edad55ed5efd4eb76134ed8bd856bf794d335365a0771",
+            "rgbaSha256": "3994ac1f988f9d7bf8a530feba6ccfc4ac0186777f44f4450f9356f5720c6d92",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/magic-return-801.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/a95bfed0755cd3fe432edad55ed5efd4eb76134ed8bd856bf794d335365a0771.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 801,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "25044501001400000000010000000000000000d203c00100000000000001000000000000000042033f010000000000000000000000030300000f04a0010000000000000100000000fb000000010002030060046001b103180100000000ff0006000000000002010200d700000000000ef50001010000003417000000000000010000000100000000000000000000020300000040010001000100ff00"
+        },
+        "verifiedState": {
+          "score": [
+            2,
+            0
+          ],
+          "mode": 6,
+          "dunkResult": 1,
+          "dunks": 1
+        }
+      },
+      {
+        "player": "TORRES",
+        "outcome": "blocked",
+        "branchId": "branch-0002",
+        "startFrame": 799,
+        "endFrame": 1011,
+        "action": [
+          {
+            "frame": 831,
+            "width": 160,
+            "height": 144,
+            "sha256": "0ff402f3ae52e3a0302d0e00193afe25b6e3157b56df808687a193d0cc98786e",
+            "rgbaSha256": "3875345e9ef037a740bccee1999ba7ec289c5c8266b33ca11c87f090ab67f7ff",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-action-831.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/0ff402f3ae52e3a0302d0e00193afe25b6e3157b56df808687a193d0cc98786e.png"
+          },
+          {
+            "frame": 851,
+            "width": 160,
+            "height": 144,
+            "sha256": "2443f5d2af40d5c5fb284f745e77a24b6bedc4077224c461ee2d3d2869deb408",
+            "rgbaSha256": "a61fc5c976ee09c1433a36604549d6b0b70333d20cb388786206e5d3596f515c",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-action-851.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/2443f5d2af40d5c5fb284f745e77a24b6bedc4077224c461ee2d3d2869deb408.png"
+          },
+          {
+            "frame": 871,
+            "width": 160,
+            "height": 144,
+            "sha256": "0d05320a4168b1f4264bb3847feaa4fd138079ad8dfb092921b64ba8b9bd3bd6",
+            "rgbaSha256": "5aaade4cce2b36b4e01c65f6843b27ddd09090a6f24651f9f39553e2d2a813aa",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-action-871.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/0d05320a4168b1f4264bb3847feaa4fd138079ad8dfb092921b64ba8b9bd3bd6.png"
+          },
+          {
+            "frame": 891,
+            "width": 160,
+            "height": 144,
+            "sha256": "10bdf73c73ff8780a0d20be92283502d437be856a1093efd63b4d4b198c946c7",
+            "rgbaSha256": "101770997e7c586bf3c46e8811c6e031ad4acb55558efcab4a879e309c6ab71e",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-action-891.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/10bdf73c73ff8780a0d20be92283502d437be856a1093efd63b4d4b198c946c7.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 951,
+            "width": 160,
+            "height": 144,
+            "sha256": "48d7b726f1063ce27460e2caebbfd91a865f122e5a745116db73fd687b9b6727",
+            "rgbaSha256": "9da4901c5320ea233b8146a6dae3e06d5f5f61e34cbd6c72061b474ae9ef3239",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-return-951.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/48d7b726f1063ce27460e2caebbfd91a865f122e5a745116db73fd687b9b6727.png"
+          },
+          {
+            "frame": 1011,
+            "width": 160,
+            "height": 144,
+            "sha256": "b4d7e73e64abc3662b36ea37ebcfbf1bbd61b6c35eac9dca6ae69afd7d41fcfc",
+            "rgbaSha256": "183952b6be02959db6ffb35833ff97093c55ca67cb40161010d0ede6ab881835",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/torres-return-1011.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/b4d7e73e64abc3662b36ea37ebcfbf1bbd61b6c35eac9dca6ae69afd7d41fcfc.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 1011,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "40046001001500000000000000000000000000e503a60100000000000001000000000000000050041801004c000000000100000000fefe00001d04ac010000000000000100000000fefe0000030102040045031b013804180158041b01ff00030008000200020000002f0000000000081000000004002851170000000000000100000000000100010000000000000000000000400309010000000204"
+        },
+        "verifiedState": {
+          "score": [
+            0,
+            0
+          ],
+          "mode": 3,
+          "dunkResult": 3,
+          "dunks": 0
+        }
+      },
+      {
+        "player": "CHOMPA",
+        "branchId": "branch-0003",
+        "startFrame": 597,
+        "endFrame": 815,
+        "action": [
+          {
+            "frame": 641,
+            "width": 160,
+            "height": 144,
+            "sha256": "84a5e3d8df8ffafe4fea81d31018abe80c36813eeeb25a5ca0d85cd50688eb65",
+            "rgbaSha256": "89cb67d4d6925929a81a985dce8508c5ff37631664508f5313e2d8f552c96e45",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/chompa-action-641.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/84a5e3d8df8ffafe4fea81d31018abe80c36813eeeb25a5ca0d85cd50688eb65.png"
+          },
+          {
+            "frame": 673,
+            "width": 160,
+            "height": 144,
+            "sha256": "be658f8669566756397df207e6a31fe6388f6d5151b329b6b587ee45ae59ed01",
+            "rgbaSha256": "731d0ae267c1b542dd1e33b2cc3eaf662186116cddd10cc7626053f5bacc9eaf",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/chompa-action-673.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/be658f8669566756397df207e6a31fe6388f6d5151b329b6b587ee45ae59ed01.png"
+          },
+          {
+            "frame": 705,
+            "width": 160,
+            "height": 144,
+            "sha256": "90f4f41a6457d2bda65c3e299a3bddef67e882700af0c9e231d21a53c4889b68",
+            "rgbaSha256": "ae49057b350ba2f2950527ebfea2cd7710241daf20e0e7296a4a911cf9b83303",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/chompa-action-705.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/90f4f41a6457d2bda65c3e299a3bddef67e882700af0c9e231d21a53c4889b68.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 815,
+            "width": 160,
+            "height": 144,
+            "sha256": "cd7acefe763f9b0d0ab977135f0e6dd50a4af80dffb113bf94ab8fafaaac7c24",
+            "rgbaSha256": "5055f80684696c012e8e4294e375cd132a14442e227ad3864b7a1722a392103e",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/chompa-return-815.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/cd7acefe763f9b0d0ab977135f0e6dd50a4af80dffb113bf94ab8fafaaac7c24.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 815,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "d90340010004000000000100000000000000008003c001000000000000010000000000000000a40360010000000000000000000000050000000004a0010000000000000300000000000000000401020300600460012404180100000000ff0006000000000002010200e700000000000ee50001010000003417000000000000010000000100000000000000000000020300000040010001000100ff00"
+        },
+        "verifiedState": {
+          "score": [
+            2,
+            0
+          ],
+          "mode": 6,
+          "dunkResult": 1,
+          "dunks": 1
+        }
+      },
+      {
+        "player": "MATUS",
+        "branchId": "branch-0004",
+        "startFrame": 569,
+        "endFrame": 787,
+        "action": [
+          {
+            "frame": 613,
+            "width": 160,
+            "height": 144,
+            "sha256": "1fbc39374c9edd71208d43741e8d6abc05adb3bcbe1e6dd670de3b6b94c66cb1",
+            "rgbaSha256": "9758dc3d98c7bd82ee983e11b2f0c99ba80c741208293b061c8da68996b600eb",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/matus-action-613.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/1fbc39374c9edd71208d43741e8d6abc05adb3bcbe1e6dd670de3b6b94c66cb1.png"
+          },
+          {
+            "frame": 645,
+            "width": 160,
+            "height": 144,
+            "sha256": "bc91add6fdb17999f5f1f2111b3e796f9f05b2b657e0fa7656be94c2fdf5bb98",
+            "rgbaSha256": "2409d3bd9c942970758e5253f4134d150620b1b95c0c11cd1c1594b518616f50",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/matus-action-645.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/bc91add6fdb17999f5f1f2111b3e796f9f05b2b657e0fa7656be94c2fdf5bb98.png"
+          },
+          {
+            "frame": 677,
+            "width": 160,
+            "height": 144,
+            "sha256": "74bb02aa5eabe63ed8bf6ac644df6246d3a04f55135f344590d984a4f257568f",
+            "rgbaSha256": "a84006ef14b057f9eeb75894d8fae2e2af2539478af21384f893bcd1ce197128",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/matus-action-677.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/74bb02aa5eabe63ed8bf6ac644df6246d3a04f55135f344590d984a4f257568f.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 787,
+            "width": 160,
+            "height": 144,
+            "sha256": "7d4a624f4d76c1d31648417af42fd292f159fdc090bee744a5bd0cde93cb5c47",
+            "rgbaSha256": "5f8bc3f2e9b8815d01be23394c6fa92f2dcf68b12d28b1a299462ed49da8c935",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/matus-return-787.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/7d4a624f4d76c1d31648417af42fd292f159fdc090bee744a5bd0cde93cb5c47.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 787,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "d90340010004000000000100000000000000008003c001000000000000010000000000000000d10360010000000000000000000000050000000004a0010000000000000300000000000000000001020300600460013a04180100000000ff0006000000000002010200f100000000000ee50001010000003417000000000000010000000100000000000000000000020300000040010001000100ff00"
+        },
+        "verifiedState": {
+          "score": [
+            2,
+            0
+          ],
+          "mode": 6,
+          "dunkResult": 1,
+          "dunks": 1
+        }
+      },
+      {
+        "player": "MEAT",
+        "branchId": "branch-0005",
+        "startFrame": 591,
+        "endFrame": 809,
+        "action": [
+          {
+            "frame": 635,
+            "width": 160,
+            "height": 144,
+            "sha256": "026357fa4142c32a4fd1822b699835556ec7495e483678c46742773020f97440",
+            "rgbaSha256": "4326cc9095b168c7635f18624d89b67a09c1f3c73a9b0bde465f604880840c10",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/meat-action-635.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/026357fa4142c32a4fd1822b699835556ec7495e483678c46742773020f97440.png"
+          },
+          {
+            "frame": 667,
+            "width": 160,
+            "height": 144,
+            "sha256": "670326ca02b5a0aa3d430e236381cac08a1a81054894d840ebb3064117f781ac",
+            "rgbaSha256": "ded8481669857440488b07c8e12ec3216d69eb0200865bf7d0a2b5c9299e6c92",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/meat-action-667.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/670326ca02b5a0aa3d430e236381cac08a1a81054894d840ebb3064117f781ac.png"
+          },
+          {
+            "frame": 699,
+            "width": 160,
+            "height": 144,
+            "sha256": "7431c8fd595050eec91410a381e6f97f0f508a6ccd9a61b649095e994caddb76",
+            "rgbaSha256": "77c9d1770ab1a7d9ca35daba8207c843cd802d04d5269e904f74d67e9794043d",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/meat-action-699.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/7431c8fd595050eec91410a381e6f97f0f508a6ccd9a61b649095e994caddb76.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 809,
+            "width": 160,
+            "height": 144,
+            "sha256": "702ded05ddb8686c501b46867b2c34ddc6d94534b50054a2b20864580b28e448",
+            "rgbaSha256": "8e5ad2b8dbdf97531bddca7c9260a249cf89334e14c65789ac51c5fd1130508c",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/meat-return-809.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/702ded05ddb8686c501b46867b2c34ddc6d94534b50054a2b20864580b28e448.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 809,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "de0340010005000000000100000000000000008003c001000000000000010000000000000000d60360010000000000000000000000050000000004a0010000000000000300000000000000000501020300600460013804180100000000ff0006000000000002010200ef00000000000ee60001010000003417000000000000010000000100000000000000000000020300000040010001000100ff00"
+        },
+        "verifiedState": {
+          "score": [
+            2,
+            0
+          ],
+          "mode": 6,
+          "dunkResult": 1,
+          "dunks": 1
+        }
+      },
+      {
+        "player": "BAMBI",
+        "team": "CPU",
+        "basket": "left",
+        "branchId": "branch-0006",
+        "startFrame": 665,
+        "endFrame": 913,
+        "action": [
+          {
+            "frame": 661,
+            "width": 160,
+            "height": 144,
+            "sha256": "9b953dbebcea0a21a3eef7b3c9d75be48e171c18aea30dc086f9c77278c84f77",
+            "rgbaSha256": "916c37873b9428e530f35ace02548d4b991983cffa071f0697e7e5a3f1f73a8f",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-action-661.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/9b953dbebcea0a21a3eef7b3c9d75be48e171c18aea30dc086f9c77278c84f77.png"
+          },
+          {
+            "frame": 701,
+            "width": 160,
+            "height": 144,
+            "sha256": "018cf9568142484307d9d0b01de39b87b85f439396679bddbf70e6e83be407af",
+            "rgbaSha256": "6a339cf6ff5f6c5bbef6667bd82a1bdefa87b2518166590c59badce4cbc3d313",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-action-701.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/018cf9568142484307d9d0b01de39b87b85f439396679bddbf70e6e83be407af.png"
+          },
+          {
+            "frame": 741,
+            "width": 160,
+            "height": 144,
+            "sha256": "5e43d150305454fc4a5179a149a821a5ba375153ad44984a283e18dd910ece0d",
+            "rgbaSha256": "c3172f7010e9ec43e0f71a14a7eef3eb90f4a12a4253b7ed38df6eff3db224b1",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-action-741.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/5e43d150305454fc4a5179a149a821a5ba375153ad44984a283e18dd910ece0d.png"
+          },
+          {
+            "frame": 781,
+            "width": 160,
+            "height": 144,
+            "sha256": "a80579a7cc8e56fab71d9977f318e3228cf7b76cb4813974dcb69ef8c04b6c5c",
+            "rgbaSha256": "9cd9a5f0e6642d15ad7214c4e7248b12d32f4bbba2714b431700c64486e0f8c0",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-action-781.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/a80579a7cc8e56fab71d9977f318e3228cf7b76cb4813974dcb69ef8c04b6c5c.png"
+          }
+        ],
+        "return": [
+          {
+            "frame": 814,
+            "width": 160,
+            "height": 144,
+            "sha256": "c1013b6b75e75d8cb208fc31dcc4d8ef511753aeb778945776b997cffeaf6df2",
+            "rgbaSha256": "2c57f24a82a4e194d4f7ffb7c513dc1eaf3f68a5af4bf7954492150bff3b0d9d",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-return-814.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/c1013b6b75e75d8cb208fc31dcc4d8ef511753aeb778945776b997cffeaf6df2.png"
+          },
+          {
+            "frame": 847,
+            "width": 160,
+            "height": 144,
+            "sha256": "4adf728bf44dda6d0e59db28e3e3a6581a1bc3a410daa70f9e9ff3c2be07db35",
+            "rgbaSha256": "da13a18bf7b5f62d39d83306860ada82a5cc0f6079fd7b110ad77a49f0dd6393",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-return-847.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/4adf728bf44dda6d0e59db28e3e3a6581a1bc3a410daa70f9e9ff3c2be07db35.png"
+          },
+          {
+            "frame": 880,
+            "width": 160,
+            "height": 144,
+            "sha256": "eb2ead11d9c66af39c6f434b5659f2523e17ec185af058e052bdc7a15b0babcb",
+            "rgbaSha256": "80fdb896fb25e053cbfdd1a4cdf32252f020205767021b965feeb5ba182e89d8",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-return-880.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/eb2ead11d9c66af39c6f434b5659f2523e17ec185af058e052bdc7a15b0babcb.png"
+          },
+          {
+            "frame": 913,
+            "width": 160,
+            "height": 144,
+            "sha256": "d0ffa3d9a30cb491c3e98b8301b02be8e17a3a43aac92160d3b6e0be97c88b9b",
+            "rgbaSha256": "f5e082b72f438307d2910aa94513f6be4c79741b8a0a405a7a4e9625cc600011",
+            "sampledButtons": [],
+            "path": "docs/playtests/dunks/bambi-return-913.png",
+            "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/d0ffa3d9a30cb491c3e98b8301b02be8e17a3a43aac92160d3b6e0be97c88b9b.png"
+          }
+        ],
+        "memory": {
+          "view": "memory",
+          "frame": 913,
+          "region": "wram",
+          "offset": 509,
+          "length": 156,
+          "address": "0xc1fd",
+          "hex": "080148010000000000000100000000000000001f01a001000000000000010000000000000000fa004001000e00000000000000000005000000c901c0010000000000000100000000fb0000000001020302a0006001ed005b0100000000ff02060000000001020100022b00000000000eee0000010000008e31000000000100010000000100000002000000000000000100000040010001000100ff00"
+        },
+        "verifiedState": {
+          "score": [
+            0,
+            2
+          ],
+          "mode": 6,
+          "dunkResult": 1,
+          "dunks": 1
+        }
+      }
+    ],
+    "pause": {
+      "before": {
+        "view": "memory",
+        "frame": 669,
+        "region": "wram",
+        "offset": 509,
+        "length": 156,
+        "address": "0xc1fd",
+        "hex": "060443010000000000000001000000000000fefb03bb01000000000000000000000000000000270324010000000000000000000000000000002c04b801000000000000010000000000000000010002030026044301b103180100000000ff00075f0000000002000000a101800000000f3c000000000000e1ac8c0000000000010000000000000000000000000000000000000014000001000000ff00"
+      },
+      "after": {
+        "view": "memory",
+        "frame": 729,
+        "region": "wram",
+        "offset": 509,
+        "length": 156,
+        "address": "0xc1fd",
+        "hex": "060443010000000000000001000000000000fefb03bb01000000000000000000000000000000270324010000000000000000000000000000002c04b801000000000000010000000000000000010002030026044301b103180100000000ff00075f0000000002000000a101000000000f3c000000000000e1ac8c0000000000010000000000000000000000000000000000000014000001000000ff00"
+      },
+      "stateExceptPreviousInputEqual": true
+    },
+    "resume": {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 885,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 3925.388669,
+        "gameTimeMs": 14817.29507446289
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+        "sessionId": "fb306445ce8f4755ab016e6c8b469cde",
+        "status": "recording",
+        "branchId": "branch-0007",
+        "frame": 885,
+        "totalFrames": 4759,
+        "bytesUsed": 10807862,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 9673,
+        "eventDigest": "5a023de6f32468d4b248a1b407e28285c5ee54ccac869894e9f6768727a47843",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 801
+          },
+          {
+            "branchId": "branch-0002",
+            "frame": 1011,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0003",
+            "frame": 815,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0004",
+            "frame": 787,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0005",
+            "frame": 809,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0006",
+            "frame": 913,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0007",
+            "frame": 885,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-e5e1c3bf9b7f47a894bfd61b1bcaabb3"
+          }
+        ]
+      },
+      "startFrame": 741,
+      "advancedFrames": 144,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 885,
+          "width": 160,
+          "height": 144,
+          "sha256": "91beac8401ff78c60793bdc6296d7f9da146a9d4fd66b2e5e345fd8e2a329c0c",
+          "rgbaSha256": "4fc1d43e7f505c6624b3d22f51901dc9d2268f238f34811f3a1d8312206db47c",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/91beac8401ff78c60793bdc6296d7f9da146a9d4fd66b2e5e345fd8e2a329c0c.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+        "sessionId": "fb306445ce8f4755ab016e6c8b469cde",
+        "branchId": "branch-0007",
+        "fromActionIndex": 646,
+        "toActionIndex": 791,
+        "fromFrame": 741,
+        "toFrame": 885,
+        "fromPrefixPin": {
+          "eventCount": 9383,
+          "eventDigest": "0912ec3191beee2cc619f74801f47155da6b7132dfb249312842d0cfb09d85b0",
+          "byteLength": 4469615,
+          "sha256": "0a84043c83af925764ae398f718e9b22525844fcb885439c701bab9465fe2529"
+        },
+        "prefixPin": {
+          "eventCount": 9673,
+          "eventDigest": "5a023de6f32468d4b248a1b407e28285c5ee54ccac869894e9f6768727a47843",
+          "byteLength": 4593217,
+          "sha256": "4f8c5c3ea839eeb34304a8b17967af9499de170ffcc9194b6aae0f69f44a334c"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 144,
+        "startFrame": 741,
+        "frame": 885,
+        "advancedFrames": 144,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+          "sessionId": "fb306445ce8f4755ab016e6c8b469cde",
+          "branchId": "branch-0007",
+          "fromActionIndex": 646,
+          "toActionIndex": 791,
+          "fromFrame": 741,
+          "toFrame": 885,
+          "fromPrefixPin": {
+            "eventCount": 9383,
+            "eventDigest": "0912ec3191beee2cc619f74801f47155da6b7132dfb249312842d0cfb09d85b0",
+            "byteLength": 4469615,
+            "sha256": "0a84043c83af925764ae398f718e9b22525844fcb885439c701bab9465fe2529"
+          },
+          "prefixPin": {
+            "eventCount": 9673,
+            "eventDigest": "5a023de6f32468d4b248a1b407e28285c5ee54ccac869894e9f6768727a47843",
+            "byteLength": 4593217,
+            "sha256": "4f8c5c3ea839eeb34304a8b17967af9499de170ffcc9194b6aae0f69f44a334c"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    },
+    "quitToPicker": {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 705,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 3958.12671,
+        "gameTimeMs": 11803.607940673828
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+        "sessionId": "fb306445ce8f4755ab016e6c8b469cde",
+        "status": "recording",
+        "branchId": "branch-0008",
+        "frame": 705,
+        "totalFrames": 4807,
+        "bytesUsed": 11123206,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 64,
+          "maxBytes": 67108864,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 9778,
+        "eventDigest": "1623589884495be4fcf2b6c870674441e38d3838f4c244301cdb17964d00d4a7",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 801
+          },
+          {
+            "branchId": "branch-0002",
+            "frame": 1011,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0003",
+            "frame": 815,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0004",
+            "frame": 787,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0005",
+            "frame": 809,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0006",
+            "frame": 913,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-cbac7fd922ff474592cba540a5d89c30"
+          },
+          {
+            "branchId": "branch-0007",
+            "frame": 885,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-e5e1c3bf9b7f47a894bfd61b1bcaabb3"
+          },
+          {
+            "branchId": "branch-0008",
+            "frame": 705,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "fb306445ce8f4755ab016e6c8b469cde",
+            "checkpointId": "checkpoint-e5e1c3bf9b7f47a894bfd61b1bcaabb3"
+          }
+        ]
+      },
+      "startFrame": 705,
+      "advancedFrames": 0,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 705,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ],
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    },
+    "clips": [
+      {
+        "name": "magic",
+        "result": {
+          "path": "docs/playtests/dunks/magic-dunk.gif",
+          "sha256": "cb66b301a6089431d1d9b363b00980cf031c942f9f561c2ca39c240cda4443aa",
+          "frameCount": 103,
+          "sourceFrameCount": 205,
+          "startFrame": 597,
+          "endFrame": 801,
+          "durationMs": 3430,
+          "branchId": "branch-0001",
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+          "width": 160,
+          "height": 144,
+          "recordingFinalFrame": 801,
+          "lastEvidenceFrame": 801,
+          "partialRecording": false,
+          "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/magic-dunk.gif"
+        }
+      },
+      {
+        "name": "torres-block",
+        "result": {
+          "path": "docs/playtests/dunks/torres-block-dunk.gif",
+          "sha256": "9be95a24db39b965b6a0e15e13875151e7032c85237086b24fcae4721f38bd73",
+          "frameCount": 110,
+          "sourceFrameCount": 213,
+          "startFrame": 799,
+          "endFrame": 1011,
+          "durationMs": 3570,
+          "branchId": "branch-0002",
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+          "width": 160,
+          "height": 144,
+          "recordingFinalFrame": 1011,
+          "lastEvidenceFrame": 1011,
+          "partialRecording": false,
+          "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/torres-block-dunk.gif"
+        }
+      },
+      {
+        "name": "bambi-left",
+        "result": {
+          "path": "docs/playtests/dunks/bambi-left-dunk.gif",
+          "sha256": "73f9f8845fa7848cc997cd09acbe93ac0da131d1a2f9393d6d218494a00d474d",
+          "frameCount": 129,
+          "sourceFrameCount": 249,
+          "startFrame": 665,
+          "endFrame": 913,
+          "durationMs": 4170,
+          "branchId": "branch-0006",
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery",
+          "width": 160,
+          "height": 144,
+          "recordingFinalFrame": 913,
+          "lastEvidenceFrame": 913,
+          "partialRecording": false,
+          "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/bambi-left-dunk.gif"
+        }
+      }
+    ],
+    "courtVRAM": "docs/playtests/dunks/vram-evidence.json",
+    "finalInspection": {
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "sizeBytes": 2097152,
+      "sha256": "25f922d0fc14fd401490a66a9aaa999446d4886ecad334de06146d2c32ba5cd3",
+      "title": "NICASOURCEJAM",
+      "colorMode": "gbc-only",
+      "colorFlag": 192,
+      "cartridgeType": 30,
+      "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+      "mapper": "MBC5",
+      "romSizeCode": 6,
+      "declaredRomSizeBytes": 2097152,
+      "ramSizeCode": 3,
+      "declaredRamSizeBytes": 32768,
+      "nintendoLogoValid": true,
+      "headerChecksum": 168,
+      "computedHeaderChecksum": 168,
+      "headerChecksumValid": true,
+      "valid": true
+    }
+  },
+  "browser": {
+    "sourceRevision": "6db01815f082bf5e4a7ad23cf322b07fb6232300a1dffaecac88e0f04ce9fb2a",
+    "exportIdentity": {
+      "rom": {
+        "path": "rom/nicasource-jam.gbc",
+        "sha256": "6ae8c834fb764304bae178f317565e76c2f6a719182211d08df614c9ddf19cb8",
+        "sizeBytes": 2097152
+      },
+      "index": {
+        "path": "index.html",
+        "sha256": "b912aa6d1bc9978364e50d230083016b73f2e74f308fca4062fd3f6cfa98bb70",
+        "sizeBytes": 1174
+      },
+      "inventorySha256": "f81e848b8e63bcf9acf2497ff82b25344e233af8514f3d3fb5696c50268a81a5",
+      "files": 9,
+      "logicalBytes": 2277348
+    },
+    "status": {
+      "success": true,
+      "action": "status",
+      "preview": {
+        "url": "http://127.0.0.1:59882/8d627d4231fa3c56b3a5bba5bc1e473aba1264c857e26a28c0db22f02fadddcb/",
+        "port": 59882,
+        "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+        "reused": true,
+        "listenerId": "2ed0628499cfa2bdcaa497986c28c9b3",
+        "startedAt": "2026-10-29T15:34:06.709Z",
+        "kind": "in-process-http",
+        "listening": true,
+        "closureState": "open",
+        "annotations": {
+          "injected": true,
+          "fingerprint": "25f754b74b096e5acdcff22b8cfc1ce28b41396c5c8374757e063d7fd4a79419"
+        }
+      },
+      "players": [
+        {
+          "id": "f5b529ff-0ba9-4286-adf0-87fdf2fccd17",
+          "frame": 5547,
+          "paused": false,
+          "lastSeen": 1793300835245,
+          "input": {
+            "generation": 47,
+            "ready": true,
+            "reason": ""
+          },
+          "recording": {
+            "generation": 0,
+            "available": true,
+            "visible": true,
+            "owner": null,
+            "phase": "idle",
+            "pending": false
+          }
+        }
+      ],
+      "identity": {
+        "romSha256": "6ae8c834fb764304bae178f317565e76c2f6a719182211d08df614c9ddf19cb8",
+        "runtimeSha256": "69aa17be45fec5fde585af4f39ed850b5d64107ec094a6482f316fef2fe7c945",
+        "sourceRevision": "6db01815f082bf5e4a7ad23cf322b07fb6232300a1dffaecac88e0f04ce9fb2a"
+      },
+      "input": {
+        "accepting": true
+      }
+    },
+    "observed": [
+      "Fresh official final export boots to picker",
+      "MAGIC/MATUS vs BAMBI/TORRES Warm-up lineup",
+      "Enter+X triggers MAGIC Dunk Cam near right rim",
+      "P pauses and resumes the close-up",
+      "Made basket returns to court at 02:00 with ball retrieval"
+    ],
+    "screenshots": [
+      "docs/playtests/dunks/browser-dunk-cam.png",
+      "docs/playtests/dunks/browser-dunk-peak.png",
+      "docs/playtests/dunks/browser-return.png"
+    ],
+    "noVideoRecording": true,
+    "savedReviewState": {
+      "success": true,
+      "action": "capture_state",
+      "preview": {
+        "url": "http://127.0.0.1:59882/8d627d4231fa3c56b3a5bba5bc1e473aba1264c857e26a28c0db22f02fadddcb/",
+        "port": 59882,
+        "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+        "reused": true,
+        "listenerId": "2ed0628499cfa2bdcaa497986c28c9b3",
+        "startedAt": "2026-10-29T15:34:06.709Z",
+        "kind": "in-process-http",
+        "listening": true,
+        "closureState": "open",
+        "annotations": {
+          "injected": true,
+          "fingerprint": "25f754b74b096e5acdcff22b8cfc1ce28b41396c5c8374757e063d7fd4a79419"
+        }
+      },
+      "state": {
+        "id": "4b5b2a682f8ea8943f067ce83e376fe8493e8fc19c60e3a3b3ea2b77c7993aa1",
+        "title": "NICASOURCE JAM",
+        "frame": 12907,
+        "createdAt": "2026-10-29T19:09:18.484Z"
+      },
+      "paused": true
+    },
+    "handoff": "Wrapper resumed after capture; native game remains paused. Press P to resume."
+  },
+  "host": {
+    "command": "sh scripts/test.sh",
+    "results": "docs/playtests/dunks/host-tests.txt",
+    "dunkCases": 3072,
+    "blockTimingCases": 512
+  },
+  "budget": {
+    "command": "sh scripts/build.sh export && node scripts/check-native-sprite-budget.mjs",
+    "usedPerReservedBankSpan": 190,
+    "limit": 192
+  },
+  "limits": [
+    "Physical Chromatic not tested",
+    "Ordinary missed dunks are covered by host simulation, not the retained final native scenarios",
+    "Camera zoom is precomposed native tile animation, not continuous hardware scaling",
+    "Practice build still lacks full match clocks, final uniforms, turbo meter, hot hand, sound and persistent records"
+  ]
+}

@@ -3,13 +3,53 @@
     "name": "MATUS",
     "pages": [
       {
-        "tiles": 102,
+        "tiles": 104,
         "bank0": 64,
-        "bank1": 38
+        "bank1": 40
       },
       {
-        "tiles": 58,
-        "bank0": 58,
+        "tiles": 59,
+        "bank0": 59,
+        "bank1": 0
+      },
+      {
+        "tiles": 64,
+        "bank0": 64,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "MAGIC",
+    "pages": [
+      {
+        "tiles": 110,
+        "bank0": 64,
+        "bank1": 46
+      },
+      {
+        "tiles": 59,
+        "bank0": 59,
+        "bank1": 0
+      },
+      {
+        "tiles": 61,
+        "bank0": 61,
+        "bank1": 0
+      }
+    ]
+  },
+  {
+    "name": "BAMBI",
+    "pages": [
+      {
+        "tiles": 111,
+        "bank0": 64,
+        "bank1": 47
+      },
+      {
+        "tiles": 63,
+        "bank0": 63,
         "bank1": 0
       },
       {
@@ -20,61 +60,21 @@
     ]
   },
   {
-    "name": "MAGIC",
-    "pages": [
-      {
-        "tiles": 107,
-        "bank0": 64,
-        "bank1": 43
-      },
-      {
-        "tiles": 58,
-        "bank0": 58,
-        "bank1": 0
-      },
-      {
-        "tiles": 60,
-        "bank0": 60,
-        "bank1": 0
-      }
-    ]
-  },
-  {
-    "name": "BAMBI",
-    "pages": [
-      {
-        "tiles": 108,
-        "bank0": 64,
-        "bank1": 44
-      },
-      {
-        "tiles": 62,
-        "bank0": 62,
-        "bank1": 0
-      },
-      {
-        "tiles": 62,
-        "bank0": 62,
-        "bank1": 0
-      }
-    ]
-  },
-  {
     "name": "TORRES",
     "pages": [
       {
-        "tiles": 103,
+        "tiles": 106,
         "bank0": 64,
-        "bank1": 39
+        "bank1": 42
       },
       {
-        "tiles": 62,
-        "bank0": 62,
+        "tiles": 63,
+        "bank0": 63,
         "bank1": 0
       },
       {
-        "tiles": 62,
-        "bank0": 62,
+        "tiles": 63,
+        "bank0": 63,
         "bank1": 0
       }
     ]
@@ -83,18 +83,18 @@
     "name": "CHOMPA",
     "pages": [
       {
-        "tiles": 107,
+        "tiles": 110,
         "bank0": 64,
-        "bank1": 43
+        "bank1": 46
       },
       {
-        "tiles": 58,
-        "bank0": 58,
+        "tiles": 59,
+        "bank0": 59,
         "bank1": 0
       },
       {
-        "tiles": 62,
-        "bank0": 62,
+        "tiles": 63,
+        "bank0": 63,
         "bank1": 0
       }
     ]
@@ -103,18 +103,18 @@
     "name": "MEAT",
     "pages": [
       {
-        "tiles": 106,
+        "tiles": 109,
         "bank0": 64,
-        "bank1": 42
+        "bank1": 45
       },
       {
-        "tiles": 59,
-        "bank0": 59,
+        "tiles": 60,
+        "bank0": 60,
         "bank1": 0
       },
       {
-        "tiles": 59,
-        "bank0": 59,
+        "tiles": 60,
+        "bank0": 60,
         "bank1": 0
       }
     ]

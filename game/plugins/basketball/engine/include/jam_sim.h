@@ -27,6 +27,15 @@
 #define JAM_LOOSE 3
 #define JAM_RESET 4
 #define JAM_FINISH 5
+#define JAM_INBOUND 6
+#define JAM_DUNK 7
+#define JAM_DUNK_IMPACT 28
+#define JAM_DUNK_SCORE 34
+#define JAM_DUNK_END 64
+#define JAM_DUNK_PENDING 0
+#define JAM_DUNK_MADE 1
+#define JAM_DUNK_MISSED 2
+#define JAM_DUNK_BLOCKED 3
 #define JAM_MOVE_LEFT 1
 #define JAM_MOVE_RIGHT 2
 #define JAM_MOVE_UP 4
@@ -49,6 +58,8 @@
 #define JAM_MSG_SHOVE 11
 #define JAM_MSG_RUNOVER 12
 #define JAM_MSG_STAND 13
+#define JAM_MSG_INBOUND 14
+#define JAM_MSG_DUNK 15
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -102,13 +113,29 @@ typedef struct {
     uint8_t scored, block_attempts, intercept_attempts, launch_height;
     uint16_t rng, possession_time, passes, steals, shots, rebounds, baskets, blocks;
     uint16_t steal_attempts,shoves,runovers;
+    uint8_t controlled, inbounder, inbound_receiver, inbound_phase, inbound_time, inbound_pass;
+    uint8_t dunk_time, dunk_result, dunk_block_time;
+    uint16_t dunk_attempts, dunks;
+    uint8_t dunk_defender, dunk_contests;
 } jam_game_t;
 
 void jam_init(jam_game_t *g) JAM_BANKED;
+void jam_tipoff(jam_game_t *g) JAM_BANKED;
+void jam_begin_inbound(jam_game_t *g,uint8_t next_team) JAM_BANKED;
+void jam_inbound_update(jam_game_t *g,uint8_t pressed) JAM_BANKED;
+void jam_inbound_return(jam_game_t *g) JAM_BANKED;
 uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED;
 uint8_t jam_move_speed(const jam_game_t *g, uint8_t who, uint8_t turbo) JAM_BANKED;
 uint8_t jam_shot_chance(const jam_game_t *g, uint8_t who, uint8_t charge) JAM_BANKED;
 uint8_t jam_jump_height(const jam_game_t *g, uint8_t who) JAM_BANKED;
+uint8_t jam_roll_percent(jam_game_t *g) JAM_BANKED;
+uint8_t jam_dunk_range(const jam_game_t *g,uint8_t who) JAM_BANKED;
+uint8_t jam_dunk_chance(const jam_game_t *g,uint8_t who) JAM_BANKED;
+uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED;
+uint8_t jam_dunk_jump(const jam_game_t *g) JAM_BANKED;
+void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED;
+int16_t jam_dunk_view_x(const jam_game_t *g,int16_t world_x,int16_t avatar_q8) JAM_BANKED;
+int16_t jam_dunk_view_y(const jam_game_t *g,int16_t world_y,uint8_t height) JAM_BANKED;
 /* Each caller uses its own ROM-bank-local constant table. */
 #define jam_body(g,who) (&jam_bodies[(g)->setup.roster[(who)]])
 void jam_shove(jam_game_t *g,uint8_t p) JAM_BANKED;

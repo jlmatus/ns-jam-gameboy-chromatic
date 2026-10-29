@@ -1,0 +1,150 @@
+{
+  "name": "MATUS",
+  "version": 2,
+  "width": 32,
+  "height": 32,
+  "status": "Revised face proportions for user review; v1 preserved",
+  "method": "Deliberately authored 32x32 whole cells from the original photo and v1 study; balanced front three-quarter face, unchanged palette.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      14,
+      "##"
+    ],
+    [
+      10,
+      "####.####"
+    ],
+    [
+      8,
+      "##############"
+    ],
+    [
+      7,
+      "#################"
+    ],
+    [
+      6,
+      "###################"
+    ],
+    [
+      6,
+      "#####soos##########"
+    ],
+    [
+      5,
+      "#####sooooosss######"
+    ],
+    [
+      5,
+      "####soooooooooos####"
+    ],
+    [
+      5,
+      "###soooooooooooos###"
+    ],
+    [
+      5,
+      "###oooooooooooooos##"
+    ],
+    [
+      5,
+      "##soooooooooooooos##"
+    ],
+    [
+      5,
+      "##soooooooooooooos##"
+    ],
+    [
+      4,
+      "s##s#####ooooo#####s#"
+    ],
+    [
+      4,
+      "os#sosssooosooosssos#so"
+    ],
+    [
+      4,
+      "os#soo#oooosoooo#oos#so"
+    ],
+    [
+      4,
+      "os#sosssooosooosssos#so"
+    ],
+    [
+      4,
+      "os#soooooososoooos#s#so"
+    ],
+    [
+      5,
+      "s#soooooososoooos#s#"
+    ],
+    [
+      5,
+      "s#sooooossosoooos#s#"
+    ],
+    [
+      6,
+      "#sooooooss#sooooss#"
+    ],
+    [
+      6,
+      "#sooooss#####sooss#"
+    ],
+    [
+      6,
+      "#sooos#ooooo#sooss#"
+    ],
+    [
+      6,
+      "#sooo#osssssos#oos#"
+    ],
+    [
+      7,
+      "#soo#ooooooo#oos#"
+    ],
+    [
+      8,
+      "#soooo###ooooos#"
+    ],
+    [
+      8,
+      "#soosooooossoos#"
+    ],
+    [
+      9,
+      "#oo#sssss#ooo#"
+    ],
+    [
+      10,
+      "#ss#######ss#"
+    ],
+    [
+      11,
+      "#sssssssss#"
+    ],
+    [
+      12,
+      "sssoosss"
+    ],
+    [
+      0,
+      ""
+    ]
+  ]
+}

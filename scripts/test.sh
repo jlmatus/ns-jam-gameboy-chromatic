@@ -7,5 +7,7 @@ mkdir -p build/tests
   -Igame/plugins/basketball/engine/include tests/jam_sim_test.c \
   game/plugins/basketball/engine/src/core/jam_sim.c \
   game/plugins/basketball/engine/src/core/jam_contact.c \
+  game/plugins/basketball/engine/src/core/jam_restart.c \
+  game/plugins/basketball/engine/src/core/jam_dunk.c \
   game/plugins/basketball/engine/src/core/jam_menu.c -o build/tests/jam-sim-test
 exec build/tests/jam-sim-test

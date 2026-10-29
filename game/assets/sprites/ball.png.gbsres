@@ -25,7 +25,7 @@
                   "flipX": false,
                   "flipY": false,
                   "palette": 0,
-                  "paletteIndex": 2,
+                  "paletteIndex": 6,
                   "objPalette": "OBP0",
                   "priority": false
                 },
@@ -38,7 +38,38 @@
                   "flipX": false,
                   "flipY": false,
                   "palette": 0,
-                  "paletteIndex": 2,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "67329816-787a-40ae-942c-d37e0462d340",
+              "tiles": [
+                {
+                  "id": "c8c88b08-eb7e-4731-b7d9-548d9033d0fd",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "74954d5f-512f-40e3-becc-1476cd04396c",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
                   "objPalette": "OBP0",
                   "priority": false
                 }
@@ -112,7 +143,7 @@
       ]
     }
   ],
-  "numTiles": 2,
+  "numTiles": 6,
   "canvasOriginX": 0,
   "canvasOriginY": 0,
   "canvasWidth": 16,
@@ -123,7 +154,7 @@
   "boundsHeight": 16,
   "animSpeed": 15,
   "filename": "ball.png",
-  "width": 16,
+  "width": 32,
   "height": 16,
-  "checksum": "a10989ed6797e052c3fa0fb383cd4ac6f8892aa5"
+  "checksum": "d8d5dce55dbfc949b21340206220a795f14bdae8"
 }

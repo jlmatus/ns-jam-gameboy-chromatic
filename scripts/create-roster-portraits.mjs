@@ -1,7 +1,7 @@
 // Pack approved 32x32 whole-cell portraits into native 2bpp window tiles.
 // No resampling or edits to the approved source cells; empty cells use outline color.
 import fs from 'node:fs';
-const paths=['matus-v1','magic-v1','bambi-v1','torres-v1','chompa-v2','meat-v1'];
+const paths=JSON.parse(fs.readFileSync('art/ui/scouting-cards.json','utf8')).players.map(p=>p.source);
 const packed=[], palettes=[];
 for(const path of paths) {
   const p=JSON.parse(fs.readFileSync(`art/portraits/${path}/pixels.json`,'utf8'));
