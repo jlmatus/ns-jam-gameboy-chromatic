@@ -1,0 +1,43 @@
+{
+  "romSha256": "2e131016615e89c4fc6e6d79a23ca271382df3fd3d447008ead6ae7a015aaca2",
+  "nativeFrames": 991,
+  "sampleRate": 48000,
+  "sampleFrames": 793377,
+  "channels": 2,
+  "peak": 6656,
+  "rms": 603.580449138608,
+  "nonzeroSamples": 126008,
+  "frameChecks": [
+    {
+      "frame": 676,
+      "expected": "158845e3fe33ef2dc24560c50b46650612d711f65156969af8749b50bb5a35a9",
+      "actual": "158845e3fe33ef2dc24560c50b46650612d711f65156969af8749b50bb5a35a9"
+    },
+    {
+      "frame": 691,
+      "expected": "50f37cac7d8608f8c893a35a94a1e92a21933e4acf92a26a7dfe087431d57632",
+      "actual": "50f37cac7d8608f8c893a35a94a1e92a21933e4acf92a26a7dfe087431d57632"
+    },
+    {
+      "frame": 706,
+      "expected": "bd7baeed29c841811d530890147b11fe0912d24637a765452c1af76389f789a2",
+      "actual": "bd7baeed29c841811d530890147b11fe0912d24637a765452c1af76389f789a2"
+    },
+    {
+      "frame": 721,
+      "expected": "19a999bb772976f79d6c02bd0cc479a4baa2bb3460479315860254250b9f042c",
+      "actual": "19a999bb772976f79d6c02bd0cc479a4baa2bb3460479315860254250b9f042c"
+    },
+    {
+      "frame": 736,
+      "expected": "e6dc4b987ab37610335490a1907794289eeebfb30d879fc916a0f1128e7bf767",
+      "actual": "e6dc4b987ab37610335490a1907794289eeebfb30d879fc916a0f1128e7bf767"
+    },
+    {
+      "frame": 751,
+      "expected": "fd0f48fcaa869f75b637d6ed2646de5e97ad17f1fd72cefef386605008ab6499",
+      "actual": "fd0f48fcaa869f75b637d6ed2646de5e97ad17f1fd72cefef386605008ab6499"
+    }
+  ],
+  "wavSha256": "d8432616fe35b7a41ee04391ae3468388fb1e5edb9b1d2c0b95103890741ef71"
+}

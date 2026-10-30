@@ -1,5 +1,6 @@
 #include "jam_sim.h"
 #include "jam_menu.h"
+#include "jam_audio.h"
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -115,7 +116,7 @@ static void tap_menu(jam_menu_t *m,uint8_t key) {
 static void selection_flow(void) {
     jam_menu_t m;
     jam_game_t g,before;
-    uint8_t a,b,c,d,level,i, count=0;
+    uint8_t a,b,c,d,level,length,i, count=0;
     uint16_t combinations=0;
     jam_menu_init(&m,0);
     tap_menu(&m,JAM_MOVE_LEFT);assert(m.cursor==5);
@@ -124,7 +125,7 @@ static void selection_flow(void) {
     for(a=0;a<6;a++)for(b=0;b<6;b++)if(b!=a)
     for(c=0;c<6;c++)if(c!=a && c!=b)
     for(d=0;d<6;d++)if(d!=a && d!=b && d!=c)
-    for(level=0;level<3;level++) {
+    for(level=0;level<3;level++)for(length=0;length<3;length++) {
         uint8_t wanted[4]={a,b,c,d};
         jam_menu_init(&m,0);
         for(i=0;i<4;i++) {
@@ -134,14 +135,17 @@ static void selection_flow(void) {
         }
         assert(m.stage==JAM_MENU_DIFFICULTY);
         while(m.cursor!=level)tap_menu(&m,JAM_MOVE_DOWN);
+        tap_menu(&m,JAM_A);assert(m.stage==JAM_MENU_PERIODS && m.cursor==2);
+        while(m.cursor!=length)tap_menu(&m,JAM_MOVE_DOWN);
         tap_menu(&m,JAM_A);assert(m.stage==JAM_MENU_REVIEW);
         assert(jam_menu_update(&m,JAM_TURBO));
         assert(jam_init_lineup(&g,&m.setup));
         assert(!memcmp(g.setup.roster,wanted,4) && g.setup.difficulty==level);
+        assert(g.setup.periods==(length==2?4:length+1));
         {int16_t start=g.players[0].x;jam_update(&g,JAM_MOVE_RIGHT);assert(g.players[0].x>start);}
         combinations++;
     }
-    assert(combinations==1080);
+    assert(combinations==3240);
     /* Backtracking skips earlier picks and requires review before play. */
     jam_menu_init(&m,0);tap_menu(&m,JAM_A);tap_menu(&m,JAM_A);
     tap_menu(&m,JAM_B);assert(m.stage==1 && m.cursor!=m.setup.roster[0]);
@@ -153,7 +157,7 @@ static void selection_flow(void) {
     assert(!jam_init_lineup(&g,&m.setup) && !memcmp(&g,&before,sizeof(g)));
     m.setup.roster[1]=255;assert(!jam_init_lineup(&g,&m.setup));
     m.setup.roster[1]=0;m.setup.difficulty=3;assert(!jam_init_lineup(&g,&m.setup));
-    puts("PASS: 1080 lineup/difficulty combinations, no duplicates, backtracking, confirm, invalid setup");
+    puts("PASS: 3240 lineup/difficulty/length combinations, no duplicates, backtracking, confirm, invalid setup");
 }
 static void ratings_pages(void) {
     jam_menu_t m;
@@ -177,7 +181,7 @@ static void ratings_pages(void) {
 }
 static void cpu_blocking_and_levels(void) {
     jam_game_t g;
-    jam_setup_t setup={{0,2,1,3},JAM_PICKUP};
+    jam_setup_t setup={{0,2,1,3},JAM_PICKUP,4};
     uint16_t seed, cpu_blocks=0,total_rebounds=0;
     uint8_t level,p;
     for(seed=1;seed<=128;seed++) {
@@ -202,7 +206,7 @@ static void cpu_blocking_and_levels(void) {
     puts("PASS: CPU shot blocking and 12000-update soak at each difficulty");
 }
 static void selected(jam_game_t *g,uint8_t who) {
-    jam_setup_t setup={{0,0,0,0},JAM_PICKUP};
+    jam_setup_t setup={{0,0,0,0},JAM_PICKUP,4};
     uint8_t i,slot=1;
     setup.roster[0]=who;
     for(i=0;i<6 && slot<4;i++)if(i!=who)setup.roster[slot++]=i;
@@ -476,6 +480,8 @@ static void contact_soak(void) {
             else assert(g.owner==-1 || g.mode==JAM_RESET || g.mode==JAM_INBOUND);
             if(g.mode==JAM_PASS || g.mode==JAM_SHOT)assert(g.duration && g.flight<g.duration);
             for(p=0;p<4;p++) {
+                assert(g.turbo_energy[p]<=JAM_TURBO_MAX && g.turbo_delay[p]<=JAM_TURBO_DELAY);
+                assert(g.turbo_exhausted[p]<=1 && (g.turbo_energy[p] || g.turbo_exhausted[p]));
                 assert(g.players[p].stun<=18 && g.players[p].contact_cooldown<=40);
                 assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4);
                 assert(g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
@@ -605,7 +611,223 @@ static void arcade_dunks(void){
     assert(!low.blocks && !(low.block_attempts&1));
     printf("PASS: 3072 dunk attempts across every player/basket; MAGIC %u vs MATUS %u home makes; block timing MAGIC %u vs MATUS %u /512; turbo trigger, range/depth, fallback shot, CPU dunk, pause, one score below rim, misses/blocks, preserved positions, landing/inbound\n",makes[1][0],makes[0][0],high_blocks,low_blocks);
 }
+static void turbo_system(void) {
+    jam_game_t g,walk,before;
+    uint8_t p,id,n;
+    for(id=0;id<6;id++) {
+        selected(&g,id);isolate(&g);
+        for(p=0;p<4;p++)assert(g.turbo_energy[p]==100 && !g.turbo_exhausted[p]);
+        step(&g,20,JAM_TURBO);assert(g.turbo_energy[0]==100 && !g.players[0].turbo);
+        walk=g;jam_update(&walk,JAM_MOVE_LEFT);jam_update(&g,JAM_MOVE_LEFT|JAM_TURBO);
+        assert(walk.players[0].x-g.players[0].x==2 && g.turbo_energy[0]==99);
+        step(&g,99,JAM_MOVE_LEFT|JAM_TURBO);
+        assert(!g.turbo_energy[0] && g.turbo_exhausted[0]);
+        step(&g,100,JAM_MOVE_RIGHT|JAM_TURBO);
+        assert(!g.turbo_energy[0] && g.turbo_exhausted[0] && !g.players[0].turbo);
+        step(&g,12,0);assert(g.turbo_energy[0]==24 && g.turbo_exhausted[0]);
+        jam_update(&g,0);assert(g.turbo_energy[0]==26 && !g.turbo_exhausted[0]);
+        step(&g,60,0);assert(g.turbo_energy[0]==100);
+    }
+    jam_init(&g);isolate(&g);g.turbo_energy[0]=50;
+    jam_update(&g,JAM_MOVE_LEFT|JAM_TURBO);assert(g.turbo_energy[0]==49);
+    step(&g,19,0);assert(g.turbo_energy[0]==49);
+    jam_update(&g,0);assert(g.turbo_energy[0]==51);
+    jam_update(&g,JAM_PAUSE);before=g;step(&g,100,JAM_TURBO|JAM_MOVE_RIGHT);
+    assert(!memcmp(g.turbo_energy,before.turbo_energy,4) && !memcmp(g.turbo_delay,before.turbo_delay,4));
+    assert(!memcmp(g.turbo_exhausted,before.turbo_exhausted,4));
+    jam_update(&g,JAM_PAUSE);
+    for(p=0;p<4;p++){g.turbo_energy[p]=40;g.turbo_delay[p]=0;}
+    jam_begin_inbound(&g,0);step(&g,10,JAM_TURBO);
+    for(p=0;p<4;p++)assert(g.turbo_energy[p]==60);
+    /* Catching changes whose reserve is used; it never transfers/refills it. */
+    jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=100*4;
+    g.turbo_energy[0]=0;g.turbo_exhausted[0]=1;g.turbo_energy[1]=32;
+    jam_update(&g,JAM_A|JAM_TURBO);step(&g,g.duration-1,JAM_TURBO);
+    assert(g.controlled==1 && !g.turbo_energy[0] && g.turbo_energy[1]>32 && g.turbo_energy[1]<100);
+    before=g;jam_update(&g,JAM_TURBO);assert(g.turbo_energy[1]==before.turbo_energy[1]);
+    /* A low reserve cannot be bypassed through stationary combo actions. */
+    dunk_fixture(&g,1,0,1);g.turbo_energy[0]=11;
+    assert(!jam_try_dunk(&g,0) && !g.dunk_attempts && g.turbo_energy[0]==11);
+    g.turbo_energy[0]=12;assert(jam_try_dunk(&g,0));
+    assert(!g.turbo_energy[0] && g.turbo_exhausted[0]);before=g;
+    step(&g,JAM_DUNK_END,JAM_TURBO);
+    assert(!memcmp(g.turbo_energy,before.turbo_energy,4) && !memcmp(g.turbo_delay,before.turbo_delay,4));
+    dunk_fixture(&g,1,0,1);g.turbo_energy[0]=0;g.turbo_exhausted[0]=1;
+    jam_update(&g,JAM_TURBO|JAM_B);assert(g.mode==JAM_HELD && g.charge==1 && !g.dunk_attempts);
+    defensive_fixture(&g,1,0);g.setup.roster[2]=3;g.turbo_energy[0]=7;
+    jam_shove(&g,0);assert(!g.shoves && !g.players[2].stun && g.turbo_energy[0]==7);
+    g.turbo_energy[0]=8;jam_shove(&g,0);
+    assert(g.shoves==1 && g.players[2].stun && !g.turbo_energy[0] && g.turbo_exhausted[0]);
+    /* CPU power charges and finishing obey the same reserve. */
+    dunk_fixture(&g,2,2,1);g.players[2].x=160*4;g.players[2].cooldown=100;
+    jam_update(&g,0);assert(g.players[2].turbo && g.turbo_energy[2]==99);
+    g.turbo_energy[2]=0;g.turbo_exhausted[2]=1;g.tick=0;
+    jam_update(&g,0);assert(!g.players[2].turbo && !g.turbo_energy[2]);
+    dunk_fixture(&g,1,1,1);g.controlled=0;g.turbo_energy[1]=0;g.turbo_exhausted[1]=1;
+    g.turbo_delay[1]=JAM_TURBO_DELAY;
+    for(n=0;n<18;n++)jam_update(&g,0);
+    assert(g.mode==JAM_SHOT && !g.dunk_attempts);
+    assert(!jam_turbo_spend(&g,255,1) && !jam_turbo_available(&g,255));
+    puts("PASS: turbo reserves for six profiles; real speed boost, full depletion, held-empty lockout, delayed/capped recovery, 25-percent rearm, pause/cinematic freeze, inbounds recovery, catch-based reserve handoff, budgeted dunks/shoves and CPU fairness");
+}
+static void match_quarters(void) {
+    jam_game_t g,before;
+    uint8_t q,mode,p;
+    uint32_t frames;
+    jam_setup_t setup={{4,5,1,0},JAM_WARM_UP,4};
+    jam_init_lineup(&g,&setup);
+    assert(g.quarter==1 && g.clock_seconds==180 && !g.clock_fraction && g.match_phase==JAM_MATCH_LIVE);
+    jam_match_clock(&g,59);assert(g.clock_seconds==180);
+    jam_match_clock(&g,1);assert(g.clock_seconds==179);
+    /* Chunking and slow simulation/render loops cannot change elapsed time. */
+    before=g;jam_match_clock(&g,599);
+    for(frames=0;frames<599;frames++)jam_match_clock(&before,1);
+    assert(g.clock_seconds==before.clock_seconds && g.clock_fraction==before.clock_fraction);
+    g.paused=1;before=g;jam_match_clock(&g,3600);
+    assert(!memcmp(&g,&before,sizeof(g)));g.paused=0;
+    for(mode=JAM_RESET;mode<=JAM_DUNK;mode++)if(mode!=JAM_FINISH){
+        g.mode=mode;before=g;jam_match_clock(&g,3600);assert(!memcmp(&g,&before,sizeof(g)));
+    }
+    g.mode=JAM_PASS;g.inbound_pass=1;before=g;jam_match_clock(&g,3600);
+    assert(!memcmp(&g,&before,sizeof(g)));g.inbound_pass=0;
+    /* Four complete 180-second periods, preserving scores/lineup/stat counters. */
+    jam_init_lineup(&g,&setup);g.score[0]=12;g.score[1]=10;g.shots=9;g.passes=4;
+    for(q=1;q<=4;q++) {
+        g.mode=JAM_HELD;g.owner=g.controlled=0;g.inbound_pass=0;
+        for(frames=0;g.clock_seconds;frames++)jam_match_clock(&g,1);
+        assert(frames==10754 && g.match_phase==JAM_MATCH_BUZZER && !g.clock_fraction);
+        jam_update(&g,JAM_B|JAM_TURBO); /* A held ball cannot launch after zero. */
+        assert(g.match_phase==(q==4?JAM_MATCH_FINAL:JAM_MATCH_BREAK));
+        assert(g.mode==JAM_HELD && !g.dunk_attempts && g.shots==9 && !g.charge);
+        before=g;step(&g,100,JAM_B|JAM_TURBO);jam_match_clock(&g,65535);
+        assert(!memcmp(&g,&before,sizeof(g)));
+        if(q==4)break;
+        jam_update(&g,JAM_A);
+        assert(g.quarter==q+1 && g.clock_seconds==180 && g.mode==JAM_INBOUND);
+        assert(g.next_team==(q&1) && g.match_phase==JAM_MATCH_LIVE);
+        assert(g.score[0]==12 && g.score[1]==10 && g.shots==9 && g.passes==4);
+        assert(!memcmp(&g.setup,&setup,sizeof(setup)));
+        for(p=0;p<4;p++)assert(g.turbo_energy[p]==100 && !g.players[p].shot_time && !g.players[p].stun);
+        jam_match_clock(&g,600);assert(g.clock_seconds==180);
+        g.previous_input=0;
+    }
+    jam_update(&g,JAM_A);
+    assert(g.quarter==1 && g.clock_seconds==180 && !g.score[0] && !g.score[1] && !g.shots);
+    assert(!memcmp(&g.setup,&setup,sizeof(setup)) && g.mode==JAM_HELD);
+    jam_update(&g,JAM_A);assert(!g.passes); /* No held-A opening pass. */
+    /* A released buzzer-beater finishes and scores exactly once. */
+    jam_init(&g);isolate(&g);g.quarter=4;g.clock_seconds=1;
+    g.players[0].x=245*4;jam_shoot(&g,0,24);g.shot_good=1;
+    jam_match_clock(&g,60);jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_BUZZER && g.mode==JAM_SHOT);
+    for(frames=0;frames<180 && g.match_phase!=JAM_MATCH_FINAL;frames++)jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_FINAL && g.score[0]==2 && g.baskets==1);
+    before=g;step(&g,100,0);assert(!memcmp(&g,&before,sizeof(g)));
+    /* Misses settle without a rebound/new shot; charge-at-zero is discarded. */
+    jam_init(&g);isolate(&g);g.clock_seconds=1;g.players[0].x=245*4;
+    jam_shoot(&g,0,24);g.shot_good=0;jam_match_clock(&g,60);
+    for(frames=0;frames<180 && g.match_phase!=JAM_MATCH_BREAK;frames++)jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_BREAK && !g.score[0] && !g.rebounds);
+    jam_init(&g);g.clock_seconds=1;g.charge=24;jam_match_clock(&g,60);jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_BREAK && !g.shots && !g.charge);
+    puts("PASS: hardware-time clock, chunk invariance, pause/dunk/dead-ball freeze, four exact three-minute quarters, score/lineup preservation, alternating period inbounds, final/rematch, made/missed buzzer shots and late-shot rejection");
+}
+static void configurable_match_length(void) {
+    static const uint8_t lengths[3]={1,2,4};
+    jam_menu_t m;
+    jam_game_t g,before;
+    jam_setup_t setup={{0,1,2,3},JAM_WARM_UP,4};
+    uint8_t n,q,i;
+    jam_menu_init(&m,0);assert(m.setup.periods==4);
+    for(i=0;i<5;i++)tap_menu(&m,JAM_A);
+    assert(m.stage==JAM_MENU_PERIODS && m.cursor==2);
+    tap_menu(&m,JAM_MOVE_DOWN);assert(m.cursor==0);
+    tap_menu(&m,JAM_MOVE_UP);assert(m.cursor==2);
+    tap_menu(&m,JAM_MOVE_UP);assert(m.cursor==1);
+    jam_menu_update(&m,JAM_A);assert(m.stage==JAM_MENU_REVIEW && m.setup.periods==2);
+    assert(!jam_menu_update(&m,JAM_A)); /* Held confirm cannot start review. */
+    tap_menu(&m,JAM_B);assert(m.stage==JAM_MENU_PERIODS && m.cursor==1);
+    tap_menu(&m,JAM_B);assert(m.stage==JAM_MENU_DIFFICULTY && m.cursor==JAM_PICKUP);
+    tap_menu(&m,JAM_A);assert(m.cursor==1 && m.stage==JAM_MENU_PERIODS);
+    for(n=0;n<3;n++) {
+        setup.periods=lengths[n];assert(jam_init_lineup(&g,&setup));
+        for(q=1;q<=setup.periods;q++) {
+            g.mode=JAM_HELD;g.owner=g.controlled=0;g.inbound_pass=0;
+            jam_match_clock(&g,10753);assert(g.clock_seconds==1 && g.quarter==q);
+            jam_match_clock(&g,1);jam_update(&g,0);
+            assert(!g.clock_seconds && g.match_phase==(q==setup.periods?JAM_MATCH_FINAL:JAM_MATCH_BREAK));
+            if(q<setup.periods) {
+                g.score[0]=7;jam_update(&g,JAM_A);
+                assert(g.clock_seconds==180 && g.quarter==q+1 && g.score[0]==7);
+                jam_update(&g,0);
+            }
+        }
+        before=g;step(&g,120,0);assert(!memcmp(&g,&before,sizeof(g)));
+        jam_update(&g,JAM_A);assert(g.setup.periods==lengths[n] && g.quarter==1 && g.clock_seconds==180);
+        assert(!g.score[0] && !g.score[1]);
+        jam_menu_init(&m,&g.setup);for(i=0;i<5;i++)tap_menu(&m,JAM_A);
+        assert(m.stage==JAM_MENU_PERIODS && m.cursor==n);
+    }
+    before=g;
+    for(i=0;i<6;i++)if(i!=1 && i!=2 && i!=4) {
+        setup.periods=i;assert(!jam_init_lineup(&g,&setup));assert(!memcmp(&g,&before,sizeof(g)));
+    }
+    puts("PASS: 1/2/4 three-minute period selection, default/wrap/held-input/backtracking, 180-second boundaries at every selected length, final freeze, rematch/config retention, invalid-length rejection");
+}
+static void audio_events(void) {
+    jam_game_t g,before;
+    jam_audio_state_t s;
+    uint8_t event,blocked=0,slam=0,i;
+    uint16_t seed;
+    jam_init(&g);isolate(&g);jam_audio_sync(&s,&g);
+    assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
+    jam_update(&g,JAM_A);assert(jam_audio_event(&s,&g)==JAM_SFX_PASS);
+    assert(jam_audio_event(&s,&g)==JAM_SFX_NONE); /* Rendering twice is silent. */
+    jam_init(&g);isolate(&g);jam_audio_sync(&s,&g);
+    jam_update(&g,JAM_MOVE_RIGHT|JAM_TURBO);assert(jam_audio_event(&s,&g)==JAM_SFX_TURBO);
+    jam_update(&g,JAM_MOVE_RIGHT|JAM_TURBO);assert(jam_audio_event(&s,&g)!=JAM_SFX_TURBO);
+    jam_update(&g,JAM_PAUSE);before=g;assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
+    step(&g,100,0);assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
+    before.previous_input=0;assert(!memcmp(&g,&before,sizeof(g)));
+    jam_update(&g,JAM_PAUSE);assert(jam_audio_event(&s,&g)==JAM_SFX_BACK);
+    /* Real blocked dunk: one rejection cue, never a slam or score celebration. */
+    for(seed=1;seed<100 && !blocked;seed++) {
+        dunk_fixture(&g,0,0,0);g.setup.roster[1]=2;g.setup.roster[2]=1;
+        g.players[2].x=g.players[0].x+8;g.players[2].y=g.players[0].y;
+        g.rng=seed;jam_audio_sync(&s,&g);assert(jam_try_dunk(&g,0));
+        assert(jam_audio_event(&s,&g)==JAM_SFX_DUNK_LAUNCH);
+        for(i=0;i<JAM_DUNK_END;i++) {
+            jam_update(&g,0);event=jam_audio_event(&s,&g);
+            if(event==JAM_SFX_DUNK_BLOCK)blocked++;
+            if(blocked)assert(event!=JAM_SFX_DUNK_SLAM && event!=JAM_SFX_SWISH);
+        }
+    }
+    assert(blocked==1);
+    for(seed=1;seed<100 && !slam;seed++) {
+        dunk_fixture(&g,1,0,1);g.rng=seed;jam_audio_sync(&s,&g);assert(jam_try_dunk(&g,0));
+        assert(jam_audio_event(&s,&g)==JAM_SFX_DUNK_LAUNCH);
+        for(i=0;i<JAM_DUNK_END;i++) {
+            jam_update(&g,0);event=jam_audio_event(&s,&g);
+            if(event==JAM_SFX_DUNK_SLAM)slam++;
+            assert(event!=JAM_SFX_SWISH); /* No second cue at dunk score frame. */
+        }
+    }
+    assert(slam==1);
+    jam_init(&g);jam_audio_sync(&s,&g);g.clock_seconds=0;g.match_phase=JAM_MATCH_BREAK;
+    assert(jam_audio_event(&s,&g)==JAM_SFX_HORN);
+    assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
+    g.clock_seconds=180;g.quarter=2;g.match_phase=JAM_MATCH_LIVE;
+    assert(jam_audio_event(&s,&g)==JAM_SFX_START);
+    g.match_phase=JAM_MATCH_FINAL;g.score[0]=2;
+    assert(jam_audio_event(&s,&g)==JAM_SFX_WIN);
+    before=g;jam_audio_event(&s,&g);assert(!memcmp(&g,&before,sizeof(g)));
+    puts("PASS: audio follows real pass/turbo/dunk events, one-shot rejection/impact cues, no celebration on blocked dunks, pause/resume and period/final cues, no simulation mutation");
+}
 int main(void) {
+    audio_events();
+    configurable_match_length();
+    match_quarters();
+    turbo_system();
     arcade_dunks();
     possession_control_and_inbounds();
     contact_soak();

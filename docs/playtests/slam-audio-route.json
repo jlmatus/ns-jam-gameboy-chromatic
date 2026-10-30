@@ -1,0 +1,195 @@
+{
+  "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+  "romSha256": "2e131016615e89c4fc6e6d79a23ca271382df3fd3d447008ead6ae7a015aaca2",
+  "actions": [
+    {
+      "buttons": [],
+      "frames": 121
+    },
+    {
+      "buttons": [
+        "right"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "left"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "right"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 12
+    },
+    {
+      "buttons": [],
+      "frames": 12
+    },
+    {
+      "buttons": [
+        "left",
+        "start"
+      ],
+      "frames": 28
+    },
+    {
+      "buttons": [],
+      "frames": 480
+    },
+    {
+      "buttons": [
+        "right"
+      ],
+      "frames": 8
+    },
+    {
+      "buttons": [],
+      "frames": 80
+    },
+    {
+      "buttons": [],
+      "frames": 180
+    },
+    {
+      "buttons": [],
+      "frames": 220
+    }
+  ],
+  "samples": [
+    {
+      "frame": 987,
+      "width": 160,
+      "height": 144,
+      "sha256": "536e2ad143caeda12b87ac6bf0780fce796aa866b22bc96e983f89844e81f3ae",
+      "rgbaSha256": "11495cf07dc670156afea221d3750c038d5c0733e5d2cc6cf8f1474452441cb8",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/536e2ad143caeda12b87ac6bf0780fce796aa866b22bc96e983f89844e81f3ae.png"
+    },
+    {
+      "frame": 1017,
+      "width": 160,
+      "height": 144,
+      "sha256": "db9be31fcc142280eb94dc0754676d3982473ca91872f6f26d138b59aab56e3b",
+      "rgbaSha256": "bd7be2354785f395a16722a41d85eb23cd572b3c2d17df3fd2121cc2b695bd77",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/db9be31fcc142280eb94dc0754676d3982473ca91872f6f26d138b59aab56e3b.png"
+    },
+    {
+      "frame": 1047,
+      "width": 160,
+      "height": 144,
+      "sha256": "3bf68baf74b718e893d59c1e52a7aa04e9a46df0ce44f2c78722da508f93a6a6",
+      "rgbaSha256": "4874717e2cb675e927cfbcda74ddc6519cfd8fd77af3938836d3bae0b21b13ae",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/3bf68baf74b718e893d59c1e52a7aa04e9a46df0ce44f2c78722da508f93a6a6.png"
+    },
+    {
+      "frame": 1077,
+      "width": 160,
+      "height": 144,
+      "sha256": "c8afaa2035a5cf8b2fba4eec49f08da68d3c3ad68923c13c00e98abb228dbedc",
+      "rgbaSha256": "27c6535dcbda0bcfdd8785f70ccaeff6d1b0ce94f421678b4f42e078225da49d",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/c8afaa2035a5cf8b2fba4eec49f08da68d3c3ad68923c13c00e98abb228dbedc.png"
+    },
+    {
+      "frame": 1107,
+      "width": 160,
+      "height": 144,
+      "sha256": "edf18aa7304525549897bb199ef952a793317e06b7c0480354bd72e3e4cebc94",
+      "rgbaSha256": "9ab255a7000c42b4ce31c36bd035321dfa7000d2704784d692e8d3aa31527ccb",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/edf18aa7304525549897bb199ef952a793317e06b7c0480354bd72e3e4cebc94.png"
+    },
+    {
+      "frame": 1137,
+      "width": 160,
+      "height": 144,
+      "sha256": "aa83f3429ed7847b8e6565e933a069d3c917343226586f62b51d66f04b5060f0",
+      "rgbaSha256": "dc0f38770efad0e65ce9e35f6c15a4f10e1d110e8e11c78ecb597a6e2e87681e",
+      "sampledButtons": [],
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/blocked-audio/frames/aa83f3429ed7847b8e6565e933a069d3c917343226586f62b51d66f04b5060f0.png"
+    }
+  ]
+}

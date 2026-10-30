@@ -40,6 +40,7 @@ uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED {
     p=&g->players[who];to_rim=hoop(who)-p->x;
     if(p->stun || gap(p->y,JAM_RIM_Y*4)>72 ||
        (who<2?to_rim<0:to_rim>0) || gap(to_rim,0)>jam_dunk_range(g,who)*4)return 0;
+    if(!jam_turbo_spend(g,who,JAM_TURBO_DUNK_COST))return 0;
     /* Entering the cinematic skips the normal end-of-update clamp. A teammate
        may just have been pushed across a boundary earlier in this same update. */
     for(i=0;i<4;i++){

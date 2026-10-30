@@ -1,0 +1,43 @@
+{
+  "romSha256": "2e131016615e89c4fc6e6d79a23ca271382df3fd3d447008ead6ae7a015aaca2",
+  "nativeFrames": 1357,
+  "sampleRate": 48000,
+  "sampleFrames": 1086543,
+  "channels": 2,
+  "peak": 6912,
+  "rms": 571.5645646274505,
+  "nonzeroSamples": 163904,
+  "frameChecks": [
+    {
+      "frame": 987,
+      "expected": "11495cf07dc670156afea221d3750c038d5c0733e5d2cc6cf8f1474452441cb8",
+      "actual": "11495cf07dc670156afea221d3750c038d5c0733e5d2cc6cf8f1474452441cb8"
+    },
+    {
+      "frame": 1017,
+      "expected": "bd7be2354785f395a16722a41d85eb23cd572b3c2d17df3fd2121cc2b695bd77",
+      "actual": "bd7be2354785f395a16722a41d85eb23cd572b3c2d17df3fd2121cc2b695bd77"
+    },
+    {
+      "frame": 1047,
+      "expected": "4874717e2cb675e927cfbcda74ddc6519cfd8fd77af3938836d3bae0b21b13ae",
+      "actual": "4874717e2cb675e927cfbcda74ddc6519cfd8fd77af3938836d3bae0b21b13ae"
+    },
+    {
+      "frame": 1077,
+      "expected": "27c6535dcbda0bcfdd8785f70ccaeff6d1b0ce94f421678b4f42e078225da49d",
+      "actual": "27c6535dcbda0bcfdd8785f70ccaeff6d1b0ce94f421678b4f42e078225da49d"
+    },
+    {
+      "frame": 1107,
+      "expected": "9ab255a7000c42b4ce31c36bd035321dfa7000d2704784d692e8d3aa31527ccb",
+      "actual": "9ab255a7000c42b4ce31c36bd035321dfa7000d2704784d692e8d3aa31527ccb"
+    },
+    {
+      "frame": 1137,
+      "expected": "dc0f38770efad0e65ce9e35f6c15a4f10e1d110e8e11c78ecb597a6e2e87681e",
+      "actual": "dc0f38770efad0e65ce9e35f6c15a4f10e1d110e8e11c78ecb597a6e2e87681e"
+    }
+  ],
+  "wavSha256": "2f60061ca8b4baeb0cb42868d2e69c6a1480ddd4a875d9119e4b0044f88eff96"
+}

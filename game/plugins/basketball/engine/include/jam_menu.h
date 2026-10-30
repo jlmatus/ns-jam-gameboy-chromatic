@@ -2,7 +2,8 @@
 #define JAM_MENU_H
 #include "jam_sim.h"
 #define JAM_MENU_DIFFICULTY 4
-#define JAM_MENU_REVIEW 5
+#define JAM_MENU_PERIODS 5
+#define JAM_MENU_REVIEW 6
 /* The menu owns configuration; the simulation starts only after review. */
 typedef struct {
     jam_setup_t setup;

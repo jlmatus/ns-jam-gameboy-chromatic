@@ -1,11 +1,11 @@
 {
   "_resourceType": "palette",
   "id": "jam-court",
-  "name": "Managua court",
+  "name": "Managua slate court",
   "colors": [
-    "FFF3CF",
-    "DDB377",
-    "B87C47",
-    "162638"
+    "A8C7C4",
+    "365663",
+    "243C50",
+    "102033"
   ]
 }

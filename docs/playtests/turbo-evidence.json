@@ -1,0 +1,2085 @@
+{
+  "date": "2026-10-29",
+  "scope": "Visible turbo gauge, per-player depletion/recovery, exhaustion lockout, shared combo/CPU budget",
+  "native": {
+    "rom": {
+      "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "sizeBytes": 2097152,
+      "sha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+      "title": "NICASOURCEJAM",
+      "colorMode": "gbc-only",
+      "colorFlag": 192,
+      "cartridgeType": 30,
+      "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+      "mapper": "MBC5",
+      "romSizeCode": 6,
+      "declaredRomSizeBytes": 2097152,
+      "ramSizeCode": 3,
+      "declaredRamSizeBytes": 32768,
+      "nintendoLogoValid": true,
+      "headerChecksum": 168,
+      "computedHeaderChecksum": 168,
+      "headerChecksumValid": true,
+      "valid": true
+    },
+    "build": {
+      "success": true,
+      "exitCode": 0,
+      "stderr": "(node:273) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)\nsrc/core/jam_dunk_cam.c:55: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk_cam.c:104: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_contact.c:77: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:22: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:76: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:77: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:174: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:100: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:270: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/states/basketball.c:174: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:405: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\n"
+    },
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+      "sessionId": "83e1bd66931048358651743f11e22a3a",
+      "status": "stopped",
+      "branchId": "branch-0004",
+      "frame": 921,
+      "totalFrames": 2585,
+      "bytesUsed": 4865928,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 16777216,
+        "maxFrames": 36000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 5209,
+      "eventDigest": "2e52d8e35c743b48a97077e92e3360c6329e21f47584bba1f91beb102008b656",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 657
+        },
+        {
+          "branchId": "branch-0002",
+          "frame": 939,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+          "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+        },
+        {
+          "branchId": "branch-0003",
+          "frame": 431,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+          "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+        },
+        {
+          "branchId": "branch-0004",
+          "frame": 921,
+          "parentBranchId": "branch-0001",
+          "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+          "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+        }
+      ],
+      "outcome": "passed",
+      "reason": "Native reserve meter verified full/partial/empty/held-empty/recovery/full; MATUS 0 energy never regained while START held, catch switched HUD/reserve to MAGIC with sender at52 and receiver100. Right-basket dunk paid12 (46->34), preserved reserve during cinematic/pause, and restored normal HUD tiles. CPU BAMBI left-basket dunk also showed its reserve. VRAM gauge tiles match intended opaque and restored normal assets. Host tests cover all six, combo costs and CPU fairness; no physical hardware tested."
+    },
+    "stages": {
+      "full": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 289,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [],
+        "sampledButtons": [],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 171.180917,
+          "gameTimeMs": 4838.642120361328
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0001",
+          "frame": 289,
+          "totalFrames": 289,
+          "bytesUsed": 542754,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 490,
+          "eventDigest": "54934dab64ded94baeec51c9fc4a64eecc787f6d139c64dbec4c1efc65cc3ee2",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 289
+            }
+          ]
+        },
+        "startFrame": 289,
+        "advancedFrames": 0,
+        "appliedButtons": [],
+        "samples": [
+          {
+            "frame": 289,
+            "width": 160,
+            "height": 144,
+            "sha256": "9837aa9ff2d9361bf63ba0315bb573496d713f9e44b5155c0062d3ee2a6dde0e",
+            "rgbaSha256": "bca33a283ff92240fa738ff0098d8bbaa67900336afbeb64a16f66cb5257061a",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/9837aa9ff2d9361bf63ba0315bb573496d713f9e44b5155c0062d3ee2a6dde0e.png"
+          }
+        ],
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 1
+        }
+      },
+      "partial": {
+        "step": {
+          "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+          "frame": 389,
+          "width": 160,
+          "height": 144,
+          "activeButtons": [
+            "left",
+            "start"
+          ],
+          "sampledButtons": [
+            "left",
+            "start"
+          ],
+          "cgb": true,
+          "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+          "runtime": {
+            "name": "PyBoy",
+            "version": "2.7.0",
+            "protocolVersion": 1,
+            "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+          },
+          "paused": true,
+          "clock": {
+            "mode": "paused",
+            "clockHz": 4194304,
+            "dotsPerFrame": 70224,
+            "executionWallTimeMs": 256.911625,
+            "gameTimeMs": 6512.912750244141
+          },
+          "recording": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "status": "recording",
+            "branchId": "branch-0001",
+            "frame": 389,
+            "totalFrames": 389,
+            "bytesUsed": 820505,
+            "limits": {
+              "sampleEveryFrames": 1,
+              "recentFrameCount": 12,
+              "maxBytes": 16777216,
+              "maxFrames": 36000,
+              "maxWallTimeMs": 900000
+            },
+            "eventCount": 692,
+            "eventDigest": "b5d2a91d5baac318e837d067ddc67737862de829e3ae726c04c54cec517d55f1",
+            "branches": [
+              {
+                "branchId": "branch-0001",
+                "frame": 389
+              }
+            ]
+          },
+          "startFrame": 289,
+          "advancedFrames": 100,
+          "appliedButtons": [
+            "left",
+            "start"
+          ],
+          "samples": [
+            {
+              "frame": 389,
+              "width": 160,
+              "height": 144,
+              "sha256": "724331cf597c1de973f3cd6fbb27f60987bf0cc0ebf9cea8249c24d5b709a35a",
+              "rgbaSha256": "2a2baac2c7e5d118e796315e2672f8716454319136711649cf08441658b642ec",
+              "sampledButtons": [
+                "left",
+                "start"
+              ],
+              "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/724331cf597c1de973f3cd6fbb27f60987bf0cc0ebf9cea8249c24d5b709a35a.png"
+            }
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0001",
+            "fromActionIndex": 183,
+            "toActionIndex": 284,
+            "fromFrame": 289,
+            "toFrame": 389,
+            "fromPrefixPin": {
+              "eventCount": 490,
+              "eventDigest": "54934dab64ded94baeec51c9fc4a64eecc787f6d139c64dbec4c1efc65cc3ee2",
+              "byteLength": 218778,
+              "sha256": "b074f73c958009938dcc11493a9b817c51b7ad3902ad612c7c9ad39ecf39f581"
+            },
+            "prefixPin": {
+              "eventCount": 692,
+              "eventDigest": "b5d2a91d5baac318e837d067ddc67737862de829e3ae726c04c54cec517d55f1",
+              "byteLength": 304636,
+              "sha256": "94ea768c831d88ee6868f4ec3a1b81599df2cf2a916216279d9973988ecbba65"
+            },
+            "emptyInterval": false
+          },
+          "execution": {
+            "status": "completed",
+            "requestedFrames": 100,
+            "startFrame": 289,
+            "frame": 389,
+            "advancedFrames": 100,
+            "appliedButtons": [
+              "left",
+              "start"
+            ],
+            "recordingSpan": {
+              "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+              "sessionId": "83e1bd66931048358651743f11e22a3a",
+              "branchId": "branch-0001",
+              "fromActionIndex": 183,
+              "toActionIndex": 284,
+              "fromFrame": 289,
+              "toFrame": 389,
+              "fromPrefixPin": {
+                "eventCount": 490,
+                "eventDigest": "54934dab64ded94baeec51c9fc4a64eecc787f6d139c64dbec4c1efc65cc3ee2",
+                "byteLength": 218778,
+                "sha256": "b074f73c958009938dcc11493a9b817c51b7ad3902ad612c7c9ad39ecf39f581"
+              },
+              "prefixPin": {
+                "eventCount": 692,
+                "eventDigest": "b5d2a91d5baac318e837d067ddc67737862de829e3ae726c04c54cec517d55f1",
+                "byteLength": 304636,
+                "sha256": "94ea768c831d88ee6868f4ec3a1b81599df2cf2a916216279d9973988ecbba65"
+              },
+              "emptyInterval": false
+            },
+            "sampledButtons": [
+              "left",
+              "start"
+            ]
+          },
+          "genuineEmulatorFrames": true,
+          "imageDelivery": {
+            "status": "available",
+            "sampleCount": 1
+          }
+        },
+        "memory": {
+          "view": "memory",
+          "frame": 389,
+          "region": "wram",
+          "offset": 509,
+          "length": 168,
+          "address": "0xc1fd",
+          "hex": "8000a0010000000000000101000000f90000004c0134010000000000000100000000fc0000004402aa010000000000000100000000fd000000d902380100000000000001000000000000000000010203006000a00100000000000000000000000b00000000000000003c004100003c0000000000000000e1ac3b00000000000000000000000000000000000000000000000000000000000000000000336464641300000000000000"
+        }
+      },
+      "empty": {
+        "step": {
+          "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+          "frame": 493,
+          "width": 160,
+          "height": 144,
+          "activeButtons": [
+            "left",
+            "start"
+          ],
+          "sampledButtons": [
+            "left",
+            "start"
+          ],
+          "cgb": true,
+          "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+          "runtime": {
+            "name": "PyBoy",
+            "version": "2.7.0",
+            "protocolVersion": 1,
+            "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+          },
+          "paused": true,
+          "clock": {
+            "mode": "paused",
+            "clockHz": 4194304,
+            "dotsPerFrame": 70224,
+            "executionWallTimeMs": 341.694167,
+            "gameTimeMs": 8254.154205322266
+          },
+          "recording": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "status": "recording",
+            "branchId": "branch-0001",
+            "frame": 493,
+            "totalFrames": 493,
+            "bytesUsed": 1082416,
+            "limits": {
+              "sampleEveryFrames": 1,
+              "recentFrameCount": 12,
+              "maxBytes": 16777216,
+              "maxFrames": 36000,
+              "maxWallTimeMs": 900000
+            },
+            "eventCount": 900,
+            "eventDigest": "64916cf248fa66cc4c68c7a73223a0e81249923354f9ffb5175145148969127e",
+            "branches": [
+              {
+                "branchId": "branch-0001",
+                "frame": 493
+              }
+            ]
+          },
+          "startFrame": 389,
+          "advancedFrames": 104,
+          "appliedButtons": [
+            "left",
+            "start"
+          ],
+          "samples": [
+            {
+              "frame": 493,
+              "width": 160,
+              "height": 144,
+              "sha256": "3f7502e15fd640d305266a303373c2e83ae1feae7545eaea612003c326c096ab",
+              "rgbaSha256": "a22bc9cf1fe8e8dee65466c4a45395fa6137314da15d882d149d866031473102",
+              "sampledButtons": [
+                "left",
+                "start"
+              ],
+              "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/3f7502e15fd640d305266a303373c2e83ae1feae7545eaea612003c326c096ab.png"
+            }
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0001",
+            "fromActionIndex": 284,
+            "toActionIndex": 388,
+            "fromFrame": 389,
+            "toFrame": 493,
+            "fromPrefixPin": {
+              "eventCount": 692,
+              "eventDigest": "b5d2a91d5baac318e837d067ddc67737862de829e3ae726c04c54cec517d55f1",
+              "byteLength": 304636,
+              "sha256": "94ea768c831d88ee6868f4ec3a1b81599df2cf2a916216279d9973988ecbba65"
+            },
+            "prefixPin": {
+              "eventCount": 900,
+              "eventDigest": "64916cf248fa66cc4c68c7a73223a0e81249923354f9ffb5175145148969127e",
+              "byteLength": 393244,
+              "sha256": "ed5387e9f228c513680be1163e41ddbe96d23bf0147bf0fe30c76c21730adf11"
+            },
+            "emptyInterval": false
+          },
+          "execution": {
+            "status": "completed",
+            "requestedFrames": 104,
+            "startFrame": 389,
+            "frame": 493,
+            "advancedFrames": 104,
+            "appliedButtons": [
+              "left",
+              "start"
+            ],
+            "recordingSpan": {
+              "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+              "sessionId": "83e1bd66931048358651743f11e22a3a",
+              "branchId": "branch-0001",
+              "fromActionIndex": 284,
+              "toActionIndex": 388,
+              "fromFrame": 389,
+              "toFrame": 493,
+              "fromPrefixPin": {
+                "eventCount": 692,
+                "eventDigest": "b5d2a91d5baac318e837d067ddc67737862de829e3ae726c04c54cec517d55f1",
+                "byteLength": 304636,
+                "sha256": "94ea768c831d88ee6868f4ec3a1b81599df2cf2a916216279d9973988ecbba65"
+              },
+              "prefixPin": {
+                "eventCount": 900,
+                "eventDigest": "64916cf248fa66cc4c68c7a73223a0e81249923354f9ffb5175145148969127e",
+                "byteLength": 393244,
+                "sha256": "ed5387e9f228c513680be1163e41ddbe96d23bf0147bf0fe30c76c21730adf11"
+              },
+              "emptyInterval": false
+            },
+            "sampledButtons": [
+              "left",
+              "start"
+            ]
+          },
+          "genuineEmulatorFrames": true,
+          "imageDelivery": {
+            "status": "available",
+            "sampleCount": 1
+          }
+        },
+        "memory": {
+          "view": "memory",
+          "frame": 493,
+          "region": "wram",
+          "offset": 509,
+          "length": 168,
+          "address": "0xc1fd",
+          "hex": "8000a0010000000000000100000000fb000000fc003401000000000000010000000000000000a801aa010000000000000100000000fd000000b102380100000000000001000000000000000000010203006000a00100000000000000000000000700000000000000007000410000080000000000000000e1ac6f00000000000000000000000000000000000000000000000000000000000000000000006464641200000001000000"
+        }
+      },
+      "heldEmpty": {
+        "step": {
+          "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+          "frame": 517,
+          "width": 160,
+          "height": 144,
+          "activeButtons": [
+            "left",
+            "start"
+          ],
+          "sampledButtons": [
+            "left",
+            "start"
+          ],
+          "cgb": true,
+          "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+          "runtime": {
+            "name": "PyBoy",
+            "version": "2.7.0",
+            "protocolVersion": 1,
+            "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+          },
+          "paused": true,
+          "clock": {
+            "mode": "paused",
+            "clockHz": 4194304,
+            "dotsPerFrame": 70224,
+            "executionWallTimeMs": 361.506001,
+            "gameTimeMs": 8655.97915649414
+          },
+          "recording": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "status": "recording",
+            "branchId": "branch-0001",
+            "frame": 517,
+            "totalFrames": 517,
+            "bytesUsed": 1138379,
+            "limits": {
+              "sampleEveryFrames": 1,
+              "recentFrameCount": 12,
+              "maxBytes": 16777216,
+              "maxFrames": 36000,
+              "maxWallTimeMs": 900000
+            },
+            "eventCount": 948,
+            "eventDigest": "ddc2fe4f342676589b72884c6df3e11279a0ae3a04130ec3b14abb1bee473734",
+            "branches": [
+              {
+                "branchId": "branch-0001",
+                "frame": 517
+              }
+            ]
+          },
+          "startFrame": 493,
+          "advancedFrames": 24,
+          "appliedButtons": [
+            "left",
+            "start"
+          ],
+          "samples": [
+            {
+              "frame": 517,
+              "width": 160,
+              "height": 144,
+              "sha256": "2734eb3c3fa223d329e750aaa3f63c8d902273fa4a41145a17cd6783eea93a7f",
+              "rgbaSha256": "52ed6af3b1f85e8151d8e6c156c0f79ae413ed6231f58c0f70e399272be4c9b3",
+              "sampledButtons": [
+                "left",
+                "start"
+              ],
+              "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/2734eb3c3fa223d329e750aaa3f63c8d902273fa4a41145a17cd6783eea93a7f.png"
+            }
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0001",
+            "fromActionIndex": 388,
+            "toActionIndex": 412,
+            "fromFrame": 493,
+            "toFrame": 517,
+            "fromPrefixPin": {
+              "eventCount": 900,
+              "eventDigest": "64916cf248fa66cc4c68c7a73223a0e81249923354f9ffb5175145148969127e",
+              "byteLength": 393244,
+              "sha256": "ed5387e9f228c513680be1163e41ddbe96d23bf0147bf0fe30c76c21730adf11"
+            },
+            "prefixPin": {
+              "eventCount": 948,
+              "eventDigest": "ddc2fe4f342676589b72884c6df3e11279a0ae3a04130ec3b14abb1bee473734",
+              "byteLength": 413692,
+              "sha256": "b3cd1dfc74aec532166e9a1bd3e936ae647b59fc32173966ea22f115068120f4"
+            },
+            "emptyInterval": false
+          },
+          "execution": {
+            "status": "completed",
+            "requestedFrames": 24,
+            "startFrame": 493,
+            "frame": 517,
+            "advancedFrames": 24,
+            "appliedButtons": [
+              "left",
+              "start"
+            ],
+            "recordingSpan": {
+              "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+              "sessionId": "83e1bd66931048358651743f11e22a3a",
+              "branchId": "branch-0001",
+              "fromActionIndex": 388,
+              "toActionIndex": 412,
+              "fromFrame": 493,
+              "toFrame": 517,
+              "fromPrefixPin": {
+                "eventCount": 900,
+                "eventDigest": "64916cf248fa66cc4c68c7a73223a0e81249923354f9ffb5175145148969127e",
+                "byteLength": 393244,
+                "sha256": "ed5387e9f228c513680be1163e41ddbe96d23bf0147bf0fe30c76c21730adf11"
+              },
+              "prefixPin": {
+                "eventCount": 948,
+                "eventDigest": "ddc2fe4f342676589b72884c6df3e11279a0ae3a04130ec3b14abb1bee473734",
+                "byteLength": 413692,
+                "sha256": "b3cd1dfc74aec532166e9a1bd3e936ae647b59fc32173966ea22f115068120f4"
+              },
+              "emptyInterval": false
+            },
+            "sampledButtons": [
+              "left",
+              "start"
+            ]
+          },
+          "genuineEmulatorFrames": true,
+          "imageDelivery": {
+            "status": "available",
+            "sampleCount": 1
+          }
+        },
+        "memory": {
+          "view": "memory",
+          "frame": 517,
+          "region": "wram",
+          "offset": 509,
+          "length": 168,
+          "address": "0xc1fd",
+          "hex": "8000a0010000000000000100000000fb000000fc0034010000000000000100000000000000008401aa010000000000000100000000fd000000b102380100000000000001000000000000000000010203006000a00100000000000000000000000b00000000000000007c00410000000000000000000000e1ac7b00000000000000000000000000000000000000000000000000000000000000000000006464640600000001000000"
+        }
+      },
+      "recovering": {
+        "step": {
+          "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+          "frame": 557,
+          "width": 160,
+          "height": 144,
+          "activeButtons": [],
+          "sampledButtons": [],
+          "cgb": true,
+          "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+          "runtime": {
+            "name": "PyBoy",
+            "version": "2.7.0",
+            "protocolVersion": 1,
+            "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+          },
+          "paused": true,
+          "clock": {
+            "mode": "paused",
+            "clockHz": 4194304,
+            "dotsPerFrame": 70224,
+            "executionWallTimeMs": 395.880834,
+            "gameTimeMs": 9325.687408447266
+          },
+          "recording": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "status": "recording",
+            "branchId": "branch-0001",
+            "frame": 557,
+            "totalFrames": 557,
+            "bytesUsed": 1250227,
+            "limits": {
+              "sampleEveryFrames": 1,
+              "recentFrameCount": 12,
+              "maxBytes": 16777216,
+              "maxFrames": 36000,
+              "maxWallTimeMs": 900000
+            },
+            "eventCount": 1030,
+            "eventDigest": "4b8707a2d87fe913241def899ed5d117259755fd8aa6747275646697bde318d9",
+            "branches": [
+              {
+                "branchId": "branch-0001",
+                "frame": 557
+              }
+            ]
+          },
+          "startFrame": 517,
+          "advancedFrames": 40,
+          "appliedButtons": [],
+          "samples": [
+            {
+              "frame": 557,
+              "width": 160,
+              "height": 144,
+              "sha256": "29548f839180555d5a5f21b39fbe926dc9c43be3fa3748e5bc55252f36c31d0c",
+              "rgbaSha256": "100d38ac36d1c39e98b55809bceaeaceac520d1a6ef73a0a9f4eaf2039939459",
+              "sampledButtons": [],
+              "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/29548f839180555d5a5f21b39fbe926dc9c43be3fa3748e5bc55252f36c31d0c.png"
+            }
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0001",
+            "fromActionIndex": 412,
+            "toActionIndex": 453,
+            "fromFrame": 517,
+            "toFrame": 557,
+            "fromPrefixPin": {
+              "eventCount": 948,
+              "eventDigest": "ddc2fe4f342676589b72884c6df3e11279a0ae3a04130ec3b14abb1bee473734",
+              "byteLength": 413692,
+              "sha256": "b3cd1dfc74aec532166e9a1bd3e936ae647b59fc32173966ea22f115068120f4"
+            },
+            "prefixPin": {
+              "eventCount": 1030,
+              "eventDigest": "4b8707a2d87fe913241def899ed5d117259755fd8aa6747275646697bde318d9",
+              "byteLength": 448433,
+              "sha256": "1e43b5d29ec82436c5e625a4de961b2b5014e3bc3006c6e887f34947575d30c3"
+            },
+            "emptyInterval": false
+          },
+          "execution": {
+            "status": "completed",
+            "requestedFrames": 40,
+            "startFrame": 517,
+            "frame": 557,
+            "advancedFrames": 40,
+            "appliedButtons": [],
+            "recordingSpan": {
+              "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+              "sessionId": "83e1bd66931048358651743f11e22a3a",
+              "branchId": "branch-0001",
+              "fromActionIndex": 412,
+              "toActionIndex": 453,
+              "fromFrame": 517,
+              "toFrame": 557,
+              "fromPrefixPin": {
+                "eventCount": 948,
+                "eventDigest": "ddc2fe4f342676589b72884c6df3e11279a0ae3a04130ec3b14abb1bee473734",
+                "byteLength": 413692,
+                "sha256": "b3cd1dfc74aec532166e9a1bd3e936ae647b59fc32173966ea22f115068120f4"
+              },
+              "prefixPin": {
+                "eventCount": 1030,
+                "eventDigest": "4b8707a2d87fe913241def899ed5d117259755fd8aa6747275646697bde318d9",
+                "byteLength": 448433,
+                "sha256": "1e43b5d29ec82436c5e625a4de961b2b5014e3bc3006c6e887f34947575d30c3"
+              },
+              "emptyInterval": false
+            },
+            "sampledButtons": []
+          },
+          "genuineEmulatorFrames": true,
+          "imageDelivery": {
+            "status": "available",
+            "sampleCount": 1
+          }
+        },
+        "memory": {
+          "view": "memory",
+          "frame": 557,
+          "region": "wram",
+          "offset": 509,
+          "length": 168,
+          "address": "0xc1fd",
+          "hex": "8000a001000000000000010000000000000000fc0034010000000000000100000000000000004801aa010000000000000100000000fd000000b102380100000000000001000000000000000000010203006000a00100000000000000000000000700000000000000009000000000000000000000000000e1ac8f000000000000000000000000000000000000000000000000000000000000000000001e6464640000000000000000"
+        }
+      },
+      "recovered": {
+        "step": {
+          "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+          "frame": 657,
+          "width": 160,
+          "height": 144,
+          "activeButtons": [],
+          "sampledButtons": [],
+          "cgb": true,
+          "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+          "runtime": {
+            "name": "PyBoy",
+            "version": "2.7.0",
+            "protocolVersion": 1,
+            "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+          },
+          "paused": true,
+          "clock": {
+            "mode": "paused",
+            "clockHz": 4194304,
+            "dotsPerFrame": 70224,
+            "executionWallTimeMs": 478.201084,
+            "gameTimeMs": 10999.958038330078
+          },
+          "recording": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "status": "recording",
+            "branchId": "branch-0001",
+            "frame": 657,
+            "totalFrames": 657,
+            "bytesUsed": 1508334,
+            "limits": {
+              "sampleEveryFrames": 1,
+              "recentFrameCount": 12,
+              "maxBytes": 16777216,
+              "maxFrames": 36000,
+              "maxWallTimeMs": 900000
+            },
+            "eventCount": 1230,
+            "eventDigest": "ab7bd23fd7d0b1faf1c8ae1664c31d4bfdda038e81d2e4dcb48a4929f23e6132",
+            "branches": [
+              {
+                "branchId": "branch-0001",
+                "frame": 657
+              }
+            ]
+          },
+          "startFrame": 557,
+          "advancedFrames": 100,
+          "appliedButtons": [],
+          "samples": [
+            {
+              "frame": 657,
+              "width": 160,
+              "height": 144,
+              "sha256": "b9f72620bf2b7f882f41c24b902281b48c1fca4278121df3e7c6aeda2fb32634",
+              "rgbaSha256": "44056b58aab1edd0e547dac05cf3f465c87fc442ec6df733000a182ddcc7ac4d",
+              "sampledButtons": [],
+              "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/b9f72620bf2b7f882f41c24b902281b48c1fca4278121df3e7c6aeda2fb32634.png"
+            }
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0001",
+            "fromActionIndex": 453,
+            "toActionIndex": 553,
+            "fromFrame": 557,
+            "toFrame": 657,
+            "fromPrefixPin": {
+              "eventCount": 1030,
+              "eventDigest": "4b8707a2d87fe913241def899ed5d117259755fd8aa6747275646697bde318d9",
+              "byteLength": 448433,
+              "sha256": "1e43b5d29ec82436c5e625a4de961b2b5014e3bc3006c6e887f34947575d30c3"
+            },
+            "prefixPin": {
+              "eventCount": 1230,
+              "eventDigest": "ab7bd23fd7d0b1faf1c8ae1664c31d4bfdda038e81d2e4dcb48a4929f23e6132",
+              "byteLength": 533833,
+              "sha256": "27d6fa5e522ea5e598b29b5cf9e8f9b41487f658cb354c784643ff1a7e525e66"
+            },
+            "emptyInterval": false
+          },
+          "execution": {
+            "status": "completed",
+            "requestedFrames": 100,
+            "startFrame": 557,
+            "frame": 657,
+            "advancedFrames": 100,
+            "appliedButtons": [],
+            "recordingSpan": {
+              "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+              "sessionId": "83e1bd66931048358651743f11e22a3a",
+              "branchId": "branch-0001",
+              "fromActionIndex": 453,
+              "toActionIndex": 553,
+              "fromFrame": 557,
+              "toFrame": 657,
+              "fromPrefixPin": {
+                "eventCount": 1030,
+                "eventDigest": "4b8707a2d87fe913241def899ed5d117259755fd8aa6747275646697bde318d9",
+                "byteLength": 448433,
+                "sha256": "1e43b5d29ec82436c5e625a4de961b2b5014e3bc3006c6e887f34947575d30c3"
+              },
+              "prefixPin": {
+                "eventCount": 1230,
+                "eventDigest": "ab7bd23fd7d0b1faf1c8ae1664c31d4bfdda038e81d2e4dcb48a4929f23e6132",
+                "byteLength": 533833,
+                "sha256": "27d6fa5e522ea5e598b29b5cf9e8f9b41487f658cb354c784643ff1a7e525e66"
+              },
+              "emptyInterval": false
+            },
+            "sampledButtons": []
+          },
+          "genuineEmulatorFrames": true,
+          "imageDelivery": {
+            "status": "available",
+            "sampleCount": 1
+          }
+        },
+        "memory": {
+          "view": "memory",
+          "frame": 657,
+          "region": "wram",
+          "offset": 509,
+          "length": 168,
+          "address": "0xc1fd",
+          "hex": "8000a001000000000000010000000000000000fc003401000000000000010000000000000000d300aa01000000000000010000000000000000b102380100000000000001000000000000000000010203006000a0010000000000000000000000080000000000000000c200000000000000000000000000e1acc100000000000000000000000000000000000000000000000000000000000000000000646464640000000000000000"
+        }
+      }
+    },
+    "beforeDunk": {
+      "step": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 573,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [],
+        "sampledButtons": [],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 1567.221627,
+          "gameTimeMs": 9593.570709228516
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0002",
+          "frame": 573,
+          "totalFrames": 1109,
+          "bytesUsed": 2482720,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 2171,
+          "eventDigest": "49195ba8f696fe80cdcc60e70425858d4c854efc2079f4de2d4c62bbb5607c22",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 573,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 573,
+        "advancedFrames": 0,
+        "appliedButtons": [],
+        "samples": [
+          {
+            "frame": 573,
+            "width": 160,
+            "height": 144,
+            "sha256": "55bd5a58648122091c556d35447bb22b512688957b7da867aaf693f364653f29",
+            "rgbaSha256": "b9d796859c867cfc5e20da95105fab52699da17d96ba51c5c4b025030b426bde",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/55bd5a58648122091c556d35447bb22b512688957b7da867aaf693f364653f29.png"
+          }
+        ],
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 1
+        }
+      },
+      "memory": {
+        "view": "memory",
+        "frame": 573,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "0b041801000000000000000000000000000000da03be010000000000000000000000040000007f0326010000000000000000000000030000001c04bb0100000000000001000000000300000000010203002b04180100000000000000000000000e00000000000000009800000000000000000000000000e1ac97000000000000000000000000000000000000000000000000000000000000000000002e6464640000000000000000"
+      }
+    },
+    "dunk": {
+      "entry": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 585,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [
+          "b",
+          "start"
+        ],
+        "sampledButtons": [
+          "b",
+          "start"
+        ],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 1577.355085,
+          "gameTimeMs": 9794.483184814453
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0002",
+          "frame": 585,
+          "totalFrames": 1121,
+          "bytesUsed": 2512495,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 2197,
+          "eventDigest": "1a3e4106ffb5b361da7ece0a9782aba49d7c53c93e1059df1eb8416650322aa0",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 585,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 573,
+        "advancedFrames": 12,
+        "appliedButtons": [
+          "b",
+          "start"
+        ],
+        "samples": [
+          {
+            "frame": 585,
+            "width": 160,
+            "height": 144,
+            "sha256": "99b4f70c64232d4629d7e495b2ac0d78a9a7a7eb5aad888980163d240aed678d",
+            "rgbaSha256": "806003ac0a5111797f5e59c493e4464d907210f26065f740d3faed9cbc42a80f",
+            "sampledButtons": [
+              "b",
+              "start"
+            ],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/99b4f70c64232d4629d7e495b2ac0d78a9a7a7eb5aad888980163d240aed678d.png"
+          }
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "branchId": "branch-0002",
+          "fromActionIndex": 471,
+          "toActionIndex": 484,
+          "fromFrame": 573,
+          "toFrame": 585,
+          "fromPrefixPin": {
+            "eventCount": 2171,
+            "eventDigest": "49195ba8f696fe80cdcc60e70425858d4c854efc2079f4de2d4c62bbb5607c22",
+            "byteLength": 976034,
+            "sha256": "c45371eec0840576041ca3db52abb2d6b90d13a66d1e1d33261993dc1e52acde"
+          },
+          "prefixPin": {
+            "eventCount": 2197,
+            "eventDigest": "1a3e4106ffb5b361da7ece0a9782aba49d7c53c93e1059df1eb8416650322aa0",
+            "byteLength": 986933,
+            "sha256": "c621b40c60c336056b9b69aa2c40dc74483b63219c852b784b6a7fb875c2fa97"
+          },
+          "emptyInterval": false
+        },
+        "execution": {
+          "status": "completed",
+          "requestedFrames": 12,
+          "startFrame": 573,
+          "frame": 585,
+          "advancedFrames": 12,
+          "appliedButtons": [
+            "b",
+            "start"
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0002",
+            "fromActionIndex": 471,
+            "toActionIndex": 484,
+            "fromFrame": 573,
+            "toFrame": 585,
+            "fromPrefixPin": {
+              "eventCount": 2171,
+              "eventDigest": "49195ba8f696fe80cdcc60e70425858d4c854efc2079f4de2d4c62bbb5607c22",
+              "byteLength": 976034,
+              "sha256": "c45371eec0840576041ca3db52abb2d6b90d13a66d1e1d33261993dc1e52acde"
+            },
+            "prefixPin": {
+              "eventCount": 2197,
+              "eventDigest": "1a3e4106ffb5b361da7ece0a9782aba49d7c53c93e1059df1eb8416650322aa0",
+              "byteLength": 986933,
+              "sha256": "c621b40c60c336056b9b69aa2c40dc74483b63219c852b784b6a7fb875c2fa97"
+            },
+            "emptyInterval": false
+          },
+          "sampledButtons": [
+            "b",
+            "start"
+          ]
+        },
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 1
+        }
+      },
+      "rise": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 645,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [],
+        "sampledButtons": [],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 1622.494544,
+          "gameTimeMs": 10799.04556274414
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0002",
+          "frame": 645,
+          "totalFrames": 1181,
+          "bytesUsed": 2585388,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 2319,
+          "eventDigest": "a1cee6b7a78c1f458b9f7a1c551b6208ed340b6511c9496f09787c53da43c94b",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 645,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 585,
+        "advancedFrames": 60,
+        "appliedButtons": [],
+        "samples": [
+          {
+            "frame": 605,
+            "width": 160,
+            "height": 144,
+            "sha256": "06771b3c337359d51663cd68af6d6e12404d4d90c570af140e143672ef31fed6",
+            "rgbaSha256": "20bed99ed51ac2914f241053e5107d87f926bba6c0c19dd9b8902fe1cf5d5fd2",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/06771b3c337359d51663cd68af6d6e12404d4d90c570af140e143672ef31fed6.png"
+          },
+          {
+            "frame": 625,
+            "width": 160,
+            "height": 144,
+            "sha256": "f40689a01dbb11b31cd7d9b30f65d185fad3659b00ebf991f5d2fddd0bfeea8d",
+            "rgbaSha256": "bfeb73334caf94acdb8cf158086d00472b7e45d7b09851d95ea4eaaa78e42885",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/f40689a01dbb11b31cd7d9b30f65d185fad3659b00ebf991f5d2fddd0bfeea8d.png"
+          },
+          {
+            "frame": 645,
+            "width": 160,
+            "height": 144,
+            "sha256": "5a09ab39ad18e81b36b14de150a9cd4e1f891169080df57a716fb75394dec9de",
+            "rgbaSha256": "3eb0d279599dad32df0cd420e51ca5eeec5fd47b9e9eb11849654338f69ef1e0",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/5a09ab39ad18e81b36b14de150a9cd4e1f891169080df57a716fb75394dec9de.png"
+          }
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "branchId": "branch-0002",
+          "fromActionIndex": 484,
+          "toActionIndex": 545,
+          "fromFrame": 585,
+          "toFrame": 645,
+          "fromPrefixPin": {
+            "eventCount": 2197,
+            "eventDigest": "1a3e4106ffb5b361da7ece0a9782aba49d7c53c93e1059df1eb8416650322aa0",
+            "byteLength": 986933,
+            "sha256": "c621b40c60c336056b9b69aa2c40dc74483b63219c852b784b6a7fb875c2fa97"
+          },
+          "prefixPin": {
+            "eventCount": 2319,
+            "eventDigest": "a1cee6b7a78c1f458b9f7a1c551b6208ed340b6511c9496f09787c53da43c94b",
+            "byteLength": 1038802,
+            "sha256": "1e4c9699c369ffd0d2d4962e266265f1a8b5e157d1b166ebb191774c492408b5"
+          },
+          "emptyInterval": false
+        },
+        "execution": {
+          "status": "completed",
+          "requestedFrames": 60,
+          "startFrame": 585,
+          "frame": 645,
+          "advancedFrames": 60,
+          "appliedButtons": [],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0002",
+            "fromActionIndex": 484,
+            "toActionIndex": 545,
+            "fromFrame": 585,
+            "toFrame": 645,
+            "fromPrefixPin": {
+              "eventCount": 2197,
+              "eventDigest": "1a3e4106ffb5b361da7ece0a9782aba49d7c53c93e1059df1eb8416650322aa0",
+              "byteLength": 986933,
+              "sha256": "c621b40c60c336056b9b69aa2c40dc74483b63219c852b784b6a7fb875c2fa97"
+            },
+            "prefixPin": {
+              "eventCount": 2319,
+              "eventDigest": "a1cee6b7a78c1f458b9f7a1c551b6208ed340b6511c9496f09787c53da43c94b",
+              "byteLength": 1038802,
+              "sha256": "1e4c9699c369ffd0d2d4962e266265f1a8b5e157d1b166ebb191774c492408b5"
+            },
+            "emptyInterval": false
+          },
+          "sampledButtons": []
+        },
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 3
+        }
+      }
+    },
+    "dunkReturn": {
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+      "frame": 939,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 1844.236418,
+        "gameTimeMs": 15721.40121459961
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+        "sessionId": "83e1bd66931048358651743f11e22a3a",
+        "status": "recording",
+        "branchId": "branch-0002",
+        "frame": 939,
+        "totalFrames": 1475,
+        "bytesUsed": 3125240,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 16777216,
+          "maxFrames": 36000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 2915,
+        "eventDigest": "a4419eb9ce66e1c8ab23ae091f223f8d1d76fe384afe6057f4f89e85f4314218",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 657
+          },
+          {
+            "branchId": "branch-0002",
+            "frame": 939,
+            "parentBranchId": "branch-0001",
+            "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+            "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+          }
+        ]
+      },
+      "startFrame": 729,
+      "advancedFrames": 210,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 799,
+          "width": 160,
+          "height": 144,
+          "sha256": "44ebdf8a7aeb6d33b5deb3b95aeac235a2cbc717a770fc648ca207bcc750e9fc",
+          "rgbaSha256": "91a556deff498ed13645b378321dbce369c7a655eb6fa16f6ff3ac40e7644a76",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/44ebdf8a7aeb6d33b5deb3b95aeac235a2cbc717a770fc648ca207bcc750e9fc.png"
+        },
+        {
+          "frame": 869,
+          "width": 160,
+          "height": 144,
+          "sha256": "a0ec5621fd1d3d29dbc7639e15c0aaba230f99c239386fd8a1495b19a8743b5a",
+          "rgbaSha256": "3bad25f5a659b1d4218a8a0fdb5bf5c5d83cb9310417ac20e0f5f92297f2d296",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/a0ec5621fd1d3d29dbc7639e15c0aaba230f99c239386fd8a1495b19a8743b5a.png"
+        },
+        {
+          "frame": 939,
+          "width": 160,
+          "height": 144,
+          "sha256": "e9085fc4a6c20d95c08ffa51069524c4fcc86897949dd0dc48718c292e52864f",
+          "rgbaSha256": "b09679deb47278773b0cdb231be77da3e0edf8c3777b68295aca92736408300a",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/e9085fc4a6c20d95c08ffa51069524c4fcc86897949dd0dc48718c292e52864f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+        "sessionId": "83e1bd66931048358651743f11e22a3a",
+        "branchId": "branch-0002",
+        "fromActionIndex": 632,
+        "toActionIndex": 843,
+        "fromFrame": 729,
+        "toFrame": 939,
+        "fromPrefixPin": {
+          "eventCount": 2493,
+          "eventDigest": "e58891ace01c6afec8c785693d7217af178287866db9c6cf3658ba3fd6164cc0",
+          "byteLength": 1112448,
+          "sha256": "7068ec03f4cceac52f3c592b99e29b6990ca1d74cfae6e90ffe3a00bfbadf9b7"
+        },
+        "prefixPin": {
+          "eventCount": 2915,
+          "eventDigest": "a4419eb9ce66e1c8ab23ae091f223f8d1d76fe384afe6057f4f89e85f4314218",
+          "byteLength": 1292414,
+          "sha256": "62b6829c6ee2710a542c07604f67cffbd80a339981c82a6443825510471d979f"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 210,
+        "startFrame": 729,
+        "frame": 939,
+        "advancedFrames": 210,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "branchId": "branch-0002",
+          "fromActionIndex": 632,
+          "toActionIndex": 843,
+          "fromFrame": 729,
+          "toFrame": 939,
+          "fromPrefixPin": {
+            "eventCount": 2493,
+            "eventDigest": "e58891ace01c6afec8c785693d7217af178287866db9c6cf3658ba3fd6164cc0",
+            "byteLength": 1112448,
+            "sha256": "7068ec03f4cceac52f3c592b99e29b6990ca1d74cfae6e90ffe3a00bfbadf9b7"
+          },
+          "prefixPin": {
+            "eventCount": 2915,
+            "eventDigest": "a4419eb9ce66e1c8ab23ae091f223f8d1d76fe384afe6057f4f89e85f4314218",
+            "byteLength": 1292414,
+            "sha256": "62b6829c6ee2710a542c07604f67cffbd80a339981c82a6443825510471d979f"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 3
+      }
+    },
+    "pause": {
+      "before": {
+        "view": "memory",
+        "frame": 645,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "30044a01000000000000000000000000000000de03be01000000000000000000000000000000820326010000000000000000000000000000001c04bb01000000000000010000000000000000000102030050044a010b04180100000000ff0007470000000002000000af00000000000f3a000000000000e1ac980000000000010000000000000000000000000000000000000016000001000000ff00226464641400000000000000"
+      },
+      "paused": {
+        "view": "memory",
+        "frame": 657,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "30044a01000000000000000000000000000000de03be01000000000000000000000000000000820326010000000000000000000000000000001c04bb01000000000000010000000000000000000102030050044a010b04180100000000ff0007470000000002000000af01800000000f3a000000000000e1ac980000000000010000000000000000000000000000000000000016000001000000ff00226464641400000000000000"
+      },
+      "waited": {
+        "view": "memory",
+        "frame": 717,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "30044a01000000000000000000000000000000de03be01000000000000000000000000000000820326010000000000000000000000000000001c04bb01000000000000010000000000000000000102030050044a010b04180100000000ff0007470000000002000000af01000000000f3a000000000000e1ac980000000000010000000000000000000000000000000000000016000001000000ff00226464641400000000000000"
+      },
+      "equal": true
+    },
+    "gaugeTiles": {
+      "opaque": {
+        "view": "vram",
+        "frame": 645,
+        "region": "vram",
+        "offset": 3712,
+        "length": 80,
+        "address": "0x8e80",
+        "hex": "ff00ffffff81ff81ff81ff81ffffff00ff00ffffffe1ffe1ffe1ffe1ffffff00ff00fffffff1fff1fff1fff1ffffff00ff00fffffffdfffdfffdfffdffffff00ff00ffffffffffffffffffffffffff00",
+        "bank": 0
+      },
+      "restored": {
+        "view": "vram",
+        "frame": 939,
+        "region": "vram",
+        "offset": 3712,
+        "length": 80,
+        "address": "0x8e80",
+        "hex": "0000ffff8181818181818181ffff00000000ffffe1e1e1e1e1e1e1e1ffff00000000fffff1f1f1f1f1f1f1f1ffff00000000fffffdfdfdfdfdfdfdfdffff00000000ffffffffffffffffffffffff0000",
+        "bank": 0
+      },
+      "opaqueMatches": true,
+      "normalMatches": true
+    },
+    "handoff": {
+      "pre": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 389,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [
+          "left",
+          "start"
+        ],
+        "sampledButtons": [
+          "left",
+          "start"
+        ],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 2068.553002,
+          "gameTimeMs": 6512.912750244141
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0003",
+          "frame": 389,
+          "totalFrames": 1743,
+          "bytesUsed": 3408388,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 3482,
+          "eventDigest": "5cf08106576aefad3deb9627ba621e2eefb856ad6f132fb9f8e1e3c0fa3c839f",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 939,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            },
+            {
+              "branchId": "branch-0003",
+              "frame": 389,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 389,
+        "advancedFrames": 0,
+        "appliedButtons": [
+          "left",
+          "start"
+        ],
+        "samples": [
+          {
+            "frame": 389,
+            "width": 160,
+            "height": 144,
+            "sha256": "724331cf597c1de973f3cd6fbb27f60987bf0cc0ebf9cea8249c24d5b709a35a",
+            "rgbaSha256": "2a2baac2c7e5d118e796315e2672f8716454319136711649cf08441658b642ec",
+            "sampledButtons": [
+              "left",
+              "start"
+            ],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/724331cf597c1de973f3cd6fbb27f60987bf0cc0ebf9cea8249c24d5b709a35a.png"
+          }
+        ],
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "omitted",
+          "sampleCount": 1
+        }
+      },
+      "post": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 431,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [
+          "start"
+        ],
+        "sampledButtons": [
+          "start"
+        ],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 2105.692544,
+          "gameTimeMs": 7216.106414794922
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0003",
+          "frame": 431,
+          "totalFrames": 1785,
+          "bytesUsed": 3503573,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 3570,
+          "eventDigest": "cb69a476bbc02c46c237abe51d74ba7b0bb7fdcd2d9daf9281ff87abbbe22299",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 939,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            },
+            {
+              "branchId": "branch-0003",
+              "frame": 431,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 401,
+        "advancedFrames": 30,
+        "appliedButtons": [
+          "start"
+        ],
+        "samples": [
+          {
+            "frame": 416,
+            "width": 160,
+            "height": 144,
+            "sha256": "f9e88d4c350e9fe8ce212d2cee184d22fad6a98a72eba00229c6136a49cf28be",
+            "rgbaSha256": "8ffcb0c25328f3a9c0409c00b29c3e947329bdd1ca3f37862ef84b6dc2303fae",
+            "sampledButtons": [
+              "start"
+            ],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/f9e88d4c350e9fe8ce212d2cee184d22fad6a98a72eba00229c6136a49cf28be.png"
+          },
+          {
+            "frame": 431,
+            "width": 160,
+            "height": 144,
+            "sha256": "9aba3150a646344ecd1b6dac8b27f0cc6ae9a6655a76e9ebc14308666d2a3c21",
+            "rgbaSha256": "cb4d25cac86a1800b934dddb509f93c6d5167b7b672e926f3a108e8f751a838a",
+            "sampledButtons": [
+              "start"
+            ],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/9aba3150a646344ecd1b6dac8b27f0cc6ae9a6655a76e9ebc14308666d2a3c21.png"
+          }
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "branchId": "branch-0003",
+          "fromActionIndex": 297,
+          "toActionIndex": 328,
+          "fromFrame": 401,
+          "toFrame": 431,
+          "fromPrefixPin": {
+            "eventCount": 3508,
+            "eventDigest": "04e0583a1cd808536b2fb2467fd80553d0b00611ebc3c3ebaff016fbdaa57a53",
+            "byteLength": 1586459,
+            "sha256": "80ea242a343812e3198165d6d09d7d215b380e76f9db1f1c6ffc9cf001a43ab7"
+          },
+          "prefixPin": {
+            "eventCount": 3570,
+            "eventDigest": "cb69a476bbc02c46c237abe51d74ba7b0bb7fdcd2d9daf9281ff87abbbe22299",
+            "byteLength": 1612714,
+            "sha256": "3f04764edd1143b86746d91110a749bfa707125b7a5d157cf3ad7c3f21802652"
+          },
+          "emptyInterval": false
+        },
+        "execution": {
+          "status": "completed",
+          "requestedFrames": 30,
+          "startFrame": 401,
+          "frame": 431,
+          "advancedFrames": 30,
+          "appliedButtons": [
+            "start"
+          ],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0003",
+            "fromActionIndex": 297,
+            "toActionIndex": 328,
+            "fromFrame": 401,
+            "toFrame": 431,
+            "fromPrefixPin": {
+              "eventCount": 3508,
+              "eventDigest": "04e0583a1cd808536b2fb2467fd80553d0b00611ebc3c3ebaff016fbdaa57a53",
+              "byteLength": 1586459,
+              "sha256": "80ea242a343812e3198165d6d09d7d215b380e76f9db1f1c6ffc9cf001a43ab7"
+            },
+            "prefixPin": {
+              "eventCount": 3570,
+              "eventDigest": "cb69a476bbc02c46c237abe51d74ba7b0bb7fdcd2d9daf9281ff87abbbe22299",
+              "byteLength": 1612714,
+              "sha256": "3f04764edd1143b86746d91110a749bfa707125b7a5d157cf3ad7c3f21802652"
+            },
+            "emptyInterval": false
+          },
+          "sampledButtons": [
+            "start"
+          ]
+        },
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 2
+        }
+      },
+      "memory": {
+        "view": "memory",
+        "frame": 431,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "8600a60100000000000000000000000303000048013401001c00000000010000000000000000190282010000000000000100000000fefe0000a3024601000000000000010000000002fe00000001020300280134018000a001480134010100000712120100000000005100400000570137000000000000e1ac0200010000000000000000000000000000000000010000000000000000000000000000346464640000000000000000"
+      }
+    },
+    "cpu": {
+      "step": {
+        "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
+        "frame": 921,
+        "width": 160,
+        "height": 144,
+        "activeButtons": [],
+        "sampledButtons": [],
+        "cgb": true,
+        "romSha256": "a330be5fb230741e46e9c0af4b8e7ef0a78e8ccdd98f34805c0eb6937cdd0a99",
+        "runtime": {
+          "name": "PyBoy",
+          "version": "2.7.0",
+          "protocolVersion": 1,
+          "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+        },
+        "paused": true,
+        "clock": {
+          "mode": "paused",
+          "clockHz": 4194304,
+          "dotsPerFrame": 70224,
+          "executionWallTimeMs": 2718.212086,
+          "gameTimeMs": 15420.032501220703
+        },
+        "recording": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "status": "recording",
+          "branchId": "branch-0004",
+          "frame": 921,
+          "totalFrames": 2585,
+          "bytesUsed": 4863664,
+          "limits": {
+            "sampleEveryFrames": 1,
+            "recentFrameCount": 12,
+            "maxBytes": 16777216,
+            "maxFrames": 36000,
+            "maxWallTimeMs": 900000
+          },
+          "eventCount": 5207,
+          "eventDigest": "6b1469482fccf21bf99b7e64313f4b9cd2724fb6c7fe8259b36774a1b4c0742b",
+          "branches": [
+            {
+              "branchId": "branch-0001",
+              "frame": 657
+            },
+            {
+              "branchId": "branch-0002",
+              "frame": 939,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            },
+            {
+              "branchId": "branch-0003",
+              "frame": 431,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            },
+            {
+              "branchId": "branch-0004",
+              "frame": 921,
+              "parentBranchId": "branch-0001",
+              "sourceSessionId": "83e1bd66931048358651743f11e22a3a",
+              "checkpointId": "checkpoint-91f1e6b4649d4de0adbaa4d3b8efcfee"
+            }
+          ]
+        },
+        "startFrame": 621,
+        "advancedFrames": 300,
+        "appliedButtons": [],
+        "samples": [
+          {
+            "frame": 671,
+            "width": 160,
+            "height": 144,
+            "sha256": "2781e54029b570bb92bbd531cdd3c5a7755fb010fa9f36ffda1f4947345527dc",
+            "rgbaSha256": "3e4d401d8eec65d0d85f318f4c1e344e7ddc586228f5efceac4ccec4f3a48af7",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/2781e54029b570bb92bbd531cdd3c5a7755fb010fa9f36ffda1f4947345527dc.png"
+          },
+          {
+            "frame": 721,
+            "width": 160,
+            "height": 144,
+            "sha256": "e964d7f0ca7e8219883eda0431e7622e768365cf87d5c022f9e3029fe299f7f4",
+            "rgbaSha256": "a145f183c17c57a52311cd08bda1154dc7577352a69488abac875bd111f8a56c",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/e964d7f0ca7e8219883eda0431e7622e768365cf87d5c022f9e3029fe299f7f4.png"
+          },
+          {
+            "frame": 771,
+            "width": 160,
+            "height": 144,
+            "sha256": "9c75d3a3a7589a5b4c9cba3024149451a874bba3990921c1b25f3a010f837f31",
+            "rgbaSha256": "8f444e8bc480292459177c0184927c5009fb10d46527e2c707798c3f49ff091a",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/9c75d3a3a7589a5b4c9cba3024149451a874bba3990921c1b25f3a010f837f31.png"
+          },
+          {
+            "frame": 821,
+            "width": 160,
+            "height": 144,
+            "sha256": "9c9381b129b4f9c4242d7b7049339b0118c404f86e417f1b950887e35525e1b3",
+            "rgbaSha256": "bdeecf0cfbf3cf256bde720cd1ba56fef11f7152ac349c81c2ccda128fe5ab68",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/9c9381b129b4f9c4242d7b7049339b0118c404f86e417f1b950887e35525e1b3.png"
+          },
+          {
+            "frame": 871,
+            "width": 160,
+            "height": 144,
+            "sha256": "13b5b6404e18a784090175578134bafa4d0c971b9d9ff8e685ae730f6aa670c2",
+            "rgbaSha256": "578d4d9d9cfc270491aa7b43aa7b398db60cdd265e6c849d631600d1d5b7afa9",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/13b5b6404e18a784090175578134bafa4d0c971b9d9ff8e685ae730f6aa670c2.png"
+          },
+          {
+            "frame": 921,
+            "width": 160,
+            "height": 144,
+            "sha256": "e328c37fa7cdbb2d846502e6d5f1df97606ce441c1775fd6c93a0f7000efd789",
+            "rgbaSha256": "e68bd24a5ad6afff124bac49afb2c6f91a267fa92ffbf99fc8ca07166b1bd207",
+            "sampledButtons": [],
+            "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/frames/e328c37fa7cdbb2d846502e6d5f1df97606ce441c1775fd6c93a0f7000efd789.png"
+          }
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+          "sessionId": "83e1bd66931048358651743f11e22a3a",
+          "branchId": "branch-0004",
+          "fromActionIndex": 518,
+          "toActionIndex": 819,
+          "fromFrame": 621,
+          "toFrame": 921,
+          "fromPrefixPin": {
+            "eventCount": 4605,
+            "eventDigest": "3e05e3f41b072aa4ea6ba0d5f41e88092c5d331492005105ae2b649f416c1259",
+            "byteLength": 2095265,
+            "sha256": "43c2b33e79b8bdf6054ae11ea41ccfeb56706761d62b35e0357721199b6f7cf5"
+          },
+          "prefixPin": {
+            "eventCount": 5207,
+            "eventDigest": "6b1469482fccf21bf99b7e64313f4b9cd2724fb6c7fe8259b36774a1b4c0742b",
+            "byteLength": 2352090,
+            "sha256": "36d5421553408df04a23c4e4cdfb9dbd893603b4f60af22523e173779d386a6e"
+          },
+          "emptyInterval": false
+        },
+        "execution": {
+          "status": "completed",
+          "requestedFrames": 300,
+          "startFrame": 621,
+          "frame": 921,
+          "advancedFrames": 300,
+          "appliedButtons": [],
+          "recordingSpan": {
+            "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+            "sessionId": "83e1bd66931048358651743f11e22a3a",
+            "branchId": "branch-0004",
+            "fromActionIndex": 518,
+            "toActionIndex": 819,
+            "fromFrame": 621,
+            "toFrame": 921,
+            "fromPrefixPin": {
+              "eventCount": 4605,
+              "eventDigest": "3e05e3f41b072aa4ea6ba0d5f41e88092c5d331492005105ae2b649f416c1259",
+              "byteLength": 2095265,
+              "sha256": "43c2b33e79b8bdf6054ae11ea41ccfeb56706761d62b35e0357721199b6f7cf5"
+            },
+            "prefixPin": {
+              "eventCount": 5207,
+              "eventDigest": "6b1469482fccf21bf99b7e64313f4b9cd2724fb6c7fe8259b36774a1b4c0742b",
+              "byteLength": 2352090,
+              "sha256": "36d5421553408df04a23c4e4cdfb9dbd893603b4f60af22523e173779d386a6e"
+            },
+            "emptyInterval": false
+          },
+          "sampledButtons": []
+        },
+        "genuineEmulatorFrames": true,
+        "imageDelivery": {
+          "status": "available",
+          "sampleCount": 6
+        }
+      },
+      "memory": {
+        "view": "memory",
+        "frame": 921,
+        "region": "wram",
+        "offset": 509,
+        "length": 168,
+        "address": "0xc1fd",
+        "hex": "32011e010000000000000100000000000000005501b6010000000000000100000000fdfd0000c6005a01001c00000000000000000003fd00000f02c0010000000000000100000000fd0200000001020302a0006001ed005b0100000000ff02060000000001020100021d00000000060efc0000010000008e31000000000100010000000100000002000000000000000100000040010001000100ff00646444640000120000000000"
+      }
+    },
+    "clips": [
+      {
+        "name": "depletion-recovery",
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/depletion-recovery.gif",
+        "sha256": "8fb4daecd89bb194d724c882ae017c8f17fe43b27191764a0d30e3768d55fa33",
+        "frameCount": 230,
+        "sourceFrameCount": 369,
+        "startFrame": 289,
+        "endFrame": 657,
+        "durationMs": 6180,
+        "branchId": "branch-0001",
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+        "width": 160,
+        "height": 144,
+        "recordingFinalFrame": 657,
+        "lastEvidenceFrame": 657,
+        "partialRecording": false
+      },
+      {
+        "name": "dunk-meter",
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/dunk-meter.gif",
+        "sha256": "408e75478a33cb7967c46baa0cc76ee4bac840698d99b3e81faa3501fa7f8dee",
+        "frameCount": 132,
+        "sourceFrameCount": 367,
+        "startFrame": 573,
+        "endFrame": 939,
+        "durationMs": 6140,
+        "branchId": "branch-0002",
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+        "width": 160,
+        "height": 144,
+        "recordingFinalFrame": 939,
+        "lastEvidenceFrame": 939,
+        "partialRecording": false
+      },
+      {
+        "name": "handoff",
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final/handoff.gif",
+        "sha256": "92d5a7055577cfe2cae42e45b5c38de5693d1c11463516ec75cc5270b034f467",
+        "frameCount": 25,
+        "sourceFrameCount": 43,
+        "startFrame": 389,
+        "endFrame": 431,
+        "durationMs": 720,
+        "branchId": "branch-0003",
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/turbo-final",
+        "width": 160,
+        "height": 144,
+        "recordingFinalFrame": 431,
+        "lastEvidenceFrame": 431,
+        "partialRecording": false
+      }
+    ]
+  },
+  "browser": {
+    "rom": {
+      "path": "rom/nicasource-jam.gbc",
+      "sha256": "c2539df89cb4aa4fbc920d4118cce7326a0707e1395544a8ce69b9bb4eff15c2",
+      "sizeBytes": 2097152
+    },
+    "sourceRevision": "b9208b898a00bc889cc4e68190f3129c8aec8d9055f5ddbecf7cce6fcdd4407c",
+    "exportIdentity": {
+      "rom": {
+        "path": "rom/nicasource-jam.gbc",
+        "sha256": "c2539df89cb4aa4fbc920d4118cce7326a0707e1395544a8ce69b9bb4eff15c2",
+        "sizeBytes": 2097152
+      },
+      "index": {
+        "path": "index.html",
+        "sha256": "b912aa6d1bc9978364e50d230083016b73f2e74f308fca4062fd3f6cfa98bb70",
+        "sizeBytes": 1174
+      },
+      "inventorySha256": "7d422e749d60f1604551e0bc95310f9581f7a518d6fd221f4ef6b972a533dd08",
+      "files": 9,
+      "logicalBytes": 2277348
+    },
+    "url": "http://127.0.0.1:58549/9bc8642074200e14efaadbc5fe5f2024b27bf51b1a9928a97d2bef606e283d56/",
+    "savedPriorState": {
+      "success": true,
+      "action": "capture_state",
+      "preview": {
+        "url": "http://127.0.0.1:58549/9bc8642074200e14efaadbc5fe5f2024b27bf51b1a9928a97d2bef606e283d56/",
+        "port": 58549,
+        "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+        "reused": false,
+        "listenerId": "ad1d6474b3184da6f1b8ab1185f3c0c4",
+        "startedAt": "2026-10-29T19:33:20.196Z",
+        "kind": "in-process-http",
+        "listening": true,
+        "closureState": "open",
+        "annotations": {
+          "injected": true,
+          "fingerprint": "4f72feb6f290c66a8af4fc0cad438d3a935ba7c6125ef482313adb9f9868579e"
+        }
+      },
+      "state": {
+        "id": "a675b4f06f314eeb35274348348d8f266e7d0c921700e49c3a5ba8395157cafc",
+        "title": "NICASOURCE JAM",
+        "frame": 29581,
+        "createdAt": "2026-10-29T19:46:41.029Z"
+      },
+      "paused": true
+    },
+    "observed": [
+      "New native export opened in same owned built-in-browser tab",
+      "Default MATUS/MAGIC vs BAMBI/TORRES Warm-up lineup",
+      "Full gauge, partial depletion, X exhaustion, walking recovery, full refill",
+      "Preview left natively paused; P resumes"
+    ],
+    "screenshots": [
+      "docs/playtests/turbo/browser-full.png",
+      "docs/playtests/turbo/browser-partial.png",
+      "docs/playtests/turbo/browser-empty.png",
+      "docs/playtests/turbo/browser-recovering.png",
+      "docs/playtests/turbo/browser-recovered.png"
+    ],
+    "status": {
+      "success": true,
+      "action": "status",
+      "preview": {
+        "url": "http://127.0.0.1:58549/9bc8642074200e14efaadbc5fe5f2024b27bf51b1a9928a97d2bef606e283d56/",
+        "port": 58549,
+        "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+        "reused": true,
+        "listenerId": "ad1d6474b3184da6f1b8ab1185f3c0c4",
+        "startedAt": "2026-10-29T19:33:20.196Z",
+        "kind": "in-process-http",
+        "listening": true,
+        "closureState": "open",
+        "annotations": {
+          "injected": true,
+          "fingerprint": "fe23db36f8aebb9d9779b211a09ca32517d686a2948512f914126d113ad7f07c"
+        }
+      },
+      "players": [
+        {
+          "id": "a78af397-b607-4865-a67b-82b43ec0af45",
+          "frame": 13035,
+          "paused": false,
+          "lastSeen": 1793303563067,
+          "input": {
+            "generation": 45,
+            "ready": true,
+            "reason": ""
+          },
+          "recording": {
+            "generation": 0,
+            "available": true,
+            "visible": true,
+            "owner": null,
+            "phase": "idle",
+            "pending": false
+          }
+        }
+      ],
+      "identity": {
+        "romSha256": "c2539df89cb4aa4fbc920d4118cce7326a0707e1395544a8ce69b9bb4eff15c2",
+        "runtimeSha256": "69aa17be45fec5fde585af4f39ed850b5d64107ec094a6482f316fef2fe7c945",
+        "sourceRevision": "b9208b898a00bc889cc4e68190f3129c8aec8d9055f5ddbecf7cce6fcdd4407c"
+      },
+      "input": {
+        "accepting": true
+      }
+    }
+  },
+  "host": {
+    "command": "sh scripts/test.sh",
+    "results": "docs/playtests/turbo/host-tests.txt",
+    "coverage": [
+      "six-profile speed/depletion/recovery",
+      "held-empty lockout and 25-unit rearm",
+      "delay and saturation",
+      "pause/Dunk Cam freeze",
+      "inbounds recovery",
+      "catch reserve handoff",
+      "dunk and shove costs",
+      "CPU fairness",
+      "108000-update reserve bounds soak",
+      "existing simulation regressions"
+    ]
+  },
+  "spriteBudget": {
+    "used": 190,
+    "limit": 192
+  },
+  "limits": [
+    "No physical Chromatic test",
+    "Practice build still lacks complete matches and hot-hand effects",
+    "Tuning values are initial gameplay choices; no stamina rating introduced"
+  ]
+}

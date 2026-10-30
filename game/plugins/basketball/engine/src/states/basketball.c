@@ -10,6 +10,8 @@
 #include "jam_menu.h"
 #include "jam_cards.h"
 #include "jam_dunk_cam.h"
+#include "jam_turbo_hud.h"
+#include "jam_audio.h"
 void jam_player_palettes(const jam_setup_t *setup) BANKED;
 #include "palette.h"
 #include <string.h>
@@ -22,6 +24,10 @@ static uint8_t menu_tiles[360];
 static uint8_t hud[40];
 static uint8_t previous_hud[40];
 static uint8_t previous_controlled;
+static uint8_t previous_turbo_level,previous_turbo_locked;
+static uint16_t previous_clock;
+static uint8_t previous_quarter,previous_match_phase;
+static uint16_t clock_last_vblank;
 static int16_t old_x[4],old_y[4];
 static uint8_t moving[4];
 static uint8_t facing[4];
@@ -42,11 +48,8 @@ static uint8_t glyph(char c) {
 static void text(uint8_t at,const char *s) { while(*s && at<40) hud[at++]=192+glyph(*s++); }
 static void number(uint8_t at,uint8_t n) { hud[at]=192+27+n/10; hud[at+1]=192+27+n%10; }
 static void draw_hud(void) {
-    uint8_t i,changed=jam.mode==JAM_DUNK;
+    uint8_t i,meter,units,changed=jam.mode==JAM_DUNK;
     for(i=0;i<40;i++) hud[i]=192;
-    number(0,jam.score[0]);text(2,":");number(3,jam.score[1]);
-    text(6,jam_roster[jam.setup.roster[jam.controlled]].name);
-    text(13,jam_roster[jam.setup.roster[jam.controlled]].jersey);text(17,"YOU");
     if(jam.paused) text(20,"SELECT PLAY B LINEUP");
     else switch(jam.message) {
         case JAM_MSG_PASS:text(20,"TO ");text(23,jam_roster[jam.setup.roster[jam.target]].name);text(31,jam_roster[jam.setup.roster[jam.target]].jersey);break;
@@ -67,20 +70,25 @@ static void draw_hud(void) {
             else text(20,jam.next_team?"CPU INBOUND":"A PASS BALL IN");break;
         case JAM_MSG_DUNK:text(20,"TURBO FINISH");break;
         default:
-            if(jam.owner==(int8_t)jam.controlled) text(20,"A PASS HOLD B SHOOT");
+            if(jam.owner==(int8_t)jam.controlled) {
+                text(20,jam_roster[jam.setup.roster[jam.controlled]].name);
+                text(27,jam_roster[jam.setup.roster[jam.controlled]].jersey);
+                text(30,"A PASS B");
+            }
             else if(jam.owner>=2 && (jam.tick&128)){text(20,"MARK ");text(25,jam_roster[jam.setup.roster[jam.owner]].name);text(32,jam_roster[jam.setup.roster[jam.owner]].jersey);}
             else text(20,(jam.tick&128)?"TURBO A SHOVE":"A STEAL  B BLOCK");
     }
     if(!jam.paused && jam.charge) text(20,jam.charge>=18 && jam.charge<=36 ? "RELEASE NOW         " : "HOLD B - SET SHOT   ");
     if(jam.mode==JAM_DUNK){
-        for(i=0;i<40;i++)hud[i]=192;
-        text(0,"DUNK CAM");text(9,jam_roster[jam.setup.roster[jam.passer]].name);
-        text(17,jam_roster[jam.setup.roster[jam.passer]].jersey);
+        for(i=20;i<40;i++)hud[i]=192;
         if(jam.paused)text(20,"SELECT PLAY B LINEUP");
-        else if(jam.dunk_result==JAM_DUNK_BLOCKED)text(20,"REJECTED - NO BASKET");
+        else if(jam.dunk_result==JAM_DUNK_BLOCKED)text(20,"BLOCKED - NO BASKET");
         else if(jam.dunk_result==JAM_DUNK_MISSED)text(20,"OFF THE RIM");
-        else if(jam.scored){text(20,"SLAM");number(27,jam.score[0]);text(29,":");number(30,jam.score[1]);}
-        else text(20,jam.dunk_time<8?"GATHER":jam.dunk_time<24?"UP HIGH":jam.dunk_time<32?"TO THE RIM":"SLAM");
+        else if(jam.scored){text(20,"BOOM");number(27,jam.score[0]);text(29,":");number(30,jam.score[1]);}
+        else {
+            text(20,jam_roster[jam.setup.roster[jam.passer]].name);
+            text(27,jam.dunk_time<8?"LOAD UP":jam.dunk_time<24?"SKY HIGH":jam.dunk_time<28?"THROW IT DOWN":"POWER JAM");
+        }
     }
     if(!jam.paused && jam.mode==JAM_FINISH && !jam.scored) {
         for(i=20;i<40;i++)hud[i]=192;
@@ -91,6 +99,31 @@ static void draw_hud(void) {
         text(20,jam_roster[jam.setup.roster[jam.controlled]].name);
         text(27,jam.players[jam.controlled].x*5/16<view_x ? "GO RIGHT" : "GO LEFT");
     }
+    meter=jam.mode==JAM_DUNK?jam.passer:jam.controlled;
+    if(!jam.paused && jam.mode!=JAM_DUNK && !jam.message_time && jam.turbo_exhausted[meter]){
+        for(i=20;i<40;i++)hud[i]=192;
+        text(20,(jam.previous_input&JAM_TURBO)?"RELEASE TURBO":"TURBO RECOVERING");
+    }
+    /* Fixed status row: score, quarter, clock and the existing turbo gauge. */
+    for(i=0;i<15;i++)hud[i]=192;
+    number(0,jam.score[0]);text(2,":");number(3,jam.score[1]);
+    text(6,"Q");hud[7]=192+27+jam.quarter;
+    hud[9]=192+27+jam.clock_seconds/60;text(10,":");
+    number(11,jam.clock_seconds%60);
+    if(!jam.paused && jam.match_phase!=JAM_MATCH_LIVE) {
+        for(i=20;i<40;i++)hud[i]=192;
+        if(jam.match_phase==JAM_MATCH_BUZZER)text(20,"BUZZER - SHOT LIVE");
+        else if(jam.match_phase==JAM_MATCH_BREAK) {
+            text(20,"END Q");hud[25]=192+27+jam.quarter;text(26," A NEXT B MENU");
+        } else text(20,jam.score[0]>jam.score[1]?"WIN A REPLAY B MENU":
+            jam.score[0]<jam.score[1]?"LOSE A REPLAY B MENU":"TIE A REPLAY B MENU");
+    }
+    previous_clock=jam.clock_seconds;previous_quarter=jam.quarter;
+    previous_match_phase=jam.match_phase;
+    text(15,jam.turbo_exhausted[meter]?"X":"T");
+    units=((uint16_t)jam.turbo_energy[meter]*16+99)/100;
+    previous_turbo_level=units;previous_turbo_locked=jam.turbo_exhausted[meter];
+    for(i=0;i<4;i++){hud[16+i]=232+(units>4?4:units);units=units>4?units-4:0;}
     for(i=0;i<40;i++)if(hud[i]!=previous_hud[i])changed=1;
     if(changed) {
         VBK_REG=0;
@@ -226,14 +259,23 @@ static void draw_menu(void) {
         menu_text(0,13,"PICKUP - BALANCED");
         menu_text(0,14,"WINNERS - QUICK CPU");
         menu_text(0,16,"UP DOWN A CONFIRM");menu_text(0,17,"B BACK");
+    } else if(jam_menu.stage==JAM_MENU_PERIODS) {
+        menu_text(3,2,"6 MATCH LENGTH");
+        menu_text(3,5,"1 PERIOD");menu_text(3,7,"2 PERIODS");menu_text(3,9,"4 PERIODS");
+        menu_text(1,5+jam_menu.cursor*2,">");
+        menu_text(0,12,"3 MINUTES PER PERIOD");
+        menu_text(2,14,jam_menu.cursor==0?"3 MINUTES TOTAL":jam_menu.cursor==1?"6 MINUTES TOTAL":"12 MINUTES TOTAL");
+        menu_text(0,16,"UP DOWN A CONFIRM");menu_text(0,17,"B BACK");
     } else {
         menu_text(3,2,"CHECK LINEUP");
         menu_text(0,4,"YOU");menu_text(11,4,jam_roster[jam_menu.setup.roster[0]].name);
         menu_text(0,6,"TEAMMATE");menu_text(11,6,jam_roster[jam_menu.setup.roster[1]].name);
         menu_text(0,8,"OPPONENT 1");menu_text(11,8,jam_roster[jam_menu.setup.roster[2]].name);
         menu_text(0,10,"OPPONENT 2");menu_text(11,10,jam_roster[jam_menu.setup.roster[3]].name);
-        difficulty_text(3,13,jam_menu.setup.difficulty);
-        menu_text(0,16,"A OR START TO PLAY");menu_text(0,17,"B CHANGE DIFFICULTY");
+        difficulty_text(3,12,jam_menu.setup.difficulty);
+        menu_text(0,14,jam_menu.setup.periods==1?"1 PERIOD OF 3 MIN":
+            jam_menu.setup.periods==2?"2 PERIODS OF 3 MIN":"4 PERIODS OF 3 MIN");
+        menu_text(0,16,"A OR START TO PLAY");menu_text(0,17,"B MATCH LENGTH");
     }
     /* Menu palette 5 preserves the stock UI/font palette 7. */
     for(i=0;i<20;i++)attrs[i]=5;
@@ -247,7 +289,9 @@ static void start_lineup(void) {
     jam_dunk_cam_end();
     if(!jam_init_lineup(&jam,&jam_menu.setup))return;
     in_menu=0;view_x=45;jam_player_palettes(&jam.setup);
-    VBK_REG=0;set_bkg_data(192,40,jam_font);
+    jam_sfx_stop();jam_sfx_sync(&jam);jam_sfx_play(JAM_SFX_START);
+    __critical { clock_last_vblank=sys_time; }
+    VBK_REG=0;set_bkg_data(192,40,jam_font);set_bkg_data(232,5,jam_turbo_tiles);
     for(i=0;i<4;i++){facing[i]=i>=2?1:0;old_x[i]=jam.players[i].x;old_y[i]=jam.players[i].y;moving[i]=0;}
     for(i=0;i<40;i++){hud[i]=7;previous_hud[i]=255;}
     VBK_REG=1;set_win_tiles(0,0,20,2,hud);VBK_REG=0;
@@ -257,6 +301,8 @@ static void start_lineup(void) {
 void basketball_init(void) BANKED {
     uint8_t i;
     jam_init(&jam);
+    jam_sfx_init(&jam);
+    __critical { clock_last_vblank=sys_time; }
     view_x=45;
     camera_settings=0;
     camera_offset_x=camera_offset_y=0;
@@ -277,6 +323,10 @@ void basketball_init(void) BANKED {
 }
 void basketball_update(void) BANKED {
     uint8_t buttons=0;
+    uint8_t menu_pressed;
+    uint16_t clock_now,elapsed;
+    __critical { clock_now=sys_time; }
+    elapsed=clock_now-clock_last_vblank;clock_last_vblank=clock_now;
     if(INPUT_LEFT) buttons|=JAM_MOVE_LEFT;
     if(INPUT_RIGHT) buttons|=JAM_MOVE_RIGHT;
     if(INPUT_UP) buttons|=JAM_MOVE_UP;
@@ -286,15 +336,21 @@ void basketball_update(void) BANKED {
     if(INPUT_START) buttons|=JAM_TURBO;
     if(INPUT_SELECT) buttons|=JAM_PAUSE;
     if(in_menu) {
+        menu_pressed=(buttons^jam_menu.previous_input)&buttons;
         if(jam_menu_update(&jam_menu,buttons)) {start_lineup();jam.previous_input=buttons;}
-        else if(jam_menu.changed)draw_menu();
+        else if(jam_menu.changed){
+            draw_menu();
+            jam_sfx_play(menu_pressed&JAM_B?JAM_SFX_BACK:menu_pressed&JAM_A?JAM_SFX_CONFIRM:JAM_SFX_MOVE);
+        }
         return;
     }
-    if(jam.paused && INPUT_B_PRESSED) {
+    if((jam.paused || jam.match_phase>=JAM_MATCH_BREAK) && INPUT_B_PRESSED) {
+        jam_sfx_stop();jam_sfx_play(JAM_SFX_BACK);
         jam_dunk_cam_end();
         jam_menu_init(&jam_menu,&jam.setup);jam_menu.previous_input=buttons;
         in_menu=1;draw_menu();return;
     }
+    jam_match_clock(&jam,elapsed);
     jam_update(&jam,buttons);
     draw_players();
     if(jam.mode==JAM_DUNK){
@@ -302,7 +358,11 @@ void basketball_update(void) BANKED {
         jam_dunk_cam_render(&jam);draw_hud();
     }else{
         if(jam_cam_active){jam_dunk_cam_end();for(buttons=0;buttons<40;buttons++)previous_hud[buttons]=255;draw_hud();ui_set_pos(0,128);}
-        else if((jam.tick&7)==0 || INPUT_SELECT_PRESSED || jam.paused || jam.controlled!=previous_controlled)draw_hud();
+        else if((jam.tick&7)==0 || INPUT_SELECT_PRESSED || jam.paused || jam.controlled!=previous_controlled ||
+            jam.clock_seconds!=previous_clock || jam.quarter!=previous_quarter || jam.match_phase!=previous_match_phase ||
+            ((uint16_t)jam.turbo_energy[jam.controlled]*16+99)/100!=previous_turbo_level ||
+            jam.turbo_exhausted[jam.controlled]!=previous_turbo_locked)draw_hud();
     }
     previous_controlled=jam.controlled;
+    jam_sfx_update(&jam);
 }

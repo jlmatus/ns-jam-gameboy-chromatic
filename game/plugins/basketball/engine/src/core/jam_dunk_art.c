@@ -19,6 +19,16 @@ void jam_dunk_frame_matus_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_matus_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_matus_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_matus_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_matus_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_0_0(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_0_1(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_0_2(unsigned char frame,unsigned char mirror) BANKED;
@@ -38,6 +48,16 @@ void jam_dunk_frame_magic_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_magic_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_magic_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_0_0(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_0_1(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_0_2(unsigned char frame,unsigned char mirror) BANKED;
@@ -57,6 +77,16 @@ void jam_dunk_frame_bambi_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_bambi_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_bambi_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_0_0(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_0_1(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_0_2(unsigned char frame,unsigned char mirror) BANKED;
@@ -76,6 +106,16 @@ void jam_dunk_frame_torres_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_torres_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_torres_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_0_0(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_0_1(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_0_2(unsigned char frame,unsigned char mirror) BANKED;
@@ -95,6 +135,16 @@ void jam_dunk_frame_chompa_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_chompa_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_chompa_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_0_0(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_0_1(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_0_2(unsigned char frame,unsigned char mirror) BANKED;
@@ -114,9 +164,30 @@ void jam_dunk_frame_meat_1_4(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_1_5(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_1_6(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_frame_meat_1_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_0(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_1(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_2(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_3(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_4(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_5(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_6(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_7(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_8(unsigned char frame,unsigned char mirror) BANKED;
+void jam_dunk_frame_meat_2_9(unsigned char frame,unsigned char mirror) BANKED;
 void jam_dunk_art(unsigned char player,unsigned char frame,unsigned char failed,unsigned char mirror) BANKED {
-if(frame<8)failed=0;switch(player){
-case 0:if(failed){switch(frame){
+if(frame<8&&failed!=2)failed=0;switch(player){
+case 0:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_matus_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_matus_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_matus_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_matus_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_matus_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_matus_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_matus_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_matus_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_matus_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_matus_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_matus_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_matus_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_matus_1_2(frame,mirror);break;
@@ -138,7 +209,18 @@ case 24:case 25:case 26:jam_dunk_frame_matus_0_8(frame,mirror);break;
 case 27:case 28:case 29:jam_dunk_frame_matus_0_9(frame,mirror);break;
 case 30:case 31:jam_dunk_frame_matus_0_10(frame,mirror);break;
 }}break;
-case 1:if(failed){switch(frame){
+case 1:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_magic_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_magic_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_magic_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_magic_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_magic_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_magic_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_magic_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_magic_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_magic_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_magic_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_magic_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_magic_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_magic_1_2(frame,mirror);break;
@@ -160,7 +242,18 @@ case 24:case 25:case 26:jam_dunk_frame_magic_0_8(frame,mirror);break;
 case 27:case 28:case 29:jam_dunk_frame_magic_0_9(frame,mirror);break;
 case 30:case 31:jam_dunk_frame_magic_0_10(frame,mirror);break;
 }}break;
-case 2:if(failed){switch(frame){
+case 2:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_bambi_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_bambi_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_bambi_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_bambi_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_bambi_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_bambi_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_bambi_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_bambi_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_bambi_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_bambi_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_bambi_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_bambi_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_bambi_1_2(frame,mirror);break;
@@ -182,7 +275,18 @@ case 24:case 25:case 26:jam_dunk_frame_bambi_0_8(frame,mirror);break;
 case 27:case 28:case 29:jam_dunk_frame_bambi_0_9(frame,mirror);break;
 case 30:case 31:jam_dunk_frame_bambi_0_10(frame,mirror);break;
 }}break;
-case 3:if(failed){switch(frame){
+case 3:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_torres_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_torres_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_torres_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_torres_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_torres_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_torres_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_torres_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_torres_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_torres_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_torres_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_torres_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_torres_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_torres_1_2(frame,mirror);break;
@@ -204,7 +308,18 @@ case 24:case 25:case 26:jam_dunk_frame_torres_0_8(frame,mirror);break;
 case 27:case 28:case 29:jam_dunk_frame_torres_0_9(frame,mirror);break;
 case 30:case 31:jam_dunk_frame_torres_0_10(frame,mirror);break;
 }}break;
-case 4:if(failed){switch(frame){
+case 4:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_chompa_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_chompa_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_chompa_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_chompa_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_chompa_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_chompa_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_chompa_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_chompa_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_chompa_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_chompa_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_chompa_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_chompa_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_chompa_1_2(frame,mirror);break;
@@ -226,7 +341,18 @@ case 24:case 25:case 26:jam_dunk_frame_chompa_0_8(frame,mirror);break;
 case 27:case 28:case 29:jam_dunk_frame_chompa_0_9(frame,mirror);break;
 case 30:case 31:jam_dunk_frame_chompa_0_10(frame,mirror);break;
 }}break;
-case 5:if(failed){switch(frame){
+case 5:if(failed==2){switch(frame){
+case 4:case 5:case 6:jam_dunk_frame_meat_2_0(frame,mirror);break;
+case 7:case 8:case 9:jam_dunk_frame_meat_2_1(frame,mirror);break;
+case 10:case 11:case 12:jam_dunk_frame_meat_2_2(frame,mirror);break;
+case 13:case 14:case 15:jam_dunk_frame_meat_2_3(frame,mirror);break;
+case 16:case 17:case 18:jam_dunk_frame_meat_2_4(frame,mirror);break;
+case 19:case 20:case 21:jam_dunk_frame_meat_2_5(frame,mirror);break;
+case 22:case 23:case 24:jam_dunk_frame_meat_2_6(frame,mirror);break;
+case 25:case 26:case 27:jam_dunk_frame_meat_2_7(frame,mirror);break;
+case 28:case 29:case 30:jam_dunk_frame_meat_2_8(frame,mirror);break;
+case 31:jam_dunk_frame_meat_2_9(frame,mirror);break;
+}}else if(failed){switch(frame){
 case 8:case 9:case 10:jam_dunk_frame_meat_1_0(frame,mirror);break;
 case 11:case 12:case 13:jam_dunk_frame_meat_1_1(frame,mirror);break;
 case 14:case 15:case 16:jam_dunk_frame_meat_1_2(frame,mirror);break;

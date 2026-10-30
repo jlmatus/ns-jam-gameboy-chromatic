@@ -38,7 +38,8 @@ static int16_t near_player(const jam_game_t *g, uint8_t a, uint8_t b) {
 static void message(jam_game_t *g, uint8_t m) { g->message=m; g->message_time=75; }
 uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED {
     uint8_t i, used=0;
-    if(!setup || setup->difficulty>JAM_WINNERS_STAY) return 0;
+    if(!setup || setup->difficulty>JAM_WINNERS_STAY ||
+       (setup->periods!=1 && setup->periods!=2 && setup->periods!=4)) return 0;
     for(i=0;i<4;i++) {
         if(setup->roster[i]>=JAM_ROSTER_COUNT || (used&(1u<<setup->roster[i]))) return 0;
         used|=1u<<setup->roster[i];
@@ -46,13 +47,14 @@ uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED {
     memset(g,0,sizeof(*g));
     g->setup=*setup;
     g->rng=0xace1;
+    g->quarter=1;g->clock_seconds=JAM_QUARTER_SECONDS;
     jam_tipoff(g);
     g->ball_x=g->players[0].x;
     g->ball_y=g->players[0].y;
     return 1;
 }
 void jam_init(jam_game_t *g) JAM_BANKED {
-    static const jam_setup_t defaults={{0,1,2,3},JAM_PICKUP};
+    static const jam_setup_t defaults={{0,1,2,3},JAM_PICKUP,4};
     jam_init_lineup(g,&defaults);
 }
 uint8_t jam_move_speed(const jam_game_t *g, uint8_t who, uint8_t turbo) JAM_BANKED {
@@ -262,7 +264,8 @@ static void cpu(jam_game_t *g,uint8_t p) {
     }
     /* A power carrier can commit to a short, visible turbo charge. */
     if(g->mode==JAM_HELD && g->owner==(int8_t)p && ratings(g,p)->power>=8 &&
-       !a->contact_cooldown && (g->tick&63)<24) a->turbo=1;
+       !a->contact_cooldown && (g->tick&63)<24 && (tx!=a->x || ty!=a->y))
+        a->turbo=jam_turbo_spend(g,p,1);
     speed=jam_move_speed(g,p,a->turbo);
     if(g->mode==JAM_HELD && g->owner>=0 && team(g->owner)!=ownteam &&
        ((tx>a->x && a->x>g->players[g->owner].x) ||
@@ -365,6 +368,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     g->previous_input=input;
     if(pressed&JAM_PAUSE) g->paused^=1;
     if(g->paused) return;
+    if(jam_match_control(g,pressed))return;
     g->tick++;
     if(g->message_time && !--g->message_time) g->message=JAM_MSG_PLAY;
     if(g->mode==JAM_DUNK){jam_dunk_update(g,pressed);return;}
@@ -372,6 +376,8 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     if(g->block) g->block--;
     for(i=0;i<4;i++) {
         jam_player_t *a=&g->players[i];
+        jam_turbo_recover(g,i,(g->mode==JAM_INBOUND || g->mode==JAM_RESET)?0:
+            (i==human?(input&JAM_TURBO)!=0:a->turbo));
         a->vx=a->vy=0;a->turbo=0;
         if(a->contact_cooldown)a->contact_cooldown--;
         if(a->reach_time)a->reach_time--;
@@ -395,7 +401,9 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     if(g->inbound_pass)jam_inbound_return(g);
     if(!g->players[human].stun && !(g->inbound_pass && human==g->inbounder)) {
         jam_player_t *a=&g->players[human];
-        a->turbo=(input&JAM_TURBO)!=0;
+        /* Only moving sprint drains continuously; dunks/shoves pay once. */
+        a->turbo=(input&JAM_TURBO) && (input&15) && !g->charge && !a->shot_time?
+            jam_turbo_spend(g,human,1):0;
         speed=jam_move_speed(g,human,a->turbo);
         if((input&(JAM_MOVE_LEFT|JAM_MOVE_RIGHT)) && (input&(JAM_MOVE_UP|JAM_MOVE_DOWN))) speed=(speed*3)/4;
         if(g->charge)speed=2;

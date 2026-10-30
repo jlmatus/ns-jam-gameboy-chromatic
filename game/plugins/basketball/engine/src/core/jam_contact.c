@@ -46,6 +46,7 @@ void jam_shove(jam_game_t *g,uint8_t p) JAM_BANKED {
         if(d<best){best=d;target=i;}
     }
     if(target==255)return;
+    if(!jam_turbo_spend(g,p,JAM_TURBO_SHOVE_COST))return;
     a->contact_cooldown=40;a->reach_time=10;
     if(strength(g,p)+2<strength(g,target)) {message(g,JAM_MSG_STAND);return;}
     knock_back(g,p,target,16);

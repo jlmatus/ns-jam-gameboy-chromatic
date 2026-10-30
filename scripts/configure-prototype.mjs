@@ -32,7 +32,7 @@ for(const [i,name] of ['matus','magic','bambi','torres','chompa','meat'].entries
  s.checksum=createHash('sha1').update(fs.readFileSync('game/assets/sprites/marker.png')).digest('hex');write(p,s);
 }
 for(const [id,name,colors] of [
- ['jam-court','Managua court',['FFF3CF','DDB377','B87C47','162638']],
+ ['jam-court','Managua slate court',['A8C7C4','365663','243C50','102033']],
  ['jam-ball','Ball and marker',['FFD270','E89328','E89328','302820']],
  ['jam-head-chompa','CHOMPA green beanie',[skin[4],'94C83D','94C83D','182738']]
 ])write(`game/project/palettes/${id}.gbsres`,{_resourceType:'palette',id,name,colors});

@@ -23,6 +23,8 @@ void jam_tipoff(jam_game_t *g) JAM_BANKED {
     for(i=0;i<4;i++){
         g->players[i].x=xs[i]*4;g->players[i].y=(i&1?78:104)*4;
         g->players[i].heading=i<2?JAM_FACE_RIGHT:JAM_FACE_LEFT;
+        g->turbo_energy[i]=JAM_TURBO_MAX;
+        g->turbo_delay[i]=g->turbo_exhausted[i]=0;
     }
     g->owner=g->controlled=0;g->mode=JAM_HELD;g->grace=120;
 }

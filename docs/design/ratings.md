@@ -27,7 +27,7 @@ Positions and movement use quarter pixels; probabilities use integer percentages
 
 | Rating | Current effect |
 | --- | --- |
-| Speed | Movement is `3 + speed / 3` quarter pixels per update; holding turbo adds 2. Diagonal movement uses three quarters of that speed. |
+| Speed | Movement is `3 + speed / 3` quarter pixels per update; available turbo adds 2 while spending reserve. Diagonal movement uses three quarters of that speed. See [turbo](turbo.md). |
 | Three-point | Base chance is `12 + 3 × rating + floor(3 × rating² / 10)`. Subtract one point per three horizontal court pixels beyond 100. A specialist separates from an average shooter; deep heaves lose accuracy. |
 | Passing | Flight lasts `28 − passing` updates. Ratings below 8 introduce up to `(10 − passing) / 2` pixels of vertical error. Higher passing also reduces interception reach. |
 | Steal | Increases steal/interception reach and success chance. Human A reaches repeat at a rating-based cooldown; front positioning adds 20 chance points, reaching from behind subtracts 17. A carrier's passing/power protect the ball. Pass interceptions are probabilistic, with one attempt per defender per pass. |
@@ -50,7 +50,7 @@ Difficulty changes opponents; the human and CPU teammate retain their ratings.
 
 Opponent swipe reach is `11 + steal / 2` pixels. Human reach is `(56 + 4 × steal + height_px − 40) / 4` pixels across court, with a separate depth check. Each defender gets one probabilistic interception attempt per pass, rather than automatically taking every ball within reach. An intended receiver within catch range wins the arrival catch; a failed lane attempt does not become a second automatic steal. Opponent catches have 45 updates of CPU-swipe protection, and initial practice possession has 120. Made baskets now use a separate protected inbound state and pass. A deliberate human reach can contest after the first eight possession updates; the old global protection no longer blocks manual defense for the entire CPU possession. These are prototype tuning values; easy-mode human shooting is preserved.
 
-Difficulty never changes roster values. Signature text remains flavor. Four-quarter match flow, turbo meter, fire streaks, final uniforms, sound, and cartridge records remain later work. Exaggerated dunks and Dunk Cam are implemented.
+Difficulty never changes roster values. Signature text remains flavor. Four-quarter match flow, fire streaks, final uniforms, sound, and cartridge records remain later work. Turbo reserves/meter, exaggerated dunks and Dunk Cam are implemented.
 
 ## Physical Profiles and Contact
 

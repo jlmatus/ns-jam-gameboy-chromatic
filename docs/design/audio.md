@@ -1,0 +1,11 @@
+# Native sound and blocked-dunk presentation
+
+`jam_audio.c` selects presentation events from actual simulation transitions; it never changes ratings, RNG, scoring or possession. `jam_sfx.c` routes those events through GB Studio's existing interrupt-driven SFX player. `scripts/create-sfx.mjs` owns editable PSG recipes and generates `jam_sfx_data.h` plus `art/audio/sfx.json`. No sampled voices, external runtime or audio files are needed by the cartridge.
+
+The 21 effects cover menu movement/confirm/back, match/period start, dribble, pass, shot release, rim, swish, catch/rebound, steal, shove/power contact, turbo onset, dunk launch, slam/cheer, dunk rejection, ordinary block, horn and win/lose/tie stingers. Pulse channel 1 and noise channel 4 are reserved for these effects. Future music must respect the native mute mask. Streams explicitly silence both channels before terminating.
+
+Impact/rejection/horn sounds have higher priority than routine dribbles and menu tones. Event snapshots prevent repeated playback from duplicate renders or held input. Dunk impact sounds at the result transition; the later two-point award does not trigger a second swish. Blocked dunks never play the scoring celebration. SELECT immediately cuts active effects, freezes the event snapshot with the game, and uses a short resume cue instead of replaying the interrupted effect. Browser audio uses the official player's speaker/mute control.
+
+Rejected dunks use a third native art variant, separate from misses and makes. An oversized BLOCKED stamp bounces briefly and settles inside an opaque gold/ivory panel. It remains readable at either basket through precompensated lettering. The live ball/defender can appear around the panel; priority attributes prevent sprites from drawing over its text. Misses retain their ordinary rim-miss presentation.
+
+The panel is packed into each camera frame's existing background page, keeping font/gauge tiles 192–236 resident and avoiding OBJ-overlap tiles 128–191. All 504 generated frames fit: maximum 123/128 main tiles, 117/128 in blocked frames, and 67/83 during wipes. No extra OAM objects are needed. The cartridge grows to 4 MiB because it includes the additional banked rejection frames.

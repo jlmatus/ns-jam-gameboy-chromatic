@@ -12,10 +12,11 @@ static void choose_cursor(jam_menu_t *m) {
     if(m->stage<4) {
         m->cursor=m->setup.roster[m->stage];
         while(used(m,m->cursor))m->cursor=(m->cursor+1)%JAM_ROSTER_COUNT;
-    } else m->cursor=m->setup.difficulty;
+    } else if(m->stage==JAM_MENU_DIFFICULTY)m->cursor=m->setup.difficulty;
+    else m->cursor=m->setup.periods==4?2:m->setup.periods-1;
 }
 void jam_menu_init(jam_menu_t *m, const jam_setup_t *setup) JAM_BANKED {
-    static const jam_setup_t defaults={{0,1,2,3},JAM_PICKUP};
+    static const jam_setup_t defaults={{0,1,2,3},JAM_PICKUP,4};
     m->setup=setup?*setup:defaults;
     m->stage=0;
     m->page=0;
@@ -48,7 +49,8 @@ uint8_t jam_menu_update(jam_menu_t *m, uint8_t input) JAM_BANKED {
     }
     if(pressed&JAM_A) {
         if(m->stage<4)m->setup.roster[m->stage]=m->cursor;
-        else m->setup.difficulty=m->cursor;
+        else if(m->stage==JAM_MENU_DIFFICULTY)m->setup.difficulty=m->cursor;
+        else m->setup.periods=m->cursor==2?4:m->cursor+1;
         m->stage++;m->page=0;choose_cursor(m);m->changed=1;
     }
     return 0;

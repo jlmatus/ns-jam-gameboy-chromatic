@@ -36,6 +36,17 @@
 #define JAM_DUNK_MADE 1
 #define JAM_DUNK_MISSED 2
 #define JAM_DUNK_BLOCKED 3
+#define JAM_TURBO_MAX 100
+#define JAM_TURBO_READY 25
+#define JAM_TURBO_DELAY 20
+#define JAM_TURBO_RECOVERY 2
+#define JAM_TURBO_DUNK_COST 12
+#define JAM_TURBO_SHOVE_COST 8
+#define JAM_QUARTER_SECONDS 180
+#define JAM_MATCH_LIVE 0
+#define JAM_MATCH_BUZZER 1
+#define JAM_MATCH_BREAK 2
+#define JAM_MATCH_FINAL 3
 #define JAM_MOVE_LEFT 1
 #define JAM_MOVE_RIGHT 2
 #define JAM_MOVE_UP 4
@@ -82,7 +93,7 @@ typedef struct {
 #define JAM_FACE_UP 3
 
 typedef struct {
-    uint8_t roster[4], difficulty;
+    uint8_t roster[4], difficulty, periods;
 } jam_setup_t;
 
 /* Canonical supplied roster. Jersey strings preserve MEAT's leading zero. */
@@ -117,6 +128,11 @@ typedef struct {
     uint8_t dunk_time, dunk_result, dunk_block_time;
     uint16_t dunk_attempts, dunks;
     uint8_t dunk_defender, dunk_contests;
+    /* Reserves belong to lineup slots and survive possession/control changes. */
+    uint8_t turbo_energy[4], turbo_delay[4], turbo_exhausted[4];
+    /* Hardware VBlanks, independent of simulation/render throughput. */
+    uint16_t clock_seconds, clock_fraction;
+    uint8_t quarter, match_phase;
 } jam_game_t;
 
 void jam_init(jam_game_t *g) JAM_BANKED;
@@ -143,4 +159,9 @@ void jam_contact(jam_game_t *g,uint8_t i,uint8_t j) JAM_BANKED;
 void jam_update(jam_game_t *g, uint8_t input) JAM_BANKED;
 void jam_pass(jam_game_t *g, uint8_t from, uint8_t to) JAM_BANKED;
 void jam_shoot(jam_game_t *g, uint8_t who, uint8_t charge) JAM_BANKED;
+uint8_t jam_turbo_available(const jam_game_t *g,uint8_t who) JAM_BANKED;
+uint8_t jam_turbo_spend(jam_game_t *g,uint8_t who,uint8_t cost) JAM_BANKED;
+void jam_turbo_recover(jam_game_t *g,uint8_t who,uint8_t held) JAM_BANKED;
+void jam_match_clock(jam_game_t *g,uint16_t frames) JAM_BANKED;
+uint8_t jam_match_control(jam_game_t *g,uint8_t pressed) JAM_BANKED;
 #endif
