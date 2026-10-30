@@ -43,10 +43,13 @@
 #define JAM_TURBO_DUNK_COST 12
 #define JAM_TURBO_SHOVE_COST 8
 #define JAM_QUARTER_SECONDS 180
+#define JAM_OVERTIME_SECONDS 60
+#define JAM_SCORE_MAX 9999
 #define JAM_MATCH_LIVE 0
 #define JAM_MATCH_BUZZER 1
 #define JAM_MATCH_BREAK 2
 #define JAM_MATCH_FINAL 3
+#define JAM_MATCH_OVERTIME 4
 #define JAM_MOVE_LEFT 1
 #define JAM_MOVE_RIGHT 2
 #define JAM_MOVE_UP 4
@@ -119,7 +122,8 @@ typedef struct {
     int16_t ball_x, ball_y, from_x, from_y, target_x, target_y;
     int8_t owner, passer;
     uint8_t mode, height, flight, duration, target, shot_team, shot_points, shot_good;
-    uint8_t score[2], tick, paused, previous_input, charge, block, grace;
+    uint16_t score[2];
+    uint8_t tick, paused, previous_input, charge, block, grace;
     uint8_t message, message_time, reset_time, next_team;
     uint8_t scored, block_attempts, intercept_attempts, launch_height;
     uint16_t rng, possession_time, passes, steals, shots, rebounds, baskets, blocks;
@@ -131,7 +135,7 @@ typedef struct {
     /* Reserves belong to lineup slots and survive possession/control changes. */
     uint8_t turbo_energy[4], turbo_delay[4], turbo_exhausted[4];
     /* Hardware VBlanks, independent of simulation/render throughput. */
-    uint16_t clock_seconds, clock_fraction;
+    uint16_t clock_seconds, clock_fraction, overtime;
     uint8_t quarter, match_phase;
 } jam_game_t;
 

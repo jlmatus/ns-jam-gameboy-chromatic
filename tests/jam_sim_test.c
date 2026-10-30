@@ -751,6 +751,7 @@ static void configurable_match_length(void) {
     tap_menu(&m,JAM_A);assert(m.cursor==1 && m.stage==JAM_MENU_PERIODS);
     for(n=0;n<3;n++) {
         setup.periods=lengths[n];assert(jam_init_lineup(&g,&setup));
+        g.score[0]=7; /* This test exercises untied regulation finals. */
         for(q=1;q<=setup.periods;q++) {
             g.mode=JAM_HELD;g.owner=g.controlled=0;g.inbound_pass=0;
             jam_match_clock(&g,10753);assert(g.clock_seconds==1 && g.quarter==q);
@@ -773,6 +774,75 @@ static void configurable_match_length(void) {
         setup.periods=i;assert(!jam_init_lineup(&g,&setup));assert(!memcmp(&g,&before,sizeof(g)));
     }
     puts("PASS: 1/2/4 three-minute period selection, default/wrap/held-input/backtracking, 180-second boundaries at every selected length, final freeze, rematch/config retention, invalid-length rejection");
+}
+static void overtime_matches(void) {
+    static const uint8_t lengths[3]={1,2,4};
+    jam_game_t g,before;
+    jam_audio_state_t audio;
+    jam_setup_t setup={{0,1,2,3},JAM_WARM_UP,4};
+    uint16_t ot,frames;
+    uint8_t n,p,mode;
+    for(n=0;n<3;n++) {
+        setup.periods=lengths[n];jam_init_lineup(&g,&setup);
+        g.quarter=setup.periods;g.score[0]=g.score[1]=99;g.shots=8;g.passes=3;
+        g.clock_seconds=1;jam_audio_sync(&audio,&g);
+        jam_match_clock(&g,60);assert(jam_audio_event(&audio,&g)==JAM_SFX_HORN);
+        jam_update(&g,JAM_A); /* Confirmation on the buzzer cannot skip the break. */
+        assert(g.match_phase==JAM_MATCH_OVERTIME && !g.overtime);
+        assert(jam_audio_event(&audio,&g)!=JAM_SFX_TIE);
+        before=g;step(&g,20,JAM_A);jam_match_clock(&g,65535);
+        assert(!memcmp(&before,&g,sizeof(g)));
+        jam_update(&g,0);
+        /* Repeated ties do not become finals or overflow an 8-bit OT count. */
+        for(ot=1;ot<=260;ot++) {
+            jam_update(&g,JAM_A);
+            assert(g.overtime==ot && g.quarter==setup.periods && g.clock_seconds==60);
+            assert(g.match_phase==JAM_MATCH_LIVE && g.mode==JAM_INBOUND);
+            assert(g.next_team==((setup.periods+ot-1)&1));
+            assert(g.score[0]==99 && g.score[1]==99 && g.shots==8 && g.passes==3);
+            assert(!memcmp(&g.setup,&setup,sizeof(setup)));
+            for(p=0;p<4;p++)assert(g.turbo_energy[p]==100 && !g.players[p].stun);
+            assert(jam_audio_event(&audio,&g)==JAM_SFX_START);
+            before=g;jam_match_clock(&g,3600);assert(!memcmp(&g,&before,sizeof(g)));
+            g.mode=JAM_HELD;g.owner=g.controlled=0;g.inbound_pass=0;
+            for(frames=0;g.clock_seconds;frames++)jam_match_clock(&g,1);
+            assert(frames==3585 && g.match_phase==JAM_MATCH_BUZZER);
+            assert(jam_audio_event(&audio,&g)==JAM_SFX_HORN);
+            jam_update(&g,0);assert(g.match_phase==JAM_MATCH_OVERTIME);
+            assert(jam_audio_event(&audio,&g)==JAM_SFX_NONE);
+        }
+        jam_update(&g,JAM_A);
+        /* A real overtime basket can take a 99-99 game past the old score cap. */
+        isolate(&g);g.mode=JAM_HELD;g.owner=g.controlled=0;g.inbound_pass=0;
+        g.players[0].x=245*4;g.clock_seconds=1;
+        jam_shoot(&g,0,24);g.shot_good=1;jam_match_clock(&g,60);
+        for(frames=0;frames<180 && g.match_phase!=JAM_MATCH_FINAL;frames++)jam_update(&g,0);
+        assert(g.match_phase==JAM_MATCH_FINAL && g.score[0]==101 && g.score[1]==99);
+        assert(g.baskets==1 && g.shots==9);
+        before=g;step(&g,50,0);assert(!memcmp(&g,&before,sizeof(g)));
+        jam_update(&g,JAM_A);
+        assert(!g.overtime && g.quarter==1 && g.clock_seconds==180);
+        assert(!g.score[0] && !g.score[1] && !g.shots && g.setup.periods==lengths[n]);
+    }
+    /* A regulation buzzer-beater can tie the game; settle it before deciding. */
+    jam_init(&g);isolate(&g);g.quarter=4;g.score[1]=2;g.clock_seconds=1;
+    g.players[0].x=245*4;jam_shoot(&g,0,24);g.shot_good=1;
+    jam_match_clock(&g,60);jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_BUZZER);
+    for(frames=0;frames<180 && g.match_phase!=JAM_MATCH_OVERTIME;frames++)jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_OVERTIME && g.score[0]==2 && g.score[1]==2 && g.baskets==1);
+    jam_update(&g,JAM_A);jam_update(&g,0);
+    g.paused=1;before=g;jam_match_clock(&g,3600);jam_update(&g,0);
+    assert(!memcmp(&g,&before,sizeof(g)));g.paused=0;
+    for(mode=JAM_RESET;mode<=JAM_DUNK;mode++)if(mode!=JAM_FINISH) {
+        g.mode=mode;before=g;jam_match_clock(&g,3600);assert(!memcmp(&g,&before,sizeof(g)));
+    }
+    /* A missed OT buzzer shot preserves the tie and cannot start a rebound. */
+    isolate(&g);g.mode=JAM_HELD;g.owner=0;g.clock_seconds=1;g.inbound_pass=0;
+    g.players[0].x=245*4;jam_shoot(&g,0,24);g.shot_good=0;jam_match_clock(&g,60);
+    for(frames=0;frames<180 && g.match_phase!=JAM_MATCH_OVERTIME;frames++)jam_update(&g,0);
+    assert(g.match_phase==JAM_MATCH_OVERTIME && g.score[0]==2 && g.score[1]==2 && !g.rebounds);
+    puts("PASS: tied 1/2/4-period games, 60-second repeat overtime, 260 alternating OT inbounds, frozen breaks/pause/dead balls, turbo/stat preservation, buzzer tying/winning/missed shots, 99-point cap removal, audio and rematch reset");
 }
 static void audio_events(void) {
     jam_game_t g,before;
@@ -824,6 +894,7 @@ static void audio_events(void) {
     puts("PASS: audio follows real pass/turbo/dunk events, one-shot rejection/impact cues, no celebration on blocked dunks, pause/resume and period/final cues, no simulation mutation");
 }
 int main(void) {
+    overtime_matches();
     audio_events();
     configurable_match_length();
     match_quarters();

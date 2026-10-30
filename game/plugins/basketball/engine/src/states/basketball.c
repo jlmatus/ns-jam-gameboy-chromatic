@@ -47,8 +47,13 @@ static uint8_t glyph(char c) {
 }
 static void text(uint8_t at,const char *s) { while(*s && at<40) hud[at++]=192+glyph(*s++); }
 static void number(uint8_t at,uint8_t n) { hud[at]=192+27+n/10; hud[at+1]=192+27+n%10; }
+static void score_number(uint8_t at,uint16_t n,uint8_t digits) {
+    while(digits){hud[at+--digits]=192+27+n%10;n/=10;}
+}
 static void draw_hud(void) {
-    uint8_t i,meter,units,changed=jam.mode==JAM_DUNK;
+    uint8_t i,meter,units,digits,period_at,clock_at,changed=jam.mode==JAM_DUNK;
+    digits=(jam.score[0]>=1000 || jam.score[1]>=1000)?4:
+        (jam.score[0]>=100 || jam.score[1]>=100)?3:2;
     for(i=0;i<40;i++) hud[i]=192;
     if(jam.paused) text(20,"SELECT PLAY B LINEUP");
     else switch(jam.message) {
@@ -84,7 +89,7 @@ static void draw_hud(void) {
         if(jam.paused)text(20,"SELECT PLAY B LINEUP");
         else if(jam.dunk_result==JAM_DUNK_BLOCKED)text(20,"BLOCKED - NO BASKET");
         else if(jam.dunk_result==JAM_DUNK_MISSED)text(20,"OFF THE RIM");
-        else if(jam.scored){text(20,"BOOM");number(27,jam.score[0]);text(29,":");number(30,jam.score[1]);}
+        else if(jam.scored){text(20,"BOOM");score_number(25,jam.score[0],digits);text(25+digits,":");score_number(26+digits,jam.score[1],digits);}
         else {
             text(20,jam_roster[jam.setup.roster[jam.passer]].name);
             text(27,jam.dunk_time<8?"LOAD UP":jam.dunk_time<24?"SKY HIGH":jam.dunk_time<28?"THROW IT DOWN":"POWER JAM");
@@ -106,13 +111,16 @@ static void draw_hud(void) {
     }
     /* Fixed status row: score, quarter, clock and the existing turbo gauge. */
     for(i=0;i<15;i++)hud[i]=192;
-    number(0,jam.score[0]);text(2,":");number(3,jam.score[1]);
-    text(6,"Q");hud[7]=192+27+jam.quarter;
-    hud[9]=192+27+jam.clock_seconds/60;text(10,":");
-    number(11,jam.clock_seconds%60);
+    score_number(0,jam.score[0],digits);text(digits,":");score_number(digits+1,jam.score[1],digits);
+    period_at=digits==2?6:digits==3?8:9;clock_at=digits==2?9:11;
+    if(jam.overtime)text(period_at,"OT");
+    else {text(period_at,"Q");hud[period_at+1]=192+27+jam.quarter;}
+    hud[clock_at]=192+27+jam.clock_seconds/60;text(clock_at+1,":");
+    number(clock_at+2,jam.clock_seconds%60);
     if(!jam.paused && jam.match_phase!=JAM_MATCH_LIVE) {
         for(i=20;i<40;i++)hud[i]=192;
         if(jam.match_phase==JAM_MATCH_BUZZER)text(20,"BUZZER - SHOT LIVE");
+        else if(jam.match_phase==JAM_MATCH_OVERTIME)text(20,"TIED A OT B MENU");
         else if(jam.match_phase==JAM_MATCH_BREAK) {
             text(20,"END Q");hud[25]=192+27+jam.quarter;text(26," A NEXT B MENU");
         } else text(20,jam.score[0]>jam.score[1]?"WIN A REPLAY B MENU":

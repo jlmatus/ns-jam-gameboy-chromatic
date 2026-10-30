@@ -339,7 +339,7 @@ static void finish(jam_game_t *g) {
         g->height=JAM_RIM_HEIGHT+8-t;
         if(t==JAM_SCORE_FRAME && !g->scored) {
             g->score[g->shot_team]+=g->shot_points;
-            if(g->score[g->shot_team]>99) g->score[g->shot_team]=99;
+            if(g->score[g->shot_team]>JAM_SCORE_MAX) g->score[g->shot_team]=JAM_SCORE_MAX;
             g->baskets++;
             g->scored=1;
             message(g,g->shot_points==3 ? JAM_MSG_THREE : JAM_MSG_TWO);

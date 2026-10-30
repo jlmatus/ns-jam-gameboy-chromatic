@@ -124,7 +124,8 @@ void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED {
         g->height=fall*2<JAM_RIM_HEIGHT+8?JAM_RIM_HEIGHT+8-fall*2:0;
     }
     if(t==JAM_DUNK_SCORE && g->dunk_result==JAM_DUNK_MADE && !g->scored){
-        g->score[g->shot_team]+=2;if(g->score[g->shot_team]>99)g->score[g->shot_team]=99;
+        g->score[g->shot_team]+=2;
+        if(g->score[g->shot_team]>JAM_SCORE_MAX)g->score[g->shot_team]=JAM_SCORE_MAX;
         g->baskets++;g->dunks++;g->scored=1;
     }
     if(t>=JAM_DUNK_END){

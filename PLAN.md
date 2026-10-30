@@ -24,7 +24,7 @@ playstyle labels for all six players. See `docs/playtests/scouting-card-layout.m
 The user accepted the cards. The first gameplay tuning pass reduces automatic
 CPU takeaways and easy-mode opponent accuracy, protects catches, and gives the
 existing body sprites side-facing profiles. See `docs/playtests/gameplay-balance.md`.
-Configurable 1, 2 or 4 three-minute periods, period breaks and a basic final/replay stop are implemented; expanded match navigation and overtime remain queued. Further tuning follows playtests.
+Configurable 1, 2 or 4 three-minute periods, period breaks and a basic final/replay stop are implemented; repeated one-minute overtime is implemented; expanded match navigation remains queued. Further tuning follows playtests.
 
 The next user review requested better proportions, turning, shooting, and framing.
 The latest candidate adds athletic 40-pixel bodies, front/back poses, a closer
@@ -66,7 +66,7 @@ The subsequent presentation pass adds articulated 24×56 dunk cels, one-hand/two
 - [x] **Add roster selection and ratings.** Native menus choose the human, teammate, two distinct opponents, and difficulty; review starts practice. Approved portraits and all six jersey strings are integrated. Every supplied rating is preserved and has a tested effect. See `docs/design/ratings.md`; signature labels remain flavor. The four-quarter clock is now implemented below.
 - [x] **Implement arcade finishing.** Rating-based dunks, exaggerated jumps, native close-up Dunk Cam, entry/exit transitions, timed defensive contests, pause/resume and state-preserving returns to inbounds or live rebounds are implemented and verified. All six profiles and both baskets were exercised in the final native ROM; the official browser was played through MAGIC's dunk and return. See `docs/playtests/dunks.md` for captures and verification limits.
 - [x] **Add the four-quarter clock.** Configurable 1/2/4 three-minute periods, setup/review confirmation, a fixed Q1–Q4/countdown HUD, hardware-time accounting, pause/Dunk Cam/inbound clock stops, released-shot resolution at zero, A-to-continue breaks, alternating period inbounds, and a basic final/replay stop are implemented. See `docs/playtests/quarters.md`.
-- [ ] **Complete the remaining match flow.** Add title/menu navigation, richer intermissions/results, and overtime/tie handling. SELECT pause/resume and basic replay are already implemented. Use A for pass/steal, B for shoot/block, and START for turbo; verify the original input feel through the prototype.
+- [ ] **Complete the remaining match flow.** Add title/menu navigation and richer intermissions/results. Repeated one-minute overtime, alternating inbounds and buzzer-shot tie resolution are implemented; see `docs/playtests/overtime.md`. SELECT pause/resume and basic replay are already implemented. Use A for pass/steal, B for shoot/block, and START for turbo; verify the original input feel through the prototype.
 - [ ] **Finish the remaining arcade features.** Reserve-limited turbo sprint with a visible gauge, exaggerated dunks, Dunk Cam and state-preserving return transitions are implemented. Add hot-hand activation/reset with a flaming-net effect. Continue tuning from playtests.
 - [ ] **Finish presentation.** Create readable body sprites and animations for movement, dribbling, passing, shooting, dunks, and defense; apply the real uniform references. Refine court art, HUD and effects. Native audio now implements 21 gameplay/menu/special-animation effects; rejected dunks have a dedicated animated BLOCKED stamp. See `docs/playtests/blocked-audio.md`. Integrate the approved default portraits and jerseys, including CHOMPA 74 and MEAT 00.
 - [ ] **Validate the complete playable game.** Run repeatable checks on the exact ROM for full matches, all CPU levels, overtime/ties, rebounds, pause/resume, and interrupted camera sequences. Measure crowded-scene performance and test on physical Chromatic before claiming hardware readiness. Deliver a playable build with its editable project before designing saved records.
@@ -75,5 +75,5 @@ The subsequent presentation pass adds articulated 24×56 dunk cels, one-hand/two
 ## Remaining Decisions
 
 - Obtain the real team uniform references and finalize court/HUD presentation.
-- Define tie handling, detailed possession rules, and signature behavior. Rating formulas and initial difficulty behavior are implemented; continue tuning from playtests.
+- Refine detailed possession rules and define signature behavior. Ties use repeated one-minute overtime. Rating formulas and initial difficulty behavior are implemented; continue tuning from playtests.
 - Revisit saved statistics and record attribution after the complete game is playable, as explicitly deferred above.
