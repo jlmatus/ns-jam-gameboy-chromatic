@@ -1,6 +1,8 @@
 #include "jam_sim.h"
 #include "jam_menu.h"
 #include "jam_audio.h"
+#include "jam_results.h"
+#include "jam_front.h"
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -893,7 +895,140 @@ static void audio_events(void) {
     before=g;jam_audio_event(&s,&g);assert(!memcmp(&g,&before,sizeof(g)));
     puts("PASS: audio follows real pass/turbo/dunk events, one-shot rejection/impact cues, no celebration on blocked dunks, pause/resume and period/final cues, no simulation mutation");
 }
+static void check_box_score(const jam_game_t *g) {
+    uint8_t p;
+    uint16_t shots=0,made=0,steals=0,rebounds=0,blocks=0,dunks=0,points[2]={0,0};
+    for(p=0;p<4;p++) {
+        const jam_player_stats_t *s=&g->stats[p];
+        assert(s->field_made<=s->field_attempted && s->three_made<=s->three_attempted);
+        assert(s->three_attempted<=s->field_attempted && s->dunks<=s->field_made);
+        assert(s->points==s->field_made*2+s->three_made);
+        shots+=s->field_attempted;made+=s->field_made;steals+=s->steals;
+        rebounds+=s->rebounds;blocks+=s->blocks;dunks+=s->dunks;points[p>>1]+=s->points;
+    }
+    assert(shots==g->shots && made==g->baskets && steals==g->steals);
+    assert(rebounds==g->rebounds && blocks==g->blocks && dunks==g->dunks);
+    assert(blocks<=shots);
+    assert(points[0]==g->score[0] && points[1]==g->score[1]);
+}
+static void player_box_scores(void) {
+    jam_game_t g,before;
+    jam_player_stats_t saved[4];
+    uint8_t p,i,points;
+    uint16_t t;
+    for(p=0;p<4;p++)for(points=2;points<=3;points++) {
+        jam_init(&g);g.owner=p;g.controlled=p<2?p:0;
+        for(i=0;i<4;i++) {g.players[i].x=(p<2?40:280)*4;g.players[i].y=70*4;g.players[i].cooldown=255;}
+        g.players[p].x=(points==3?160:p<2?245:75)*4;g.players[p].y=JAM_RIM_Y*4;
+        g.grace=255;
+        jam_shoot(&g,p,24);assert(g.shot_points==points);g.shot_good=1;
+        step(&g,g.duration+JAM_SCORE_FRAME,0);
+        assert(g.stats[p].points==points && g.stats[p].field_attempted==1 && g.stats[p].field_made==1);
+        assert(g.stats[p].three_made==(points==3) && g.stats[p].three_attempted==(points==3));
+        before=g;jam_stats_basket(&g,0);assert(!memcmp(&g,&before,sizeof(g)));
+        check_box_score(&g);
+        memcpy(saved,g.stats,sizeof(saved));g.quarter=g.setup.periods;g.score[p>>1]=points;
+        g.mode=JAM_HELD;g.clock_seconds=0;g.match_phase=JAM_MATCH_FINAL;
+        jam_update(&g,0);assert(!memcmp(saved,g.stats,sizeof(saved)));
+        jam_update(&g,JAM_A);for(i=0;i<4;i++)assert(!g.stats[i].points && !g.stats[i].field_attempted);
+    }
+    for(p=0;p<4;p++) {
+        dunk_fixture(&g,1,p,3);assert(jam_try_dunk(&g,p));
+        g.dunk_time=JAM_DUNK_SCORE-1;g.dunk_result=JAM_DUNK_MADE;
+        jam_update(&g,0);assert(g.stats[p].dunks==1 && g.stats[p].points==2);
+        check_box_score(&g);
+    }
+    /* Ordinary loose-ball recovery is not a missed-shot rebound. */
+    jam_init(&g);isolate(&g);g.mode=JAM_LOOSE;g.owner=-1;
+    g.ball_x=g.players[0].x;g.ball_y=g.players[0].y;g.height=0;
+    jam_update(&g,0);assert(!g.rebounds && !g.stats[0].rebounds);
+    /* Two nearby jumping defenders may contest, but only one gets the block. */
+    for(t=1;t<=512;t++) {
+        jam_init(&g);g.rng=t;g.owner=2;g.players[2].x=90*4;g.players[2].y=88*4;
+        for(i=0;i<2;i++){g.players[i].x=90*4;g.players[i].y=88*4;g.players[i].block_time=18;}
+        jam_shoot(&g,2,24);step(&g,14,0);
+        assert(g.blocks<=1 && g.stats[0].blocks+g.stats[1].blocks==g.blocks);
+    }
+    /* A missed shot credits the actual rebounder, exactly once. */
+    jam_init(&g);isolate(&g);g.players[0].x=245*4;
+    jam_shoot(&g,0,24);g.shot_good=0;
+    for(t=0;t<300 && !g.rebounds;t++)jam_update(&g,0);
+    assert(g.rebounds==1 && g.stats[(uint8_t)g.owner].rebounds==1);check_box_score(&g);
+    /* A long mixed-input match exercises catches/control changes and both teams. */
+    jam_init(&g);
+    for(t=0;t<30000;t++) {
+        uint8_t input=(t%200<80?JAM_MOVE_RIGHT:JAM_MOVE_LEFT)|((t%48)<24?JAM_B:0);
+        if(t%150<16)input|=JAM_A;
+        if(t%300<70)input|=JAM_TURBO;
+        jam_update(&g,input);check_box_score(&g);
+    }
+    assert(g.shots>30 && g.baskets>10 && g.steals && g.blocks && g.rebounds);
+    memcpy(saved,g.stats,sizeof(saved));g.mode=JAM_HELD;g.quarter=1;
+    g.match_phase=JAM_MATCH_BREAK;g.previous_input=0;jam_update(&g,JAM_A);
+    assert(g.quarter==2 && !memcmp(saved,g.stats,sizeof(saved)));
+    g.match_phase=JAM_MATCH_OVERTIME;g.quarter=g.setup.periods;g.previous_input=0;
+    jam_update(&g,JAM_A);assert(g.overtime==1 && !memcmp(saved,g.stats,sizeof(saved)));
+    puts("PASS: per-slot 2PT/3PT/dunk scoring, exact-once makes, all-player attempts, real rebound attribution, no fumble rebounds, 30000-update box-score conservation, period/OT retention and rematch reset");
+}
+static void results_navigation(void) {
+    jam_results_t r;
+    jam_game_t g,before;
+    struct {uint8_t left,tiles[360],right;} screen;
+    uint8_t p,i,side;
+    jam_results_init(&r,JAM_A);assert(!jam_results_update(&r,JAM_A));
+    assert(!r.page && !r.changed);jam_results_update(&r,0);
+    for(p=1;p<=JAM_RESULTS_PAGES;p++) {
+        assert(!jam_results_update(&r,JAM_MOVE_RIGHT));assert(r.page==p%JAM_RESULTS_PAGES && r.changed);
+        assert(!jam_results_update(&r,JAM_MOVE_RIGHT) && !r.changed);
+        jam_results_update(&r,0);
+    }
+    jam_results_update(&r,JAM_MOVE_LEFT);assert(r.page==4);
+    jam_results_update(&r,0);assert(jam_results_update(&r,JAM_B)==JAM_RESULTS_LINEUP);
+    jam_results_update(&r,0);assert(jam_results_update(&r,JAM_A)==JAM_RESULTS_REMATCH);
+    for(side=0;side<2;side++)for(i=0;i<6;i++) {
+        jam_init(&g);g.setup.roster[0]=i;g.score[side]=1234;g.overtime=2;
+        for(p=0;p<4;p++)memset(&g.stats[p],255,sizeof(g.stats[p]));
+        before=g;
+        for(p=0;p<JAM_RESULTS_PAGES;p++) {
+            screen.left=37;screen.right=91;jam_results_tiles(&g,p,screen.tiles);
+            assert(screen.left==37 && screen.right==91 && !memcmp(&g,&before,sizeof(g)));
+            for(uint16_t t=0;t<360;t++)assert(screen.tiles[t]>=192 && screen.tiles[t]<232);
+            /* Both actions remain present on every page. */
+            assert(screen.tiles[16*20]==193 && screen.tiles[17*20]==194);
+        }
+    }
+    puts("PASS: results overview/four-player pages, both winners/all names/00 jersey, bounded large counters and font tiles, held-input guards/wrap, A rematch/B lineup, pure rendering with unchanged match data");
+}
+static void native_front_flow(void) {
+    jam_front_t f,a,b;
+    uint16_t i;
+    for(i=0;i<JAM_FRONT_DURATION;i++) {
+        jam_front_init(&f,0);jam_front_update(&f,0,i);
+        assert(f.mode==JAM_FRONT_INTRO && f.frame>=8 && f.frame<=19);
+        assert(!jam_front_update(&f,JAM_A,0) && f.mode==JAM_FRONT_HOME);
+        assert(!jam_front_update(&f,JAM_A,1)); /* Skip never also starts selection. */
+        jam_front_update(&f,0,1);assert(jam_front_update(&f,JAM_A,1)==JAM_FRONT_PLAY);
+    }
+    jam_front_init(&a,0);jam_front_init(&b,0);
+    jam_front_update(&a,0,270);for(i=0;i<270;i++)jam_front_update(&b,0,1);
+    assert(a.mode==b.mode && a.mode==JAM_FRONT_HOME && a.elapsed==b.elapsed && a.frame==b.frame);
+    jam_front_init(&f,0);jam_front_update(&f,0,65535);assert(f.mode==JAM_FRONT_HOME && f.elapsed==270);
+    jam_front_update(&f,JAM_MOVE_UP,1);assert(f.selected==2);
+    jam_front_update(&f,JAM_MOVE_UP,1);assert(f.selected==2);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_A,1);
+    assert(f.mode==JAM_FRONT_INTRO && f.elapsed==0 && f.frame==8);
+    jam_front_update(&f,JAM_A,1);assert(f.mode==JAM_FRONT_INTRO);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_B,1);assert(f.mode==JAM_FRONT_HOME);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_MOVE_UP,1);assert(f.selected==1);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_A,1);assert(f.mode==JAM_FRONT_HELP && f.frame==3);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_B,1);assert(f.mode==JAM_FRONT_HOME && f.frame==1);
+    jam_front_update(&f,0,1);jam_front_update(&f,JAM_MOVE_UP,1);
+    jam_front_update(&f,0,1);assert(jam_front_update(&f,JAM_TURBO,1)==JAM_FRONT_PLAY);
+    puts("PASS: native front flow, 270-VBlank proof, chunk invariance, all-frame skip/release guards, held navigation, help/home, intro replay and Start-to-play");
+}
 int main(void) {
+    native_front_flow();
+    player_box_scores();results_navigation();
     overtime_matches();
     audio_events();
     configurable_match_length();

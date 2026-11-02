@@ -38,6 +38,7 @@ static void next_period(jam_game_t *g) {
     g->height=g->flight=g->duration=g->scored=g->shot_good=0;
     g->dunk_time=g->dunk_result=g->dunk_block_time=g->block_attempts=0;
     g->launch_height=0;
+    g->shot_blocked=g->loose_rebound=0;
     jam_begin_inbound(g,next_team);
 }
 

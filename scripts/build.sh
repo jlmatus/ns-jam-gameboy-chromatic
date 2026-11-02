@@ -11,7 +11,7 @@ if [ ! -x "$jam_node" ] || [ ! -f "$jam_cli" ]; then
 fi
 "$jam_node" -e 'if(Number(process.versions.node.split(".")[0])<22)process.exit(1); console.log("Build runtime: Node " + process.versions.node)'
 case "${1:-rom}" in
-  rom) jam_command=make:rom; jam_output="$jam_repo/game/build/rom/nicasource-jam.gbc" ;;
+  rom) jam_command=make:rom; jam_output="$jam_repo/game/build/rom/ns-jam.gbc" ;;
   web) jam_command=make:web; jam_output="$jam_repo/game/build/manual-web" ;;
   export) jam_command=export; jam_output="$jam_repo/game/build/source" ;;
   *) echo 'Usage: sh scripts/build.sh [rom|web|export]' >&2; exit 1 ;;

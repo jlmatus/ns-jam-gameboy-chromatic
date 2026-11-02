@@ -1,0 +1,216 @@
+{
+  "name": "MATUS",
+  "version": 3,
+  "width": 48,
+  "height": 48,
+  "status": "Photo-based likeness correction for user review; previous versions preserved",
+  "method": "Native whole-cell reconstruction using photo and generated studies as visual/placement references. The generated chart failed grid fidelity and is not an accepted recovery. Hair, contour, relaxed eyes, mustache/smile, goatee and neck are explicitly reauthored as flat clusters.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF",
+    "b": "#7B4D36FF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF",
+    "b": "#306850"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      22,
+      "###"
+    ],
+    [
+      19,
+      "##########"
+    ],
+    [
+      17,
+      "###############"
+    ],
+    [
+      15,
+      "##################"
+    ],
+    [
+      16,
+      "###################"
+    ],
+    [
+      14,
+      "######################"
+    ],
+    [
+      15,
+      "######################"
+    ],
+    [
+      14,
+      "########################"
+    ],
+    [
+      13,
+      "########ss###s############"
+    ],
+    [
+      12,
+      "#####ssssoooosossss#######"
+    ],
+    [
+      11,
+      "#####ssoooooooooososss######"
+    ],
+    [
+      12,
+      "###sooooooooooooooooos####"
+    ],
+    [
+      11,
+      "###sooooooooooooooooooss####"
+    ],
+    [
+      10,
+      "####soooooooooooooooooooss####"
+    ],
+    [
+      10,
+      "###sooooooooooooooooooooos###"
+    ],
+    [
+      10,
+      "###soooooooooooooooooooooss###"
+    ],
+    [
+      10,
+      "####sooooooooooooooooooooos###"
+    ],
+    [
+      10,
+      "###soooooooooooooooooooooos##"
+    ],
+    [
+      9,
+      "####ooooooooooooooooooooooos##"
+    ],
+    [
+      9,
+      "###sooooooooooooooooooooooss##"
+    ],
+    [
+      9,
+      "###oooooooooooosoooooooooos###"
+    ],
+    [
+      8,
+      "o##sooosbbbbsoossoooooooooos###"
+    ],
+    [
+      7,
+      "soo#oooboooooboososoooooooooos##"
+    ],
+    [
+      6,
+      "soso#oooooooooooosososbbbbbsoos##"
+    ],
+    [
+      6,
+      "sssoooooob##obboosooobooooooboos##"
+    ],
+    [
+      6,
+      "ssoosoooooo#oosooooooooooooooos#os"
+    ],
+    [
+      6,
+      "soossooooossssoooooooob##obboosooo"
+    ],
+    [
+      6,
+      "soosoooooooooooooooooooo#oosoososo"
+    ],
+    [
+      7,
+      "sosooooooooooosooooooossssooossso"
+    ],
+    [
+      7,
+      "soosoooooooossoooooosooooooooosos"
+    ],
+    [
+      8,
+      "sosoooooooosoosooooosooooooooso"
+    ],
+    [
+      8,
+      "soooooooossos##sss#ssooooooosso"
+    ],
+    [
+      9,
+      "soooooosoooooossssssoooooooso"
+    ],
+    [
+      9,
+      "sooooossbbbbbbssbboosooooosoo"
+    ],
+    [
+      9,
+      "sooooosbbooooooooobbssooosso"
+    ],
+    [
+      9,
+      "soooooobbsooooosssssbboossoo"
+    ],
+    [
+      9,
+      "soooooosooosssssssoobsossso"
+    ],
+    [
+      10,
+      "sooooosoooooooooooboossos"
+    ],
+    [
+      10,
+      "sooooooooooosbsooosboosso"
+    ],
+    [
+      11,
+      "soooosooooobbbooosoossos"
+    ],
+    [
+      12,
+      "sooosooooosssoosbossss"
+    ],
+    [
+      13,
+      "soosbsoososooobossss"
+    ],
+    [
+      14,
+      "sosbsssssosssbssss"
+    ],
+    [
+      15,
+      "sosbbsssbssbbsss"
+    ],
+    [
+      15,
+      "ssssbbbbbbbbsss"
+    ],
+    [
+      17,
+      "sssbbbbbsss"
+    ],
+    [
+      20,
+      "oooos"
+    ]
+  ]
+}

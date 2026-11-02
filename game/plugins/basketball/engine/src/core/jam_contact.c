@@ -53,7 +53,7 @@ void jam_shove(jam_game_t *g,uint8_t p) JAM_BANKED {
     if(g->owner==(int8_t)target) {
         g->ball_x=g->players[target].x+g->players[target].push_x*3;
         g->ball_y=g->players[target].y;
-        g->height=14;g->mode=JAM_LOOSE;g->owner=-1;g->flight=0;
+        g->height=14;g->mode=JAM_LOOSE;g->loose_rebound=0;g->owner=-1;g->flight=0;
     }
     g->shoves++;message(g,JAM_MSG_SHOVE);
 }

@@ -1,0 +1,70 @@
+{
+  "photos": {
+    "MAGIC": [
+      "/Users/jmatus/Desktop/Screenshot 2026-10-28 at 8.45.27\u202fAM.png",
+      [
+        133,
+        64,
+        363,
+        391
+      ]
+    ],
+    "BAMBI": [
+      "/Users/jmatus/Desktop/Screenshot 2026-10-27 at 5.45.43\u202fPM.png",
+      [
+        50,
+        10,
+        157,
+        157
+      ]
+    ],
+    "TORRES": [
+      "/Users/jmatus/Desktop/Screenshot 2026-10-28 at 8.47.52\u202fAM.png",
+      [
+        200,
+        13,
+        407,
+        307
+      ]
+    ],
+    "CHOMPA": [
+      "/Users/jmatus/Desktop/Screenshot 2026-10-28 at 9.04.47\u202fAM.png",
+      [
+        12,
+        35,
+        622,
+        800
+      ]
+    ],
+    "MEAT": null
+  },
+  "players": [
+    [
+      "MAGIC",
+      "32",
+      "magic-v1"
+    ],
+    [
+      "BAMBI",
+      "23",
+      "bambi-v1"
+    ],
+    [
+      "TORRES",
+      "7",
+      "torres-v1"
+    ],
+    [
+      "CHOMPA",
+      "74",
+      "chompa-v2"
+    ],
+    [
+      "MEAT",
+      "00",
+      "meat-v1"
+    ]
+  ],
+  "gameCardScale": 2,
+  "romSha256": "f1991756fd48f8b08e1880a3300ff78d3bc7c6ba644436e30fde4026fb83edd5"
+}

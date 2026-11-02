@@ -3,6 +3,7 @@ build/
 dist/
 out/
 /game/artifacts/recording-archives/
+/game/artifacts/clips/
 *.gb
 *.gbc
 *.pocket

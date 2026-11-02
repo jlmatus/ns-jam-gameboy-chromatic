@@ -11,6 +11,7 @@
     {
       "name": "MATUS",
       "source": "matus-v2",
+      "cardSource": "matus-v4",
       "jersey": "13",
       "position": "GUARD",
       "playstyle": "3PT PLAYMAKER",
@@ -151,6 +152,7 @@
     {
       "name": "CHOMPA",
       "source": "chompa-v2",
+      "cardSource": "chompa-v3",
       "jersey": "74",
       "position": "BIG",
       "playstyle": "STRETCH BIG",

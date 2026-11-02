@@ -1,6 +1,6 @@
 # Plan
 
-Build **NICASOURCE JAM**, a native Game Boy Color game for ModRetro Chromatic, using the ModRetro Chromatic Plugin and an editable native project. One human controls a player alongside a CPU teammate against two CPU opponents. Start with a small playable basketball prototype, then complete the match flow, arcade features, presentation, and cartridge records.
+Build **NS JAM**, a native Game Boy Color game for ModRetro Chromatic, using the ModRetro Chromatic Plugin and an editable native project. One human controls a player alongside a CPU teammate against two CPU opponents. Start with a small playable basketball prototype, then complete the match flow, arcade features, presentation, and cartridge records.
 
 The first playable prototype is implemented in `game/`: a native GBC-only ROM and official browser export. See `docs/playtests/first-playable.md` for verification. Unchecked milestones below still describe future work.
 
@@ -10,7 +10,7 @@ ball priority, and tighter court/camera spacing. See `docs/playtests/experience-
 This is still a development prototype; the first rules build did not establish
 finished-game feel or presentation quality.
 
-## Current Milestone: Match Clock
+## Current Milestone: Native Presentation Proof
 
 Implemented the six-player native selection flow, approved portraits, unique lineups,
 all supplied ratings, three CPU levels, lineup review, and return to selection from
@@ -24,7 +24,7 @@ playstyle labels for all six players. See `docs/playtests/scouting-card-layout.m
 The user accepted the cards. The first gameplay tuning pass reduces automatic
 CPU takeaways and easy-mode opponent accuracy, protects catches, and gives the
 existing body sprites side-facing profiles. See `docs/playtests/gameplay-balance.md`.
-Configurable 1, 2 or 4 three-minute periods, period breaks and a basic final/replay stop are implemented; repeated one-minute overtime is implemented; expanded match navigation remains queued. Further tuning follows playtests.
+Configurable 1, 2 or 4 three-minute periods, period breaks and a basic final/replay stop are implemented; repeated one-minute overtime is implemented; a full-screen final summary, all four player box scores, and rematch/change-lineup are implemented; title navigation and richer quarter intermissions remain queued. Further tuning follows playtests.
 
 The next user review requested better proportions, turning, shooting, and framing.
 The latest candidate adds athletic 40-pixel bodies, front/back poses, a closer
@@ -52,6 +52,8 @@ The subsequent presentation pass adds articulated 24×56 dunk cels, one-hand/two
 
 ## Confirmed Decisions
 
+- **Brand and front end:** display name NS JAM; Night Court home revision 2 is approved and locked (2026-11-02). Preserve its composition, logo and palette. The intro still needs redesign; the full animated intro features MATUS, TORRES, BAMBI, CHOMPA and MAGIC, excluding MEAT. Review the revised cinematic before expanding all spotlights and cards.
+
 - **Controls and timing:** use NBA Jam '99's default Game Boy Color mapping and configurable 1, 2 or 4 three-minute periods (four by default). The exact mapping and manual references are recorded in [README.md](README.md#confirmed-controls-and-timing).
 - **Default portraits:** CHOMPA uses [v2](art/portraits/chompa-v2/README.md), and MEAT uses [v1](art/portraits/meat-v1/README.md). Both are approved defaults; MEAT's appearance is an accepted invented design.
 - **Jerseys:** CHOMPA is `"74"`; MEAT is `"00"`. Store and render the numbers as strings to retain both zeros.
@@ -66,7 +68,7 @@ The subsequent presentation pass adds articulated 24×56 dunk cels, one-hand/two
 - [x] **Add roster selection and ratings.** Native menus choose the human, teammate, two distinct opponents, and difficulty; review starts practice. Approved portraits and all six jersey strings are integrated. Every supplied rating is preserved and has a tested effect. See `docs/design/ratings.md`; signature labels remain flavor. The four-quarter clock is now implemented below.
 - [x] **Implement arcade finishing.** Rating-based dunks, exaggerated jumps, native close-up Dunk Cam, entry/exit transitions, timed defensive contests, pause/resume and state-preserving returns to inbounds or live rebounds are implemented and verified. All six profiles and both baskets were exercised in the final native ROM; the official browser was played through MAGIC's dunk and return. See `docs/playtests/dunks.md` for captures and verification limits.
 - [x] **Add the four-quarter clock.** Configurable 1/2/4 three-minute periods, setup/review confirmation, a fixed Q1–Q4/countdown HUD, hardware-time accounting, pause/Dunk Cam/inbound clock stops, released-shot resolution at zero, A-to-continue breaks, alternating period inbounds, and a basic final/replay stop are implemented. See `docs/playtests/quarters.md`.
-- [ ] **Complete the remaining match flow.** Add title/menu navigation and richer intermissions/results. Repeated one-minute overtime, alternating inbounds and buzzer-shot tie resolution are implemented; see `docs/playtests/overtime.md`. SELECT pause/resume and basic replay are already implemented. Use A for pass/steal, B for shoot/block, and START for turbo; verify the original input feel through the prototype.
+- [ ] **Complete the remaining match flow.** Add richer quarter intermissions and finish the full intro. The NS JAM Night Court home/help/replay flow, larger MATUS card and one animated MATUS spotlight are integrated as a native-resolution proof; see `docs/playtests/front-proof.md`. Final results now show the winning pair, score and individual match box scores, with A rematch/B change-lineup; see `docs/playtests/final-results.md`. Repeated one-minute overtime, alternating inbounds and buzzer-shot tie resolution are implemented; see `docs/playtests/overtime.md`. SELECT pause/resume and basic replay are already implemented. Use A for pass/steal, B for shoot/block, and START for turbo; verify the original input feel through the prototype.
 - [ ] **Finish the remaining arcade features.** Reserve-limited turbo sprint with a visible gauge, exaggerated dunks, Dunk Cam and state-preserving return transitions are implemented. Add hot-hand activation/reset with a flaming-net effect. Continue tuning from playtests.
 - [ ] **Finish presentation.** Create readable body sprites and animations for movement, dribbling, passing, shooting, dunks, and defense; apply the real uniform references. Refine court art, HUD and effects. Native audio now implements 21 gameplay/menu/special-animation effects; rejected dunks have a dedicated animated BLOCKED stamp. See `docs/playtests/blocked-audio.md`. Integrate the approved default portraits and jerseys, including CHOMPA 74 and MEAT 00.
 - [ ] **Validate the complete playable game.** Run repeatable checks on the exact ROM for full matches, all CPU levels, overtime/ties, rebounds, pause/resume, and interrupted camera sequences. Measure crowded-scene performance and test on physical Chromatic before claiming hardware readiness. Deliver a playable build with its editable project before designing saved records.

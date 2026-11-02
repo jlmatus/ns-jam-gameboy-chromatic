@@ -159,6 +159,7 @@ void jam_shoot(jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANKED {
     depth=distance(g->from_y,g->target_y)/2;
     g->shot_points=((uint32_t)d*d+(uint32_t)depth*depth)>88u*88u ? 3 : 2;
     g->block_attempts=0;
+    g->shot_blocked=g->loose_rebound=0;
     g->shot_good=random_percent(g)<jam_shot_chance(g,who,charge);
     g->mode=JAM_SHOT;
     g->owner=-1;
@@ -169,6 +170,8 @@ void jam_shoot(jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANKED {
     g->scored=0;
     g->players[who].action=22;
     g->shots++;
+    g->stats[who].field_attempted++;
+    if(g->shot_points==3)g->stats[who].three_attempted++;
     message(g,JAM_MSG_SHOT);
 }
 static void move_to(jam_player_t *p,int16_t x,int16_t y,uint8_t speed) {
@@ -209,6 +212,7 @@ static void steal(jam_game_t *g,uint8_t p) {
     if(random_percent(g)<chance) {
         give_ball(g,p);
         g->steals++;
+        g->stats[p].steals++;
         message(g,JAM_MSG_STEAL);
     } else if(p==g->controlled)message(g,JAM_MSG_REACH);
 }
@@ -297,18 +301,20 @@ static void flight(jam_game_t *g) {
             d=distance(g->players[i].x,g->ball_x)+distance(g->players[i].y,g->ball_y);
             if(d<reach) {
                 g->intercept_attempts|=1u<<i;
-                if(random_percent(g)<chance) { give_ball(g,i); g->steals++; message(g,JAM_MSG_STEAL); return; }
+                if(random_percent(g)<chance) { give_ball(g,i); g->steals++;g->stats[i].steals++; message(g,JAM_MSG_STEAL); return; }
             }
         }
     }
-    if(g->mode==JAM_SHOT && g->flight<14) {
+    if(g->mode==JAM_SHOT && g->flight<14 && !g->shot_blocked) {
         for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(g->passer) && g->players[i].block_time &&
             !(g->block_attempts&(1u<<i)) && near_player(g,i,g->passer)<80+ratings(g,i)->block*4+((int8_t)jam_body(g,i)->height_px-40)*4) {
             g->block_attempts|=1u<<i;
             if(random_byte(g)%100<10+ratings(g,i)->block*7+difficulty_bonus(g,i)*8) {
                 g->shot_good=0;
                 g->blocks++;
+                g->stats[i].blocks++;g->shot_blocked=1;
                 message(g,JAM_MSG_BLOCK);
+                break;
             }
         }
     }
@@ -338,10 +344,7 @@ static void finish(jam_game_t *g) {
         g->ball_x=rim(g->shot_team);
         g->height=JAM_RIM_HEIGHT+8-t;
         if(t==JAM_SCORE_FRAME && !g->scored) {
-            g->score[g->shot_team]+=g->shot_points;
-            if(g->score[g->shot_team]>JAM_SCORE_MAX) g->score[g->shot_team]=JAM_SCORE_MAX;
-            g->baskets++;
-            g->scored=1;
+            jam_stats_basket(g,0);
             message(g,g->shot_points==3 ? JAM_MSG_THREE : JAM_MSG_TWO);
         }
         if(t==JAM_FINISH_FRAMES) {
@@ -357,6 +360,7 @@ static void finish(jam_game_t *g) {
         }
         if(t>=24) {
             g->mode=JAM_LOOSE;
+            g->loose_rebound=1;
             g->flight=0;
             g->height=24;
         }
@@ -478,9 +482,12 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
             d=distance(g->players[i].x,g->ball_x)+distance(g->players[i].y,g->ball_y);
             if(d<best) { best=d; g->target=i; }
         }
-        if(best<32767 && g->height<10+(jam_body(g,g->target)->height_px-36)/2 && best<64) { give_ball(g,g->target); g->rebounds++;
+        if(best<32767 && g->height<10+(jam_body(g,g->target)->height_px-36)/2 && best<64) { give_ball(g,g->target);
+            if(g->loose_rebound){g->rebounds++;g->stats[g->target].rebounds++;g->loose_rebound=0;}
             if(g->message!=JAM_MSG_SHOVE || g->message_time<50)message(g,JAM_MSG_REBOUND); }
         /* Dead-ball recovery guarantees an unreachable rebound cannot stall play. */
-        else if(g->flight>=180 && best<32767) { give_ball(g,g->target); message(g,JAM_MSG_REBOUND); g->rebounds++; }
+        else if(g->flight>=180 && best<32767) { give_ball(g,g->target); message(g,JAM_MSG_REBOUND);
+            if(g->loose_rebound){g->rebounds++;g->stats[g->target].rebounds++;g->loose_rebound=0;}
+        }
     }
 }

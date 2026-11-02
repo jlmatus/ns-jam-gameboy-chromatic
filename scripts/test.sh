@@ -12,5 +12,8 @@ mkdir -p build/tests
   game/plugins/basketball/engine/src/core/jam_turbo.c \
   game/plugins/basketball/engine/src/core/jam_match.c \
   game/plugins/basketball/engine/src/core/jam_audio.c \
+  game/plugins/basketball/engine/src/core/jam_stats.c \
+  game/plugins/basketball/engine/src/core/jam_results.c \
+  game/plugins/basketball/engine/src/core/jam_front.c \
   game/plugins/basketball/engine/src/core/jam_menu.c -o build/tests/jam-sim-test
 exec build/tests/jam-sim-test

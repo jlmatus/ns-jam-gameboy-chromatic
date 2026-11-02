@@ -12,6 +12,8 @@
 #include "jam_dunk_cam.h"
 #include "jam_turbo_hud.h"
 #include "jam_audio.h"
+#include "jam_results.h"
+#include "jam_front.h"
 void jam_player_palettes(const jam_setup_t *setup) BANKED;
 #include "palette.h"
 #include <string.h>
@@ -20,7 +22,12 @@ jam_game_t jam;
 static int16_t view_x;
 jam_menu_t jam_menu;
 static uint8_t in_menu;
+static uint8_t in_results;
+static jam_results_t results;
+static uint8_t front_active;
 static uint8_t menu_tiles[360];
+/* Front playback and menu composition never run together. Reuse their RAM. */
+#define front (*(jam_front_t *)menu_tiles)
 static uint8_t hud[40];
 static uint8_t previous_hud[40];
 static uint8_t previous_controlled;
@@ -256,7 +263,9 @@ static void draw_menu(void) {
     jam_menu_style();
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
     if(jam_menu.stage<4) {
-        jam_card_render(jam_menu.cursor,jam_menu.page,jam_menu.stage);
+        if(!jam_menu.cursor && !jam_menu.page)jam_front_art(4+jam_menu.stage);
+        else if(jam_menu.cursor==4 && !jam_menu.page)jam_front_art(20+jam_menu.stage);
+        else jam_card_render(jam_menu.cursor,jam_menu.page,jam_menu.stage);
         ui_set_pos(0,0);return;
     }
     for(n=0;n<360;n++)menu_tiles[n]=192;
@@ -292,11 +301,23 @@ static void draw_menu(void) {
     VBK_REG=0;set_win_tiles(0,0,20,18,menu_tiles);
     ui_set_pos(0,0);
 }
+static void draw_results(void) {
+    uint8_t i,y,attrs[20];
+    jam_menu_style();
+    for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
+    jam_results_tiles(&jam,results.page,menu_tiles);
+    for(i=0;i<20;i++)attrs[i]=5;
+    VBK_REG=1;
+    for(y=0;y<18;y++)set_win_tiles(0,y,20,1,attrs);
+    VBK_REG=0;set_win_tiles(0,0,20,18,menu_tiles);
+    ui_set_pos(0,0);
+}
 static void start_lineup(void) {
     uint8_t i;
     jam_dunk_cam_end();
+    jam_front_scene_restore();
     if(!jam_init_lineup(&jam,&jam_menu.setup))return;
-    in_menu=0;view_x=45;jam_player_palettes(&jam.setup);
+    front_active=in_menu=in_results=0;view_x=45;jam_player_palettes(&jam.setup);
     jam_sfx_stop();jam_sfx_sync(&jam);jam_sfx_play(JAM_SFX_START);
     __critical { clock_last_vblank=sys_time; }
     VBK_REG=0;set_bkg_data(192,40,jam_font);set_bkg_data(232,5,jam_turbo_tiles);
@@ -310,6 +331,7 @@ void basketball_init(void) BANKED {
     uint8_t i;
     jam_init(&jam);
     jam_sfx_init(&jam);
+    jam_front_scene_save();
     __critical { clock_last_vblank=sys_time; }
     view_x=45;
     camera_settings=0;
@@ -327,7 +349,10 @@ void basketball_init(void) BANKED {
     for(i=0;i<40;i++){hud[i]=7;previous_hud[i]=255;}
     VBK_REG=1;set_win_tiles(0,0,20,2,hud);VBK_REG=0;
     ui_set_pos(0,128);
-    in_menu=1;jam_menu_init(&jam_menu,0);draw_menu();
+    in_results=in_menu=0;jam_menu_init(&jam_menu,0);
+    front_active=1;jam_front_init(&front,0);
+    for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
+    jam_front_art(front.frame);ui_set_pos(0,0);
 }
 void basketball_update(void) BANKED {
     uint8_t buttons=0;
@@ -343,13 +368,44 @@ void basketball_update(void) BANKED {
     if(INPUT_B) buttons|=JAM_B;
     if(INPUT_START) buttons|=JAM_TURBO;
     if(INPUT_SELECT) buttons|=JAM_PAUSE;
+    if(front_active) {
+        uint8_t old_frame=front.frame,old_mode=front.mode;
+        if(jam_front_update(&front,buttons,elapsed)==JAM_FRONT_PLAY) {
+            front_active=0;in_menu=1;jam_menu.previous_input=buttons;draw_menu();
+            jam_sfx_play(JAM_SFX_CONFIRM);
+        } else if(front.changed) {
+            jam_front_art(front.frame);ui_set_pos(0,0);
+            if(front.mode==JAM_FRONT_INTRO && old_mode==JAM_FRONT_INTRO) {
+                if(old_frame<11 && front.frame>=11)jam_sfx_play(JAM_SFX_SHOT);
+                if(old_frame<17 && front.frame>=17)jam_sfx_play(JAM_SFX_SWISH);
+            } else jam_sfx_play(JAM_SFX_MOVE);
+        }
+        return;
+    }
     if(in_menu) {
         menu_pressed=(buttons^jam_menu.previous_input)&buttons;
+        if(jam_menu.stage==0 && !jam_menu.page && (menu_pressed&JAM_B)) {
+            in_menu=0;front_active=1;front.mode=JAM_FRONT_HOME;front.selected=0;
+            front.previous_input=buttons;front.frame=0;
+            for(menu_pressed=0;menu_pressed<=6;menu_pressed++)actors[menu_pressed].flags|=ACTOR_FLAG_HIDDEN;
+            jam_front_art(0);ui_set_pos(0,0);jam_sfx_play(JAM_SFX_BACK);return;
+        }
         if(jam_menu_update(&jam_menu,buttons)) {start_lineup();jam.previous_input=buttons;}
         else if(jam_menu.changed){
             draw_menu();
             jam_sfx_play(menu_pressed&JAM_B?JAM_SFX_BACK:menu_pressed&JAM_A?JAM_SFX_CONFIRM:JAM_SFX_MOVE);
         }
+        return;
+    }
+    if(in_results) {
+        menu_pressed=jam_results_update(&results,buttons);
+        if(menu_pressed==JAM_RESULTS_REMATCH) {
+            jam_menu.setup=jam.setup;start_lineup();jam.previous_input=buttons;
+        } else if(menu_pressed==JAM_RESULTS_LINEUP) {
+            jam_sfx_stop();jam_sfx_play(JAM_SFX_BACK);
+            jam_menu_init(&jam_menu,&jam.setup);jam_menu.previous_input=buttons;
+            in_results=0;in_menu=1;draw_menu();
+        } else if(results.changed){draw_results();jam_sfx_play(JAM_SFX_MOVE);}
         return;
     }
     if((jam.paused || jam.match_phase>=JAM_MATCH_BREAK) && INPUT_B_PRESSED) {
@@ -360,6 +416,12 @@ void basketball_update(void) BANKED {
     }
     jam_match_clock(&jam,elapsed);
     jam_update(&jam,buttons);
+    if(jam.match_phase==JAM_MATCH_FINAL) {
+        jam_dunk_cam_end();
+        in_results=1;jam_results_init(&results,buttons);draw_results();
+        jam_sfx_update(&jam);
+        return;
+    }
     draw_players();
     if(jam.mode==JAM_DUNK){
         if(!jam_cam_active){jam_dunk_cam_begin(&jam);for(buttons=0;buttons<40;buttons++)previous_hud[buttons]=255;}

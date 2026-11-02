@@ -52,6 +52,7 @@ uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED {
     g->from_x=p->x;g->from_y=p->y;
     g->mode=JAM_DUNK;g->passer=who;g->owner=-1;
     g->shot_team=who>>1;g->shot_points=2;g->shot_good=g->scored=0;
+    g->shot_blocked=g->loose_rebound=0;
     g->dunk_time=g->dunk_result=g->dunk_block_time=g->block_attempts=0;
     g->dunk_defender=255;g->dunk_contests=0;
     g->charge=g->block=0;p->windup=p->shot_time=0;
@@ -60,6 +61,7 @@ uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED {
     g->height=jam_body(g,who)->height_px-10;
     g->message=JAM_MSG_DUNK;g->message_time=80;
     g->shots++;g->dunk_attempts++;
+    g->stats[who].field_attempted++;
     return 1;
 }
 uint8_t jam_dunk_jump(const jam_game_t *g) JAM_BANKED {
@@ -103,6 +105,7 @@ void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED {
             if(!g->dunk_result && jam_roll_percent(g)<chance){
                 g->dunk_result=JAM_DUNK_BLOCKED;g->blocks++;g->dunk_block_time=t;
                 g->dunk_defender=i;
+                g->stats[i].blocks++;g->shot_blocked=1;
                 g->target_x=g->ball_x;g->target_y=g->ball_y;g->launch_height=g->height;
                 g->message=JAM_MSG_BLOCK;g->message_time=80;
             }
@@ -124,13 +127,11 @@ void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED {
         g->height=fall*2<JAM_RIM_HEIGHT+8?JAM_RIM_HEIGHT+8-fall*2:0;
     }
     if(t==JAM_DUNK_SCORE && g->dunk_result==JAM_DUNK_MADE && !g->scored){
-        g->score[g->shot_team]+=2;
-        if(g->score[g->shot_team]>JAM_SCORE_MAX)g->score[g->shot_team]=JAM_SCORE_MAX;
-        g->baskets++;g->dunks++;g->scored=1;
+        jam_stats_basket(g,1);
     }
     if(t>=JAM_DUNK_END){
         a->cooldown=30;a->action=0;g->possession_time=0;
         if(g->dunk_result==JAM_DUNK_MADE)jam_begin_inbound(g,g->shot_team^1);
-        else {g->mode=JAM_LOOSE;g->flight=0;g->grace=0;}
+        else {g->mode=JAM_LOOSE;g->loose_rebound=1;g->flight=0;g->grace=0;}
     }
 }

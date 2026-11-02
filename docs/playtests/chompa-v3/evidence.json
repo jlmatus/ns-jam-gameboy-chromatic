@@ -1,0 +1,2755 @@
+{
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "sizeBytes": 4194304,
+    "sha256": "c155b5561d3ef3644849ebf8e11fddea978f64458762d4d2f6b2a2ec62ebb231",
+    "title": "NSJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 7,
+    "declaredRomSizeBytes": 4194304,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 242,
+    "computedHeaderChecksum": 242,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "sourceDebug": {
+    "available": true,
+    "identity": {
+      "romSha256": "c155b5561d3ef3644849ebf8e11fddea978f64458762d4d2f6b2a2ec62ebb231",
+      "projectRevision": "209bffc4bfea326bc44afb8bb90729cc291c3b933c3d66b53689f1ba11a10451",
+      "sourceFingerprint": "fb3327ebe21f30335ee53f47e3811fd5e28203ef012dc1ebbfc4fc279d69e61c",
+      "compilerSha256": "78961636939edb44b0539ae26badfa07055be38124dbf08e3b84ec5608a2e627",
+      "engineAbiVersion": "gbvm-farptr3-uword16-v1:85e65e9be4efe6b794debf0d0a299c88a2f888a48eaf0b35efed6d3c9a2269f0"
+    }
+  },
+  "run": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 450,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "c155b5561d3ef3644849ebf8e11fddea978f64458762d4d2f6b2a2ec62ebb231",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 267.197666,
+      "gameTimeMs": 7534.217834472656
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+      "sessionId": "158d9ce2ac9b4128be6d922509845031",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 450,
+      "totalFrames": 450,
+      "bytesUsed": 302550,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 2097152,
+        "maxFrames": 1200,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 453,
+      "eventDigest": "1271dd01c7fecd51aec627cbe2c1df0efe2d30e3a92cabf011d8c740d340fcc2",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 450
+        }
+      ]
+    },
+    "debugMode": "rom"
+  },
+  "inputs": [
+    {
+      "label": "matus",
+      "frame": 468,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 468,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 0,
+        "toActionIndex": 19,
+        "fromFrame": 450,
+        "toFrame": 468,
+        "fromPrefixPin": {
+          "eventCount": 453,
+          "eventDigest": "1271dd01c7fecd51aec627cbe2c1df0efe2d30e3a92cabf011d8c740d340fcc2",
+          "byteLength": 242668,
+          "sha256": "8b0396037054472ec82f64dffaaee35b75f49653dcb867ab92c832be5020dfb5"
+        },
+        "prefixPin": {
+          "eventCount": 491,
+          "eventDigest": "f4cf79ca273def4b4b75079dea770d9710e196f3a493f497ba894d953c89177a",
+          "byteLength": 258575,
+          "sha256": "64737999d66b695957ace435f675f95eb7f6812b0ed59918f72d47c25e657f00"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 469,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 469,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 19,
+        "toActionIndex": 21,
+        "fromFrame": 468,
+        "toFrame": 469,
+        "fromPrefixPin": {
+          "eventCount": 491,
+          "eventDigest": "f4cf79ca273def4b4b75079dea770d9710e196f3a493f497ba894d953c89177a",
+          "byteLength": 258575,
+          "sha256": "64737999d66b695957ace435f675f95eb7f6812b0ed59918f72d47c25e657f00"
+        },
+        "prefixPin": {
+          "eventCount": 495,
+          "eventDigest": "ad9b0e520255e6fc718b405b1384029588a12a1ede7936b69f0348818ba9517b",
+          "byteLength": 260043,
+          "sha256": "4ac8f40aa8a4eb0fafa2da66cae60f26c3269f997e76038656e7216bcd735bbb"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "magic",
+      "frame": 487,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 487,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 21,
+        "toActionIndex": 40,
+        "fromFrame": 469,
+        "toFrame": 487,
+        "fromPrefixPin": {
+          "eventCount": 495,
+          "eventDigest": "ad9b0e520255e6fc718b405b1384029588a12a1ede7936b69f0348818ba9517b",
+          "byteLength": 260043,
+          "sha256": "4ac8f40aa8a4eb0fafa2da66cae60f26c3269f997e76038656e7216bcd735bbb"
+        },
+        "prefixPin": {
+          "eventCount": 533,
+          "eventDigest": "89e7f5538279f2f811ec797473644822aae85797d79b27d4e547149c1a28c66f",
+          "byteLength": 275979,
+          "sha256": "c352150178afa8a8c4ebb6195ca6cb0c8b3680f3cf937dd66f7cc1ce0b54891b"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 488,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 488,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 40,
+        "toActionIndex": 42,
+        "fromFrame": 487,
+        "toFrame": 488,
+        "fromPrefixPin": {
+          "eventCount": 533,
+          "eventDigest": "89e7f5538279f2f811ec797473644822aae85797d79b27d4e547149c1a28c66f",
+          "byteLength": 275979,
+          "sha256": "c352150178afa8a8c4ebb6195ca6cb0c8b3680f3cf937dd66f7cc1ce0b54891b"
+        },
+        "prefixPin": {
+          "eventCount": 537,
+          "eventDigest": "9319d13bc7c9aa1e597b36cbfacfde59ac4c32e4fe864bc293920054871a0ad1",
+          "byteLength": 277451,
+          "sha256": "f5cff055e8a59cb4fe508cd5008fca9b97ec0f34bf049110900973a6229c56f1"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "bambi",
+      "frame": 506,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 506,
+          "width": 160,
+          "height": 144,
+          "sha256": "86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc",
+          "rgbaSha256": "41f51f7be0be59490c62f571b8ad163c5805bf76334a9da437ca10f7e4d4f197",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 42,
+        "toActionIndex": 61,
+        "fromFrame": 488,
+        "toFrame": 506,
+        "fromPrefixPin": {
+          "eventCount": 537,
+          "eventDigest": "9319d13bc7c9aa1e597b36cbfacfde59ac4c32e4fe864bc293920054871a0ad1",
+          "byteLength": 277451,
+          "sha256": "f5cff055e8a59cb4fe508cd5008fca9b97ec0f34bf049110900973a6229c56f1"
+        },
+        "prefixPin": {
+          "eventCount": 575,
+          "eventDigest": "1ca4000b8fc15f61239866e5a84a9bf9ffd5a538926846907f7a3a7787678256",
+          "byteLength": 293387,
+          "sha256": "4b88d4829cd51a0ccf114d93ebf924be7fe5df626141ee71abcbaa94e1f0a990"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 507,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 507,
+          "width": 160,
+          "height": 144,
+          "sha256": "86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc",
+          "rgbaSha256": "41f51f7be0be59490c62f571b8ad163c5805bf76334a9da437ca10f7e4d4f197",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 61,
+        "toActionIndex": 63,
+        "fromFrame": 506,
+        "toFrame": 507,
+        "fromPrefixPin": {
+          "eventCount": 575,
+          "eventDigest": "1ca4000b8fc15f61239866e5a84a9bf9ffd5a538926846907f7a3a7787678256",
+          "byteLength": 293387,
+          "sha256": "4b88d4829cd51a0ccf114d93ebf924be7fe5df626141ee71abcbaa94e1f0a990"
+        },
+        "prefixPin": {
+          "eventCount": 579,
+          "eventDigest": "17e4c3bb0de598d6b3d9c9f689f8f8f3a06ecff50e7e460f1a066a6c1b3c231b",
+          "byteLength": 294859,
+          "sha256": "8632e84beb452763acb986f68d97dac61259cba50bdac9bb379f3750ec530e76"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "torres",
+      "frame": 525,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 525,
+          "width": 160,
+          "height": 144,
+          "sha256": "5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f",
+          "rgbaSha256": "cede454bab2825d3833130f0b3857cf037dd8ebef79a4b896356fdaf2b0ce433",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 63,
+        "toActionIndex": 82,
+        "fromFrame": 507,
+        "toFrame": 525,
+        "fromPrefixPin": {
+          "eventCount": 579,
+          "eventDigest": "17e4c3bb0de598d6b3d9c9f689f8f8f3a06ecff50e7e460f1a066a6c1b3c231b",
+          "byteLength": 294859,
+          "sha256": "8632e84beb452763acb986f68d97dac61259cba50bdac9bb379f3750ec530e76"
+        },
+        "prefixPin": {
+          "eventCount": 617,
+          "eventDigest": "2f86b37ffdbdb10620b0996d4de58b879730e79fe60bdfc05a60246621a92c23",
+          "byteLength": 310795,
+          "sha256": "f30aef8ad3844bd11aaa30b250079dcc3ac7b01759ae7b7b52cd6012f77624ef"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 526,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 526,
+          "width": 160,
+          "height": 144,
+          "sha256": "5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f",
+          "rgbaSha256": "cede454bab2825d3833130f0b3857cf037dd8ebef79a4b896356fdaf2b0ce433",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 82,
+        "toActionIndex": 84,
+        "fromFrame": 525,
+        "toFrame": 526,
+        "fromPrefixPin": {
+          "eventCount": 617,
+          "eventDigest": "2f86b37ffdbdb10620b0996d4de58b879730e79fe60bdfc05a60246621a92c23",
+          "byteLength": 310795,
+          "sha256": "f30aef8ad3844bd11aaa30b250079dcc3ac7b01759ae7b7b52cd6012f77624ef"
+        },
+        "prefixPin": {
+          "eventCount": 621,
+          "eventDigest": "eacb60d34e2218447049927f2c93f0874e715529d51b5dae861260d0d6e55bdb",
+          "byteLength": 312267,
+          "sha256": "0ebf7fc1472964a282821875852e5ca57df620d41ce4d7c6b46b54e1d3b22469"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa",
+      "frame": 544,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 544,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 84,
+        "toActionIndex": 103,
+        "fromFrame": 526,
+        "toFrame": 544,
+        "fromPrefixPin": {
+          "eventCount": 621,
+          "eventDigest": "eacb60d34e2218447049927f2c93f0874e715529d51b5dae861260d0d6e55bdb",
+          "byteLength": 312267,
+          "sha256": "0ebf7fc1472964a282821875852e5ca57df620d41ce4d7c6b46b54e1d3b22469"
+        },
+        "prefixPin": {
+          "eventCount": 659,
+          "eventDigest": "c14ff72ed7a09ad9769d7edfec2edfe7a26da62cf1ec8a010d04e04733da5217",
+          "byteLength": 328211,
+          "sha256": "a57cfe9b130e13dfa8373867ee5c200ba2186b99a9423ae5f0e2ceb357c39eb0"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 545,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 545,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 103,
+        "toActionIndex": 105,
+        "fromFrame": 544,
+        "toFrame": 545,
+        "fromPrefixPin": {
+          "eventCount": 659,
+          "eventDigest": "c14ff72ed7a09ad9769d7edfec2edfe7a26da62cf1ec8a010d04e04733da5217",
+          "byteLength": 328211,
+          "sha256": "a57cfe9b130e13dfa8373867ee5c200ba2186b99a9423ae5f0e2ceb357c39eb0"
+        },
+        "prefixPin": {
+          "eventCount": 663,
+          "eventDigest": "2706ea184bab4a57352d1687365cfb38d64286ac678e6ada2557150ec9fb10c0",
+          "byteLength": 329686,
+          "sha256": "cca902713cf1db55b53996ea87e835bf5d5c5db8407c0bade16a96909f0c8b20"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "ratings",
+      "frame": 563,
+      "buttons": [
+        "select"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 563,
+          "width": 160,
+          "height": 144,
+          "sha256": "a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24",
+          "rgbaSha256": "2a52aaf6b1b2fae58647c0f01e80c06f589fbed33488522140969fa641fb8296",
+          "sampledButtons": [
+            "select"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 105,
+        "toActionIndex": 124,
+        "fromFrame": 545,
+        "toFrame": 563,
+        "fromPrefixPin": {
+          "eventCount": 663,
+          "eventDigest": "2706ea184bab4a57352d1687365cfb38d64286ac678e6ada2557150ec9fb10c0",
+          "byteLength": 329686,
+          "sha256": "cca902713cf1db55b53996ea87e835bf5d5c5db8407c0bade16a96909f0c8b20"
+        },
+        "prefixPin": {
+          "eventCount": 701,
+          "eventDigest": "b93495c198a2d45922ec5b967c1c3dfdea952ba937ad05a84b8bb53dd0d228b2",
+          "byteLength": 345662,
+          "sha256": "7921302ee781474705a5cb82b0168aeef4c380fcf4dd85fa210e35f97979ac83"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 564,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 564,
+          "width": 160,
+          "height": 144,
+          "sha256": "a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24",
+          "rgbaSha256": "2a52aaf6b1b2fae58647c0f01e80c06f589fbed33488522140969fa641fb8296",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 124,
+        "toActionIndex": 126,
+        "fromFrame": 563,
+        "toFrame": 564,
+        "fromPrefixPin": {
+          "eventCount": 701,
+          "eventDigest": "b93495c198a2d45922ec5b967c1c3dfdea952ba937ad05a84b8bb53dd0d228b2",
+          "byteLength": 345662,
+          "sha256": "7921302ee781474705a5cb82b0168aeef4c380fcf4dd85fa210e35f97979ac83"
+        },
+        "prefixPin": {
+          "eventCount": 705,
+          "eventDigest": "bef27027a15854b876ced0d3cf36d242e6cf0d9b687466815d859ce1f9fb6ad1",
+          "byteLength": 347138,
+          "sha256": "4cc8a300df0eee87f58d2e5b9ca17bbef10831feb07890f2bec28b623cf72abf"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "ratings-two",
+      "frame": 582,
+      "buttons": [
+        "select"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 582,
+          "width": 160,
+          "height": 144,
+          "sha256": "c824ac45fcff69313e5f9917526621e7d30a812426f436befff3fb634a42fef8",
+          "rgbaSha256": "2c30d1eb79c681c655fadbc5245498373729184731c98fb4a57d619a9162e4c4",
+          "sampledButtons": [
+            "select"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c824ac45fcff69313e5f9917526621e7d30a812426f436befff3fb634a42fef8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 126,
+        "toActionIndex": 145,
+        "fromFrame": 564,
+        "toFrame": 582,
+        "fromPrefixPin": {
+          "eventCount": 705,
+          "eventDigest": "bef27027a15854b876ced0d3cf36d242e6cf0d9b687466815d859ce1f9fb6ad1",
+          "byteLength": 347138,
+          "sha256": "4cc8a300df0eee87f58d2e5b9ca17bbef10831feb07890f2bec28b623cf72abf"
+        },
+        "prefixPin": {
+          "eventCount": 743,
+          "eventDigest": "9c2af8baec5295709e64c0d58e991a1bbcf5e1870cba9d8f98a76a585bb5acf5",
+          "byteLength": 363114,
+          "sha256": "80ac36f968e7b78759bdef4edf50708a7f0a5a23d7efee0b0730bd4408c4a958"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 583,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 583,
+          "width": 160,
+          "height": 144,
+          "sha256": "c824ac45fcff69313e5f9917526621e7d30a812426f436befff3fb634a42fef8",
+          "rgbaSha256": "2c30d1eb79c681c655fadbc5245498373729184731c98fb4a57d619a9162e4c4",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c824ac45fcff69313e5f9917526621e7d30a812426f436befff3fb634a42fef8.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 145,
+        "toActionIndex": 147,
+        "fromFrame": 582,
+        "toFrame": 583,
+        "fromPrefixPin": {
+          "eventCount": 743,
+          "eventDigest": "9c2af8baec5295709e64c0d58e991a1bbcf5e1870cba9d8f98a76a585bb5acf5",
+          "byteLength": 363114,
+          "sha256": "80ac36f968e7b78759bdef4edf50708a7f0a5a23d7efee0b0730bd4408c4a958"
+        },
+        "prefixPin": {
+          "eventCount": 747,
+          "eventDigest": "a48eee8e90c32022e3ad534517506c4358be887ae8515028ca00d313bc7c2226",
+          "byteLength": 364590,
+          "sha256": "311ec560bd287c38455da260eacc39458af2ea34f356ad690d692aef746be8a7"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-return",
+      "frame": 601,
+      "buttons": [
+        "b"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 601,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 147,
+        "toActionIndex": 166,
+        "fromFrame": 583,
+        "toFrame": 601,
+        "fromPrefixPin": {
+          "eventCount": 747,
+          "eventDigest": "a48eee8e90c32022e3ad534517506c4358be887ae8515028ca00d313bc7c2226",
+          "byteLength": 364590,
+          "sha256": "311ec560bd287c38455da260eacc39458af2ea34f356ad690d692aef746be8a7"
+        },
+        "prefixPin": {
+          "eventCount": 785,
+          "eventDigest": "8ad0fca25b060e5e96bae9783062c3885aa6a557e2e2ad7c20df5ccb0c2af508",
+          "byteLength": 380551,
+          "sha256": "3ab0f25a53e1c7de61eba778b6589ce126548c3123bb11b03d41f80444997324"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 602,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 602,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 166,
+        "toActionIndex": 168,
+        "fromFrame": 601,
+        "toFrame": 602,
+        "fromPrefixPin": {
+          "eventCount": 785,
+          "eventDigest": "8ad0fca25b060e5e96bae9783062c3885aa6a557e2e2ad7c20df5ccb0c2af508",
+          "byteLength": 380551,
+          "sha256": "3ab0f25a53e1c7de61eba778b6589ce126548c3123bb11b03d41f80444997324"
+        },
+        "prefixPin": {
+          "eventCount": 789,
+          "eventDigest": "dee7cd482667313213156aa1d29e684848d1bfce085152a70a85f5c5f2d667bf",
+          "byteLength": 382022,
+          "sha256": "f2e10447055f9287c8702bf42696023f3208483467ca62a9a93b3768eb687090"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "meat",
+      "frame": 620,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 620,
+          "width": 160,
+          "height": 144,
+          "sha256": "258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9",
+          "rgbaSha256": "8f81b11c21d2a3a1789aef413a067a3d8b961b5c43c2d9689b5a1ba43837bdbe",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 168,
+        "toActionIndex": 187,
+        "fromFrame": 602,
+        "toFrame": 620,
+        "fromPrefixPin": {
+          "eventCount": 789,
+          "eventDigest": "dee7cd482667313213156aa1d29e684848d1bfce085152a70a85f5c5f2d667bf",
+          "byteLength": 382022,
+          "sha256": "f2e10447055f9287c8702bf42696023f3208483467ca62a9a93b3768eb687090"
+        },
+        "prefixPin": {
+          "eventCount": 827,
+          "eventDigest": "e96d93a4dfc80601d565322b0f17d6ad6ab47ae7592c3612642ad4fd2ff650bc",
+          "byteLength": 397995,
+          "sha256": "92b0bbadd780cedca936627b0aeb221f64c35dce2c9f2166a5405d3b2b3555c4"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 621,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 621,
+          "width": 160,
+          "height": 144,
+          "sha256": "258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9",
+          "rgbaSha256": "8f81b11c21d2a3a1789aef413a067a3d8b961b5c43c2d9689b5a1ba43837bdbe",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/258bbfd9d1d176c421e99342497973386d0400801aba2418e290b63ecd0498d9.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 187,
+        "toActionIndex": 189,
+        "fromFrame": 620,
+        "toFrame": 621,
+        "fromPrefixPin": {
+          "eventCount": 827,
+          "eventDigest": "e96d93a4dfc80601d565322b0f17d6ad6ab47ae7592c3612642ad4fd2ff650bc",
+          "byteLength": 397995,
+          "sha256": "92b0bbadd780cedca936627b0aeb221f64c35dce2c9f2166a5405d3b2b3555c4"
+        },
+        "prefixPin": {
+          "eventCount": 831,
+          "eventDigest": "b26292f2fdb342a7203a109b052949968db274a5bb7d38e73a158eaa6d16c161",
+          "byteLength": 399470,
+          "sha256": "ea0633e11cc0193cf461ba31981acab26bb3fff49e2f60998b431ba500dd3670"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-again",
+      "frame": 639,
+      "buttons": [
+        "left"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 639,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 189,
+        "toActionIndex": 208,
+        "fromFrame": 621,
+        "toFrame": 639,
+        "fromPrefixPin": {
+          "eventCount": 831,
+          "eventDigest": "b26292f2fdb342a7203a109b052949968db274a5bb7d38e73a158eaa6d16c161",
+          "byteLength": 399470,
+          "sha256": "ea0633e11cc0193cf461ba31981acab26bb3fff49e2f60998b431ba500dd3670"
+        },
+        "prefixPin": {
+          "eventCount": 869,
+          "eventDigest": "9e71bb5d8788c674002c2823e184d14a4f20994f16fe749828c15e803850ef12",
+          "byteLength": 415440,
+          "sha256": "66fed4d67f5960f1c52ce40787ee999ab00913dff77f7c6eb921a63b41f4fd92"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 640,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 640,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 208,
+        "toActionIndex": 210,
+        "fromFrame": 639,
+        "toFrame": 640,
+        "fromPrefixPin": {
+          "eventCount": 869,
+          "eventDigest": "9e71bb5d8788c674002c2823e184d14a4f20994f16fe749828c15e803850ef12",
+          "byteLength": 415440,
+          "sha256": "66fed4d67f5960f1c52ce40787ee999ab00913dff77f7c6eb921a63b41f4fd92"
+        },
+        "prefixPin": {
+          "eventCount": 873,
+          "eventDigest": "1960888e0ca0bb4eab43ca89242f3e136ef3915e807e7e12984cfe0a46b40c9f",
+          "byteLength": 416914,
+          "sha256": "6876acae741410343ec569e80d716b74ee733b889c26abd7595c684bd80593d7"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "choose-chompa",
+      "frame": 658,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 658,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 210,
+        "toActionIndex": 229,
+        "fromFrame": 640,
+        "toFrame": 658,
+        "fromPrefixPin": {
+          "eventCount": 873,
+          "eventDigest": "1960888e0ca0bb4eab43ca89242f3e136ef3915e807e7e12984cfe0a46b40c9f",
+          "byteLength": 416914,
+          "sha256": "6876acae741410343ec569e80d716b74ee733b889c26abd7595c684bd80593d7"
+        },
+        "prefixPin": {
+          "eventCount": 911,
+          "eventDigest": "54faf868bd13e5bf26d5b125fdcdf6f70c9646b82a6cae331636f55ac4b69cd9",
+          "byteLength": 432875,
+          "sha256": "04e33f693993bbd743a29dd6a0dac23101d7a0bc3493b20ba3bbc4d7e13656ee"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 659,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 659,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 229,
+        "toActionIndex": 231,
+        "fromFrame": 658,
+        "toFrame": 659,
+        "fromPrefixPin": {
+          "eventCount": 911,
+          "eventDigest": "54faf868bd13e5bf26d5b125fdcdf6f70c9646b82a6cae331636f55ac4b69cd9",
+          "byteLength": 432875,
+          "sha256": "04e33f693993bbd743a29dd6a0dac23101d7a0bc3493b20ba3bbc4d7e13656ee"
+        },
+        "prefixPin": {
+          "eventCount": 915,
+          "eventDigest": "04523ae8f4e5d0940aef38cd006d17854b583894e2fe0c3364fd3e09d5020fa1",
+          "byteLength": 434346,
+          "sha256": "1b67d140fc7141052c85de8804503a4ee9c248a3b74f0b762843344bd0ac702f"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-human",
+      "frame": 677,
+      "buttons": [
+        "b"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 677,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 231,
+        "toActionIndex": 250,
+        "fromFrame": 659,
+        "toFrame": 677,
+        "fromPrefixPin": {
+          "eventCount": 915,
+          "eventDigest": "04523ae8f4e5d0940aef38cd006d17854b583894e2fe0c3364fd3e09d5020fa1",
+          "byteLength": 434346,
+          "sha256": "1b67d140fc7141052c85de8804503a4ee9c248a3b74f0b762843344bd0ac702f"
+        },
+        "prefixPin": {
+          "eventCount": 953,
+          "eventDigest": "0d651c807d3d65f58c8cc78a0d45fad514461f4e50e91642754b38187e092328",
+          "byteLength": 450307,
+          "sha256": "cb4855a1fd0b990919c9fa1d0a9c92c9dd45ecfd2bae8effdc0b2c66482bb9a1"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 678,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 678,
+          "width": 160,
+          "height": 144,
+          "sha256": "60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72",
+          "rgbaSha256": "d9e4b36bef84126528beeb5074c8a72dbe168b4fa727d1cac131d13717903cb5",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/60bb62525cabf72c2bf96205472907a4cd142bb693db2d46115821f72be4ca72.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 250,
+        "toActionIndex": 252,
+        "fromFrame": 677,
+        "toFrame": 678,
+        "fromPrefixPin": {
+          "eventCount": 953,
+          "eventDigest": "0d651c807d3d65f58c8cc78a0d45fad514461f4e50e91642754b38187e092328",
+          "byteLength": 450307,
+          "sha256": "cb4855a1fd0b990919c9fa1d0a9c92c9dd45ecfd2bae8effdc0b2c66482bb9a1"
+        },
+        "prefixPin": {
+          "eventCount": 957,
+          "eventDigest": "21973206afde05043dffc95ae8be94a4526072d15bce502d7f4350e876628e27",
+          "byteLength": 451778,
+          "sha256": "63e5877ba5fc5965e8a43d8d2f87d61fb6ad1bf4e2b165c00217ef3a28c0d11a"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-to-matus",
+      "frame": 696,
+      "buttons": [
+        "left"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 696,
+          "width": 160,
+          "height": 144,
+          "sha256": "5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f",
+          "rgbaSha256": "cede454bab2825d3833130f0b3857cf037dd8ebef79a4b896356fdaf2b0ce433",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 252,
+        "toActionIndex": 271,
+        "fromFrame": 678,
+        "toFrame": 696,
+        "fromPrefixPin": {
+          "eventCount": 957,
+          "eventDigest": "21973206afde05043dffc95ae8be94a4526072d15bce502d7f4350e876628e27",
+          "byteLength": 451778,
+          "sha256": "63e5877ba5fc5965e8a43d8d2f87d61fb6ad1bf4e2b165c00217ef3a28c0d11a"
+        },
+        "prefixPin": {
+          "eventCount": 995,
+          "eventDigest": "1b7bb0aca7c5debe833ea925f5cde2fcf631e2162937515eafabbae7b9f75448",
+          "byteLength": 467748,
+          "sha256": "d42dfba866e9b77e227acc6f1094d3804d90fbfba346c73230269f94a29a7d6f"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 697,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 697,
+          "width": 160,
+          "height": 144,
+          "sha256": "5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f",
+          "rgbaSha256": "cede454bab2825d3833130f0b3857cf037dd8ebef79a4b896356fdaf2b0ce433",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/5cbd7b7c6799039375a0a32648aa1165bba16ac231c0b693dd5080fbb1a0a88f.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 271,
+        "toActionIndex": 273,
+        "fromFrame": 696,
+        "toFrame": 697,
+        "fromPrefixPin": {
+          "eventCount": 995,
+          "eventDigest": "1b7bb0aca7c5debe833ea925f5cde2fcf631e2162937515eafabbae7b9f75448",
+          "byteLength": 467748,
+          "sha256": "d42dfba866e9b77e227acc6f1094d3804d90fbfba346c73230269f94a29a7d6f"
+        },
+        "prefixPin": {
+          "eventCount": 999,
+          "eventDigest": "82d26330b8b7faec04d638a7ea7f0eb9a1e49841e642f2bd42e0abdb5b114a33",
+          "byteLength": 469222,
+          "sha256": "5cd0558b29941258da4f74e986693e4c70b6c12eddcc7fb3f0fa0e5c8bb54463"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-to-matus",
+      "frame": 715,
+      "buttons": [
+        "left"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 715,
+          "width": 160,
+          "height": 144,
+          "sha256": "86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc",
+          "rgbaSha256": "41f51f7be0be59490c62f571b8ad163c5805bf76334a9da437ca10f7e4d4f197",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 273,
+        "toActionIndex": 292,
+        "fromFrame": 697,
+        "toFrame": 715,
+        "fromPrefixPin": {
+          "eventCount": 999,
+          "eventDigest": "82d26330b8b7faec04d638a7ea7f0eb9a1e49841e642f2bd42e0abdb5b114a33",
+          "byteLength": 469222,
+          "sha256": "5cd0558b29941258da4f74e986693e4c70b6c12eddcc7fb3f0fa0e5c8bb54463"
+        },
+        "prefixPin": {
+          "eventCount": 1037,
+          "eventDigest": "430ae0448ec31b69d8b1d3d81c439217f44e49bd825e6b1474a438e459614159",
+          "byteLength": 485230,
+          "sha256": "c5de3c4f9f68b0c1e961859789cc2d715a4819331af2d55e3a05615ba5e7a175"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 716,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 716,
+          "width": 160,
+          "height": 144,
+          "sha256": "86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc",
+          "rgbaSha256": "41f51f7be0be59490c62f571b8ad163c5805bf76334a9da437ca10f7e4d4f197",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/86deb08d052870b6da3766e065d4a312ebd55f89a3ded5686bf2f9726e16e2cc.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 292,
+        "toActionIndex": 294,
+        "fromFrame": 715,
+        "toFrame": 716,
+        "fromPrefixPin": {
+          "eventCount": 1037,
+          "eventDigest": "430ae0448ec31b69d8b1d3d81c439217f44e49bd825e6b1474a438e459614159",
+          "byteLength": 485230,
+          "sha256": "c5de3c4f9f68b0c1e961859789cc2d715a4819331af2d55e3a05615ba5e7a175"
+        },
+        "prefixPin": {
+          "eventCount": 1041,
+          "eventDigest": "a6a25c6ef6a1e38096960dc6dffd13d8d1cfcb5e048237505998b55d777d4ce8",
+          "byteLength": 486708,
+          "sha256": "a57d6b2eaa3b6585e74a8be2c0feaf187ef018622ceb5cb3fd8f29fd7095aa23"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-to-matus",
+      "frame": 734,
+      "buttons": [
+        "left"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 734,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 294,
+        "toActionIndex": 313,
+        "fromFrame": 716,
+        "toFrame": 734,
+        "fromPrefixPin": {
+          "eventCount": 1041,
+          "eventDigest": "a6a25c6ef6a1e38096960dc6dffd13d8d1cfcb5e048237505998b55d777d4ce8",
+          "byteLength": 486708,
+          "sha256": "a57d6b2eaa3b6585e74a8be2c0feaf187ef018622ceb5cb3fd8f29fd7095aa23"
+        },
+        "prefixPin": {
+          "eventCount": 1079,
+          "eventDigest": "b3f75c11c3289f62ee74a918882842689c27ffcb2935e9dd782cd3accda14597",
+          "byteLength": 502716,
+          "sha256": "f959e5cde4fe2f87bbb740b32b662379ae05bf27cbcfc18d13e69d0c2c0de87c"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 735,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 735,
+          "width": 160,
+          "height": 144,
+          "sha256": "b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0",
+          "rgbaSha256": "9f3b518388703978df86122567257f5f31a5307c59c60c6e26b776a3fee69552",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/b9165bffa95871574b724031c167678a7a5f0233aa0bc1eec60316f5fdf6b4f0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 313,
+        "toActionIndex": 315,
+        "fromFrame": 734,
+        "toFrame": 735,
+        "fromPrefixPin": {
+          "eventCount": 1079,
+          "eventDigest": "b3f75c11c3289f62ee74a918882842689c27ffcb2935e9dd782cd3accda14597",
+          "byteLength": 502716,
+          "sha256": "f959e5cde4fe2f87bbb740b32b662379ae05bf27cbcfc18d13e69d0c2c0de87c"
+        },
+        "prefixPin": {
+          "eventCount": 1083,
+          "eventDigest": "ed151f74f33bb340504d5d333e19a1139acea5567d6917df315fd15728f7c639",
+          "byteLength": 504194,
+          "sha256": "1b0631f28c5419860cd1d8251aac877a3c94fc9206d6ba473a7f463f8a12f0d0"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-to-matus",
+      "frame": 753,
+      "buttons": [
+        "left"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 753,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [
+            "left"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 315,
+        "toActionIndex": 334,
+        "fromFrame": 735,
+        "toFrame": 753,
+        "fromPrefixPin": {
+          "eventCount": 1083,
+          "eventDigest": "ed151f74f33bb340504d5d333e19a1139acea5567d6917df315fd15728f7c639",
+          "byteLength": 504194,
+          "sha256": "1b0631f28c5419860cd1d8251aac877a3c94fc9206d6ba473a7f463f8a12f0d0"
+        },
+        "prefixPin": {
+          "eventCount": 1121,
+          "eventDigest": "4e10f18e6139e871bc2aa0f3814906abbfd55fd69c7308bc711658c1e09cb74d",
+          "byteLength": 520202,
+          "sha256": "108f8ef7f1aa458c77401c9b3ef0fe0371004ac1cd01ba8394d39b61d1818e4d"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 754,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 754,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 334,
+        "toActionIndex": 336,
+        "fromFrame": 753,
+        "toFrame": 754,
+        "fromPrefixPin": {
+          "eventCount": 1121,
+          "eventDigest": "4e10f18e6139e871bc2aa0f3814906abbfd55fd69c7308bc711658c1e09cb74d",
+          "byteLength": 520202,
+          "sha256": "108f8ef7f1aa458c77401c9b3ef0fe0371004ac1cd01ba8394d39b61d1818e4d"
+        },
+        "prefixPin": {
+          "eventCount": 1125,
+          "eventDigest": "7460cca287561008f4a1d17b854d75421386f514bd81a900049d596a4941c8b6",
+          "byteLength": 521680,
+          "sha256": "49d2c980054a12373b2f5ae60d85a6d0a2363559fba1e97874a4510d9620e444"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "pick-matus",
+      "frame": 772,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 772,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 336,
+        "toActionIndex": 355,
+        "fromFrame": 754,
+        "toFrame": 772,
+        "fromPrefixPin": {
+          "eventCount": 1125,
+          "eventDigest": "7460cca287561008f4a1d17b854d75421386f514bd81a900049d596a4941c8b6",
+          "byteLength": 521680,
+          "sha256": "49d2c980054a12373b2f5ae60d85a6d0a2363559fba1e97874a4510d9620e444"
+        },
+        "prefixPin": {
+          "eventCount": 1163,
+          "eventDigest": "bbd8babae54bde474940a9de948f32e723c228f8e30a52bc5c99fe602acb5b37",
+          "byteLength": 537679,
+          "sha256": "f7bf3151b397c343dcf3707d9d6a8d0bcf93ba41a1cbc2922be94f4ba1e44bab"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 773,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 773,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 355,
+        "toActionIndex": 357,
+        "fromFrame": 772,
+        "toFrame": 773,
+        "fromPrefixPin": {
+          "eventCount": 1163,
+          "eventDigest": "bbd8babae54bde474940a9de948f32e723c228f8e30a52bc5c99fe602acb5b37",
+          "byteLength": 537679,
+          "sha256": "f7bf3151b397c343dcf3707d9d6a8d0bcf93ba41a1cbc2922be94f4ba1e44bab"
+        },
+        "prefixPin": {
+          "eventCount": 1167,
+          "eventDigest": "a23d45761208cf3e955a9a1b8bc07897cd23f0ec0b85d825154d6bc73e70efa7",
+          "byteLength": 539154,
+          "sha256": "0005dd35bb13e30ba9645c1c7c526284eebacabd88be1c7a75e7e50b4e55b518"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-teammate0",
+      "frame": 791,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 791,
+          "width": 160,
+          "height": 144,
+          "sha256": "2d2f41bb901ad3670bd47da2275f98180698a85fedecb7f046f47374a6db889c",
+          "rgbaSha256": "be679acbba31b69a1192288dab359803f516c33415ef47a83d4046286a578f67",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/2d2f41bb901ad3670bd47da2275f98180698a85fedecb7f046f47374a6db889c.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 357,
+        "toActionIndex": 376,
+        "fromFrame": 773,
+        "toFrame": 791,
+        "fromPrefixPin": {
+          "eventCount": 1167,
+          "eventDigest": "a23d45761208cf3e955a9a1b8bc07897cd23f0ec0b85d825154d6bc73e70efa7",
+          "byteLength": 539154,
+          "sha256": "0005dd35bb13e30ba9645c1c7c526284eebacabd88be1c7a75e7e50b4e55b518"
+        },
+        "prefixPin": {
+          "eventCount": 1205,
+          "eventDigest": "dd16ed25a6c0cdb0c6b8c3cc815ec9b27ff27efe5da6a68926bd51df1a770487",
+          "byteLength": 555165,
+          "sha256": "f7e4fc09ab6601f3aff6f426e1a4bf42a49faea9e5cfc9e923cd9f41abecb335"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 792,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 792,
+          "width": 160,
+          "height": 144,
+          "sha256": "2d2f41bb901ad3670bd47da2275f98180698a85fedecb7f046f47374a6db889c",
+          "rgbaSha256": "be679acbba31b69a1192288dab359803f516c33415ef47a83d4046286a578f67",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/2d2f41bb901ad3670bd47da2275f98180698a85fedecb7f046f47374a6db889c.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 376,
+        "toActionIndex": 378,
+        "fromFrame": 791,
+        "toFrame": 792,
+        "fromPrefixPin": {
+          "eventCount": 1205,
+          "eventDigest": "dd16ed25a6c0cdb0c6b8c3cc815ec9b27ff27efe5da6a68926bd51df1a770487",
+          "byteLength": 555165,
+          "sha256": "f7e4fc09ab6601f3aff6f426e1a4bf42a49faea9e5cfc9e923cd9f41abecb335"
+        },
+        "prefixPin": {
+          "eventCount": 1209,
+          "eventDigest": "8f8be58d5f09f9c2a244a2460bdd7092c1107a2dec60dd19ec0d20b1ccfb463d",
+          "byteLength": 556644,
+          "sha256": "2859ffeafe3eebe7ba5f573c65728e041fc1dbf7c28272e5f191d5d67c126a74"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-teammate1",
+      "frame": 810,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 810,
+          "width": 160,
+          "height": 144,
+          "sha256": "da5a88b01b641ad5a37b2f40c069fdae9c34fbd1b0ef1da226d324991092196b",
+          "rgbaSha256": "33e5b63b0271a3b53939df4943de3a4d92d8c11dba85c8ba9c399367fbdd1599",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/da5a88b01b641ad5a37b2f40c069fdae9c34fbd1b0ef1da226d324991092196b.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 378,
+        "toActionIndex": 397,
+        "fromFrame": 792,
+        "toFrame": 810,
+        "fromPrefixPin": {
+          "eventCount": 1209,
+          "eventDigest": "8f8be58d5f09f9c2a244a2460bdd7092c1107a2dec60dd19ec0d20b1ccfb463d",
+          "byteLength": 556644,
+          "sha256": "2859ffeafe3eebe7ba5f573c65728e041fc1dbf7c28272e5f191d5d67c126a74"
+        },
+        "prefixPin": {
+          "eventCount": 1247,
+          "eventDigest": "7187892f43bd128f1284ab7096efbbb732ceac445a860bcffc22efa6cdbc0c69",
+          "byteLength": 572655,
+          "sha256": "c10ab0f72801cd0ff879c87e29b6767efb7f8b4e496021de5b353c6b74b72b24"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 811,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 811,
+          "width": 160,
+          "height": 144,
+          "sha256": "da5a88b01b641ad5a37b2f40c069fdae9c34fbd1b0ef1da226d324991092196b",
+          "rgbaSha256": "33e5b63b0271a3b53939df4943de3a4d92d8c11dba85c8ba9c399367fbdd1599",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/da5a88b01b641ad5a37b2f40c069fdae9c34fbd1b0ef1da226d324991092196b.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 397,
+        "toActionIndex": 399,
+        "fromFrame": 810,
+        "toFrame": 811,
+        "fromPrefixPin": {
+          "eventCount": 1247,
+          "eventDigest": "7187892f43bd128f1284ab7096efbbb732ceac445a860bcffc22efa6cdbc0c69",
+          "byteLength": 572655,
+          "sha256": "c10ab0f72801cd0ff879c87e29b6767efb7f8b4e496021de5b353c6b74b72b24"
+        },
+        "prefixPin": {
+          "eventCount": 1251,
+          "eventDigest": "06e605adf9d08fc72a013923d6e04476dffe0ef1dbc68c6c303e102953cf155a",
+          "byteLength": 574134,
+          "sha256": "1651ccaeb9596f2cd393a6d2c4480d82f39ca529f679398028f7b6352a790e3d"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-teammate2",
+      "frame": 829,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 829,
+          "width": 160,
+          "height": 144,
+          "sha256": "799aa1db2f13d9a4f8fbc5769c446628901298e7d67c206e4e4a1aefe5ec13ac",
+          "rgbaSha256": "227664051be49d76b2f6f36809035e5097c98cf2348fbcb0286d34e56242e20a",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/799aa1db2f13d9a4f8fbc5769c446628901298e7d67c206e4e4a1aefe5ec13ac.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 399,
+        "toActionIndex": 418,
+        "fromFrame": 811,
+        "toFrame": 829,
+        "fromPrefixPin": {
+          "eventCount": 1251,
+          "eventDigest": "06e605adf9d08fc72a013923d6e04476dffe0ef1dbc68c6c303e102953cf155a",
+          "byteLength": 574134,
+          "sha256": "1651ccaeb9596f2cd393a6d2c4480d82f39ca529f679398028f7b6352a790e3d"
+        },
+        "prefixPin": {
+          "eventCount": 1289,
+          "eventDigest": "c321e42384c1a42ce217237e1797d155d4e3f3bcd37395b079b56c67c26dfc13",
+          "byteLength": 590145,
+          "sha256": "15c9758b77c1aa06c771e1f8be21d312227d7947613d1bee83ba0d6b15df5665"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 830,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 830,
+          "width": 160,
+          "height": 144,
+          "sha256": "799aa1db2f13d9a4f8fbc5769c446628901298e7d67c206e4e4a1aefe5ec13ac",
+          "rgbaSha256": "227664051be49d76b2f6f36809035e5097c98cf2348fbcb0286d34e56242e20a",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/799aa1db2f13d9a4f8fbc5769c446628901298e7d67c206e4e4a1aefe5ec13ac.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 418,
+        "toActionIndex": 420,
+        "fromFrame": 829,
+        "toFrame": 830,
+        "fromPrefixPin": {
+          "eventCount": 1289,
+          "eventDigest": "c321e42384c1a42ce217237e1797d155d4e3f3bcd37395b079b56c67c26dfc13",
+          "byteLength": 590145,
+          "sha256": "15c9758b77c1aa06c771e1f8be21d312227d7947613d1bee83ba0d6b15df5665"
+        },
+        "prefixPin": {
+          "eventCount": 1293,
+          "eventDigest": "256c0c73188fca8e84daba59766bad5d02bd0fae0c961a652458ec055587e7c9",
+          "byteLength": 591624,
+          "sha256": "1fa2f48588a952ac826cffbd9fa1960327d0966b7349d1fd1514164fac1280fb"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-teammate",
+      "frame": 848,
+      "buttons": [
+        "b"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 848,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 420,
+        "toActionIndex": 439,
+        "fromFrame": 830,
+        "toFrame": 848,
+        "fromPrefixPin": {
+          "eventCount": 1293,
+          "eventDigest": "256c0c73188fca8e84daba59766bad5d02bd0fae0c961a652458ec055587e7c9",
+          "byteLength": 591624,
+          "sha256": "1fa2f48588a952ac826cffbd9fa1960327d0966b7349d1fd1514164fac1280fb"
+        },
+        "prefixPin": {
+          "eventCount": 1331,
+          "eventDigest": "7413641e97fa9e3e897271641e4381b5a1a458f3b347104881975d73f54167a3",
+          "byteLength": 607623,
+          "sha256": "c9140cea5044af2205d9d7a6f306550dab9668945d063c01ca223fa40faa8fef"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 849,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 849,
+          "width": 160,
+          "height": 144,
+          "sha256": "eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa",
+          "rgbaSha256": "2545c8ecf5a6c6af9c082de1099913c5f30a01439222c4dab77a11252162ad2f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/eac0f8c2a56a5b5458612e5d4527de17394f27b792b3269e82a9e6754ce620fa.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 439,
+        "toActionIndex": 441,
+        "fromFrame": 848,
+        "toFrame": 849,
+        "fromPrefixPin": {
+          "eventCount": 1331,
+          "eventDigest": "7413641e97fa9e3e897271641e4381b5a1a458f3b347104881975d73f54167a3",
+          "byteLength": 607623,
+          "sha256": "c9140cea5044af2205d9d7a6f306550dab9668945d063c01ca223fa40faa8fef"
+        },
+        "prefixPin": {
+          "eventCount": 1335,
+          "eventDigest": "40f99bbb3fe39dc2a3c717f9a86559ea8e142313dd5b7ec1d768a3a6b3c127a7",
+          "byteLength": 609098,
+          "sha256": "0012574a3d662d64809df6825202950ac0a8b34f37ec364b1bb34684d9d9e03a"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "human",
+      "frame": 867,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 867,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 441,
+        "toActionIndex": 460,
+        "fromFrame": 849,
+        "toFrame": 867,
+        "fromPrefixPin": {
+          "eventCount": 1335,
+          "eventDigest": "40f99bbb3fe39dc2a3c717f9a86559ea8e142313dd5b7ec1d768a3a6b3c127a7",
+          "byteLength": 609098,
+          "sha256": "0012574a3d662d64809df6825202950ac0a8b34f37ec364b1bb34684d9d9e03a"
+        },
+        "prefixPin": {
+          "eventCount": 1373,
+          "eventDigest": "ba85a00bcfb4b08be544f300674caeee48ef2aafa8d6cfd50f5875506731f211",
+          "byteLength": 625097,
+          "sha256": "eb99628baf52296dbfef57983eb9fd2e82f4b6e199e7eb0d47b9572a642f9e9b"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 868,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 868,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 460,
+        "toActionIndex": 462,
+        "fromFrame": 867,
+        "toFrame": 868,
+        "fromPrefixPin": {
+          "eventCount": 1373,
+          "eventDigest": "ba85a00bcfb4b08be544f300674caeee48ef2aafa8d6cfd50f5875506731f211",
+          "byteLength": 625097,
+          "sha256": "eb99628baf52296dbfef57983eb9fd2e82f4b6e199e7eb0d47b9572a642f9e9b"
+        },
+        "prefixPin": {
+          "eventCount": 1377,
+          "eventDigest": "1f534fccbb8ab13fc55be83a203a2989d2ab354da13da0bd7f1609984840e484",
+          "byteLength": 626572,
+          "sha256": "7d3a2e3d8f9c57a8e6a9395e34fa76afde5c10cc7842c494d27d4b180516525a"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "pick-magic",
+      "frame": 886,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 886,
+          "width": 160,
+          "height": 144,
+          "sha256": "c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030",
+          "rgbaSha256": "d27eb8315bea434e290a7ba6357ae45e8a4fcbcaa0dbf09d5f5fc1a11a0b4ff3",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 462,
+        "toActionIndex": 481,
+        "fromFrame": 868,
+        "toFrame": 886,
+        "fromPrefixPin": {
+          "eventCount": 1377,
+          "eventDigest": "1f534fccbb8ab13fc55be83a203a2989d2ab354da13da0bd7f1609984840e484",
+          "byteLength": 626572,
+          "sha256": "7d3a2e3d8f9c57a8e6a9395e34fa76afde5c10cc7842c494d27d4b180516525a"
+        },
+        "prefixPin": {
+          "eventCount": 1415,
+          "eventDigest": "9a39d8aba513d8a414da6e05766f41e2eb841fff85818bdcf423ed3570f26041",
+          "byteLength": 642571,
+          "sha256": "6deafbb218caf47bdda603bbfcd127ee9e0e6282168f80fdaf91f21032feb8f6"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 887,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 887,
+          "width": 160,
+          "height": 144,
+          "sha256": "c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030",
+          "rgbaSha256": "d27eb8315bea434e290a7ba6357ae45e8a4fcbcaa0dbf09d5f5fc1a11a0b4ff3",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 481,
+        "toActionIndex": 483,
+        "fromFrame": 886,
+        "toFrame": 887,
+        "fromPrefixPin": {
+          "eventCount": 1415,
+          "eventDigest": "9a39d8aba513d8a414da6e05766f41e2eb841fff85818bdcf423ed3570f26041",
+          "byteLength": 642571,
+          "sha256": "6deafbb218caf47bdda603bbfcd127ee9e0e6282168f80fdaf91f21032feb8f6"
+        },
+        "prefixPin": {
+          "eventCount": 1419,
+          "eventDigest": "e4574e1d42f248e750b17310164720696fe01e942f1b1d36ae986a0d7b40200d",
+          "byteLength": 644046,
+          "sha256": "d3929e0c1e5ca102475a5f78c11dad85653d9d3ad9915d374d14585fadebebd6"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "torres-opponent",
+      "frame": 905,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 905,
+          "width": 160,
+          "height": 144,
+          "sha256": "e1800305a954c88083e9b93284b074173191faa07c9654b761366809b7dfe3d6",
+          "rgbaSha256": "e739d2a2c5034595552d77a170896a65d0470f17929dcd3f73d1b4f59f17542e",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e1800305a954c88083e9b93284b074173191faa07c9654b761366809b7dfe3d6.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 483,
+        "toActionIndex": 502,
+        "fromFrame": 887,
+        "toFrame": 905,
+        "fromPrefixPin": {
+          "eventCount": 1419,
+          "eventDigest": "e4574e1d42f248e750b17310164720696fe01e942f1b1d36ae986a0d7b40200d",
+          "byteLength": 644046,
+          "sha256": "d3929e0c1e5ca102475a5f78c11dad85653d9d3ad9915d374d14585fadebebd6"
+        },
+        "prefixPin": {
+          "eventCount": 1457,
+          "eventDigest": "9f0ae7483b4ca3d3e1ee7dfebb176af807415cf67c8c05a282dac9701fb9c8ae",
+          "byteLength": 660057,
+          "sha256": "a65acc0667b74a60a2e3e6811baa337b943ac4f4b327d8934b7fe97afcf30a0b"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 906,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 906,
+          "width": 160,
+          "height": 144,
+          "sha256": "e1800305a954c88083e9b93284b074173191faa07c9654b761366809b7dfe3d6",
+          "rgbaSha256": "e739d2a2c5034595552d77a170896a65d0470f17929dcd3f73d1b4f59f17542e",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e1800305a954c88083e9b93284b074173191faa07c9654b761366809b7dfe3d6.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 502,
+        "toActionIndex": 504,
+        "fromFrame": 905,
+        "toFrame": 906,
+        "fromPrefixPin": {
+          "eventCount": 1457,
+          "eventDigest": "9f0ae7483b4ca3d3e1ee7dfebb176af807415cf67c8c05a282dac9701fb9c8ae",
+          "byteLength": 660057,
+          "sha256": "a65acc0667b74a60a2e3e6811baa337b943ac4f4b327d8934b7fe97afcf30a0b"
+        },
+        "prefixPin": {
+          "eventCount": 1461,
+          "eventDigest": "9ac4dff23f596f17963be655ad4d7d8f685e1c3ffc894640b00652eba7ad637e",
+          "byteLength": 661536,
+          "sha256": "74b7d1fcb3468c7161730832ae209d036f491c73ecce555acc85eaa0a3a31f22"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-opponent-one",
+      "frame": 924,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 924,
+          "width": 160,
+          "height": 144,
+          "sha256": "ccc6c5d038efd8e9e667fb9548c1b3bec4442bfb70c578e2bc0c00433285f035",
+          "rgbaSha256": "b676ae0e6b3db5c5956d616614389130fa308db544bee4dd92f212f6b87731ce",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/ccc6c5d038efd8e9e667fb9548c1b3bec4442bfb70c578e2bc0c00433285f035.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 504,
+        "toActionIndex": 523,
+        "fromFrame": 906,
+        "toFrame": 924,
+        "fromPrefixPin": {
+          "eventCount": 1461,
+          "eventDigest": "9ac4dff23f596f17963be655ad4d7d8f685e1c3ffc894640b00652eba7ad637e",
+          "byteLength": 661536,
+          "sha256": "74b7d1fcb3468c7161730832ae209d036f491c73ecce555acc85eaa0a3a31f22"
+        },
+        "prefixPin": {
+          "eventCount": 1499,
+          "eventDigest": "a8f905338447e2e01fa21225deb8f4c05e6d095527e032f2eea71cefb69bff02",
+          "byteLength": 677547,
+          "sha256": "05621fce62954beed8ee70aae0aec76eb413c84e4532316b28d2c8714cd2d792"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 925,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 925,
+          "width": 160,
+          "height": 144,
+          "sha256": "ccc6c5d038efd8e9e667fb9548c1b3bec4442bfb70c578e2bc0c00433285f035",
+          "rgbaSha256": "b676ae0e6b3db5c5956d616614389130fa308db544bee4dd92f212f6b87731ce",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/ccc6c5d038efd8e9e667fb9548c1b3bec4442bfb70c578e2bc0c00433285f035.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 523,
+        "toActionIndex": 525,
+        "fromFrame": 924,
+        "toFrame": 925,
+        "fromPrefixPin": {
+          "eventCount": 1499,
+          "eventDigest": "a8f905338447e2e01fa21225deb8f4c05e6d095527e032f2eea71cefb69bff02",
+          "byteLength": 677547,
+          "sha256": "05621fce62954beed8ee70aae0aec76eb413c84e4532316b28d2c8714cd2d792"
+        },
+        "prefixPin": {
+          "eventCount": 1503,
+          "eventDigest": "3f624988126226d9b49e644751e14561133cafe236f422e52594a67d22a2a72e",
+          "byteLength": 679026,
+          "sha256": "f6029db05626cf72662b5b122088d40db1147161e7cbd98c93a2d73a09dc581e"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "back-opponent",
+      "frame": 943,
+      "buttons": [
+        "b"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 943,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [
+            "b"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 525,
+        "toActionIndex": 544,
+        "fromFrame": 925,
+        "toFrame": 943,
+        "fromPrefixPin": {
+          "eventCount": 1503,
+          "eventDigest": "3f624988126226d9b49e644751e14561133cafe236f422e52594a67d22a2a72e",
+          "byteLength": 679026,
+          "sha256": "f6029db05626cf72662b5b122088d40db1147161e7cbd98c93a2d73a09dc581e"
+        },
+        "prefixPin": {
+          "eventCount": 1541,
+          "eventDigest": "4b5a96a6063a3bb7af2995a9bcb44d619f51cd9a69d8b7b4e1013784e60a09b0",
+          "byteLength": 695025,
+          "sha256": "ad27f99748d8f547ed5c237f1beb078c760c7aa8f7553c6ffb476a71adb1fb7d"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 944,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 944,
+          "width": 160,
+          "height": 144,
+          "sha256": "a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07",
+          "rgbaSha256": "c851d8c6946dfb68007c2ca88c9e54a32f11e075e4419f12fb50948bac6d2151",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/a69542995f116710f424b293a5e34794b97f3fa285f2d61c3d328234a7b0ca07.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 544,
+        "toActionIndex": 546,
+        "fromFrame": 943,
+        "toFrame": 944,
+        "fromPrefixPin": {
+          "eventCount": 1541,
+          "eventDigest": "4b5a96a6063a3bb7af2995a9bcb44d619f51cd9a69d8b7b4e1013784e60a09b0",
+          "byteLength": 695025,
+          "sha256": "ad27f99748d8f547ed5c237f1beb078c760c7aa8f7553c6ffb476a71adb1fb7d"
+        },
+        "prefixPin": {
+          "eventCount": 1545,
+          "eventDigest": "4323a00164a98cd2541ef7e452b0b14851411f89cdfc7f16a94053b63a0063e1",
+          "byteLength": 696500,
+          "sha256": "bd41f53df895aa016e52cd96405240b2f84b550f714fbd2e0ef88787d50b8baf"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "teammate",
+      "frame": 962,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 962,
+          "width": 160,
+          "height": 144,
+          "sha256": "c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030",
+          "rgbaSha256": "d27eb8315bea434e290a7ba6357ae45e8a4fcbcaa0dbf09d5f5fc1a11a0b4ff3",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 546,
+        "toActionIndex": 565,
+        "fromFrame": 944,
+        "toFrame": 962,
+        "fromPrefixPin": {
+          "eventCount": 1545,
+          "eventDigest": "4323a00164a98cd2541ef7e452b0b14851411f89cdfc7f16a94053b63a0063e1",
+          "byteLength": 696500,
+          "sha256": "bd41f53df895aa016e52cd96405240b2f84b550f714fbd2e0ef88787d50b8baf"
+        },
+        "prefixPin": {
+          "eventCount": 1583,
+          "eventDigest": "e5eefd0dce261de52c488780403537c7f835efbc33cd983505de825c78b7a15b",
+          "byteLength": 712499,
+          "sha256": "7518f5c62849d9aa52f1fbd3d7fe24f34398d7aae8542a97966e97014c28d897"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 963,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 963,
+          "width": 160,
+          "height": 144,
+          "sha256": "c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030",
+          "rgbaSha256": "d27eb8315bea434e290a7ba6357ae45e8a4fcbcaa0dbf09d5f5fc1a11a0b4ff3",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/c8158599227699986435ab3e5000dc05daafd7d3710f779b67162e8f5b304030.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 565,
+        "toActionIndex": 567,
+        "fromFrame": 962,
+        "toFrame": 963,
+        "fromPrefixPin": {
+          "eventCount": 1583,
+          "eventDigest": "e5eefd0dce261de52c488780403537c7f835efbc33cd983505de825c78b7a15b",
+          "byteLength": 712499,
+          "sha256": "7518f5c62849d9aa52f1fbd3d7fe24f34398d7aae8542a97966e97014c28d897"
+        },
+        "prefixPin": {
+          "eventCount": 1587,
+          "eventDigest": "f9fb97399a3f3597302c37a48802f67b8c5920b8df55e124bd31694c70165b26",
+          "byteLength": 713974,
+          "sha256": "98ac5329729066f2804ba78be1d2c74e5369e354b76daf58dc47da0ae8eef7a1"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "pick-bambi",
+      "frame": 981,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 981,
+          "width": 160,
+          "height": 144,
+          "sha256": "772638459ee271e190c9bd27ca9b564958a2abed17a2e6737e1c807577bdb1de",
+          "rgbaSha256": "af8ef49e5fc80e6c39cdadaf2fec1424697ce2cbd242dd99531378c32216574e",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/772638459ee271e190c9bd27ca9b564958a2abed17a2e6737e1c807577bdb1de.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 567,
+        "toActionIndex": 586,
+        "fromFrame": 963,
+        "toFrame": 981,
+        "fromPrefixPin": {
+          "eventCount": 1587,
+          "eventDigest": "f9fb97399a3f3597302c37a48802f67b8c5920b8df55e124bd31694c70165b26",
+          "byteLength": 713974,
+          "sha256": "98ac5329729066f2804ba78be1d2c74e5369e354b76daf58dc47da0ae8eef7a1"
+        },
+        "prefixPin": {
+          "eventCount": 1625,
+          "eventDigest": "28c8d1a0e06707ba5f20d2309277e3bcda4ea4355a8843604b9513a4c1bff00b",
+          "byteLength": 729973,
+          "sha256": "8649ac38de0004cc4a190a0d81214576b149c64c5c7be1f48a2b8b7836700eaf"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 982,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 982,
+          "width": 160,
+          "height": 144,
+          "sha256": "772638459ee271e190c9bd27ca9b564958a2abed17a2e6737e1c807577bdb1de",
+          "rgbaSha256": "af8ef49e5fc80e6c39cdadaf2fec1424697ce2cbd242dd99531378c32216574e",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/772638459ee271e190c9bd27ca9b564958a2abed17a2e6737e1c807577bdb1de.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 586,
+        "toActionIndex": 588,
+        "fromFrame": 981,
+        "toFrame": 982,
+        "fromPrefixPin": {
+          "eventCount": 1625,
+          "eventDigest": "28c8d1a0e06707ba5f20d2309277e3bcda4ea4355a8843604b9513a4c1bff00b",
+          "byteLength": 729973,
+          "sha256": "8649ac38de0004cc4a190a0d81214576b149c64c5c7be1f48a2b8b7836700eaf"
+        },
+        "prefixPin": {
+          "eventCount": 1629,
+          "eventDigest": "7cadbf5d71f32d3584327e6188b992d332e95acd36ed5fe0ba547134602e9542",
+          "byteLength": 731448,
+          "sha256": "8f10f06df645acb6726b4653eabe2e637fc3944e478a76b0eff5a5f71e182c6b"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "chompa-opponent-two",
+      "frame": 1000,
+      "buttons": [
+        "right"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 1000,
+          "width": 160,
+          "height": 144,
+          "sha256": "e7b78407fe21400465bca357fb3e2b75f660a77c7d7130c4c57d733f6476889b",
+          "rgbaSha256": "91be16b5c8b2bd548df0f1c171e89fb50188e7c6f2c65016c95b6905d0f9bef1",
+          "sampledButtons": [
+            "right"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e7b78407fe21400465bca357fb3e2b75f660a77c7d7130c4c57d733f6476889b.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 588,
+        "toActionIndex": 607,
+        "fromFrame": 982,
+        "toFrame": 1000,
+        "fromPrefixPin": {
+          "eventCount": 1629,
+          "eventDigest": "7cadbf5d71f32d3584327e6188b992d332e95acd36ed5fe0ba547134602e9542",
+          "byteLength": 731448,
+          "sha256": "8f10f06df645acb6726b4653eabe2e637fc3944e478a76b0eff5a5f71e182c6b"
+        },
+        "prefixPin": {
+          "eventCount": 1667,
+          "eventDigest": "d81dfcb95d5a3d7f04dedf03e67654b4e5f15748b48f5440be2fad9537cb6068",
+          "byteLength": 747461,
+          "sha256": "1614e939957f19dad1477419f10d2959e65d6fa3bc40f53d727d3cac20261890"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 1001,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 1001,
+          "width": 160,
+          "height": 144,
+          "sha256": "e7b78407fe21400465bca357fb3e2b75f660a77c7d7130c4c57d733f6476889b",
+          "rgbaSha256": "91be16b5c8b2bd548df0f1c171e89fb50188e7c6f2c65016c95b6905d0f9bef1",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e7b78407fe21400465bca357fb3e2b75f660a77c7d7130c4c57d733f6476889b.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 607,
+        "toActionIndex": 609,
+        "fromFrame": 1000,
+        "toFrame": 1001,
+        "fromPrefixPin": {
+          "eventCount": 1667,
+          "eventDigest": "d81dfcb95d5a3d7f04dedf03e67654b4e5f15748b48f5440be2fad9537cb6068",
+          "byteLength": 747461,
+          "sha256": "1614e939957f19dad1477419f10d2959e65d6fa3bc40f53d727d3cac20261890"
+        },
+        "prefixPin": {
+          "eventCount": 1671,
+          "eventDigest": "96f0e3037255934dfefd63d017e5175c6621ad5595b4790c78763ffcb8b6f926",
+          "byteLength": 748946,
+          "sha256": "071c357206db62a4f840006b0471411376571d504b52f273329ac33ca769f290"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "pick-final-opponent",
+      "frame": 1019,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 1019,
+          "width": 160,
+          "height": 144,
+          "sha256": "ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6",
+          "rgbaSha256": "f91fae8d0d1efe3d66f1d2b8b8933dc61451702fa6b57785742591474e02afee",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 609,
+        "toActionIndex": 628,
+        "fromFrame": 1001,
+        "toFrame": 1019,
+        "fromPrefixPin": {
+          "eventCount": 1671,
+          "eventDigest": "96f0e3037255934dfefd63d017e5175c6621ad5595b4790c78763ffcb8b6f926",
+          "byteLength": 748946,
+          "sha256": "071c357206db62a4f840006b0471411376571d504b52f273329ac33ca769f290"
+        },
+        "prefixPin": {
+          "eventCount": 1709,
+          "eventDigest": "ffe4d554dec0c28e048bc15118900b9da52fe43d58ad36f842e2e20c3ecdc773",
+          "byteLength": 765002,
+          "sha256": "f80bfde991cde6e856d39194736ff221d90003ebadbf14979663641b36a43d25"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 1020,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 1020,
+          "width": 160,
+          "height": 144,
+          "sha256": "ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6",
+          "rgbaSha256": "f91fae8d0d1efe3d66f1d2b8b8933dc61451702fa6b57785742591474e02afee",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 628,
+        "toActionIndex": 630,
+        "fromFrame": 1019,
+        "toFrame": 1020,
+        "fromPrefixPin": {
+          "eventCount": 1709,
+          "eventDigest": "ffe4d554dec0c28e048bc15118900b9da52fe43d58ad36f842e2e20c3ecdc773",
+          "byteLength": 765002,
+          "sha256": "f80bfde991cde6e856d39194736ff221d90003ebadbf14979663641b36a43d25"
+        },
+        "prefixPin": {
+          "eventCount": 1713,
+          "eventDigest": "019b8b8ddfd380d8891f5ef519648f95d305df3b78fadba09a64fdbee5411a5f",
+          "byteLength": 766483,
+          "sha256": "a6b06bfb731dd5e760771c5932c2ccd75b3a1e200bf3a6793108b318081abbc8"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "difficulty",
+      "frame": 1038,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 1038,
+          "width": 160,
+          "height": 144,
+          "sha256": "e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed",
+          "rgbaSha256": "0a433af4a0c03aec03c66660e95cffeeb7371bbfee828448375b3927c997420f",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 630,
+        "toActionIndex": 649,
+        "fromFrame": 1020,
+        "toFrame": 1038,
+        "fromPrefixPin": {
+          "eventCount": 1713,
+          "eventDigest": "019b8b8ddfd380d8891f5ef519648f95d305df3b78fadba09a64fdbee5411a5f",
+          "byteLength": 766483,
+          "sha256": "a6b06bfb731dd5e760771c5932c2ccd75b3a1e200bf3a6793108b318081abbc8"
+        },
+        "prefixPin": {
+          "eventCount": 1751,
+          "eventDigest": "2673712a8fe9552604ce9f2c6ef9162ad369dfc82eeef5d6adadfb808c4a1e52",
+          "byteLength": 782539,
+          "sha256": "e6c19a287472674c1b9b3aa4f682fc5814881a9fde3c045af8f56dde9e7f5db7"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 1039,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 1039,
+          "width": 160,
+          "height": 144,
+          "sha256": "e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed",
+          "rgbaSha256": "0a433af4a0c03aec03c66660e95cffeeb7371bbfee828448375b3927c997420f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 649,
+        "toActionIndex": 651,
+        "fromFrame": 1038,
+        "toFrame": 1039,
+        "fromPrefixPin": {
+          "eventCount": 1751,
+          "eventDigest": "2673712a8fe9552604ce9f2c6ef9162ad369dfc82eeef5d6adadfb808c4a1e52",
+          "byteLength": 782539,
+          "sha256": "e6c19a287472674c1b9b3aa4f682fc5814881a9fde3c045af8f56dde9e7f5db7"
+        },
+        "prefixPin": {
+          "eventCount": 1755,
+          "eventDigest": "d9acfe4cf48e1d9ef303212319b7de7e8f6a7eba18c99e19f63b7cf7ee76fb4d",
+          "byteLength": 784020,
+          "sha256": "8334a428ddc846c41bda72f763a1bfa22e0cae9356b9dd823e3687c24090fddc"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "periods",
+      "frame": 1057,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 18,
+      "samples": [
+        {
+          "frame": 1057,
+          "width": 160,
+          "height": 144,
+          "sha256": "27d7e4fb0ce1714bda6830e3e40220dbfab606d8a48132aa1953ed8c16fea731",
+          "rgbaSha256": "723cce09ba4c965597e68b4b6f488336fdc7ed40a270b30e19b11daa17c9308c",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/27d7e4fb0ce1714bda6830e3e40220dbfab606d8a48132aa1953ed8c16fea731.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 651,
+        "toActionIndex": 670,
+        "fromFrame": 1039,
+        "toFrame": 1057,
+        "fromPrefixPin": {
+          "eventCount": 1755,
+          "eventDigest": "d9acfe4cf48e1d9ef303212319b7de7e8f6a7eba18c99e19f63b7cf7ee76fb4d",
+          "byteLength": 784020,
+          "sha256": "8334a428ddc846c41bda72f763a1bfa22e0cae9356b9dd823e3687c24090fddc"
+        },
+        "prefixPin": {
+          "eventCount": 1793,
+          "eventDigest": "5d9484463584e7d212bab0afd0c22d6ae7524b708673ba03168c0cf2ce03d517",
+          "byteLength": 800076,
+          "sha256": "86ec83d963043d4e3531d3e4b3a4262bfb9b181c5fc45e4434c466dff69c0177"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "neutral",
+      "frame": 1058,
+      "buttons": [],
+      "advancedFrames": 1,
+      "samples": [
+        {
+          "frame": 1058,
+          "width": 160,
+          "height": 144,
+          "sha256": "27d7e4fb0ce1714bda6830e3e40220dbfab606d8a48132aa1953ed8c16fea731",
+          "rgbaSha256": "723cce09ba4c965597e68b4b6f488336fdc7ed40a270b30e19b11daa17c9308c",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/27d7e4fb0ce1714bda6830e3e40220dbfab606d8a48132aa1953ed8c16fea731.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 670,
+        "toActionIndex": 672,
+        "fromFrame": 1057,
+        "toFrame": 1058,
+        "fromPrefixPin": {
+          "eventCount": 1793,
+          "eventDigest": "5d9484463584e7d212bab0afd0c22d6ae7524b708673ba03168c0cf2ce03d517",
+          "byteLength": 800076,
+          "sha256": "86ec83d963043d4e3531d3e4b3a4262bfb9b181c5fc45e4434c466dff69c0177"
+        },
+        "prefixPin": {
+          "eventCount": 1797,
+          "eventDigest": "4290206e7d9f193dd6a27d1a04d4ea06b616eaa4c95f957d5fa4926b3d48d694",
+          "byteLength": 801557,
+          "sha256": "2eaf4fdcfa91047dfa8191b89c613c2b3c2bc8d281f263fcf22554482e66e0fc"
+        },
+        "emptyInterval": false
+      }
+    },
+    {
+      "label": "match",
+      "frame": 1138,
+      "buttons": [
+        "a"
+      ],
+      "advancedFrames": 80,
+      "samples": [
+        {
+          "frame": 1138,
+          "width": 160,
+          "height": 144,
+          "sha256": "e98af1c368353b7342dc6708b94ce4944bcdb4e8957daee3e14d4ebd44de61d1",
+          "rgbaSha256": "3bf25ffdbc3152ef0f23f7fb0265d43bb160ff5031521729ebc21d3577145bed",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3/frames/e98af1c368353b7342dc6708b94ce4944bcdb4e8957daee3e14d4ebd44de61d1.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/chompa-v3",
+        "sessionId": "158d9ce2ac9b4128be6d922509845031",
+        "branchId": "branch-0001",
+        "fromActionIndex": 672,
+        "toActionIndex": 753,
+        "fromFrame": 1058,
+        "toFrame": 1138,
+        "fromPrefixPin": {
+          "eventCount": 1797,
+          "eventDigest": "4290206e7d9f193dd6a27d1a04d4ea06b616eaa4c95f957d5fa4926b3d48d694",
+          "byteLength": 801557,
+          "sha256": "2eaf4fdcfa91047dfa8191b89c613c2b3c2bc8d281f263fcf22554482e66e0fc"
+        },
+        "prefixPin": {
+          "eventCount": 1959,
+          "eventDigest": "8bdd9ce4060cf2dff82f6d4fab6f3530696451560eb5409e8c7e6fdf578f8c85",
+          "byteLength": 870747,
+          "sha256": "7210cc8260739d0b6248a4ad0d89843cc95ffe2e31dd79ba54ac5c4ba1c4914b"
+        },
+        "emptyInterval": false
+      }
+    }
+  ],
+  "browser": {
+    "updated": false,
+    "reason": "Official web build succeeded, but existing listener failed with Browser recording close acknowledgement is UNKNOWN. Existing view was preserved; no close/reset/reload attempted.",
+    "webRomSha256": "683755892fc8a8c721c85c70bd2fe1864d9c17d0cf98710534a407d21730b61c"
+  }
+}

@@ -1,0 +1,1841 @@
+{
+  "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+  "nativeHome": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 451,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 296.301626,
+      "gameTimeMs": 7550.960540771484
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 451,
+      "totalFrames": 451,
+      "bytesUsed": 303410,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 455,
+      "eventDigest": "ac866bc3f784ef5553b2b37ff61af9ecb9c4740ba0f364677671f2a78778823d",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 451
+        }
+      ]
+    },
+    "startFrame": 450,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 451,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": [],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 0,
+      "toActionIndex": 1,
+      "fromFrame": 450,
+      "toFrame": 451,
+      "fromPrefixPin": {
+        "eventCount": 453,
+        "eventDigest": "ea4ffb4d1cbf56ec78c2381fd0940c09e0736a0c50f9e6c3ab4c0177ecdf68fa",
+        "byteLength": 242668,
+        "sha256": "b602462c1a339952fe224aa84efb8c93f92ea1f7100444284c0f8f2f4c0dff3f"
+      },
+      "prefixPin": {
+        "eventCount": 455,
+        "eventDigest": "ac866bc3f784ef5553b2b37ff61af9ecb9c4740ba0f364677671f2a78778823d",
+        "byteLength": 243516,
+        "sha256": "98da6980772476c303aad5b1230c217228ce1cd91acc92ab43a9c2c2643647c4"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 450,
+      "frame": 451,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 0,
+        "toActionIndex": 1,
+        "fromFrame": 450,
+        "toFrame": 451,
+        "fromPrefixPin": {
+          "eventCount": 453,
+          "eventDigest": "ea4ffb4d1cbf56ec78c2381fd0940c09e0736a0c50f9e6c3ab4c0177ecdf68fa",
+          "byteLength": 242668,
+          "sha256": "b602462c1a339952fe224aa84efb8c93f92ea1f7100444284c0f8f2f4c0dff3f"
+        },
+        "prefixPin": {
+          "eventCount": 455,
+          "eventDigest": "ac866bc3f784ef5553b2b37ff61af9ecb9c4740ba0f364677671f2a78778823d",
+          "byteLength": 243516,
+          "sha256": "98da6980772476c303aad5b1230c217228ce1cd91acc92ab43a9c2c2643647c4"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "helpSelected": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 452,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "down"
+    ],
+    "sampledButtons": [
+      "down"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 297.579917,
+      "gameTimeMs": 7567.7032470703125
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 452,
+      "totalFrames": 452,
+      "bytesUsed": 304890,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 459,
+      "eventDigest": "eaa3d5a9264778f2ed0c935f4687b4e7b72c3f5f5c68cad6d8cc716869939ef7",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 452
+        }
+      ]
+    },
+    "startFrame": 451,
+    "advancedFrames": 1,
+    "appliedButtons": [
+      "down"
+    ],
+    "samples": [
+      {
+        "frame": 452,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": [
+          "down"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 1,
+      "toActionIndex": 3,
+      "fromFrame": 451,
+      "toFrame": 452,
+      "fromPrefixPin": {
+        "eventCount": 455,
+        "eventDigest": "ac866bc3f784ef5553b2b37ff61af9ecb9c4740ba0f364677671f2a78778823d",
+        "byteLength": 243516,
+        "sha256": "98da6980772476c303aad5b1230c217228ce1cd91acc92ab43a9c2c2643647c4"
+      },
+      "prefixPin": {
+        "eventCount": 459,
+        "eventDigest": "eaa3d5a9264778f2ed0c935f4687b4e7b72c3f5f5c68cad6d8cc716869939ef7",
+        "byteLength": 244996,
+        "sha256": "4616cdae654bc3c806250b7a3c8baa7e212208d1ec7c3cd6253da85d849fac1f"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 451,
+      "frame": 452,
+      "advancedFrames": 1,
+      "appliedButtons": [
+        "down"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 1,
+        "toActionIndex": 3,
+        "fromFrame": 451,
+        "toFrame": 452,
+        "fromPrefixPin": {
+          "eventCount": 455,
+          "eventDigest": "ac866bc3f784ef5553b2b37ff61af9ecb9c4740ba0f364677671f2a78778823d",
+          "byteLength": 243516,
+          "sha256": "98da6980772476c303aad5b1230c217228ce1cd91acc92ab43a9c2c2643647c4"
+        },
+        "prefixPin": {
+          "eventCount": 459,
+          "eventDigest": "eaa3d5a9264778f2ed0c935f4687b4e7b72c3f5f5c68cad6d8cc716869939ef7",
+          "byteLength": 244996,
+          "sha256": "4616cdae654bc3c806250b7a3c8baa7e212208d1ec7c3cd6253da85d849fac1f"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "down"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "help": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 479,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 313.809834,
+      "gameTimeMs": 8019.756317138672
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 479,
+      "totalFrames": 479,
+      "bytesUsed": 334774,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 517,
+      "eventDigest": "447a9489eece10449ebbd4e53960c1dd4a11ca8d3c7100632833253dcfc18a8b",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 479
+        }
+      ]
+    },
+    "startFrame": 464,
+    "advancedFrames": 15,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 479,
+        "width": 160,
+        "height": 144,
+        "sha256": "26d7dfe85dccfbe31cfdaed67cd891b2f9abea13896aba3861346a57bda4ef73",
+        "rgbaSha256": "9d1ac93557ca8ee5f1abb393b603eed1e6db75cf76a9766ac83f9421edec7659",
+        "sampledButtons": [
+          "a"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/26d7dfe85dccfbe31cfdaed67cd891b2f9abea13896aba3861346a57bda4ef73.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 16,
+      "toActionIndex": 32,
+      "fromFrame": 464,
+      "toFrame": 479,
+      "fromPrefixPin": {
+        "eventCount": 485,
+        "eventDigest": "0186609bb5bd9d6c2928f2986f27a2e4eee6597d50a01241180cf6f8ecaa80e8",
+        "byteLength": 255806,
+        "sha256": "954f1e76fd0c1fd13491415e06e8f90b44a7246639d99b5d98c1cce4706d6130"
+      },
+      "prefixPin": {
+        "eventCount": 517,
+        "eventDigest": "447a9489eece10449ebbd4e53960c1dd4a11ca8d3c7100632833253dcfc18a8b",
+        "byteLength": 269180,
+        "sha256": "92642b06dde76c8dca209040a16b1a3803a75dbc3d943e440882507b2298fad2"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 15,
+      "startFrame": 464,
+      "frame": 479,
+      "advancedFrames": 15,
+      "appliedButtons": [
+        "a"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 16,
+        "toActionIndex": 32,
+        "fromFrame": 464,
+        "toFrame": 479,
+        "fromPrefixPin": {
+          "eventCount": 485,
+          "eventDigest": "0186609bb5bd9d6c2928f2986f27a2e4eee6597d50a01241180cf6f8ecaa80e8",
+          "byteLength": 255806,
+          "sha256": "954f1e76fd0c1fd13491415e06e8f90b44a7246639d99b5d98c1cce4706d6130"
+        },
+        "prefixPin": {
+          "eventCount": 517,
+          "eventDigest": "447a9489eece10449ebbd4e53960c1dd4a11ca8d3c7100632833253dcfc18a8b",
+          "byteLength": 269180,
+          "sha256": "92642b06dde76c8dca209040a16b1a3803a75dbc3d943e440882507b2298fad2"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "returnFromHelp": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 499,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 327.030626,
+      "gameTimeMs": 8354.610443115234
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 499,
+      "totalFrames": 499,
+      "bytesUsed": 353016,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 561,
+      "eventDigest": "91b5008f8b66cde7535ceedceb024e68b9269a59c486e724baed8e706b3ae42d",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 499
+        }
+      ]
+    },
+    "startFrame": 481,
+    "advancedFrames": 18,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 499,
+        "width": 160,
+        "height": 144,
+        "sha256": "784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0",
+        "rgbaSha256": "10c421c4074557f4b73f4dd92a5be88c1e36f2dd6513db0af1cf328782f5460a",
+        "sampledButtons": [
+          "b"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 35,
+      "toActionIndex": 54,
+      "fromFrame": 481,
+      "toFrame": 499,
+      "fromPrefixPin": {
+        "eventCount": 523,
+        "eventDigest": "f9fae2eaa8100369aad2c67d2d07c00edd5192d9a5cedcf407e59c5d5c283d80",
+        "byteLength": 271498,
+        "sha256": "b803b08a3bcad27f2c22f740095ec3767f47dd05df0a224e8db345c224179e45"
+      },
+      "prefixPin": {
+        "eventCount": 561,
+        "eventDigest": "91b5008f8b66cde7535ceedceb024e68b9269a59c486e724baed8e706b3ae42d",
+        "byteLength": 287422,
+        "sha256": "59fb698a5e876d7f44d4c24e6d8c4d53b6ae1c215abaea426becdbe0c64c1a7b"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 18,
+      "startFrame": 481,
+      "frame": 499,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "b"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 35,
+        "toActionIndex": 54,
+        "fromFrame": 481,
+        "toFrame": 499,
+        "fromPrefixPin": {
+          "eventCount": 523,
+          "eventDigest": "f9fae2eaa8100369aad2c67d2d07c00edd5192d9a5cedcf407e59c5d5c283d80",
+          "byteLength": 271498,
+          "sha256": "b803b08a3bcad27f2c22f740095ec3767f47dd05df0a224e8db345c224179e45"
+        },
+        "prefixPin": {
+          "eventCount": 561,
+          "eventDigest": "91b5008f8b66cde7535ceedceb024e68b9269a59c486e724baed8e706b3ae42d",
+          "byteLength": 287422,
+          "sha256": "59fb698a5e876d7f44d4c24e6d8c4d53b6ae1c215abaea426becdbe0c64c1a7b"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "playSelected": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 518,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "up"
+    ],
+    "sampledButtons": [
+      "up"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 339.779126,
+      "gameTimeMs": 8672.721862792969
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 518,
+      "totalFrames": 518,
+      "bytesUsed": 370411,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 603,
+      "eventDigest": "d2f0a3b324aaf57c99dba08fdd8db28f83e41fff21e0def9e22a4ca66f3dd75a",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 518
+        }
+      ]
+    },
+    "startFrame": 500,
+    "advancedFrames": 18,
+    "appliedButtons": [
+      "up"
+    ],
+    "samples": [
+      {
+        "frame": 518,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": [
+          "up"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 56,
+      "toActionIndex": 75,
+      "fromFrame": 500,
+      "toFrame": 518,
+      "fromPrefixPin": {
+        "eventCount": 565,
+        "eventDigest": "b4aeba4320bf81c76edd7939a17136643bf44432a35a9035336941cd39a89030",
+        "byteLength": 288890,
+        "sha256": "dde1549ef414822977ed18e07f37048634fe2d24c3237410970956b8dacc1a2c"
+      },
+      "prefixPin": {
+        "eventCount": 603,
+        "eventDigest": "d2f0a3b324aaf57c99dba08fdd8db28f83e41fff21e0def9e22a4ca66f3dd75a",
+        "byteLength": 304817,
+        "sha256": "1d11d5c981e1c830109f69eccffb7e848b7369fb58ef0f3d6dd8122991a43b6f"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 18,
+      "startFrame": 500,
+      "frame": 518,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "up"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 56,
+        "toActionIndex": 75,
+        "fromFrame": 500,
+        "toFrame": 518,
+        "fromPrefixPin": {
+          "eventCount": 565,
+          "eventDigest": "b4aeba4320bf81c76edd7939a17136643bf44432a35a9035336941cd39a89030",
+          "byteLength": 288890,
+          "sha256": "dde1549ef414822977ed18e07f37048634fe2d24c3237410970956b8dacc1a2c"
+        },
+        "prefixPin": {
+          "eventCount": 603,
+          "eventDigest": "d2f0a3b324aaf57c99dba08fdd8db28f83e41fff21e0def9e22a4ca66f3dd75a",
+          "byteLength": 304817,
+          "sha256": "1d11d5c981e1c830109f69eccffb7e848b7369fb58ef0f3d6dd8122991a43b6f"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "up"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "card": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 537,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 352.607293,
+      "gameTimeMs": 8990.833282470703
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 537,
+      "totalFrames": 537,
+      "bytesUsed": 393128,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 645,
+      "eventDigest": "8bb2173b2f0a9d33f1284216991b9d6864817072b670acf2a78b16ec02a1a056",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 537
+        }
+      ]
+    },
+    "startFrame": 519,
+    "advancedFrames": 18,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 537,
+        "width": 160,
+        "height": 144,
+        "sha256": "699e658bd44a26322390f5dd48aa09f0de790bc7ee13d61a3558b27edb7ef442",
+        "rgbaSha256": "2b398d80a7d9bc3c6c085850c35cf4925a9dd9103ecf94af57a5e21a2fdb88ae",
+        "sampledButtons": [
+          "a"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/699e658bd44a26322390f5dd48aa09f0de790bc7ee13d61a3558b27edb7ef442.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 77,
+      "toActionIndex": 96,
+      "fromFrame": 519,
+      "toFrame": 537,
+      "fromPrefixPin": {
+        "eventCount": 607,
+        "eventDigest": "9138645bdb622ceb2ca81fcd3ee78435681dc32cd5e19b7f3123f63781c7adda",
+        "byteLength": 306286,
+        "sha256": "71ed14b74a933fe7604d179cb0b43870bf4c96a13c391d3e76ef091538574864"
+      },
+      "prefixPin": {
+        "eventCount": 645,
+        "eventDigest": "8bb2173b2f0a9d33f1284216991b9d6864817072b670acf2a78b16ec02a1a056",
+        "byteLength": 322210,
+        "sha256": "6d6592c7805cab86580a456bac8c7cce146cc1f0d32ee579e6070f4efcb2d865"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 18,
+      "startFrame": 519,
+      "frame": 537,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "a"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 77,
+        "toActionIndex": 96,
+        "fromFrame": 519,
+        "toFrame": 537,
+        "fromPrefixPin": {
+          "eventCount": 607,
+          "eventDigest": "9138645bdb622ceb2ca81fcd3ee78435681dc32cd5e19b7f3123f63781c7adda",
+          "byteLength": 306286,
+          "sha256": "71ed14b74a933fe7604d179cb0b43870bf4c96a13c391d3e76ef091538574864"
+        },
+        "prefixPin": {
+          "eventCount": 645,
+          "eventDigest": "8bb2173b2f0a9d33f1284216991b9d6864817072b670acf2a78b16ec02a1a056",
+          "byteLength": 322210,
+          "sha256": "6d6592c7805cab86580a456bac8c7cce146cc1f0d32ee579e6070f4efcb2d865"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "returnFromCard": {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 556,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 365.334335,
+      "gameTimeMs": 9308.944702148438
+    },
+    "recording": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "status": "recording",
+      "branchId": "branch-0001",
+      "frame": 556,
+      "totalFrames": 556,
+      "bytesUsed": 411120,
+      "limits": {
+        "sampleEveryFrames": 1,
+        "recentFrameCount": 12,
+        "maxBytes": 6291456,
+        "maxFrames": 5000,
+        "maxWallTimeMs": 900000
+      },
+      "eventCount": 687,
+      "eventDigest": "564a1af7cd8238ba6fe6b0fb3017e9af1712e64b3d3518be8e281a33a9e27ab1",
+      "branches": [
+        {
+          "branchId": "branch-0001",
+          "frame": 556
+        }
+      ]
+    },
+    "startFrame": 538,
+    "advancedFrames": 18,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 556,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": [
+          "b"
+        ],
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031.png"
+      }
+    ],
+    "recordingSpan": {
+      "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+      "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+      "branchId": "branch-0001",
+      "fromActionIndex": 98,
+      "toActionIndex": 117,
+      "fromFrame": 538,
+      "toFrame": 556,
+      "fromPrefixPin": {
+        "eventCount": 649,
+        "eventDigest": "e31acf6ee750c06581336f2feb6ec074ae3a422e5d32d25bebf7ed3a47a0e7a2",
+        "byteLength": 323678,
+        "sha256": "ca8283168c62f7b0d9bac32682b4270d71ae31ebfbf96ecec00a09fc70b36635"
+      },
+      "prefixPin": {
+        "eventCount": 687,
+        "eventDigest": "564a1af7cd8238ba6fe6b0fb3017e9af1712e64b3d3518be8e281a33a9e27ab1",
+        "byteLength": 339638,
+        "sha256": "c659c23eb7a543b557a17307240fdffa626fdec1661b87680d7f8adc892fb184"
+      },
+      "emptyInterval": false
+    },
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 18,
+      "startFrame": 538,
+      "frame": 556,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "b"
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 98,
+        "toActionIndex": 117,
+        "fromFrame": 538,
+        "toFrame": 556,
+        "fromPrefixPin": {
+          "eventCount": 649,
+          "eventDigest": "e31acf6ee750c06581336f2feb6ec074ae3a422e5d32d25bebf7ed3a47a0e7a2",
+          "byteLength": 323678,
+          "sha256": "ca8283168c62f7b0d9bac32682b4270d71ae31ebfbf96ecec00a09fc70b36635"
+        },
+        "prefixPin": {
+          "eventCount": 687,
+          "eventDigest": "564a1af7cd8238ba6fe6b0fb3017e9af1712e64b3d3518be8e281a33a9e27ab1",
+          "byteLength": 339638,
+          "sha256": "c659c23eb7a543b557a17307240fdffa626fdec1661b87680d7f8adc892fb184"
+        },
+        "emptyInterval": false
+      },
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  "replay": [
+    {
+      "name": "home-help",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 574,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "down"
+      ],
+      "sampledButtons": [
+        "down"
+      ],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 377.494127,
+        "gameTimeMs": 9610.313415527344
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 574,
+        "totalFrames": 574,
+        "bytesUsed": 427093,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 725,
+        "eventDigest": "6e0480d7bee95343cb8f7ef135aaebbde5f69c536af703f8b235e1aa88cf94dc",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 574
+          }
+        ]
+      },
+      "startFrame": 556,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "down"
+      ],
+      "samples": [
+        {
+          "frame": 574,
+          "width": 160,
+          "height": 144,
+          "sha256": "784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0",
+          "rgbaSha256": "10c421c4074557f4b73f4dd92a5be88c1e36f2dd6513db0af1cf328782f5460a",
+          "sampledButtons": [
+            "down"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 117,
+        "toActionIndex": 136,
+        "fromFrame": 556,
+        "toFrame": 574,
+        "fromPrefixPin": {
+          "eventCount": 687,
+          "eventDigest": "564a1af7cd8238ba6fe6b0fb3017e9af1712e64b3d3518be8e281a33a9e27ab1",
+          "byteLength": 339638,
+          "sha256": "c659c23eb7a543b557a17307240fdffa626fdec1661b87680d7f8adc892fb184"
+        },
+        "prefixPin": {
+          "eventCount": 725,
+          "eventDigest": "6e0480d7bee95343cb8f7ef135aaebbde5f69c536af703f8b235e1aa88cf94dc",
+          "byteLength": 355611,
+          "sha256": "2f9bec4e25bef88df59ca70d7694ca8badda41d37c0619d19ebf9a4886c8cf2e"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 556,
+        "frame": 574,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "down"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 117,
+          "toActionIndex": 136,
+          "fromFrame": 556,
+          "toFrame": 574,
+          "fromPrefixPin": {
+            "eventCount": 687,
+            "eventDigest": "564a1af7cd8238ba6fe6b0fb3017e9af1712e64b3d3518be8e281a33a9e27ab1",
+            "byteLength": 339638,
+            "sha256": "c659c23eb7a543b557a17307240fdffa626fdec1661b87680d7f8adc892fb184"
+          },
+          "prefixPin": {
+            "eventCount": 725,
+            "eventDigest": "6e0480d7bee95343cb8f7ef135aaebbde5f69c536af703f8b235e1aa88cf94dc",
+            "byteLength": 355611,
+            "sha256": "2f9bec4e25bef88df59ca70d7694ca8badda41d37c0619d19ebf9a4886c8cf2e"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "down"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    },
+    {
+      "name": "release",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 575,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 378.412377,
+        "gameTimeMs": 9627.056121826172
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 575,
+        "totalFrames": 575,
+        "bytesUsed": 428567,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 729,
+        "eventDigest": "967d9f97e0a8cea64f13b8c533fe135976cb0967b5c7cd97dac36c1b8cd17ead",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 575
+          }
+        ]
+      },
+      "startFrame": 574,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 575,
+          "width": 160,
+          "height": 144,
+          "sha256": "784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0",
+          "rgbaSha256": "10c421c4074557f4b73f4dd92a5be88c1e36f2dd6513db0af1cf328782f5460a",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/784f0c4da9f0ed5de00553683a909d199b4f8b024124a5b8c2ff7587108130e0.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 136,
+        "toActionIndex": 138,
+        "fromFrame": 574,
+        "toFrame": 575,
+        "fromPrefixPin": {
+          "eventCount": 725,
+          "eventDigest": "6e0480d7bee95343cb8f7ef135aaebbde5f69c536af703f8b235e1aa88cf94dc",
+          "byteLength": 355611,
+          "sha256": "2f9bec4e25bef88df59ca70d7694ca8badda41d37c0619d19ebf9a4886c8cf2e"
+        },
+        "prefixPin": {
+          "eventCount": 729,
+          "eventDigest": "967d9f97e0a8cea64f13b8c533fe135976cb0967b5c7cd97dac36c1b8cd17ead",
+          "byteLength": 357085,
+          "sha256": "87a6a88aa883a757e3cad3ae046143047b4a774fac17c47ded66df7a4207fa40"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 1,
+        "startFrame": 574,
+        "frame": 575,
+        "advancedFrames": 1,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 136,
+          "toActionIndex": 138,
+          "fromFrame": 574,
+          "toFrame": 575,
+          "fromPrefixPin": {
+            "eventCount": 725,
+            "eventDigest": "6e0480d7bee95343cb8f7ef135aaebbde5f69c536af703f8b235e1aa88cf94dc",
+            "byteLength": 355611,
+            "sha256": "2f9bec4e25bef88df59ca70d7694ca8badda41d37c0619d19ebf9a4886c8cf2e"
+          },
+          "prefixPin": {
+            "eventCount": 729,
+            "eventDigest": "967d9f97e0a8cea64f13b8c533fe135976cb0967b5c7cd97dac36c1b8cd17ead",
+            "byteLength": 357085,
+            "sha256": "87a6a88aa883a757e3cad3ae046143047b4a774fac17c47ded66df7a4207fa40"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "name": "home-replay",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 593,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "down"
+      ],
+      "sampledButtons": [
+        "down"
+      ],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 389.96846,
+        "gameTimeMs": 9928.424835205078
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 593,
+        "totalFrames": 593,
+        "bytesUsed": 448280,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 767,
+        "eventDigest": "2aaf4b39f50546bb27a72d22eb86df607dcbd6e44fc9f61747dac23e83f0e1a6",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 593
+          }
+        ]
+      },
+      "startFrame": 575,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "down"
+      ],
+      "samples": [
+        {
+          "frame": 593,
+          "width": 160,
+          "height": 144,
+          "sha256": "90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416",
+          "rgbaSha256": "e634b349ec2daa01e4770bee93b0069e85b61f13d3e143c2c6414d851f77e69f",
+          "sampledButtons": [
+            "down"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 138,
+        "toActionIndex": 157,
+        "fromFrame": 575,
+        "toFrame": 593,
+        "fromPrefixPin": {
+          "eventCount": 729,
+          "eventDigest": "967d9f97e0a8cea64f13b8c533fe135976cb0967b5c7cd97dac36c1b8cd17ead",
+          "byteLength": 357085,
+          "sha256": "87a6a88aa883a757e3cad3ae046143047b4a774fac17c47ded66df7a4207fa40"
+        },
+        "prefixPin": {
+          "eventCount": 767,
+          "eventDigest": "2aaf4b39f50546bb27a72d22eb86df607dcbd6e44fc9f61747dac23e83f0e1a6",
+          "byteLength": 373055,
+          "sha256": "5e8268a01f2d2fa368f59bb2ca7dd84e8520e2d0cc90e575f50b91225c72c688"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 575,
+        "frame": 593,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "down"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 138,
+          "toActionIndex": 157,
+          "fromFrame": 575,
+          "toFrame": 593,
+          "fromPrefixPin": {
+            "eventCount": 729,
+            "eventDigest": "967d9f97e0a8cea64f13b8c533fe135976cb0967b5c7cd97dac36c1b8cd17ead",
+            "byteLength": 357085,
+            "sha256": "87a6a88aa883a757e3cad3ae046143047b4a774fac17c47ded66df7a4207fa40"
+          },
+          "prefixPin": {
+            "eventCount": 767,
+            "eventDigest": "2aaf4b39f50546bb27a72d22eb86df607dcbd6e44fc9f61747dac23e83f0e1a6",
+            "byteLength": 373055,
+            "sha256": "5e8268a01f2d2fa368f59bb2ca7dd84e8520e2d0cc90e575f50b91225c72c688"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "down"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    },
+    {
+      "name": "release",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 594,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 390.918252,
+        "gameTimeMs": 9945.167541503906
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 594,
+        "totalFrames": 594,
+        "bytesUsed": 449754,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 771,
+        "eventDigest": "ddab6dd24d6d4bfd736be04885e51d41e4a294145456a3c67c158ea84699b4d4",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 594
+          }
+        ]
+      },
+      "startFrame": 593,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 594,
+          "width": 160,
+          "height": 144,
+          "sha256": "90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416",
+          "rgbaSha256": "e634b349ec2daa01e4770bee93b0069e85b61f13d3e143c2c6414d851f77e69f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 157,
+        "toActionIndex": 159,
+        "fromFrame": 593,
+        "toFrame": 594,
+        "fromPrefixPin": {
+          "eventCount": 767,
+          "eventDigest": "2aaf4b39f50546bb27a72d22eb86df607dcbd6e44fc9f61747dac23e83f0e1a6",
+          "byteLength": 373055,
+          "sha256": "5e8268a01f2d2fa368f59bb2ca7dd84e8520e2d0cc90e575f50b91225c72c688"
+        },
+        "prefixPin": {
+          "eventCount": 771,
+          "eventDigest": "ddab6dd24d6d4bfd736be04885e51d41e4a294145456a3c67c158ea84699b4d4",
+          "byteLength": 374529,
+          "sha256": "5ba5a6adf19c2ea6df1e1b4dd11651815b238fbcf13665179df875e78203e551"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 1,
+        "startFrame": 593,
+        "frame": 594,
+        "advancedFrames": 1,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 157,
+          "toActionIndex": 159,
+          "fromFrame": 593,
+          "toFrame": 594,
+          "fromPrefixPin": {
+            "eventCount": 767,
+            "eventDigest": "2aaf4b39f50546bb27a72d22eb86df607dcbd6e44fc9f61747dac23e83f0e1a6",
+            "byteLength": 373055,
+            "sha256": "5e8268a01f2d2fa368f59bb2ca7dd84e8520e2d0cc90e575f50b91225c72c688"
+          },
+          "prefixPin": {
+            "eventCount": 771,
+            "eventDigest": "ddab6dd24d6d4bfd736be04885e51d41e4a294145456a3c67c158ea84699b4d4",
+            "byteLength": 374529,
+            "sha256": "5ba5a6adf19c2ea6df1e1b4dd11651815b238fbcf13665179df875e78203e551"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "omitted",
+        "sampleCount": 1
+      }
+    },
+    {
+      "name": "replay-intro",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 612,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 402.680418,
+        "gameTimeMs": 10246.536254882812
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 612,
+        "totalFrames": 612,
+        "bytesUsed": 465715,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 809,
+        "eventDigest": "2b9e37085cd27f397fc4dac5eb836f7229ad2b22ececd75d93ea2430fe1b3704",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 612
+          }
+        ]
+      },
+      "startFrame": 594,
+      "advancedFrames": 18,
+      "appliedButtons": [
+        "a"
+      ],
+      "samples": [
+        {
+          "frame": 612,
+          "width": 160,
+          "height": 144,
+          "sha256": "1c1cf1f8cae99fb096616736492643ab4500df0fa0cc03c0cea09806a74c3c00",
+          "rgbaSha256": "77725c5ef19ea3d40148fd82c601b5225aafd46cd50b61c4a46e0f0d3620b216",
+          "sampledButtons": [
+            "a"
+          ],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/1c1cf1f8cae99fb096616736492643ab4500df0fa0cc03c0cea09806a74c3c00.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 159,
+        "toActionIndex": 178,
+        "fromFrame": 594,
+        "toFrame": 612,
+        "fromPrefixPin": {
+          "eventCount": 771,
+          "eventDigest": "ddab6dd24d6d4bfd736be04885e51d41e4a294145456a3c67c158ea84699b4d4",
+          "byteLength": 374529,
+          "sha256": "5ba5a6adf19c2ea6df1e1b4dd11651815b238fbcf13665179df875e78203e551"
+        },
+        "prefixPin": {
+          "eventCount": 809,
+          "eventDigest": "2b9e37085cd27f397fc4dac5eb836f7229ad2b22ececd75d93ea2430fe1b3704",
+          "byteLength": 390490,
+          "sha256": "01a58ee5eb4b308f5ff41a5c23efee247fe46ec07350bfe101e5dab4f8d8af82"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 18,
+        "startFrame": 594,
+        "frame": 612,
+        "advancedFrames": 18,
+        "appliedButtons": [
+          "a"
+        ],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 159,
+          "toActionIndex": 178,
+          "fromFrame": 594,
+          "toFrame": 612,
+          "fromPrefixPin": {
+            "eventCount": 771,
+            "eventDigest": "ddab6dd24d6d4bfd736be04885e51d41e4a294145456a3c67c158ea84699b4d4",
+            "byteLength": 374529,
+            "sha256": "5ba5a6adf19c2ea6df1e1b4dd11651815b238fbcf13665179df875e78203e551"
+          },
+          "prefixPin": {
+            "eventCount": 809,
+            "eventDigest": "2b9e37085cd27f397fc4dac5eb836f7229ad2b22ececd75d93ea2430fe1b3704",
+            "byteLength": 390490,
+            "sha256": "01a58ee5eb4b308f5ff41a5c23efee247fe46ec07350bfe101e5dab4f8d8af82"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": [
+          "a"
+        ]
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    },
+    {
+      "name": "replay-return",
+      "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+      "frame": 912,
+      "width": 160,
+      "height": 144,
+      "activeButtons": [],
+      "sampledButtons": [],
+      "cgb": true,
+      "romSha256": "5d3334ba6c1fa1aac4c517ea0261d94ef520ed2114d9e7da74fb538ba08a73cd",
+      "runtime": {
+        "name": "PyBoy",
+        "version": "2.7.0",
+        "protocolVersion": 1,
+        "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+      },
+      "paused": true,
+      "clock": {
+        "mode": "paused",
+        "clockHz": 4194304,
+        "dotsPerFrame": 70224,
+        "executionWallTimeMs": 592.181835,
+        "gameTimeMs": 15269.34814453125
+      },
+      "recording": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "status": "recording",
+        "branchId": "branch-0001",
+        "frame": 912,
+        "totalFrames": 912,
+        "bytesUsed": 722346,
+        "limits": {
+          "sampleEveryFrames": 1,
+          "recentFrameCount": 12,
+          "maxBytes": 6291456,
+          "maxFrames": 5000,
+          "maxWallTimeMs": 900000
+        },
+        "eventCount": 1411,
+        "eventDigest": "3cace8886a3dc0be8c0039aac320319d04a6efb4cb0433019f1e80094e63db6d",
+        "branches": [
+          {
+            "branchId": "branch-0001",
+            "frame": 912
+          }
+        ]
+      },
+      "startFrame": 612,
+      "advancedFrames": 300,
+      "appliedButtons": [],
+      "samples": [
+        {
+          "frame": 912,
+          "width": 160,
+          "height": 144,
+          "sha256": "90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416",
+          "rgbaSha256": "e634b349ec2daa01e4770bee93b0069e85b61f13d3e143c2c6414d851f77e69f",
+          "sampledButtons": [],
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2/frames/90925c4f6241dc1827cd2972edd47f252157779bb35a2c0f937f9ef809908416.png"
+        }
+      ],
+      "recordingSpan": {
+        "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+        "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+        "branchId": "branch-0001",
+        "fromActionIndex": 178,
+        "toActionIndex": 479,
+        "fromFrame": 612,
+        "toFrame": 912,
+        "fromPrefixPin": {
+          "eventCount": 809,
+          "eventDigest": "2b9e37085cd27f397fc4dac5eb836f7229ad2b22ececd75d93ea2430fe1b3704",
+          "byteLength": 390490,
+          "sha256": "01a58ee5eb4b308f5ff41a5c23efee247fe46ec07350bfe101e5dab4f8d8af82"
+        },
+        "prefixPin": {
+          "eventCount": 1411,
+          "eventDigest": "3cace8886a3dc0be8c0039aac320319d04a6efb4cb0433019f1e80094e63db6d",
+          "byteLength": 647121,
+          "sha256": "f1710d1bd70582cb16611e9a41a7bc148ab9a203e7b78cb0dc42c335fc71d067"
+        },
+        "emptyInterval": false
+      },
+      "execution": {
+        "status": "completed",
+        "requestedFrames": 300,
+        "startFrame": 612,
+        "frame": 912,
+        "advancedFrames": 300,
+        "appliedButtons": [],
+        "recordingSpan": {
+          "recordingPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/night-court-v2",
+          "sessionId": "9bfa9a4a2783443b8dc79d7e555fdd44",
+          "branchId": "branch-0001",
+          "fromActionIndex": 178,
+          "toActionIndex": 479,
+          "fromFrame": 612,
+          "toFrame": 912,
+          "fromPrefixPin": {
+            "eventCount": 809,
+            "eventDigest": "2b9e37085cd27f397fc4dac5eb836f7229ad2b22ececd75d93ea2430fe1b3704",
+            "byteLength": 390490,
+            "sha256": "01a58ee5eb4b308f5ff41a5c23efee247fe46ec07350bfe101e5dab4f8d8af82"
+          },
+          "prefixPin": {
+            "eventCount": 1411,
+            "eventDigest": "3cace8886a3dc0be8c0039aac320319d04a6efb4cb0433019f1e80094e63db6d",
+            "byteLength": 647121,
+            "sha256": "f1710d1bd70582cb16611e9a41a7bc148ab9a203e7b78cb0dc42c335fc71d067"
+          },
+          "emptyInterval": false
+        },
+        "sampledButtons": []
+      },
+      "genuineEmulatorFrames": true,
+      "imageDelivery": {
+        "status": "available",
+        "sampleCount": 1
+      }
+    }
+  ],
+  "browserBuild": {
+    "success": false,
+    "builder": "gb-studio-cli",
+    "command": "/Users/jmatus/.nvm/versions/node/v20.19.4/bin/node",
+    "args": [
+      "/Users/jmatus/Library/Application Support/modretro-chromatic/toolchain/.local/vendor/gb-studio/out/cli/gb-studio-cli.js",
+      "make:web",
+      "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/project.gbsproj",
+      "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web"
+    ],
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "durationMs": 31975,
+    "outputPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+    "indexPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web/index.html",
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web/rom/ns-jam.gbc",
+    "cached": false,
+    "sourceRevision": "eceea1dbbf17d62d13cad33ecaddf6e8ca6cd8ecdba67ee8c4c20ba077b3c506",
+    "sourceIdentityScope": "descriptor, project, assets and plugin contents",
+    "execution": {
+      "status": "started",
+      "args": [
+        "/Users/jmatus/Library/Application Support/modretro-chromatic/toolchain/.local/vendor/gb-studio/out/cli/gb-studio-cli.js",
+        "make:web",
+        "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/project.gbsproj",
+        "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/.web-stage-rhpuAH"
+      ],
+      "cwd": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game",
+      "child": {
+        "descendants": "unobserved",
+        "startedAt": "2026-11-02T14:44:47.379Z",
+        "pid": 17851,
+        "spawnedAt": "2026-11-02T14:44:47.380Z",
+        "exit": {
+          "at": "2026-11-02T14:45:19.140Z",
+          "code": 0,
+          "signal": null
+        },
+        "close": {
+          "at": "2026-11-02T14:45:19.140Z",
+          "code": 0,
+          "signal": null
+        },
+        "stdoutBytes": 0,
+        "stderrBytes": 0,
+        "outputTruncated": false
+      }
+    },
+    "resources": {
+      "allocations": [
+        {
+          "kind": "staging",
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/.web-stage-rhpuAH",
+          "returnedAt": "2026-11-02T14:44:47.379Z"
+        },
+        {
+          "kind": "temporary",
+          "path": "/private/var/folders/5t/6qy9jdrj71q05jz4kv36vh700000gp/T/gbs-web-yYy5Sg",
+          "returnedAt": "2026-11-02T14:44:47.379Z"
+        },
+        {
+          "kind": "previous",
+          "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/.web-previous-6GR9IE",
+          "returnedAt": "2026-11-02T14:45:19.217Z"
+        }
+      ],
+      "attestation": {
+        "storage": "trusted-key-reused-or-created",
+        "persistentKeyBytes": 32,
+        "allocationObserved": false
+      },
+      "measurementScope": "bounded post-compiler samples, not peak usage; attestation directory allocation unobserved",
+      "cleanupErrors": [],
+      "staging": {
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/.web-stage-rhpuAH",
+        "identity": {
+          "dev": 16777230,
+          "ino": 96713245,
+          "uid": 502,
+          "mode": 16832
+        },
+        "cleanup": "published",
+        "snapshot": {
+          "at": "2026-11-02T14:45:19.216Z",
+          "entries": 14,
+          "logicalBytes": 4376816,
+          "allocatedBytes": 4399104,
+          "complete": true
+        }
+      },
+      "temporary": {
+        "path": "/private/var/folders/5t/6qy9jdrj71q05jz4kv36vh700000gp/T/gbs-web-yYy5Sg",
+        "identity": {
+          "dev": 16777230,
+          "ino": 96713246,
+          "uid": 502,
+          "mode": 16832
+        },
+        "cleanup": "removed",
+        "snapshot": {
+          "at": "2026-11-02T14:45:19.218Z",
+          "entries": 1123,
+          "logicalBytes": 134672701,
+          "allocatedBytes": 137228288,
+          "complete": false,
+          "error": "Resource sample byte limit reached."
+        }
+      },
+      "previous": {
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/.web-previous-6GR9IE",
+        "identity": {
+          "dev": 16777230,
+          "ino": 96537278,
+          "uid": 502,
+          "mode": 16832
+        },
+        "cleanup": "removed",
+        "snapshot": {
+          "at": "2026-11-02T14:45:19.217Z",
+          "entries": 14,
+          "logicalBytes": 4376816,
+          "allocatedBytes": 4399104,
+          "complete": true
+        }
+      }
+    },
+    "exportIdentity": {
+      "rom": {
+        "path": "rom/ns-jam.gbc",
+        "sha256": "99f86af61bd471ef1ef854762989c8b78474e1fe1adc99898fc2a247ae948f57",
+        "sizeBytes": 4194304
+      },
+      "index": {
+        "path": "index.html",
+        "sha256": "06b954cce54e2bc394cf7203e8a4680b7b3f5cb6470449aff2c7a72316e776bc",
+        "sizeBytes": 1166
+      },
+      "inventorySha256": "66ced6b69bc6ef06405b3b39b516fe1d1744e77208d723f6a387696dc6c8b8d1",
+      "files": 9,
+      "logicalBytes": 4374476
+    },
+    "error": "Browser recording close acknowledgement is UNKNOWN.",
+    "currentPreview": {
+      "url": "http://127.0.0.1:50420/4f4e778f8d1b1a07fd8ca0bd17680337bd8029c663331bf29c1fe7a5cba1be57/",
+      "port": 50420,
+      "outputRoot": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/web",
+      "reused": false,
+      "listenerId": "7a31e5336cad2caff1118830216f4586",
+      "startedAt": "2026-11-02T04:37:13.570Z",
+      "kind": "in-process-http",
+      "listening": true,
+      "closureState": "unresolved",
+      "annotations": {
+        "injected": true,
+        "fingerprint": "dbcacdcbd21bff3262e096046543d8205de1bfcef517b6754e7c6844cbb1de53"
+      },
+      "closeError": "Browser recording close acknowledgement is UNKNOWN."
+    }
+  },
+  "previousBrowserStateId": "7a15209588253b07b94e7370a74b6b1dfb8f91af225c30bfb4817d3e8d0054e4",
+  "previousNativeRecordingArchive": "game/artifacts/recording-archives/153d24a5-2f8f-4df7-871f-2c0cb9f95ea1/recording"
+}

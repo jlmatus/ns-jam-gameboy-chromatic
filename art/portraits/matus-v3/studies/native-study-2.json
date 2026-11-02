@@ -1,0 +1,216 @@
+{
+  "name": "MATUS",
+  "version": 3,
+  "width": 48,
+  "height": 48,
+  "status": "Photo-based likeness correction for user review; previous versions preserved",
+  "method": "Deliberately authored 48x48 card cells from joe.jpeg and generated studies; smaller relaxed eyes, swept hair, rounded cheek silhouette and trimmed warm goatee. No source image was sampled or rescaled.",
+  "palette": {
+    ".": "#00000000",
+    "#": "#22303AFF",
+    "s": "#B96D47FF",
+    "o": "#F2C18DFF",
+    "b": "#7B4D36FF"
+  },
+  "nativeSourceMapping": {
+    ".": "#65FF00",
+    "#": "#071821",
+    "s": "#86C06C",
+    "o": "#E0F8CF",
+    "b": "#306850"
+  },
+  "rows": [
+    [
+      0,
+      ""
+    ],
+    [
+      0,
+      ""
+    ],
+    [
+      20,
+      "#####"
+    ],
+    [
+      19,
+      "#############"
+    ],
+    [
+      15,
+      "###################"
+    ],
+    [
+      13,
+      "#######################"
+    ],
+    [
+      11,
+      "##########################"
+    ],
+    [
+      10,
+      "############################"
+    ],
+    [
+      9,
+      "##############################"
+    ],
+    [
+      8,
+      "#############o#################"
+    ],
+    [
+      8,
+      "#######oooooosssssso############"
+    ],
+    [
+      7,
+      "#######ooosssssssssssssssoo######"
+    ],
+    [
+      7,
+      "#####oosssoooooooooooossssss######"
+    ],
+    [
+      6,
+      "#####oossooooooooooooooooossss#####"
+    ],
+    [
+      6,
+      "#####sssoooooooooooooooooooosso####"
+    ],
+    [
+      6,
+      "####ossooooooooooooooooooooooos####"
+    ],
+    [
+      6,
+      "####sssoooooooooooooooooooooooos###"
+    ],
+    [
+      6,
+      "###ossooooooooooooooooooooooooos###"
+    ],
+    [
+      6,
+      "###sssooooooooooooooooooooooooooo###"
+    ],
+    [
+      5,
+      "####sssoooooooooooooooooooooooooos###"
+    ],
+    [
+      5,
+      "####soooooooooooooooooooooooooooos###"
+    ],
+    [
+      5,
+      "###ssooo####booooooooooooooooooooo###"
+    ],
+    [
+      4,
+      "ss##ssoobooooobbooooooooo##booooooo###"
+    ],
+    [
+      4,
+      "ss##ssooooooooooooooooooboo##boooooo##"
+    ],
+    [
+      3,
+      "sso##ssooobb##boooooosooooooooobboooo##"
+    ],
+    [
+      3,
+      "soss#ssoo#oo##obsoooosoooobbbooooooos##s"
+    ],
+    [
+      3,
+      "soss##oooooooooooooosoooobo##bbooooss##ss"
+    ],
+    [
+      3,
+      "soss##ooooossssooooosoosooo##ooboooss#sos"
+    ],
+    [
+      3,
+      "sossssooooooooooooooooosooooooooooss##sos"
+    ],
+    [
+      3,
+      "ssosssooooooooooooosoooooossssooooss##oss"
+    ],
+    [
+      4,
+      "sossssooooooooooos#oooooooooooooossssoss"
+    ],
+    [
+      4,
+      "ssssssoooooooooooooss##ooooooooossssoss"
+    ],
+    [
+      5,
+      "sssssoooooooooooobboooooooooooosssssss"
+    ],
+    [
+      5,
+      "sssssoooooooooobboobbbbbooooooossssss"
+    ],
+    [
+      7,
+      "ssssoooooooobooooooooobboooosssssss"
+    ],
+    [
+      8,
+      "sssoooooosboooooooooooobooossss"
+    ],
+    [
+      8,
+      "ssssooooosooboooooooosboooosss"
+    ],
+    [
+      9,
+      "ssssooooooooosssssssooooosss"
+    ],
+    [
+      9,
+      "sssssoooooooooooooooooooosss"
+    ],
+    [
+      10,
+      "sssssooooooooobbooooooosss"
+    ],
+    [
+      10,
+      "sssssssooooooooooooooooss"
+    ],
+    [
+      11,
+      "ssssssssoooboooooobooss"
+    ],
+    [
+      13,
+      "ssssssoosbooooobbsss"
+    ],
+    [
+      14,
+      "sssssssosbbbbbss#"
+    ],
+    [
+      16,
+      "ssssssssssssos"
+    ],
+    [
+      19,
+      "sssssssssss"
+    ],
+    [
+      21,
+      "sooooosss"
+    ],
+    [
+      21,
+      "sssssssss"
+    ]
+  ]
+}

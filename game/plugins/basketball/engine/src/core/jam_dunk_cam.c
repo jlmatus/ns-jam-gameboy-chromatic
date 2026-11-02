@@ -20,7 +20,8 @@ uint8_t jam_cam_upload,jam_cam_map_target;
 int16_t jam_cam_zoom,jam_cam_origin,jam_cam_avatar;
 int16_t jam_cam_hand_x,jam_cam_hand_y;
 int8_t jam_cam_shake_x,jam_cam_shake_y;
-static uint16_t saved_palettes[28];
+/* Full-screen front art and Dunk Cam cannot overlap; share their palette save. */
+uint16_t jam_stage_palettes[28];
 static const jam_game_t *camera_game;
 static uint8_t last_frame,last_failed;
 static uint8_t court_restored;
@@ -33,7 +34,7 @@ static void palette(uint8_t slot,uint16_t a,uint16_t b,uint16_t c,uint16_t d){
 void jam_dunk_cam_begin(const jam_game_t *g) BANKED {
     uint8_t id=g->setup.roster[g->passer];
     uint16_t bg=RGB(2,4,6),dark=RGB(3,5,7),skin=skins[id];
-    memcpy(saved_palettes,BkgPalette,sizeof(saved_palettes));
+    memcpy(jam_stage_palettes,BkgPalette,sizeof(jam_stage_palettes));
     saved_overlay_actors=show_actors_on_overlay;show_actors_on_overlay=0;
     palette(1,bg,RGB(5,9,10),RGB(6,12,14),dark);
     palette(2,bg,skin,RGB(18,25,7),dark);
@@ -121,7 +122,7 @@ void jam_dunk_cam_end(void) BANKED {
     ui_set_pos(0,144);WY_REG=144;
     LCDC_REG|=LCDCF_WIN9C00;
     if(!court_restored)restore_court();
-    memcpy(BkgPalette,saved_palettes,sizeof(saved_palettes));
+    memcpy(BkgPalette,jam_stage_palettes,sizeof(jam_stage_palettes));
     set_bkg_palette(0,7,(const uint16_t *)BkgPalette);
     VBK_REG=0;set_bkg_data(192,40,jam_font);
     set_bkg_data(232,5,jam_turbo_tiles);

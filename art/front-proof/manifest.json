@@ -1,0 +1,146 @@
+[
+  {
+    "index": 0,
+    "name": "home-0",
+    "tiles": 252,
+    "palette_error": 679055
+  },
+  {
+    "index": 1,
+    "name": "home-1",
+    "tiles": 252,
+    "palette_error": 679055
+  },
+  {
+    "index": 2,
+    "name": "home-2",
+    "tiles": 251,
+    "palette_error": 679055
+  },
+  {
+    "index": 3,
+    "name": "help",
+    "tiles": 166,
+    "palette_error": 0
+  },
+  {
+    "index": 4,
+    "name": "matus-card-0",
+    "tiles": 227,
+    "palette_error": 272577
+  },
+  {
+    "index": 5,
+    "name": "matus-card-1",
+    "tiles": 229,
+    "palette_error": 272577
+  },
+  {
+    "index": 6,
+    "name": "matus-card-2",
+    "tiles": 229,
+    "palette_error": 272577
+  },
+  {
+    "index": 7,
+    "name": "matus-card-3",
+    "tiles": 229,
+    "palette_error": 272577
+  },
+  {
+    "index": 8,
+    "name": "matus-shot-00",
+    "tiles": 179,
+    "palette_error": 459884
+  },
+  {
+    "index": 9,
+    "name": "matus-shot-01",
+    "tiles": 178,
+    "palette_error": 365679
+  },
+  {
+    "index": 10,
+    "name": "matus-shot-02",
+    "tiles": 181,
+    "palette_error": 402494
+  },
+  {
+    "index": 11,
+    "name": "matus-shot-03",
+    "tiles": 186,
+    "palette_error": 411407
+  },
+  {
+    "index": 12,
+    "name": "matus-shot-04",
+    "tiles": 184,
+    "palette_error": 317015
+  },
+  {
+    "index": 13,
+    "name": "matus-shot-05",
+    "tiles": 187,
+    "palette_error": 344662
+  },
+  {
+    "index": 14,
+    "name": "matus-shot-06",
+    "tiles": 182,
+    "palette_error": 332948
+  },
+  {
+    "index": 15,
+    "name": "matus-shot-07",
+    "tiles": 184,
+    "palette_error": 425785
+  },
+  {
+    "index": 16,
+    "name": "matus-shot-08",
+    "tiles": 178,
+    "palette_error": 381191
+  },
+  {
+    "index": 17,
+    "name": "matus-shot-09",
+    "tiles": 180,
+    "palette_error": 351282
+  },
+  {
+    "index": 18,
+    "name": "matus-shot-10",
+    "tiles": 182,
+    "palette_error": 425473
+  },
+  {
+    "index": 19,
+    "name": "matus-shot-11",
+    "tiles": 182,
+    "palette_error": 425473
+  },
+  {
+    "index": 20,
+    "name": "chompa-card-0",
+    "tiles": 238,
+    "palette_error": 290974
+  },
+  {
+    "index": 21,
+    "name": "chompa-card-1",
+    "tiles": 239,
+    "palette_error": 290974
+  },
+  {
+    "index": 22,
+    "name": "chompa-card-2",
+    "tiles": 239,
+    "palette_error": 290974
+  },
+  {
+    "index": 23,
+    "name": "chompa-card-3",
+    "tiles": 239,
+    "palette_error": 290974
+  }
+]

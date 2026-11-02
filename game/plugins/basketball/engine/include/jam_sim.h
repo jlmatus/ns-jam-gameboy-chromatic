@@ -116,9 +116,16 @@ typedef struct {
     int8_t vx,vy,push_x,push_y;
 } jam_player_t;
 
+/* Match-only box score, keyed by lineup slot rather than current control. */
+typedef struct {
+    uint16_t points, field_made, field_attempted, three_made, three_attempted;
+    uint16_t rebounds, steals, blocks, dunks;
+} jam_player_stats_t;
+
 typedef struct {
     jam_player_t players[4];
     jam_setup_t setup;
+    jam_player_stats_t stats[4];
     int16_t ball_x, ball_y, from_x, from_y, target_x, target_y;
     int8_t owner, passer;
     uint8_t mode, height, flight, duration, target, shot_team, shot_points, shot_good;
@@ -137,6 +144,7 @@ typedef struct {
     /* Hardware VBlanks, independent of simulation/render throughput. */
     uint16_t clock_seconds, clock_fraction, overtime;
     uint8_t quarter, match_phase;
+    uint8_t shot_blocked, loose_rebound;
 } jam_game_t;
 
 void jam_init(jam_game_t *g) JAM_BANKED;
@@ -168,4 +176,5 @@ uint8_t jam_turbo_spend(jam_game_t *g,uint8_t who,uint8_t cost) JAM_BANKED;
 void jam_turbo_recover(jam_game_t *g,uint8_t who,uint8_t held) JAM_BANKED;
 void jam_match_clock(jam_game_t *g,uint16_t frames) JAM_BANKED;
 uint8_t jam_match_control(jam_game_t *g,uint8_t pressed) JAM_BANKED;
+void jam_stats_basket(jam_game_t *g,uint8_t dunk) JAM_BANKED;
 #endif
