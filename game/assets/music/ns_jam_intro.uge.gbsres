@@ -1,0 +1,9 @@
+{
+  "_resourceType": "music",
+  "id": "f5e039fa-f6d3-5d23-a620-237f45d7fd66",
+  "name": "ns_jam_intro",
+  "symbol": "music_ns_jam_intro",
+  "filename": "ns_jam_intro.uge",
+  "type": "uge",
+  "settings": {}
+}

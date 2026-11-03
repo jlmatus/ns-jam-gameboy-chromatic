@@ -1,0 +1,173 @@
+{
+ "intro_01_court": {
+  "size_px": [
+   512,
+   160
+  ],
+  "unique_tiles": 243,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 0,
+  "text_slot": null
+ },
+ "intro_02_torres_face": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 133,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 0,
+  "text_slot": null
+ },
+ "intro_03_torres_run": {
+  "size_px": [
+   496,
+   160
+  ],
+  "unique_tiles": 133,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 2,
+  "text_slot": null
+ },
+ "intro_04_matus": {
+  "size_px": [
+   176,
+   248
+  ],
+  "unique_tiles": 150,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 4,
+  "text_slot": null
+ },
+ "intro_05_magic": {
+  "size_px": [
+   336,
+   160
+  ],
+  "unique_tiles": 92,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 8,
+  "text_slot": null
+ },
+ "intro_06_magic_block": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 138,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 9,
+  "text_slot": null
+ },
+ "intro_07_bambi_rise": {
+  "size_px": [
+   176,
+   232
+  ],
+  "unique_tiles": 82,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 0,
+  "text_slot": null
+ },
+ "intro_08_bambi_dunk": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 151,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 6,
+  "text_slot": null
+ },
+ "intro_09_chompa": {
+  "size_px": [
+   336,
+   160
+  ],
+  "unique_tiles": 113,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 3,
+  "text_slot": null
+ },
+ "intro_10_rollcall_1": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 43,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 0,
+  "text_slot": null
+ },
+ "intro_11_rollcall_2": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 90,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 0,
+  "text_slot": null
+ },
+ "intro_12_rollcall_3": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 129,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 6,
+  "text_slot": null
+ },
+ "intro_13_rollcall_4": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 170,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 8,
+  "text_slot": null
+ },
+ "intro_14_rollcall_5": {
+  "size_px": [
+   176,
+   160
+  ],
+  "unique_tiles": 218,
+  "tile_limit": 384,
+  "palettes": 8,
+  "colours_per_tile_ok": true,
+  "palette_merges": 12,
+  "text_slot": null
+ },
+ "_palettes": {
+  "resources": 93
+ }
+}

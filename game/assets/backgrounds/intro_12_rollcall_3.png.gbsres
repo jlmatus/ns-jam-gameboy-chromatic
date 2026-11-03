@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "87d1c2c9-2d2b-50ea-94b2-f1102476600e",
+  "name": "intro_12_rollcall_3",
+  "symbol": "bg_intro_12_rollcall_3",
+  "tileColors": "0062+05!00d+02!00d+03!007+02!006+04!03!005+032+04!005+02!033+002+02!03!002+03!003+03!052+03!004+02!03!02!003+02!002+02!06!002+054+005+012+02!003+02!002+02!01!07!00!02!053+04!00de+",
+  "filename": "intro_12_rollcall_3.png",
+  "width": 22,
+  "height": 20,
+  "imageWidth": 176,
+  "imageHeight": 160,
+  "autoColor": false
+}

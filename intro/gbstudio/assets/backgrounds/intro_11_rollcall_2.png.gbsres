@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "69532284-8fff-5bde-be93-51dda31ab883",
+  "name": "intro_11_rollcall_2",
+  "symbol": "bg_intro_11_rollcall_2",
+  "tileColors": "0062+07!00d+02!0015+02!006+03!04!00d+02!043+002+02!04!002+04!00b+02!03!02!003+02!002+02!05!00b+012+02!003+02!002+02!01!06!00e4+",
+  "filename": "intro_11_rollcall_2.png",
+  "width": 22,
+  "height": 20,
+  "imageWidth": 176,
+  "imageHeight": 160,
+  "autoColor": false
+}

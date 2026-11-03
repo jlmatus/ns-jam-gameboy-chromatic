@@ -1,0 +1,856 @@
+{
+  "_resourceType": "scene",
+  "id": "ee1e33ad-0378-5b09-8c02-1fb6baca0a50",
+  "_index": 4,
+  "type": "TOPDOWN",
+  "name": "intro_04_matus",
+  "symbol": "scene_intro_04_matus",
+  "x": 2200,
+  "y": 0,
+  "width": 22,
+  "height": 31,
+  "backgroundId": "dff5e800-50e5-5dfa-a642-d244f3dc167e",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "0a7404d6-4604-5631-b6da-945af7ffd770",
+    "f45bbcfd-f2aa-5c2e-a391-0c706e49e602",
+    "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
+    "e2ccdbaa-5107-547f-9ef8-d64947fda3fb",
+    "e3c5e7aa-85fe-5ba7-825c-9bebe5b945ce",
+    "160d76dc-86d1-5578-8699-411ebf8cda06",
+    "cacea8f7-83de-579e-a433-d4f13e8f97c9",
+    "970c9156-04f4-5d2e-b906-a44e83d76329"
+  ],
+  "spritePaletteIds": [
+    "213df663-a048-5633-bbe9-b969d1ac137a",
+    "c8ffef88-b6b3-5494-aba5-3e6a53d3ee51"
+  ],
+  "autoFadeSpeed": null,
+  "script": [
+    {
+      "id": "f6dd9fac-939d-5c3c-8363-5906cd86896c",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "player"
+      }
+    },
+    {
+      "id": "6722d853-3468-5894-8839-c131d1dfe3df",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": {
+          "type": "number",
+          "value": 96
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "788b80ac-f44b-594d-a35c-8e3ed444b3a8",
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "fade_style",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "d9d30fca-3b2c-5074-a4bb-7b0ab892dd70",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"
+      }
+    },
+    {
+      "id": "c1604269-77e5-5a61-8bef-44f7f80bcb92",
+      "command": "EVENT_SET_MUSIC_ROUTINE",
+      "args": {
+        "routine": 0
+      },
+      "children": {
+        "true": [
+          {
+            "id": "39693a96-f055-58c6-828d-a8b984d8a45a",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "0aecf84e-3849-5a2b-b1f2-7d85ecf03cb0",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "374e5aab-cd76-5731-a755-da6c8b098062",
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "a",
+          "start"
+        ],
+        "override": true
+      },
+      "children": {
+        "true": [
+          {
+            "id": "d9f43128-4869-5c11-b77e-26df211d1b99",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "b4fddbf2-ab43-526b-9783-6da57c4fa6c9",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "fb98b34f-db53-5c77-bfcf-045bf3e1e84a",
+      "command": "EVENT_THREAD_START",
+      "args": {
+        "variable": "T0"
+      },
+      "children": {
+        "true": [
+          {
+            "id": "94e9748d-73fc-51a7-99fc-62b255884d7a",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10020$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 1, 10021$, 0\nVM_IDLE\nVM_JUMP 10020$\n10021$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "9d226afa-28d7-5fec-a789-53f6efead0c2",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 87
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "a19d1729-2bd3-5dfa-a624-76b1f286f394",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10024$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 2, 10025$, 0\nVM_IDLE\nVM_JUMP 10024$\n10025$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "72411858-693f-5c09-affa-c23d9061b6dd",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 78
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "87f5e934-b543-545e-88c8-b271f17a958d",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10028$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 3, 10029$, 0\nVM_IDLE\nVM_JUMP 10028$\n10029$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "c5734a9d-83db-5fa0-91ad-985eafbf5818",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 71
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "fabc078c-0a80-532b-be59-192dd5222e5c",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10032$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 4, 10033$, 0\nVM_IDLE\nVM_JUMP 10032$\n10033$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "afd9ebcd-1be6-5e51-80d2-e58ad4091dd7",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 63
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "b0e9f0db-07da-54da-8389-a3ed8a9c5e8b",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10036$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 5, 10037$, 0\nVM_IDLE\nVM_JUMP 10036$\n10037$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "ee13e304-ead3-596f-8e4b-d3a2bf94b410",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 57
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "fcd2e5aa-97e1-50d3-b5dc-a14c0a15f77d",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10040$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 6, 10041$, 0\nVM_IDLE\nVM_JUMP 10040$\n10041$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "c16db0a7-f21d-5927-9dc8-b2ccb8e6b876",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 51
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "8acf9e27-255f-57fc-8e34-60cee1403fe3",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10044$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 7, 10045$, 0\nVM_IDLE\nVM_JUMP 10044$\n10045$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "ae5a63af-9f8a-5dc8-b3f5-c77967435200",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 45
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "ad16e8fb-0999-5f33-ab97-9f74655510ee",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10048$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 8, 10049$, 0\nVM_IDLE\nVM_JUMP 10048$\n10049$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "f7905abc-b34b-5f50-8e12-ccb76b9a3f34",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 40
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "a4aa17f8-caa3-50d1-a542-29d17cbec873",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10052$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 9, 10053$, 0\nVM_IDLE\nVM_JUMP 10052$\n10053$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "e156b76f-3de9-55e8-ac97-fd13a0171b38",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 35
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "5f0b95f6-fe2b-5467-add2-133552d91814",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10056$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 10, 10057$, 0\nVM_IDLE\nVM_JUMP 10056$\n10057$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "dfe8b0d5-4a84-5e1c-a6bc-2d797ebd0b65",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 31
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "c8a7f07b-6819-5959-a1cd-0f45ab95064b",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10060$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 11, 10061$, 0\nVM_IDLE\nVM_JUMP 10060$\n10061$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "82e89037-2a5b-5ddc-aff5-683e88780d70",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 28
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "c4b013ac-3a99-57ce-932b-c3b57b447143",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10064$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 12, 10065$, 0\nVM_IDLE\nVM_JUMP 10064$\n10065$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "383c72f8-049a-55a2-a700-b07e1020b3b1",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 24
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "a5be326e-c248-57a1-a4fc-b738b88e018b",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10068$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 13, 10069$, 0\nVM_IDLE\nVM_JUMP 10068$\n10069$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "0d827964-0f0f-5802-9cf2-fd0eaf732579",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 22
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "f83f27eb-706b-514e-8561-6e5f2763385e",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10072$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 14, 10073$, 0\nVM_IDLE\nVM_JUMP 10072$\n10073$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "d8e33933-d57a-5eb5-86d3-cc5f76074472",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 19
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "d344200d-d35a-5a87-b080-9bd4fe7d4d77",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10076$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 15, 10077$, 0\nVM_IDLE\nVM_JUMP 10076$\n10077$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "d901ecb0-7b65-5ea4-9233-9b9fb591e85e",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 17
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "c77e2f20-5e31-5695-873f-c1e27df3af5f",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10080$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 16, 10081$, 0\nVM_IDLE\nVM_JUMP 10080$\n10081$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "b0647d4b-56c1-5f5f-8075-f5fb4d4de2fe",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 15
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "84e5ed83-5c8f-5846-9b28-3dcc7d7eeff4",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10084$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 17, 10085$, 0\nVM_IDLE\nVM_JUMP 10084$\n10085$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "5a15edee-61ab-5c47-b179-b93abd0418ab",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 13
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "b8b14b0a-0bb4-54d6-ac64-2f3f4476b0a0",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10088$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 18, 10089$, 0\nVM_IDLE\nVM_JUMP 10088$\n10089$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "318b9d1c-8e27-5a4c-9dd3-ed21d2c587ba",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "db479fc9-9a1c-55f2-8078-ec0052747e54",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10092$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 19, 10093$, 0\nVM_IDLE\nVM_JUMP 10092$\n10093$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "c9ce9656-2acd-576b-a2a0-b4953dcc866c",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "1a6f6412-7d54-5de6-971f-718c6d29f5de",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10096$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 20, 10097$, 0\nVM_IDLE\nVM_JUMP 10096$\n10097$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "08796b51-ede4-543e-a406-dbaefb2120cb",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "f7d145df-cc3f-500a-ab31-19726af44913",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10100$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 21, 10101$, 0\nVM_IDLE\nVM_JUMP 10100$\n10101$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "122a31e1-f8e0-5b1c-8fc0-d98094d03231",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "f8e76f22-d074-5371-bd08-2b03827f63d9",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10104$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 22, 10105$, 0\nVM_IDLE\nVM_JUMP 10104$\n10105$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "3d9ea1b9-f3f7-5487-ac72-107280f8b348",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "71fb71b2-4bc3-53d3-9868-bf6c61b817e5",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10108$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 23, 10109$, 0\nVM_IDLE\nVM_JUMP 10108$\n10109$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "750959ab-ed01-5286-8c36-53af1658247a",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "c93dff71-276b-5ac1-9a7e-8b4e8f258baf",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10112$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 24, 10113$, 0\nVM_IDLE\nVM_JUMP 10112$\n10113$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "061745e3-1f09-51f3-9516-28bd30b1c687",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "932f2a93-81da-53a9-a45d-70f299b1bc62",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10116$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 25, 10117$, 0\nVM_IDLE\nVM_JUMP 10116$\n10117$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "17834612-50b1-5e01-ad3a-195bdefc4e19",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "5a0a4fe0-6de8-549a-b7a8-f6c6a89a5f7e",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10120$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 26, 10121$, 0\nVM_IDLE\nVM_JUMP 10120$\n10121$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "da1c5fb8-71c4-5773-a5a0-61cdd38d0e0f",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "302ba11e-2a11-5577-be52-5bdd07b478ed",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10124$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 27, 10125$, 0\nVM_IDLE\nVM_JUMP 10124$\n10125$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "086e0c5d-58ba-5fb6-8de2-1d7bc06367e1",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "02a52289-35b7-59dc-ab95-f398d6c2252f",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10128$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 28, 10129$, 0\nVM_IDLE\nVM_JUMP 10128$\n10129$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "2e3a8eb4-6597-5b2d-8f27-9604f62c4325",
+            "command": "EVENT_CAMERA_SET_POSITION",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "units": "pixels"
+            }
+          },
+          {
+            "id": "b023f3d6-27ce-5cef-b3de-939897b997df",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10132$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 29, 10133$, 0\nVM_IDLE\nVM_JUMP 10132$\n10133$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "2ff8dd95-1fab-53d3-8008-11b3557da25a",
+            "command": "EVENT_PALETTE_SET_BACKGROUND",
+            "args": {
+              "palette0": "6efb51cc-dc60-5524-8271-0178b6929572",
+              "palette1": "6efb51cc-dc60-5524-8271-0178b6929572",
+              "palette2": "51d34eb1-c160-5b09-be4b-127f9f0745ca",
+              "palette3": "f40dc197-df26-59e6-ad0a-0917864d076d",
+              "palette4": "290ab7c3-2dfd-5f83-bc5b-fbf03e870b1a",
+              "palette5": "51d34eb1-c160-5b09-be4b-127f9f0745ca",
+              "palette6": "51d34eb1-c160-5b09-be4b-127f9f0745ca",
+              "palette7": "6efb51cc-dc60-5524-8271-0178b6929572"
+            }
+          },
+          {
+            "id": "9ea01226-d0c8-501b-9950-0564b1576024",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10136$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 29, 10137$, 0\nVM_IDLE\nVM_JUMP 10136$\n10137$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "af4ac682-8530-5680-a379-89baf68a69e1",
+            "command": "EVENT_PALETTE_SET_SPRITE",
+            "args": {
+              "palette0": "cd1aa464-030f-5116-a8a7-d060ea0a1f93",
+              "palette1": "keep",
+              "palette2": "keep",
+              "palette3": "keep",
+              "palette4": "keep",
+              "palette5": "keep",
+              "palette6": "keep",
+              "palette7": "keep"
+            }
+          },
+          {
+            "id": "3dd4db1d-54ff-55ea-a36e-ef83d0fc9fae",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10140$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 149, 10141$, 0\nVM_IDLE\nVM_JUMP 10140$\n10141$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "10bc4e83-4e10-5762-9ceb-1670d53025fe",
+            "command": "EVENT_PALETTE_SET_BACKGROUND",
+            "args": {
+              "palette0": "0a7404d6-4604-5631-b6da-945af7ffd770",
+              "palette1": "f45bbcfd-f2aa-5c2e-a391-0c706e49e602",
+              "palette2": "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
+              "palette3": "e2ccdbaa-5107-547f-9ef8-d64947fda3fb",
+              "palette4": "e3c5e7aa-85fe-5ba7-825c-9bebe5b945ce",
+              "palette5": "160d76dc-86d1-5578-8699-411ebf8cda06",
+              "palette6": "cacea8f7-83de-579e-a433-d4f13e8f97c9",
+              "palette7": "970c9156-04f4-5d2e-b906-a44e83d76329"
+            }
+          },
+          {
+            "id": "079891a4-f003-59d8-8953-0790f94d2db9",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10144$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 149, 10145$, 0\nVM_IDLE\nVM_JUMP 10144$\n10145$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "b873de24-51d3-5512-9365-c1b9e3abc6a3",
+            "command": "EVENT_PALETTE_SET_SPRITE",
+            "args": {
+              "palette0": "213df663-a048-5633-bbe9-b969d1ac137a",
+              "palette1": "keep",
+              "palette2": "keep",
+              "palette3": "keep",
+              "palette4": "keep",
+              "palette5": "keep",
+              "palette6": "keep",
+              "palette7": "keep"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "",
+  "playerSpriteSheetId": "aaff6c4b-8f13-5218-92fd-f2d83efcd8e3"
+}

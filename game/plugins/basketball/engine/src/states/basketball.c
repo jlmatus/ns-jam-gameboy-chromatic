@@ -14,6 +14,10 @@
 #include "jam_audio.h"
 #include "jam_results.h"
 #include "jam_front.h"
+#include "vm.h"
+/* Native scene-entry script used only by the title's Replay Intro item. */
+BANKREF_EXTERN(jam_intro_entry)
+extern const unsigned char jam_intro_entry[];
 void jam_player_palettes(const jam_setup_t *setup) BANKED;
 #include "palette.h"
 #include <string.h>
@@ -351,6 +355,9 @@ void basketball_init(void) BANKED {
     ui_set_pos(0,128);
     in_results=in_menu=0;jam_menu_init(&jam_menu,0);
     front_active=1;jam_front_init(&front,0);
+    /* The scene is now entered after the native cinematic (or its skip). */
+    front.mode=JAM_FRONT_HOME;front.frame=0;
+    front.previous_input=(INPUT_A?JAM_A:0)|(INPUT_START?JAM_TURBO:0);
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
     jam_front_art(front.frame);ui_set_pos(0,0);
 }
@@ -374,6 +381,11 @@ void basketball_update(void) BANKED {
             front_active=0;in_menu=1;jam_menu.previous_input=buttons;draw_menu();
             jam_sfx_play(JAM_SFX_CONFIRM);
         } else if(front.changed) {
+            if(front.mode==JAM_FRONT_INTRO && old_mode==JAM_FRONT_HOME) {
+                jam_sfx_stop();
+                script_execute(BANK(jam_intro_entry),jam_intro_entry,0,0);
+                return;
+            }
             jam_front_art(front.frame);ui_set_pos(0,0);
             if(front.mode==JAM_FRONT_INTRO && old_mode==JAM_FRONT_INTRO) {
                 if(old_frame<11 && front.frame>=11)jam_sfx_play(JAM_SFX_SHOT);

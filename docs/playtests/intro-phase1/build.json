@@ -1,0 +1,710 @@
+{
+  "success": true,
+  "rom": {
+    "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam-intro-phase1.gbc",
+    "sizeBytes": 4194304,
+    "sha256": "80c76dc36a442100862b1bb5725bf06fbb17be99fb6084342f390a4a0bbed5a0",
+    "title": "NSJAM",
+    "colorMode": "gbc-only",
+    "colorFlag": 192,
+    "cartridgeType": 30,
+    "cartridgeTypeName": "MBC5+RUMBLE+RAM+BATTERY",
+    "mapper": "MBC5",
+    "romSizeCode": 7,
+    "declaredRomSizeBytes": 4194304,
+    "ramSizeCode": 3,
+    "declaredRamSizeBytes": 32768,
+    "nintendoLogoValid": true,
+    "headerChecksum": 242,
+    "computedHeaderChecksum": 242,
+    "headerChecksumValid": true,
+    "valid": true
+  },
+  "stderr": "src/core/jam_dunk_cam.c:57: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk_cam.c:107: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_contact.c:77: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:22: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\ninclude/sfx_player.h:34: warning 126: unreachable code\ninclude/sfx_player.h:35: warning 126: unreachable code\nsrc/core/jam_sim.c:78: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:79: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_dunk.c:102: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:179: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:276: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/states/basketball.c:215: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\nsrc/core/jam_sim.c:412: warning 110: conditional flow changed by optimizer: so said EVELYN the modified DOG\n",
+  "counts": [
+    {
+      "scene": "intro_01_court",
+      "background": {
+        "id": "1e60e48f-007c-5919-8517-ca74036de6a6",
+        "resourcePath": "assets/backgrounds/intro_01_court.png",
+        "totalTiles": 1280,
+        "width": 64,
+        "height": 20,
+        "uniqueTiles": 243,
+        "uniqueTilesWithFlips": 219,
+        "effectiveUniqueTiles": 219,
+        "metricStatus": "exact",
+        "flipDeduplicationApplied": true
+      },
+      "palettes": {
+        "background": {
+          "configuredOverrideCount": 8,
+          "resolvedSlotCount": 8,
+          "usedTileSlotCount": 7,
+          "tileSlotHistogram": {
+            "0": 100,
+            "1": 84,
+            "2": 14,
+            "3": 68,
+            "4": 106,
+            "5": 744,
+            "6": 164
+          },
+          "reservedUiSlot": 7,
+          "usedSlots": [
+            {
+              "slot": 0,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 100,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 1,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 84,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 2,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 14,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 3,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 68,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 4,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 106,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 5,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 744,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            },
+            {
+              "slot": 6,
+              "paletteId": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+              "tileCount": 164,
+              "colors": [
+                "081829",
+                "081829",
+                "081829",
+                "081829"
+              ]
+            }
+          ]
+        },
+        "objects": {
+          "configuredOverrideCount": 2,
+          "resolvedSlotCount": 8,
+          "referencedSlotCount": 1,
+          "referencedSlots": [
+            0
+          ]
+        }
+      },
+      "budgets": {
+        "engine": {
+          "background": {
+            "status": "exact",
+            "mode": "color",
+            "limit": 384,
+            "used": 219,
+            "remaining": 165,
+            "exceeded": false,
+            "flipDeduplicationApplied": true
+          },
+          "sprites": {
+            "status": "metadata-estimate",
+            "provenance": "stored-sprite-numTiles",
+            "units": "stored-numTiles",
+            "used": 24,
+            "available": {
+              "minimum": 128,
+              "maximum": 192
+            },
+            "availableUnits": "8x16-tile-pairs",
+            "comparison": "unnormalized-metadata",
+            "remaining": {
+              "minimum": 104,
+              "maximum": 168
+            },
+            "estimateExceedsMaximum": false,
+            "exceeded": null,
+            "allocation": "remaining and estimateExceedsMaximum compare raw metadata with the nominal 8x16-pair range. Sprite-mode normalization, compiled payloads, dynamic reservations and compiler banking are not established."
+          },
+          "actors": {
+            "used": 0,
+            "limit": null,
+            "status": "unknown"
+          }
+        },
+        "hardware": {
+          "backgroundPaletteSlots": {
+            "limit": 8,
+            "used": 7
+          },
+          "objectPaletteSlots": {
+            "limit": 8,
+            "used": 1
+          },
+          "oamObjects": {
+            "limit": 40,
+            "estimate": null,
+            "provenance": "not-measured",
+            "runtimeMeasured": false
+          },
+          "scanlines": {
+            "objectsPerScanlineLimit": 10,
+            "maximumStaticEstimate": null,
+            "runtimeMeasured": false
+          }
+        }
+      }
+    },
+    {
+      "scene": "intro_02_torres_face",
+      "background": {
+        "id": "8645c28e-f1a7-5b76-a9b7-257f97dbde54",
+        "resourcePath": "assets/backgrounds/intro_02_torres_face.png",
+        "totalTiles": 440,
+        "width": 22,
+        "height": 20,
+        "uniqueTiles": 133,
+        "uniqueTilesWithFlips": 129,
+        "effectiveUniqueTiles": 129,
+        "metricStatus": "exact",
+        "flipDeduplicationApplied": true
+      },
+      "palettes": {
+        "background": {
+          "configuredOverrideCount": 8,
+          "resolvedSlotCount": 8,
+          "usedTileSlotCount": 3,
+          "tileSlotHistogram": {
+            "0": 341,
+            "1": 97,
+            "2": 2
+          },
+          "reservedUiSlot": 7,
+          "usedSlots": [
+            {
+              "slot": 0,
+              "paletteId": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "tileCount": 341,
+              "colors": [
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF"
+              ]
+            },
+            {
+              "slot": 1,
+              "paletteId": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "tileCount": 97,
+              "colors": [
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF"
+              ]
+            },
+            {
+              "slot": 2,
+              "paletteId": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "tileCount": 2,
+              "colors": [
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF",
+                "FFFFFF"
+              ]
+            }
+          ]
+        },
+        "objects": {
+          "configuredOverrideCount": 2,
+          "resolvedSlotCount": 8,
+          "referencedSlotCount": 1,
+          "referencedSlots": [
+            0
+          ]
+        }
+      },
+      "budgets": {
+        "engine": {
+          "background": {
+            "status": "exact",
+            "mode": "color",
+            "limit": 384,
+            "used": 129,
+            "remaining": 255,
+            "exceeded": false,
+            "flipDeduplicationApplied": true
+          },
+          "sprites": {
+            "status": "metadata-estimate",
+            "provenance": "stored-sprite-numTiles",
+            "units": "stored-numTiles",
+            "used": 24,
+            "available": {
+              "minimum": 128,
+              "maximum": 192
+            },
+            "availableUnits": "8x16-tile-pairs",
+            "comparison": "unnormalized-metadata",
+            "remaining": {
+              "minimum": 104,
+              "maximum": 168
+            },
+            "estimateExceedsMaximum": false,
+            "exceeded": null,
+            "allocation": "remaining and estimateExceedsMaximum compare raw metadata with the nominal 8x16-pair range. Sprite-mode normalization, compiled payloads, dynamic reservations and compiler banking are not established."
+          },
+          "actors": {
+            "used": 0,
+            "limit": null,
+            "status": "unknown"
+          }
+        },
+        "hardware": {
+          "backgroundPaletteSlots": {
+            "limit": 8,
+            "used": 3
+          },
+          "objectPaletteSlots": {
+            "limit": 8,
+            "used": 1
+          },
+          "oamObjects": {
+            "limit": 40,
+            "estimate": null,
+            "provenance": "not-measured",
+            "runtimeMeasured": false
+          },
+          "scanlines": {
+            "objectsPerScanlineLimit": 10,
+            "maximumStaticEstimate": null,
+            "runtimeMeasured": false
+          }
+        }
+      }
+    },
+    {
+      "scene": "intro_03_torres_run",
+      "background": {
+        "id": "368e5f1e-bc5f-53ee-b3f2-f04e6907986e",
+        "resourcePath": "assets/backgrounds/intro_03_torres_run.png",
+        "totalTiles": 1240,
+        "width": 62,
+        "height": 20,
+        "uniqueTiles": 133,
+        "uniqueTilesWithFlips": 132,
+        "effectiveUniqueTiles": 132,
+        "metricStatus": "exact",
+        "flipDeduplicationApplied": true
+      },
+      "palettes": {
+        "background": {
+          "configuredOverrideCount": 8,
+          "resolvedSlotCount": 8,
+          "usedTileSlotCount": 8,
+          "tileSlotHistogram": {
+            "0": 1179,
+            "1": 19,
+            "2": 2,
+            "3": 21,
+            "4": 7,
+            "5": 3,
+            "6": 1,
+            "7": 8
+          },
+          "reservedUiSlot": 7,
+          "usedSlots": [
+            {
+              "slot": 0,
+              "paletteId": "d349ac15-39c8-55f4-a593-c8e38f1013d3",
+              "tileCount": 1179,
+              "colors": [
+                "F6BD83",
+                "B46A41",
+                "8B4A31",
+                "081829"
+              ]
+            },
+            {
+              "slot": 1,
+              "paletteId": "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
+              "tileCount": 19,
+              "colors": [
+                "F6BD83",
+                "B46A41",
+                "207383",
+                "081829"
+              ]
+            },
+            {
+              "slot": 2,
+              "paletteId": "aaf00bd1-5853-56c6-89f0-c3b743cf4275",
+              "tileCount": 2,
+              "colors": [
+                "B46A41",
+                "207383",
+                "8B4A31",
+                "081829"
+              ]
+            },
+            {
+              "slot": 3,
+              "paletteId": "cacea8f7-83de-579e-a433-d4f13e8f97c9",
+              "tileCount": 21,
+              "colors": [
+                "F6BD83",
+                "207383",
+                "203141",
+                "081829"
+              ]
+            },
+            {
+              "slot": 4,
+              "paletteId": "ca32e8f0-799f-5a3d-b0c7-12b9620731e5",
+              "tileCount": 7,
+              "colors": [
+                "F6EEC5",
+                "B46A41",
+                "8B4A31",
+                "081829"
+              ]
+            },
+            {
+              "slot": 5,
+              "paletteId": "769d66bc-386c-54b6-8cd7-424bfcb9fe98",
+              "tileCount": 3,
+              "colors": [
+                "EEA439",
+                "8B4A31",
+                "203141",
+                "081829"
+              ]
+            },
+            {
+              "slot": 6,
+              "paletteId": "50294f6a-19e5-5795-ba2d-50a844e4845d",
+              "tileCount": 1,
+              "colors": [
+                "F6EEC5",
+                "F6BD83",
+                "B46A41",
+                "B46A41"
+              ]
+            },
+            {
+              "slot": 7,
+              "paletteId": "853a1e2b-e31d-5742-8de5-f3214097b506",
+              "tileCount": 8,
+              "colors": [
+                "F6EEC5",
+                "207383",
+                "203141",
+                "081829"
+              ]
+            }
+          ]
+        },
+        "objects": {
+          "configuredOverrideCount": 2,
+          "resolvedSlotCount": 8,
+          "referencedSlotCount": 1,
+          "referencedSlots": [
+            0
+          ]
+        }
+      },
+      "budgets": {
+        "engine": {
+          "background": {
+            "status": "exact",
+            "mode": "color",
+            "limit": 384,
+            "used": 132,
+            "remaining": 252,
+            "exceeded": false,
+            "flipDeduplicationApplied": true
+          },
+          "sprites": {
+            "status": "metadata-estimate",
+            "provenance": "stored-sprite-numTiles",
+            "units": "stored-numTiles",
+            "used": 24,
+            "available": {
+              "minimum": 128,
+              "maximum": 192
+            },
+            "availableUnits": "8x16-tile-pairs",
+            "comparison": "unnormalized-metadata",
+            "remaining": {
+              "minimum": 104,
+              "maximum": 168
+            },
+            "estimateExceedsMaximum": false,
+            "exceeded": null,
+            "allocation": "remaining and estimateExceedsMaximum compare raw metadata with the nominal 8x16-pair range. Sprite-mode normalization, compiled payloads, dynamic reservations and compiler banking are not established."
+          },
+          "actors": {
+            "used": 1,
+            "limit": null,
+            "status": "unknown"
+          }
+        },
+        "hardware": {
+          "backgroundPaletteSlots": {
+            "limit": 8,
+            "used": 8
+          },
+          "objectPaletteSlots": {
+            "limit": 8,
+            "used": 1
+          },
+          "oamObjects": {
+            "limit": 40,
+            "estimate": null,
+            "provenance": "not-measured",
+            "runtimeMeasured": false
+          },
+          "scanlines": {
+            "objectsPerScanlineLimit": 10,
+            "maximumStaticEstimate": null,
+            "runtimeMeasured": false
+          }
+        }
+      }
+    },
+    {
+      "scene": "intro_04_matus",
+      "background": {
+        "id": "dff5e800-50e5-5dfa-a642-d244f3dc167e",
+        "resourcePath": "assets/backgrounds/intro_04_matus.png",
+        "totalTiles": 682,
+        "width": 22,
+        "height": 31,
+        "uniqueTiles": 150,
+        "uniqueTilesWithFlips": 148,
+        "effectiveUniqueTiles": 148,
+        "metricStatus": "exact",
+        "flipDeduplicationApplied": true
+      },
+      "palettes": {
+        "background": {
+          "configuredOverrideCount": 8,
+          "resolvedSlotCount": 8,
+          "usedTileSlotCount": 8,
+          "tileSlotHistogram": {
+            "0": 588,
+            "1": 22,
+            "2": 10,
+            "3": 47,
+            "4": 4,
+            "5": 4,
+            "6": 6,
+            "7": 1
+          },
+          "reservedUiSlot": 7,
+          "usedSlots": [
+            {
+              "slot": 0,
+              "paletteId": "0a7404d6-4604-5631-b6da-945af7ffd770",
+              "tileCount": 588,
+              "colors": [
+                "F6BD83",
+                "EEA439",
+                "B46A41",
+                "081829"
+              ]
+            },
+            {
+              "slot": 1,
+              "paletteId": "f45bbcfd-f2aa-5c2e-a391-0c706e49e602",
+              "tileCount": 22,
+              "colors": [
+                "F6EEC5",
+                "F6BD83",
+                "B46A41",
+                "081829"
+              ]
+            },
+            {
+              "slot": 2,
+              "paletteId": "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
+              "tileCount": 10,
+              "colors": [
+                "F6BD83",
+                "B46A41",
+                "207383",
+                "081829"
+              ]
+            },
+            {
+              "slot": 3,
+              "paletteId": "e2ccdbaa-5107-547f-9ef8-d64947fda3fb",
+              "tileCount": 47,
+              "colors": [
+                "B46A41",
+                "207383",
+                "203141",
+                "081829"
+              ]
+            },
+            {
+              "slot": 4,
+              "paletteId": "e3c5e7aa-85fe-5ba7-825c-9bebe5b945ce",
+              "tileCount": 4,
+              "colors": [
+                "F6BD83",
+                "B46A41",
+                "207383",
+                "203141"
+              ]
+            },
+            {
+              "slot": 5,
+              "paletteId": "160d76dc-86d1-5578-8699-411ebf8cda06",
+              "tileCount": 4,
+              "colors": [
+                "EEA439",
+                "B46A41",
+                "203141",
+                "081829"
+              ]
+            },
+            {
+              "slot": 6,
+              "paletteId": "cacea8f7-83de-579e-a433-d4f13e8f97c9",
+              "tileCount": 6,
+              "colors": [
+                "F6BD83",
+                "207383",
+                "203141",
+                "081829"
+              ]
+            },
+            {
+              "slot": 7,
+              "paletteId": "970c9156-04f4-5d2e-b906-a44e83d76329",
+              "tileCount": 1,
+              "colors": [
+                "F6EEC5",
+                "F6BD83",
+                "203141",
+                "081829"
+              ]
+            }
+          ]
+        },
+        "objects": {
+          "configuredOverrideCount": 2,
+          "resolvedSlotCount": 8,
+          "referencedSlotCount": 1,
+          "referencedSlots": [
+            0
+          ]
+        }
+      },
+      "budgets": {
+        "engine": {
+          "background": {
+            "status": "exact",
+            "mode": "color",
+            "limit": 384,
+            "used": 148,
+            "remaining": 236,
+            "exceeded": false,
+            "flipDeduplicationApplied": true
+          },
+          "sprites": {
+            "status": "metadata-estimate",
+            "provenance": "stored-sprite-numTiles",
+            "units": "stored-numTiles",
+            "used": 24,
+            "available": {
+              "minimum": 128,
+              "maximum": 192
+            },
+            "availableUnits": "8x16-tile-pairs",
+            "comparison": "unnormalized-metadata",
+            "remaining": {
+              "minimum": 104,
+              "maximum": 168
+            },
+            "estimateExceedsMaximum": false,
+            "exceeded": null,
+            "allocation": "remaining and estimateExceedsMaximum compare raw metadata with the nominal 8x16-pair range. Sprite-mode normalization, compiled payloads, dynamic reservations and compiler banking are not established."
+          },
+          "actors": {
+            "used": 1,
+            "limit": null,
+            "status": "unknown"
+          }
+        },
+        "hardware": {
+          "backgroundPaletteSlots": {
+            "limit": 8,
+            "used": 8
+          },
+          "objectPaletteSlots": {
+            "limit": 8,
+            "used": 1
+          },
+          "oamObjects": {
+            "limit": 40,
+            "estimate": null,
+            "provenance": "not-measured",
+            "runtimeMeasured": false
+          },
+          "scanlines": {
+            "objectsPerScanlineLimit": 10,
+            "maximumStaticEstimate": null,
+            "runtimeMeasured": false
+          }
+        }
+      }
+    }
+  ]
+}

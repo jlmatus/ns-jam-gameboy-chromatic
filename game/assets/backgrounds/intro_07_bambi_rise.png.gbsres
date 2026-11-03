@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "fd095811-67bc-52cb-80f8-fc47488d372a",
+  "name": "intro_07_bambi_rise",
+  "symbol": "bg_intro_07_bambi_rise",
+  "tileColors": "0027e+",
+  "filename": "intro_07_bambi_rise.png",
+  "width": 22,
+  "height": 29,
+  "imageWidth": 176,
+  "imageHeight": 232,
+  "autoColor": false
+}

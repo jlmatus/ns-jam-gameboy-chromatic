@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "dfb52996-75d5-5656-9a90-c361fbe67d6e",
+  "name": "intro_08_bambi_dunk",
+  "symbol": "bg_intro_08_bambi_dunk",
+  "tileColors": "0061+01!02!03!022+0010+04!032+00!03!05!06!00f+01!004+01!00f+014+00!012+00f+014+02!012+00f+012+07!01!072+0011+01!073+0012+072+00!022+0014+022+0025+072+0014+01!072+0013+012+07!0014+01!00!01!0015+01!0022+",
+  "filename": "intro_08_bambi_dunk.png",
+  "width": 22,
+  "height": 20,
+  "imageWidth": 176,
+  "imageHeight": 160,
+  "autoColor": false
+}

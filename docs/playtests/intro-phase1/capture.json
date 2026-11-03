@@ -1,0 +1,135 @@
+{
+  "rom": "game/build/rom/ns-jam-intro-phase1.gbc",
+  "rom_sha256": "80c76dc36a442100862b1bb5725bf06fbb17be99fb6084342f390a4a0bbed5a0",
+  "emulator": "PyBoy 2.7.0",
+  "fps": 59.72750056960583,
+  "music_start_frame": 83,
+  "music_request_frame": 79,
+  "inputs": [],
+  "cuts": [
+    {
+      "frame": 79,
+      "intro_frame": -4,
+      "time_s": -0.066971,
+      "scene": "intro_01_court",
+      "camera": [
+        344,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 161,
+      "uniform_rgb": null,
+      "rgba_sha256": "34f6c3b4b53acc9e30a7877fbb50a51e1bc946d56257631191a1ab1ef1288dc8"
+    },
+    {
+      "frame": 322,
+      "intro_frame": 239,
+      "time_s": 4.001507,
+      "scene": "intro_02_torres_face",
+      "camera": [
+        176,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 161,
+      "uniform_rgb": null,
+      "rgba_sha256": "7abd48f1c128010468b4caa0040f28ec6a07b795444561fdd0f2232c96f24648"
+    },
+    {
+      "frame": 382,
+      "intro_frame": 299,
+      "time_s": 5.006069,
+      "scene": "intro_03_torres_run",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 161,
+      "uniform_rgb": null,
+      "rgba_sha256": "d97886d35138050d6f952a42485b80c16c9ac0d54d13bf85dcee4ff6d63c396f"
+    },
+    {
+      "frame": 621,
+      "intro_frame": 538,
+      "time_s": 9.007576,
+      "scene": "intro_04_matus",
+      "camera": [
+        328,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 161,
+      "uniform_rgb": [
+        8,
+        24,
+        40
+      ],
+      "rgba_sha256": "a05afd664b1ea905fffa0fbdf5f42ddd4cf31d5791659172199de2810b74b4ec"
+    }
+  ],
+  "samples": [
+    {
+      "time_s": 0.7,
+      "frame": 125,
+      "scene": "intro_01_court",
+      "pair": "pair-0_7.png",
+      "camera": [
+        344,
+        8
+      ]
+    },
+    {
+      "time_s": 2.5,
+      "frame": 232,
+      "scene": "intro_01_court",
+      "pair": "pair-2_5.png",
+      "camera": [
+        286,
+        8
+      ]
+    },
+    {
+      "time_s": 4.1,
+      "frame": 328,
+      "scene": "intro_02_torres_face",
+      "pair": "pair-4_1.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 6.5,
+      "frame": 471,
+      "scene": "intro_03_torres_run",
+      "pair": "pair-6_5.png",
+      "camera": [
+        168,
+        8
+      ]
+    },
+    {
+      "time_s": 9.6,
+      "frame": 656,
+      "scene": "intro_04_matus",
+      "pair": "pair-9_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 11.6,
+      "frame": 776,
+      "scene": "intro_04_matus",
+      "pair": "pair-11_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    }
+  ],
+  "frame_log": "frames.json",
+  "all_frame_directory": "game/build/intro-captures/intro-phase1"
+}
