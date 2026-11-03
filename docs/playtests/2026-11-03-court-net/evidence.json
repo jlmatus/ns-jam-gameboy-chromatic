@@ -1,0 +1,74 @@
+{
+  "romSha256": "9f744cf1e26f76768a6a4d2cc2a3f622d1fd7021d20a49282666914a92c32ac5",
+  "walkBoundsPixels": {
+    "left": 8,
+    "right": 312,
+    "far": 40,
+    "near": 127
+  },
+  "inboundReturnX": [
+    32,
+    288
+  ],
+  "recordings": [
+    {
+      "recording": "game/artifacts/playtests/session-22c49e17-3666-40ae-88c1-5a578d7e6f58",
+      "samples": [
+        {
+          "frame": 933,
+          "image": "far-three-point-end.png",
+          "sha256": "07eb6a2dc77922e1fb8fee10c645aa7104746e763a61608b1e70a0e1df4883f2"
+        },
+        {
+          "frame": 1023,
+          "image": "baseline-apron.png",
+          "sha256": "255359caef823acd938efcef4586a1fbe9840eb2a00ad68175d630a6d3475f6e"
+        },
+        {
+          "frame": 1279,
+          "image": "near-three-point-end.png",
+          "sha256": "c6d54a72d897f78f87f6240c884d78a2a57ae5f6a4e29096f60e4326e69e80e4"
+        }
+      ]
+    },
+    {
+      "recording": "game/artifacts/playtests/session-f4f06df8-c1e3-4bd4-9819-1dad0a405ff9",
+      "samples": [
+        {
+          "frame": 1011,
+          "image": "net-score.png",
+          "sha256": "9820773b72c9064f38cf9dffdf7749646c1cf6eae0427a83b3ca488b208b5851"
+        },
+        {
+          "frame": 1071,
+          "image": "made-basket.png",
+          "sha256": "e2719708e5451fa8385af42193353260d9de48ca66069d1ceac7e89d4628ea1d"
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "capture": "net-sound.wav",
+    "source": "game/artifacts/playtests/session-f4f06df8-c1e3-4bd4-9819-1dad0a405ff9/made-basket-full.wav",
+    "sourceStartSeconds": 16.45,
+    "durationSeconds": 0.95,
+    "peak": 3328,
+    "sha256": "be8241f5f20007d8de64e8d8e3530e62a9e66c01cb71ff4688d1815d1347403a",
+    "nativeEvent": {
+      "frame": 1011,
+      "id": 9,
+      "name": "JAM_SFX_SWISH"
+    },
+    "replayImageHashesMatched": true
+  },
+  "validation": [
+    "Sanitizer suite passed: six players reach four edge/apron corners, inbound return, made-shot/dunk net cue once, no net cue on miss/block",
+    "Official ROM build and checksum inspection passed",
+    "512-byte static stack headroom preserved"
+  ],
+  "limits": [
+    "Native gameplay and APU capture; physical hardware listening not verified",
+    "Existing paused browser game preserved; refreshed export available on reload",
+    "Full out-of-bounds turnover rules remain deferred"
+  ]
+}

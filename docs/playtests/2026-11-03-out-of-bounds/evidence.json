@@ -1,0 +1,39 @@
+{
+  "nativeRomSha256": "1e151b2e7def47898d19ed195df129401b4b67bea1a7af776ea30beb6f237b01",
+  "browserRomSha256": "c3e06f40fcd8c57e8c2da8edaabed3e2edbe4cd514b31b6470a1b1ee2a19af8f",
+  "nativeWhistleFrame": 1206,
+  "nativeWhistleId": 22,
+  "nativeClockAtCall": "2:56",
+  "nativeReturnToPlayFrame": 1606,
+  "stackHeadroomBytes": 512,
+  "checks": [
+    "Sanitizer rules suite passed",
+    "All 96 roster/slot/edge combinations",
+    "No pass/shot escape on the crossing update",
+    "Outside receiver catch",
+    "Legal inbound exemption",
+    "Exact-once audio event",
+    "Pause and dead-ball clock freeze",
+    "Native gameplay replay and matching PCM replay frame hashes"
+  ],
+  "scope": "Ball-handler and catch violations with existing baseline inbound restart. Loose-ball last-touch and nearest-boundary throw-in placement remain unimplemented.",
+  "browserSaveLimitation": "Preview saved-progress unavailable; prior paused browser game retained in original tab.",
+  "browserVerification": {
+    "result": "Held Up from fresh match; observed OUT - CPU BALL at Q1 2:59, then opponent inbound and return to play.",
+    "lineup": [
+      "MATUS",
+      "MAGIC",
+      "BAMBI",
+      "CHRUX"
+    ],
+    "difficulty": "WARM-UP",
+    "inputHoldMs": 2400,
+    "afterScreenshot": "browser-after.png",
+    "note": "Saved screenshot is after play resumed; native-whistle.png captures the violation message itself."
+  },
+  "audio": {
+    "clip": "whistle.wav",
+    "capture": "gameplay-audio.wav",
+    "method": "Exact controller replay through native PyBoy APU, matching both public gameplay frame hashes. Clip starts at 19.4 seconds and lasts 1.2 seconds."
+  }
+}

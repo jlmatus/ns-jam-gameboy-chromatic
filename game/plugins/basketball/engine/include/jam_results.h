@@ -11,4 +11,5 @@ typedef struct {
 void jam_results_init(jam_results_t *r,uint8_t held) JAM_BANKED;
 uint8_t jam_results_update(jam_results_t *r,uint8_t input) JAM_BANKED;
 void jam_results_tiles(const jam_game_t *g,uint8_t page,uint8_t *tiles) JAM_BANKED;
+void jam_results_row(const jam_game_t *g,uint8_t page,uint8_t row,uint8_t *tiles) JAM_BANKED;
 #endif

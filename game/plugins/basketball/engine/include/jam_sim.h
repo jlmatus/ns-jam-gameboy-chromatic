@@ -11,10 +11,13 @@
 /* Simulation positions use quarter pixels; rendering has no authority over rules. */
 #define JAM_COURT_WIDTH 320
 #define JAM_VIEW_WIDTH 400
-#define JAM_LEFT 32
-#define JAM_RIGHT 288
-#define JAM_TOP 70
-#define JAM_BOTTOM 116
+/* Walkable floor includes the apron; live-ball boundaries follow court art. */
+#define JAM_LEFT 8
+#define JAM_RIGHT 312
+#define JAM_TOP 40
+#define JAM_BOTTOM 127
+#define JAM_INBOUND_LEFT 32
+#define JAM_INBOUND_RIGHT 288
 #define JAM_RIM_LEFT 40
 #define JAM_RIM_RIGHT 280
 #define JAM_RIM_Y 88
@@ -74,6 +77,7 @@
 #define JAM_MSG_STAND 13
 #define JAM_MSG_INBOUND 14
 #define JAM_MSG_DUNK 15
+#define JAM_MSG_OUT 16
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -149,6 +153,8 @@ typedef struct {
 
 void jam_init(jam_game_t *g) JAM_BANKED;
 void jam_tipoff(jam_game_t *g) JAM_BANKED;
+uint8_t jam_check_boundary(jam_game_t *g) JAM_BANKED;
+uint8_t jam_court_contains(int16_t x,int16_t y) JAM_BANKED;
 void jam_begin_inbound(jam_game_t *g,uint8_t next_team) JAM_BANKED;
 void jam_inbound_update(jam_game_t *g,uint8_t pressed) JAM_BANKED;
 void jam_inbound_return(jam_game_t *g) JAM_BANKED;

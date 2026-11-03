@@ -63,18 +63,19 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
   polygon([[4,hip-2],[11,hip-2],[12,hip+3],[8,hip+4],[7,hip+2],[3,hip+3]],'#');
   polygon([[5,hip-1],[10,hip-1],[11,hip+2],[8,hip+2],[7,hip],[4,hip+2]],'s');
   stroke([[7+lean,shoulder],[7+lean,headY+6]],1,'o');
-  // Distinct eight-pixel faces retain the approved portrait cues.
+  // Ten-pixel heads retain readable portrait cues at handheld resolution.
+  // Keep their height/foot anchor unchanged so reach and collision stay intact.
   const faces=[
-    ['..###...','.#####..','##oooo#.','#oooooo#','#oo#ooo#','.ooooo#.','..o##o..','...##...'], // MATUS: spikes/goatee
-    ['..####..','.######.','#oooooo#','#o##o###','#oooooo#','.ooooo#.','..oooo..','...oo...'], // MAGIC: glasses/clean jaw
-    ['..####..','.######.','##oooo##','#oooooo#','#o#oo#o#','#oooooo#','.o####o.','..####..'], // BAMBI: round face/beard
-    ['.######.','########','#oooooo#','#o#oo#o#','#oooooo#','##oooo##','.######.','..####..'], // CHRUX: crop/full beard
-    ['.ssssss.','ssssssss','#oooooo#','###oo###','#oooooo#','#oooooo#','.o####o.','..####..'], // CHOMPA: beanie/glasses/chin
-    ['.##.##..','#######.','#oooooo#','#o#oo#o#','#oooooo#','.oo#oo#.','..oooo..','...oo...'] // MEAT: short textured hair
+    ['..#.#.#...','.#######..','##oooooo#.','#oo#oo#oo#','#oooooooo#','.oo####o#.','..oo##oo..','...####...'], // MATUS: spikes/goatee
+    ['..######..','.########.','#oooooooo#','##########','#o#oo#oo##','.ooooooo#.','..oooooo..','...oooo...'], // MAGIC: glasses/clean jaw
+    ['..######..','.########.','##oooooo##','#oo#oo#oo#','#oooooooo#','#oo####oo#','.########.','..######..'], // BAMBI: round face/beard
+    ['.########.','##########','#oooooooo#','#oo#oo#oo#','##oooooo##','###oooo###','.########.','..######..'], // CHRUX: crop/full beard
+    ['.ssssssss.','ssssssssss','#oooooooo#','##########','#o#oo#oo##','#ooo##ooo#','.oo####oo.','..######..'], // CHOMPA: beanie/glasses/chin
+    ['.###.###..','#########.','#oooooooo#','#oo#oo#oo#','#oooooooo#','.oo#oo#o#.','..oooooo..','...oooo...'] // MEAT: short textured hair
   ];
-  const head=back?(player===4?['.ssssss.','ssssssss','ssssssss','########','########','.######.','..oooo..','...oo...']:
-    ['..####..','.######.','########','########','########','.######.','..oooo..','...oo...']):faces[player];
-  head.forEach((row,y)=>[...row].forEach((v,x)=>{if(v!=='.')put(x+4,y+headY,v);}));
+  const head=back?(player===4?['.ssssssss.','ssssssssss','ssssssssss','##########','##########','.########.','..oooooo..','...oooo...']:
+    ['..######..','.########.','##########','##########','##########','.########.','..oooooo..','...oooo...']):faces[player];
+  head.forEach((row,y)=>[...row].forEach((v,x)=>{if(v!=='.')put(x+3,y+headY,v);}));
   limb(arms[1]);
   if(mirrored)c=c.map(r=>r.toReversed());
   // Redraw numerals AFTER turning, so jerseys never become mirror writing.

@@ -81,7 +81,7 @@ function make(player,t,fail){
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
   const cy=Math.min(55,Math.floor(y/zoom)),cx=Math.min(23,Math.floor(x/zoom)),c=cells[cy][cx];
   if(c!=='.')put(left+x,top+y,c==='#'?3:c==='o'?1:2,6);
-  if(player===4 && cy>=headY && cy<headY+2 && cx>=headX && cx<headX+8 && c==='s' && left+x>=0 && left+x<160 && top+y>=0 && top+y<128)hatTiles.add(((top+y)>>3)*20+((left+x)>>3));
+  if(player===4 && cy>=headY && cy<headY+2 && cx>=headX && cx<headX+10 && c==='s' && left+x>=0 && left+x<160 && top+y>=0 && top+y<128)hatTiles.add(((top+y)>>3)*20+((left+x)>>3));
  }
  // Hat colors are tile-wide; assign after skin pixels so they cannot overwrite it.
  for(const tile of hatTiles)attrs[Math.floor(tile/20)][tile%20]=2;
@@ -101,18 +101,16 @@ function make(player,t,fail){
   if(c!==cells[cy][cx] && top+y>=0 && top+y<128 && left+x>=0 && left+x<160 && attrs[(top+y)>>3][(left+x)>>3]===6)
    leftPixels[top+y][left+x]=c==='#'?3:c==='o'?1:c==='s'?2:0;
  }
- // The rejected-dunk composition uses an opaque, tile-aligned impact stamp.
+ // Keep rejection feedback in a small corner caption, outside the contest.
  // Keep it inside the 0..127 cinematic page; 128..191 overlap player OBJ art.
  if(fail===2&&t>=8&&t<54){
-  const bounce=t<32?[0,-2,1,0][Math.floor(t/2)%4]:0;
   const stamp=(canvas,attributes,preMirror)=>{
    const ink=(x,y,c)=>{if(preMirror)x=159-x;canvas[y][x]=c;attributes[y>>3][x>>3]=4;};
-   for(let y=40;y<72;y++)for(let x=24;x<136;x++)ink(x,y,3);
-   for(let x=24;x<136;x++)if(x<40||x>=120){ink(x,40,1);ink(x,71,1);}
-   for(let y=40;y<72;y++)if(y<47||y>=65){ink(24,y,1);ink(135,y,1);}
+   for(let y=0;y<16;y++)for(let x=0;x<56;x++)ink(x,y,3);
+   for(let x=0;x<56;x++){ink(x,0,1);ink(x,15,1);}
    [...'BLOCKED'].forEach((ch,i)=>{for(let y=0;y<7;y++)for(let x=0;x<5;x++)
     if(font[(ch.charCodeAt(0)-64)*16+y*2]&(1<<(6-x)))
-     for(let yy=0;yy<2;yy++)for(let xx=0;xx<2;xx++)ink(39+i*12+x*2+xx,49+y*2+yy+bounce,2);
+     ink(8+i*6+x,4+y,2);
    });
   };
   stamp(pixels,attrs,false);stamp(leftPixels,leftAttrs,true);

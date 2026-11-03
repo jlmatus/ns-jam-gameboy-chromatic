@@ -16,13 +16,15 @@ static void isolate(jam_game_t *g) {
 static void movement_pause(void) {
     jam_game_t g,before;
     jam_init(&g);isolate(&g);
+    g.owner=1;g.players[1].stun=255;
     step(&g,40,JAM_MOVE_RIGHT|JAM_MOVE_DOWN);
     assert(g.players[0].x==130*4 && g.players[0].y==JAM_BOTTOM*4);
     jam_update(&g,JAM_PAUSE);before=g;
     step(&g,60,JAM_MOVE_RIGHT|JAM_B);
     assert(g.players[0].x==before.players[0].x && g.tick==before.tick && g.charge==0);
     jam_update(&g,JAM_PAUSE);assert(!g.paused);
-    step(&g,500,JAM_MOVE_LEFT|JAM_MOVE_UP);
+    g.players[0].x=40*4;g.players[0].y=60*4;
+    step(&g,96,JAM_MOVE_LEFT|JAM_MOVE_UP);
     assert(g.players[0].x==JAM_LEFT*4);
     isolate(&g);g.players[0].x=JAM_LEFT*4+1;g.players[0].y=JAM_TOP*4+1;
     jam_update(&g,JAM_MOVE_LEFT|JAM_MOVE_UP);
@@ -40,6 +42,83 @@ static void passing(void) {
     jam_init(&g);isolate(&g);g.players[1].x=156*4;g.players[1].y=78*4;
     g.players[2].x=128*4;g.players[2].y=91*4;
     jam_update(&g,JAM_A);step(&g,g.duration-1,0);assert(g.steals>0 && g.owner>=2);
+}
+static void court_edges(void) {
+    jam_game_t g;
+    uint8_t roster,corner,i;
+    for(roster=0;roster<6;roster++)for(corner=0;corner<4;corner++) {
+        jam_init(&g);isolate(&g);g.setup.roster[0]=roster;
+        for(i=1;i<4;i++)g.players[i].stun=255;
+        g.owner=1; /* Off-ball players may reach the apron without a whistle. */
+        g.players[0].x=(corner&1?288:32)*4;
+        g.players[0].y=(corner&2?116:70)*4;
+        step(&g,96,(corner&1?JAM_MOVE_RIGHT:JAM_MOVE_LEFT)|(corner&2?JAM_MOVE_DOWN:JAM_MOVE_UP));
+        assert(g.players[0].x==(corner&1?312:8)*4);
+        assert(g.players[0].y==(corner&2?127:40)*4);
+        assert(g.owner==1 && g.controlled==0);
+    }
+    /* Returning from a baseline inbound must enter the painted court,
+       not stop at the newly expanded walkable apron. */
+    for(i=0;i<2;i++) {
+        jam_init(&g);g.next_team=i;g.inbounder=i*2;
+        g.players[g.inbounder].x=(i?306:14)*4;
+        for(corner=0;corner<24;corner++)jam_inbound_return(&g);
+        assert(g.players[g.inbounder].x==(i?288:32)*4);
+    }
+    puts("PASS: all six players reach four painted-court/apron corners; inbound return stays inside baseline");
+}
+static void boundary_violations(void) {
+    jam_game_t g,before;
+    jam_audio_state_t audio;
+    uint8_t r,p,edge,i;
+    int n;
+    static const int16_t xs[4]={160*4,160*4,24*4,295*4};
+    static const int16_t ys[4]={40*4,124*4,88*4,88*4};
+    for(r=0;r<6;r++)for(p=0;p<4;p++)for(edge=0;edge<4;edge++) {
+        jam_init(&g);g.setup.roster[p]=r;g.owner=p;
+        g.players[p].x=xs[edge];g.players[p].y=ys[edge];
+        g.charge=24;g.players[p].windup=12;
+        before=g;jam_audio_sync(&audio,&g);
+        jam_update(&g,JAM_A|JAM_B|JAM_TURBO);
+        assert(g.mode==JAM_RESET && g.message==JAM_MSG_OUT && g.owner==-1);
+        assert(g.next_team==((p>>1)^1) && !g.charge && !g.players[p].windup);
+        assert(g.passes==before.passes && g.shots==before.shots && !g.baskets && !g.steals);
+        assert(!memcmp(g.stats,before.stats,sizeof(g.stats)));
+        assert(jam_audio_event(&audio,&g)==JAM_SFX_WHISTLE);
+        assert(jam_audio_event(&audio,&g)==JAM_SFX_NONE);
+        before=g;jam_match_clock(&g,600);assert(!memcmp(&g,&before,sizeof(g)));
+        jam_update(&g,JAM_PAUSE);before=g;step(&g,20,0);
+        assert(g.reset_time==before.reset_time);
+        jam_update(&g,JAM_PAUSE);step(&g,60,0);
+        assert(g.mode==JAM_INBOUND && g.next_team==((p>>1)^1));
+    }
+    /* Legal corner space follows the slanted baselines, not a smaller box. */
+    assert(jam_court_contains(18*4,42*4));
+    assert(jam_court_contains(286*4,42*4));
+    assert(jam_court_contains(31*4,122*4));
+    assert(jam_court_contains(299*4,122*4));
+    assert(!jam_court_contains(25*4,122*4));
+    assert(!jam_court_contains(294*4,42*4));
+    /* Crossing and pressing pass, or releasing a charged shot, cannot escape. */
+    for(i=0;i<2;i++) {
+        jam_init(&g);isolate(&g);g.players[0].y=40*4+1;
+        if(i)g.charge=24;
+        jam_update(&g,JAM_MOVE_UP|(i?0:JAM_A));
+        assert(g.mode==JAM_RESET && !g.passes && !g.shots);
+    }
+    /* An out-of-bounds receiver is whistled on the catch. */
+    jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=124*4;
+    jam_pass(&g,0,1);step(&g,g.duration,0);
+    assert(g.mode==JAM_RESET && g.next_team==1 && g.message==JAM_MSG_OUT);
+    /* Both legal inbounders can stand outside and complete their throw. */
+    for(i=0;i<2;i++) {
+        jam_init(&g);jam_begin_inbound(&g,i);jam_audio_sync(&audio,&g);
+        for(n=0;n<900 && g.mode!=JAM_HELD;n++) {
+            jam_update(&g,0);assert(jam_audio_event(&audio,&g)!=JAM_SFX_WHISTLE);
+        }
+        assert(g.mode==JAM_HELD && g.owner==i*2+1);
+    }
+    puts("PASS: all six profiles/four slots/four boundaries, skewed corners, exact-once whistle, clock freeze, no escape by pass/shot, outside catch and legal inbounds");
 }
 static void shots_rebounds_reset(void) {
     jam_game_t g;uint8_t points,scoring_team;int k;
@@ -66,9 +145,9 @@ static void shots_rebounds_reset(void) {
     assert(g.mode==JAM_LOOSE && g.score[0]==0);
     for(k=0;k<240 && !g.rebounds;k++)jam_update(&g,0);
     assert(g.rebounds && g.owner>=0 && g.owner<4);
-    // Unreachable loose ball still has a bounded recovery path.
+    // An unreachable ball cannot produce a live catch by an outside player.
     g.mode=JAM_LOOSE;g.owner=-1;g.ball_x=2000;g.ball_y=2000;g.flight=0;g.height=0;
-    step(&g,180,0);assert(g.mode==JAM_HELD && g.owner>=0);
+    step(&g,180,0);assert(g.mode==JAM_RESET && g.message==JAM_MSG_OUT);
 }
 static void cpu_soak(void) {
     jam_game_t g;uint16_t i;uint8_t p;
@@ -316,6 +395,8 @@ static void warm_up_fairness(void) {
     assert(cpu_makes>230 && cpu_makes<330); /* Generous open CPU looks still miss. */
     jam_init(&easy);easy.setup.difficulty=JAM_WARM_UP;easy.grace=90;
     for(i=0;i<89;i++) {
+        /* Keep this repeated-contact grace test away from the sideline. */
+        easy.players[0].x=100*4;easy.players[0].y=88*4;
         easy.players[2]=easy.players[0];easy.players[2].cooldown=0;
         jam_update(&easy,0);assert(easy.owner==0 && !easy.steals);
     }
@@ -618,13 +699,15 @@ static void turbo_system(void) {
     uint8_t p,id,n;
     for(id=0;id<6;id++) {
         selected(&g,id);isolate(&g);
+        for(p=1;p<4;p++)g.players[p].stun=255;
         for(p=0;p<4;p++)assert(g.turbo_energy[p]==100 && !g.turbo_exhausted[p]);
         step(&g,20,JAM_TURBO);assert(g.turbo_energy[0]==100 && !g.players[0].turbo);
         walk=g;jam_update(&walk,JAM_MOVE_LEFT);jam_update(&g,JAM_MOVE_LEFT|JAM_TURBO);
         assert(walk.players[0].x-g.players[0].x==2 && g.turbo_energy[0]==99);
-        step(&g,99,JAM_MOVE_LEFT|JAM_TURBO);
+        /* Shuttle inside the court while testing reserve exhaustion. */
+        for(n=0;n<99;n++)jam_update(&g,((n/20)&1?JAM_MOVE_LEFT:JAM_MOVE_RIGHT)|JAM_TURBO);
         assert(!g.turbo_energy[0] && g.turbo_exhausted[0]);
-        step(&g,100,JAM_MOVE_RIGHT|JAM_TURBO);
+        for(n=0;n<100;n++)jam_update(&g,((n/20)&1?JAM_MOVE_LEFT:JAM_MOVE_RIGHT)|JAM_TURBO);
         assert(!g.turbo_energy[0] && g.turbo_exhausted[0] && !g.players[0].turbo);
         step(&g,12,0);assert(g.turbo_energy[0]==24 && g.turbo_exhausted[0]);
         jam_update(&g,0);assert(g.turbo_energy[0]==26 && !g.turbo_exhausted[0]);
@@ -849,7 +932,7 @@ static void overtime_matches(void) {
 static void audio_events(void) {
     jam_game_t g,before;
     jam_audio_state_t s;
-    uint8_t event,blocked=0,slam=0,i;
+    uint8_t event,blocked=0,slam=0,net=0,i;
     uint16_t seed;
     jam_init(&g);isolate(&g);jam_audio_sync(&s,&g);
     assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
@@ -881,10 +964,22 @@ static void audio_events(void) {
         for(i=0;i<JAM_DUNK_END;i++) {
             jam_update(&g,0);event=jam_audio_event(&s,&g);
             if(event==JAM_SFX_DUNK_SLAM)slam++;
-            assert(event!=JAM_SFX_SWISH); /* No second cue at dunk score frame. */
+            if(event==JAM_SFX_SWISH) {
+                net++;assert(g.dunk_time==JAM_DUNK_SCORE && g.baskets==1);
+            }
         }
     }
-    assert(slam==1);
+    assert(slam==1 && net==1);
+    /* Normal makes rustle exactly at scoring; misses never rustle. */
+    for(uint8_t made=0;made<2;made++) {
+        jam_init(&g);isolate(&g);g.players[0].x=245*4;
+        jam_shoot(&g,0,24);g.shot_good=made;net=0;jam_audio_sync(&s,&g);
+        for(i=0;i<g.duration+JAM_FINISH_FRAMES;i++) {
+            jam_update(&g,0);event=jam_audio_event(&s,&g);
+            if(event==JAM_SFX_SWISH){net++;assert(g.baskets==1 && g.flight==JAM_SCORE_FRAME);}
+        }
+        assert(net==made);
+    }
     jam_init(&g);jam_audio_sync(&s,&g);g.clock_seconds=0;g.match_phase=JAM_MATCH_BREAK;
     assert(jam_audio_event(&s,&g)==JAM_SFX_HORN);
     assert(jam_audio_event(&s,&g)==JAM_SFX_NONE);
@@ -974,6 +1069,7 @@ static void results_navigation(void) {
     jam_results_t r;
     jam_game_t g,before;
     struct {uint8_t left,tiles[360],right;} screen;
+    struct {uint8_t left,tiles[20],right;} row;
     uint8_t p,i,side;
     jam_results_init(&r,JAM_A);assert(!jam_results_update(&r,JAM_A));
     assert(!r.page && !r.changed);jam_results_update(&r,0);
@@ -995,6 +1091,13 @@ static void results_navigation(void) {
             for(uint16_t t=0;t<360;t++)assert(screen.tiles[t]>=192 && screen.tiles[t]<232);
             /* Both actions remain present on every page. */
             assert(screen.tiles[16*20]==193 && screen.tiles[17*20]==194);
+            /* Native rendering has only one row of scratch RAM. */
+            for(uint8_t y=0;y<18;y++) {
+                row.left=37;row.right=91;
+                jam_results_row(&g,p,y,row.tiles);
+                assert(row.left==37 && row.right==91);
+                assert(!memcmp(row.tiles,screen.tiles+(uint16_t)y*20,20));
+            }
         }
     }
     puts("PASS: results overview/four-player pages, both winners/all names/00 jersey, bounded large counters and font tiles, held-input guards/wrap, A rematch/B lineup, pure rendering with unchanged match data");
@@ -1027,6 +1130,8 @@ static void native_front_flow(void) {
     puts("PASS: native front flow, 270-VBlank proof, chunk invariance, all-frame skip/release guards, held navigation, help/home, intro replay and Start-to-play");
 }
 int main(void) {
+    court_edges();
+    boundary_violations();
     native_front_flow();
     player_box_scores();results_navigation();
     overtime_matches();

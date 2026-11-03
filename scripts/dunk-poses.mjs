@@ -52,7 +52,7 @@ export function dunkCells(player, time, failed=false, reverseJersey=false) {
   polygon([[8-bulk,hip-1],[15+bulk,hip-1],[16+bulk,hip+2],[13,hip+2],[11,hip],[7-bulk,hip+2]],'s');
   stroke([[12+lean,shoulder],[12+lean,headY+6]],1,'o');
   const base=bodyCells(player,0,false),baseY=48-profile.height_px;
-  for(let y=0;y<8;y++)for(let x=0;x<8;x++){const v=base[baseY+y][x+4];if(v!=='.')put(x+8+lean,headY+y,v);}
+  for(let y=0;y<8;y++)for(let x=0;x<10;x++){const v=base[baseY+y][x+3];if(v!=='.')put(x+7+lean,headY+y,v);}
   // Neck, face and jersey retain the six canonical identity cues.
   const number=['13','32','23','7','74','00'][player];
   const numerals={'0':['111','101','101','101','111'],'1':['010','110','010','010','111'],'2':['110','001','010','100','111'],'3':['110','001','010','001','110'],'4':['101','101','111','001','001'],'7':['111','001','010','010','010']};
@@ -61,5 +61,5 @@ export function dunkCells(player, time, failed=false, reverseJersey=false) {
     if(v==='1')put(reverseJersey?23-dx:dx,shoulder+3+y,'#');
   })));
   limb([[16+lean,shoulder],elbow,wrist]);
-  return {cells:c.map(row=>row.join('')),hand:wrist,headY,headX:8+lean,power};
+  return {cells:c.map(row=>row.join('')),hand:wrist,headY,headX:7+lean,power};
 }

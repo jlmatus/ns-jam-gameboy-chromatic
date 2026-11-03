@@ -11,7 +11,9 @@ const effects=[
  ['PASS',2,[step(6,67,3,0x34,4),step(8,79,2,0x45,2)]],
  ['SHOT',3,[step(8,60,5,0x45,3),step(10,72,4,0x35,2),step(8,84,2)]],
  ['RIM',5,[step(7,83,10,0x22,7,1),step(8,66,7,0x33,3,1),step(14,78,3,0x44,1,1)]],
- ['SWISH',6,[step(10,84,5,0x35,8),step(12,91,4,0x45,5),step(20,96,2,0x56,2)]],
+ // Noise-only net rustle: quick attack, softer falling tail; no pitched beep.
+ // Outranks the dunk impact so its long tail cannot suppress the scored net.
+ ['SWISH',9,[step(6,0,0,0x14,5),step(14,0,0,0x24,13),step(18,0,0,0x35,9),step(22,0,0,0x45,3)]],
  ['CATCH',2,[step(5,48,5,0x43,4),step(5,43,2)]],
  ['STEAL',5,[step(7,79,7,0x34,6),step(8,86,6),step(14,91,4)]],
  ['SHOVE',5,[step(7,36,10,0x43,11),step(14,29,6,0x54,6),step(10,24,2,0x65,2)]],
@@ -23,7 +25,9 @@ const effects=[
  ['HORN',10,[step(80,48,9,0x63,3,3),step(16,43,5,0x65,1,3)]],
  ['WIN',10,[step(28,48,9,0x63,3,3),step(16,60,8),step(16,64,8),step(16,67,8),step(40,72,8),step(24,79,5)]],
  ['LOSE',10,[step(28,48,8,0x63,3,3),step(20,60,7),step(20,55,7),step(24,51,6),step(40,48,5)]],
- ['TIE',10,[step(28,48,8,0x63,3,3),step(20,60,6),step(20,60,5),step(30,55,5)]]
+ ['TIE',10,[step(28,48,8,0x63,3,3),step(20,60,6),step(20,60,5),step(30,55,5)]],
+ // A piercing double whistle cuts through ordinary play sounds.
+ ['WHISTLE',10,[step(18,98,11,0,0,1),step(18,101,12,0,0,1),step(8,0,0),step(22,98,11,0,0,1),step(24,101,9,0,0,1)]]
 ];
 const frequency=note=>Math.max(0,Math.min(2047,Math.round(2048-131072/(440*2**((note-69)/12)))));
 const encode=steps=>{

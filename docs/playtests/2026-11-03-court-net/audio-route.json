@@ -1,0 +1,259 @@
+{
+  "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/project.gb",
+  "romSha256": "9f744cf1e26f76768a6a4d2cc2a3f622d1fd7021d20a49282666914a92c32ac5",
+  "actions": [
+    {
+      "buttons": [],
+      "frames": 120
+    },
+    {
+      "buttons": [
+        "start"
+      ],
+      "frames": 1
+    },
+    {
+      "buttons": [],
+      "frames": 120
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "right"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 30
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 175
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 1
+    },
+    {
+      "buttons": [],
+      "frames": 50
+    },
+    {
+      "buttons": [
+        "right",
+        "start"
+      ],
+      "frames": 100
+    },
+    {
+      "buttons": [
+        "b",
+        "right",
+        "start"
+      ],
+      "frames": 100
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 5
+    },
+    {
+      "buttons": [],
+      "frames": 60
+    }
+  ],
+  "samples": [
+    {
+      "frame": 1011,
+      "rgbaSha256": "93f2fd445a63944106678eabc10ede7694b1cfaeec9a2f266d4b1e2e8089a23a"
+    },
+    {
+      "frame": 1071,
+      "rgbaSha256": "6bdf9f549a8fa1ad7dec3882432f8548e0ad50dc3e930c656ffcd5049e223d5c"
+    }
+  ]
+}

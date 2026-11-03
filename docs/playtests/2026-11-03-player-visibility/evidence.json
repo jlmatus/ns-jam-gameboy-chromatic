@@ -1,0 +1,58 @@
+{
+  "failingSkipFrame": 500,
+  "browserSavedStateId": "a458927ad331396722c21526a998348f7f345d21234e4aadebc1efa368b5c730",
+  "beforeRom": "4092f21741cb7e0557af5b65823e4122512703a35de668549587ae34d5ef3df1",
+  "checkedRoutes": [
+    {
+      "skip": 500,
+      "link": "000097d3",
+      "visibleObjects": 20,
+      "recording": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/artifacts/playtests/session-54d8abbf-8144-48ba-9832-df7416cbb18e"
+    },
+    {
+      "skip": 120,
+      "link": "000097d3",
+      "visibleObjects": 20,
+      "recording": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/artifacts/playtests/session-779be5cf-866a-4338-8ed4-020d0cbedfdf"
+    }
+  ],
+  "checks": [
+    "Sanitizer suite passed",
+    "Static stack headroom 512 bytes",
+    "Native ROM checksum valid"
+  ],
+  "intermediateActorFixRom": "6f7f24706c146682350f309e60e92b522da86198983b2fedeb170bc9318cd3e8",
+  "causes": [
+    "Skipping the intro can leave PLAYER disabled on the inactive list. basketball_init previously activated only actors 1..6, while stock actors_render starts at PLAYER.prev. place() wrote ACTIVE without repairing linked lists.",
+    "The browser emulator painted the court over sprites while CGB background priority was enabled."
+  ],
+  "fixes": [
+    "Pin and clear DISABLED on all seven basketball actors, activating PLAYER first through the engine API.",
+    "Set CGB foreground object priority when starting a lineup; restore background priority for lineup menus and results."
+  ],
+  "fixedNativeRom": "24bf20f935a54a9733a36d219caecebd30ecc66a6c2049041df07dd1a321823b",
+  "fixedBrowserRom": "9a76a6c567cf062748be2f78bfb71d86275dfb02bd3c84902c4b3b836b57c982",
+  "checkedRoutesNote": "PyBoy route recordings cover the intermediate actor activation repair. Final ROM was additionally replayed in official Binjgb and played through the built-in browser.",
+  "finalVerification": {
+    "binjgb": {
+      "introSkipFrame": 500,
+      "captureFrame": 1038,
+      "screenshot": "binjgb-after.png",
+      "result": "Players and ball visible in final native ROM; capture precedes diagnostic memory writes."
+    },
+    "browser": {
+      "screenshot": "browser-after.png",
+      "lineup": [
+        "MATUS",
+        "MAGIC",
+        "BAMBI",
+        "CHRUX"
+      ],
+      "difficulty": "PICKUP",
+      "periods": 4,
+      "observedClock": "Q1 2:54",
+      "result": "Players and ball visible after lineup confirmation; browser paused for handoff."
+    }
+  },
+  "previewLimitation": "Existing preview listener serves the refreshed official web export, but plugin preview-close acknowledgement remains UNKNOWN and saved progress is unavailable. Original broken state retained; no save-state deletion or plugin internals changed."
+}

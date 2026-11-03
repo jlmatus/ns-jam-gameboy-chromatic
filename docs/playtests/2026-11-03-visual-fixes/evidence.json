@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-03",
+  "scope": "Native emulator visual-fix verification; not exhaustive native lineup or hardware testing",
+  "stackHeadroomBytes": {
+    "before": 172,
+    "after": 512
+  },
+  "mapTileOffsetAfterReplays": "00",
+  "recordings": [
+    {
+      "recordingPath": "game/artifacts/playtests/session-dd87b2c4-541b-41c0-93bc-dfd6d041ddf8",
+      "romSha256": "8a598dbd23f4ef58b8f89648eff704c9c3b18b87b7171e899149beeff80c79b9",
+      "samples": [
+        {
+          "frame": 6720,
+          "file": "dunk-transition.png",
+          "sha256": "a0b6da50b50ed71594e859a0dc2440df86555741fc559371a3eb516c12214b88"
+        },
+        {
+          "frame": 13920,
+          "file": "pickup-final.png",
+          "sha256": "fdc746e116826927150c60069b77ca02dbb7eda6c886a7ea9c85f5facc2ade2c"
+        },
+        {
+          "frame": 15771,
+          "file": "matus-stats.png",
+          "sha256": "af8b6b2c11a6bdaf3ba9439818c5cf92f27d35947d228376da98972ab80166d2"
+        },
+        {
+          "frame": 15870,
+          "file": "chrux-stats.png",
+          "sha256": "06f738af51537512830ea3e09a50a02ba79ad6372fe544e67e965c543d5b6a69"
+        }
+      ]
+    },
+    {
+      "recordingPath": "game/artifacts/playtests/session-201a812b-58bf-4a35-a541-765ec8a54f7d",
+      "romSha256": "8a598dbd23f4ef58b8f89648eff704c9c3b18b87b7171e899149beeff80c79b9",
+      "samples": [
+        {
+          "frame": 960,
+          "file": "blocked-caption.png",
+          "sha256": "bad91116ff9668e4389e258d96aa13856bc6f6106751cff99a8e417d69b138c0"
+        },
+        {
+          "frame": 8389,
+          "file": "four-period-court.png",
+          "sha256": "aea97e07a49b5714f7943da9586458b021e9abe5e55c5f67eda035bfae353bf6"
+        }
+      ]
+    },
+    {
+      "recordingPath": "game/artifacts/playtests/session-a1213d7f-112e-40ef-a766-9087a5076583",
+      "romSha256": "8a598dbd23f4ef58b8f89648eff704c9c3b18b87b7171e899149beeff80c79b9",
+      "samples": [
+        {
+          "frame": 8219,
+          "file": "winners-court.png",
+          "sha256": "ea8a75ca4b723270afe331a9e75149d7a58a48c9e2eed93b44bcef0537b1951f"
+        },
+        {
+          "frame": 22619,
+          "file": "period-break.png",
+          "sha256": "13053a2c10b06a1e92219c595c06ac1113f0cb60aac38b6d56973bc2b7c7c5c9"
+        },
+        {
+          "frame": 40649,
+          "file": "winners-final.png",
+          "sha256": "08acc657fde4be4207d96677149c0a1519c736169f7ece21c50373f7e373d59f"
+        }
+      ]
+    },
+    {
+      "recordingPath": "game/artifacts/playtests/session-b0383839-0d2e-47fa-871e-bc1c1d877a71",
+      "romSha256": "8a598dbd23f4ef58b8f89648eff704c9c3b18b87b7171e899149beeff80c79b9",
+      "samples": [
+        {
+          "frame": 1991,
+          "file": "warmup-court.png",
+          "sha256": "e416fde208e47d63796f83433499a0f4e7a6f60fd3dd98cdafa6f76830c63403"
+        }
+      ]
+    }
+  ],
+  "hostTests": "sh scripts/test.sh passed including 3240 setup combinations",
+  "budgets": {
+    "spriteTiles": "190/192",
+    "dunkBackgroundTiles": "124/128"
+  },
+  "limitations": [
+    "Court overlap remains possible during close contact; this pass improves identity detail rather than replacing collision or depth sorting.",
+    "Approved portrait masters and locked home artwork preserved."
+  ]
+}

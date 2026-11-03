@@ -19,6 +19,7 @@ uint8_t jam_audio_event(jam_audio_state_t *s,const jam_game_t *g) JAM_BANKED {
         event=g->score[0]>g->score[1]?JAM_SFX_WIN:g->score[0]<g->score[1]?JAM_SFX_LOSE:JAM_SFX_TIE;
     else if(s->seconds && !g->clock_seconds)event=JAM_SFX_HORN;
     else if(g->quarter!=s->quarter || (g->match_phase==JAM_MATCH_LIVE && s->phase>=JAM_MATCH_BREAK))event=JAM_SFX_START;
+    else if(g->mode==JAM_RESET && s->mode!=JAM_RESET && g->message==JAM_MSG_OUT)event=JAM_SFX_WHISTLE;
     else if(g->blocks!=s->blocks)
         event=g->mode==JAM_DUNK && g->dunk_result==JAM_DUNK_BLOCKED?JAM_SFX_DUNK_BLOCK:JAM_SFX_BLOCK;
     else if(g->mode==JAM_DUNK && s->mode!=JAM_DUNK)event=JAM_SFX_DUNK_LAUNCH;
@@ -26,7 +27,9 @@ uint8_t jam_audio_event(jam_audio_state_t *s,const jam_game_t *g) JAM_BANKED {
         if(g->dunk_result==JAM_DUNK_MADE)event=JAM_SFX_DUNK_SLAM;
         else if(g->dunk_result==JAM_DUNK_MISSED)event=JAM_SFX_RIM;
     }
-    else if(g->baskets!=s->baskets && g->mode!=JAM_DUNK)event=JAM_SFX_SWISH;
+    /* Score is credited only as the ball clears the net, including dunks.
+       Keep the earlier dunk rim impact separate from this net rustle. */
+    else if(g->baskets!=s->baskets)event=JAM_SFX_SWISH;
     else if(g->shoves!=s->shoves || g->runovers!=s->runovers)event=JAM_SFX_SHOVE;
     else if(g->steals!=s->steals)event=JAM_SFX_STEAL;
     else if(g->passes!=s->passes)event=JAM_SFX_PASS;

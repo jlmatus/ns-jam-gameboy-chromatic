@@ -402,6 +402,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         return;
     }
     if(g->mode==JAM_INBOUND){jam_inbound_update(g,pressed);return;}
+    if(jam_check_boundary(g))return;
     if(g->inbound_pass)jam_inbound_return(g);
     if(!g->players[human].stun && !(g->inbound_pass && human==g->inbounder)) {
         jam_player_t *a=&g->players[human];
@@ -418,6 +419,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         if(a->vx)a->heading=a->vx<0?JAM_FACE_LEFT:JAM_FACE_RIGHT;
         else if(a->vy)a->heading=a->vy<0?JAM_FACE_UP:JAM_FACE_DOWN;
         a->x+=a->vx;a->y+=a->vy;
+        if(jam_check_boundary(g))return;
         if(pressed&JAM_A) {
             if(g->mode==JAM_HELD && g->owner==(int8_t)human)jam_pass(g,human,human^1);
             else if(g->mode==JAM_HELD && g->owner>=0 && g->owner<2)jam_pass(g,g->owner,human);
@@ -440,7 +442,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         }
     } else g->charge=0;
     for(i=0;i<4;i++)if(i!=human && !(g->inbound_pass && i==g->inbounder)){
-        cpu(g,i);if(g->mode==JAM_DUNK)return;
+        cpu(g,i);if(g->mode==JAM_DUNK || jam_check_boundary(g))return;
     }
     for(i=0;i<3;i++)for(j=i+1;j<4;j++)
         if(!(g->inbound_pass && (i==g->inbounder || j==g->inbounder)))jam_contact(g,i,j);
@@ -453,6 +455,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         if(a->y<JAM_TOP*4) a->y=JAM_TOP*4;
         if(a->y>JAM_BOTTOM*4) a->y=JAM_BOTTOM*4;
     }
+    if(jam_check_boundary(g))return;
     if(g->mode==JAM_HELD) {
         g->ball_x=g->players[g->owner].x;
         g->ball_y=g->players[g->owner].y;
@@ -490,4 +493,6 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
             if(g->loose_rebound){g->rebounds++;g->stats[g->target].rebounds++;g->loose_rebound=0;}
         }
     }
+    /* A catch/interception outside is called before the next input frame. */
+    jam_check_boundary(g);
 }

@@ -1,0 +1,23 @@
+{
+  "romSha256": "9f744cf1e26f76768a6a4d2cc2a3f622d1fd7021d20a49282666914a92c32ac5",
+  "nativeFrames": 1071,
+  "sampleRate": 48000,
+  "sampleFrames": 857273,
+  "channels": 2,
+  "peak": 5376,
+  "rms": 521.1405077398923,
+  "nonzeroSamples": 121042,
+  "frameChecks": [
+    {
+      "frame": 1011,
+      "expected": "93f2fd445a63944106678eabc10ede7694b1cfaeec9a2f266d4b1e2e8089a23a",
+      "actual": "93f2fd445a63944106678eabc10ede7694b1cfaeec9a2f266d4b1e2e8089a23a"
+    },
+    {
+      "frame": 1071,
+      "expected": "6bdf9f549a8fa1ad7dec3882432f8548e0ad50dc3e930c656ffcd5049e223d5c",
+      "actual": "6bdf9f549a8fa1ad7dec3882432f8548e0ad50dc3e930c656ffcd5049e223d5c"
+    }
+  ],
+  "wavSha256": "dfd808cfcd1b51b7aa740216285183db5a34b55d01c767d6fcceb02c2eaaa311"
+}

@@ -4,6 +4,7 @@
 #include "camera.h"
 #include "input.h"
 #include "scroll.h"
+#include "system.h"
 #include "ui.h"
 #include "jam_sim.h"
 #include "jam_hud.h"
@@ -29,7 +30,9 @@ static uint8_t in_menu;
 static uint8_t in_results;
 static jam_results_t results;
 static uint8_t front_active;
-static uint8_t menu_tiles[360];
+/* Stream menus a row at a time. A full-screen buffer left only 172 bytes
+   below the CPU stack and nested Dunk Cam bank calls corrupted globals. */
+static uint8_t menu_tiles[20];
 /* Front playback and menu composition never run together. Reuse their RAM. */
 #define front (*(jam_front_t *)menu_tiles)
 static uint8_t hud[40];
@@ -76,6 +79,7 @@ static void draw_hud(void) {
         case JAM_MSG_THREE:text(20,"SWISH - THREE");break;
         case JAM_MSG_MISS:text(20,"OFF THE RIM");break;
         case JAM_MSG_BLOCK:text(20,"BLOCK");break;
+        case JAM_MSG_OUT:text(20,jam.next_team?"OUT - CPU BALL":"OUT - YOUR BALL");break;
         case JAM_MSG_CLOCK:text(20,"POSSESSION EXPIRED");break;
         case JAM_MSG_REACH:text(20,"REACH - GET IN FRONT");break;
         case JAM_MSG_SHOVE:text(20,"SHOVE");break;
@@ -255,8 +259,9 @@ static void draw_players(void) {
     }
 }
 static void menu_text(uint8_t x,uint8_t y,const char *s) {
-    uint16_t at=(uint16_t)y*20+x;
-    while(*s && at<(uint16_t)(y+1)*20 && at<360)menu_tiles[at++]=192+glyph(*s++);
+    uint8_t n=0;
+    while(*s && x+n<20)menu_tiles[n++]=192+glyph(*s++);
+    VBK_REG=0;set_win_tiles(x,y,n,1,menu_tiles);
 }
 static void difficulty_text(uint8_t x,uint8_t y,uint8_t level) {
     menu_text(x,y,level==JAM_WARM_UP?"WARM-UP":level==JAM_PICKUP?"PICKUP":"WINNERS STAY");
@@ -264,6 +269,7 @@ static void difficulty_text(uint8_t x,uint8_t y,uint8_t level) {
 static void draw_menu(void) {
     uint8_t i,y,attrs[20];
     uint16_t n;
+    LCDC_REG|=LCDCF_BGON;
     jam_menu_style();
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
     if(jam_menu.stage<4) {
@@ -271,7 +277,9 @@ static void draw_menu(void) {
         else jam_card_render(jam_menu.cursor,jam_menu.page,jam_menu.stage);
         ui_set_pos(0,0);return;
     }
-    for(n=0;n<360;n++)menu_tiles[n]=192;
+    for(n=0;n<20;n++)menu_tiles[n]=192;
+    VBK_REG=0;
+    for(y=0;y<18;y++)set_win_tiles(0,y,20,1,menu_tiles);
     if(jam_menu.stage==JAM_MENU_DIFFICULTY) {
         menu_text(2,2,"5 CPU DIFFICULTY");
         for(i=0;i<3;i++) {difficulty_text(3,5+i*2,i);if(jam_menu.cursor==i)menu_text(1,5+i*2,">");}
@@ -301,18 +309,22 @@ static void draw_menu(void) {
     for(i=0;i<20;i++)attrs[i]=5;
     VBK_REG=1;
     for(y=0;y<18;y++)set_win_tiles(0,y,20,1,attrs);
-    VBK_REG=0;set_win_tiles(0,0,20,18,menu_tiles);
+    VBK_REG=0;
     ui_set_pos(0,0);
 }
 static void draw_results(void) {
     uint8_t i,y,attrs[20];
+    LCDC_REG|=LCDCF_BGON;
     jam_menu_style();
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
-    jam_results_tiles(&jam,results.page,menu_tiles);
     for(i=0;i<20;i++)attrs[i]=5;
     VBK_REG=1;
     for(y=0;y<18;y++)set_win_tiles(0,y,20,1,attrs);
-    VBK_REG=0;set_win_tiles(0,0,20,18,menu_tiles);
+    VBK_REG=0;
+    for(y=0;y<18;y++) {
+        jam_results_row(&jam,results.page,y,menu_tiles);
+        set_win_tiles(0,y,20,1,menu_tiles);
+    }
     ui_set_pos(0,0);
 }
 static void start_lineup(void) {
@@ -321,6 +333,10 @@ static void start_lineup(void) {
     jam_front_scene_restore();
     if(!jam_init_lineup(&jam,&jam_menu.setup))return;
     front_active=in_menu=in_results=0;view_x=45;jam_player_palettes(&jam.setup);
+    /* On CGB bit 0 controls BG/OBJ priority, not background visibility.
+       Court athletes, ball and net must stay in front of the painted floor.
+       Set this explicitly instead of inheriting cinematic priority state. */
+    if(_is_CGB)LCDC_REG&=~LCDCF_BGON;
     jam_sfx_stop();jam_sfx_sync(&jam);jam_sfx_play(JAM_SFX_START);
     __critical { clock_last_vblank=sys_time; }
     VBK_REG=0;set_bkg_data(192,40,jam_font);set_bkg_data(232,5,jam_turbo_tiles);
@@ -343,7 +359,14 @@ void basketball_init(void) BANKED {
     camera_settings=0;
     camera_offset_x=camera_offset_y=0;
     for(i=0;i<4;i++){facing[i]=i>=2?1:0;old_x[i]=jam.players[i].x;old_y[i]=jam.players[i].y;moving[i]=0;}
-    for(i=1;i<=6;i++) activate_actor(&actors[i]);
+    /* A mid-intro skip can leave PLAYER disabled and on the inactive list.
+       Stock rendering starts at PLAYER.prev, so merely setting ACTIVE in
+       place() cannot reconnect the rest of the team. Activate the anchor
+       first, pinned to avoid scene-entry camera culling, then the other OBJs. */
+    for(i=0;i<=6;i++) {
+        actors[i].flags=(actors[i].flags&~ACTOR_FLAG_DISABLED)|ACTOR_FLAG_PINNED|ACTOR_FLAG_PERSISTENT;
+        activate_actor(&actors[i]);
+    }
     // Native OAM order: net lip, ball, then depth-sorted bodies. Players cannot hide a swish.
     for(i=0;i<=6;i++) {
         actors[i].frame=actors[i].frame_start=actors[i].animations[0].start;

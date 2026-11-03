@@ -1,0 +1,162 @@
+{
+  "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/project.gb",
+  "romSha256": "1e151b2e7def47898d19ed195df129401b4b67bea1a7af776ea30beb6f237b01",
+  "actions": [
+    {
+      "buttons": [],
+      "frames": 500
+    },
+    {
+      "buttons": [
+        "start"
+      ],
+      "frames": 1
+    },
+    {
+      "buttons": [],
+      "frames": 120
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "right"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 30
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 3
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 2
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 25
+    },
+    {
+      "buttons": [],
+      "frames": 2
+    },
+    {
+      "buttons": [
+        "a"
+      ],
+      "frames": 175
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 150
+    },
+    {
+      "buttons": [
+        "up"
+      ],
+      "frames": 18
+    },
+    {
+      "buttons": [],
+      "frames": 600
+    }
+  ],
+  "samples": [
+    {
+      "frame": 1206,
+      "rgbaSha256": "5150b1929b2b7a15b273c37a780cdef6da51d63d6e831be85137f44b3fc75ea0"
+    },
+    {
+      "frame": 1806,
+      "rgbaSha256": "a162bc38fba572b5bc75796b9cfef8b3c591a9976d41e36d30c522338e09305b"
+    }
+  ]
+}
