@@ -124,7 +124,7 @@
         },
         {
           "time": 16,
-          "tiles": 102,
+          "tiles": 101,
           "zoom": 1.75,
           "originY": 10.4296875,
           "hand": [
@@ -468,7 +468,7 @@
       "frames": [
         {
           "time": 16,
-          "tiles": 102,
+          "tiles": 101,
           "zoom": 1.75,
           "originY": 10.4296875,
           "hand": [
@@ -868,7 +868,7 @@
         },
         {
           "time": 16,
-          "tiles": 91,
+          "tiles": 92,
           "zoom": 1.75,
           "originY": 10.4296875,
           "hand": [

@@ -16,8 +16,9 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     const [x,y]=points[i-1],[xx,yy]=points[i],n=Math.max(Math.abs(xx-x),Math.abs(yy-y));
     for(let t=0;t<=n;t++)disc(Math.round(x+(xx-x)*t/(n||1)),Math.round(y+(yy-y)*t/(n||1)),r,v);
   }};
+  const profile=bodyProfiles[player];
   const limb=points=>{stroke(points,1.5,'#');stroke(points,.8,'o');};
-  const polygon=(pts,v)=>{for(let y=0;y<BODY_H;y++)for(let x=0;x<BODY_W;x++){
+  const polygon=(pts,v,maxY=BODY_H)=>{for(let y=0;y<maxY;y++)for(let x=0;x<BODY_W;x++){
     let inside=false;
     for(let i=0,j=pts.length-1;i<pts.length;j=i++){
       const [a,b]=pts[i],[d,e]=pts[j];
@@ -29,8 +30,9 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
   const crouch=pose===5||pose===9||pose===10||pose===15?4:0;
   const lean=pose===1?2:pose===2?1:0;
   const front=pose===3,back=pose===4;
-  const profile=bodyProfiles[player];
-  const bulk=pose<5||pose>=10?(profile.mass===4?1:profile.mass===1?-1:0):0;
+  // Build reads in ready/run/turn poses: heavy +2, broad/stocky +1, lean -1 per side.
+  // Shot/contact poses stay shared so the crew sheet fits below UI tile 192.
+  const bulk=pose<5||pose>=10?(profile.mass===4?2:profile.mass===3?1:profile.mass===1?-1:0):0;
   const headY=48-profile.height_px+crouch,shoulder=headY+8,hip=29+crouch;
   // Legs bend at separate knee and ankle joints. Strides trade the planted foot.
   let legs;
@@ -57,17 +59,21 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     front||back?[[[4,shoulder],[2,24],[3,28]],[[11,shoulder],[13,21],[14,17]]]:
     [[[5,shoulder],[3,24],[5,28]],[[10,shoulder],[12,23],[14,24]]];
   limb(arms[0]);
-  polygon([[4+lean-bulk,shoulder-1],[11+lean+bulk,shoulder],[12+bulk,hip-2],[10+bulk,hip+3],[3-bulk,hip+2]],'#');
-  polygon([[5+lean-bulk,shoulder],[10+lean+bulk,shoulder+1],[10+bulk,hip-1],[5-bulk,hip-1]],'s');
-  // Shorts, waistband, and separate leg openings.
-  polygon([[4,hip-2],[11,hip-2],[12,hip+3],[8,hip+4],[7,hip+2],[3,hip+3]],'#');
-  polygon([[5,hip-1],[10,hip-1],[11,hip+2],[8,hip+2],[7,hip],[4,hip+2]],'s');
+  // Extra width stops above row 32 so leg tiles stay shared across the crew.
+  const trunk=(b,h,maxY)=>{
+    polygon([[4+lean-b,shoulder-1],[11+lean+b,shoulder],[12+b,hip-2],[10+b,hip+3],[3-b,hip+2]],'#',maxY);
+    polygon([[5+lean-b,shoulder],[10+lean+b,shoulder+1],[10+b,hip-1],[5-b,hip-1]],'s',maxY);
+    // Shorts, waistband, and separate leg openings.
+    polygon([[4-h,hip-2],[11+h,hip-2],[12+h,hip+3],[8,hip+4],[7,hip+2],[3-h,hip+3]],'#',maxY);
+    polygon([[5-h,hip-1],[10+h,hip-1],[11+h,hip+2],[8,hip+2],[7,hip],[4-h,hip+2]],'s',maxY);
+  };
+  if(bulk>0){trunk(0,0,BODY_H);trunk(bulk,bulk,32);}else trunk(bulk,0,BODY_H);
   stroke([[7+lean,shoulder],[7+lean,headY+6]],1,'o');
   // Distinct eight-pixel faces retain the approved portrait cues.
   const faces=[
-    ['..###...','.#####..','##oooo#.','#oooooo#','#oo#ooo#','.ooooo#.','..o##o..','...##...'], // MATUS: spikes/goatee
-    ['..####..','.######.','#oooooo#','#o##o###','#oooooo#','.ooooo#.','..oooo..','...oo...'], // MAGIC: glasses/clean jaw
-    ['..####..','.######.','##oooo##','#oooooo#','#o#oo#o#','#oooooo#','.o####o.','..####..'], // BAMBI: round face/beard
+    ['.#.##.#.','.######.','##oooo##','#oooooo#','#o#oo#o#','#oooooo#','.oo##oo.','..o##o..'], // MATUS: spikes/goatee
+    ['..####..','.######.','#oooooo#','###oo###','#oooooo#','.oooooo.','..oooo..','...oo...'], // MAGIC: glasses/clean jaw
+    ['..####..','.#o##o#.','#oooooo#','#o#oo#o#','#oooooo#','#oooooo#','.oooooo.','..oooo..'], // BAMBI: receding hair/round clean face
     ['.######.','########','#oooooo#','#o#oo#o#','#oooooo#','##oooo##','.######.','..####..'], // CHRUX: crop/full beard
     ['.ssssss.','ssssssss','#oooooo#','###oo###','#oooooo#','#oooooo#','.o####o.','..####..'], // CHOMPA: beanie/glasses/chin
     ['.##.##..','#######.','#oooooo#','#o#oo#o#','#oooooo#','.oo#oo#.','..oooo..','...oo...'] // MEAT: short textured hair
