@@ -137,12 +137,13 @@ def card(stage, player=matus_source, source=portrait):
         text(im, 144, y, str(value), G)
         for b in range(10):
             d.rectangle((107+b*5, y+9, 110+b*5, y+12), fill=G if b<value else T)
-    style=player['playstyle'].split()
-    text(im, 107, 112, style[0], G)
-    text(im, 104, 121, ' '.join(style[1:]), I)
-    d.rectangle((0, 128, 159, 143), fill=N)
-    text(im, 8, 129, 'A PICK   B BACK', I)
-    text(im, 8, 137, 'SELECT ALL RATINGS', T)
+    # A full-width specialty ribbon keeps long labels out of the 56px stat
+    # column. The approved portrait remains at (3, 28), exactly 96 x 96.
+    style=player['playstyle']
+    assert len(style)*6 <= 156
+    d.rectangle((0, 128, 159, 135), fill=G)
+    text(im, (160-len(style)*6)//2, 129, style, N)
+    text(im, 5, 137, 'A PICK B BACK SELECT STATS', I)
     text(im, 0, 13, '<', I)
     text(im, 96, 13, '>', I)
     return im
@@ -250,7 +251,24 @@ images += [(f'matus-shot-{i:02}',shot(i)) for i in range(12)]
 chompa_source=roster['players'][4]
 chompa_portrait=json.loads((ROOT/'art/portraits'/chompa_source['cardSource']/'pixels.json').read_text())
 images += [(f'chompa-card-{i}',card(i,chompa_source,chompa_portrait)) for i in range(4)]
-packed=[pack(im,HOME_PAL,True) if i<3 else pack(im,CARD_PAL,True) if 4<=i<8 else pack(im,CHOMPA_PAL,True) if i>=20 else pack(im) for i,(_,im) in enumerate(images)]
+card_palettes={i:CARD_PAL for i in range(4,8)}
+card_palettes.update({i:CHOMPA_PAL for i in range(20,24)})
+card_frames={0:4,4:20}
+for player_id in (1,2,3,5):
+    player=roster['players'][player_id]
+    source=json.loads((ROOT/'art/portraits'/player.get('cardSource',player['source'])/'pixels.json').read_text())
+    colors=source['palette']
+    # Compact masters enlarge only by whole pixels; no redraw or smoothing.
+    palettes=[[quant(rgb(c)) for c in f] for f in [
+        [N,T,G,I], [N,D,T,G], [D,colors['#'][:7],colors['s'][:7],colors['o'][:7]],
+    ]]
+    palettes += [palettes[-1]]*(7-len(palettes))
+    start=len(images)
+    card_frames[player_id]=start
+    for stage in range(4):
+        images.append((f'{player["name"].lower()}-card-{stage}',card(stage,player,source)))
+        card_palettes[start+stage]=palettes
+packed=[pack(im,HOME_PAL,True) if i<3 else pack(im,card_palettes[i],True) if i in card_palettes else pack(im) for i,(_,im) in enumerate(images)]
 shared=set.intersection(*(set(bytes(t) for t in p[1]) for p in packed[8:20]))
 common=sorted(shared);common_ids={t:i for i,t in enumerate(common)}
 dynamic_max=max(sum(bytes(t) not in shared for t in p[1]) for p in packed[8:20])
@@ -319,10 +337,16 @@ code+='static const unsigned short palettes[]={'+','.join(map(str,palette_words)
 code+='static const unsigned short home_palettes[]={'+','.join(map(str,home_words))+'};\n'
 code+='static const unsigned short card_palettes[]={'+','.join(map(str,card_words))+'};\n'
 code+='static const unsigned short chompa_palettes[]={'+','.join(map(str,words(CHOMPA_PAL)))+'};\n'
+for player_id in (1,2,3,5):
+    code+=f'static const unsigned short card_palettes_{player_id}[]={{'+','.join(map(str,words(card_palettes[card_frames[player_id]])))+'};\n'
 code+='static const unsigned short dark[]={'+','.join([str(palette_words[0])]*28)+'};\n'
 code+='void jam_front_art(unsigned char frame) BANKED {unsigned char buffer=jam_cam_upload==1?1:0,intro=frame>=8 && frame<20,transition=!intro || !jam_cam_upload;if(transition){memcpy(BkgPalette,dark,sizeof(dark));set_bkg_palette(0,7,dark);wait_vbl_done();}if(intro && !jam_cam_upload)jam_front_common();switch(frame){\n'
 code+=''.join(f'case {i}:jam_front_frame_{i}({"buffer" if 8<=i<20 else ""});break;\n' for i in range(len(images)))
-code+='}if(!intro)jam_cam_upload=0;else jam_cam_upload=buffer+1;if(transition){const unsigned short *active=frame<3?home_palettes:(frame>=20?chompa_palettes:(frame>=4 && frame<8?card_palettes:palettes));wait_vbl_done();memcpy(BkgPalette,active,sizeof(palettes));set_bkg_palette(0,7,active);}}\n'
+palette_select=''.join(f'frame>={card_frames[p]} && frame<{card_frames[p]+4}?card_palettes_{p}:' for p in (1,2,3,5))
+code+='}if(!intro)jam_cam_upload=0;else jam_cam_upload=buffer+1;if(transition){const unsigned short *active='+palette_select+'frame<3?home_palettes:(frame>=20?chompa_palettes:(frame>=4 && frame<8?card_palettes:palettes));wait_vbl_done();memcpy(BkgPalette,active,sizeof(palettes));set_bkg_palette(0,7,active);}}\n'
+code+='void jam_front_card(unsigned char player,unsigned char stage) BANKED {\n'
+code+='static const unsigned char frames[]={'+','.join(str(card_frames[i]) for i in range(6))+'};\n'
+code+='jam_front_art(frames[player]+stage);}\n'
 (CORE/'jam_front_art.c').write_text(code)
 (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(f'Intro double buffer: {len(common)} common + 2 x {dynamic_max} dynamic = {len(common)+2*dynamic_max}/256 BG tiles')

@@ -14,6 +14,7 @@ void jam_front_init(jam_front_t *f,uint8_t held) JAM_BANKED;
 uint8_t jam_front_update(jam_front_t *f,uint8_t input,uint16_t frames) JAM_BANKED;
 #ifdef __SDCC
 void jam_front_art(uint8_t frame) BANKED;
+void jam_front_card(uint8_t player,uint8_t stage) BANKED;
 void jam_front_scene_save(void) BANKED;
 void jam_front_scene_restore(void) BANKED;
 #endif

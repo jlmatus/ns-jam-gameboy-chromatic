@@ -267,8 +267,7 @@ static void draw_menu(void) {
     jam_menu_style();
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
     if(jam_menu.stage<4) {
-        if(!jam_menu.cursor && !jam_menu.page)jam_front_art(4+jam_menu.stage);
-        else if(jam_menu.cursor==4 && !jam_menu.page)jam_front_art(20+jam_menu.stage);
+        if(!jam_menu.page)jam_front_card(jam_menu.cursor,jam_menu.stage);
         else jam_card_render(jam_menu.cursor,jam_menu.page,jam_menu.stage);
         ui_set_pos(0,0);return;
     }

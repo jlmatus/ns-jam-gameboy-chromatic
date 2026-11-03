@@ -1,0 +1,3201 @@
+[
+  {
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 120,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 13.462333,
+      "gameTimeMs": 2009.124755859375
+    },
+    "debugMode": "rom"
+  },
+  {
+    "input": {
+      "buttons": [
+        "start"
+      ],
+      "frames": 60,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 180,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "start"
+    ],
+    "sampledButtons": [
+      "start"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 22.833292,
+      "gameTimeMs": 3013.6871337890625
+    },
+    "startFrame": 120,
+    "advancedFrames": 60,
+    "appliedButtons": [
+      "start"
+    ],
+    "samples": [
+      {
+        "frame": 180,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": [
+          "start"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 60,
+      "startFrame": 120,
+      "frame": 180,
+      "advancedFrames": 60,
+      "appliedButtons": [
+        "start"
+      ],
+      "sampledButtons": [
+        "start"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 182,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 23.0835,
+      "gameTimeMs": 3047.1725463867188
+    },
+    "startFrame": 180,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 182,
+        "width": 160,
+        "height": 144,
+        "sha256": "d871c97227f23f477b050ae81d08ec561140cc963b88955c0908230c8779b031",
+        "rgbaSha256": "7bdd21ce4f4a9c76b47b2048a5e1daa7a8195147a3bbc9f7db26ff08a463ad7a",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 180,
+      "frame": 182,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 212,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 26.389375,
+      "gameTimeMs": 3549.4537353515625
+    },
+    "startFrame": 182,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 212,
+        "width": 160,
+        "height": 144,
+        "sha256": "7d1a4008143a241a27696453e0f1c445c5a88f813f7d2c0beb6414e48db85524",
+        "rgbaSha256": "a23518f867d1a0addfce0e456f52f8ce60b3daa16a730b75f7f2f6e3dc333d93",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 182,
+      "frame": 212,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 0,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 236,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 30.278,
+      "gameTimeMs": 3951.2786865234375
+    },
+    "startFrame": 212,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 236,
+        "width": 160,
+        "height": 144,
+        "sha256": "c089efb176ba0af1748ad896e27a15a40830cc7af41ffa6693c94421d7fc8c92",
+        "rgbaSha256": "95e96170162b11da286529629b1f8b4572831b7ec6ed6ad5ee8bdd4f0bd4c085",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 212,
+      "frame": 236,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 0,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 237,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 30.432542,
+      "gameTimeMs": 3968.0213928222656
+    },
+    "startFrame": 236,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 237,
+        "width": 160,
+        "height": 144,
+        "sha256": "c089efb176ba0af1748ad896e27a15a40830cc7af41ffa6693c94421d7fc8c92",
+        "rgbaSha256": "95e96170162b11da286529629b1f8b4572831b7ec6ed6ad5ee8bdd4f0bd4c085",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 236,
+      "frame": 237,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 0,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 261,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 33.323001,
+      "gameTimeMs": 4369.846343994141
+    },
+    "startFrame": 237,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 261,
+        "width": 160,
+        "height": 144,
+        "sha256": "1e03f0a148c4c4835d568827264ab019e20d9a96a0973f0a327f0106e654a53a",
+        "rgbaSha256": "a73370cfe58842e88b78f1774b3c1bf427f6cbcf4492d671a2b636917264cd73",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 237,
+      "frame": 261,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 0,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 285,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 36.291542,
+      "gameTimeMs": 4771.671295166016
+    },
+    "startFrame": 261,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 285,
+        "width": 160,
+        "height": 144,
+        "sha256": "7d1a4008143a241a27696453e0f1c445c5a88f813f7d2c0beb6414e48db85524",
+        "rgbaSha256": "a23518f867d1a0addfce0e456f52f8ce60b3daa16a730b75f7f2f6e3dc333d93",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 261,
+      "frame": 285,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 0,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 309,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 39.079875,
+      "gameTimeMs": 5173.496246337891
+    },
+    "startFrame": 285,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 309,
+        "width": 160,
+        "height": 144,
+        "sha256": "d57d64d095ed4d47427570aec116d74f20722c21c43aefc91cc2270fc059e14d",
+        "rgbaSha256": "1cf3e4467fe942f90b0b7b735b26652fddbcd6e294515f029806db29189e1f60",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 285,
+      "frame": 309,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 1,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 333,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 41.452,
+      "gameTimeMs": 5575.321197509766
+    },
+    "startFrame": 309,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 333,
+        "width": 160,
+        "height": 144,
+        "sha256": "34783249a29a66dfb64738ac0ab6aee8afb56969982c076a8644693d51c18ac7",
+        "rgbaSha256": "4ae14427b3e218bf3d63b3fce9caaab6a565ba6363dffd6d8cc2cea7d430aaa9",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 309,
+      "frame": 333,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 1,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 334,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 41.595875,
+      "gameTimeMs": 5592.063903808594
+    },
+    "startFrame": 333,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 334,
+        "width": 160,
+        "height": 144,
+        "sha256": "34783249a29a66dfb64738ac0ab6aee8afb56969982c076a8644693d51c18ac7",
+        "rgbaSha256": "4ae14427b3e218bf3d63b3fce9caaab6a565ba6363dffd6d8cc2cea7d430aaa9",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 333,
+      "frame": 334,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 1,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 358,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 43.837042,
+      "gameTimeMs": 5993.888854980469
+    },
+    "startFrame": 334,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 358,
+        "width": 160,
+        "height": 144,
+        "sha256": "446300acbf1f38a07180bd0812384deb73008ef79103771e97a0780def29a2c8",
+        "rgbaSha256": "683ed93d47767f3250a880ae9d17fd2585867ee86aa2eb8586968ba55203d6ba",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 334,
+      "frame": 358,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 1,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 382,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 46.282208,
+      "gameTimeMs": 6395.713806152344
+    },
+    "startFrame": 358,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 382,
+        "width": 160,
+        "height": 144,
+        "sha256": "d57d64d095ed4d47427570aec116d74f20722c21c43aefc91cc2270fc059e14d",
+        "rgbaSha256": "1cf3e4467fe942f90b0b7b735b26652fddbcd6e294515f029806db29189e1f60",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 358,
+      "frame": 382,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 1,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 406,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 48.962625,
+      "gameTimeMs": 6797.538757324219
+    },
+    "startFrame": 382,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 406,
+        "width": 160,
+        "height": 144,
+        "sha256": "9ced974a8b5e622ce81e89320ef142b3c77ef48871fb3340a98c51e6af2c57fc",
+        "rgbaSha256": "b2662907e187c93afa93900e3b8870a3779c846b7a64f17e5091f61c22920094",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 382,
+      "frame": 406,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 2,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 430,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 51.146875,
+      "gameTimeMs": 7199.363708496094
+    },
+    "startFrame": 406,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 430,
+        "width": 160,
+        "height": 144,
+        "sha256": "66a5e5595675bcfe37dbf5ce752d2af834111f723b5fbf7dbd794286779a7dc1",
+        "rgbaSha256": "ce8d2867c269083df08e970f8ca29cefd68e5952a10a831254b7c2fef4efc69a",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 406,
+      "frame": 430,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 2,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 431,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 51.272042,
+      "gameTimeMs": 7216.106414794922
+    },
+    "startFrame": 430,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 431,
+        "width": 160,
+        "height": 144,
+        "sha256": "66a5e5595675bcfe37dbf5ce752d2af834111f723b5fbf7dbd794286779a7dc1",
+        "rgbaSha256": "ce8d2867c269083df08e970f8ca29cefd68e5952a10a831254b7c2fef4efc69a",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 430,
+      "frame": 431,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 2,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 455,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 53.480167,
+      "gameTimeMs": 7617.931365966797
+    },
+    "startFrame": 431,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 455,
+        "width": 160,
+        "height": 144,
+        "sha256": "91fb2645e177f3cae08dee36cd7b762187786ddab76858e9e2905c6b586d54d4",
+        "rgbaSha256": "33dd416c974d202c3002625f98cab41a00853a770d3249e6c1be7afd7d9a4ffe",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 431,
+      "frame": 455,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 2,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 479,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 55.840417,
+      "gameTimeMs": 8019.756317138672
+    },
+    "startFrame": 455,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 479,
+        "width": 160,
+        "height": 144,
+        "sha256": "9ced974a8b5e622ce81e89320ef142b3c77ef48871fb3340a98c51e6af2c57fc",
+        "rgbaSha256": "b2662907e187c93afa93900e3b8870a3779c846b7a64f17e5091f61c22920094",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 455,
+      "frame": 479,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 2,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 503,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 58.065167,
+      "gameTimeMs": 8421.581268310547
+    },
+    "startFrame": 479,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 503,
+        "width": 160,
+        "height": 144,
+        "sha256": "b3911b7ecec7313787036f7a33dcd01beeadeffd432eec1736d0bc074e13659b",
+        "rgbaSha256": "841a4c2cb913b13742150d73359f097a956d6c936d4f4999d8f8fcbb08262e05",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 479,
+      "frame": 503,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 3,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 527,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 60.339458,
+      "gameTimeMs": 8823.406219482422
+    },
+    "startFrame": 503,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 527,
+        "width": 160,
+        "height": 144,
+        "sha256": "ab7a9343980cca0912d92583b12b6163c174722c08a9ae4833a743f006f16d0a",
+        "rgbaSha256": "0f45ba25f8e8fe1c2360410f523b2a9812aaadafa3f565152da79a4b7c66d514",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 503,
+      "frame": 527,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 3,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 528,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 60.458,
+      "gameTimeMs": 8840.14892578125
+    },
+    "startFrame": 527,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 528,
+        "width": 160,
+        "height": 144,
+        "sha256": "ab7a9343980cca0912d92583b12b6163c174722c08a9ae4833a743f006f16d0a",
+        "rgbaSha256": "0f45ba25f8e8fe1c2360410f523b2a9812aaadafa3f565152da79a4b7c66d514",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 527,
+      "frame": 528,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 3,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 552,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 62.805917,
+      "gameTimeMs": 9241.973876953125
+    },
+    "startFrame": 528,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 552,
+        "width": 160,
+        "height": 144,
+        "sha256": "d6c716db4378854872ff00e1a04ad3a0bd8f524545bdd3afef8e048ea5c39ee4",
+        "rgbaSha256": "508d3dfa670d0edc59c71586981990f70abe112ed68fadfda165e3115f35f31c",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 528,
+      "frame": 552,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 3,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 576,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 65.212292,
+      "gameTimeMs": 9643.798828125
+    },
+    "startFrame": 552,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 576,
+        "width": 160,
+        "height": 144,
+        "sha256": "b3911b7ecec7313787036f7a33dcd01beeadeffd432eec1736d0bc074e13659b",
+        "rgbaSha256": "841a4c2cb913b13742150d73359f097a956d6c936d4f4999d8f8fcbb08262e05",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 552,
+      "frame": 576,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 3,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 600,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 67.797,
+      "gameTimeMs": 10045.623779296875
+    },
+    "startFrame": 576,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 600,
+        "width": 160,
+        "height": 144,
+        "sha256": "76849343af838345167eb154f3368c47ddf98396a9fd372ec961b214a801e4da",
+        "rgbaSha256": "da529f46193df628f37637bd219657240091490a77ed9fa0634218b002ff848d",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 576,
+      "frame": 600,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 4,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 624,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 70.123459,
+      "gameTimeMs": 10447.44873046875
+    },
+    "startFrame": 600,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 624,
+        "width": 160,
+        "height": 144,
+        "sha256": "a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24",
+        "rgbaSha256": "2a52aaf6b1b2fae58647c0f01e80c06f589fbed33488522140969fa641fb8296",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 600,
+      "frame": 624,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 4,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 625,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 70.253418,
+      "gameTimeMs": 10464.191436767578
+    },
+    "startFrame": 624,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 625,
+        "width": 160,
+        "height": 144,
+        "sha256": "a1779b33b15c9395a71b2af7a70b93a60fd0b2a0bba0bf1659b6131e49c89d24",
+        "rgbaSha256": "2a52aaf6b1b2fae58647c0f01e80c06f589fbed33488522140969fa641fb8296",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 624,
+      "frame": 625,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 4,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 649,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 72.313959,
+      "gameTimeMs": 10866.016387939453
+    },
+    "startFrame": 625,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 649,
+        "width": 160,
+        "height": 144,
+        "sha256": "c824ac45fcff69313e5f9917526621e7d30a812426f436befff3fb634a42fef8",
+        "rgbaSha256": "2c30d1eb79c681c655fadbc5245498373729184731c98fb4a57d619a9162e4c4",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 625,
+      "frame": 649,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 4,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 673,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 74.756375,
+      "gameTimeMs": 11267.841339111328
+    },
+    "startFrame": 649,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 673,
+        "width": 160,
+        "height": 144,
+        "sha256": "76849343af838345167eb154f3368c47ddf98396a9fd372ec961b214a801e4da",
+        "rgbaSha256": "da529f46193df628f37637bd219657240091490a77ed9fa0634218b002ff848d",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 649,
+      "frame": 673,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 4,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 697,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 77.195334,
+      "gameTimeMs": 11669.666290283203
+    },
+    "startFrame": 673,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 697,
+        "width": 160,
+        "height": 144,
+        "sha256": "c8ecf2c1e40b11f05dacacda95ee1adc93e9474d828701bcc773791e425946c3",
+        "rgbaSha256": "41311d08690a9f87e982a18f30b3ea2f33dbbdf61ce3a62ff30808304549fa6d",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 673,
+      "frame": 697,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-1",
+    "player": 5,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 721,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 79.440209,
+      "gameTimeMs": 12071.491241455078
+    },
+    "startFrame": 697,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 721,
+        "width": 160,
+        "height": 144,
+        "sha256": "f5e8f36a899c1854104ac6bc726754f38f03f906793401258913d8a1d8924cd4",
+        "rgbaSha256": "4b940b881b16ef8b98d12cc5cf84778e861b394b6e5ac7c5e1b851fe5f20614b",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 697,
+      "frame": 721,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "release",
+    "player": 5,
+    "input": {
+      "buttons": [],
+      "frames": 1,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 722,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 79.576042,
+      "gameTimeMs": 12088.233947753906
+    },
+    "startFrame": 721,
+    "advancedFrames": 1,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 722,
+        "width": 160,
+        "height": 144,
+        "sha256": "f5e8f36a899c1854104ac6bc726754f38f03f906793401258913d8a1d8924cd4",
+        "rgbaSha256": "4b940b881b16ef8b98d12cc5cf84778e861b394b6e5ac7c5e1b851fe5f20614b",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 1,
+      "startFrame": 721,
+      "frame": 722,
+      "advancedFrames": 1,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "ratings-2",
+    "player": 5,
+    "input": {
+      "buttons": [
+        "select"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 746,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "select"
+    ],
+    "sampledButtons": [
+      "select"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 81.995,
+      "gameTimeMs": 12490.058898925781
+    },
+    "startFrame": 722,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "select"
+    ],
+    "samples": [
+      {
+        "frame": 746,
+        "width": 160,
+        "height": 144,
+        "sha256": "8e4d6e5928144977a01a85879ac536e832eb0d56631be5a4741139357e3c2cba",
+        "rgbaSha256": "edde8ae57650c5ccabe9f8827b0340da0636d67cc6f9846fb15b97ace25cd616",
+        "sampledButtons": [
+          "select"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 722,
+      "frame": 746,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "select"
+      ],
+      "sampledButtons": [
+        "select"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "card",
+    "player": 5,
+    "input": {
+      "buttons": [
+        "b"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 770,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "b"
+    ],
+    "sampledButtons": [
+      "b"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 84.574916,
+      "gameTimeMs": 12891.883850097656
+    },
+    "startFrame": 746,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "b"
+    ],
+    "samples": [
+      {
+        "frame": 770,
+        "width": 160,
+        "height": 144,
+        "sha256": "c8ecf2c1e40b11f05dacacda95ee1adc93e9474d828701bcc773791e425946c3",
+        "rgbaSha256": "41311d08690a9f87e982a18f30b3ea2f33dbbdf61ce3a62ff30808304549fa6d",
+        "sampledButtons": [
+          "b"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 746,
+      "frame": 770,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "b"
+      ],
+      "sampledButtons": [
+        "b"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "next",
+    "player": 5,
+    "input": {
+      "buttons": [
+        "right"
+      ],
+      "frames": 24,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 794,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "right"
+    ],
+    "sampledButtons": [
+      "right"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 86.931458,
+      "gameTimeMs": 13293.708801269531
+    },
+    "startFrame": 770,
+    "advancedFrames": 24,
+    "appliedButtons": [
+      "right"
+    ],
+    "samples": [
+      {
+        "frame": 794,
+        "width": 160,
+        "height": 144,
+        "sha256": "7d1a4008143a241a27696453e0f1c445c5a88f813f7d2c0beb6414e48db85524",
+        "rgbaSha256": "a23518f867d1a0addfce0e456f52f8ce60b3daa16a730b75f7f2f6e3dc333d93",
+        "sampledButtons": [
+          "right"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 24,
+      "startFrame": 770,
+      "frame": 794,
+      "advancedFrames": 24,
+      "appliedButtons": [
+        "right"
+      ],
+      "sampledButtons": [
+        "right"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-0",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 824,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 89.7255,
+      "gameTimeMs": 13795.989990234375
+    },
+    "startFrame": 794,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 824,
+        "width": 160,
+        "height": 144,
+        "sha256": "873cad3511740d141a929bcda09d192e0b4e941dbe862e1a8212969194d99b31",
+        "rgbaSha256": "9f3fa7984a454529b534fe8fc09dce54e0cf346ecd9d4fdef6eae95bcd26bdd4",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 794,
+      "frame": 824,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 826,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 90.009583,
+      "gameTimeMs": 13829.475402832031
+    },
+    "startFrame": 824,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 826,
+        "width": 160,
+        "height": 144,
+        "sha256": "873cad3511740d141a929bcda09d192e0b4e941dbe862e1a8212969194d99b31",
+        "rgbaSha256": "9f3fa7984a454529b534fe8fc09dce54e0cf346ecd9d4fdef6eae95bcd26bdd4",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 824,
+      "frame": 826,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-1",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 856,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 93.327916,
+      "gameTimeMs": 14331.756591796875
+    },
+    "startFrame": 826,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 856,
+        "width": 160,
+        "height": 144,
+        "sha256": "947a9d17ff50a39c30a78b5fec8c25e989b6dcd03db8af004ab330b92b04389d",
+        "rgbaSha256": "ec6d60602f0ed8f1a51e460b6e27d34e654b96f7c1a3bb1074650e56915f053e",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 826,
+      "frame": 856,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 858,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 93.615541,
+      "gameTimeMs": 14365.242004394531
+    },
+    "startFrame": 856,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 858,
+        "width": 160,
+        "height": 144,
+        "sha256": "947a9d17ff50a39c30a78b5fec8c25e989b6dcd03db8af004ab330b92b04389d",
+        "rgbaSha256": "ec6d60602f0ed8f1a51e460b6e27d34e654b96f7c1a3bb1074650e56915f053e",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 856,
+      "frame": 858,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-2",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 888,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 96.822125,
+      "gameTimeMs": 14867.523193359375
+    },
+    "startFrame": 858,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 888,
+        "width": 160,
+        "height": 144,
+        "sha256": "9905a735a46989eea50491c03e9ffb2596d45e2c793fb57a81dd425c6ba63988",
+        "rgbaSha256": "d6964ee528fab9c1a8410c4ff42f2aebe6bbd913c0802a98335add994f8a9676",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 858,
+      "frame": 888,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 890,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 97.342958,
+      "gameTimeMs": 14901.008605957031
+    },
+    "startFrame": 888,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 890,
+        "width": 160,
+        "height": 144,
+        "sha256": "9905a735a46989eea50491c03e9ffb2596d45e2c793fb57a81dd425c6ba63988",
+        "rgbaSha256": "d6964ee528fab9c1a8410c4ff42f2aebe6bbd913c0802a98335add994f8a9676",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 888,
+      "frame": 890,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-3",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 920,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 100.155624,
+      "gameTimeMs": 15403.289794921875
+    },
+    "startFrame": 890,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 920,
+        "width": 160,
+        "height": 144,
+        "sha256": "ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6",
+        "rgbaSha256": "f91fae8d0d1efe3d66f1d2b8b8933dc61451702fa6b57785742591474e02afee",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 890,
+      "frame": 920,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 922,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 100.360165,
+      "gameTimeMs": 15436.775207519531
+    },
+    "startFrame": 920,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 922,
+        "width": 160,
+        "height": 144,
+        "sha256": "ff150d6ebdabe1075207e3c3da8a1169cd231ad05903a8c444365187422a22c6",
+        "rgbaSha256": "f91fae8d0d1efe3d66f1d2b8b8933dc61451702fa6b57785742591474e02afee",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 920,
+      "frame": 922,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-4",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 952,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 103.063374,
+      "gameTimeMs": 15939.056396484375
+    },
+    "startFrame": 922,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 952,
+        "width": 160,
+        "height": 144,
+        "sha256": "e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed",
+        "rgbaSha256": "0a433af4a0c03aec03c66660e95cffeeb7371bbfee828448375b3927c997420f",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 922,
+      "frame": 952,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 954,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 103.278124,
+      "gameTimeMs": 15972.541809082031
+    },
+    "startFrame": 952,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 954,
+        "width": 160,
+        "height": 144,
+        "sha256": "e854974692e6b3bf3f65971116acf8fe2808ca17bdd52c592f48a899dccca0ed",
+        "rgbaSha256": "0a433af4a0c03aec03c66660e95cffeeb7371bbfee828448375b3927c997420f",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 952,
+      "frame": 954,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-5",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 30,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 984,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 106.39954,
+      "gameTimeMs": 16474.822998046875
+    },
+    "startFrame": 954,
+    "advancedFrames": 30,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 984,
+        "width": 160,
+        "height": 144,
+        "sha256": "aa0291a0ba235e20dd1016ae4ea89d282d9d7d3b0ed19d32ae89c627e607120f",
+        "rgbaSha256": "b96e9b4ce2afa9f1b4623fc53c8abe1788f5d9cc727694f74489993045b79187",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 30,
+      "startFrame": 954,
+      "frame": 984,
+      "advancedFrames": 30,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 986,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 106.61054,
+      "gameTimeMs": 16508.30841064453
+    },
+    "startFrame": 984,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 986,
+        "width": 160,
+        "height": 144,
+        "sha256": "aa0291a0ba235e20dd1016ae4ea89d282d9d7d3b0ed19d32ae89c627e607120f",
+        "rgbaSha256": "b96e9b4ce2afa9f1b4623fc53c8abe1788f5d9cc727694f74489993045b79187",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 984,
+      "frame": 986,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  },
+  {
+    "label": "lineup-6",
+    "input": {
+      "buttons": [
+        "a"
+      ],
+      "frames": 120,
+      "sampleCount": 1
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 1106,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [
+      "a"
+    ],
+    "sampledButtons": [
+      "a"
+    ],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 135.962749,
+      "gameTimeMs": 18517.433166503906
+    },
+    "startFrame": 986,
+    "advancedFrames": 120,
+    "appliedButtons": [
+      "a"
+    ],
+    "samples": [
+      {
+        "frame": 1106,
+        "width": 160,
+        "height": 144,
+        "sha256": "a6ca0266fa3df4f0bda50ab82fc917631af1104a6052c792012d432ff5e3ec18",
+        "rgbaSha256": "4548e04fcbf68c0a9c22345a5325a7a882ef17ce8d4e8b377274fe98ba6eeca2",
+        "sampledButtons": [
+          "a"
+        ]
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 120,
+      "startFrame": 986,
+      "frame": 1106,
+      "advancedFrames": 120,
+      "appliedButtons": [
+        "a"
+      ],
+      "sampledButtons": [
+        "a"
+      ]
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "available",
+      "sampleCount": 1
+    }
+  },
+  {
+    "input": {
+      "buttons": [],
+      "frames": 2,
+      "sampleCount": 1,
+      "includeImages": false
+    },
+    "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam.gbc",
+    "frame": 1108,
+    "width": 160,
+    "height": 144,
+    "activeButtons": [],
+    "sampledButtons": [],
+    "cgb": true,
+    "romSha256": "cddb227bf9a7c707bc03dc24dcc2399596a2baf24057e03731888101d6937c09",
+    "runtime": {
+      "name": "PyBoy",
+      "version": "2.7.0",
+      "protocolVersion": 1,
+      "workerSha256": "6271cbbb9ca76d4d149173f4110705cfa3c567349f0cb7ceb347bf1df7598925"
+    },
+    "paused": true,
+    "clock": {
+      "mode": "paused",
+      "clockHz": 4194304,
+      "dotsPerFrame": 70224,
+      "executionWallTimeMs": 136.537541,
+      "gameTimeMs": 18550.918579101562
+    },
+    "startFrame": 1106,
+    "advancedFrames": 2,
+    "appliedButtons": [],
+    "samples": [
+      {
+        "frame": 1108,
+        "width": 160,
+        "height": 144,
+        "sha256": "48212ad90640ff7bf8c439e1fbcc2c06350b7a9ba6937fb1dd6859be7f09a579",
+        "rgbaSha256": "8da3f405334f50376ccb0f048548e5e80a2064b7d19039074d017e7a44dee437",
+        "sampledButtons": []
+      }
+    ],
+    "execution": {
+      "status": "completed",
+      "requestedFrames": 2,
+      "startFrame": 1106,
+      "frame": 1108,
+      "advancedFrames": 2,
+      "appliedButtons": [],
+      "sampledButtons": []
+    },
+    "genuineEmulatorFrames": true,
+    "imageDelivery": {
+      "status": "omitted",
+      "sampleCount": 1
+    }
+  }
+]
