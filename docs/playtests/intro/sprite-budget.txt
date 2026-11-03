@@ -1,0 +1,5 @@
+sprite_reactive_net: base 0, 4 tiles per reserved bank span
+sprite_prototype_crew: base 4, 176 tiles per reserved bank span
+sprite_basketball: base 180, 4 tiles per reserved bank span
+sprite_human_marker: base 184, 6 tiles per reserved bank span
+PASS: loader allocation 190/192; UI tiles 192–255 remain separate

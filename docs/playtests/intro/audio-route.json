@@ -1,0 +1,72 @@
+{
+  "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/ns-jam-intro.gbc",
+  "romSha256": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147",
+  "actions": [
+    {
+      "buttons": [],
+      "frames": 1786
+    }
+  ],
+  "samples": [
+    {
+      "frame": 125,
+      "rgbaSha256": "67e4cca84361e0aadd70df8fca4359268c0daa040b121f64aa7e7ed95882f8b4"
+    },
+    {
+      "frame": 232,
+      "rgbaSha256": "157888009dbe44c3651043b4825372067c9af8b5e762742982d43941d15130c9"
+    },
+    {
+      "frame": 328,
+      "rgbaSha256": "279aeb14c44a61b0f48aa1785edc5c0b898f397dfc442fb0422973531e22d92d"
+    },
+    {
+      "frame": 471,
+      "rgbaSha256": "47d053aea8dec3f0d87e426101b89975422e7ea8aa1abe247c7b4749d3c5a4af"
+    },
+    {
+      "frame": 656,
+      "rgbaSha256": "136b3d40a0455f92f809a66d4b29b36d6ff41d025fed96d951cedf2e70e3b6f3"
+    },
+    {
+      "frame": 776,
+      "rgbaSha256": "538d37170d9798bd1ed22a116d160166854ab741bade47dbd659e607b821d6a5"
+    },
+    {
+      "frame": 818,
+      "rgbaSha256": "8ef55a2ff8d587e533c4b74539892aca1a22afedf73935842f26304f6f5e66bf"
+    },
+    {
+      "frame": 836,
+      "rgbaSha256": "bff899319e337b9fb8c1e3efdc66cb16550ba3fb65af667696314d7efae47914"
+    },
+    {
+      "frame": 1086,
+      "rgbaSha256": "3ec388b3d89508c2a1435fe59e47ccc4cd7100265fad50cf30aafabfb55374bc"
+    },
+    {
+      "frame": 1176,
+      "rgbaSha256": "a20e3bee993376fa1acfbbbf78da0234555e7fbefd496ae17ef6833f28d57353"
+    },
+    {
+      "frame": 1242,
+      "rgbaSha256": "2cf00226d5dbc6dcd545d45e0f82627d6de10c520b60309df24e3510013b4354"
+    },
+    {
+      "frame": 1373,
+      "rgbaSha256": "28af46d6ad54dec95ec4d44a6e36e66621561b1cfee6bfadcdc8d5c2ec60e60f"
+    },
+    {
+      "frame": 1463,
+      "rgbaSha256": "0cf34dc73af82e4e91ccc70db1be9ee5d2052e9926cbed4cc9c5317370fe18d1"
+    },
+    {
+      "frame": 1582,
+      "rgbaSha256": "bff899319e337b9fb8c1e3efdc66cb16550ba3fb65af667696314d7efae47914"
+    },
+    {
+      "frame": 1648,
+      "rgbaSha256": "9fd1fc17b50fa4cace2bb644ae9b35fc4e3e0463f8c7a33423d5d9efb67a6e95"
+    }
+  ]
+}

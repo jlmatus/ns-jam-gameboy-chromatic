@@ -1,0 +1,207 @@
+{
+  "view": "oam",
+  "frame": 1176,
+  "totalObjects": 40,
+  "visibleObjects": 18,
+  "matchedObjects": 18,
+  "returnedObjects": 18,
+  "truncated": false,
+  "objects": [
+    {
+      "index": 0,
+      "x": 100,
+      "y": 13,
+      "tile": 0,
+      "attributes": 33,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 1,
+      "x": 92,
+      "y": 13,
+      "tile": 4,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 2,
+      "x": 82,
+      "y": 7,
+      "tile": 0,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 3,
+      "x": 74,
+      "y": 7,
+      "tile": 2,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 4,
+      "x": 80,
+      "y": 17,
+      "tile": 0,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 5,
+      "x": 79,
+      "y": 14,
+      "tile": 0,
+      "attributes": 33,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 6,
+      "x": 71,
+      "y": 14,
+      "tile": 4,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 7,
+      "x": 102,
+      "y": 21,
+      "tile": 2,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 8,
+      "x": 94,
+      "y": 21,
+      "tile": 4,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 9,
+      "x": 93,
+      "y": 29,
+      "tile": 0,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 10,
+      "x": 95,
+      "y": 35,
+      "tile": 0,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 11,
+      "x": 87,
+      "y": 35,
+      "tile": 2,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 12,
+      "x": 77,
+      "y": 29,
+      "tile": 2,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 13,
+      "x": 69,
+      "y": 29,
+      "tile": 4,
+      "attributes": 9,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 14,
+      "x": 83,
+      "y": 39,
+      "tile": 0,
+      "attributes": 33,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 15,
+      "x": 75,
+      "y": 39,
+      "tile": 4,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 16,
+      "x": 76,
+      "y": 38,
+      "tile": 0,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    },
+    {
+      "index": 17,
+      "x": 68,
+      "y": 38,
+      "tile": 2,
+      "attributes": 1,
+      "width": 8,
+      "height": 16,
+      "visible": true
+    }
+  ],
+  "scanlineSummary": {
+    "peakObjects": 9,
+    "hardwareLimit": 10,
+    "overLimitScanlines": 0,
+    "peakScanlines": [
+      21,
+      22,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  "romSha256": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147"
+}

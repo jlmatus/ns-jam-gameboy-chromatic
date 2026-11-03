@@ -1,0 +1,239 @@
+{
+  "rom_sha256": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147",
+  "checklist": [
+    {
+      "item": "No added text in the intro",
+      "pass": true,
+      "evidence": "All 14 native scene scripts and the 15 screenshot pairs; supplied jersey numbers remain in the supplied art."
+    },
+    {
+      "item": "No unplanned white/black frames",
+      "pass": false,
+      "evidence": "Some incoming scene loads extend designed flashes. At 25.1s the native frame remains white while the reference already shows the rollcall. See pair-25_1.png and frames.json."
+    },
+    {
+      "item": "Fades only after shots 6 and 14",
+      "pass": true,
+      "evidence": "Per-frame fade_running values in frames.json. Nonmodal native fade steps remain skippable."
+    },
+    {
+      "item": "Cuts match the reference/music exactly",
+      "pass": false,
+      "evidence": "Music routine 0 drives all cut requests and per-scene VBlank timestamps. Visible scene loading is longer than the simulator reference; strict frame matching therefore fails."
+    },
+    {
+      "item": "Actor offset calibrated at Matus's fingertips",
+      "pass": true,
+      "evidence": "Set Position uses timeline + (0,8) pixels. Stationary ball: 384/384 original opaque pixels match native 5-bit palette output at the expected coordinates. See pair-9_6.png."
+    },
+    {
+      "item": "A and START skip to title",
+      "pass": true,
+      "evidence": "34/34 real-ROM input tests, including two-frame taps during the glass shot and both fades. See actions.json and skip screenshots. Earlier failed short taps are retained under earlier-short-tap/."
+    },
+    {
+      "item": "Intro ends on title; replay and Play Game work",
+      "pass": true,
+      "evidence": "capture.json, title.png, replay.png, selection.png and actions.json."
+    },
+    {
+      "item": "Supplied assets unchanged; manual color remains off",
+      "pass": true,
+      "evidence": "SHA-256 equality for all 124 imported files; all 14 autoColor fields are false."
+    },
+    {
+      "item": "Tile/palette counts match validation",
+      "pass": true,
+      "evidence": "ModRetro graphics analysis in build.json. Compiled flip deduplication reduces allocation without altering PNGs."
+    }
+  ],
+  "actor_anchor_px": [
+    0,
+    8
+  ],
+  "actor_opaque_pixel_matches": [
+    384,
+    384
+  ],
+  "white_intervals": [
+    {
+      "scene": "intro_02_torres_face",
+      "start_s": 4.01825,
+      "end_s": 4.08522,
+      "frames": 5
+    },
+    {
+      "scene": "intro_06_magic_block",
+      "start_s": 12.607258,
+      "end_s": 12.624001,
+      "frames": 2
+    },
+    {
+      "scene": "intro_08_bambi_dunk",
+      "start_s": 17.998409,
+      "end_s": 18.098866,
+      "frames": 7
+    },
+    {
+      "scene": "intro_08_bambi_dunk",
+      "start_s": 18.199322,
+      "end_s": 18.199322,
+      "frames": 1
+    },
+    {
+      "scene": "intro_09_chompa",
+      "start_s": 20.995354,
+      "end_s": 21.146038,
+      "frames": 10
+    },
+    {
+      "scene": "intro_10_rollcall_1",
+      "start_s": 23.021221,
+      "end_s": 23.071449,
+      "frames": 4
+    },
+    {
+      "scene": "intro_11_rollcall_2",
+      "start_s": 23.523502,
+      "end_s": 23.590473,
+      "frames": 5
+    },
+    {
+      "scene": "intro_12_rollcall_3",
+      "start_s": 24.025784,
+      "end_s": 24.092754,
+      "frames": 5
+    },
+    {
+      "scene": "intro_13_rollcall_4",
+      "start_s": 24.528065,
+      "end_s": 24.611778,
+      "frames": 6
+    },
+    {
+      "scene": "intro_14_rollcall_5",
+      "start_s": 25.030346,
+      "end_s": 25.130802,
+      "frames": 7
+    },
+    {
+      "scene": "intro_14_rollcall_5",
+      "start_s": 26.034908,
+      "end_s": 26.051651,
+      "frames": 2
+    }
+  ],
+  "tile_counts": [
+    {
+      "scene": "intro_01_court",
+      "expected": 243,
+      "reported": 243,
+      "with_flip_deduplication": 219,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_02_torres_face",
+      "expected": 133,
+      "reported": 133,
+      "with_flip_deduplication": 129,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_03_torres_run",
+      "expected": 133,
+      "reported": 133,
+      "with_flip_deduplication": 132,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_04_matus",
+      "expected": 150,
+      "reported": 150,
+      "with_flip_deduplication": 148,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_05_magic",
+      "expected": 92,
+      "reported": 92,
+      "with_flip_deduplication": 90,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_06_magic_block",
+      "expected": 138,
+      "reported": 138,
+      "with_flip_deduplication": 134,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_07_bambi_rise",
+      "expected": 82,
+      "reported": 82,
+      "with_flip_deduplication": 79,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_08_bambi_dunk",
+      "expected": 151,
+      "reported": 151,
+      "with_flip_deduplication": 148,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_09_chompa",
+      "expected": 113,
+      "reported": 113,
+      "with_flip_deduplication": 112,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_10_rollcall_1",
+      "expected": 43,
+      "reported": 43,
+      "with_flip_deduplication": 42,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_11_rollcall_2",
+      "expected": 90,
+      "reported": 90,
+      "with_flip_deduplication": 88,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_12_rollcall_3",
+      "expected": 129,
+      "reported": 129,
+      "with_flip_deduplication": 125,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_13_rollcall_4",
+      "expected": 170,
+      "reported": 170,
+      "with_flip_deduplication": 166,
+      "palette_slots": 8
+    },
+    {
+      "scene": "intro_14_rollcall_5",
+      "expected": 218,
+      "reported": 218,
+      "with_flip_deduplication": 213,
+      "palette_slots": 8
+    }
+  ],
+  "rom_bank_usage": {
+    "declared_banks": 256,
+    "nonempty_banks": 167,
+    "highest_bank": 168,
+    "used_bytes": 2321764
+  },
+  "definition_of_done_met": false,
+  "limitations": [
+    "GB Studio scene-load flash durations exceed the simulator reference in some shots.",
+    "Camera shake uses the native engine RNG; the reference simulator can choose a different displacement.",
+    "Video reference is compressed and native RGB output expands 5-bit channels differently.",
+    "No physical cartridge was flashed or tested."
+  ]
+}

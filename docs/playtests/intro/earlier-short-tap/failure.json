@@ -1,0 +1,27 @@
+{
+  "rom_sha256": "d7753b37e9c91bcb42a3c32b2d810bcc238b8d8881b5a85a781cb2f07c5faee9",
+  "failures": [
+    {
+      "scene": "fade at 18.3s",
+      "button": "a",
+      "press_frame": 1176,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": false,
+      "title_pixels": false,
+      "pass": false,
+      "screenshot": "skip-fade-18.3-a.png"
+    },
+    {
+      "scene": "fade at 18.3s",
+      "button": "start",
+      "press_frame": 1176,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": false,
+      "title_pixels": false,
+      "pass": false,
+      "screenshot": "skip-fade-18.3-start.png"
+    }
+  ]
+}

@@ -16,7 +16,9 @@ TIMES = [0.7, 2.5, 4.1, 6.5, 9.6, 11.6, 12.3, 12.6, 16.8, 18.3, 19.4, 21.6, 23.1
 
 
 def symbols(path):
-    return {name: int(value, 16) for name, value in re.findall(r"^DEF (\S+) (0x[0-9A-Fa-f]+)", path.read_text(), re.M)}
+    result = {name: int(value, 16) for name, value in re.findall(r"^DEF (\S+) (0x[0-9A-Fa-f]+)", path.read_text(), re.M)}
+    assert result["_actors_active_head"] - result["_actors"] == 56 * 21, "GB Studio actor ABI changed"
+    return result
 
 
 def capture(rom, output, seconds):
@@ -97,10 +99,98 @@ def capture(rom, output, seconds):
     print(json.dumps(report, indent=2))
 
 
+def verify_actions(rom, output):
+    """Exercise real held inputs in every shot, then title replay and selection."""
+    report = json.loads((output / "capture.json").read_text())
+    sym = symbols(Path(str(rom) + ".debug/symbols.noi"))
+    title_address = sym["_scene_managua_court"]
+    expected = json.loads((output / "frames.json").read_text())[-1]["rgba_sha256"]
+    def current_scene(p):
+        address = sym["_current_scene"]
+        return p.memory[address] << 16 | p.memory[address + 1] | p.memory[address + 2] << 8
+    results = []
+    for cut in report["cuts"]:
+        if not cut["scene"].startswith("intro_"):
+            continue
+        for button in ("a", "start"):
+            p = PyBoy(str(rom), window="null", cgb=True, sound_emulated=False)
+            p.set_emulation_speed(0)
+            at = cut["frame"] + round(0.18 * FPS)
+            p.tick(at, render=True, sound=False)
+            p.button_press(button)
+            p.tick(35, render=True, sound=False)
+            p.button_release(button)
+            p.tick(10, render=True, sound=False)
+            actual = hashlib.sha256(p.screen.ndarray.tobytes()).hexdigest()
+            filename = f"skip-{cut['scene']}-{button}.png"
+            p.screen.image.save(output / filename)
+            results.append({"scene": cut["scene"], "button": button, "press_frame": at,
+                            "held_frames": 35, "neutral_frames": 10,
+                            "title_scene": current_scene(p) == title_address,
+                            "title_pixels": actual == expected,
+                            "pass": current_scene(p) == title_address and actual == expected,
+                            "screenshot": filename})
+            p.stop(save=False)
+    for time in (15.6, 18.3, 26.3):
+        for button in ("a", "start"):
+            p = PyBoy(str(rom), window="null", cgb=True, sound_emulated=False)
+            p.set_emulation_speed(0)
+            at = report["music_start_frame"] + round(time * FPS)
+            p.tick(at, render=True, sound=False)
+            p.button_press(button)
+            p.tick(2, render=True, sound=False)
+            p.button_release(button)
+            p.tick(35, render=True, sound=False)
+            actual = hashlib.sha256(p.screen.ndarray.tobytes()).hexdigest()
+            filename = f"skip-fade-{time}-{button}.png"
+            p.screen.image.save(output / filename)
+            results.append({"scene": f"fade at {time}s", "button": button, "press_frame": at,
+                            "held_frames": 2, "neutral_frames": 35,
+                            "title_scene": current_scene(p) == title_address,
+                            "title_pixels": actual == expected,
+                            "pass": current_scene(p) == title_address and actual == expected,
+                            "screenshot": filename})
+            p.stop(save=False)
+    p = PyBoy(str(rom), window="null", cgb=True, sound_emulated=False)
+    p.set_emulation_speed(0)
+    p.tick(report["music_start_frame"] + round(28 * FPS), render=True, sound=False)
+    p.screen.image.save(output / "title.png")
+    inputs = []
+    def press(button, frames=2, release=20):
+        p.button_press(button)
+        p.tick(frames, render=True, sound=False)
+        p.button_release(button)
+        p.tick(release, render=True, sound=False)
+        inputs.append({"button": button, "held_frames": frames, "neutral_frames": release})
+    press("down")
+    press("down")
+    press("a", release=15)
+    replay_scene = current_scene(p)
+    p.tick(45, render=True, sound=False)
+    p.screen.image.save(output / "replay.png")
+    replay_pass = replay_scene == sym["_scene_intro_01_court"]
+    press("a", release=30)
+    press("a", release=25)
+    p.screen.image.save(output / "selection.png")
+    selection_hash = hashlib.sha256(p.screen.ndarray.tobytes()).hexdigest()
+    selection_pass = current_scene(p) == title_address and selection_hash != expected
+    p.stop(save=False)
+    result = {"rom_sha256": report["rom_sha256"], "skip_tests": results,
+              "all_skips_pass": all(r["pass"] for r in results),
+              "replay_intro_pass": replay_pass, "title_to_selection_pass": selection_pass,
+              "replay_inputs": inputs}
+    (output / "actions.json").write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps({"skips_pass": sum(r["pass"] for r in results), "skips_total": len(results),
+                      "replay_pass": replay_pass, "selection_pass": selection_pass}))
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("rom", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--seconds", type=float, default=28.5)
+    parser.add_argument("--verify-actions", action="store_true")
     args = parser.parse_args()
     capture(args.rom.resolve(), args.output.resolve(), args.seconds)
+    if args.verify_actions:
+        verify_actions(args.rom.resolve(), args.output.resolve())

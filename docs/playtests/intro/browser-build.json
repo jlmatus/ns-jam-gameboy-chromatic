@@ -1,0 +1,20 @@
+{
+  "sourceRevision": "f8e3c8b2eea271f95a6f88fc25c7f915102c507d6942eb9803833c3af8bf4cbb",
+  "exportIdentity": {
+    "rom": {
+      "path": "rom/ns-jam.gbc",
+      "sha256": "c067c27ce60e3252974820f5baa98a0750d7d5cdeeded3be466255ec70c8df13",
+      "sizeBytes": 4194304
+    },
+    "index": {
+      "path": "index.html",
+      "sha256": "06b954cce54e2bc394cf7203e8a4680b7b3f5cb6470449aff2c7a72316e776bc",
+      "sizeBytes": 1166
+    },
+    "inventorySha256": "d85512545cfba65a62525ca5abf6688bd95e3986c8cf6b64f32fe8e9448cc633",
+    "files": 9,
+    "logicalBytes": 4374476
+  },
+  "url": "http://127.0.0.1:65253/25a32ab0597bf69e64e08ff310183b2f1146650347d865cd722d81bd49ad8c5f/",
+  "checkedNativeRom": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147"
+}

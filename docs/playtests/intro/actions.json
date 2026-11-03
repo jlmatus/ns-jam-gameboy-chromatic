@@ -1,0 +1,409 @@
+{
+  "rom_sha256": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147",
+  "skip_tests": [
+    {
+      "scene": "intro_01_court",
+      "button": "a",
+      "press_frame": 90,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_01_court-a.png"
+    },
+    {
+      "scene": "intro_01_court",
+      "button": "start",
+      "press_frame": 90,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_01_court-start.png"
+    },
+    {
+      "scene": "intro_02_torres_face",
+      "button": "a",
+      "press_frame": 333,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_02_torres_face-a.png"
+    },
+    {
+      "scene": "intro_02_torres_face",
+      "button": "start",
+      "press_frame": 333,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_02_torres_face-start.png"
+    },
+    {
+      "scene": "intro_03_torres_run",
+      "button": "a",
+      "press_frame": 393,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_03_torres_run-a.png"
+    },
+    {
+      "scene": "intro_03_torres_run",
+      "button": "start",
+      "press_frame": 393,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_03_torres_run-start.png"
+    },
+    {
+      "scene": "intro_04_matus",
+      "button": "a",
+      "press_frame": 632,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_04_matus-a.png"
+    },
+    {
+      "scene": "intro_04_matus",
+      "button": "start",
+      "press_frame": 632,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_04_matus-start.png"
+    },
+    {
+      "scene": "intro_05_magic",
+      "button": "a",
+      "press_frame": 811,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_05_magic-a.png"
+    },
+    {
+      "scene": "intro_05_magic",
+      "button": "start",
+      "press_frame": 811,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_05_magic-start.png"
+    },
+    {
+      "scene": "intro_06_magic_block",
+      "button": "a",
+      "press_frame": 841,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_06_magic_block-a.png"
+    },
+    {
+      "scene": "intro_06_magic_block",
+      "button": "start",
+      "press_frame": 841,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_06_magic_block-start.png"
+    },
+    {
+      "scene": "intro_07_bambi_rise",
+      "button": "a",
+      "press_frame": 1050,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_07_bambi_rise-a.png"
+    },
+    {
+      "scene": "intro_07_bambi_rise",
+      "button": "start",
+      "press_frame": 1050,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_07_bambi_rise-start.png"
+    },
+    {
+      "scene": "intro_08_bambi_dunk",
+      "button": "a",
+      "press_frame": 1169,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_08_bambi_dunk-a.png"
+    },
+    {
+      "scene": "intro_08_bambi_dunk",
+      "button": "start",
+      "press_frame": 1169,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_08_bambi_dunk-start.png"
+    },
+    {
+      "scene": "intro_09_chompa",
+      "button": "a",
+      "press_frame": 1348,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_09_chompa-a.png"
+    },
+    {
+      "scene": "intro_09_chompa",
+      "button": "start",
+      "press_frame": 1348,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_09_chompa-start.png"
+    },
+    {
+      "scene": "intro_10_rollcall_1",
+      "button": "a",
+      "press_frame": 1468,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_10_rollcall_1-a.png"
+    },
+    {
+      "scene": "intro_10_rollcall_1",
+      "button": "start",
+      "press_frame": 1468,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_10_rollcall_1-start.png"
+    },
+    {
+      "scene": "intro_11_rollcall_2",
+      "button": "a",
+      "press_frame": 1498,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_11_rollcall_2-a.png"
+    },
+    {
+      "scene": "intro_11_rollcall_2",
+      "button": "start",
+      "press_frame": 1498,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_11_rollcall_2-start.png"
+    },
+    {
+      "scene": "intro_12_rollcall_3",
+      "button": "a",
+      "press_frame": 1528,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_12_rollcall_3-a.png"
+    },
+    {
+      "scene": "intro_12_rollcall_3",
+      "button": "start",
+      "press_frame": 1528,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_12_rollcall_3-start.png"
+    },
+    {
+      "scene": "intro_13_rollcall_4",
+      "button": "a",
+      "press_frame": 1558,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_13_rollcall_4-a.png"
+    },
+    {
+      "scene": "intro_13_rollcall_4",
+      "button": "start",
+      "press_frame": 1558,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_13_rollcall_4-start.png"
+    },
+    {
+      "scene": "intro_14_rollcall_5",
+      "button": "a",
+      "press_frame": 1588,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_14_rollcall_5-a.png"
+    },
+    {
+      "scene": "intro_14_rollcall_5",
+      "button": "start",
+      "press_frame": 1588,
+      "held_frames": 35,
+      "neutral_frames": 10,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-intro_14_rollcall_5-start.png"
+    },
+    {
+      "scene": "fade at 15.6s",
+      "button": "a",
+      "press_frame": 1015,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-15.6-a.png"
+    },
+    {
+      "scene": "fade at 15.6s",
+      "button": "start",
+      "press_frame": 1015,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-15.6-start.png"
+    },
+    {
+      "scene": "fade at 18.3s",
+      "button": "a",
+      "press_frame": 1176,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-18.3-a.png"
+    },
+    {
+      "scene": "fade at 18.3s",
+      "button": "start",
+      "press_frame": 1176,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-18.3-start.png"
+    },
+    {
+      "scene": "fade at 26.3s",
+      "button": "a",
+      "press_frame": 1654,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-26.3-a.png"
+    },
+    {
+      "scene": "fade at 26.3s",
+      "button": "start",
+      "press_frame": 1654,
+      "held_frames": 2,
+      "neutral_frames": 35,
+      "title_scene": true,
+      "title_pixels": true,
+      "pass": true,
+      "screenshot": "skip-fade-26.3-start.png"
+    }
+  ],
+  "all_skips_pass": true,
+  "replay_intro_pass": true,
+  "title_to_selection_pass": true,
+  "replay_inputs": [
+    {
+      "button": "down",
+      "held_frames": 2,
+      "neutral_frames": 20
+    },
+    {
+      "button": "down",
+      "held_frames": 2,
+      "neutral_frames": 20
+    },
+    {
+      "button": "a",
+      "held_frames": 2,
+      "neutral_frames": 15
+    },
+    {
+      "button": "a",
+      "held_frames": 2,
+      "neutral_frames": 30
+    },
+    {
+      "button": "a",
+      "held_frames": 2,
+      "neutral_frames": 25
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "rom": "game/build/rom/ns-jam-intro.gbc",
+  "rom_sha256": "ceacfa2703157440fd5ee338aebd781d894301870a0aa3de4165ad020d91e147",
+  "emulator": "PyBoy 2.7.0",
+  "fps": 59.72750056960583,
+  "music_start_frame": 83,
+  "music_request_frame": 79,
+  "inputs": [],
+  "cuts": [
+    {
+      "frame": 79,
+      "intro_frame": -4,
+      "time_s": -0.066971,
+      "scene": "intro_01_court",
+      "camera": [
+        344,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "e18bcf4a39e9031043f11e42ae8f685de05653f0a04d33200e16be9107fa411c"
+    },
+    {
+      "frame": 322,
+      "intro_frame": 239,
+      "time_s": 4.001507,
+      "scene": "intro_02_torres_face",
+      "camera": [
+        176,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "7935f21e3761191ccc9ed1281bf828c1d8aa8753ed4e19d2da04edef8f6d5a2c"
+    },
+    {
+      "frame": 382,
+      "intro_frame": 299,
+      "time_s": 5.006069,
+      "scene": "intro_03_torres_run",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "d97886d35138050d6f952a42485b80c16c9ac0d54d13bf85dcee4ff6d63c396f"
+    },
+    {
+      "frame": 621,
+      "intro_frame": 538,
+      "time_s": 9.007576,
+      "scene": "intro_04_matus",
+      "camera": [
+        328,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": [
+        8,
+        24,
+        40
+      ],
+      "rgba_sha256": "a05afd664b1ea905fffa0fbdf5f42ddd4cf31d5791659172199de2810b74b4ec"
+    },
+    {
+      "frame": 800,
+      "intro_frame": 717,
+      "time_s": 12.00452,
+      "scene": "intro_05_magic",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "538d37170d9798bd1ed22a116d160166854ab741bade47dbd659e607b821d6a5"
+    },
+    {
+      "frame": 830,
+      "intro_frame": 747,
+      "time_s": 12.506802,
+      "scene": "intro_06_magic_block",
+      "camera": [
+        168,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "ac36ba141f5e56b03c9218446d2fb846b8fdf7d898eb6a40ad0b9f3efe6c6ece"
+    },
+    {
+      "frame": 1039,
+      "intro_frame": 956,
+      "time_s": 16.006027,
+      "scene": "intro_07_bambi_rise",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": [
+        0,
+        0,
+        0
+      ],
+      "rgba_sha256": "fc25121efb4a45f650f86e5ba6acb8f0916478fe3c99ae04f5dbf1102a650462"
+    },
+    {
+      "frame": 1158,
+      "intro_frame": 1075,
+      "time_s": 17.998409,
+      "scene": "intro_08_bambi_dunk",
+      "camera": [
+        8,
+        64
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": [
+        248,
+        248,
+        248
+      ],
+      "rgba_sha256": "bff899319e337b9fb8c1e3efdc66cb16550ba3fb65af667696314d7efae47914"
+    },
+    {
+      "frame": 1337,
+      "intro_frame": 1254,
+      "time_s": 20.995354,
+      "scene": "intro_09_chompa",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": [
+        248,
+        248,
+        248
+      ],
+      "rgba_sha256": "bff899319e337b9fb8c1e3efdc66cb16550ba3fb65af667696314d7efae47914"
+    },
+    {
+      "frame": 1457,
+      "intro_frame": 1374,
+      "time_s": 23.004478,
+      "scene": "intro_10_rollcall_1",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "9b82bdd21607c1bbf7242f4fcf4c01d57ddea2b88e02703181fbc63a5607d8be"
+    },
+    {
+      "frame": 1487,
+      "intro_frame": 1404,
+      "time_s": 23.50676,
+      "scene": "intro_11_rollcall_2",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "bde12032a7772c151435a91e21aeb13f1d5b237ec0137cfbc83869af34399356"
+    },
+    {
+      "frame": 1517,
+      "intro_frame": 1434,
+      "time_s": 24.009041,
+      "scene": "intro_12_rollcall_3",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "0848f440fcb8e06735da8b5ec1c97b14df5a05e8d3ff96d1cb90945a90dc6904"
+    },
+    {
+      "frame": 1547,
+      "intro_frame": 1464,
+      "time_s": 24.511322,
+      "scene": "intro_13_rollcall_4",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "6eb2ca30437bd6892841f3c2adfa2b1d3962d4d11dcb0149e6e089bbedf3fede"
+    },
+    {
+      "frame": 1577,
+      "intro_frame": 1494,
+      "time_s": 25.013603,
+      "scene": "intro_14_rollcall_5",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 162,
+      "uniform_rgb": null,
+      "rgba_sha256": "8c5acd981df9fc578be0c31080c85b2f497ad96164929aa6926b789b6541b45a"
+    },
+    {
+      "frame": 1697,
+      "intro_frame": 1614,
+      "time_s": 27.022728,
+      "scene": "managua_court",
+      "camera": [
+        8,
+        8
+      ],
+      "fade_running": 0,
+      "music_bank": 255,
+      "uniform_rgb": [
+        0,
+        0,
+        0
+      ],
+      "rgba_sha256": "fc25121efb4a45f650f86e5ba6acb8f0916478fe3c99ae04f5dbf1102a650462"
+    }
+  ],
+  "samples": [
+    {
+      "time_s": 0.7,
+      "frame": 125,
+      "scene": "intro_01_court",
+      "pair": "pair-0_7.png",
+      "camera": [
+        344,
+        8
+      ]
+    },
+    {
+      "time_s": 2.5,
+      "frame": 232,
+      "scene": "intro_01_court",
+      "pair": "pair-2_5.png",
+      "camera": [
+        284,
+        8
+      ]
+    },
+    {
+      "time_s": 4.1,
+      "frame": 328,
+      "scene": "intro_02_torres_face",
+      "pair": "pair-4_1.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 6.5,
+      "frame": 471,
+      "scene": "intro_03_torres_run",
+      "pair": "pair-6_5.png",
+      "camera": [
+        168,
+        8
+      ]
+    },
+    {
+      "time_s": 9.6,
+      "frame": 656,
+      "scene": "intro_04_matus",
+      "pair": "pair-9_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 11.6,
+      "frame": 776,
+      "scene": "intro_04_matus",
+      "pair": "pair-11_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 12.3,
+      "frame": 818,
+      "scene": "intro_05_magic",
+      "pair": "pair-12_3.png",
+      "camera": [
+        105,
+        8
+      ]
+    },
+    {
+      "time_s": 12.6,
+      "frame": 836,
+      "scene": "intro_06_magic_block",
+      "pair": "pair-12_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 16.8,
+      "frame": 1086,
+      "scene": "intro_07_bambi_rise",
+      "pair": "pair-16_8.png",
+      "camera": [
+        8,
+        36
+      ]
+    },
+    {
+      "time_s": 18.3,
+      "frame": 1176,
+      "scene": "intro_08_bambi_dunk",
+      "pair": "pair-18_3.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 19.4,
+      "frame": 1242,
+      "scene": "intro_08_bambi_dunk",
+      "pair": "pair-19_4.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 21.6,
+      "frame": 1373,
+      "scene": "intro_09_chompa",
+      "pair": "pair-21_6.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 23.1,
+      "frame": 1463,
+      "scene": "intro_10_rollcall_1",
+      "pair": "pair-23_1.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 25.1,
+      "frame": 1582,
+      "scene": "intro_14_rollcall_5",
+      "pair": "pair-25_1.png",
+      "camera": [
+        8,
+        8
+      ]
+    },
+    {
+      "time_s": 26.2,
+      "frame": 1648,
+      "scene": "intro_14_rollcall_5",
+      "pair": "pair-26_2.png",
+      "camera": [
+        8,
+        8
+      ]
+    }
+  ],
+  "frame_log": "frames.json",
+  "all_frame_directory": "game/build/intro-captures/intro"
+}
