@@ -32,8 +32,14 @@ static uint8_t front_active;
 static uint8_t menu_tiles[360];
 /* Front playback and menu composition never run together. Reuse their RAM. */
 #define front (*(jam_front_t *)menu_tiles)
-static uint8_t hud[40];
-static uint8_t previous_hud[40];
+/* The 2.75 KB stock+plugin RAM leaves the stack only ~170 bytes below
+   0xDF00. A CPU dunk attempt plus the audio interrupt once overran it into
+   _map_tile_offset, scrambling every later tile map (Dunk Cam and HUD).
+   menu_tiles is idle during play (menus/results rewrite all of it), and the
+   HUD is rebuilt in full each draw and reset at tip-off, so its buffers live
+   in the tail and return 80 bytes to the stack. */
+#define hud (menu_tiles+280)
+#define previous_hud (menu_tiles+320)
 static uint8_t previous_controlled;
 static uint8_t previous_turbo_level,previous_turbo_locked;
 static uint16_t previous_clock;

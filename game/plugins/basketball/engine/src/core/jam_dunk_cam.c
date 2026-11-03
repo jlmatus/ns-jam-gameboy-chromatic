@@ -15,7 +15,7 @@
 /* Stock engine implementation is banked but not exported by its public header. */
 void load_background(const background_t *background,UBYTE bank) BANKED;
 
-uint8_t jam_cam_row[20],jam_cam_attrs[20],jam_cam_active;
+uint8_t jam_cam_attrs[20],jam_cam_active;
 uint8_t jam_cam_upload,jam_cam_map_target;
 int16_t jam_cam_zoom,jam_cam_origin,jam_cam_avatar;
 int16_t jam_cam_hand_x,jam_cam_hand_y;
