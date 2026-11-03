@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "8645c28e-f1a7-5b76-a9b7-257f97dbde54",
+  "name": "intro_02_chrux_face",
+  "symbol": "bg_intro_02_chrux_face",
+  "tileColors": "0077+02!012+02!0012+016+00f+017+00c+01!002+018+00a+01a+00c+01b+00b+013+00!018+00a+013+00!015+00!012+00b+012+002+016+00b+014+00!016+00b+014+003+014+00b+015+004f+",
+  "filename": "intro_02_chrux_face.png",
+  "width": 22,
+  "height": 20,
+  "imageWidth": 176,
+  "imageHeight": 160,
+  "autoColor": false
+}

@@ -24,7 +24,7 @@
       "screenshot": "skip-intro_01_court-start.png"
     },
     {
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "button": "a",
       "press_frame": 333,
       "held_frames": 35,
@@ -32,10 +32,10 @@
       "title_scene": true,
       "title_pixels": true,
       "pass": true,
-      "screenshot": "skip-intro_02_torres_face-a.png"
+      "screenshot": "skip-intro_02_chrux_face-a.png"
     },
     {
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "button": "start",
       "press_frame": 333,
       "held_frames": 35,
@@ -43,10 +43,10 @@
       "title_scene": true,
       "title_pixels": true,
       "pass": true,
-      "screenshot": "skip-intro_02_torres_face-start.png"
+      "screenshot": "skip-intro_02_chrux_face-start.png"
     },
     {
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "button": "a",
       "press_frame": 393,
       "held_frames": 35,
@@ -54,10 +54,10 @@
       "title_scene": true,
       "title_pixels": true,
       "pass": true,
-      "screenshot": "skip-intro_03_torres_run-a.png"
+      "screenshot": "skip-intro_03_chrux_run-a.png"
     },
     {
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "button": "start",
       "press_frame": 393,
       "held_frames": 35,
@@ -65,7 +65,7 @@
       "title_scene": true,
       "title_pixels": true,
       "pass": true,
-      "screenshot": "skip-intro_03_torres_run-start.png"
+      "screenshot": "skip-intro_03_chrux_run-start.png"
     },
     {
       "scene": "intro_04_matus",

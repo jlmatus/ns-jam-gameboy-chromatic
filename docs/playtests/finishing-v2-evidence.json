@@ -95,7 +95,7 @@
         }
       ],
       "outcome": "passed",
-      "reason": "Final synchronized presentation: genuine native dunks for all six profiles, CPU left-basket power finish, TORRES blocked by BAMBI, no blocked-basket score, animated anticipation/cock-back/scissor/hang/rim rattle/net whip/crowd/dust; ball stays with hand; slate court improves team/ball separation; pause freezes simulation and resume returns to inbounds. Physical hardware not tested."
+      "reason": "Final synchronized presentation: genuine native dunks for all six profiles, CPU left-basket power finish, CHRUX blocked by BAMBI, no blocked-basket score, animated anticipation/cock-back/scissor/hang/rim rattle/net whip/crowd/dust; ball stays with hand; slate court improves team/ball separation; pause freezes simulation and resume returns to inbounds. Physical hardware not tested."
     },
     "cases": [
       {
@@ -779,7 +779,7 @@
         }
       },
       {
-        "player": "TORRES",
+        "player": "CHRUX",
         "entry": {
           "romPath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/rom/nicasource-jam.gbc",
           "frame": 783,
@@ -2556,8 +2556,8 @@
         "partialRecording": false
       },
       {
-        "name": "torres-block",
-        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/finishing-v2-final/torres-block.gif",
+        "name": "chrux-block",
+        "path": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/finishing-v2-final/chrux-block.gif",
         "sha256": "1eaf2a13daa50484f05f78db8c699c364aca2e7a555db6302341fdd337909ac2",
         "frameCount": 99,
         "sourceFrameCount": 271,

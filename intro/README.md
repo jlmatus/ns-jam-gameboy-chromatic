@@ -1,6 +1,6 @@
 # NS Jam intro: THE PLAY (v3)
 
-A 27-second cold open that plays before the title screen. One possession in 14 hard cuts, no words on screen: the court lights come on, Torres cuts backdoor, Matus pulls from deep, Magic blocks it, Bambi dunks through the glass, Chompa answers, then all five slam onto the screen one per beat. It ends on the title screen, which already carries the NS Jam logo.
+A 27-second cold open that plays before the title screen. One possession in 14 hard cuts, no words on screen: the court lights come on, CHRUX cuts backdoor, Matus pulls from deep, Magic blocks it, Bambi dunks through the glass, Chompa answers, then all five slam onto the screen one per beat. It ends on the title screen, which already carries the NS Jam logo.
 
 Not in it, on purpose: any text (no player names, no move names, no tagline), Meat, the studio name, a logo.
 
@@ -52,8 +52,8 @@ The 14 shots:
 | # | Scene | Start (s) | Song row | What happens |
 |---|---|---|---|---|
 | 1 | intro_01_court | 0.0 | 0 | Black. Three clunks bring the court lights up, slow pan to the hoop |
-| 2 | intro_02_torres_face | 4.0 | 64 | Torres close-up, 2-frame white pop |
-| 3 | intro_03_torres_run | 5.0 | 80 | Whip pan in, rumble, whip out, the ball crosses |
+| 2 | intro_02_chrux_face | 4.0 | 64 | CHRUX close-up, 2-frame white pop |
+| 3 | intro_03_chrux_run | 5.0 | 80 | Whip pan in, rumble, whip out, the ball crosses |
 | 4 | intro_04_matus | 9.0 | 144 | Tilt up from his sneakers to the ball leaving his fingertips, freeze-frame duotone, release |
 | 5 | intro_05_magic | 12.0 | 192 | Camera tracks the ball up to Magic |
 | 6 | intro_06_magic_block | 12.5 | 200 | The block: white flash, cracks, shake, the ball sent away, fade |

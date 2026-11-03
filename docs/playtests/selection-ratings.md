@@ -74,7 +74,7 @@ The official web export built successfully. Its separately compiled ROM SHA-256 
 `17382545479d07bec6fe24070ac33cfe0c7326014da163fa76c80b02bc73714b`.
 
 The built-in browser verified keyboard arrows and Z through player, teammate,
-opponent, difficulty, and review screens. MAGIC + BAMBI versus TORRES + CHOMPA
+opponent, difficulty, and review screens. MAGIC + BAMBI versus CHRUX + CHOMPA
 at Pickup launched with Enter. Movement, P pause, and X return-to-selection were
 visibly verified. A current-build autosave was verified on disk. The preview is
 left on the first player picker, with input ready and no active recording.

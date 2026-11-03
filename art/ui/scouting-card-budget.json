@@ -60,21 +60,21 @@
     ]
   },
   {
-    "name": "TORRES",
+    "name": "CHRUX",
     "pages": [
       {
-        "tiles": 106,
+        "tiles": 105,
         "bank0": 64,
-        "bank1": 42
+        "bank1": 41
       },
       {
-        "tiles": 63,
-        "bank0": 63,
+        "tiles": 62,
+        "bank0": 62,
         "bank1": 0
       },
       {
-        "tiles": 63,
-        "bank0": 63,
+        "tiles": 62,
+        "bank0": 62,
         "bank1": 0
       }
     ]

@@ -12,7 +12,7 @@ that column is not presented as native game art.
 |---|---|---|---|
 | MAGIC #32 | Supplied 2026-10-28 08:45 screenshot | `magic-v1` | [Review](magic-comparison.png) |
 | BAMBI #23 | Supplied 2026-10-27 17:45 screenshot | `bambi-v1` | [Review](bambi-comparison.png) |
-| TORRES #7 | Supplied 2026-10-28 08:47 screenshot | `torres-v1` | [Review](torres-comparison.png) |
+| CHRUX #7 | Supplied 2026-10-28 08:47 screenshot | `chrux-v1` | [Review](chrux-comparison.png) |
 | CHOMPA #74 | Supplied closer 2026-10-28 09:04 beanie photo | `chompa-v2` | [Review](chompa-comparison.png) |
 | MEAT #00 | None supplied; approved invented appearance | `meat-v1` | [Review](meat-comparison.png) |
 
@@ -22,7 +22,7 @@ photo-to-study likeness issue and detail lost during study-to-card conversion.
 Review those separately before changing an approved face.
 
 Main points to inspect: MAGIC's glasses/smile and face length, BAMBI's cheek and
-chin proportions, TORRES's full beard and head angle, and CHOMPA's glasses,
+chin proportions, CHRUX's full beard and head angle, and CHOMPA's glasses,
 hooded eyes, tilted smile and stubble. MEAT can be reviewed for style and
 distinctiveness, but there is no supplied photo against which to assess likeness.
 

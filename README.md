@@ -39,7 +39,7 @@ Ask Codex to select `game/project.gbsproj` and run the ModRetro plugin's `web_pr
 | Enter | START | Hold with movement to sprint; release to recover turbo |
 | P | SELECT | Pause/resume |
 
-The scouting cards share a 96×96 portrait panel, gold names, rating bars, and a full-width gold specialty strip. MATUS retains his approved portrait pixel-for-pixel at its original size and position; compact portraits use whole-pixel enlargement. See the [card layout verification and six-card comparison](docs/playtests/card-layout.md). In selection, use arrows to cycle players, **Z/A** to confirm, **X/B** to go back, and **P/SELECT** to cycle the card and two full-rating pages. B closes a rating page first. Used players are skipped. After CPU difficulty, use arrows on **MATCH LENGTH** to select **1, 2 or 4 periods**, then **Z/A** to confirm. Every period is three minutes; lineup review shows the selected count. At review, **Z/A** or **Enter/START** begins a fresh match, and **X/B** returns to the length setting. During play, **P/SELECT** pauses; **X/B while paused** returns to selection. You start with your selected player. Control switches to your teammate when they catch your pass or gain possession; the jersey marker, HUD name/number, and camera follow the new controlled player. A held pass button cannot immediately pass the catch away again. On defense, you keep control of the last controlled teammate until your team wins the ball.
+The scouting cards share a 96×96 portrait panel, gold names, rating bars, and a full-width gold specialty strip. MATUS retains his approved portrait pixel-for-pixel at its original size and position. MAGIC, BAMBI and CHRUX now use detailed 96×96 reconstructions of their original portrait studies; MEAT retains whole-pixel enlargement of his compact source. See the [card layout verification and six-card comparison](docs/playtests/card-layout.md). In selection, use arrows to cycle players, **Z/A** to confirm, **X/B** to go back, and **P/SELECT** to cycle the card and two full-rating pages. B closes a rating page first. Used players are skipped. After CPU difficulty, use arrows on **MATCH LENGTH** to select **1, 2 or 4 periods**, then **Z/A** to confirm. Every period is three minutes; lineup review shows the selected count. At review, **Z/A** or **Enter/START** begins a fresh match, and **X/B** returns to the length setting. During play, **P/SELECT** pauses; **X/B while paused** returns to selection. You start with your selected player. Control switches to your teammate when they catch your pass or gain possession; the jersey marker, HUD name/number, and camera follow the new controlled player. A held pass button cannot immediately pass the catch away again. On defense, you keep control of the last controlled teammate until your team wins the ball.
 
 Attack the right basket; CPU opponents attack left. Follow the ball; the HUD directs you back if your player leaves the view. After a made basket, the other team retrieves the ball, walks outside its own baseline, and inbounds to a teammate. Press A/Z when your inbounder is ready; CPU inbounders throw automatically. A long idle wait also throws automatically to keep play moving. The inbound throw is protected, and the passer walks back onto court. A possession timeout and bounded loose-ball recovery keep play moving. Scores use 16-bit storage and expand to four HUD digits (up to 9,999). Each quarter is three minutes of live play. The clock stops during pause, Dunk Cam, dead-ball retrieval and inbounds (including the protected throw). At 0:00 a shot already released can resolve; no new shot can start. **Z/A** advances breaks between the selected periods; the next quarter starts at 3:00 with alternating inbound possession and refilled turbo. An untied last selected period (Q1, Q2 or Q4), or an untied overtime, opens a full-screen **FINAL RESULTS** summary with the score and winning pair. **Left/Right** cycles the summary and four player box scores. Each player page shows points, field goals and three-pointers made/attempted, rebounds, steals, blocks, and dunks. **Z/A** rematches with the same lineup/difficulty/length and fresh stats; **X/B** changes the lineup. These totals are match-only and carry through quarters/overtime; cartridge records remain deferred. See [results verification](docs/playtests/final-results.md). If tied, **Z/A** starts a **one-minute overtime** with an **OT** clock indicator. Further ties repeat overtime. Scores/stats carry over, turbo refills, and inbound possession alternates. Released buzzer shots resolve before deciding whether overtime is needed. See [clock design](docs/design/quarters.md) and [native/browser verification](docs/playtests/quarters.md).
 
@@ -101,7 +101,7 @@ Names, positions, and jerseys preserve the initial brief. The user-approved play
 | MATUS | 13 | GUARD | 3PT PLAYMAKER |
 | MAGIC | 32 | BIG | RIM PROTECTOR |
 | BAMBI | 23 | WING | POWER FINISHER |
-| TORRES | 7 | GUARD | SPEED SLASHER |
+| CHRUX | 7 | GUARD | SPEED SLASHER |
 | CHOMPA | 74 | BIG | STRETCH BIG |
 | MEAT | 00 | GUARD | TWO-WAY SLASHER |
 
@@ -114,7 +114,7 @@ Jersey numbers are display strings in structured data: CHOMPA is `"74"` and MEAT
 | MATUS | 160 cm | Stocky |
 | MAGIC | 190 cm | Lean |
 | BAMBI | 173 cm | Heavy/stocky |
-| TORRES | 170 cm | Lean |
+| CHRUX | 170 cm | Lean |
 | CHOMPA | 185 cm | Broad |
 | MEAT | 173 cm | Lean |
 
@@ -129,7 +129,7 @@ All ratings use a **1–10** scale. The supplied values below are implemented. S
 | MATUS | 7 | 10 | 10 | 8 | 2 | 3 | 5 | 9 |
 | MAGIC | 4 | 5 | 5 | 3 | 10 | 9 | 7 | 7 |
 | BAMBI | 4 | 5 | 6 | 4 | 4 | 7 | 10 | 7 |
-| TORRES | 10 | 3 | 7 | 7 | 4 | 8 | 4 | 5 |
+| CHRUX | 10 | 3 | 7 | 7 | 4 | 8 | 4 | 5 |
 | CHOMPA | 5 | 8 | 5 | 3 | 7 | 7 | 9 | 6 |
 | MEAT | 9 | 2 | 5 | 8 | 6 | 8 | 6 | 4 |
 
@@ -181,7 +181,7 @@ The ordered implementation roadmap is maintained in [PLAN.md](PLAN.md). Saved-st
 - `art/portraits/`: standalone portrait concepts, editable pixel data, and generation references. Earlier MATUS revisions remain preserved; [MATUS v4](art/portraits/matus-v4/README.md) is the approved current large-card likeness and intro reference.
 - [BAMBI v1](art/portraits/bambi-v1/README.md): approved portrait using the same size and palette; integrated into the selection menu.
 - [MAGIC v1](art/portraits/magic-v1/README.md): approved portrait with rectangular glasses and a broad smile, using the same size and palette; integrated into the selection menu.
-- [TORRES v1](art/portraits/torres-v1/README.md): approved portrait with short textured hair and a full beard, using the same size and palette; integrated into the selection menu.
+- [CHRUX v1](art/portraits/chrux-v1/README.md): approved portrait with short textured hair and a full beard, using the same size and palette; integrated into the selection menu.
 - [CHOMPA v2](art/portraits/chompa-v2/README.md): approved default portrait, jersey 74, based on the closer photograph with a lime beanie. The color portrait is the default; its three-color variant remains available for integration. [V1](art/portraits/chompa-v1/README.md) is an earlier, unapproved study.
 - [MEAT v1](art/portraits/meat-v1/README.md): approved default portrait, jersey 00. Its invented origin remains documented; it is the selected design despite the absence of a supplied photo.
 

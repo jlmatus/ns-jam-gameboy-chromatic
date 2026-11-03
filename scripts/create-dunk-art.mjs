@@ -14,7 +14,7 @@ const font=[...fs.readFileSync(`${root}/include/jam_hud.h`,'utf8').match(/\{([^}
 // Nonzero background pixels let CGB tile priority clip contestants at the HUD.
 const opaqueFont=font.map((v,i)=>i%2===0?255:v);
 fs.writeFileSync(`${root}/include/jam_dunk_font.h`,`/* Generated opaque Dunk Cam HUD; ordinary HUD remains unchanged. */\nstatic const unsigned char jam_dunk_font[]={${opaqueFont.join(',')}};\n`);
-const names=['matus','magic','bambi','torres','chompa','meat'];
+const names=['matus','magic','bambi','chrux','chompa','meat'];
 const ratings=[3,9,7,8,7,8];
 const skin=['#D69C74','#C99870','#E8B492','#C99368','#E5B493','#D7A079'];
 const themes={0:['#102333','#E6B37C','#287780','#182738'],1:['#102333','#294953','#356270','#182738']};

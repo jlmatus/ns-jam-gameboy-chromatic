@@ -3605,7 +3605,7 @@
       ]
     },
     {
-      "player": "torres",
+      "player": "chrux",
       "style": "one-hand tomahawk",
       "failed": false,
       "result": "made",
@@ -3640,7 +3640,7 @@
         },
         {
           "time": 4,
-          "tiles": 80,
+          "tiles": 79,
           "zoom": 1,
           "originY": 12,
           "hand": [
@@ -3668,7 +3668,7 @@
         },
         {
           "time": 8,
-          "tiles": 96,
+          "tiles": 94,
           "zoom": 1.25,
           "originY": 13.6015625,
           "hand": [
@@ -3682,7 +3682,7 @@
         },
         {
           "time": 10,
-          "tiles": 100,
+          "tiles": 98,
           "zoom": 1.375,
           "originY": 14.18359375,
           "hand": [
@@ -3710,7 +3710,7 @@
         },
         {
           "time": 14,
-          "tiles": 107,
+          "tiles": 104,
           "zoom": 1.625,
           "originY": 11.078125,
           "hand": [
@@ -3724,7 +3724,7 @@
         },
         {
           "time": 16,
-          "tiles": 111,
+          "tiles": 110,
           "zoom": 1.75,
           "originY": 2.4296875,
           "hand": [
@@ -3738,7 +3738,7 @@
         },
         {
           "time": 18,
-          "tiles": 113,
+          "tiles": 112,
           "zoom": 1.875,
           "originY": -6.265625,
           "hand": [
@@ -3752,7 +3752,7 @@
         },
         {
           "time": 20,
-          "tiles": 110,
+          "tiles": 109,
           "zoom": 1.75,
           "originY": -16.5703125,
           "hand": [
@@ -3766,7 +3766,7 @@
         },
         {
           "time": 22,
-          "tiles": 116,
+          "tiles": 115,
           "zoom": 2,
           "originY": -4,
           "hand": [
@@ -3780,7 +3780,7 @@
         },
         {
           "time": 24,
-          "tiles": 118,
+          "tiles": 116,
           "zoom": 2,
           "originY": 7,
           "hand": [
@@ -3794,7 +3794,7 @@
         },
         {
           "time": 26,
-          "tiles": 116,
+          "tiles": 114,
           "zoom": 2,
           "originY": 16,
           "hand": [
@@ -3808,7 +3808,7 @@
         },
         {
           "time": 28,
-          "tiles": 112,
+          "tiles": 111,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3822,7 +3822,7 @@
         },
         {
           "time": 30,
-          "tiles": 108,
+          "tiles": 109,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3836,7 +3836,7 @@
         },
         {
           "time": 32,
-          "tiles": 112,
+          "tiles": 113,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3850,7 +3850,7 @@
         },
         {
           "time": 34,
-          "tiles": 114,
+          "tiles": 113,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3864,7 +3864,7 @@
         },
         {
           "time": 36,
-          "tiles": 117,
+          "tiles": 116,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3878,7 +3878,7 @@
         },
         {
           "time": 38,
-          "tiles": 114,
+          "tiles": 113,
           "zoom": 1.6015625,
           "originY": 15,
           "hand": [
@@ -3892,7 +3892,7 @@
         },
         {
           "time": 40,
-          "tiles": 114,
+          "tiles": 113,
           "zoom": 1.6953125,
           "originY": 15.28515625,
           "hand": [
@@ -3906,7 +3906,7 @@
         },
         {
           "time": 42,
-          "tiles": 114,
+          "tiles": 113,
           "zoom": 1.8046875,
           "originY": 15.5703125,
           "hand": [
@@ -3920,7 +3920,7 @@
         },
         {
           "time": 44,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.75,
           "originY": 15.4296875,
           "hand": [
@@ -3934,7 +3934,7 @@
         },
         {
           "time": 46,
-          "tiles": 117,
+          "tiles": 116,
           "zoom": 1.6953125,
           "originY": 15.28515625,
           "hand": [
@@ -3948,7 +3948,7 @@
         },
         {
           "time": 48,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -3962,7 +3962,7 @@
         },
         {
           "time": 50,
-          "tiles": 117,
+          "tiles": 116,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -3976,7 +3976,7 @@
         },
         {
           "time": 52,
-          "tiles": 113,
+          "tiles": 112,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4061,14 +4061,14 @@
       ]
     },
     {
-      "player": "torres",
+      "player": "chrux",
       "style": "one-hand tomahawk",
       "failed": true,
       "result": "missed",
       "frames": [
         {
           "time": 16,
-          "tiles": 111,
+          "tiles": 110,
           "zoom": 1.75,
           "originY": 2.4296875,
           "hand": [
@@ -4082,7 +4082,7 @@
         },
         {
           "time": 18,
-          "tiles": 113,
+          "tiles": 112,
           "zoom": 1.875,
           "originY": -6.265625,
           "hand": [
@@ -4096,7 +4096,7 @@
         },
         {
           "time": 20,
-          "tiles": 110,
+          "tiles": 109,
           "zoom": 1.75,
           "originY": -16.5703125,
           "hand": [
@@ -4110,7 +4110,7 @@
         },
         {
           "time": 22,
-          "tiles": 116,
+          "tiles": 115,
           "zoom": 2,
           "originY": -4,
           "hand": [
@@ -4124,7 +4124,7 @@
         },
         {
           "time": 24,
-          "tiles": 118,
+          "tiles": 116,
           "zoom": 2,
           "originY": 7,
           "hand": [
@@ -4138,7 +4138,7 @@
         },
         {
           "time": 26,
-          "tiles": 116,
+          "tiles": 114,
           "zoom": 2,
           "originY": 16,
           "hand": [
@@ -4152,7 +4152,7 @@
         },
         {
           "time": 28,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.9296875,
           "originY": 15.85546875,
           "hand": [
@@ -4166,7 +4166,7 @@
         },
         {
           "time": 30,
-          "tiles": 116,
+          "tiles": 115,
           "zoom": 1.8671875,
           "originY": 15.71484375,
           "hand": [
@@ -4180,7 +4180,7 @@
         },
         {
           "time": 32,
-          "tiles": 115,
+          "tiles": 114,
           "zoom": 1.8046875,
           "originY": 15.5703125,
           "hand": [
@@ -4194,7 +4194,7 @@
         },
         {
           "time": 34,
-          "tiles": 115,
+          "tiles": 114,
           "zoom": 1.77734375,
           "originY": 15.5,
           "hand": [
@@ -4208,7 +4208,7 @@
         },
         {
           "time": 36,
-          "tiles": 115,
+          "tiles": 114,
           "zoom": 1.72265625,
           "originY": 15.35546875,
           "hand": [
@@ -4222,7 +4222,7 @@
         },
         {
           "time": 38,
-          "tiles": 112,
+          "tiles": 111,
           "zoom": 1.671875,
           "originY": 15.21484375,
           "hand": [
@@ -4236,7 +4236,7 @@
         },
         {
           "time": 40,
-          "tiles": 117,
+          "tiles": 116,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4250,7 +4250,7 @@
         },
         {
           "time": 42,
-          "tiles": 114,
+          "tiles": 113,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4264,7 +4264,7 @@
         },
         {
           "time": 44,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4278,7 +4278,7 @@
         },
         {
           "time": 46,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4292,7 +4292,7 @@
         },
         {
           "time": 48,
-          "tiles": 120,
+          "tiles": 119,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4306,7 +4306,7 @@
         },
         {
           "time": 50,
-          "tiles": 119,
+          "tiles": 118,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4320,7 +4320,7 @@
         },
         {
           "time": 52,
-          "tiles": 117,
+          "tiles": 116,
           "zoom": 1.6484375,
           "originY": 15.14453125,
           "hand": [
@@ -4405,7 +4405,7 @@
       ]
     },
     {
-      "player": "torres",
+      "player": "chrux",
       "style": "one-hand tomahawk",
       "failed": true,
       "result": "blocked",

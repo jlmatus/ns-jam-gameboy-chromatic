@@ -266,7 +266,7 @@ static void ratings_and_difficulty(void) {
     strong.players[1]=strong.players[0];weak.players[1]=weak.players[0];
     baseline=strong.players[0].y/4;
     jam_update(&strong,0);jam_update(&weak,0);
-    assert(strong.players[0].y==baseline*4); /* BAMBI holds position; TORRES yields. */
+    assert(strong.players[0].y==baseline*4); /* BAMBI holds position; CHRUX yields. */
     assert(weak.players[0].y!=baseline*4);
     jam_init(&strong);jam_init(&weak);
     strong.setup.difficulty=JAM_WINNERS_STAY;weak.setup.difficulty=JAM_WARM_UP;

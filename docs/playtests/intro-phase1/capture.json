@@ -25,7 +25,7 @@
       "frame": 322,
       "intro_frame": 239,
       "time_s": 4.001507,
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "camera": [
         176,
         8
@@ -39,7 +39,7 @@
       "frame": 382,
       "intro_frame": 299,
       "time_s": 5.006069,
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "camera": [
         8,
         8
@@ -92,7 +92,7 @@
     {
       "time_s": 4.1,
       "frame": 328,
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "pair": "pair-4_1.png",
       "camera": [
         8,
@@ -102,7 +102,7 @@
     {
       "time_s": 6.5,
       "frame": 471,
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "pair": "pair-6_5.png",
       "camera": [
         168,

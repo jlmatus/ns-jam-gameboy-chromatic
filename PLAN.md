@@ -52,7 +52,7 @@ The subsequent presentation pass adds articulated 24×56 dunk cels, one-hand/two
 
 ## Confirmed Decisions
 
-- **Brand and front end:** display name NS JAM; Night Court home revision 2 is approved and locked (2026-11-02). Preserve its composition, logo and palette. The intro still needs redesign; the full animated intro features MATUS, TORRES, BAMBI, CHOMPA and MAGIC, excluding MEAT. Review the revised cinematic before expanding all spotlights and cards.
+- **Brand and front end:** display name NS JAM; Night Court home revision 2 is approved and locked (2026-11-02). Preserve its composition, logo and palette. The intro still needs redesign; the full animated intro features MATUS, CHRUX, BAMBI, CHOMPA and MAGIC, excluding MEAT. Review the revised cinematic before expanding all spotlights and cards.
 
 - **Controls and timing:** use NBA Jam '99's default Game Boy Color mapping and configurable 1, 2 or 4 three-minute periods (four by default). The exact mapping and manual references are recorded in [README.md](README.md#confirmed-controls-and-timing).
 - **Default portraits:** CHOMPA uses [v2](art/portraits/chompa-v2/README.md), and MEAT uses [v1](art/portraits/meat-v1/README.md). Both are approved defaults; MEAT's appearance is an accepted invented design.

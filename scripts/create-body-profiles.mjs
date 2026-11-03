@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 const roster=JSON.parse(fs.readFileSync('art/roster-physics.json','utf8'));
-const names=['MATUS','MAGIC','BAMBI','TORRES','CHOMPA','MEAT'];
+const names=['MATUS','MAGIC','BAMBI','CHRUX','CHOMPA','MEAT'];
 export const bodyProfiles=roster.players.map((p,i)=>{
   if(p.name!==names[i])throw Error('Physical roster order mismatch');
   if(p.height_cm!==null && (p.height_cm<130 || p.height_cm>230))throw Error('Height outside supported range');

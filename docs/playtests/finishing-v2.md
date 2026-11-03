@@ -12,7 +12,7 @@ The court palette changes from warm tan/brown to cool slate/teal: `A8C7C4`, `365
 
 - `sh scripts/test.sh` passes with sanitizers and warnings as errors: 3,072 dunk cases plus existing selection, shooting, contact, passing and inbound checks. No simulation or supplied-rating changes were needed.
 - Official native ROM `a78b168406d11c881bbabcbc639d7c37e525f5ec57a4708d71bfaa8a537af3c6` is a valid 2 MiB GBC-only cartridge. The build succeeds with the existing CLI deprecation/SDCC optimizer warnings.
-- Genuine PyBoy 2.7.0 input-driven captures exercise every profile: MAGIC, MATUS, MEAT and CHOMPA finish at the right basket; CPU BAMBI finishes at the left; TORRES is blocked by BAMBI with no basket or made-impact celebration. Court/inbound or loose-ball returns remain visible. SELECT pause preserves every simulation byte except previous input, including RNG; resume completes the sequence.
+- Genuine PyBoy 2.7.0 input-driven captures exercise every profile: MAGIC, MATUS, MEAT and CHOMPA finish at the right basket; CPU BAMBI finishes at the left; CHRUX is blocked by BAMBI with no basket or made-impact celebration. Court/inbound or loose-ball returns remain visible. SELECT pause preserves every simulation byte except previous input, including RNG; resume completes the sequence.
 - The native cock-back regression was repeated after synchronizing OAM/tilemap publication. The ball now stays with the fast-moving hand. The initial failed trial is retained in a reversible recording archive; its identity is in the evidence JSON.
 - Official source export and sprite-budget check pass at **190/192** tiles per reserved bank span. All 336 cinematic frames stay at or below **88** unique tiles. Standing court/portrait art is preserved.
 - Official browser export `5a5e0fefe35005ec260f2f61d431cf78fe1a98c1a8c695bd5518de2126afeb61` was played in the existing built-in-browser tab. MAGIC's Enter + X dunk, pause/resume, impact/hang and return with score 02:00 were visually checked. The preview is left natively paused; press P to play.
@@ -21,7 +21,7 @@ The court palette changes from warm tan/brown to cool slate/teal: `A8C7C4`, `365
 
 - [MAGIC dunk and return](finishing-v2/magic.gif)
 - [BAMBI two-hand finish at the left basket](finishing-v2/bambi.gif)
-- [TORRES blocked finish](finishing-v2/torres-block.gif)
+- [CHRUX blocked finish](finishing-v2/chrux-block.gif)
 - [Slate court in browser](finishing-v2/browser-court-action.png)
 - [Browser dunk](finishing-v2/browser-dunk.png), [impact](finishing-v2/browser-impact.png), [return](finishing-v2/browser-return.png)
 - [Build/runtime/branch/frame receipts](finishing-v2-evidence.json)

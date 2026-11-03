@@ -23,7 +23,7 @@ for(const [name,slot] of [['ball',6],['marker',6]]) {
  s.width=32;s.numTiles=6;s.checksum=createHash('sha1').update(fs.readFileSync('game/assets/sprites/ball.png')).digest('hex');write(p,s);
 }
 const skin=['D69C74','C99870','E8B492','C99368','E5B493','D7A079'];
-for(const [i,name] of ['matus','magic','bambi','torres','chompa','meat'].entries())
+for(const [i,name] of ['matus','magic','bambi','chrux','chompa','meat'].entries())
  write(`game/project/palettes/jam-player-${name}.gbsres`,{_resourceType:'palette',id:`jam-player-${name}`,name:`${name.toUpperCase()} skin and kit`,colors:[skin[i],'EAEFF7','EAEFF7','182738']});
 {
  const p='game/assets/sprites/marker.png.gbsres',s=read(p),old=s.states[0].animations[0].frames;
@@ -38,7 +38,7 @@ for(const [id,name,colors] of [
 ])write(`game/project/palettes/${id}.gbsres`,{_resourceType:'palette',id,name,colors});
 const settings=read('game/project/settings.gbsres');
 settings.defaultSceneTypeId='BASKETBALL';settings.defaultPlayerSprites.BASKETBALL=read('game/assets/sprites/net.png.gbsres').id;
-settings.defaultSpritePaletteIds=['jam-player-matus','jam-player-magic','jam-player-bambi','jam-player-torres','jam-player-chompa','jam-player-meat','jam-ball','jam-head-chompa'];
+settings.defaultSpritePaletteIds=['jam-player-matus','jam-player-magic','jam-player-bambi','jam-player-chrux','jam-player-chompa','jam-player-meat','jam-ball','jam-head-chompa'];
 settings.defaultBackgroundPaletteIds[0]='jam-court';
 write('game/project/settings.gbsres',settings);
 const scenePath='game/project/scenes/start/scene.gbsres',scene=read(scenePath);

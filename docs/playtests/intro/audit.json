@@ -57,7 +57,7 @@
   ],
   "white_intervals": [
     {
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "start_s": 4.01825,
       "end_s": 4.08522,
       "frames": 5
@@ -132,14 +132,14 @@
       "palette_slots": 8
     },
     {
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "expected": 133,
       "reported": 133,
       "with_flip_deduplication": 129,
       "palette_slots": 8
     },
     {
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "expected": 133,
       "reported": 133,
       "with_flip_deduplication": 132,

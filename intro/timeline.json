@@ -132,8 +132,8 @@
   },
   {
    "shot": 2,
-   "scene": "intro_02_torres_face",
-   "background": "intro_02_torres_face",
+   "scene": "intro_02_chrux_face",
+   "background": "intro_02_chrux_face",
    "background_id": "8645c28e-f1a7-5b76-a9b7-257f97dbde54",
    "start_row": 64,
    "start_s": 4.0,
@@ -195,8 +195,8 @@
   },
   {
    "shot": 3,
-   "scene": "intro_03_torres_run",
-   "background": "intro_03_torres_run",
+   "scene": "intro_03_chrux_run",
+   "background": "intro_03_chrux_run",
    "background_id": "368e5f1e-bc5f-53ee-b3f2-f04e6907986e",
    "start_row": 80,
    "start_s": 5.0,
@@ -4189,7 +4189,7 @@
   },
   {
    "id": "3c040039-240d-590e-be09-08d81a3ea617",
-   "name": "intro 02_torres_face default s0",
+   "name": "intro 02_chrux_face default s0",
    "colors": [
     "B46A41",
     "8B4A31",
@@ -4197,12 +4197,12 @@
     "081829"
    ],
    "used_by": [
-    "02_torres_face default s0"
+    "02_chrux_face default s0"
    ]
   },
   {
    "id": "d349ac15-39c8-55f4-a593-c8e38f1013d3",
-   "name": "intro 02_torres_face default s1",
+   "name": "intro 02_chrux_face default s1",
    "colors": [
     "F6BD83",
     "B46A41",
@@ -4210,13 +4210,13 @@
     "081829"
    ],
    "used_by": [
-    "02_torres_face default s1",
-    "03_torres_run default s0"
+    "02_chrux_face default s1",
+    "03_chrux_run default s0"
    ]
   },
   {
    "id": "ce906e23-3737-5420-b53f-45999bcfe611",
-   "name": "intro 02_torres_face default s2",
+   "name": "intro 02_chrux_face default s2",
    "colors": [
     "F6BD83",
     "203141",
@@ -4224,12 +4224,12 @@
     "081829"
    ],
    "used_by": [
-    "02_torres_face default s2"
+    "02_chrux_face default s2"
    ]
   },
   {
    "id": "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
-   "name": "intro 03_torres_run default s1",
+   "name": "intro 03_chrux_run default s1",
    "colors": [
     "F6BD83",
     "B46A41",
@@ -4237,7 +4237,7 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s1",
+    "03_chrux_run default s1",
     "04_matus default s2",
     "05_magic default s0",
     "06_magic_block default s3",
@@ -4250,7 +4250,7 @@
   },
   {
    "id": "aaf00bd1-5853-56c6-89f0-c3b743cf4275",
-   "name": "intro 03_torres_run default s2",
+   "name": "intro 03_chrux_run default s2",
    "colors": [
     "B46A41",
     "207383",
@@ -4258,12 +4258,12 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s2"
+    "03_chrux_run default s2"
    ]
   },
   {
    "id": "cacea8f7-83de-579e-a433-d4f13e8f97c9",
-   "name": "intro 03_torres_run default s3",
+   "name": "intro 03_chrux_run default s3",
    "colors": [
     "F6BD83",
     "207383",
@@ -4271,7 +4271,7 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s3",
+    "03_chrux_run default s3",
     "04_matus default s6",
     "06_magic_block default s7",
     "09_chompa default s4"
@@ -4279,7 +4279,7 @@
   },
   {
    "id": "ca32e8f0-799f-5a3d-b0c7-12b9620731e5",
-   "name": "intro 03_torres_run default s4",
+   "name": "intro 03_chrux_run default s4",
    "colors": [
     "F6EEC5",
     "B46A41",
@@ -4287,12 +4287,12 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s4"
+    "03_chrux_run default s4"
    ]
   },
   {
    "id": "769d66bc-386c-54b6-8cd7-424bfcb9fe98",
-   "name": "intro 03_torres_run default s5",
+   "name": "intro 03_chrux_run default s5",
    "colors": [
     "EEA439",
     "8B4A31",
@@ -4300,12 +4300,12 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s5"
+    "03_chrux_run default s5"
    ]
   },
   {
    "id": "50294f6a-19e5-5795-ba2d-50a844e4845d",
-   "name": "intro 03_torres_run default s6",
+   "name": "intro 03_chrux_run default s6",
    "colors": [
     "F6EEC5",
     "F6BD83",
@@ -4313,12 +4313,12 @@
     "B46A41"
    ],
    "used_by": [
-    "03_torres_run default s6"
+    "03_chrux_run default s6"
    ]
   },
   {
    "id": "853a1e2b-e31d-5742-8de5-f3214097b506",
-   "name": "intro 03_torres_run default s7",
+   "name": "intro 03_chrux_run default s7",
    "colors": [
     "F6EEC5",
     "207383",
@@ -4326,7 +4326,7 @@
     "081829"
    ],
    "used_by": [
-    "03_torres_run default s7",
+    "03_chrux_run default s7",
     "06_magic_block default s6"
    ]
   },

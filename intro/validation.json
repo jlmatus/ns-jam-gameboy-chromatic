@@ -11,7 +11,7 @@
   "palette_merges": 0,
   "text_slot": null
  },
- "intro_02_torres_face": {
+ "intro_02_chrux_face": {
   "size_px": [
    176,
    160
@@ -23,7 +23,7 @@
   "palette_merges": 0,
   "text_slot": null
  },
- "intro_03_torres_run": {
+ "intro_03_chrux_run": {
   "size_px": [
    496,
    160

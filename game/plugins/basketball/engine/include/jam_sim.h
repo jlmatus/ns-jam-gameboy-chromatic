@@ -104,7 +104,7 @@ static const jam_roster_entry_t jam_roster[JAM_ROSTER_COUNT] = {
     {"MATUS", "13", "GUARD", "TOP OF THE KEY", {7,10,10,8,2,3,5,9}},
     {"MAGIC", "32", "BIG", "OVER THE TOP", {4,5,5,3,10,9,7,7}},
     {"BAMBI", "23", "WING", "BULLDOZER", {4,5,6,4,4,7,10,7}},
-    {"TORRES", "7", "GUARD", "BACK DOOR", {10,3,7,7,4,8,4,5}},
+    {"CHRUX", "7", "GUARD", "BACK DOOR", {10,3,7,7,4,8,4,5}},
     {"CHOMPA", "74", "BIG", "STRETCH BIG", {5,8,5,3,7,7,9,6}},
     {"MEAT", "00", "GUARD", "BIG ENERGY", {9,2,5,8,6,8,6,4}}
 };

@@ -14,4 +14,4 @@ Animated art uses a common tile set plus two alternating pose regions and a hidd
 
 Initial native attempts exposed a boot crash after adding RAM buffers, partial graphics uploads and a white LCD-off transition. Retained failed/review recordings preserve those observations. The integrated proof reuses RAM, double-buffers animated uploads and uses dark palette staging; the final cartridge was played through boot, menus, ratings and an ordinary made basket.
 
-The planned full intro features MATUS, TORRES, BAMBI, CHOMPA and MAGIC. MEAT remains playable and is excluded from that cinematic. Production of the other four spotlights, a full soundtrack and the remaining card redesigns follows review of this proof. Uniforms remain temporary.
+The planned full intro features MATUS, CHRUX, BAMBI, CHOMPA and MAGIC. MEAT remains playable and is excluded from that cinematic. Production of the other four spotlights, a full soundtrack and the remaining card redesigns follows review of this proof. Uniforms remain temporary.

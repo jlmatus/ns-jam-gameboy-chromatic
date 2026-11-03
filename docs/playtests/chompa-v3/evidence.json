@@ -326,7 +326,7 @@
       }
     },
     {
-      "label": "torres",
+      "label": "chrux",
       "frame": 525,
       "buttons": [
         "right"
@@ -1966,7 +1966,7 @@
       }
     },
     {
-      "label": "torres-opponent",
+      "label": "chrux-opponent",
       "frame": 905,
       "buttons": [
         "right"

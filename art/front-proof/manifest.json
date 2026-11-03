@@ -146,74 +146,74 @@
   {
     "index": 24,
     "name": "magic-card-0",
-    "tiles": 225,
-    "palette_error": 208747
+    "tiles": 232,
+    "palette_error": 232737
   },
   {
     "index": 25,
     "name": "magic-card-1",
-    "tiles": 226,
-    "palette_error": 208747
+    "tiles": 233,
+    "palette_error": 232737
   },
   {
     "index": 26,
     "name": "magic-card-2",
-    "tiles": 226,
-    "palette_error": 208747
+    "tiles": 233,
+    "palette_error": 232737
   },
   {
     "index": 27,
     "name": "magic-card-3",
-    "tiles": 226,
-    "palette_error": 208747
+    "tiles": 233,
+    "palette_error": 232737
   },
   {
     "index": 28,
     "name": "bambi-card-0",
-    "tiles": 217,
-    "palette_error": 246117
+    "tiles": 229,
+    "palette_error": 243805
   },
   {
     "index": 29,
     "name": "bambi-card-1",
-    "tiles": 218,
-    "palette_error": 246117
+    "tiles": 230,
+    "palette_error": 243805
   },
   {
     "index": 30,
     "name": "bambi-card-2",
-    "tiles": 218,
-    "palette_error": 246117
+    "tiles": 230,
+    "palette_error": 243805
   },
   {
     "index": 31,
     "name": "bambi-card-3",
-    "tiles": 218,
-    "palette_error": 246117
+    "tiles": 230,
+    "palette_error": 243805
   },
   {
     "index": 32,
-    "name": "torres-card-0",
-    "tiles": 226,
-    "palette_error": 296163
+    "name": "chrux-card-0",
+    "tiles": 234,
+    "palette_error": 121079
   },
   {
     "index": 33,
-    "name": "torres-card-1",
-    "tiles": 227,
-    "palette_error": 296163
+    "name": "chrux-card-1",
+    "tiles": 235,
+    "palette_error": 121079
   },
   {
     "index": 34,
-    "name": "torres-card-2",
-    "tiles": 227,
-    "palette_error": 296163
+    "name": "chrux-card-2",
+    "tiles": 235,
+    "palette_error": 121079
   },
   {
     "index": 35,
-    "name": "torres-card-3",
-    "tiles": 227,
-    "palette_error": 296163
+    "name": "chrux-card-3",
+    "tiles": 235,
+    "palette_error": 121079
   },
   {
     "index": 36,

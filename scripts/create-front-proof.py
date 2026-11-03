@@ -258,10 +258,15 @@ for player_id in (1,2,3,5):
     player=roster['players'][player_id]
     source=json.loads((ROOT/'art/portraits'/player.get('cardSource',player['source'])/'pixels.json').read_text())
     colors=source['palette']
-    # Compact masters enlarge only by whole pixels; no redraw or smoothing.
-    palettes=[[quant(rgb(c)) for c in f] for f in [
+    # Detailed card masters render 1:1; compact fallback masters use whole cells.
+    families=[
         [N,T,G,I], [N,D,T,G], [D,colors['#'][:7],colors['s'][:7],colors['o'][:7]],
-    ]]
+    ]
+    if 'h' in colors:
+        ink,shadow,skin,hair=[colors[k][:7] for k in ('#','s','o','h')]
+        families += [[D,ink,hair,shadow], [ink,hair,shadow,skin],
+                     [D,ink,hair,skin], [D,hair,shadow,skin]]
+    palettes=[[quant(rgb(c)) for c in f] for f in families]
     palettes += [palettes[-1]]*(7-len(palettes))
     start=len(images)
     card_frames[player_id]=start

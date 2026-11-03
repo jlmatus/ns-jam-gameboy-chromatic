@@ -7,7 +7,7 @@ user. Four-quarter games and the larger arcade presentation remain future work.
 
 ## Resulting Behavior
 
-- Confirmed heights: MATUS 160 cm, MAGIC 190, BAMBI 173, TORRES 170, CHOMPA 185,
+- Confirmed heights: MATUS 160 cm, MAGIC 190, BAMBI 173, CHRUX 170, CHOMPA 185,
   MEAT 173. Builds are stocky, lean, heavy/stocky, lean, broad, lean. No weights
   were supplied. Native standing silhouettes span 36–42 pixels, anchored at the
   feet. Build affects standing torso width and contact radius/mass; action poses

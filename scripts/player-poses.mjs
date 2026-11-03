@@ -68,7 +68,7 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     ['..###...','.#####..','##oooo#.','#oooooo#','#oo#ooo#','.ooooo#.','..o##o..','...##...'], // MATUS: spikes/goatee
     ['..####..','.######.','#oooooo#','#o##o###','#oooooo#','.ooooo#.','..oooo..','...oo...'], // MAGIC: glasses/clean jaw
     ['..####..','.######.','##oooo##','#oooooo#','#o#oo#o#','#oooooo#','.o####o.','..####..'], // BAMBI: round face/beard
-    ['.######.','########','#oooooo#','#o#oo#o#','#oooooo#','##oooo##','.######.','..####..'], // TORRES: crop/full beard
+    ['.######.','########','#oooooo#','#o#oo#o#','#oooooo#','##oooo##','.######.','..####..'], // CHRUX: crop/full beard
     ['.ssssss.','ssssssss','#oooooo#','###oo###','#oooooo#','#oooooo#','.o####o.','..####..'], // CHOMPA: beanie/glasses/chin
     ['.##.##..','#######.','#oooooo#','#o#oo#o#','#oooooo#','.oo#oo#.','..oooo..','...oo...'] // MEAT: short textured hair
   ];

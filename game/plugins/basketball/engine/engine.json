@@ -17,7 +17,7 @@
         "src/core/jam_card_matus.c",
         "src/core/jam_card_magic.c",
         "src/core/jam_card_bambi.c",
-        "src/core/jam_card_torres.c",
+        "src/core/jam_card_chrux.c",
         "src/core/jam_card_chompa.c",
         "src/core/jam_card_meat.c"
       ]

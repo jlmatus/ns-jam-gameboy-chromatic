@@ -6,7 +6,7 @@ control of a teammate after passing, and an inbound after a made basket.
 ## Player Identity
 
 Distinct eight-pixel heads retain the approved visual cues: MATUS spikes/goatee,
-MAGIC glasses/clean jaw, BAMBI round face/beard, TORRES cropped hair/full beard,
+MAGIC glasses/clean jaw, BAMBI round face/beard, CHRUX cropped hair/full beard,
 CHOMPA green beanie/glasses, and MEAT's approved invented short-haired look.
 Confirmed heights/builds remain unchanged. Skin and team-kit colors are separated
 in the hardware palette; the previous kit colors obscured faces. White/red kits

@@ -4,7 +4,7 @@ Historical first-build evidence. The current build is documented in
 [presentation pass 2](experience-v2.md).
 
 The native project is `game/project.gbsproj`. MATUS and MAGIC face BAMBI and
-TORRES on a 384×144 scrolling court. The prototype is continuous practice with
+CHRUX on a 384×144 scrolling court. The prototype is continuous practice with
 temporary white/red uniforms and deliberately simple 16×16 bodies. This report
 does not certify the full planned game or physical Chromatic hardware.
 

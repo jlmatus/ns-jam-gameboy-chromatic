@@ -946,29 +946,29 @@
       "maxError": 0
     },
     {
-      "player": "TORRES",
+      "player": "CHRUX",
       "page": 0,
       "frame": 408,
       "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/1303d5ce308fede1375057b744ed48963bbd6e51a541cef40bb87a766653c55a.png",
-      "retained": "docs/playtests/scouting-cards/torres-0.png",
+      "retained": "docs/playtests/scouting-cards/chrux-0.png",
       "mismatches": 0,
       "maxError": 0
     },
     {
-      "player": "TORRES",
+      "player": "CHRUX",
       "page": 1,
       "frame": 432,
       "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/e04af58fe23e706c3472d860aa0e73a96b48990a1c503aacb31d80397dbd08ab.png",
-      "retained": "docs/playtests/scouting-cards/torres-1.png",
+      "retained": "docs/playtests/scouting-cards/chrux-1.png",
       "mismatches": 0,
       "maxError": 0
     },
     {
-      "player": "TORRES",
+      "player": "CHRUX",
       "page": 2,
       "frame": 456,
       "source": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/scouting-card-contrast/frames/c3fd6145c5378ab12bb52f487ca7093762a6a9024748f33e9b96d6600b01b3c3.png",
-      "retained": "docs/playtests/scouting-cards/torres-2.png",
+      "retained": "docs/playtests/scouting-cards/chrux-2.png",
       "mismatches": 0,
       "maxError": 0
     },

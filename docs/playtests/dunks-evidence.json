@@ -128,7 +128,7 @@
         }
       ],
       "outcome": "passed",
-      "reason": "Final native ROM 25f922d0: genuine input-driven dunks observed for all six profiles; human right-basket makes, CPU BAMBI left-basket make, TORRES blocked by BAMBI with no score, clean camera/HUD and returns to court/inbounds; pause freezes simulation/RNG and resume finishes; paused B returns to picker. Ordinary misses verified separately by host tests, not this recording. Physical Chromatic not tested."
+      "reason": "Final native ROM 25f922d0: genuine input-driven dunks observed for all six profiles; human right-basket makes, CPU BAMBI left-basket make, CHRUX blocked by BAMBI with no score, clean camera/HUD and returns to court/inbounds; pause freezes simulation/RNG and resume finishes; paused B returns to picker. Ordinary misses verified separately by host tests, not this recording. Physical Chromatic not tested."
     },
     "cases": [
       {
@@ -277,7 +277,7 @@
         }
       },
       {
-        "player": "TORRES",
+        "player": "CHRUX",
         "outcome": "blocked",
         "branchId": "branch-0002",
         "startFrame": 799,
@@ -290,7 +290,7 @@
             "sha256": "0ff402f3ae52e3a0302d0e00193afe25b6e3157b56df808687a193d0cc98786e",
             "rgbaSha256": "3875345e9ef037a740bccee1999ba7ec289c5c8266b33ca11c87f090ab67f7ff",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-action-831.png",
+            "path": "docs/playtests/dunks/chrux-action-831.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/0ff402f3ae52e3a0302d0e00193afe25b6e3157b56df808687a193d0cc98786e.png"
           },
           {
@@ -300,7 +300,7 @@
             "sha256": "2443f5d2af40d5c5fb284f745e77a24b6bedc4077224c461ee2d3d2869deb408",
             "rgbaSha256": "a61fc5c976ee09c1433a36604549d6b0b70333d20cb388786206e5d3596f515c",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-action-851.png",
+            "path": "docs/playtests/dunks/chrux-action-851.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/2443f5d2af40d5c5fb284f745e77a24b6bedc4077224c461ee2d3d2869deb408.png"
           },
           {
@@ -310,7 +310,7 @@
             "sha256": "0d05320a4168b1f4264bb3847feaa4fd138079ad8dfb092921b64ba8b9bd3bd6",
             "rgbaSha256": "5aaade4cce2b36b4e01c65f6843b27ddd09090a6f24651f9f39553e2d2a813aa",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-action-871.png",
+            "path": "docs/playtests/dunks/chrux-action-871.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/0d05320a4168b1f4264bb3847feaa4fd138079ad8dfb092921b64ba8b9bd3bd6.png"
           },
           {
@@ -320,7 +320,7 @@
             "sha256": "10bdf73c73ff8780a0d20be92283502d437be856a1093efd63b4d4b198c946c7",
             "rgbaSha256": "101770997e7c586bf3c46e8811c6e031ad4acb55558efcab4a879e309c6ab71e",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-action-891.png",
+            "path": "docs/playtests/dunks/chrux-action-891.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/10bdf73c73ff8780a0d20be92283502d437be856a1093efd63b4d4b198c946c7.png"
           }
         ],
@@ -332,7 +332,7 @@
             "sha256": "48d7b726f1063ce27460e2caebbfd91a865f122e5a745116db73fd687b9b6727",
             "rgbaSha256": "9da4901c5320ea233b8146a6dae3e06d5f5f61e34cbd6c72061b474ae9ef3239",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-return-951.png",
+            "path": "docs/playtests/dunks/chrux-return-951.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/48d7b726f1063ce27460e2caebbfd91a865f122e5a745116db73fd687b9b6727.png"
           },
           {
@@ -342,7 +342,7 @@
             "sha256": "b4d7e73e64abc3662b36ea37ebcfbf1bbd61b6c35eac9dca6ae69afd7d41fcfc",
             "rgbaSha256": "183952b6be02959db6ffb35833ff97093c55ca67cb40161010d0ede6ab881835",
             "sampledButtons": [],
-            "path": "docs/playtests/dunks/torres-return-1011.png",
+            "path": "docs/playtests/dunks/chrux-return-1011.png",
             "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/frames/b4d7e73e64abc3662b36ea37ebcfbf1bbd61b6c35eac9dca6ae69afd7d41fcfc.png"
           }
         ],
@@ -1001,9 +1001,9 @@
         }
       },
       {
-        "name": "torres-block",
+        "name": "chrux-block",
         "result": {
-          "path": "docs/playtests/dunks/torres-block-dunk.gif",
+          "path": "docs/playtests/dunks/chrux-block-dunk.gif",
           "sha256": "9be95a24db39b965b6a0e15e13875151e7032c85237086b24fcae4721f38bd73",
           "frameCount": 110,
           "sourceFrameCount": 213,
@@ -1017,7 +1017,7 @@
           "recordingFinalFrame": 1011,
           "lastEvidenceFrame": 1011,
           "partialRecording": false,
-          "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/torres-block-dunk.gif"
+          "sourcePath": "/Users/jmatus/repositories/ns-jam-gameboy-chromatic/game/build/arcade-finishing-delivery/chrux-block-dunk.gif"
         }
       },
       {
@@ -1130,7 +1130,7 @@
     },
     "observed": [
       "Fresh official final export boots to picker",
-      "MAGIC/MATUS vs BAMBI/TORRES Warm-up lineup",
+      "MAGIC/MATUS vs BAMBI/CHRUX Warm-up lineup",
       "Enter+X triggers MAGIC Dunk Cam near right rim",
       "P pauses and resumes the close-up",
       "Made basket returns to court at 02:00 with ball retrieval"

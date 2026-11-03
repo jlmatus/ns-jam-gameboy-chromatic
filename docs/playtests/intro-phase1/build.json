@@ -200,10 +200,10 @@
       }
     },
     {
-      "scene": "intro_02_torres_face",
+      "scene": "intro_02_chrux_face",
       "background": {
         "id": "8645c28e-f1a7-5b76-a9b7-257f97dbde54",
-        "resourcePath": "assets/backgrounds/intro_02_torres_face.png",
+        "resourcePath": "assets/backgrounds/intro_02_chrux_face.png",
         "totalTiles": 440,
         "width": 22,
         "height": 20,
@@ -329,10 +329,10 @@
       }
     },
     {
-      "scene": "intro_03_torres_run",
+      "scene": "intro_03_chrux_run",
       "background": {
         "id": "368e5f1e-bc5f-53ee-b3f2-f04e6907986e",
-        "resourcePath": "assets/backgrounds/intro_03_torres_run.png",
+        "resourcePath": "assets/backgrounds/intro_03_chrux_run.png",
         "totalTiles": 1240,
         "width": 62,
         "height": 20,

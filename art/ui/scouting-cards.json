@@ -77,7 +77,8 @@
         9,
         7,
         7
-      ]
+      ],
+      "cardSource": "magic-v2"
     },
     {
       "name": "BAMBI",
@@ -112,11 +113,12 @@
         7,
         10,
         7
-      ]
+      ],
+      "cardSource": "bambi-v2"
     },
     {
-      "name": "TORRES",
-      "source": "torres-v1",
+      "name": "CHRUX",
+      "source": "chrux-v1",
       "jersey": "7",
       "position": "GUARD",
       "playstyle": "SPEED SLASHER",
@@ -147,7 +149,8 @@
         8,
         4,
         5
-      ]
+      ],
+      "cardSource": "chrux-v2"
     },
     {
       "name": "CHOMPA",
