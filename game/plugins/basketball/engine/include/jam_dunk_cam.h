@@ -2,7 +2,7 @@
 #define JAM_DUNK_CAM_H
 #include "jam_sim.h"
 #ifdef __SDCC
-extern uint8_t jam_cam_row[20],jam_cam_attrs[20];
+extern uint8_t jam_cam_attrs[20];
 extern uint8_t jam_cam_upload,jam_cam_map_target;
 extern int16_t jam_cam_zoom,jam_cam_origin,jam_cam_avatar;
 extern int16_t jam_cam_hand_x,jam_cam_hand_y;
