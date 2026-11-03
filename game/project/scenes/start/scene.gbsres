@@ -25,8 +25,16 @@
     "jam-ball",
     "jam-head-chompa"
   ],
-  "autoFadeSpeed": 1,
-  "script": [],
+  "autoFadeSpeed": null,
+  "script": [
+    {
+      "id": "7a13d35f-35ea-57c7-bbe1-8009361c737c",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"
+      }
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],

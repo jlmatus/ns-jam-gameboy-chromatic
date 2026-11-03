@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "7609db0a-62ed-57d7-9342-433fabf73ad8",
+  "name": "intro_hidden_player",
+  "symbol": "sprite_intro_hidden_player",
+  "states": [
+    {
+      "id": "ab1e13a9-8c88-5994-8f58-cd624d5d0f9d",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "2d11d772-c6e5-5aac-bf4b-3838969fbdeb",
+          "frames": [
+            {
+              "id": "1c55861b-7ac3-5b3d-8c81-ea1f2a1f2172",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8c110f63-b976-54ee-8d46-55ff0724f6bc",
+          "frames": [
+            {
+              "id": "a7e458c2-4431-506c-ad1d-cb7b62b52641",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "94c59fc3-d1ef-5f9c-870e-1db85ca78049",
+          "frames": [
+            {
+              "id": "777d9426-e9f9-50e4-ab5b-c253cf5c8c08",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ce1d78bc-9798-5f42-8a5b-ba9ef86a9bb2",
+          "frames": [
+            {
+              "id": "212e4ef6-0a56-58fc-b47c-fd68f4319d29",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "743dafe0-31fd-51be-9318-ac069d07be77",
+          "frames": [
+            {
+              "id": "479c86e7-775d-5d11-9d68-56e4212cc51c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a64ad07e-e058-5cc1-8261-c91ce16cc455",
+          "frames": [
+            {
+              "id": "bee12888-fd39-5553-bd67-e51013407665",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "32d2aba1-bed1-5525-bf5d-b29e8bcc5055",
+          "frames": [
+            {
+              "id": "e23b51d2-e535-5fbc-925b-c3b199f31926",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6285cf9a-f6e8-52d5-94cb-89b0faacc32d",
+          "frames": [
+            {
+              "id": "6c001ee3-344c-5b44-80b0-38c64eeb14ea",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": -8,
+  "canvasOriginY": -16,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 32,
+  "boundsHeight": 32,
+  "animSpeed": 255,
+  "filename": "intro_hidden_player.png",
+  "width": 64,
+  "height": 32,
+  "checksum": "810691dc66f00fe79a3348b1e45f2de8bf857f9c"
+}

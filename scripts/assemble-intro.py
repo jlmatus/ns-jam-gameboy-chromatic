@@ -87,6 +87,32 @@ VM_POP 1"""
     return event("EVENT_GBVM_SCRIPT", {"script": code})
 
 
+def shake(step):
+    # A scene can finish loading after the flash's shake has already elapsed.
+    # Invoke only the remaining interval, keeping later palette changes on cue.
+    done = f"{30000 + event.sequence}$"
+    direction = {"horizontal": 1, "vertical": 2, "diagonal": 3}[step["direction"]]
+    code = f""".globl _sys_time, b_camera_shake_frames, _camera_shake_frames
+VM_PUSH_CONST 0
+VM_GET_INT16 .ARG0, _sys_time
+VM_RPN
+.R_INT16 {step['at'] + step['frames']}
+.R_REF .ARG0
+.R_REF VAR_VARIABLE_7
+.R_OPERATOR .SUB
+.R_OPERATOR .SUB
+.R_REF_SET .ARG0
+.R_STOP
+VM_IF_CONST .LTE, .ARG0, 0, {done}, 0
+VM_PUSH_CONST {direction}
+VM_PUSH_CONST {step['magnitude']}
+VM_INVOKE b_camera_shake_frames, _camera_shake_frames, 0, .ARG2
+VM_POP 2
+{done}:
+VM_POP 1"""
+    return event("EVENT_GBVM_SCRIPT", {"script": code})
+
+
 def switch(destination):
     target = next((s for s in TIMELINE["shots"] if uid(s["scene"]) == destination), None)
     landing = ((target["camera_start"][0] + 72) / 8,
@@ -188,7 +214,7 @@ def camera_positions(shot):
     return positions
 
 
-def actor_script(shot, actor, actor_id):
+def actor_script(shot, actor, actor_id, sample_only=False):
     x, y = actor["start_position"]
     visible, frame, at = True, 0, 0
     samples = {}
@@ -222,6 +248,14 @@ def actor_script(shot, actor, actor_id):
         samples[at] = (x, y, visible, frame)
     cameras = camera_positions(shot)
     size = 32 if actor["sprite"] == "intro_ball" else 16
+    if sample_only:
+        states = []
+        for f in range(shot["length_frames"]):
+            xx, yy, shown, cel = samples.get(f, (x, y, visible, frame))
+            cx, cy = cameras[f]
+            shown = shown and xx + size > cx - 6 and xx < cx + 166 and yy + size > cy - 6 and yy < cy + 150
+            states.append((xx, yy, shown, cel))
+        return states
     last = None
     result = []
     for f in range(shot["length_frames"]):
@@ -246,6 +280,60 @@ def actor_script(shot, actor, actor_id):
     return result
 
 
+def choreography(shot):
+    """One shared timeline avoids ten concurrent per-frame polling loops.
+
+    Bank-sized background-script chunks keep each native script below 16 KiB.
+    All commands address native actors; no engine or image code is replaced.
+    """
+    all_states = [actor_script(shot, a, uid(f"{shot['scene']}/{a['id']}"), True)
+                  for a in shot["actors"]]
+    chunks = []
+    for start in range(0, shot["length_frames"], 24):
+        chunk = []
+        for f in range(start, min(start + 24, shot["length_frames"])):
+            commands = []
+            for index, states in enumerate(all_states):
+                x, y, shown, cel = states[f]
+                if shown:
+                    # GB Studio 4.2's packed actor ABI: 56 bytes, flags at 0,
+                    # x at 1, y at 3. Three GBVM writes avoid banked helper
+                    # overhead for ten simultaneous shards. check-intro.py
+                    # verifies the linked array size before running this ROM.
+                    base = (index + 1) * 56
+                    commands += [".globl _actors",
+                                 f"VM_SET_CONST_INT16 ^/(_actors + {base + 1})/, {(x + ANCHOR[0]) * 32 & 65535}",
+                                 f"VM_SET_CONST_INT16 ^/(_actors + {base + 3})/, {(y + ANCHOR[1]) * 32 & 65535}",
+                                 f"VM_SET_CONST_INT8 ^/(_actors + {base})/, 48"]
+                else:
+                    commands += [".globl _actors",
+                                 f"VM_SET_CONST_INT8 ^/(_actors + {(index + 1) * 56})/, 50"]
+            if commands:
+                skip = f"{40000 + event.sequence}$"
+                # Never replay obsolete frames after a scene load. One complete
+                # current-state snapshot lets rendering/input run immediately.
+                guard = f""".globl _sys_time
+VM_PUSH_CONST 0
+VM_GET_INT16 .ARG0, _sys_time
+VM_RPN
+.R_REF .ARG0
+.R_REF VAR_VARIABLE_7
+.R_OPERATOR .SUB
+.R_REF_SET .ARG0
+.R_STOP
+VM_IF_CONST .GT, .ARG0, {f + 3}, {skip}, 1"""
+                chunk += [deadline(f), event("EVENT_GBVM_SCRIPT", {
+                    "script": guard + "\n" + "\n".join(commands) + f"\nVM_IDLE\n{skip}:"})]
+        if chunk:
+            chunks.append(chunk)
+    following = []
+    for chunk in reversed(chunks):
+        if following:
+            chunk.append(event("EVENT_THREAD_START", {"variable": "T1"}, {"true": following}))
+        following = chunk
+    return following
+
+
 def scene_script(shot):
     result = []
     for step in shot["script"]:
@@ -262,11 +350,16 @@ def scene_script(shot):
                                 {"x": number(step["x"]), "y": number(step["y"]), "units": "pixels",
                                  **({"speed": step["speed_px_per_frame"]} if op == "camera_move_to" else {})}))
         elif op == "camera_shake":
-            result.append(event("EVENT_CAMERA_SHAKE", {"units": "frames", "frames": step["frames"],
-                                "magnitude": number(step["magnitude"]), "shakeDirection": step["direction"]}))
+            result.append(shake(step))
         elif op == "fade_out":
-            # Native 5-step fades: speed 2 ~=24 frames, speed 3 ~=48.
-            result.append(event("EVENT_FADE_OUT", {"speed": "2" if step["frames"] < 40 else "3"}))
+            # Advance the stock five-step palette fade on exact cue deadlines.
+            # Nonmodal updates keep input and music callbacks responsive.
+            result.append(event("EVENT_GBVM_SCRIPT", {"script":
+                ".globl _fade_frames_per_step\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_FADE_OUT 0"}))
+            for level in range(1, 6):
+                result.append(deadline(step["at"] + round(step["frames"] * level / 5)))
+                result.append(event("EVENT_GBVM_SCRIPT", {"script":
+                    ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"}))
         elif op == "end_intro":
             result += end_intro()
         else:
@@ -278,6 +371,19 @@ def assemble(count):
     checksums = copy_inputs()
     sprite("intro_ball", 32, 0)
     sprite("intro_shard", 16, 1)
+    # A genuinely empty player frame prevents the engine's pre-init scene
+    # render from showing the hidden player for one frame during a hard cut.
+    player_png = GAME / "assets/sprites/intro_hidden_player.png"
+    shutil.copyfile(GAME / "assets/sprites/intro_ball.png", player_png)
+    hidden = json.loads((GAME / "assets/sprites/intro_ball.png.gbsres").read_text())
+    hidden.update(id=uid("intro_hidden_player"), name="intro_hidden_player",
+                  symbol="sprite_intro_hidden_player", filename=player_png.name, numTiles=0)
+    for state in hidden["states"]:
+        state["id"] = uid("intro_hidden_player/state")
+        for i, animation in enumerate(state["animations"]):
+            animation["id"] = uid(f"intro_hidden_player/anim/{i}")
+            animation["frames"] = [{"id": uid(f"intro_hidden_player/frame/{i}"), "tiles": []}]
+    write(player_png.with_suffix(".png.gbsres"), hidden)
     music_id = uid("ns_jam_intro")
     write(GAME / "assets/music/ns_jam_intro.uge.gbsres", {
         "_resourceType": "music", "id": music_id, "name": "ns_jam_intro",
@@ -287,20 +393,41 @@ def assemble(count):
         name = shot["scene"]
         event.owner, event.sequence = name, 0
         destination = uid(TIMELINE["shots"][shot["shot"]]["scene"]) if shot["shot"] < count else TITLE
+        next_shot = TIMELINE["shots"][shot["shot"]] if shot["shot"] < count else None
+        cut = [cue_stamp()]
+        if next_shot and len(set(next_shot["palette_ids"])) == 1:
+            cut.append(event("EVENT_PALETTE_SET_BACKGROUND", {
+                f"palette{i}": palette for i, palette in enumerate(next_shot["palette_ids"])
+            }))
+        cut.append(switch(destination))
         init = [event("EVENT_ACTOR_HIDE", {"actorId": "player"}),
+                event("EVENT_OVERLAY_HIDE"),
                 event("EVENT_CAMERA_SET_POSITION", {"x": number(shot["camera_start"][0]),
                                                    "y": number(shot["camera_start"][1]), "units": "pixels"}),
                 event("EVENT_ENGINE_FIELD_SET", {"engineFieldKey": "fade_style", "value": number(1)}),
                 event("EVENT_GBVM_SCRIPT", {"script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"}),
                 event("EVENT_SET_MUSIC_ROUTINE", {"routine": 0}, {"true":
-                      [cue_stamp(), switch(destination)] if destination != TITLE else end_intro()}),
+                      cut if destination != TITLE else end_intro()}),
                 event("EVENT_SET_INPUT_SCRIPT", {"input": ["a", "start"], "override": True}, {"true": end_intro()})]
+        for actor in shot["actors"]:
+            actor_id = uid(f"{name}/{actor['id']}")
+            cel = actor_script(shot, actor, actor_id, True)[0][3]
+            init += [event("EVENT_ACTOR_ACTIVATE", {"actorId": actor_id}),
+                     event("EVENT_ACTOR_HIDE", {"actorId": actor_id}),
+                     event("EVENT_ACTOR_SET_FRAME", {"actorId": actor_id, "frame": number(cel)})]
+        if shot["shot"] != 1:
+            init.append(event("EVENT_IF_INPUT", {"input": ["a", "start"], "__disableElse": True},
+                              {"true": end_intro(), "false": []}))
         if shot["shot"] == 1:
             init.append(event("EVENT_SET_VALUE", {"variable": "7", "value": number(0)}))
             init.append(event("EVENT_MUSIC_PLAY", {"musicId": music_id}))
             init.append(cue_stamp(first=True))
         main_script = scene_script(shot)
-        init.append(event("EVENT_THREAD_START", {"variable": "T0"}, {"true": main_script}))
+        if shot["actors"]:
+            init.append(event("EVENT_THREAD_START", {"variable": "T1"}, {"true": choreography(shot)}))
+        else:
+            init.append(event("EVENT_SCRIPT_UNLOCK"))
+        init += main_script
         folder = GAME / "project/scenes" / name
         write(folder / "scene.gbsres", {
             "_resourceType": "scene", "id": uid(name), "_index": shot["shot"],
@@ -312,7 +439,7 @@ def assemble(count):
             "spritePaletteIds": [TIMELINE["sprite_palettes"]["ball"], TIMELINE["sprite_palettes"]["shard"]],
             "autoFadeSpeed": None, "script": init,
             "playerHit1Script": [], "playerHit2Script": [], "playerHit3Script": [], "collisions": "",
-            "playerSpriteSheetId": uid("intro_ball"),
+            "playerSpriteSheetId": uid("intro_hidden_player"),
         })
         for index, actor in enumerate(shot["actors"]):
             actor_id = uid(f"{name}/{actor['id']}")
@@ -324,13 +451,26 @@ def assemble(count):
                 "spriteSheetId": uid(actor["sprite"]), "paletteId": "", "direction": "down",
                 "moveSpeed": 1, "animSpeed": 255, "isPinned": False, "persistent": True,
                 "collisionGroup": "", "collisionExtraFlags": [], "prefabScriptOverrides": {},
-                "script": [], "startScript": [], "updateScript": actor_script(shot, actor, actor_id),
+                "script": [], "startScript": [], "updateScript": [],
                 "hit1Script": [], "hit2Script": [], "hit3Script": [],
             })
     settings_path = GAME / "project/settings.gbsres"
     settings = json.loads(settings_path.read_text())
     settings.update(startSceneId=uid(TIMELINE["shots"][0]["scene"]), startX=52, startY=9)
     write(settings_path, settings)
+    for path in (GAME / "project/scenes").glob("*/scene.gbsres"):
+        title = json.loads(path.read_text())
+        if title["id"] != TITLE:
+            continue
+        event.owner, event.sequence = "intro/title-entry", 0
+        reset = event("EVENT_GBVM_SCRIPT", {"script":
+            ".globl _fade_frames_per_step, _fade_timer, _fade_running\n"
+            "VM_SET_CONST_INT8 _fade_frames_per_step, 0\n"
+            "VM_SET_CONST_INT8 _fade_timer, 0\n"
+            "VM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"})
+        title["autoFadeSpeed"] = None
+        title["script"] = [reset] + [e for e in title["script"] if e["id"] != reset["id"]]
+        write(path, title)
     write(GAME / "build/intro-assembly.json", {
         "shots": count, "actor_anchor_px": ANCHOR, "source_sha256": checksums,
         "scenes": {s["scene"]: uid(s["scene"]) for s in TIMELINE["shots"][:count]},

@@ -1,0 +1,1307 @@
+{
+  "_resourceType": "scene",
+  "id": "86584d5b-cec6-53b9-b190-112f9b30f6ba",
+  "_index": 5,
+  "type": "TOPDOWN",
+  "name": "intro_05_magic",
+  "symbol": "scene_intro_05_magic",
+  "x": 520,
+  "y": 360,
+  "width": 42,
+  "height": 20,
+  "backgroundId": "da6c40b4-bdbc-542b-b917-7d1c3e3c256e",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "1e828b71-e1bb-599c-b14c-9bbbca9b9e56",
+    "ac5c426b-45f5-5d51-a198-10a92c81434d",
+    "0a9057b5-6a23-53a8-a7d2-cf4c50cb3d21",
+    "7808117b-ed40-5bb9-bf0f-a0ce64a3d142",
+    "64644ba0-dea8-59de-8b5f-ff69346a6599",
+    "c8a8ff5a-17bd-514a-9daa-a21d45a38c40",
+    "970c9156-04f4-5d2e-b906-a44e83d76329",
+    "f45bbcfd-f2aa-5c2e-a391-0c706e49e602"
+  ],
+  "spritePaletteIds": [
+    "213df663-a048-5633-bbe9-b969d1ac137a",
+    "c8ffef88-b6b3-5494-aba5-3e6a53d3ee51"
+  ],
+  "autoFadeSpeed": null,
+  "script": [
+    {
+      "id": "6f5bb52a-e0cf-563d-b358-aff59f219782",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "player"
+      }
+    },
+    {
+      "id": "ee01f1ae-06b2-5287-845b-91feb067cdf9",
+      "command": "EVENT_OVERLAY_HIDE"
+    },
+    {
+      "id": "bc1fee5e-f027-5653-bfd2-771ef2f1f255",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "c1869a23-3536-5710-8928-89a177be29fb",
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "fade_style",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "fafed4a1-8a9f-5738-83ff-5e0afb143a09",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"
+      }
+    },
+    {
+      "id": "e43c929e-2891-583c-a452-76d8e090a440",
+      "command": "EVENT_SET_MUSIC_ROUTINE",
+      "args": {
+        "routine": 0
+      },
+      "children": {
+        "true": [
+          {
+            "id": "67834106-161d-5670-a3b0-1bef96eccc18",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_GET_INT16 VAR_VARIABLE_7, _sys_time"
+            }
+          },
+          {
+            "id": "bb896946-31f9-5b42-b09a-2bad9bc99f00",
+            "command": "EVENT_PALETTE_SET_BACKGROUND",
+            "args": {
+              "palette0": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette1": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette2": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette3": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette4": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette5": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette6": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+              "palette7": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c"
+            }
+          },
+          {
+            "id": "c850038a-0d54-5c45-aee1-f530f8a506eb",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "59f12250-3ddf-589e-b4e5-7c4f429e35b3",
+              "x": {
+                "type": "number",
+                "value": 10.0
+              },
+              "y": {
+                "type": "number",
+                "value": 9.0
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "9de6b817-c138-5e86-b186-26d1fb81d689",
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "a",
+          "start"
+        ],
+        "override": true
+      },
+      "children": {
+        "true": [
+          {
+            "id": "365350e5-11b1-552c-9664-391cd72d5142",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "a3415d85-a657-5192-a07c-67da8c3b2d12",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "268e97d8-373f-5492-a227-19d979073f5c",
+      "command": "EVENT_ACTOR_ACTIVATE",
+      "args": {
+        "actorId": "826ea4a0-bb26-5772-bac1-8d315c1cdb6f"
+      }
+    },
+    {
+      "id": "ed62f68c-3a7c-5910-b128-b0254093c10b",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "826ea4a0-bb26-5772-bac1-8d315c1cdb6f"
+      }
+    },
+    {
+      "id": "d25e6414-52ce-5acc-97e9-256beba05e39",
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "826ea4a0-bb26-5772-bac1-8d315c1cdb6f",
+        "frame": {
+          "type": "number",
+          "value": 0
+        }
+      }
+    },
+    {
+      "id": "984e39f3-6758-510e-9b75-21c059b560c7",
+      "command": "EVENT_IF_INPUT",
+      "args": {
+        "input": [
+          "a",
+          "start"
+        ],
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "id": "a228d00f-50a6-56fe-9743-769a9b2c467e",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "8b7e4cdb-ba8a-506a-b856-95aa3b0d6e9b",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "id": "3bd013c7-23ec-5dc1-a264-51e574d02f03",
+      "command": "EVENT_THREAD_START",
+      "args": {
+        "variable": "T1"
+      },
+      "children": {
+        "true": [
+          {
+            "id": "8e3bf6cc-7d77-5038-926e-f48446beb67b",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10152$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 0, 10153$, 0\nVM_IDLE\nVM_JUMP 10152$\n10153$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "8b1df609-897f-5f2c-b4f4-74c3e4a0e24f",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 3, 40076$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 1280\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3584\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40076$:"
+            }
+          },
+          {
+            "id": "68ab4d06-2a3d-53f8-b535-ca17a3cc32c1",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10156$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 1, 10157$, 0\nVM_IDLE\nVM_JUMP 10156$\n10157$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "4b2b099c-bafd-5ba3-a822-0f3c44c76f5a",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 4, 40078$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 1472\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3488\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40078$:"
+            }
+          },
+          {
+            "id": "c6a78a82-6fd1-5d77-9386-3b41de651cb0",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10160$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 2, 10161$, 0\nVM_IDLE\nVM_JUMP 10160$\n10161$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "8b22b32d-b635-5493-a492-3d2ce2349286",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 5, 40080$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 1696\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3360\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40080$:"
+            }
+          },
+          {
+            "id": "16cf8e27-8a87-506f-817b-753f1d2503ab",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10164$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 3, 10165$, 0\nVM_IDLE\nVM_JUMP 10164$\n10165$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "716d29e8-2f0e-5c7d-82ce-d3be56740cea",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 6, 40082$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 1888\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3264\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40082$:"
+            }
+          },
+          {
+            "id": "f43931b0-f327-5632-9826-7855e7c73ed9",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10168$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 4, 10169$, 0\nVM_IDLE\nVM_JUMP 10168$\n10169$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "cc357d3d-0661-5382-aa31-1707550139b0",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 7, 40084$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 2080\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3136\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40084$:"
+            }
+          },
+          {
+            "id": "9ce7bb1f-7fc6-503f-93e1-1f919f7dd5a3",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10172$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 5, 10173$, 0\nVM_IDLE\nVM_JUMP 10172$\n10173$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "ec65ae8f-0e2a-53ed-8d2c-0289bc1d3d09",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 8, 40086$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 2272\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 3040\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40086$:"
+            }
+          },
+          {
+            "id": "681c947a-9e8d-578a-bdc7-8cf6846db4ec",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10176$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 6, 10177$, 0\nVM_IDLE\nVM_JUMP 10176$\n10177$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "df349f27-d215-57eb-b975-880e38073c62",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 9, 40088$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 2496\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2912\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40088$:"
+            }
+          },
+          {
+            "id": "aba8d02d-1ed1-58ee-8d61-4b3a1c6667e9",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10180$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 7, 10181$, 0\nVM_IDLE\nVM_JUMP 10180$\n10181$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "9ba7dbbf-5a9e-5db6-8ce6-98c9bbd6c3b7",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 10, 40090$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 2688\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2816\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40090$:"
+            }
+          },
+          {
+            "id": "41c27a1a-24d0-5a54-9ff0-4fb4641ccba0",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10184$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 8, 10185$, 0\nVM_IDLE\nVM_JUMP 10184$\n10185$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "9e6f2671-0b30-5f55-9c58-3cea85566456",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 11, 40092$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 2880\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2720\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40092$:"
+            }
+          },
+          {
+            "id": "898dfb49-d85a-5ff1-be17-157beccb7874",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10188$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 9, 10189$, 0\nVM_IDLE\nVM_JUMP 10188$\n10189$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "6b946b9e-7793-5c4f-9d3e-1ba28796452c",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 12, 40094$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 3072\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2592\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40094$:"
+            }
+          },
+          {
+            "id": "3f8d1963-8295-52da-8036-2991e1de2691",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10192$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 10, 10193$, 0\nVM_IDLE\nVM_JUMP 10192$\n10193$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "f3f37396-7729-50af-aa9d-c7ff7a11b78a",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 13, 40096$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 3264\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2496\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40096$:"
+            }
+          },
+          {
+            "id": "a639e15f-43ec-5e11-85df-76b2874ef1b8",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10196$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 11, 10197$, 0\nVM_IDLE\nVM_JUMP 10196$\n10197$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "726ab60b-e031-5da7-891e-38f74557dc21",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 14, 40098$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 3488\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2400\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40098$:"
+            }
+          },
+          {
+            "id": "e0d62fe6-9d7b-5e28-b83b-5718ef61d710",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10200$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 12, 10201$, 0\nVM_IDLE\nVM_JUMP 10200$\n10201$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "dd3a933c-6fa8-5d18-a1c4-ebc9186a59e2",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 15, 40100$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 3680\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2304\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40100$:"
+            }
+          },
+          {
+            "id": "381deb3a-ccbb-5ab3-9e56-ccf5389f36ce",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10204$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 13, 10205$, 0\nVM_IDLE\nVM_JUMP 10204$\n10205$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "dc94184e-42e4-5aac-ba44-b5b239374901",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 16, 40102$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 3872\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2176\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40102$:"
+            }
+          },
+          {
+            "id": "6809c11d-9d14-52ed-aad7-94a43395c643",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10208$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 14, 10209$, 0\nVM_IDLE\nVM_JUMP 10208$\n10209$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "f81995fa-3b60-5507-b1e1-5da81069e88b",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 17, 40104$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4064\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 2080\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40104$:"
+            }
+          },
+          {
+            "id": "605f5f29-405f-5a9a-82a6-107475aab6fc",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10212$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 15, 10213$, 0\nVM_IDLE\nVM_JUMP 10212$\n10213$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "1895ec63-f6f6-50c1-a52d-0f95bf8f1379",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 18, 40106$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4224\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1984\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40106$:"
+            }
+          },
+          {
+            "id": "81a7b50b-a9ef-529d-a27e-f1f8308feb79",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10216$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 16, 10217$, 0\nVM_IDLE\nVM_JUMP 10216$\n10217$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "9cea19c9-c825-5bd1-801f-78909700f4ba",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 19, 40108$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4416\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1888\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40108$:"
+            }
+          },
+          {
+            "id": "4ef64187-6266-5d30-8cd6-67c268f7c71f",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10220$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 17, 10221$, 0\nVM_IDLE\nVM_JUMP 10220$\n10221$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "d96e204a-f92f-56bb-851c-6f086bf5a915",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 20, 40110$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4576\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1792\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40110$:"
+            }
+          },
+          {
+            "id": "cc727b5d-0529-568a-829d-6a0e365892bc",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10224$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 18, 10225$, 0\nVM_IDLE\nVM_JUMP 10224$\n10225$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "7d98854c-5d65-5089-83ef-aa5c5642e332",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 21, 40112$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4736\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1728\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40112$:"
+            }
+          },
+          {
+            "id": "6a33512e-d26a-5f5b-b28d-2d9623537c65",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10228$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 19, 10229$, 0\nVM_IDLE\nVM_JUMP 10228$\n10229$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "3847a7ed-cd00-56ae-8441-e30d0b974eca",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 22, 40114$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 4928\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1632\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40114$:"
+            }
+          },
+          {
+            "id": "7aead4c2-1aaf-5a70-884b-3c40ea7406bf",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10232$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 20, 10233$, 0\nVM_IDLE\nVM_JUMP 10232$\n10233$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "e3509f63-ebee-5431-9663-c5703e9ea20f",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 23, 40116$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 5088\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1536\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40116$:"
+            }
+          },
+          {
+            "id": "b7343fbc-ad65-51ee-950d-6771cde33997",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10236$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 21, 10237$, 0\nVM_IDLE\nVM_JUMP 10236$\n10237$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "64113349-0280-52c6-956a-1f512fe920e3",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 24, 40118$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 5280\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1440\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40118$:"
+            }
+          },
+          {
+            "id": "6253e323-d513-54e3-851e-07a09c30c105",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10240$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 22, 10241$, 0\nVM_IDLE\nVM_JUMP 10240$\n10241$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "bca7153f-da6b-5363-a897-a8ac7a1c49cd",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 25, 40120$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 5440\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1344\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40120$:"
+            }
+          },
+          {
+            "id": "d418a0f9-6336-55be-8660-d6bcee35356c",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10244$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 23, 10245$, 0\nVM_IDLE\nVM_JUMP 10244$\n10245$:\nVM_POP 1"
+            }
+          },
+          {
+            "id": "bc1193eb-9d00-5c84-ae72-0c9b8fabc541",
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 26, 40122$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 5632\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1248\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40122$:"
+            }
+          },
+          {
+            "id": "6260a9c4-5f2c-504f-b0c1-24f0ddb43696",
+            "command": "EVENT_THREAD_START",
+            "args": {
+              "variable": "T1"
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "37e680c6-3c29-52c1-99b4-9a548e25a7d6",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10248$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 24, 10249$, 0\nVM_IDLE\nVM_JUMP 10248$\n10249$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "5c21212e-a611-5bb6-9e98-c9310b78fdf3",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 27, 40124$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 5856\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1120\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40124$:"
+                  }
+                },
+                {
+                  "id": "a5227f27-ede2-5fb7-908e-1fa7f20c1521",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10252$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 25, 10253$, 0\nVM_IDLE\nVM_JUMP 10252$\n10253$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "d0fe67d4-6193-5139-847e-e9ea5182c2cf",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 28, 40126$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 6048\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 1024\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40126$:"
+                  }
+                },
+                {
+                  "id": "864bd2ca-f518-544e-9175-458997544f0a",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10256$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 26, 10257$, 0\nVM_IDLE\nVM_JUMP 10256$\n10257$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "cff16c6e-4a4a-5d14-ae17-2b8df80e1633",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 29, 40128$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 6240\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 896\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40128$:"
+                  }
+                },
+                {
+                  "id": "043e9c4a-6991-5d6d-9bbe-4538a7cb1cce",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10260$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 27, 10261$, 0\nVM_IDLE\nVM_JUMP 10260$\n10261$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "1a7dd674-cefb-5873-a786-c505a696e63d",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 30, 40130$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 6432\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 800\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40130$:"
+                  }
+                },
+                {
+                  "id": "1715ed5f-61bf-5a06-8470-651a914b0964",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10264$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 28, 10265$, 0\nVM_IDLE\nVM_JUMP 10264$\n10265$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "e995bff5-74d3-5d5b-9fd9-3b499699b6a7",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 31, 40132$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 6656\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 672\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40132$:"
+                  }
+                },
+                {
+                  "id": "42cdaf4c-3562-5b44-b29f-8973ca9305f5",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10268$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 29, 10269$, 0\nVM_IDLE\nVM_JUMP 10268$\n10269$:\nVM_POP 1"
+                  }
+                },
+                {
+                  "id": "d53feee3-25a4-50f5-b730-737ab4d7b720",
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": ".globl _sys_time\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GT, .ARG0, 32, 40134$, 1\n.globl _actors\nVM_SET_CONST_INT16 ^/(_actors + 57)/, 6848\nVM_SET_CONST_INT16 ^/(_actors + 59)/, 576\nVM_SET_CONST_INT8 ^/(_actors + 56)/, 48\nVM_IDLE\n40134$:"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "8d5aca2d-473b-56c0-927a-5f1fcc785c2b",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10036$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 1, 10037$, 0\nVM_IDLE\nVM_JUMP 10036$\n10037$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "dc3f0eb5-3a21-5ac9-97a1-cd8c3a115c10",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 14
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "4cefb7ce-d176-550b-9388-3b5a38f2f85b",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10040$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 2, 10041$, 0\nVM_IDLE\nVM_JUMP 10040$\n10041$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "3b04f4b5-4951-52e1-8244-45ec249940ae",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 19
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "7a02953f-2374-57f4-a03b-66203b193b14",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10044$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 3, 10045$, 0\nVM_IDLE\nVM_JUMP 10044$\n10045$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "bf83b10b-1a69-5041-89bb-109ceca2dc9c",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 25
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "606c1d24-14d6-522a-a245-92b551becd03",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10048$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 4, 10049$, 0\nVM_IDLE\nVM_JUMP 10048$\n10049$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "97a52f2e-8a2c-5e8e-9cc8-75c08ef3a599",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 31
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "d48c3ce5-a29d-5252-9550-482c63eac5fc",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10052$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 5, 10053$, 0\nVM_IDLE\nVM_JUMP 10052$\n10053$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "a16fb155-f2e6-5e20-87b6-39ecd06e0171",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 37
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "2530fc66-fd62-5a03-a43e-330573256223",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10056$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 6, 10057$, 0\nVM_IDLE\nVM_JUMP 10056$\n10057$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "e0cc2607-2413-5205-968e-d56156c6f27c",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 42
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "0319181d-f40f-5a44-b61a-d41c5b2e5fa0",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10060$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 7, 10061$, 0\nVM_IDLE\nVM_JUMP 10060$\n10061$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "d47c46f4-5d7d-5637-a0bf-03f4d9314649",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 48
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "1ac984ec-d812-5188-b1d3-9667a56db5c6",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10064$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 8, 10065$, 0\nVM_IDLE\nVM_JUMP 10064$\n10065$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "2d760a65-57c7-50f6-978b-7b33d4b05a1b",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 54
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "1240e2bc-cce8-57d9-9df3-e27b49bd7848",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10068$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 9, 10069$, 0\nVM_IDLE\nVM_JUMP 10068$\n10069$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "632f6c04-0103-5e85-b120-c7faf52f75f5",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 59
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "3ff86834-17b6-5d8f-9509-506c614898a0",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10072$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 10, 10073$, 0\nVM_IDLE\nVM_JUMP 10072$\n10073$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "7bca4da6-6c09-5c75-a6fa-0a24fcad18fc",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 65
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "4932caa4-a861-547c-82f3-69a073601a9f",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10076$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 11, 10077$, 0\nVM_IDLE\nVM_JUMP 10076$\n10077$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "18f0949a-bc79-5d99-8001-ce2197a38f68",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 71
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "68eecb95-155c-5709-a2c8-55ab0ef33439",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10080$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 12, 10081$, 0\nVM_IDLE\nVM_JUMP 10080$\n10081$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "10278558-3abe-5459-a0e2-5b35043d0ebf",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 77
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "84039287-4590-5d0e-862f-2754b25a1797",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10084$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 13, 10085$, 0\nVM_IDLE\nVM_JUMP 10084$\n10085$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "0b35e260-7f97-5679-b840-81698b0fd176",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 82
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "e5789cd1-a7eb-520f-b3e2-8b474e109790",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10088$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 14, 10089$, 0\nVM_IDLE\nVM_JUMP 10088$\n10089$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "bc552a17-5353-52a6-b42a-4278f1d307a1",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 88
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "fb95bafe-f818-58ce-80b4-0e3a0bdbbbd3",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10092$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 15, 10093$, 0\nVM_IDLE\nVM_JUMP 10092$\n10093$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "ceddeca2-0aca-5f21-8d80-4d3ff0fd71a8",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 94
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "4704d492-6e47-5936-8356-8eeaa7ca6e25",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10096$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 16, 10097$, 0\nVM_IDLE\nVM_JUMP 10096$\n10097$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "e7252e68-1455-532a-8a09-917c39f79607",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 99
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "f404e8e5-ba1a-5a19-ad40-d692d7a8bb46",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10100$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 17, 10101$, 0\nVM_IDLE\nVM_JUMP 10100$\n10101$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "87b3b0da-6ce6-5ec1-bb7c-321a7f663dc6",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 105
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "02262761-d738-5888-a77f-0060f4cc86f3",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10104$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 18, 10105$, 0\nVM_IDLE\nVM_JUMP 10104$\n10105$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "281e8a34-4074-55f3-9a8f-45c8aa962950",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 111
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "308a6d24-6f92-5fdc-a3ab-7e35f74a61dc",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10108$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 19, 10109$, 0\nVM_IDLE\nVM_JUMP 10108$\n10109$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "4c874471-e7d4-5f58-a2cb-0b48cbf8d387",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 117
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "c4682583-ec61-5e4e-b61f-affd4c370343",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10112$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 20, 10113$, 0\nVM_IDLE\nVM_JUMP 10112$\n10113$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "7848deb2-f25c-5f29-af48-83e223c717ab",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 122
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "52440201-b111-5b3b-b33c-3b0dd0de9897",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10116$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 21, 10117$, 0\nVM_IDLE\nVM_JUMP 10116$\n10117$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "3cdd45dd-23b1-51e0-9e75-e0b9410fb6a4",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 128
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "eed47e1c-7ec8-5c03-8bd0-f72bf255a726",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10120$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 22, 10121$, 0\nVM_IDLE\nVM_JUMP 10120$\n10121$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "c70b9679-f173-59b1-a30d-7a9d7e38746b",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 134
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "7d671a0e-8f02-5835-b343-d5e7e8d5ef60",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10124$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 23, 10125$, 0\nVM_IDLE\nVM_JUMP 10124$\n10125$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "49519a02-6fe5-5bef-8996-ef561d1dda07",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 139
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "1895a4e7-00a1-5b96-bb07-02dfe2c8a34e",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10128$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 24, 10129$, 0\nVM_IDLE\nVM_JUMP 10128$\n10129$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "f48b337d-c3b2-55e0-98f6-0d66538d66fd",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 145
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "51575233-1b54-5cec-a1c5-999bad5c59ee",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10132$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 25, 10133$, 0\nVM_IDLE\nVM_JUMP 10132$\n10133$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "17d2ec82-0544-5324-aaa3-b71f41ae20c5",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 151
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "0fccc536-4291-55aa-959c-1baa1784ddc8",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10136$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 26, 10137$, 0\nVM_IDLE\nVM_JUMP 10136$\n10137$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "62438b69-ac76-55f0-a5e2-c1157a00d752",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 157
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "85bdc33b-f390-5c04-a093-bfad3a0fb9d7",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10140$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 27, 10141$, 0\nVM_IDLE\nVM_JUMP 10140$\n10141$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "8e97b2d2-5055-52f3-b53e-9161dfe46989",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 162
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "fcfa7044-5bbd-5e6c-adcb-6b4b3e6c7846",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10144$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 28, 10145$, 0\nVM_IDLE\nVM_JUMP 10144$\n10145$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "27f6c5ff-85d5-5e09-9471-6a3f052d7a28",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 168
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "b35e3669-503a-5e22-8709-3b8da7e81818",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10148$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 29, 10149$, 0\nVM_IDLE\nVM_JUMP 10148$\n10149$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "bbd4aa4c-f888-5bd3-9036-e3f86e938ed8",
+      "command": "EVENT_PALETTE_SET_BACKGROUND",
+      "args": {
+        "palette0": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette1": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette2": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette3": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette4": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette5": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette6": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette7": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c"
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "",
+  "playerSpriteSheetId": "7609db0a-62ed-57d7-9342-433fabf73ad8"
+}

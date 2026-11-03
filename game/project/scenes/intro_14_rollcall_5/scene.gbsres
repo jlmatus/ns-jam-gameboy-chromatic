@@ -1,0 +1,393 @@
+{
+  "_resourceType": "scene",
+  "id": "736cb748-4667-5a30-8d79-cf5b725fbe27",
+  "_index": 14,
+  "type": "TOPDOWN",
+  "name": "intro_14_rollcall_5",
+  "symbol": "scene_intro_14_rollcall_5",
+  "x": 1080,
+  "y": 1080,
+  "width": 22,
+  "height": 20,
+  "backgroundId": "5677ae61-1161-5ea0-aab7-4925652da7be",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+    "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c"
+  ],
+  "spritePaletteIds": [
+    "213df663-a048-5633-bbe9-b969d1ac137a",
+    "c8ffef88-b6b3-5494-aba5-3e6a53d3ee51"
+  ],
+  "autoFadeSpeed": null,
+  "script": [
+    {
+      "id": "b63c7dea-c632-5d81-a6c7-f53a85f55cc0",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "player"
+      }
+    },
+    {
+      "id": "ec176e09-b95a-58e5-a036-1a472198b14d",
+      "command": "EVENT_OVERLAY_HIDE"
+    },
+    {
+      "id": "d15d0277-b382-5a45-b51d-587cbd71b74e",
+      "command": "EVENT_CAMERA_SET_POSITION",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "units": "pixels"
+      }
+    },
+    {
+      "id": "23fdce84-4794-59a1-b624-fac8d7d630aa",
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "fade_style",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "2da01c05-8443-5531-99da-16ffd00c5f5f",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"
+      }
+    },
+    {
+      "id": "047d2329-1d59-5ea8-8a88-e691c11b41a9",
+      "command": "EVENT_SET_MUSIC_ROUTINE",
+      "args": {
+        "routine": 0
+      },
+      "children": {
+        "true": [
+          {
+            "id": "57a0e7fb-efc3-5d8f-97e9-e612ad79b3f4",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "281b2f0b-9a1b-524d-ab1f-50febf67fc4b",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "c8f525ab-d650-5a51-8c60-93ef10d0b190",
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "a",
+          "start"
+        ],
+        "override": true
+      },
+      "children": {
+        "true": [
+          {
+            "id": "0f04a216-7944-51ce-9b76-703f865ca5f8",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "ba0eb331-7c41-515a-8e51-a1bd64670b4b",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "4e27335f-5fa3-52ef-8a72-c3a610b432cc",
+      "command": "EVENT_IF_INPUT",
+      "args": {
+        "input": [
+          "a",
+          "start"
+        ],
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "id": "220b23bb-c21c-51ba-8074-97ed5a801def",
+            "command": "EVENT_MUSIC_STOP"
+          },
+          {
+            "id": "ffbdfe13-e75d-5534-b33a-3ebd364b46ca",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "id": "eb58ce81-3ad5-5e70-8f06-36a26c3d83ad",
+      "command": "EVENT_SCRIPT_UNLOCK"
+    },
+    {
+      "id": "cacbe4cc-8dfb-5e5c-84be-1eb827cbe40e",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10032$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 0, 10033$, 0\nVM_IDLE\nVM_JUMP 10032$\n10033$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "f485d3d4-6c8e-531a-a4b7-76a48a69e3fe",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time, b_camera_shake_frames, _camera_shake_frames\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_INT16 3\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .LTE, .ARG0, 0, 30017$, 0\nVM_PUSH_CONST 2\nVM_PUSH_CONST 2\nVM_INVOKE b_camera_shake_frames, _camera_shake_frames, 0, .ARG2\nVM_POP 2\n30017$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "ab42b59f-ad69-5777-9db0-e8048d9721c5",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10036$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 3, 10037$, 0\nVM_IDLE\nVM_JUMP 10036$\n10037$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "e9a295b6-0145-5a3d-a063-64491ead7b58",
+      "command": "EVENT_PALETTE_SET_BACKGROUND",
+      "args": {
+        "palette0": "5a57e143-9b6d-5c2b-a62f-519cfea2f8c5",
+        "palette1": "0a7404d6-4604-5631-b6da-945af7ffd770",
+        "palette2": "25c0f009-2a36-546b-bd11-c27527ce7b20",
+        "palette3": "25c0f009-2a36-546b-bd11-c27527ce7b20",
+        "palette4": "a2537764-83f6-594d-9e5a-1ff035843b12",
+        "palette5": "fc0d4218-3591-554f-ae10-be8f102a6bd7",
+        "palette6": "b2f5c56e-03be-5219-a386-5a9e1ca4aad0",
+        "palette7": "43e2ac98-3ea1-5183-ae4d-adce0d639ef8"
+      }
+    },
+    {
+      "id": "54811637-fc42-568f-badc-bda00f34357a",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10040$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 3, 10041$, 0\nVM_IDLE\nVM_JUMP 10040$\n10041$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "489ec2c3-7d8a-5e89-ae66-0b1957805b1a",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time, b_camera_shake_frames, _camera_shake_frames\nVM_PUSH_CONST 0\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_INT16 9\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .LTE, .ARG0, 0, 30021$, 0\nVM_PUSH_CONST 2\nVM_PUSH_CONST 2\nVM_INVOKE b_camera_shake_frames, _camera_shake_frames, 0, .ARG2\nVM_POP 2\n30021$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "d7d3963d-1b07-5174-a3ad-639cd0f93660",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10044$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 60, 10045$, 0\nVM_IDLE\nVM_JUMP 10044$\n10045$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "bbeca153-07ad-563e-9f95-0065686055ba",
+      "command": "EVENT_PALETTE_SET_BACKGROUND",
+      "args": {
+        "palette0": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette1": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette2": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette3": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette4": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette5": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette6": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c",
+        "palette7": "3cc39976-2537-5baf-8f4a-a4c9ab1bcc1c"
+      }
+    },
+    {
+      "id": "5971d0f0-7163-5c65-ad6e-cb693d3679fb",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10048$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 63, 10049$, 0\nVM_IDLE\nVM_JUMP 10048$\n10049$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "0f8591e6-faad-5e1f-b8e1-9b93af688e35",
+      "command": "EVENT_PALETTE_SET_BACKGROUND",
+      "args": {
+        "palette0": "5a57e143-9b6d-5c2b-a62f-519cfea2f8c5",
+        "palette1": "0a7404d6-4604-5631-b6da-945af7ffd770",
+        "palette2": "25c0f009-2a36-546b-bd11-c27527ce7b20",
+        "palette3": "25c0f009-2a36-546b-bd11-c27527ce7b20",
+        "palette4": "a2537764-83f6-594d-9e5a-1ff035843b12",
+        "palette5": "fc0d4218-3591-554f-ae10-be8f102a6bd7",
+        "palette6": "b2f5c56e-03be-5219-a386-5a9e1ca4aad0",
+        "palette7": "43e2ac98-3ea1-5183-ae4d-adce0d639ef8"
+      }
+    },
+    {
+      "id": "0ef46489-c19b-5834-999e-87c18a295ff1",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10052$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 66, 10053$, 0\nVM_IDLE\nVM_JUMP 10052$\n10053$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "2d53f901-391f-5681-b56d-534171ee339f",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _fade_frames_per_step\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_FADE_OUT 0"
+      }
+    },
+    {
+      "id": "91ae4068-c529-520d-b9eb-02a1a289f116",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10056$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 76, 10057$, 0\nVM_IDLE\nVM_JUMP 10056$\n10057$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "63d9eafc-10aa-55f3-a0f0-58de1c5f835a",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"
+      }
+    },
+    {
+      "id": "d0e91139-c77b-5dd7-afa2-4a68092c4326",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10060$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 86, 10061$, 0\nVM_IDLE\nVM_JUMP 10060$\n10061$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "67a87c94-6584-5a8e-a0aa-c9bf0befb3b4",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"
+      }
+    },
+    {
+      "id": "d76a86d7-57bf-5965-af9b-38f8ce868c77",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10064$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 97, 10065$, 0\nVM_IDLE\nVM_JUMP 10064$\n10065$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "2e0ff0a9-b06b-552a-ad1e-395a7b6d81a4",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"
+      }
+    },
+    {
+      "id": "f6cda288-338c-5171-bbb2-410400c39592",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10068$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 107, 10069$, 0\nVM_IDLE\nVM_JUMP 10068$\n10069$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "d515a724-6572-5389-be27-33945dbfeaf6",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"
+      }
+    },
+    {
+      "id": "89aece86-a329-5022-b657-a46758e4f617",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10072$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 117, 10073$, 0\nVM_IDLE\nVM_JUMP 10072$\n10073$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "ddf3004a-54a0-50d0-996c-36658109e3d1",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl b_fade_update, _fade_update\nVM_CALL_NATIVE b_fade_update, _fade_update"
+      }
+    },
+    {
+      "id": "fb5df507-fb3c-5122-85a3-98a4d40d07d4",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10076$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 120, 10077$, 0\nVM_IDLE\nVM_JUMP 10076$\n10077$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "6274ac00-a377-5da0-b87c-cf6378e54b64",
+      "command": "EVENT_MUSIC_STOP"
+    },
+    {
+      "id": "fdf093db-74e2-556c-b2a5-5954d3f9aa56",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 9
+        },
+        "direction": "down",
+        "fadeSpeed": 0
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "",
+  "playerSpriteSheetId": "7609db0a-62ed-57d7-9342-433fabf73ad8"
+}

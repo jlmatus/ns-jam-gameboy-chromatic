@@ -333,6 +333,9 @@ static void start_lineup(void) {
 }
 void basketball_init(void) BANKED {
     uint8_t i;
+    /* Native intro scene loads can leave a map offset; title art uses its
+       approved tile IDs directly in both window-map banks. */
+    _map_tile_offset=0;
     jam_init(&jam);
     jam_sfx_init(&jam);
     jam_front_scene_save();
@@ -357,7 +360,7 @@ void basketball_init(void) BANKED {
     front_active=1;jam_front_init(&front,0);
     /* The scene is now entered after the native cinematic (or its skip). */
     front.mode=JAM_FRONT_HOME;front.frame=0;
-    front.previous_input=(INPUT_A?JAM_A:0)|(INPUT_START?JAM_TURBO:0);
+    front.previous_input=((joypads.joy0&J_A)?JAM_A:0)|((joypads.joy0&J_START)?JAM_TURBO:0);
     for(i=0;i<=6;i++)actors[i].flags|=ACTOR_FLAG_HIDDEN;
     jam_front_art(front.frame);ui_set_pos(0,0);
 }

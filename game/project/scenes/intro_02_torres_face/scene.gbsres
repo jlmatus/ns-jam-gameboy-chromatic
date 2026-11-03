@@ -29,14 +29,18 @@
   "autoFadeSpeed": null,
   "script": [
     {
-      "id": "8868e611-b90e-5c89-a023-27c5f9bc3992",
+      "id": "83658dcf-b21b-5a45-8f8b-d46f91b200e7",
       "command": "EVENT_ACTOR_HIDE",
       "args": {
         "actorId": "player"
       }
     },
     {
-      "id": "7c8ff52f-6c43-589d-8d99-7f404c9d4529",
+      "id": "2e4bfb00-6b65-5875-97dc-c1da1e0ae56e",
+      "command": "EVENT_OVERLAY_HIDE"
+    },
+    {
+      "id": "f4b49b93-39dc-50d3-9d0b-6dbaeba9ccdb",
       "command": "EVENT_CAMERA_SET_POSITION",
       "args": {
         "x": {
@@ -51,7 +55,7 @@
       }
     },
     {
-      "id": "83658dcf-b21b-5a45-8f8b-d46f91b200e7",
+      "id": "55f5b8d7-1b7a-5b86-b94b-f5058b794095",
       "command": "EVENT_ENGINE_FIELD_SET",
       "args": {
         "engineFieldKey": "fade_style",
@@ -62,14 +66,14 @@
       }
     },
     {
-      "id": "2e4bfb00-6b65-5875-97dc-c1da1e0ae56e",
+      "id": "0c9215c3-02bf-544d-813f-b36021ebcfde",
       "command": "EVENT_GBVM_SCRIPT",
       "args": {
         "script": ".globl _fade_frames_per_step, _fade_timer, _fade_running\nVM_SET_CONST_INT8 _fade_frames_per_step, 0\nVM_SET_CONST_INT8 _fade_timer, 0\nVM_SET_CONST_INT8 _fade_running, 0\nVM_FADE_IN 0"
       }
     },
     {
-      "id": "0c9215c3-02bf-544d-813f-b36021ebcfde",
+      "id": "fd098b3a-82d1-5252-87a9-49f1849b3430",
       "command": "EVENT_SET_MUSIC_ROUTINE",
       "args": {
         "routine": 0
@@ -77,14 +81,14 @@
       "children": {
         "true": [
           {
-            "id": "f4b49b93-39dc-50d3-9d0b-6dbaeba9ccdb",
+            "id": "8868e611-b90e-5c89-a023-27c5f9bc3992",
             "command": "EVENT_GBVM_SCRIPT",
             "args": {
               "script": ".globl _sys_time\nVM_GET_INT16 VAR_VARIABLE_7, _sys_time"
             }
           },
           {
-            "id": "55f5b8d7-1b7a-5b86-b94b-f5058b794095",
+            "id": "7c8ff52f-6c43-589d-8d99-7f404c9d4529",
             "command": "EVENT_SWITCH_SCENE",
             "args": {
               "sceneId": "11759b67-efc5-5384-8d48-964595ae3241",
@@ -104,7 +108,7 @@
       }
     },
     {
-      "id": "c5e7e4d8-7cb7-596e-8ce2-1f26fced4968",
+      "id": "d185ef50-49db-5c7e-9f43-7a17101b92f6",
       "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
         "input": [
@@ -116,11 +120,11 @@
       "children": {
         "true": [
           {
-            "id": "fd098b3a-82d1-5252-87a9-49f1849b3430",
+            "id": "27ba80af-5934-51c4-9694-e821311f47d8",
             "command": "EVENT_MUSIC_STOP"
           },
           {
-            "id": "27ba80af-5934-51c4-9694-e821311f47d8",
+            "id": "c5e7e4d8-7cb7-596e-8ce2-1f26fced4968",
             "command": "EVENT_SWITCH_SCENE",
             "args": {
               "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
@@ -140,35 +144,65 @@
       }
     },
     {
-      "id": "f4ad3d3f-96e3-53c5-82ac-c2b11304ef15",
-      "command": "EVENT_THREAD_START",
+      "id": "6c72ec7e-acd9-5c9d-854e-c638707213e3",
+      "command": "EVENT_IF_INPUT",
       "args": {
-        "variable": "T0"
+        "input": [
+          "a",
+          "start"
+        ],
+        "__disableElse": true
       },
       "children": {
         "true": [
           {
-            "id": "d185ef50-49db-5c7e-9f43-7a17101b92f6",
-            "command": "EVENT_GBVM_SCRIPT",
-            "args": {
-              "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10020$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 2, 10021$, 0\nVM_IDLE\nVM_JUMP 10020$\n10021$:\nVM_POP 1"
-            }
+            "id": "719fbb20-35d3-5db1-9410-126bcdf7b5e9",
+            "command": "EVENT_MUSIC_STOP"
           },
           {
-            "id": "719fbb20-35d3-5db1-9410-126bcdf7b5e9",
-            "command": "EVENT_PALETTE_SET_BACKGROUND",
+            "id": "f4ad3d3f-96e3-53c5-82ac-c2b11304ef15",
+            "command": "EVENT_SWITCH_SCENE",
             "args": {
-              "palette0": "3c040039-240d-590e-be09-08d81a3ea617",
-              "palette1": "d349ac15-39c8-55f4-a593-c8e38f1013d3",
-              "palette2": "ce906e23-3737-5420-b53f-45999bcfe611",
-              "palette3": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
-              "palette4": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
-              "palette5": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
-              "palette6": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
-              "palette7": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae"
+              "sceneId": "12f07015-0a42-504a-8d39-3f689e13ad3a",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "down",
+              "fadeSpeed": 0
             }
           }
-        ]
+        ],
+        "false": []
+      }
+    },
+    {
+      "id": "a3c6ef99-c3fd-53c3-9622-062a5415b48f",
+      "command": "EVENT_SCRIPT_UNLOCK"
+    },
+    {
+      "id": "891e7f5a-c076-508e-a69c-120cad6f057d",
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ".globl _sys_time\nVM_PUSH_CONST 0\n10028$:\nVM_GET_INT16 .ARG0, _sys_time\nVM_RPN\n.R_REF .ARG0\n.R_REF VAR_VARIABLE_7\n.R_OPERATOR .SUB\n.R_REF_SET .ARG0\n.R_STOP\nVM_IF_CONST .GTE, .ARG0, 2, 10029$, 0\nVM_IDLE\nVM_JUMP 10028$\n10029$:\nVM_POP 1"
+      }
+    },
+    {
+      "id": "08abd628-8e9d-50c5-92df-d3d945720446",
+      "command": "EVENT_PALETTE_SET_BACKGROUND",
+      "args": {
+        "palette0": "3c040039-240d-590e-be09-08d81a3ea617",
+        "palette1": "d349ac15-39c8-55f4-a593-c8e38f1013d3",
+        "palette2": "ce906e23-3737-5420-b53f-45999bcfe611",
+        "palette3": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+        "palette4": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+        "palette5": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+        "palette6": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae",
+        "palette7": "9c52e6ed-cfcc-55dc-8ec9-b1a32622ffae"
       }
     }
   ],
@@ -176,5 +210,5 @@
   "playerHit2Script": [],
   "playerHit3Script": [],
   "collisions": "",
-  "playerSpriteSheetId": "aaff6c4b-8f13-5218-92fd-f2d83efcd8e3"
+  "playerSpriteSheetId": "7609db0a-62ed-57d7-9342-433fabf73ad8"
 }
