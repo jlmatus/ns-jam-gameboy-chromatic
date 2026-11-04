@@ -134,7 +134,9 @@ def card(stage, player=matus_source, source=portrait):
         name=labels.get(name,name)
         y=45+i*17
         text(im, 107, y, name, I)
-        text(im, 144, y, str(value), G)
+        # Right-align values (as the ratings pages do) so a six-letter
+        # label such as INSIDE keeps a gap before a single digit.
+        text(im, 144 if value >= 10 else 150, y, str(value), G)
         for b in range(10):
             d.rectangle((107+b*5, y+9, 110+b*5, y+12), fill=G if b<value else T)
     # A full-width specialty ribbon keeps long labels out of the 56px stat

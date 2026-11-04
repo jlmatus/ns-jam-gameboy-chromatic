@@ -23,13 +23,13 @@
     "name": "MAGIC",
     "pages": [
       {
-        "tiles": 110,
+        "tiles": 109,
         "bank0": 64,
-        "bank1": 46
+        "bank1": 45
       },
       {
-        "tiles": 59,
-        "bank0": 59,
+        "tiles": 58,
+        "bank0": 58,
         "bank1": 0
       },
       {
@@ -43,13 +43,13 @@
     "name": "BAMBI",
     "pages": [
       {
-        "tiles": 111,
+        "tiles": 110,
         "bank0": 64,
-        "bank1": 47
+        "bank1": 46
       },
       {
-        "tiles": 63,
-        "bank0": 63,
+        "tiles": 62,
+        "bank0": 62,
         "bank1": 0
       },
       {
@@ -88,8 +88,8 @@
         "bank1": 46
       },
       {
-        "tiles": 59,
-        "bank0": 59,
+        "tiles": 58,
+        "bank0": 58,
         "bank1": 0
       },
       {
