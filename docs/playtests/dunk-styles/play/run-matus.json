@@ -1,0 +1,83 @@
+[
+ {
+  "frame": 1040,
+  "roster": [
+   "MATUS",
+   "MAGIC",
+   "BAMBI",
+   "CHRUX"
+  ]
+ },
+ {
+  "frame": 8181,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MATUS",
+  "score_before": [
+   0,
+   10
+  ]
+ },
+ {
+  "frame": 8463,
+  "score_after": [
+   0,
+   10
+  ],
+  "frames": 282
+ },
+ {
+  "frame": 15074,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MATUS",
+  "score_before": [
+   0,
+   22
+  ]
+ },
+ {
+  "frame": 15356,
+  "score_after": [
+   0,
+   22
+  ],
+  "frames": 282
+ },
+ {
+  "frame": 17242,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MATUS",
+  "score_before": [
+   0,
+   24
+  ]
+ },
+ {
+  "frame": 17520,
+  "score_after": [
+   0,
+   24
+  ],
+  "frames": 278
+ },
+ {
+  "frame": 21317,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MATUS",
+  "score_before": [
+   0,
+   28
+  ]
+ },
+ {
+  "frame": 21597,
+  "score_after": [
+   0,
+   28
+  ],
+  "frames": 280
+ }
+]

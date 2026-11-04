@@ -4,11 +4,11 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {createRequire} from 'node:module';
-import {dunkCells} from './dunk-poses.mjs';
+import {dunkCells,dunkStyles} from './dunk-poses.mjs';
 import {bodyProfiles} from './create-body-profiles.mjs';
 const require=createRequire(path.join(process.env.JAM_PNGJS_ROOT||path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node'),'package.json'));
 const {PNG}=require('pngjs');
-const root='game/plugins/basketball/engine',out='art/dunks-v2';
+const root='game/plugins/basketball/engine',out='art/dunks-v3';
 fs.mkdirSync(out,{recursive:true});
 const font=[...fs.readFileSync(`${root}/include/jam_hud.h`,'utf8').match(/\{([^}]+)\}/)[1].matchAll(/\d+/g)].map(m=>Number(m[0]));
 // Nonzero background pixels let CGB tile priority clip contestants at the HUD.
@@ -20,23 +20,29 @@ const skin=['#D69C74','#C99870','#E8B492','#C99368','#E5B493','#D7A079'];
 const themes={0:['#102333','#E6B37C','#287780','#182738'],1:['#102333','#294953','#356270','#182738']};
 const byteArray=(name,a)=>`static const unsigned char ${name}[]={${a.join(',')}};\n`;
 const manifest=[];
+// Matches jam_dunk_jump() through the finish. After the impact the ball is
+// already at the rim, so a style may hang longer (CHOMPA) without rule changes.
 function jump(player,t,fail){
  const peak=30+ratings[player]*2,hang=48-bodyProfiles[player].height_px;
+ const end=dunkStyles[player].hangEnd??38,drop=dunkStyles[player].drop??10;
  return t<8?0:t<20?Math.floor((t-8)*peak/12):t<28?peak-Math.floor((peak-hang)*(t-20)/8):
-  fail?(t<40?Math.floor(hang*(40-t)/12):0):t<38?hang:t<48?Math.floor(hang*(48-t)/10):0;
+  fail?(t<40?Math.floor(hang*(40-t)/12):0):t<end?hang:t<end+drop?Math.floor(hang*(end+drop-t)/drop):0;
 }
 function make(player,t,fail){
  const pixels=Array.from({length:128},()=>Array(160).fill(0));
  const owners=Array.from({length:128},()=>Array(160).fill(1)),foregroundTiles=new Set();
  const attrs=Array.from({length:16},()=>Array(20).fill(1));
  const range=10+ratings[player]*4,travel=t<8?0:t<28?(t-8)/20:1;
- const px=-range+(range-8)*travel,j=jump(player,t,fail);
- const hanging=!fail&&t>=26&&t<42?Math.min((t-26)*6,12,(42-t)*3):0;
+ // Most finishes stop 8 pixels short of the rim; CHRUX drifts under it.
+ const style=dunkStyles[player],reach=style.reach??-8,hangEnd=style.hangEnd??38,land=hangEnd+(style.drop??10);
+ const px=-range+(range+reach)*travel,j=jump(player,t,fail);
+ const hanging=!fail&&t>=26&&t<hangEnd+4?Math.min((t-26)*6,12,(hangEnd+4-t)*3):0;
  const feet=88-j+hanging,cel=dunkCells(player,t,fail);
  const minY=Math.min(20,feet-56+Math.min(cel.headY,cel.hand[1])-7),maxY=Math.max(52,feet);
  const ramp=t<4?1:t<20?1+(t-4)/16:t>48?1+(64-t)/16:2;
  const zoom=Math.min(ramp,112/(maxY-minY)),originY=minY-8/zoom;
- const shake=!fail&&t>=28&&t<36?[[2,1],[-2,-1],[1,1],[-1,0]][(t-28)/2]:[0,0];
+ const power=style.shake??1;
+ const shake=!fail&&t>=28&&t<36?[[2,1],[-2,-1],[1,1],[-1,0]][(t-28)/2].map(v=>v*power):[0,0];
  const sx=x=>Math.round(116+x*zoom)+shake[0],sy=y=>Math.round((y-originY)*zoom)+shake[1];
  const put=(x,y,c,p)=>{if(x>=0&&x<160&&y>=0&&y<128){pixels[y][x]=c;owners[y][x]=p;attrs[y>>3][x>>3]=p;if(p!==1&&p!==4)foregroundTiles.add((y>>3)*20+(x>>3));}};
  const line=(x,y,xx,yy,c,p)=>{const n=Math.max(Math.abs(xx-x),Math.abs(yy-y));for(let i=0;i<=n;i++)put(Math.round(x+(xx-x)*i/(n||1)),Math.round(y+(yy-y)*i/(n||1)),c,p);};
@@ -56,13 +62,17 @@ function make(player,t,fail){
   for(const [x,y] of ink)word.set(y*160+x,2);
   for(const [n,c] of word)put(n%160,Math.floor(n/160),c,4);
  }
+ // MEAT's 360 leaves two motion arcs around the spinning body.
+ if(style.spin&&!fail&&t>=10&&t<20)for(const dy of [-34,-20])for(let i=0;i<40;i++){
+  const r=(i/40+(t-10)/10)*Math.PI;put(sx(px+Math.cos(r)*15),sy(feet+dy+Math.sin(r)*4),2,1);
+ }
  // Impact rays expand once; no full-screen flashes. Crowd arms pop on a make.
  if(!fail&&t>=28&&t<40){const r=12+(t-28)*2;for(const [dx,dy] of [[1,0],[-1,0],[.7,-.7],[-.7,-.7],[0,-1]])line(sx(dx*(r-5)),sy(44+dy*(r-5)),sx(dx*r),sy(44+dy*r),2,3);}
  for(let x=8;x<154;x+=24){const cheer=!fail&&t>=28&&t<42?3:0;line(x,120,x,115-cheer,2,1);line(x,117-cheer,x-3,119-cheer*2,2,1);line(x,117-cheer,x+3,119-cheer*2,2,1);}
- if(t>=44&&t<52){const r=(t-44)*2;line(sx(px-r-4),sy(89),sx(px-r),sy(87),2,1);line(sx(px+r),sy(87),sx(px+r+4),sy(89),2,1);}
+ if(t>=land-4&&t<land+4){const r=(t-land+4)*2*power;line(sx(px-r-4),sy(89),sx(px-r),sy(87),2,1);line(sx(px+r),sy(87),sx(px+r+4),sy(89),2,1);}
  // Angled backboard, inward rim and laced net. Skin-tone ivory preserves hands
  // in the same contact tiles without introducing a fifth hardware color.
- const rattle=!fail&&t>=28&&t<38?[2,-1,1,0,0][(t-28)/2]:0;
+ const rattle=!fail&&t>=28&&t<38?[2,-1,1,0,0][(t-28)/2]*power:0;
  const board=sx(16)+rattle,bt=sy(20),bb=sy(48);
  for(let x=board;x<Math.min(160,board+Math.round(5*zoom));x++)line(x,bt+Math.floor((x-board)/2),x,bb,3,3);
  line(board,bt,board,bb,1,3);line(board,bt,Math.min(159,board+Math.round(5*zoom)),bt+3,1,3);
@@ -175,7 +185,7 @@ for(let p=0;p<6;p++)for(let fail=0;fail<3;fail++){
   fs.writeFileSync(`${root}/src/core/jam_dunk_frame_${id}.c`,code);
   chunks.push({p,fail,id,frames:batch.map(f=>f.t/2)});
  }
- manifest.push({player:names[p],style:p===2||p===4?'two-hand power':'one-hand tomahawk',failed:!!fail,result:fail===2?'blocked':fail?'missed':'made',frames:frames.map(f=>({time:f.t,tiles:f.count,zoom:f.zoom/256,originY:f.origin/256,hand:[f.handX,f.handY],shake:f.shake}))});
+ manifest.push({player:names[p],style:dunkStyles[p].name,failed:!!fail,result:fail===2?'blocked':fail?'missed':'made',frames:frames.map(f=>({time:f.t,tiles:f.count,zoom:f.zoom/256,originY:f.origin/256,hand:[f.handX,f.handY],shake:f.shake}))});
 }
 let dispatch='#pragma bank 255\n#include "jam_dunk_cam.h"\n';
 chunks.forEach(c=>dispatch+=`void jam_dunk_frame_${c.id}(unsigned char frame,unsigned char mirror) BANKED;\n`);

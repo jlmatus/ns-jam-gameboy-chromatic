@@ -16,7 +16,7 @@ Other players and the possession timer stay still during the cinematic. SELECT f
 
 ## Native rendering
 
-The close-up uses deliberately authored 24×56 crew cels with crouch, cock-back, scissoring legs, reach, swinging rim hang and landing. `scripts/dunk-poses.mjs` owns the joint keyframes; `scripts/create-dunk-art.mjs` generates banked data and the manifest in `art/dunks-v2/` (v1 studies are preserved). BAMBI/CHOMPA use two-hand power gathers; others use one-hand tomahawk gathers. Zoom and framing follow the cinematic phase, with entry/exit wipes. Left-basket maps turn the action while precompensating jersey digits.
+The close-up uses deliberately authored 24×56 crew cels with crouch, cock-back, scissoring legs, reach, swinging rim hang and landing. `scripts/dunk-poses.mjs` owns the joint keyframes; `scripts/create-dunk-art.mjs` generates banked data and the manifest in `art/dunks-v3/` (v1 and v2 studies are preserved). Each player has a signature dunk on the shared timeline: MATUS cradle jam, MAGIC windmill, BAMBI two-hand power slam, CHRUX reverse jam, CHOMPA two-hand rim hang, MEAT 360 spin. See [dunk styles](../playtests/dunk-styles.md). Zoom and framing follow the cinematic phase, with entry/exit wipes. Left-basket maps turn the action while precompensating jersey digits.
 
 During the covered camera view, large muted teal arena lettering spells the dunker's name above and behind the action. Foreground-tile masks keep lettering out of skin/kit/basket palette cells. The left-basket canvas pre-mirrors the lettering before the whole camera flip so all six names remain readable; the HUD name remains available. Lettering is omitted from entry/exit wipes to preserve the font and turbo-gauge reservation.
 

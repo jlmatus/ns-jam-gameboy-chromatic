@@ -1,0 +1,101 @@
+[
+ {
+  "frame": 1062,
+  "roster": [
+   "MAGIC",
+   "BAMBI",
+   "CHRUX",
+   "CHOMPA"
+  ]
+ },
+ {
+  "frame": 2462,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MAGIC",
+  "score_before": [
+   0,
+   2
+  ]
+ },
+ {
+  "frame": 2742,
+  "score_after": [
+   0,
+   2
+  ],
+  "frames": 280
+ },
+ {
+  "frame": 5058,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MAGIC",
+  "score_before": [
+   0,
+   6
+  ]
+ },
+ {
+  "frame": 5335,
+  "score_after": [
+   0,
+   6
+  ],
+  "frames": 277
+ },
+ {
+  "frame": 6621,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MAGIC",
+  "score_before": [
+   0,
+   8
+  ]
+ },
+ {
+  "frame": 6900,
+  "score_after": [
+   0,
+   8
+  ],
+  "frames": 279
+ },
+ {
+  "frame": 9465,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MAGIC",
+  "score_before": [
+   0,
+   14
+  ]
+ },
+ {
+  "frame": 9744,
+  "score_after": [
+   0,
+   14
+  ],
+  "frames": 279
+ },
+ {
+  "frame": 13742,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "MAGIC",
+  "score_before": [
+   0,
+   20
+  ]
+ },
+ {
+  "frame": 14020,
+  "score_after": [
+   2,
+   20
+  ],
+  "frames": 278
+ }
+]

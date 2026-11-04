@@ -1,0 +1,47 @@
+[
+ {
+  "frame": 1084,
+  "roster": [
+   "BAMBI",
+   "MAGIC",
+   "CHRUX",
+   "CHOMPA"
+  ]
+ },
+ {
+  "frame": 2500,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "BAMBI",
+  "score_before": [
+   0,
+   2
+  ]
+ },
+ {
+  "frame": 2776,
+  "score_after": [
+   0,
+   2
+  ],
+  "frames": 276
+ },
+ {
+  "frame": 4212,
+  "dunk_cam": true,
+  "passer_slot": 0,
+  "dunker": "BAMBI",
+  "score_before": [
+   0,
+   5
+  ]
+ },
+ {
+  "frame": 4491,
+  "score_after": [
+   2,
+   5
+  ],
+  "frames": 279
+ }
+]

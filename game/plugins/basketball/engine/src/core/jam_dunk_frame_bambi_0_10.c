@@ -18,8 +18,8 @@ static const unsigned char mirror_attrs1_1[]={41,41,41,41,41,41,41,41,41,41,41,4
 void jam_dunk_frame_bambi_0_10(unsigned char frame,unsigned char mirror) BANKED {
 unsigned char old;const unsigned char *map,*attrs;
 switch(frame){
-case 30:if(!jam_cam_upload)return;{VBK_REG=jam_cam_upload-1;set_bkg_data(0,47,tiles_0);map=mirror?mirror_map_0:map_0;attrs=jam_cam_upload==2?(mirror?mirror_attrs1_0:attrs1_0):(mirror?mirror_attrs0_0:attrs0_0);}jam_cam_zoom=320;jam_cam_origin=3482;jam_cam_avatar=-2048;jam_cam_hand_x=115;jam_cam_hand_y=67;jam_cam_shake_x=0;jam_cam_shake_y=0;break;
-case 31:if(!jam_cam_upload)return;{VBK_REG=jam_cam_upload-1;set_bkg_data(0,46,tiles_1);map=mirror?mirror_map_1:map_1;attrs=jam_cam_upload==2?(mirror?mirror_attrs1_1:attrs1_1):(mirror?mirror_attrs0_1:attrs0_1);}jam_cam_zoom=288;jam_cam_origin=3300;jam_cam_avatar=-2048;jam_cam_hand_x=115;jam_cam_hand_y=61;jam_cam_shake_x=0;jam_cam_shake_y=0;break;
+case 30:if(!jam_cam_upload)return;{VBK_REG=jam_cam_upload-1;set_bkg_data(0,47,tiles_0);map=mirror?mirror_map_0:map_0;attrs=jam_cam_upload==2?(mirror?mirror_attrs1_0:attrs1_0):(mirror?mirror_attrs0_0:attrs0_0);}jam_cam_zoom=320;jam_cam_origin=3482;jam_cam_avatar=-2048;jam_cam_hand_x=107;jam_cam_hand_y=69;jam_cam_shake_x=0;jam_cam_shake_y=0;break;
+case 31:if(!jam_cam_upload)return;{VBK_REG=jam_cam_upload-1;set_bkg_data(0,46,tiles_1);map=mirror?mirror_map_1:map_1;attrs=jam_cam_upload==2?(mirror?mirror_attrs1_1:attrs1_1):(mirror?mirror_attrs0_1:attrs0_1);}jam_cam_zoom=288;jam_cam_origin=3300;jam_cam_avatar=-2048;jam_cam_hand_x=108;jam_cam_hand_y=63;jam_cam_shake_x=0;jam_cam_shake_y=0;break;
 default:return;}
 if(!jam_cam_upload && frame==0){VBK_REG=0;set_win_tiles(0,0,20,16,map);VBK_REG=1;set_win_tiles(0,0,20,16,attrs);VBK_REG=0;jam_dunk_cam_objects();wait_vbl_done();return;}
 old=LCDC_REG;LCDC_REG=(old&~LCDCF_BG9C00)|(jam_cam_map_target?LCDCF_BG9C00:0);VBK_REG=0;set_bkg_tiles(0,0,20,16,map);VBK_REG=1;set_bkg_tiles(0,0,20,16,attrs);VBK_REG=0;LCDC_REG=(LCDC_REG&~LCDCF_BG9C00)|(old&LCDCF_BG9C00);jam_dunk_cam_objects();wait_vbl_done();LCDC_REG=(LCDC_REG&~LCDCF_WIN9C00)|(jam_cam_map_target?LCDCF_WIN9C00:0); }
