@@ -51,7 +51,7 @@ export function dunkCells(player, time, failed=false, reverseJersey=false) {
   polygon([[7-bulk,hip-2],[16+bulk,hip-2],[18+bulk,hip+3],[13,hip+4],[11,hip+1],[5-bulk,hip+3]],'#');
   polygon([[8-bulk,hip-1],[15+bulk,hip-1],[16+bulk,hip+2],[13,hip+2],[11,hip],[7-bulk,hip+2]],'s');
   stroke([[12+lean,shoulder],[12+lean,headY+6]],1,'o');
-  const base=bodyCells(player,0,false),baseY=48-profile.height_px;
+  const base=bodyCells(player,0,false,false,true),baseY=48-profile.height_px;
   for(let y=0;y<8;y++)for(let x=0;x<10;x++){const v=base[baseY+y][x+3];if(v!=='.')put(x+7+lean,headY+y,v);}
   // Neck, face and jersey retain the six canonical identity cues.
   const number=['13','32','23','7','74','00'][player];

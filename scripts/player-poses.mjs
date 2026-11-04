@@ -8,7 +8,7 @@ const digits = {
   '2':['110','001','010','100','111'],'3':['110','001','010','001','110'],
   '4':['101','101','111','001','001'],'7':['111','001','010','010','010']
 };
-export function bodyCells(player, pose, mirrored, reverseJersey=false) {
+export function bodyCells(player, pose, mirrored, reverseJersey=false, frontHead=false) {
   let c=Array.from({length:BODY_H},()=>Array(BODY_W).fill('.'));
   const put=(x,y,v)=>{if(x>=0&&x<BODY_W&&y>=0&&y<BODY_H)c[y][x]=v;};
   const disc=(x,y,r,v)=>{for(let yy=Math.floor(y-r);yy<=y+r;yy++)for(let xx=Math.floor(x-r);xx<=x+r;xx++)if((xx-x)**2+(yy-y)**2<=r*r)put(xx,yy,v);};
@@ -30,6 +30,9 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
   const crouch=pose===5||pose===9||pose===10||pose===15?4:0;
   const lean=pose===1?2:pose===2?1:0;
   const front=pose===3,back=pose===4;
+  // Ready and stride poses are only shown facing left/right, so they turn the
+  // head and chest side-on. Dunk Cam passes frontHead to keep its close-up face.
+  const side=pose<=2&&!frontHead;
   // Build reads in ready/run/turn poses: heavy +2, lean -1 per side; broad and
   // stocky keep the base trunk so their tiles stay shared. Shot/contact poses
   // stay shared so the crew sheet fits below UI tile 192.
@@ -51,6 +54,10 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     pose===13?[[[5,shoulder],[2,24],[3,28]],[[10,shoulder],[13,headY+2],[15,headY-4]]]:
     pose===14?[[[5,shoulder],[9,headY+6],[14,headY-4]],[[10,shoulder],[13,headY+3],[15,headY-4]]]:
     (pose===10||pose===15)?[[[5,shoulder],[3,26],[6,28]],[[10,shoulder],[13,25],[14,23]]]:
+    // Side-on arms swing against the legs: far arm first, near arm drawn last.
+    side&&pose===1?[[[8,shoulder],[11,22],[13,20]],[[8,shoulder],[5,22],[3,25]]]:
+    side&&pose===2?[[[7,shoulder],[4,22],[2,25]],[[9,shoulder],[12,21],[14,19]]]:
+    side?[[[7,shoulder],[8,23],[10,26]],[[9,shoulder],[10,23],[12,26]]]:
     pose===1?[[[6,shoulder+1],[3,23],[1,20]],[[10,shoulder],[12,23],[14,22]]]:
     pose===2?[[[6,shoulder],[4,23],[2,25]],[[11,shoulder],[13,20],[14,17]]]:
     (pose===5||pose===9)?[[[5,shoulder],[8,24],[12,23]],[[10,shoulder],[12,25],[14,22]]]:
@@ -68,7 +75,9 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     polygon([[4-h,hip-2],[11+h,hip-2],[12+h,hip+3],[8,hip+4],[7,hip+2],[3-h,hip+3]],'#',maxY);
     polygon([[5-h,hip-1],[10+h,hip-1],[11+h,hip+2],[8,hip+2],[7,hip],[4-h,hip+2]],'s',maxY);
   };
-  if(bulk>0){trunk(0,0,BODY_H);trunk(bulk,bulk,32);}else trunk(bulk,0,BODY_H);
+  // Side-on chests are one pixel narrower per side; heavy builds keep a belly.
+  const width=side?Math.max(bulk-1,-1):bulk;
+  if(width>0){trunk(side?-1:0,0,BODY_H);trunk(width,width,32);}else trunk(width,0,BODY_H);
   stroke([[7+lean,shoulder],[7+lean,headY+6]],1,'o');
   // Ten-pixel heads retain readable portrait cues at handheld resolution.
   // Keep their height/foot anchor unchanged so reach and collision stay intact.
@@ -80,14 +89,24 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
     ['.ssssssss.','ssssssssss','#oooooooo#','##########','#o#oo#oo##','#ooo##ooo#','.oo####oo.','..######..'], // CHOMPA: beanie/glasses/chin
     ['.###.###..','#########.','#oooooooo#','#oo#oo#oo#','#oooooooo#','.oo#oo#o#.','..oooooo..','...oooo...'] // MEAT: short textured hair
   ];
-  const head=back?(player===4?['.ssssssss.','ssssssssss','ssssssssss','##########','##########','.########.','..oooooo..','...oooo...']:
+  // Profiles face right (the sheet mirrors them for left): back of the head at
+  // the left, one eye, nose on the right edge, same identity cues as the faces.
+  const profiles=[
+    ['.#.#.#.#..','########..','####oooo#.','###ooo#oo#','.##ooooooo','.#ooooo##.','..#oo###..','...###....'], // MATUS: spikes/goatee
+    ['..#####...','.#######..','#####ooo#.','###o######','.##ooooooo','.#ooooooo#','..#oooo#..','...####...'], // MAGIC: glasses/clean jaw
+    ['..####....','.###oooo#.','###ooooo#.','##oooo#o#.','#ooooooooo','#oooooooo#','.#oooooo#.','..######..'], // BAMBI: receding hair/round face
+    ['.#######..','#########.','####oooo#.','###ooo#oo#','###ooooooo','#####ooo#.','.#######..','..#####...'], // CHRUX: crop/full beard
+    ['.sssssss..','sssssssss.','##oooooo#.','##o#######','#ooooooooo','.#oooo##o#','..#o####..','...####...'], // CHOMPA: beanie/glasses/chin
+    ['.###.##...','########..','###ooooo#.','##oooo#o#.','#ooooooooo','.#oo#o#o#.','..#ooooo#.','...####...'] // MEAT: short textured hair
+  ];
+  const head=side?profiles[player]:back?(player===4?['.ssssssss.','ssssssssss','ssssssssss','##########','##########','.########.','..oooooo..','...oooo...']:
     ['..######..','.########.','##########','##########','##########','.########.','..oooooo..','...oooo...']):faces[player];
   head.forEach((row,y)=>[...row].forEach((v,x)=>{if(v!=='.')put(x+3,y+headY,v);}));
   limb(arms[1]);
   if(mirrored)c=c.map(r=>r.toReversed());
   // Redraw numerals AFTER turning, so jerseys never become mirror writing.
   const jersey=['13','32','23','7','74','00'][player];
-  if(pose===0 || pose===3 || pose===4 || pose>=10)[...jersey].forEach((d,i)=>digits[d].forEach((row,y)=>[...row].forEach((v,x)=>{
+  if((pose===0&&!side) || pose===3 || pose===4 || pose>=10)[...jersey].forEach((d,i)=>digits[d].forEach((row,y)=>[...row].forEach((v,x)=>{
     const digitX=(jersey.length===1?6:4)+i*4+x;
     if(v==='1')put(reverseJersey?15-digitX:digitX,shoulder+3+y,'#');
   })));
