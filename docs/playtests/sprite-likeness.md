@@ -40,6 +40,27 @@ redrawn faces. Crew sprites now allocate 192/192 tiles (main alone uses 190),
 which passes the loader check but leaves no spare tiles.
 [Merged on-court sprites](sprite-likeness/merged-sprites.png).
 
+## Tile budget recovery
+
+The merge left the crew at 192/192 tiles. Measured on the sheet with
+`sprite-likeness/tilecount.py` (unique 8×16 tiles, x-flip merged, which
+matches the loader to within one tile) and confirmed with the real check:
+
+- MATUS and CHOMPA (stocky/broad) no longer widen; only BAMBI (+2) and the
+  lean players (−1) change width. This saves one tile.
+- Removing width from the turning poses saved nothing: their arms and heads
+  already make those tiles unique.
+- BAMBI's clean chin now tapers like MAGIC and MEAT (`..oooooo..`,
+  `...oooo...`), so his chin and neck pieces are shared. A dark-jaw variant
+  also shared tiles, but it read as a beard again and was rejected.
+
+Result: crew 172 tiles, loader **186/192** (main alone used 190). Stack
+headroom remains 532 bytes, Dunk Cam peaks at 124/128 tiles, and the rules
+tests pass. Emulator replays show the same lineups
+([before/after](sprite-likeness/tile-budget-sprites.png)) and clean Dunk Cam
+events ([captures](sprite-likeness/tile-budget-dunks.png)). ROM SHA-256
+`cc2cab60a48fa0e8c7cf54ef759c891830475c8f0bbbe4b69cc256345fb93bc0`.
+
 ## Validation (branch, before merge)
 
 - Official CLI ROM build passes, SHA-256

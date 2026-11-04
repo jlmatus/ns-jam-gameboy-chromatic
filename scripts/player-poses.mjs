@@ -30,9 +30,10 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
   const crouch=pose===5||pose===9||pose===10||pose===15?4:0;
   const lean=pose===1?2:pose===2?1:0;
   const front=pose===3,back=pose===4;
-  // Build reads in ready/run/turn poses: heavy +2, broad/stocky +1, lean -1 per side.
-  // Shot/contact poses stay shared so the crew sheet fits below UI tile 192.
-  const bulk=pose<5||pose>=10?(profile.mass===4?2:profile.mass===3?1:profile.mass===1?-1:0):0;
+  // Build reads in ready/run/turn poses: heavy +2, lean -1 per side; broad and
+  // stocky keep the base trunk so their tiles stay shared. Shot/contact poses
+  // stay shared so the crew sheet fits below UI tile 192.
+  const bulk=pose<5||pose>=10?(profile.mass===4?2:profile.mass===1?-1:0):0;
   const headY=48-profile.height_px+crouch,shoulder=headY+8,hip=29+crouch;
   // Legs bend at separate knee and ankle joints. Strides trade the planted foot.
   let legs;
@@ -74,7 +75,7 @@ export function bodyCells(player, pose, mirrored, reverseJersey=false) {
   const faces=[
     ['..#.#.#...','.#######..','##oooooo#.','#oo#oo#oo#','#oooooooo#','.oo####o#.','..oo##oo..','...####...'], // MATUS: spikes/goatee
     ['..######..','.########.','#oooooooo#','##########','#o#oo#oo##','.ooooooo#.','..oooooo..','...oooo...'], // MAGIC: glasses/clean jaw
-    ['..######..','.##oooo##.','##oooooo##','#oo#oo#oo#','#oooooooo#','#oooooooo#','.oooooooo.','..oooooo..'], // BAMBI: receding hair/round clean face
+    ['..######..','.##oooo##.','##oooooo##','#oo#oo#oo#','#oooooooo#','#oooooooo#','..oooooo..','...oooo...'], // BAMBI: receding hair/round clean face; MAGIC/MEAT chin shares tiles
     ['.########.','##########','#oooooooo#','#oo#oo#oo#','##oooooo##','###oooo###','.########.','..######..'], // CHRUX: crop/full beard
     ['.ssssssss.','ssssssssss','#oooooooo#','##########','#o#oo#oo##','#ooo##ooo#','.oo####oo.','..######..'], // CHOMPA: beanie/glasses/chin
     ['.###.###..','#########.','#oooooooo#','#oo#oo#oo#','#oooooooo#','.oo#oo#o#.','..oooooo..','...oooo...'] // MEAT: short textured hair
