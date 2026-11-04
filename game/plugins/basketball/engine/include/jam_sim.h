@@ -89,6 +89,10 @@
 #define JAM_GATHER_STEP 10
 /* How long defenders who bit on a fake cannot contest the next shot. */
 #define JAM_BITE_FRAMES 45
+/* Human reaches wait this many updates after any catch; CPU carriers feel
+   pressure inside this Manhattan distance (quarter pixels). */
+#define JAM_HUMAN_SWIPE_DELAY 30
+#define JAM_CPU_PRESSURE 112
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -182,6 +186,7 @@ uint8_t jam_dunk_chance(const jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_dunk_jump(const jam_game_t *g) JAM_BANKED;
 void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED;
+uint8_t jam_cpu_carrier(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BANKED;
 int16_t jam_dunk_view_x(const jam_game_t *g,int16_t world_x,int16_t avatar_q8) JAM_BANKED;
 int16_t jam_dunk_view_y(const jam_game_t *g,int16_t world_y,uint8_t height) JAM_BANKED;
 /* Each caller uses its own ROM-bank-local constant table. */

@@ -1,0 +1,77 @@
+{
+ "lineup": [
+  "BAMBI",
+  "CHOMPA",
+  "MEAT",
+  "MATUS"
+ ],
+ "difficulty": "Pickup",
+ "periods": 4,
+ "seed": 22,
+ "frames": 69303,
+ "final_score": [
+  51,
+  44
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "BAMBI": {
+   "points": 27,
+   "field_made": 12,
+   "field_attempted": 39,
+   "three_made": 3,
+   "three_attempted": 15,
+   "rebounds": 18,
+   "steals": 17,
+   "blocks": 10,
+   "dunks": 5
+  },
+  "CHOMPA": {
+   "points": 24,
+   "field_made": 11,
+   "field_attempted": 29,
+   "three_made": 2,
+   "three_attempted": 13,
+   "rebounds": 14,
+   "steals": 11,
+   "blocks": 10,
+   "dunks": 8
+  },
+  "MEAT": {
+   "points": 38,
+   "field_made": 19,
+   "field_attempted": 38,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 36,
+   "steals": 17,
+   "blocks": 25,
+   "dunks": 18
+  },
+  "MATUS": {
+   "points": 6,
+   "field_made": 2,
+   "field_attempted": 14,
+   "three_made": 2,
+   "three_attempted": 7,
+   "rebounds": 7,
+   "steals": 9,
+   "blocks": 1,
+   "dunks": 0
+  }
+ },
+ "totals": {
+  "passes": 170,
+  "steals": 54,
+  "shots": 120,
+  "rebounds": 75,
+  "baskets": 44,
+  "blocks": 46,
+  "steal_attempts": 69,
+  "shoves": 21,
+  "runovers": 57,
+  "dunk_attempts": 60,
+  "dunks": 31
+ }
+}

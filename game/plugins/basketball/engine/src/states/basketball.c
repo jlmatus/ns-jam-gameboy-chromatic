@@ -177,7 +177,9 @@ static void draw_players(void) {
     int16_t desired,focus,human,ball,dx,dy,scan,marker_top;
     human=project_x(jam.players[jam.controlled].x);
     ball=project_x(jam.ball_x);
-    focus=ball;
+    /* Follow a held ball by its carrier's body: the ball itself swaps hands
+       when the carrier turns, and following it shook the screen. */
+    focus=jam.mode==JAM_HELD && jam.owner>=0 ? project_x(jam.players[jam.owner].x) : ball;
     if(jam.mode==JAM_HELD && jam.owner>=0)focus+=jam.owner<2 ? 12 : -12;
     desired=focus-80;
     /* Keep the controlled body and nearby ball together whenever they fit. */

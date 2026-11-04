@@ -10,6 +10,7 @@ mkdir -p build/tests
   game/plugins/basketball/engine/src/core/jam_contact.c \
   game/plugins/basketball/engine/src/core/jam_restart.c \
   game/plugins/basketball/engine/src/core/jam_dunk.c \
+  game/plugins/basketball/engine/src/core/jam_carrier.c \
   game/plugins/basketball/engine/src/core/jam_turbo.c \
   game/plugins/basketball/engine/src/core/jam_match.c \
   game/plugins/basketball/engine/src/core/jam_audio.c \

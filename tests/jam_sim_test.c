@@ -337,7 +337,7 @@ static void ratings_and_difficulty(void) {
         /* MATUS steals more often than MAGIC against identical BAMBI power. */
         selected(&strong,0);selected(&weak,1);
         strong.owner=weak.owner=2;strong.grace=weak.grace=0;
-        strong.possession_time=weak.possession_time=8;
+        strong.possession_time=weak.possession_time=JAM_HUMAN_SWIPE_DELAY;
         strong.players[2]=strong.players[0];weak.players[2]=weak.players[0];
         strong.rng=weak.rng=seed;
         jam_update(&strong,JAM_A);jam_update(&weak,JAM_A);
@@ -553,7 +553,7 @@ static void shooting_motion(void) {
     puts("PASS: gather/rise, attached ball, release/landing, paused animation, interruptible CPU windup");
 }
 static void defensive_fixture(jam_game_t *g,uint16_t seed,uint8_t behind) {
-    jam_init(g);isolate(g);g->owner=2;g->grace=120;g->possession_time=8;
+    jam_init(g);isolate(g);g->owner=2;g->grace=120;g->possession_time=JAM_HUMAN_SWIPE_DELAY;
     g->players[2].x=200*4;g->players[2].y=88*4;
     g->players[2].heading=JAM_FACE_LEFT;g->players[2].contact_cooldown=255;
     g->players[0].x=(behind?216:184)*4;g->players[0].y=88*4;
@@ -574,10 +574,12 @@ static void physical_defense(void) {
         assert(a.steal_attempts==1 && b.steal_attempts==1);
         jam_update(&a,JAM_A);assert(a.steal_attempts==1); /* Holding cannot roll every frame. */
     }
-    assert(front>behind+100 && front>300 && front<490);
+    /* Front reaches still beat reaches from behind, but no longer win most possessions. */
+    assert(front>behind+100 && front>180 && front<300);
     defensive_fixture(&a,1,0);a.possession_time=0;
     jam_update(&a,JAM_A);assert(a.steal_attempts==0);
-    a.possession_time=8;jam_update(&a,JAM_A);assert(a.steal_attempts==1);
+    a.possession_time=JAM_HUMAN_SWIPE_DELAY-2;jam_update(&a,JAM_A);assert(a.steal_attempts==0);
+    a.possession_time=JAM_HUMAN_SWIPE_DELAY;jam_update(&a,JAM_A);assert(a.steal_attempts==1);
     /* A deliberate shove uses power/build, makes a loose ball, and cannot repeat. */
     defensive_fixture(&a,1,0);a.setup.roster[2]=3;
     jam_update(&a,JAM_A|JAM_TURBO);
@@ -647,7 +649,9 @@ static void contact_soak(void) {
                 assert(g.turbo_energy[p]<=JAM_TURBO_MAX && g.turbo_delay[p]<=JAM_TURBO_DELAY);
                 assert(g.turbo_exhausted[p]<=1 && (g.turbo_energy[p] || g.turbo_exhausted[p]));
                 assert(g.players[p].stun<=18 && g.players[p].contact_cooldown<=40);
-                assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4);
+                /* Everyone stays on the legal apron (8..312). An inbounder may
+                   fetch a ball that went out beyond 306 before walking back. */
+                assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4);
                 assert(g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
             }
         }
@@ -1210,6 +1214,47 @@ static void native_front_flow(void) {
     jam_front_update(&f,0,1);assert(jam_front_update(&f,JAM_TURBO,1)==JAM_FRONT_PLAY);
     puts("PASS: native front flow, 270-VBlank proof, chunk invariance, all-frame skip/release guards, held navigation, help/home, intro replay and Start-to-play");
 }
+/* CPU carriers pass out of pressure or dribble around a defender in front,
+   instead of walking into repeated reaches. */
+static void cpu_ball_fixture(jam_game_t *g,uint16_t seed,uint8_t mate_covered) {
+    jam_init(g);g->owner=2;g->mode=JAM_HELD;g->grace=255;g->possession_time=60;g->rng=seed;
+    g->players[2].x=200*4;g->players[2].y=88*4;g->players[2].cooldown=0;g->players[2].contact_cooldown=255;
+    g->players[0].x=188*4;g->players[0].y=88*4;           /* in front, toward the left rim */
+    g->players[3].x=150*4;g->players[3].y=120*4;g->players[3].cooldown=255;
+    g->players[1].x=mate_covered?150*4:60*4;g->players[1].y=mate_covered?118*4:50*4;g->players[1].cooldown=255;
+}
+static void cpu_ball_security(void) {
+    jam_game_t g;uint16_t seed,passes=0,around=0;uint8_t t;int16_t x0,y0;
+    for(seed=1;seed<=64;seed++) {
+        cpu_ball_fixture(&g,seed,0);
+        for(t=0;t<20 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        passes+=g.mode==JAM_PASS && g.passer==2 && g.target==3;
+        cpu_ball_fixture(&g,seed,1);x0=g.players[2].x;y0=g.players[2].y;
+        for(t=0;t<8;t++)jam_update(&g,0);
+        assert(g.mode==JAM_HELD && g.owner==2);
+        /* Around, not straight into the defender standing between him and the rim. */
+        around+=(g.players[2].y>y0?g.players[2].y-y0:y0-g.players[2].y)>=24 && x0-g.players[2].x<=24;
+    }
+    assert(passes>=60 && around>=60);
+    /* A level defender no longer flips the carrier up and down every update,
+       and a diagonal runner keeps one facing (the camera follows both). */
+    for(seed=1;seed<=16;seed++) {
+        int16_t last;uint8_t reversals=0,turns=0,facing;
+        cpu_ball_fixture(&g,seed,1);g.players[0].cooldown=255;
+        last=g.players[2].y;facing=g.players[2].heading;
+        for(t=0;t<24 && g.mode==JAM_HELD && g.owner==2;t++) {
+            jam_update(&g,0);
+            if(g.players[2].y<last-4)reversals++; /* a 1-pixel body-contact nudge is allowed */
+            last=g.players[2].y;
+            if(g.players[2].heading!=facing){turns++;facing=g.players[2].heading;}
+        }
+        assert(!reversals && turns<=2);
+    }
+    /* Unpressured carriers still attack the rim. */
+    cpu_ball_fixture(&g,1,0);g.players[0].x=60*4;g.players[0].y=50*4;x0=g.players[2].x;
+    step(&g,8,0);assert(g.owner==2 && g.players[2].x<x0-16);
+    printf("PASS: CPU ball security; %u/64 pressured passes to an open teammate, %u/64 dribbles around a covered lane\n",passes,around);
+}
 int main(void) {
     court_edges();
     boundary_violations();
@@ -1224,6 +1269,7 @@ int main(void) {
     possession_control_and_inbounds();
     contact_soak();
     physical_defense();
+    cpu_ball_security();
     shooting_motion();
     pump_fake_and_travel();
     shooting_accuracy();

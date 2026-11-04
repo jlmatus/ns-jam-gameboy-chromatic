@@ -182,7 +182,10 @@ static void move_to(jam_player_t *p,int16_t x,int16_t y,uint8_t speed) {
     if(mx&&my)speed=speed*3/4; /* Same diagonal normalization as the human. */
     if(mx)p->vx=p->x<x?speed:-(int8_t)speed;
     if(my)p->vy=p->y<y?speed:-(int8_t)speed;
-    if(p->vx||p->vy)p->heading=my&&distance(p->y,y)>distance(p->x,x)?(p->vy<0?JAM_FACE_UP:JAM_FACE_DOWN):(p->vx<0?JAM_FACE_LEFT:JAM_FACE_RIGHT);
+    /* Same facing rule as the human: any sideways step faces sideways. Comparing
+       remaining distances flipped diagonal runners every few updates. */
+    if(p->vx)p->heading=p->vx<0?JAM_FACE_LEFT:JAM_FACE_RIGHT;
+    else if(p->vy)p->heading=p->vy<0?JAM_FACE_UP:JAM_FACE_DOWN;
     p->x+=p->vx;p->y+=p->vy;
 }
 static int16_t in_front(const jam_game_t *g,uint8_t defender,uint8_t carrier) {
@@ -196,15 +199,19 @@ static int16_t in_front(const jam_game_t *g,uint8_t defender,uint8_t carrier) {
 static void steal(jam_game_t *g,uint8_t p) {
     int16_t chance,reach;
     if(g->mode!=JAM_HELD || g->owner<0 || team(p)==team(g->owner) || g->players[p].stun || g->players[p].cooldown) return;
-    if(p==g->controlled ? g->possession_time<8 : g->grace) return;
+    /* A fresh carrier gets time to secure the ball before any reach. */
+    if(p==g->controlled ? g->possession_time<JAM_HUMAN_SWIPE_DELAY : g->grace) return;
     reach=p>=2 ? 44+ratings(g,p)->steal*2 : 56+ratings(g,p)->steal*4+(int8_t)jam_body(g,p)->height_px-40;
     if(distance(g->players[p].x,g->players[g->owner].x)>=reach ||
        distance(g->players[p].y,g->players[g->owner].y)>=28+ratings(g,p)->steal*2) return;
-    g->players[p].cooldown=p==g->controlled ? 30-ratings(g,p)->steal*2 : (p<2?65:120-g->setup.difficulty*30);
+    g->players[p].cooldown=p==g->controlled ? 40-ratings(g,p)->steal*2 : (p<2?65:120-g->setup.difficulty*30);
     g->players[p].reach_time=8;
     g->steal_attempts++;
-    chance=28+ratings(g,p)->steal*5-ratings(g,g->owner)->passing*2-ratings(g,g->owner)->power;
-    chance+=in_front(g,p,g->owner)>=0?20:-17;
+    /* Your side's reaches are tuned against CPU carriers, who otherwise lost
+       most possessions to repeated swipes; opponents keep their old odds. */
+    chance=(p<2 ? 14+ratings(g,p)->steal*4 : 28+ratings(g,p)->steal*5)
+        -ratings(g,g->owner)->passing*2-ratings(g,g->owner)->power;
+    chance+=in_front(g,p,g->owner)>=0?(p<2?14:20):-17;
     if(g->height<11)chance+=8;
     if(g->players[g->owner].windup)chance-=15;
     chance+=difficulty_bonus(g,p)*8;
@@ -222,7 +229,7 @@ static void steal(jam_game_t *g,uint8_t p) {
 static void cpu(jam_game_t *g,uint8_t p) {
     jam_player_t *a=&g->players[p];
     int16_t tx,ty;
-    uint8_t ownteam=team(p),mate=p^1,speed;
+    uint8_t ownteam=team(p),speed;
     uint8_t reaction=(p<2 || g->setup.difficulty==JAM_PICKUP)?7:(g->setup.difficulty==JAM_WARM_UP?15:3);
     if(g->mode==JAM_RESET || a->stun) return;
     /* A defender who left his feet on a fake is committed until he lands. */
@@ -255,9 +262,8 @@ static void cpu(jam_game_t *g,uint8_t p) {
             /* Readable gather/rise before release, without a perfect-timing bonus. */
             a->windup=1; return;
         }
-        if(!a->cooldown && near_player(g,p,ownteam?0:2)<80 && random_byte(g)<90) {
-            jam_pass(g,p,mate); a->cooldown=50; return;
-        }
+        /* Ball security lives in jam_carrier.c (this bank is nearly full). */
+        if(jam_cpu_carrier(g,p,&tx,&ty))return;
     } else if(g->owner>=0 && team(g->owner)==ownteam) {
         tx=g->players[g->owner].x+(ownteam ? -128 : 128);
         ty=(g->players[g->owner].y<94*4 ? 112 : 76)*4;
