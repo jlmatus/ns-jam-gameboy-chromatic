@@ -34,6 +34,9 @@ __pycache__/
 !.env.template
 !.env.*.example
 
+# Private marketing material (teasers, covers, scripts); this repo is public
+/marketing/
+
 # Logs, editor backups, and OS metadata
 *.log
 *.swp
