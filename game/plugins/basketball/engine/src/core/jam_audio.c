@@ -19,7 +19,7 @@ uint8_t jam_audio_event(jam_audio_state_t *s,const jam_game_t *g) JAM_BANKED {
         event=g->score[0]>g->score[1]?JAM_SFX_WIN:g->score[0]<g->score[1]?JAM_SFX_LOSE:JAM_SFX_TIE;
     else if(s->seconds && !g->clock_seconds)event=JAM_SFX_HORN;
     else if(g->quarter!=s->quarter || (g->match_phase==JAM_MATCH_LIVE && s->phase>=JAM_MATCH_BREAK))event=JAM_SFX_START;
-    else if(g->mode==JAM_RESET && s->mode!=JAM_RESET && g->message==JAM_MSG_OUT)event=JAM_SFX_WHISTLE;
+    else if(g->mode==JAM_RESET && s->mode!=JAM_RESET && (g->message==JAM_MSG_OUT || g->message==JAM_MSG_TRAVEL))event=JAM_SFX_WHISTLE;
     else if(g->blocks!=s->blocks)
         event=g->mode==JAM_DUNK && g->dunk_result==JAM_DUNK_BLOCKED?JAM_SFX_DUNK_BLOCK:JAM_SFX_BLOCK;
     else if(g->mode==JAM_DUNK && s->mode!=JAM_DUNK)event=JAM_SFX_DUNK_LAUNCH;

@@ -89,8 +89,11 @@ static void draw_hud(void) {
             if(jam.inbound_phase<2)text(20,jam.inbound_phase?"TAKING THE BASELINE":"RETRIEVING BALL");
             else text(20,jam.next_team?"CPU INBOUND":"A PASS BALL IN");break;
         case JAM_MSG_DUNK:text(20,"TURBO FINISH");break;
+        case JAM_MSG_FAKE:text(20,"PUMP FAKE - NO STEPS");break;
+        case JAM_MSG_TRAVEL:text(20,"TRAVELING - CPU BALL");break;
         default:
-            if(jam.owner==(int8_t)jam.controlled) {
+            if(jam.owner==(int8_t)jam.controlled && jam.picked_up)text(20,"PICKED UP - NO STEPS");
+            else if(jam.owner==(int8_t)jam.controlled) {
                 text(20,jam_roster[jam.setup.roster[jam.controlled]].name);
                 text(27,jam_roster[jam.setup.roster[jam.controlled]].jersey);
                 text(30,"A PASS B");
@@ -204,7 +207,7 @@ static void draw_players(void) {
                 facing[p]=(dy>64||dy<-64) && (dx<80&&dx>-80) ? (dy<0?3:2) : (dx<0?1:0);
             }
         }
-        wind=p==jam.controlled?jam.charge:jam.players[p].windup;
+        wind=p==jam.controlled?(jam.charge?jam.charge:(jam.fake_time && jam.owner==(int8_t)p)):jam.players[p].windup;
         mirror=facing[p]==1;
         pose=moving[p]?1+((jam.tick>>3)&1):0;
         if(facing[p]>=2){pose=facing[p]==2?3:4;mirror=moving[p]?((jam.tick>>3)&1):0;}

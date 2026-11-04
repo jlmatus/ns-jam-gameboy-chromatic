@@ -78,6 +78,17 @@
 #define JAM_MSG_INBOUND 14
 #define JAM_MSG_DUNK 15
 #define JAM_MSG_OUT 16
+#define JAM_MSG_FAKE 17
+#define JAM_MSG_TRAVEL 18
+
+/* Releasing B before this many frames is a pump fake instead of a shot. */
+#define JAM_FAKE_FRAMES 8
+/* Frames a pump fake stays visible (ball raised, gather pose). */
+#define JAM_FAKE_SHOW 10
+/* After picking up the ball, frames allowed to stop already-held arrows. */
+#define JAM_GATHER_STEP 10
+/* How long defenders who bit on a fake cannot contest the next shot. */
+#define JAM_BITE_FRAMES 45
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -149,6 +160,9 @@ typedef struct {
     uint16_t clock_seconds, clock_fraction, overtime;
     uint8_t quarter, match_phase;
     uint8_t shot_blocked, loose_rebound;
+    /* Pump fake: picked_up counts frames since the human ended the dribble;
+       bitten marks defenders committed to the fake until bite_time ends. */
+    uint8_t picked_up, fake_time, bitten, bite_time;
 } jam_game_t;
 
 void jam_init(jam_game_t *g) JAM_BANKED;
@@ -177,6 +191,11 @@ void jam_contact(jam_game_t *g,uint8_t i,uint8_t j) JAM_BANKED;
 void jam_update(jam_game_t *g, uint8_t input) JAM_BANKED;
 void jam_pass(jam_game_t *g, uint8_t from, uint8_t to) JAM_BANKED;
 void jam_shoot(jam_game_t *g, uint8_t who, uint8_t charge) JAM_BANKED;
+/* Pump fake and traveling (jam_fake.c), for the controlled ball carrier. */
+void jam_fake_tick(jam_game_t *g) JAM_BANKED;
+uint8_t jam_fake_travel(jam_game_t *g,uint8_t input,uint8_t pressed) JAM_BANKED;
+void jam_fake_release(jam_game_t *g) JAM_BANKED;
+uint8_t jam_fake_hold(jam_game_t *g) JAM_BANKED;
 uint8_t jam_turbo_available(const jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_turbo_spend(jam_game_t *g,uint8_t who,uint8_t cost) JAM_BANKED;
 void jam_turbo_recover(jam_game_t *g,uint8_t who,uint8_t held) JAM_BANKED;

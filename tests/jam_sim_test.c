@@ -99,13 +99,17 @@ static void boundary_violations(void) {
     assert(jam_court_contains(299*4,122*4));
     assert(!jam_court_contains(25*4,122*4));
     assert(!jam_court_contains(294*4,42*4));
-    /* Crossing and pressing pass, or releasing a charged shot, cannot escape. */
+    /* Crossing and pressing pass, or releasing a charged shot outside, cannot escape. */
     for(i=0;i<2;i++) {
         jam_init(&g);isolate(&g);g.players[0].y=40*4+1;
-        if(i)g.charge=24;
+        if(i){g.charge=24;g.players[0].y=38*4;}
         jam_update(&g,JAM_MOVE_UP|(i?0:JAM_A));
         assert(g.mode==JAM_RESET && !g.passes && !g.shots);
     }
+    /* A gathering shooter's feet are set, so arrows cannot carry him out. */
+    jam_init(&g);isolate(&g);g.players[0].y=40*4+1;g.charge=10;
+    jam_update(&g,JAM_MOVE_UP|JAM_B);
+    assert(g.mode==JAM_HELD && g.players[0].y==40*4+1 && g.charge==11);
     /* An out-of-bounds receiver is whistled on the catch. */
     jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=124*4;
     jam_pass(&g,0,1);step(&g,g.duration,0);
@@ -443,6 +447,83 @@ static void shooting_accuracy(void) {
     for(level=0;level<3;level++) {g.setup.difficulty=level;assert(jam_shot_chance(&g,0,24)==open);}
     printf("PASS: 196602 seeded timed open threes: MAGIC %lu, CHOMPA %lu, MATUS %lu /65534; unbiased within 1 point of 44/65/82 percent; distance, pressure, timing, finishing, difficulty\n",(unsigned long)makes[0],(unsigned long)makes[1],(unsigned long)makes[2]);
 }
+static void fake_fixture(jam_game_t *g,uint8_t level,uint16_t seed) {
+    static const jam_setup_t setup={{0,2,1,3},JAM_PICKUP,4};
+    jam_setup_t s=setup;s.difficulty=level;
+    assert(jam_init_lineup(g,&s));isolate(g);
+    /* MAGIC (block 10) guards the human from ten pixels away. */
+    g->players[2].x=g->players[0].x+40;g->players[2].y=g->players[0].y;
+    g->rng=seed;
+}
+static void pump_fake_and_travel(void) {
+    jam_game_t g,before,open;jam_audio_state_t audio;
+    uint16_t seed,bites[3]={0,0,0},expected;int16_t x;uint8_t level,checked=0;
+    /* A quick tap is a fake: no shot or jump, the dribble ends, feet stay set. */
+    jam_init(&g);isolate(&g);
+    step(&g,JAM_FAKE_FRAMES-1,JAM_B);jam_update(&g,0);
+    assert(g.mode==JAM_HELD && g.owner==0 && !g.shots && !g.charge && !g.players[0].shot_time);
+    assert(g.picked_up && g.fake_time==JAM_FAKE_SHOW && g.message==JAM_MSG_FAKE && !jam_jump_height(&g,0));
+    step(&g,JAM_FAKE_SHOW,0);assert(g.mode==JAM_HELD && !g.fake_time && g.height==jam_body(&g,0)->height_px/2);
+    /* Faking again and standing still stays legal. */
+    step(&g,2,JAM_B);jam_update(&g,0);step(&g,120,0);
+    assert(g.mode==JAM_HELD && g.owner==0 && !g.shots && g.picked_up>JAM_GATHER_STEP && g.height==jam_body(&g,0)->height_px/2);
+    /* Any arrow press with a dead ball is traveling: whistle, CPU ball. */
+    before=g;jam_audio_sync(&audio,&g);jam_update(&g,JAM_MOVE_RIGHT);
+    assert(g.mode==JAM_RESET && g.next_team==1 && g.message==JAM_MSG_TRAVEL);
+    assert(!g.picked_up && !g.shots && g.players[0].x==before.players[0].x);
+    assert(jam_audio_event(&audio,&g)==JAM_SFX_WHISTLE);
+    step(&g,30,0);assert(g.mode==JAM_INBOUND && g.next_team==1);
+    /* Arrows held through the fake get a short gather step to stop... */
+    jam_init(&g);isolate(&g);
+    step(&g,3,JAM_MOVE_RIGHT|JAM_B);jam_update(&g,JAM_MOVE_RIGHT);
+    assert(g.mode==JAM_HELD && g.picked_up==1);x=g.players[0].x;
+    step(&g,JAM_GATHER_STEP-1,JAM_MOVE_RIGHT);assert(g.mode==JAM_HELD && g.players[0].x==x);
+    jam_update(&g,JAM_MOVE_RIGHT);assert(g.mode==JAM_RESET && g.message==JAM_MSG_TRAVEL);
+    /* ...stopping inside it is legal, but pressing again is a travel. */
+    jam_init(&g);isolate(&g);
+    step(&g,3,JAM_MOVE_RIGHT|JAM_B);step(&g,4,JAM_MOVE_RIGHT);step(&g,60,0);
+    assert(g.mode==JAM_HELD && g.owner==0);
+    jam_update(&g,JAM_MOVE_DOWN);assert(g.mode==JAM_RESET && g.message==JAM_MSG_TRAVEL);
+    /* A real shot is still a hold of at least JAM_FAKE_FRAMES; feet stay set. */
+    jam_init(&g);isolate(&g);x=g.players[0].x;
+    jam_update(&g,JAM_B);step(&g,20,JAM_B|JAM_MOVE_LEFT);
+    assert(g.mode==JAM_HELD && g.players[0].x==x);
+    jam_update(&g,0);assert(g.mode==JAM_SHOT && g.shots==1 && !g.picked_up);
+    /* Passing out of a fake revives play: the receiver dribbles and moves. */
+    jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=100*4;
+    step(&g,3,JAM_B);jam_update(&g,0);jam_update(&g,JAM_A);assert(g.mode==JAM_PASS);
+    step(&g,g.duration,0);assert(g.owner==1 && g.controlled==1 && !g.picked_up);
+    before=g;jam_update(&g,JAM_MOVE_RIGHT);
+    assert(g.mode==JAM_HELD && g.players[1].x>before.players[1].x);
+    /* Nearby defenders bite on a fake; better CPU levels read it more often. */
+    for(level=0;level<3;level++)for(seed=1;seed<=400;seed++) {
+        fake_fixture(&g,level,seed*977u);
+        step(&g,3,JAM_B);jam_update(&g,0);
+        assert(g.mode==JAM_HELD && !g.shots);
+        if(!(g.bitten&4)){assert(!g.players[2].block_time);continue;}
+        bites[level]++;
+        assert(g.players[2].block_time==18 && g.bite_time==JAM_BITE_FRAMES);
+        if(checked++)continue;
+        /* A bitten defender stays in the air, stops contesting, and cannot block. */
+        open=g;open.bitten=0;
+        assert(jam_shot_chance(&g,0,24)>jam_shot_chance(&open,0,24));
+        x=g.players[2].x;step(&g,8,JAM_B);assert(g.players[2].x==x);
+        step(&g,14,JAM_B);jam_update(&g,0);
+        assert(g.mode==JAM_SHOT && (g.block_attempts&4));
+        step(&g,14,0);assert(!g.shot_blocked && !g.blocks);
+    }
+    for(level=0;level<3;level++) {
+        expected=4*(65-level*10);
+        assert(bites[level]+32>expected && bites[level]<expected+32);
+    }
+    assert(checked && bites[0]>bites[1] && bites[1]>bites[2]);
+    /* The bite wears off: no stale commitment carries into the next shot. */
+    fake_fixture(&g,0,977u);step(&g,3,JAM_B);jam_update(&g,0);
+    step(&g,JAM_BITE_FRAMES,0);assert(!g.bitten && !g.bite_time);
+    step(&g,20,JAM_B);jam_update(&g,0);assert(g.mode==JAM_SHOT && !g.block_attempts);
+    printf("PASS: pump fake ends the dribble without a shot; travel on new arrows or past a %u-frame gather step; pass/shot from a dead ball; MAGIC bites %u/%u/%u of 400 fakes by level and cannot contest or block while committed\n",
+        JAM_GATHER_STEP,bites[0],bites[1],bites[2]);
+}
 static void shooting_motion(void) {
     jam_game_t g,before;
     uint8_t i,last,jump;
@@ -583,7 +664,7 @@ static void possession_control_and_inbounds(void) {
     assert(g.owner==1 && g.controlled==1 && !g.charge);
     before=g;jam_update(&g,JAM_MOVE_RIGHT|JAM_B);
     assert(g.charge==1 && g.players[1].x-before.players[1].x==jam_move_speed(&g,1,0));
-    jam_update(&g,0);assert(g.mode==JAM_SHOT && g.passer==1);
+    step(&g,JAM_FAKE_FRAMES-1,JAM_B);jam_update(&g,0);assert(g.mode==JAM_SHOT && g.passer==1);
     jam_init(&g);isolate(&g);g.players[1].x=120*4;g.players[1].y=100*4;
     jam_update(&g,JAM_A);step(&g,g.duration+24,JAM_A);
     assert(g.passes==1 && g.owner==1 && g.controlled==1);
@@ -1144,6 +1225,7 @@ int main(void) {
     contact_soak();
     physical_defense();
     shooting_motion();
+    pump_fake_and_travel();
     shooting_accuracy();
     warm_up_fairness();
     selection_flow();ratings_pages();ratings_and_difficulty();cpu_blocking_and_levels();movement_pause();passing();shots_rebounds_reset();teammate_and_block();pause_during_swish();painted_three_point_line();cpu_soak();

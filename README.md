@@ -35,7 +35,7 @@ Ask Codex to select `game/project.gbsproj` and run the ModRetro plugin's `web_pr
 | Arrow keys | D-pad | Move your selected player (yellow marker) |
 | Z | A | Pass/request a pass; hold to attempt steals on defense |
 | Enter + Z | START + A | Shove on defense; power/build determine whether the target yields |
-| X | B | Hold then release to shoot; block on defense. Enter + X near the attacking rim attempts a dunk. |
+| X | B | Hold then release to shoot; tap to pump fake (ends your dribble, so any step afterwards is traveling); block on defense. Enter + X near the attacking rim attempts a dunk. |
 | Enter | START | Hold with movement to sprint; release to recover turbo |
 | P | SELECT | Pause/resume |
 
@@ -86,7 +86,7 @@ Use NBA Jam '99's default Game Boy Color configuration, verified in its [offensi
 | --- | --- | --- |
 | D-pad | Move | Move |
 | A | Pass or request a teammate's pass | Attempt a steal |
-| B | Hold for a jump shot; combine with turbo for a dunk | Jump to block |
+| B | Hold for a jump shot; tap to pump fake; combine with turbo for a dunk | Jump to block |
 | START | Hold for turbo | Hold for turbo |
 | SELECT | Pause/resume | Pause/resume |
 

@@ -126,7 +126,9 @@ uint8_t jam_shot_chance(const jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANK
         if(d>100)chance-=(d-100)/3;
     } else chance=d<48 ? 60+r->dunk*3 : 52+r->dunk*2;
     if(charge>=18 && charge<=36) chance+=10;
-    for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(who) && near_player(g,i,who)<64)
+    /* Defenders still recovering from a pump fake no longer contest. */
+    for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(who) && near_player(g,i,who)<64 &&
+       !(g->bite_time && (g->bitten&(1u<<i))))
         chance-=18+(int8_t)ratings(g,i)->power-(int8_t)r->power;
     /* Clutch matters in a close game late in the current possession. */
     if(distance(g->score[0],g->score[1])<=4 && g->possession_time>=720)
@@ -158,7 +160,8 @@ void jam_shoot(jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANKED {
     d=distance(g->players[who].x,g->target_x)/4;
     depth=distance(g->from_y,g->target_y)/2;
     g->shot_points=((uint32_t)d*d+(uint32_t)depth*depth)>88u*88u ? 3 : 2;
-    g->block_attempts=0;
+    /* Defenders who bit on a fake have already spent their jump. */
+    g->block_attempts=g->bite_time ? g->bitten : 0;
     g->shot_blocked=g->loose_rebound=0;
     g->shot_good=random_percent(g)<jam_shot_chance(g,who,charge);
     g->mode=JAM_SHOT;
@@ -222,8 +225,11 @@ static void cpu(jam_game_t *g,uint8_t p) {
     uint8_t ownteam=team(p),mate=p^1,speed;
     uint8_t reaction=(p<2 || g->setup.difficulty==JAM_PICKUP)?7:(g->setup.difficulty==JAM_WARM_UP?15:3);
     if(g->mode==JAM_RESET || a->stun) return;
+    /* A defender who left his feet on a fake is committed until he lands. */
+    if(a->block_time && (g->bitten&(1u<<p))) return;
     if(g->mode==JAM_SHOT || g->mode==JAM_LOOSE || g->mode==JAM_FINISH) {
         if(g->mode==JAM_SHOT && team(g->passer)!=ownteam && g->flight<12 &&
+           !(g->block_attempts&(1u<<p)) &&
            near_player(g,p,g->passer)<100 && (g->tick&reaction)==(p&reaction)) {
             a->block_time=8+ratings(g,p)->block;
             a->action=a->block_time;
@@ -378,6 +384,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     if(g->mode==JAM_DUNK){jam_dunk_update(g,pressed);return;}
     if(g->grace) g->grace--;
     if(g->block) g->block--;
+    jam_fake_tick(g);
     for(i=0;i<4;i++) {
         jam_player_t *a=&g->players[i];
         jam_turbo_recover(g,i,(g->mode==JAM_INBOUND || g->mode==JAM_RESET)?0:
@@ -406,12 +413,14 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     if(g->inbound_pass)jam_inbound_return(g);
     if(!g->players[human].stun && !(g->inbound_pass && human==g->inbounder)) {
         jam_player_t *a=&g->players[human];
+        if(g->picked_up && jam_fake_travel(g,input,pressed))return;
         /* Only moving sprint drains continuously; dunks/shoves pay once. */
         a->turbo=(input&JAM_TURBO) && (input&15) && !g->charge && !a->shot_time?
             jam_turbo_spend(g,human,1):0;
         speed=jam_move_speed(g,human,a->turbo);
         if((input&(JAM_MOVE_LEFT|JAM_MOVE_RIGHT)) && (input&(JAM_MOVE_UP|JAM_MOVE_DOWN))) speed=(speed*3)/4;
-        if(g->charge)speed=2;
+        /* Feet are set while gathering a shot or holding a dead ball. */
+        if(g->charge || g->picked_up)speed=0;
         if(input&JAM_MOVE_LEFT)a->vx-=speed;
         if(input&JAM_MOVE_RIGHT)a->vx+=speed;
         if(input&JAM_MOVE_UP)a->vy-=speed;
@@ -434,7 +443,9 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
                 a->action=2;
             }
             if(g->charge && (!(input&JAM_B) || g->charge==42)) {
-                jam_shoot(g,human,g->charge);g->charge=0;
+                if(g->charge<JAM_FAKE_FRAMES)jam_fake_release(g);
+                else jam_shoot(g,human,g->charge);
+                g->charge=0;
             }
         } else {
             g->charge=0;
@@ -466,7 +477,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
             default:g->ball_x+=32;break;
         }
         g->height=7+((g->tick&15)<8 ? (g->tick&7) : 7-(g->tick&7));
-        i=g->owner==(int8_t)g->controlled ? g->charge : g->players[g->owner].windup;
+        i=g->owner==(int8_t)g->controlled ? jam_fake_hold(g) : g->players[g->owner].windup;
         if(i) {
             g->height=jam_body(g,g->owner)->height_px-13+(i<6 ? i : (i<12 ? (i-6)*2 : 13))+jam_jump_height(g,g->owner);
             g->ball_x=g->players[g->owner].x+(g->owner<2 ? 24 : -24);
