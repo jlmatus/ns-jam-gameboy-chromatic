@@ -71,6 +71,72 @@ Every match is four three-minute quarters. Seeds make each match reproducible.
 
 **ROM** `23da6052…efc9`. Replaying all five matches gave finals of 71–42, 51–44, 50–40, 90–22 and 53–34. Median CPU possessions were 4.2–7.6 s (originally 1.4–3.5 s). The `gN/` folders now hold this run.
 
+## Interceptions, CPU shot choice and the buzzer — follow-up
+
+**Changes:**
+- **Interceptions follow the passer's rating:** chance `30 + 4 × steal − 5 × passing` (at least 5%; was `45 + 4 × steal − 3 × passing`), and reach shrinks by 2 per passing point.
+  - A MAGIC pass (passing 5) through a MEAT lane (steal 8) is now picked off 36% of the time, versus 62% before.
+  - A MATUS pass (passing 10) through the same lane: 12%, versus 47% before.
+- **CPU passes only go through a clear lane:** no upright opponent within 16 pixels of the line.
+- **Mid-range** two-pointers (48 pixels out to the arc) use `52 + INSIDE + three-point`. Close shots keep `60 + 3 × INSIDE`.
+- **CPU shot choice** (`jam_carrier.c`) works from the chance at the spot, a close defender's contest included, rather than from position:
+  - it shoots a two at 55% or better, or a three at 40% or better;
+  - late in a possession it takes any look of 35% or better;
+  - in dunk range with a clear lane, it rises for a dunk;
+  - through a defender it attacks the rim at `(INSIDE − 5) × 15%` (MAGIC 60%, CHRUX and MEAT 45%, BAMBI and CHOMPA 30%), and otherwise pulls up or passes.
+- **Dribble-around:**
+  - when the defender is level, the carrier picks the side toward the middle of the court and keeps it for the possession;
+  - its target stays 12 pixels inside the sidelines.
+- **Buzzer fix:** pressing B on the buzzer used to carry into the break screen, where B means MENU, and quit the match in progress. The script did exactly that in match 5. Now the break ignores A/B for half a second, and ignores any button still held from play until it's released. `buzzer-b/` replays the case with B held through every buzzer: all four quarters and the final are reached.
+- **Tests:**
+  - **New:**
+    - lane interceptions by passer rating (MAGIC 91 vs MATUS 31 of 256);
+    - CPU shot choice: open-lane dunks 64/64; in a guarded lane, dunks, pull-ups and passes, never a forced dunk; mid-range jumpers 64/64;
+    - the mid-range formula.
+  - **Updated:** older fixtures that assumed instant CPU windups or the old odds. Soak tests now check every player against the legal apron (8–312 pixels).
+
+**Same seeds, previous commit → this build** (ROM `38d48ed4…bf3f`):
+
+| # | Level | Final | CPU interceptions | CPU jump shots (blocked) | CPU dunks | Dunk Cam share | CPU field goals made/attempted | Out of bounds |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Pickup | 71–42 → 50–20 | 23 → 1 | 0 → 48 (33) | 38 → 11 | 20% → 8% | 21/38 → 10/59 | 1 → 0 |
+| 2 | Pickup | 51–44 → 41–35 | 20 → 12 | 16 → 71 (48) | 36 → 9 | 21% → 13% | 21/52 → 15/80 | 1 → 1 |
+| 3 | Winners Stay | 50–40 → 51–26 | 21 → 4 | 6 → 45 (25) | 33 → 5 | 26% → 16% | 20/39 → 12/50 | 1 → 2 |
+| 4 | Warm-up | 90–22 → 78–14 | 4 → 1 | 0 → 24 (16) | 18 → 9 | 14% → 11% | 11/18 → 7/33 | 7 → 6 |
+| 5 | Winners Stay | 53–34 → 67–29 | 22 → 11 | 62 → 53 (29) | 5 → 9 | 14% → 19% | 14/67 → 13/62 | 0 → 0 |
+
+**Results:**
+- **Interceptions collapsed:** 1–12 per match, from 4–23.
+- **Every CPU player now takes jump shots,** dunks are rarer, and Dunk Cam takes 8–19% of play, down from 14–26%.
+- **CPU scoring fell** (14–35 points), because **52–69% of CPU jump shots are blocked**. That's the over-strong blocking from item 3 below, and the next thing to fix.
+
+## Blocking tuned — follow-up
+
+**Changes:** jump-shot blocks now need a jumping defender who is close and not behind the shooter.
+- **Odds:** `5 + 5 × block` (was `10 + 7 × block`): MAGIC 55% (was 80%), BAMBI 25% (was 38%), MATUS 15% (was 24%).
+- **Reach:** `48 + 3 × block` quarter pixels plus height (was `80 + 4 × block`), so about 12–21 pixels instead of 22–32.
+- **Unchanged:** dunk blocks keep their own contest rules.
+- **Tests:**
+  - **New:** MAGIC blocks 141 of 256 from in front; 0 from behind; 0 out of reach.
+  - **Still passing:** the earlier block-rating comparison (MAGIC 141 vs MATUS 38).
+
+**Same seeds, three builds:** commit `4fd5d5d` → interceptions and shot choice → this build (ROM `2b52425b…0968`). The block columns compare the middle build with this one.
+
+| # | Level | Final | CPU jumpers blocked | Your jumpers blocked | All blocks | CPU dunks | Dunk Cam share | CPU field goals made/attempted |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Pickup | 71–42 → 50–20 → **52–48** | 33/48 → 8/33 | 11/36 → 8/47 | 56 → 21 | 11 → 7 | 8% → 6% | 10/59 → 24/40 |
+| 2 | Pickup | 51–44 → 41–35 → **41–62** | 48/71 → 17/59 | 12/20 → 3/32 | 68 → 30 | 9 → 14 | 13% → 12% | 15/80 → 28/73 |
+| 3 | Winners Stay | 50–40 → 51–26 → **62–28** | 25/45 → 12/32 | 35/45 → 20/41 | 73 → 49 | 5 → 1 | 16% → 17% | 12/50 → 12/33 |
+| 4 | Warm-up | 90–22 → 78–14 → **107–14** | 16/24 → 2/9 | 9/42 → 2/50 | 33 → 7 | 9 → 3 | 11% → 9% | 7/33 → 7/12 |
+| 5 | Winners Stay | 53–34 → 67–29 → **70–51** | 29/53 → 9/40 | 13/26 → 7/37 | 59 → 25 | 9 → 6 | 19% → 14% | 13/62 → 20/46 |
+
+**Results:**
+- **Pickup and Winners Stay matches are contests again;** the CPU won match 2.
+- **Fewer blocks:** total blocks per match roughly halved, and only 6–29% of CPU jumpers are blocked (was 52–69%).
+- **Warm-up stays one-sided,** as an easy level should.
+- **Match 3 still has many blocks** (49): MAGIC and CHOMPA are the CPU's two best blockers, and dunk blocks are unchanged.
+- **Dunk Cam takes 6–17% of play.**
+
 The rest of this page is the original analysis of the first run.
 
 Each `five-matches/gN/` folder (now holding the after-fix run) contains:

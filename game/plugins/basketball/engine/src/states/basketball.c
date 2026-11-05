@@ -28,6 +28,10 @@ static int16_t view_x;
 jam_menu_t jam_menu;
 static uint8_t in_menu;
 static uint8_t in_results;
+/* A/B pressed at the buzzer must not skip the break or quit to the menu: the
+   break screen ignores A/B for half a second, and any button still held from
+   play until it is released. */
+static uint8_t break_lock,break_held;
 static jam_results_t results;
 static uint8_t front_active;
 /* Stream menus a row at a time. A full-screen buffer left only 172 bytes
@@ -450,13 +454,19 @@ void basketball_update(void) BANKED {
         } else if(results.changed){draw_results();jam_sfx_play(JAM_SFX_MOVE);}
         return;
     }
-    if((jam.paused || jam.match_phase>=JAM_MATCH_BREAK) && INPUT_B_PRESSED) {
+    if(jam.match_phase>=JAM_MATCH_BREAK && !jam.paused) {
+        if(break_lock)break_lock--;
+        if(!(buttons&(JAM_A|JAM_B)))break_held=0;
+        if(break_held)break_lock=1;
+    } else {break_lock=30;break_held=1;}
+    if((jam.paused || (jam.match_phase>=JAM_MATCH_BREAK && !break_lock)) && INPUT_B_PRESSED) {
         jam_sfx_stop();jam_sfx_play(JAM_SFX_BACK);
         jam_dunk_cam_end();
         jam_menu_init(&jam_menu,&jam.setup);jam_menu.previous_input=buttons;
         in_menu=1;draw_menu();return;
     }
     jam_match_clock(&jam,elapsed);
+    if(jam.match_phase>=JAM_MATCH_BREAK && break_lock)buttons&=~(JAM_A|JAM_B);
     jam_update(&jam,buttons);
     if(jam.match_phase==JAM_MATCH_FINAL) {
         jam_dunk_cam_end();

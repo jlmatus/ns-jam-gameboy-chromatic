@@ -89,6 +89,8 @@ history = deque(maxlen=10)  # a human reacts to what they saw ~8-10 frames ago
 break_at = {}
 import os
 TRACE = [] if os.environ.get('JAM_TRACE') else None
+DEBUG_FROM = int(os.environ.get('JAM_DEBUG_FROM', '0'))
+BUZZER_B = bool(os.environ.get('JAM_BUZZER_B'))
 prev = state(); seen_msgs = {}; long_mode = {"mode": None, "since": n, "flagged": False}
 fake_wait = 0; hold_b = 0; swipe_cd = 0; request_cd = 0
 def name_of(i): return NAMES[lineup[i]] if 0 <= i < 4 else "-"
@@ -108,6 +110,9 @@ def choose_plan(c):
             "deep": rng.choice([96, 100, 110, 125]) if k == "three" else 0}
 def decide(s):
     global plan, plan_t, fake_wait, hold_b, swipe_cd, request_cd
+    if BUZZER_B:  # regression check: press B into the buzzer and hold it into the break
+        if s["phase"] == 0 and s["clock"] <= 1: return ["b"]
+        if s["phase"] in (1, 2, 4) and n - break_at.get(s["quarter"] * 10 + s["phase"], n) < 60: return ["b"]
     if s["phase"] in (2, 4):  # quarter break / overtime card: read it, then press A
         return ["a"] if (n - break_at.get(s["quarter"] * 10 + s["phase"], n)) > 150 and n % 10 < 2 else []
     c = s["ctrl"]; me = s["pos"][c]; mode = s["mode"]; owner = s["owner"]
@@ -208,8 +213,10 @@ while n < limit:
                       *[P(i, "stun") for i in range(4)], *[pb.memory[JAM + i * 19 + 17] for i in range(4)], *[pb.memory[JAM + i * 19 + 18] for i in range(4)]])
     prev = s; history.append(s)
     seen = history[0] if not hold_b and not fake_wait else s
-    if seen["ctrl"] != s["ctrl"]: seen = s
-    tick(decide(seen), 1)
+    if seen["ctrl"] != s["ctrl"] or s["phase"] != 0 or seen["phase"] != 0: seen = s  # never act on stale state across a break
+    act = decide(seen)
+    if DEBUG_FROM and DEBUG_FROM <= n <= DEBUG_FROM + 300: print("dbg", n, "phase", s["phase"], "q", s["quarter"], "mode", s["mode"], "press", act, "menu?", pb.memory[JAM + 250])
+    tick(act, 1)
 
 per, tot = stats(); s = state()
 tick((), 240); shot("results")

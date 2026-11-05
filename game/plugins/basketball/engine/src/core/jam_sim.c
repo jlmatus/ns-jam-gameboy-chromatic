@@ -124,7 +124,8 @@ uint8_t jam_shot_chance(const jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANK
         /* Specialists separate from average shooters; deep heaves cost range. */
         chance=12+r->three_point*3+(r->three_point*r->three_point*3)/10;
         if(d>100)chance-=(d-100)/3;
-    } else chance=d<48 ? 60+r->dunk*3 : 52+r->dunk*2;
+    /* Close shots use INSIDE; mid-range blends INSIDE and three-point. */
+    } else chance=d<48 ? 60+r->dunk*3 : 52+r->dunk+r->three_point;
     if(charge>=18 && charge<=36) chance+=10;
     /* Defenders still recovering from a pump fake no longer contest. */
     for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(who) && near_player(g,i,who)<64 &&
@@ -252,16 +253,14 @@ static void cpu(jam_game_t *g,uint8_t p) {
     } else if(g->owner==(int8_t)p) {
         tx=rim(ownteam)+(ownteam ? 72 : -72); ty=JAM_RIM_Y*4;
         if(a->windup) {
-            if(a->windup>=6 && ratings(g,p)->dunk>=6 && jam_try_dunk(g,p))return;
+            /* Decide once at the rise: dunk or pull up (jam_carrier.c). */
+            if(a->windup==6 && ratings(g,p)->dunk>=6 && jam_cpu_attack_rim(g,p) && jam_try_dunk(g,p))return;
             if(++a->windup>=18) {jam_shoot(g,p,0);a->cooldown=65;}
             return;
         }
-        if(!a->cooldown && distance(a->x,rim(ownteam))<180+ratings(g,p)->three_point*24+difficulty_bonus(g,p)*24 &&
-           (ratings(g,p)->dunk<7 || ratings(g,p)->three_point>5 ||
-            distance(a->x,rim(ownteam))<=jam_dunk_range(g,p)*4)) {
-            /* Readable gather/rise before release, without a perfect-timing bonus. */
-            a->windup=1; return;
-        }
+        /* Shot choice by open chance, not position (jam_carrier.c). Readable
+           gather/rise before release, without a perfect-timing bonus. */
+        if(!a->cooldown && jam_cpu_shot_choice(g,p)) {a->windup=1; return;}
         /* Ball security lives in jam_carrier.c (this bank is nearly full). */
         if(jam_cpu_carrier(g,p,&tx,&ty))return;
     } else if(g->owner>=0 && team(g->owner)==ownteam) {
@@ -301,8 +300,10 @@ static void flight(jam_game_t *g) {
     else g->height=16+arc[phase]/6;
     if(g->mode==JAM_PASS && !g->inbound_pass && g->flight>3) {
         for(i=0;i<4;i++) if(!g->players[i].stun && (int8_t)i!=g->passer && team(i)!=team(g->passer)) {
-            int16_t reach=20+ratings(g,i)->steal*3-ratings(g,g->passer)->passing;
-            int16_t chance=45+ratings(g,i)->steal*4-ratings(g,g->passer)->passing*3;
+            /* The passer's rating matters most: a 10 passer is rarely read. */
+            int16_t reach=20+ratings(g,i)->steal*3-ratings(g,g->passer)->passing*2;
+            int16_t chance=30+ratings(g,i)->steal*4-ratings(g,g->passer)->passing*5;
+            if(chance<5)chance=5;
             if(g->intercept_attempts&(1u<<i)) continue;
             /* Warm-up permits a clean release; real mid-lane contests still count. */
             if(i>=2 && g->setup.difficulty==JAM_WARM_UP) {
@@ -318,10 +319,13 @@ static void flight(jam_game_t *g) {
         }
     }
     if(g->mode==JAM_SHOT && g->flight<14 && !g->shot_blocked) {
+        /* Jump-shot blocks need a jumping defender close and not behind the
+           shooter. Odds 5 + 5 x block (MAGIC 55%, BAMBI 25%); reach 12-21 px. */
         for(i=0;i<4;i++) if(!g->players[i].stun && team(i)!=team(g->passer) && g->players[i].block_time &&
-            !(g->block_attempts&(1u<<i)) && near_player(g,i,g->passer)<80+ratings(g,i)->block*4+((int8_t)jam_body(g,i)->height_px-40)*4) {
+            !(g->block_attempts&(1u<<i)) && near_player(g,i,g->passer)<48+ratings(g,i)->block*3+((int8_t)jam_body(g,i)->height_px-40)*4 &&
+            distance(g->players[i].x,rim(team(g->passer)))<=distance(g->players[g->passer].x,rim(team(g->passer)))+32) {
             g->block_attempts|=1u<<i;
-            if(random_byte(g)%100<10+ratings(g,i)->block*7+difficulty_bonus(g,i)*8) {
+            if(random_percent(g)<5+ratings(g,i)->block*5+difficulty_bonus(g,i)*8) {
                 g->shot_good=0;
                 g->blocks++;
                 g->stats[i].blocks++;g->shot_blocked=1;

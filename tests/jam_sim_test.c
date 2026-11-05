@@ -38,10 +38,23 @@ static void passing(void) {
     step(&g,g.duration-1,0);assert(g.mode==JAM_HELD && g.owner==1);
     jam_update(&g,JAM_A);assert(g.mode==JAM_PASS && g.target==0);
     step(&g,g.duration-1,0);assert(g.owner==0 && g.passes==2);
-    // An opponent placed in the passing lane earns the interception.
-    jam_init(&g);isolate(&g);g.players[1].x=156*4;g.players[1].y=78*4;
-    g.players[2].x=128*4;g.players[2].y=91*4;
-    jam_update(&g,JAM_A);step(&g,g.duration-1,0);assert(g.steals>0 && g.owner>=2);
+    // An opponent in the passing lane can intercept; the passer's rating
+    // decides how often. MAGIC (passing 5) is read far more than MATUS (10)
+    // by the same MEAT (steal 8) lane.
+    {
+        static const jam_setup_t weak_setup={{1,0,5,3},JAM_PICKUP,4},strong_setup={{0,1,5,3},JAM_PICKUP,4};
+        uint16_t seed,weak=0,strong=0;uint8_t k;
+        for(seed=1;seed<=256;seed++)for(k=0;k<2;k++) {
+            assert(jam_init_lineup(&g,k?&strong_setup:&weak_setup));isolate(&g);
+            g.players[1].x=156*4;g.players[1].y=78*4;
+            g.players[2].x=128*4;g.players[2].y=91*4;g.rng=seed;
+            jam_update(&g,JAM_A);step(&g,g.duration-1,0);
+            if(g.steals){assert(g.owner==2);if(k)strong++;else weak++;}
+        }
+        /* Expected 37% versus 12%. */
+        assert(weak>70 && weak<120 && strong>10 && strong<50 && weak>strong*2);
+        printf("PASS: lane interceptions by passer rating: MAGIC %u vs MATUS %u /256\n",weak,strong);
+    }
 }
 static void court_edges(void) {
     jam_game_t g;
@@ -160,7 +173,7 @@ static void cpu_soak(void) {
         jam_update(&g,g.mode==JAM_HELD && g.owner==g.controlled && (i%48)<24?JAM_B:0);
         assert(g.mode<=JAM_DUNK);
         if(g.mode==JAM_HELD)assert(g.owner>=0 && g.owner<4);
-        for(p=0;p<4;p++)assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
+        for(p=0;p<4;p++)assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4); /* legal apron; an inbounder may fetch a ball beyond 306 */
     }
     printf("CPU soak: shots=%u baskets=%u steals=%u rebounds=%u score=%u:%u\n",g.shots,g.baskets,g.steals,g.rebounds,g.score[0],g.score[1]);
     fflush(stdout);
@@ -170,7 +183,10 @@ static void teammate_and_block(void) {
     jam_game_t g;
     jam_init(&g);isolate(&g);
     g.owner=1;g.setup.roster[0]=1;g.setup.roster[1]=0;g.players[1].x=245*4;g.players[1].cooldown=0;
-    jam_update(&g,0);assert(g.mode==JAM_HELD && g.players[1].windup==1);
+    /* An open CPU teammate gathers (at a random moment) and releases 17 updates later. */
+    g.players[2].x=g.players[3].x=60*4;
+    {uint8_t t;for(t=0;t<60 && !g.players[1].windup;t++)jam_update(&g,0);}
+    assert(g.mode==JAM_HELD && g.players[1].windup==1);
     step(&g,17,0);assert(g.mode==JAM_SHOT && g.passer==1 && g.shot_team==0);
     // Human B can disrupt an opponent's nearby early shot.
     jam_init(&g);g.owner=2;g.players[0].x=g.players[2].x;g.players[0].y=g.players[2].y;
@@ -282,7 +298,7 @@ static void cpu_blocking_and_levels(void) {
         setup.difficulty=level;jam_init_lineup(&g,&setup);jam_pass(&g,0,1);
         for(seed=0;seed<12000;seed++) {
             jam_update(&g,g.mode==JAM_HELD && g.owner==g.controlled && (seed%48)<24?JAM_B:0);
-            for(p=0;p<4;p++)assert(g.players[p].x>=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?14:JAM_LEFT)*4 && g.players[p].x<=(g.mode==JAM_INBOUND || (g.inbound_pass && p==g.inbounder)?306:JAM_RIGHT)*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4);
+            for(p=0;p<4;p++)assert(g.players[p].x>=JAM_LEFT*4 && g.players[p].x<=JAM_RIGHT*4 && g.players[p].y>=JAM_TOP*4 && g.players[p].y<=JAM_BOTTOM*4); /* legal apron; an inbounder may fetch a ball beyond 306 */
         }
         printf("Level %u soak: %u shots, %u baskets, %u rebounds, owner %d windup %u mode %u\n",level,g.shots,g.baskets,g.rebounds,g.owner,g.players[2].windup,g.mode);fflush(stdout);
         assert(g.shots>5 && g.baskets>0);total_rebounds+=g.rebounds;
@@ -548,7 +564,10 @@ static void shooting_motion(void) {
     assert(last==0 && !g.players[0].shot_time);
     jam_init(&g);isolate(&g);g.owner=1;g.setup.roster[0]=1;g.setup.roster[1]=0;
     g.players[1].x=245*4;g.players[1].cooldown=0;
-    step(&g,12,0);assert(g.mode==JAM_HELD && g.players[1].windup==12);
+    /* CPU shooters gather only with space and at a random moment; wait for it. */
+    g.players[2].x=g.players[3].x=60*4;
+    for(i=0;i<60 && !g.players[1].windup;i++)jam_update(&g,0);
+    step(&g,11,0);assert(g.mode==JAM_HELD && g.players[1].windup==12);
     jam_pass(&g,1,0);jam_update(&g,0);assert(!g.players[1].windup);
     puts("PASS: gather/rise, attached ball, release/landing, paused animation, interruptible CPU windup");
 }
@@ -1220,8 +1239,9 @@ static void cpu_ball_fixture(jam_game_t *g,uint16_t seed,uint8_t mate_covered) {
     jam_init(g);g->owner=2;g->mode=JAM_HELD;g->grace=255;g->possession_time=60;g->rng=seed;
     g->players[2].x=200*4;g->players[2].y=88*4;g->players[2].cooldown=0;g->players[2].contact_cooldown=255;
     g->players[0].x=188*4;g->players[0].y=88*4;           /* in front, toward the left rim */
-    g->players[3].x=150*4;g->players[3].y=120*4;g->players[3].cooldown=255;
-    g->players[1].x=mate_covered?150*4:60*4;g->players[1].y=mate_covered?118*4:50*4;g->players[1].cooldown=255;
+    /* The teammate trails above, with a clear lane behind the defender. */
+    g->players[3].x=212*4;g->players[3].y=52*4;g->players[3].cooldown=255;
+    g->players[1].x=mate_covered?212*4:60*4;g->players[1].y=mate_covered?56*4:120*4;g->players[1].cooldown=255;
 }
 static void cpu_ball_security(void) {
     jam_game_t g;uint16_t seed,passes=0,around=0;uint8_t t;int16_t x0,y0;
@@ -1239,21 +1259,84 @@ static void cpu_ball_security(void) {
     /* A level defender no longer flips the carrier up and down every update,
        and a diagonal runner keeps one facing (the camera follows both). */
     for(seed=1;seed<=16;seed++) {
-        int16_t last;uint8_t reversals=0,turns=0,facing;
+        int16_t last;int8_t way=0;uint8_t reversals=0,turns=0,facing;
         cpu_ball_fixture(&g,seed,1);g.players[0].cooldown=255;
         last=g.players[2].y;facing=g.players[2].heading;
         for(t=0;t<24 && g.mode==JAM_HELD && g.owner==2;t++) {
             jam_update(&g,0);
-            if(g.players[2].y<last-4)reversals++; /* a 1-pixel body-contact nudge is allowed */
-            last=g.players[2].y;
+            /* Count changes of vertical direction; a 1-pixel contact nudge is allowed. */
+            if(g.players[2].y>last+4 || g.players[2].y<last-4) {
+                int8_t now=g.players[2].y>last ? 1 : -1;
+                if(way && now!=way)reversals++;
+                way=now;last=g.players[2].y;
+            }
             if(g.players[2].heading!=facing){turns++;facing=g.players[2].heading;}
         }
-        assert(!reversals && turns<=2);
+        /* One cut back toward the rim after clearing the defender is natural;
+           jitter would reverse every few updates. */
+        assert(reversals<=1 && turns<=2);
     }
     /* Unpressured carriers still attack the rim. */
     cpu_ball_fixture(&g,1,0);g.players[0].x=60*4;g.players[0].y=50*4;x0=g.players[2].x;
     step(&g,8,0);assert(g.owner==2 && g.players[2].x<x0-16);
     printf("PASS: CPU ball security; %u/64 pressured passes to an open teammate, %u/64 dribbles around a covered lane\n",passes,around);
+}
+/* CPU shot choice: a dunker rises only through a clear lane, pulls up when a
+   defender stands in it, and takes open mid-range jumpers. Mid-range blends
+   INSIDE and three-point. */
+static void cpu_shot_fixture(jam_game_t *g,uint16_t seed,int16_t carrier_x,int16_t blocker_x) {
+    jam_init(g);g->owner=2;g->mode=JAM_HELD;g->grace=255;g->possession_time=60;g->rng=seed;
+    g->players[2].x=carrier_x*4;g->players[2].y=88*4;g->players[2].cooldown=0;g->players[2].contact_cooldown=255;
+    g->players[0].x=blocker_x*4;g->players[0].y=88*4;g->players[0].cooldown=255;
+    g->players[1].x=290*4;g->players[1].y=50*4;g->players[1].cooldown=255;
+    g->players[3].x=290*4;g->players[3].y=120*4;g->players[3].cooldown=255;
+}
+static void cpu_shot_choice(void) {
+    jam_game_t g;uint16_t seed,dunks=0,pullups=0,passes_out=0,jumpers=0,blocked_dunks=0;uint8_t t;
+    /* BAMBI: INSIDE 7, three 5. Open close-range dunk lane versus a body in it. */
+    for(seed=1;seed<=64;seed++) {
+        cpu_shot_fixture(&g,seed,76,250);
+        for(t=0;t<60 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        dunks+=g.mode==JAM_DUNK;
+        cpu_shot_fixture(&g,seed,76,56);
+        for(t=0;t<60 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        /* Guarded lane: pull up, pass out, or (by INSIDE rating) attack anyway. */
+        blocked_dunks+=g.mode==JAM_DUNK;pullups+=g.mode==JAM_SHOT;passes_out+=g.mode==JAM_PASS;
+        /* Open at mid-range (70 px): a pull-up jumper, never a dunk. */
+        cpu_shot_fixture(&g,seed,110,250);
+        for(t=0;t<60 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        jumpers+=g.mode==JAM_SHOT && g.shot_points==2;
+        assert(g.mode!=JAM_DUNK);
+    }
+    /* BAMBI (INSIDE 7) still attacks a guarded rim about 30% of the time. */
+    assert(dunks>=56 && blocked_dunks>0 && blocked_dunks<dunks/2 && pullups>0 && pullups+passes_out+blocked_dunks>=60 && jumpers>=48);
+    /* Mid-range chance: 52 + INSIDE + three-point, open and untimed. */
+    selected(&g,0);isolate(&g);g.players[0].x=210*4;g.players[0].y=88*4;
+    assert(jam_shot_chance(&g,0,0)==52+3+10);
+    selected(&g,3);isolate(&g);g.players[0].x=210*4;g.players[0].y=88*4;
+    assert(jam_shot_chance(&g,0,0)==52+8+3);
+    printf("PASS: CPU shot choice; open-lane dunks %u/64, guarded lane %u dunks, %u pull-ups, %u passes /64, mid-range jumpers %u/64\n",dunks,blocked_dunks,pullups,passes_out,jumpers);
+}
+/* Jump-shot blocks: odds 5 + 5 x block, a short reach, and never from behind
+   the shooter. MAGIC (block 10) defends a BAMBI jumper toward the left rim. */
+static uint16_t block_trials(int16_t defender_x,int16_t defender_y) {
+    jam_game_t g;uint16_t seed,blocks=0;
+    for(seed=1;seed<=256;seed++) {
+        selected(&g,1);isolate(&g);g.owner=2;g.mode=JAM_HELD;
+        g.players[2].x=150*4;g.players[2].y=88*4;g.players[2].stun=0;
+        g.players[0].x=defender_x*4;g.players[0].y=defender_y*4;
+        jam_shoot(&g,2,24);g.rng=seed;
+        g.players[0].block_time=18;
+        step(&g,14,0);blocks+=g.shot_blocked;
+    }
+    return blocks;
+}
+static void jump_shot_blocks(void) {
+    uint16_t front=block_trials(140,88),behind=block_trials(162,88),far=block_trials(108,88);
+    /* Expected 55% in front; nothing from behind, or from 42 px away (the
+       shooter drifts forward during the flight). */
+    assert(front>110 && front<170 && !behind && !far);
+    printf("PASS: jump-shot blocks; MAGIC in front %u/256, behind %u, out of reach %u\n",front,behind,far);
 }
 int main(void) {
     court_edges();
@@ -1270,6 +1353,8 @@ int main(void) {
     contact_soak();
     physical_defense();
     cpu_ball_security();
+    cpu_shot_choice();
+    jump_shot_blocks();
     shooting_motion();
     pump_fake_and_travel();
     shooting_accuracy();

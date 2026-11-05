@@ -8,70 +8,70 @@
  "difficulty": "Winners Stay",
  "periods": 4,
  "seed": 33,
- "frames": 73767,
+ "frames": 66772,
  "final_score": [
-  50,
-  40
+  62,
+  28
  ],
  "phase": 3,
  "quarter": 4,
  "players": {
   "CHRUX": {
-   "points": 26,
-   "field_made": 12,
+   "points": 42,
+   "field_made": 21,
    "field_attempted": 55,
-   "three_made": 2,
-   "three_attempted": 11,
+   "three_made": 0,
+   "three_attempted": 16,
    "rebounds": 27,
-   "steals": 34,
-   "blocks": 7,
-   "dunks": 9
-  },
-  "MEAT": {
-   "points": 24,
-   "field_made": 12,
-   "field_attempted": 40,
-   "three_made": 0,
-   "three_attempted": 12,
-   "rebounds": 26,
-   "steals": 17,
-   "blocks": 8,
-   "dunks": 9
-  },
-  "MAGIC": {
-   "points": 34,
-   "field_made": 17,
-   "field_attempted": 27,
-   "three_made": 0,
-   "three_attempted": 0,
-   "rebounds": 29,
-   "steals": 13,
-   "blocks": 49,
+   "steals": 19,
+   "blocks": 5,
    "dunks": 17
   },
-  "CHOMPA": {
-   "points": 6,
-   "field_made": 3,
-   "field_attempted": 12,
+  "MEAT": {
+   "points": 20,
+   "field_made": 10,
+   "field_attempted": 31,
    "three_made": 0,
    "three_attempted": 5,
-   "rebounds": 7,
-   "steals": 14,
-   "blocks": 10,
-   "dunks": 3
+   "rebounds": 22,
+   "steals": 16,
+   "blocks": 7,
+   "dunks": 7
+  },
+  "MAGIC": {
+   "points": 17,
+   "field_made": 8,
+   "field_attempted": 16,
+   "three_made": 1,
+   "three_attempted": 3,
+   "rebounds": 20,
+   "steals": 4,
+   "blocks": 30,
+   "dunks": 0
+  },
+  "CHOMPA": {
+   "points": 11,
+   "field_made": 4,
+   "field_attempted": 17,
+   "three_made": 3,
+   "three_attempted": 16,
+   "rebounds": 6,
+   "steals": 3,
+   "blocks": 7,
+   "dunks": 1
   }
  },
  "totals": {
-  "passes": 160,
-  "steals": 78,
-  "shots": 134,
-  "rebounds": 89,
-  "baskets": 44,
-  "blocks": 74,
-  "steal_attempts": 100,
+  "passes": 117,
+  "steals": 42,
+  "shots": 119,
+  "rebounds": 75,
+  "baskets": 43,
+  "blocks": 49,
+  "steal_attempts": 134,
   "shoves": 5,
   "runovers": 36,
-  "dunk_attempts": 77,
-  "dunks": 38
+  "dunk_attempts": 46,
+  "dunks": 25
  }
 }
