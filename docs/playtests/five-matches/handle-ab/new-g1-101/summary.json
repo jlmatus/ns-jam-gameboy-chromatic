@@ -1,0 +1,847 @@
+{
+ "lineup": [
+  "MATUS",
+  "MAGIC",
+  "BAMBI",
+  "CHRUX"
+ ],
+ "difficulty": "Pickup",
+ "periods": 4,
+ "seed": 101,
+ "frames": 59434,
+ "final_score": [
+  47,
+  60
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "MATUS": {
+   "points": 25,
+   "field_made": 10,
+   "field_attempted": 25,
+   "three_made": 5,
+   "three_attempted": 16,
+   "rebounds": 7,
+   "steals": 6,
+   "blocks": 3,
+   "dunks": 1
+  },
+  "MAGIC": {
+   "points": 22,
+   "field_made": 11,
+   "field_attempted": 26,
+   "three_made": 0,
+   "three_attempted": 12,
+   "rebounds": 14,
+   "steals": 3,
+   "blocks": 13,
+   "dunks": 5
+  },
+  "BAMBI": {
+   "points": 14,
+   "field_made": 7,
+   "field_attempted": 20,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 21,
+   "steals": 7,
+   "blocks": 0,
+   "dunks": 4
+  },
+  "CHRUX": {
+   "points": 46,
+   "field_made": 23,
+   "field_attempted": 42,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 19,
+   "steals": 3,
+   "blocks": 3,
+   "dunks": 3
+  }
+ },
+ "totals": {
+  "passes": 100,
+  "steals": 19,
+  "shots": 113,
+  "rebounds": 61,
+  "baskets": 51,
+  "blocks": 19,
+  "steal_attempts": 77,
+  "shoves": 7,
+  "runovers": 60,
+  "dunk_attempts": 29,
+  "dunks": 13
+ },
+ "dunk_cam": {
+  "dunk_frames": 5353,
+  "cam_frames": 3864,
+  "dunks": [
+   {
+    "frame": 2718,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 4225,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 7296,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 12074,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 13404,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 14713,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 15185,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 17798,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 21454,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 23421,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 24267,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 24986,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 26729,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 28615,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 29705,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 30837,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 31789,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 32739,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 36711,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 37353,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 39843,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 40563,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 47633,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 47961,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 49957,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 55253,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 55480,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 57333,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 58517,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   }
+  ],
+  "shots": [
+   {
+    "frame": 1305,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 126,
+    "made": 1
+   },
+   {
+    "frame": 2498,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 4005,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 85,
+    "made": 0
+   },
+   {
+    "frame": 4762,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 124,
+    "made": 1
+   },
+   {
+    "frame": 5529,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 45,
+    "made": 1
+   },
+   {
+    "frame": 5782,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 216,
+    "made": 0
+   },
+   {
+    "frame": 6258,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 7988,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 1
+   },
+   {
+    "frame": 8771,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 58,
+    "made": 1
+   },
+   {
+    "frame": 9178,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 74,
+    "made": 1
+   },
+   {
+    "frame": 9730,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 83,
+    "made": 1
+   },
+   {
+    "frame": 10582,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 99,
+    "made": 0
+   },
+   {
+    "frame": 10744,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 22,
+    "made": 1
+   },
+   {
+    "frame": 11262,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 11914,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 109,
+    "made": 0
+   },
+   {
+    "frame": 12574,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 81,
+    "made": 0
+   },
+   {
+    "frame": 12822,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 19,
+    "made": 1
+   },
+   {
+    "frame": 14176,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 71,
+    "made": 0
+   },
+   {
+    "frame": 15881,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 1
+   },
+   {
+    "frame": 16622,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 16867,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 11,
+    "made": 1
+   },
+   {
+    "frame": 17580,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 18656,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 100,
+    "made": 1
+   },
+   {
+    "frame": 19167,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 73,
+    "made": 0
+   },
+   {
+    "frame": 19593,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 1
+   },
+   {
+    "frame": 20171,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 123,
+    "made": 0
+   },
+   {
+    "frame": 20404,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 26,
+    "made": 1
+   },
+   {
+    "frame": 20939,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 75,
+    "made": 1
+   },
+   {
+    "frame": 22419,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 109,
+    "made": 0
+   },
+   {
+    "frame": 22706,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 80,
+    "made": 0
+   },
+   {
+    "frame": 24053,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 41,
+    "made": 0
+   },
+   {
+    "frame": 24774,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 45,
+    "made": 0
+   },
+   {
+    "frame": 25261,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 23,
+    "made": 1
+   },
+   {
+    "frame": 26447,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 124,
+    "made": 0
+   },
+   {
+    "frame": 27150,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 96,
+    "made": 0
+   },
+   {
+    "frame": 27554,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 113,
+    "made": 0
+   },
+   {
+    "frame": 27976,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 109,
+    "made": 0
+   },
+   {
+    "frame": 29001,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 211,
+    "made": 0
+   },
+   {
+    "frame": 29481,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 83,
+    "made": 0
+   },
+   {
+    "frame": 31571,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 0
+   },
+   {
+    "frame": 32151,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 45,
+    "made": 1
+   },
+   {
+    "frame": 33287,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 34116,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 59,
+    "made": 1
+   },
+   {
+    "frame": 34833,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 47,
+    "made": 0
+   },
+   {
+    "frame": 35594,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 1
+   },
+   {
+    "frame": 36132,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 99,
+    "made": 0
+   },
+   {
+    "frame": 36885,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 167,
+    "made": 0
+   },
+   {
+    "frame": 38043,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 61,
+    "made": 1
+   },
+   {
+    "frame": 38592,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 38893,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 216,
+    "made": 0
+   },
+   {
+    "frame": 39388,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 80,
+    "made": 0
+   },
+   {
+    "frame": 39641,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 0,
+    "made": 0
+   },
+   {
+    "frame": 40807,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 41482,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 100,
+    "made": 0
+   },
+   {
+    "frame": 41725,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 43,
+    "made": 0
+   },
+   {
+    "frame": 42080,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 109,
+    "made": 0
+   },
+   {
+    "frame": 42742,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 167,
+    "made": 0
+   },
+   {
+    "frame": 43148,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 1
+   },
+   {
+    "frame": 43842,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 109,
+    "made": 1
+   },
+   {
+    "frame": 45333,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 45,
+    "made": 0
+   },
+   {
+    "frame": 45496,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 217,
+    "made": 0
+   },
+   {
+    "frame": 46016,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 95,
+    "made": 1
+   },
+   {
+    "frame": 46463,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 51,
+    "made": 0
+   },
+   {
+    "frame": 46735,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 62,
+    "made": 0
+   },
+   {
+    "frame": 46899,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 13,
+    "made": 1
+   },
+   {
+    "frame": 47415,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 78,
+    "made": 0
+   },
+   {
+    "frame": 48562,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 95,
+    "made": 0
+   },
+   {
+    "frame": 48788,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 21,
+    "made": 1
+   },
+   {
+    "frame": 49287,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 50415,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 84,
+    "made": 1
+   },
+   {
+    "frame": 51049,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 108,
+    "made": 0
+   },
+   {
+    "frame": 51207,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 26,
+    "made": 1
+   },
+   {
+    "frame": 51732,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 80,
+    "made": 1
+   },
+   {
+    "frame": 52356,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 98,
+    "made": 0
+   },
+   {
+    "frame": 52524,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 26,
+    "made": 1
+   },
+   {
+    "frame": 52955,
+    "who": "MATUS",
+    "team": 0,
+    "dist": 62,
+    "made": 0
+   },
+   {
+    "frame": 53494,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 53786,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 216,
+    "made": 0
+   },
+   {
+    "frame": 54277,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 84,
+    "made": 1
+   },
+   {
+    "frame": 55036,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 73,
+    "made": 0
+   },
+   {
+    "frame": 55733,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 7,
+    "made": 1
+   },
+   {
+    "frame": 56655,
+    "who": "MAGIC",
+    "team": 0,
+    "dist": 99,
+    "made": 0
+   },
+   {
+    "frame": 58297,
+    "who": "CHRUX",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 58884,
+    "who": "BAMBI",
+    "team": 1,
+    "dist": 44,
+    "made": 0
+   }
+  ]
+ }
+}

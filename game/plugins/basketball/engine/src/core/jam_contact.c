@@ -93,6 +93,19 @@ void jam_contact(jam_game_t *g,uint8_t i,uint8_t j) JAM_BANKED {
        matches top running speed. Nobody is pushed off the court: if the
        weaker body has no room, the stronger one gives way instead. */
     yield=strength(g,i)>=strength(g,j)?j:i;hold=yield==i?j:i;
+    /* A carrier who would yield but out-handles the body in front of him
+       slides around it (sideways, up to 1.5 pixels per update) instead of
+       stopping; he never knocks it down without turbo. */
+    if(team(i)!=team(j) && g->mode==JAM_HELD && g->owner==(int8_t)yield &&
+       jam_handle_edge(g,yield,hold)>0) {
+        jam_player_t *y=&g->players[yield];
+        int16_t my;
+        amount=depth-dy;if(amount>6)amount=6;
+        my=y->y<g->players[hold].y || (y->y==g->players[hold].y && y->y>JAM_RIM_Y*4)?-(int16_t)amount:amount;
+        if(!jam_court_contains(y->x,y->y+my))my=-my;
+        if(jam_court_contains(y->x,y->y+my))y->y+=my;
+        return;
+    }
     {
         jam_player_t *y=&g->players[yield],*h=&g->players[hold];
         int16_t mx=0,my=0;

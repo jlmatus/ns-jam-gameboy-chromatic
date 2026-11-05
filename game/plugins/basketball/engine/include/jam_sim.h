@@ -96,7 +96,20 @@
 /* Dunk Cam plays for dunks in the last seconds of a period; jump shots lose
    accuracy quickly beyond this many pixels from the rim. */
 #define JAM_CAM_LATE_SECONDS 30
+/* Off-ball play: a back-door cut lasts at most this many updates, then the
+   cutter waits before cutting again; a CPU defender switches onto the ball
+   only when this much closer (quarter pixels) than the current guard. */
+#define JAM_CUT_UPDATES 110
+#define JAM_CUT_REST 90
+#define JAM_CUT_POST 30
+#define JAM_SAG (12*4)
+#define JAM_GUARD_SWITCH 96
 #define JAM_DEEP_RANGE 130
+/* First step: a sharp turn by a better handler freezes his defenders for
+   two updates per point of edge, up to JAM_STEP_MAX, once per cooldown. */
+#define JAM_STEP_MAX 16
+#define JAM_STEP_COOLDOWN 45
+#define JAM_STEP_RANGE (48*4)
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -104,7 +117,7 @@
 #define JAM_WINNERS_STAY 2
 
 typedef struct {
-    uint8_t speed, three_point, passing, steal, block, dunk, power, clutch;
+    uint8_t speed, three_point, passing, steal, block, dunk, power, clutch, handle, rebound;
 } jam_ratings_t;
 
 typedef struct {
@@ -124,12 +137,12 @@ typedef struct {
 
 /* Canonical supplied roster. Jersey strings preserve MEAT's leading zero. */
 static const jam_roster_entry_t jam_roster[JAM_ROSTER_COUNT] = {
-    {"MATUS", "13", "GUARD", "TOP OF THE KEY", {7,10,10,8,2,3,5,9}},
-    {"MAGIC", "32", "BIG", "OVER THE TOP", {4,5,5,3,10,9,7,7}},
-    {"BAMBI", "23", "WING", "BULLDOZER", {4,5,6,4,4,7,10,7}},
-    {"CHRUX", "7", "GUARD", "BACK DOOR", {10,3,7,7,4,8,4,5}},
-    {"CHOMPA", "74", "BIG", "STRETCH BIG", {5,8,5,3,7,7,9,6}},
-    {"MEAT", "00", "GUARD", "BIG ENERGY", {9,2,5,8,6,8,6,4}}
+    {"MATUS", "13", "GUARD", "TOP OF THE KEY", {7,10,10,8,2,3,5,9,10,3}},
+    {"MAGIC", "32", "BIG", "OVER THE TOP", {4,5,5,3,10,9,7,7,3,9}},
+    {"BAMBI", "23", "WING", "BULLDOZER", {4,5,6,4,4,7,10,7,4,8}},
+    {"CHRUX", "7", "GUARD", "BACK DOOR", {10,3,7,7,4,8,4,5,7,5}},
+    {"CHOMPA", "74", "BIG", "STRETCH BIG", {5,8,5,3,7,7,9,6,7,8}},
+    {"MEAT", "00", "GUARD", "BIG ENERGY", {9,2,5,8,6,8,6,4,5,5}}
 };
 
 typedef struct {
@@ -199,6 +212,15 @@ uint8_t jam_cpu_rim_lane(const jam_game_t *g,uint8_t p) JAM_BANKED;
 uint8_t jam_cpu_shot_choice(jam_game_t *g,uint8_t p) JAM_BANKED;
 uint8_t jam_cpu_attack_rim(jam_game_t *g,uint8_t p) JAM_BANKED;
 void jam_knockback_step(jam_game_t *g,uint8_t i) JAM_BANKED;
+uint8_t jam_cpu_offball(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BANKED;
+uint8_t jam_cpu_defend(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BANKED;
+uint8_t jam_cpu_cutting(uint8_t p) JAM_BANKED;
+void jam_offball_reset(void) JAM_BANKED;
+int8_t jam_handle_edge(const jam_game_t *g,uint8_t carrier,uint8_t defender) JAM_BANKED;
+void jam_first_step(jam_game_t *g) JAM_BANKED;
+uint8_t jam_beaten(const jam_game_t *g,uint8_t p) JAM_BANKED;
+void jam_handle_reset(void) JAM_BANKED;
+uint8_t jam_loose_target(jam_game_t *g,int16_t *reach) JAM_BANKED;
 int16_t jam_dunk_view_x(const jam_game_t *g,int16_t world_x,int16_t avatar_q8) JAM_BANKED;
 int16_t jam_dunk_view_y(const jam_game_t *g,int16_t world_y,uint8_t height) JAM_BANKED;
 /* Each caller uses its own ROM-bank-local constant table. */

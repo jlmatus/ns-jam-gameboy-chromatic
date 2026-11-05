@@ -3,8 +3,10 @@
 All six selection cards now use the large portrait composition with a full-width
 gold specialty ribbon. MATUS's `3PT PLAYMAKER` no longer sits in the narrow stat
 column. The approved playstyle text and numeric ratings are unchanged. The
-single footer reads `A PICK B BACK SELECT STATS`; Select still cycles both full
-rating pages and B closes a rating page before navigating back.
+footer reads `A PICK   B BACK`. Since 2026-11-05 a teal `SELECT / ALL STATS` key
+under the four featured stats shows how to reach the full ratings (the old footer
+hint `SELECT STATS` was easy to miss). Select still cycles both full rating pages
+and B closes a rating page before navigating back.
 
 MATUS and CHOMPA retain exactly the same 96×96 packed portrait pixels at
 coordinates (3, 28), verified against the previous committed cards. The four

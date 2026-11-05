@@ -48,6 +48,7 @@ uint8_t jam_init_lineup(jam_game_t *g, const jam_setup_t *setup) JAM_BANKED {
     g->setup=*setup;
     g->rng=0xace1;
     g->quarter=1;g->clock_seconds=JAM_QUARTER_SECONDS;
+    jam_offball_reset();jam_handle_reset();
     jam_tipoff(g);
     g->ball_x=g->players[0].x;
     g->ball_y=g->players[0].y;
@@ -58,7 +59,10 @@ void jam_init(jam_game_t *g) JAM_BANKED {
     jam_init_lineup(g,&defaults);
 }
 uint8_t jam_move_speed(const jam_game_t *g, uint8_t who, uint8_t turbo) JAM_BANKED {
-    return 3+ratings(g,who)->speed/3+(turbo?2:0)+difficulty_bonus(g,who);
+    /* Half-step speeds: 2 + SPEED/2 quarter pixels (4 at 4, 5.5 at 7, 7 at
+       10); CPU level shifts half a step. Odd halves alternate updates. */
+    uint8_t half=4+ratings(g,who)->speed+difficulty_bonus(g,who);
+    return half/2+(half&(uint8_t)g->tick&1)+(turbo?2:0);
 }
 uint8_t jam_jump_height(const jam_game_t *g,uint8_t who) JAM_BANKED {
     const jam_player_t *p=&g->players[who];
@@ -213,7 +217,7 @@ static void steal(jam_game_t *g,uint8_t p) {
     /* Your side's reaches are tuned against CPU carriers, who otherwise lost
        most possessions to repeated swipes; opponents keep their old odds. */
     chance=(p<2 ? 14+ratings(g,p)->steal*4 : 28+ratings(g,p)->steal*5)
-        -ratings(g,g->owner)->passing*2-ratings(g,g->owner)->power;
+        -ratings(g,g->owner)->handle*3;
     chance+=in_front(g,p,g->owner)>=0?(p<2?14:20):-17;
     if(g->height<11)chance+=8;
     if(g->players[g->owner].windup)chance-=15;
@@ -234,7 +238,7 @@ static void cpu(jam_game_t *g,uint8_t p) {
     int16_t tx,ty;
     uint8_t ownteam=team(p),speed;
     uint8_t reaction=(p<2 || g->setup.difficulty==JAM_PICKUP)?7:(g->setup.difficulty==JAM_WARM_UP?15:3);
-    if(g->mode==JAM_RESET || a->stun) return;
+    if(g->mode==JAM_RESET || a->stun || jam_beaten(g,p)) return;
     /* A defender who left his feet on a fake is committed until he lands. */
     if(a->block_time && (g->bitten&(1u<<p))) return;
     if(g->mode==JAM_SHOT || g->mode==JAM_LOOSE || g->mode==JAM_FINISH) {
@@ -266,8 +270,13 @@ static void cpu(jam_game_t *g,uint8_t p) {
         /* Ball security lives in jam_carrier.c (this bank is nearly full). */
         if(jam_cpu_carrier(g,p,&tx,&ty))return;
     } else if(g->owner>=0 && team(g->owner)==ownteam) {
-        tx=g->players[g->owner].x+(ownteam ? -128 : 128);
-        ty=(g->players[g->owner].y<94*4 ? 112 : 76)*4;
+        /* Spacing, cuts and lifts (jam_offball.c). */
+        if(!jam_cpu_offball(g,p,&tx,&ty)){
+            tx=g->players[g->owner].x+(ownteam ? -128 : 128);
+            ty=(g->players[g->owner].y<94*4 ? 112 : 76)*4;
+        }
+    } else if(jam_cpu_defend(g,p,&tx,&ty)) {
+        if((g->tick&reaction)==(p&reaction)) steal(g,p);
     } else {
         uint8_t mark=(p&1) ? (ownteam?1:3) : (ownteam?0:2);
         tx=(g->players[mark].x+rim(ownteam^1))/2;
@@ -386,7 +395,7 @@ static void finish(jam_game_t *g) {
 }
 void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     uint8_t i,j,pressed=(input^g->previous_input)&input,speed,human=g->controlled;
-    int16_t d,best;
+    int16_t best;
     g->previous_input=input;
     if(pressed&JAM_PAUSE) g->paused^=1;
     if(g->paused) return;
@@ -462,6 +471,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     for(i=0;i<4;i++)if(i!=human && !(g->inbound_pass && i==g->inbounder)){
         cpu(g,i);if(g->mode==JAM_DUNK || jam_check_boundary(g))return;
     }
+    jam_first_step(g);
     for(i=0;i<3;i++)for(j=i+1;j<4;j++)
         if(!(g->inbound_pass && (i==g->inbounder || j==g->inbounder)))jam_contact(g,i,j);
     for(i=0;i<4;i++) {
@@ -498,11 +508,8 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
     else if(g->mode==JAM_LOOSE) {
         g->flight++;
         if(g->height>2) g->height-=2; else g->height=0;
-        best=32767;
-        for(i=0;i<4;i++)if(!g->players[i].stun) {
-            d=distance(g->players[i].x,g->ball_x)+distance(g->players[i].y,g->ball_y);
-            if(d<best) { best=d; g->target=i; }
-        }
+        /* REBOUND extends reach on a miss (jam_handle.c). */
+        i=jam_loose_target(g,&best);if(i<4)g->target=i;else best=32767;
         if(best<32767 && g->height<10+(jam_body(g,g->target)->height_px-36)/2 && best<64) { give_ball(g,g->target);
             if(g->loose_rebound){g->rebounds++;g->stats[g->target].rebounds++;g->loose_rebound=0;}
             if(g->message!=JAM_MSG_SHOVE || g->message_time<50)message(g,JAM_MSG_REBOUND); }

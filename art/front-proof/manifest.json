@@ -26,25 +26,25 @@
   {
     "index": 4,
     "name": "matus-card-0",
-    "tiles": 224,
+    "tiles": 228,
     "palette_error": 272577
   },
   {
     "index": 5,
     "name": "matus-card-1",
-    "tiles": 226,
+    "tiles": 230,
     "palette_error": 272577
   },
   {
     "index": 6,
     "name": "matus-card-2",
-    "tiles": 226,
+    "tiles": 230,
     "palette_error": 272577
   },
   {
     "index": 7,
     "name": "matus-card-3",
-    "tiles": 226,
+    "tiles": 230,
     "palette_error": 272577
   },
   {
@@ -122,121 +122,121 @@
   {
     "index": 20,
     "name": "chompa-card-0",
-    "tiles": 237,
+    "tiles": 241,
     "palette_error": 290974
   },
   {
     "index": 21,
     "name": "chompa-card-1",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 290974
   },
   {
     "index": 22,
     "name": "chompa-card-2",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 290974
   },
   {
     "index": 23,
     "name": "chompa-card-3",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 290974
   },
   {
     "index": 24,
     "name": "magic-card-0",
-    "tiles": 236,
+    "tiles": 240,
     "palette_error": 232737
   },
   {
     "index": 25,
     "name": "magic-card-1",
-    "tiles": 237,
+    "tiles": 241,
     "palette_error": 232737
   },
   {
     "index": 26,
     "name": "magic-card-2",
-    "tiles": 237,
+    "tiles": 241,
     "palette_error": 232737
   },
   {
     "index": 27,
     "name": "magic-card-3",
-    "tiles": 237,
+    "tiles": 241,
     "palette_error": 232737
   },
   {
     "index": 28,
     "name": "bambi-card-0",
-    "tiles": 233,
+    "tiles": 238,
     "palette_error": 243805
   },
   {
     "index": 29,
     "name": "bambi-card-1",
-    "tiles": 234,
+    "tiles": 239,
     "palette_error": 243805
   },
   {
     "index": 30,
     "name": "bambi-card-2",
-    "tiles": 234,
+    "tiles": 239,
     "palette_error": 243805
   },
   {
     "index": 31,
     "name": "bambi-card-3",
-    "tiles": 234,
+    "tiles": 239,
     "palette_error": 243805
   },
   {
     "index": 32,
     "name": "chrux-card-0",
-    "tiles": 237,
+    "tiles": 241,
     "palette_error": 121079
   },
   {
     "index": 33,
     "name": "chrux-card-1",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 121079
   },
   {
     "index": 34,
     "name": "chrux-card-2",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 121079
   },
   {
     "index": 35,
     "name": "chrux-card-3",
-    "tiles": 238,
+    "tiles": 242,
     "palette_error": 121079
   },
   {
     "index": 36,
     "name": "meat-card-0",
-    "tiles": 223,
+    "tiles": 228,
     "palette_error": 317826
   },
   {
     "index": 37,
     "name": "meat-card-1",
-    "tiles": 224,
+    "tiles": 229,
     "palette_error": 317826
   },
   {
     "index": 38,
     "name": "meat-card-2",
-    "tiles": 224,
+    "tiles": 229,
     "palette_error": 317826
   },
   {
     "index": 39,
     "name": "meat-card-3",
-    "tiles": 224,
+    "tiles": 229,
     "palette_error": 317826
   }
 ]

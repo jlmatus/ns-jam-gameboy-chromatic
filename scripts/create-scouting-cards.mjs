@@ -5,7 +5,7 @@ const root='game/plugins/basketball/engine';
 const spec=JSON.parse(fs.readFileSync('art/ui/scouting-cards.json','utf8'));
 const canonical=[...fs.readFileSync(`${root}/include/jam_sim.h`,'utf8').matchAll(/\{"([A-Z]+)", "([0-9]+)", "([A-Z]+)", "[^"]+", \{([0-9,]+)\}\}/g)].map(m=>({name:m[1],jersey:m[2],position:m[3],ratings:m[4].split(',').map(Number)}));
 // INSIDE is the dunk rating: dunks and every shot inside the arc.
-const skillIndex={SPD:0,'3PT':1,PASS:2,STEAL:3,BLOCK:4,INSIDE:5,POWER:6,CLUTCH:7};
+const skillIndex={SPD:0,'3PT':1,PASS:2,STEAL:3,BLOCK:4,INSIDE:5,POWER:6,CLUTCH:7,HANDLE:8,REBOUND:9};
 if(canonical.length!==6)throw Error('Cannot resolve canonical roster');
 for(const [i,p] of spec.players.entries()) {
   const c=canonical[i];
@@ -89,9 +89,10 @@ for(const [player,p] of spec.players.entries()){
       p.featured.forEach(([label,value],i)=>{text(s,80,48+i*16,label);text(s,136,48+i*16,String(value).padStart(2,' '));meter(s,80,58+i*16,value);});
       centered(s,112,p.playstyle);
     } else {
-      const names=page===1?['SPEED','THREE','PASSING','INSIDE']:['STEAL','BLOCK','POWER','CLUTCH'];
-      const ids=page===1?[0,1,2,5]:[3,4,6,7];
-      names.forEach((label,i)=>{text(s,8,48+i*16,label);text(s,136,48+i*16,String(p.ratings[ids[i]]).padStart(2,' '));meter(s,72,58+i*16,p.ratings[ids[i]]);});
+      // Five ratings a page, one row each: label, meter, value.
+      const names=page===1?['SPEED','HANDLE','THREE','PASSING','INSIDE']:['STEAL','BLOCK','REBOUND','POWER','CLUTCH'];
+      const ids=page===1?[0,8,1,2,5]:[3,4,9,6,7];
+      names.forEach((label,i)=>{text(s,8,48+i*12,label);text(s,136,48+i*12,String(p.ratings[ids[i]]).padStart(2,' '));meter(s,70,49+i*12,p.ratings[ids[i]]);});
       centered(s,112,page===1?'ATTACK AND SPEED':'DEFENSE AND CLUTCH');
     }
     centered(s,128,'A PICK  B BACK');centered(s,136,page===0?'SELECT ALL RATINGS':page===1?'SELECT NEXT PAGE':'SELECT PLAYER CARD');

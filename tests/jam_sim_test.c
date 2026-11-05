@@ -18,7 +18,7 @@ static void movement_pause(void) {
     jam_init(&g);isolate(&g);
     g.owner=1;g.players[1].stun=255;
     step(&g,40,JAM_MOVE_RIGHT|JAM_MOVE_DOWN);
-    assert(g.players[0].x==130*4 && g.players[0].y==JAM_BOTTOM*4);
+    assert(g.players[0].x==135*4 && g.players[0].y==JAM_BOTTOM*4); /* MATUS 5.5 a step, diagonal 3.5 */
     jam_update(&g,JAM_PAUSE);before=g;
     step(&g,60,JAM_MOVE_RIGHT|JAM_B);
     assert(g.players[0].x==before.players[0].x && g.tick==before.tick && g.charge==0);
@@ -319,10 +319,10 @@ static void ratings_and_difficulty(void) {
     jam_game_t strong,weak;
     uint16_t seed,high_blocks=0,low_blocks=0,high_steals=0,low_steals=0;
     uint8_t baseline,i;
-    static const uint8_t expected[6][8]={
-        {7,10,10,8,2,3,5,9},{4,5,5,3,10,9,7,7},{4,5,6,4,4,7,10,7},
-        {10,3,7,7,4,8,4,5},{5,8,5,3,7,7,9,6},{9,2,5,8,6,8,6,4}};
-    for(i=0;i<6;i++)assert(!memcmp(&jam_roster[i].ratings,expected[i],8));
+    static const uint8_t expected[6][10]={
+        {7,10,10,8,2,3,5,9,10,3},{4,5,5,3,10,9,7,7,3,9},{4,5,6,4,4,7,10,7,4,8},
+        {10,3,7,7,4,8,4,5,7,5},{5,8,5,3,7,7,9,6,7,8},{9,2,5,8,6,8,6,4,5,5}};
+    for(i=0;i<6;i++)assert(!memcmp(&jam_roster[i].ratings,expected[i],10));
     assert(!strcmp(jam_roster[4].jersey,"74") && !strcmp(jam_roster[5].jersey,"00"));
     selected(&strong,3);selected(&weak,1);
     assert(jam_move_speed(&strong,0,0)>jam_move_speed(&weak,0,0));
@@ -1378,11 +1378,119 @@ static void deep_shots_and_dunk_cam(void) {
     assert(g.mode==JAM_DUNK && !g.dunk_cam && g.dunk_time==2);
     printf("PASS: MATUS deep shots %u/%u/%u at 100/130/150 px, average %u; Dunk Cam selection and A skip\n",at100,at130,at150,average);
 }
+static int16_t manhattan(const jam_game_t *g,uint8_t a,uint8_t b) {
+    return (g->players[a].x>g->players[b].x?g->players[a].x-g->players[b].x:g->players[b].x-g->players[a].x)+
+        (g->players[a].y>g->players[b].y?g->players[a].y-g->players[b].y:g->players[b].y-g->players[a].y);
+}
+static void offball_fixture(jam_game_t *g,uint16_t seed,uint8_t trailing) {
+    /* CPU BAMBI carries toward the left rim with the human MATUS in front;
+       CPU CHRUX waits on the wing, guarded by CPU MAGIC. */
+    jam_init(g);g->owner=2;g->mode=JAM_HELD;g->grace=255;g->possession_time=60;g->rng=seed;
+    g->players[2].x=130*4;g->players[2].y=64*4;g->players[2].contact_cooldown=255;
+    g->players[0].x=112*4;g->players[0].y=64*4;g->players[0].cooldown=255;
+    g->players[3].x=130*4;g->players[3].y=112*4;
+    g->players[1].x=(trailing?160:112)*4;g->players[1].y=(trailing?112:104)*4;g->players[1].cooldown=255;
+}
+static void offball_play(void) {
+    jam_game_t g;
+    uint16_t seed,cuts[2]={0,0},feeds[2]={0,0},helped=0,split=0,covered=0,beaten=0,lifts=0;
+    uint8_t t,k;
+    int16_t closest,far;
+    /* Back door: a man whose defender trails cuts at once; one whose
+       defender stays between him and the rim cuts only now and then. */
+    for(k=0;k<2;k++)for(seed=1;seed<=64;seed++) {
+        offball_fixture(&g,seed,k);g.players[2].cooldown=255;
+        for(t=0;t<16;t++)jam_update(&g,0);
+        cuts[k]+=jam_cpu_cutting(3);
+        if(k){
+            for(t=0;t<100 && g.players[3].x>(JAM_RIM_LEFT+28)*4;t++)jam_update(&g,0);
+            assert(g.players[3].x<=(JAM_RIM_LEFT+28)*4);
+        }
+    }
+    assert(cuts[1]>=60 && cuts[0]<=32);
+    /* The carrier hits a teammate open at the rim. */
+    for(seed=1;seed<=64;seed++) {
+        offball_fixture(&g,seed,1);
+        g.players[3].x=64*4;g.players[3].y=92*4;g.players[0].y=52*4; /* off the passing lane */
+        for(t=0;t<10 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        feeds[1]+=g.mode==JAM_PASS && g.passer==2 && g.target==3;
+    }
+    assert(feeds[1]>=56);
+    /* A cutter who beat his man by a step is open, even with the defender
+       right behind him; the same defender between him and the rim is not. */
+    for(k=0;k<2;k++)for(seed=1;seed<=64;seed++) {
+        offball_fixture(&g,seed,1);
+        g.players[2].y=48*4;g.players[0].x=150*4;g.players[0].y=40*4;
+        g.players[3].x=64*4;g.players[3].y=92*4;
+        /* Behind him (19 px away, clear of the passing lane), or under the rim. */
+        g.players[1].x=(k?70:52)*4;g.players[1].y=(k?105:92)*4;
+        /* Eight updates: after that CHRUX (SPEED 10) drifts open anyway. */
+        for(t=0;t<8 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        if(g.mode==JAM_PASS && g.passer==2 && g.target==3){if(k)beaten++;else covered++;}
+    }
+    assert(beaten>=24 && covered<=4); /* the window closes as his man recovers */
+    /* Help: a carrier past his defender near the rim draws the second CPU
+       defender off his man; far from the rim, the helper stays home. */
+    for(seed=1;seed<=32;seed++) for(k=0;k<2;k++) {
+        jam_init(&g);g.owner=0;g.mode=JAM_HELD;g.grace=255;g.rng=seed;
+        g.players[0].x=(k?250:150)*4;g.players[0].y=88*4;
+        g.players[2].x=(k?212:112)*4;g.players[2].y=88*4;
+        g.players[1].x=190*4;g.players[1].y=56*4;g.players[1].cooldown=255;
+        g.players[3].x=196*4;g.players[3].y=62*4;
+        closest=0x7fff;
+        for(t=0;t<60;t++){jam_update(&g,0);if(manhattan(&g,3,0)<closest)closest=manhattan(&g,3,0);}
+        if(k)helped+=closest<36*4;else assert(closest>48*4);
+    }
+    assert(helped>=28);
+    /* Two CPU defenders split the attackers: when our CPU teammate has the
+       ball, one of them still guards the human. */
+    for(seed=1;seed<=32;seed++) {
+        jam_init(&g);g.owner=1;g.mode=JAM_HELD;g.grace=255;g.rng=seed;g.possession_time=60;
+        g.players[1].x=160*4;g.players[1].y=88*4;g.players[1].cooldown=255;
+        g.players[0].x=200*4;g.players[0].y=56*4;
+        g.players[2].x=150*4;g.players[2].y=88*4;g.players[3].x=140*4;g.players[3].y=70*4;
+        for(t=0;t<40 && g.mode==JAM_HELD;t++)jam_update(&g,0);
+        far=manhattan(&g,2,0)<manhattan(&g,3,0)?manhattan(&g,2,0):manhattan(&g,3,0);
+        split+=far<40*4;
+    }
+    assert(split>=30);
+    /* Spacing: with the human carrying high, a CPU teammate spreads to the
+       low half instead of trailing beside the ball. */
+    for(seed=1;seed<=16;seed++) {
+        jam_init(&g);g.owner=0;g.mode=JAM_HELD;g.grace=255;g.rng=seed;
+        g.players[0].x=200*4;g.players[0].y=60*4;
+        g.players[1].x=190*4;g.players[1].y=70*4;g.players[1].cooldown=255;
+        g.players[2].x=230*4;g.players[2].y=70*4;g.players[3].x=236*4;g.players[3].y=100*4;
+        step(&g,100,0);
+        assert(g.players[1].y>=96*4 && manhattan(&g,1,0)>=40*4);
+    }
+    /* Lift: with the carrier pressed, a far teammate comes back toward him,
+       staying on the half-court side as an outlet, not running to the rim. */
+    for(seed=1;seed<=16;seed++) {
+        int16_t before;
+        jam_init(&g);g.owner=0;g.mode=JAM_HELD;g.grace=255;g.rng=seed;
+        g.players[0].x=200*4;g.players[0].y=88*4;
+        g.players[2].x=210*4;g.players[2].y=88*4;g.players[2].cooldown=255;
+        g.players[1].x=100*4;g.players[1].y=120*4;g.players[1].cooldown=255;
+        g.players[3].x=96*4;g.players[3].y=116*4;g.players[3].cooldown=255;
+        before=manhattan(&g,1,0);
+        step(&g,40,0);
+        lifts+=manhattan(&g,1,0)<before-24*4 && g.players[1].x<g.players[0].x;
+    }
+    assert(lifts>=12);
+    printf("PASS: off-ball play; back-door cuts %u/64 past a trailing defender vs %u/64 covered, feeds to the rim %u/64 (a step ahead of his man %u/64, man between him and the rim %u/64), help %u/32, split %u/32, lifts %u/16, spacing\n",
+        cuts[1],cuts[0],feeds[1],beaten,covered,helped,split,lifts);
+}
 static void contact_holds_not_pushes(void) {
     static const uint8_t strong[2]={2,4};
-    jam_game_t g;uint16_t seed;uint8_t k,t;
-    for(k=0;k<2;k++)for(seed=1;seed<=32;seed++) {
+    jam_game_t g;uint16_t seed;uint8_t k,t,handler;
+    uint16_t past[2]={0,0},runs=0;
+    /* MATUS (HANDLE 10, edge +9 on BAMBI, +4 on CHOMPA) slides around a
+       stronger body; MAGIC (HANDLE 3, edge -1 and -1) is held up. Neither
+       knocks anyone down without turbo, nor leaves the court. */
+    for(handler=0;handler<2;handler++)for(k=0;k<2;k++)for(seed=1;seed<=32;seed++) {
         jam_setup_t s={{0,1,2,3},JAM_PICKUP,4};int16_t y0,lane;
+        s.roster[0]=handler;s.roster[1]=handler^1;
         s.roster[2]=strong[k];s.roster[3]=strong[k]==2?3:2;
         for(lane=0;lane<2;lane++) {
             assert(jam_init_lineup(&g,&s));
@@ -1393,17 +1501,93 @@ static void contact_holds_not_pushes(void) {
             for(t=0;t<90 && g.mode==JAM_HELD && g.owner==0;t++) {
                 jam_update(&g,JAM_MOVE_RIGHT);
                 assert(jam_court_contains(g.players[0].x,g.players[0].y));
+                assert(!g.players[2].stun);
             }
             assert(g.message!=JAM_MSG_OUT);
-            /* Held up: not slid more than 4 pixels toward a line. */
-            assert(y0-g.players[0].y<=16 && g.players[0].y-y0<=16);
+            if(handler==1) {
+                /* Held up: not slid more than 4 pixels toward a line. */
+                assert(y0-g.players[0].y<=16 && g.players[0].y-y0<=16);
+                assert(g.players[0].x<g.players[2].x);
+            } else past[k]+=g.players[0].x>g.players[2].x+8*4;
+            runs+=handler==0 && k==0;
         }
     }
+    assert(past[0]>=runs*3/4 && past[1]>=runs*3/4);
     /* A knockback stops at the line instead of carrying a player out. */
     jam_init(&g);g.players[0].x=150*4;g.players[0].y=43*4;g.players[0].stun=10;g.players[0].push_x=0;g.players[0].push_y=-8;
     g.mode=JAM_HELD;g.owner=1;g.grace=255;
     step(&g,10,0);assert(jam_court_contains(g.players[0].x,g.players[0].y));
-    puts("PASS: driving into BAMBI/CHOMPA holds the carrier; contact never pushes a carrier out, even beside the sideline; knockbacks stop at the line");
+    printf("PASS: MATUS slides past BAMBI %u/%u and CHOMPA %u/%u without turbo; MAGIC is held; contact never pushes a carrier out, even beside the sideline; knockbacks stop at the line\n",past[0],runs,past[1],runs);
+}
+static void handle_fixture(jam_game_t *g,uint8_t carrier,uint8_t defender,uint8_t level,uint16_t seed) {
+    /* Human carrier (slot 0) in the half court, CPU ball guard (slot 2)
+       just in front of him toward the right rim; the others far away. */
+    jam_setup_t s={{0,1,2,3},0,4};uint8_t i,used=0,k=0;
+    s.difficulty=level;s.roster[0]=carrier;s.roster[2]=defender;
+    used=(uint8_t)((1u<<carrier)|(1u<<defender));
+    for(i=1;i<4;i+=2){while(used&(1u<<k))k++;s.roster[i]=k;used|=(uint8_t)(1u<<k);}
+    assert(jam_init_lineup(g,&s));
+    g->owner=0;g->controlled=0;g->mode=JAM_HELD;g->grace=255;g->possession_time=60;g->rng=seed;
+    g->players[0].x=180*4;g->players[0].y=80*4;
+    g->players[2].x=194*4;g->players[2].y=84*4;g->players[2].cooldown=255;
+    g->players[1].x=60*4;g->players[1].y=50*4;g->players[3].x=60*4;g->players[3].y=120*4;g->players[3].cooldown=255;
+}
+static void ball_handling_and_rebounds(void) {
+    jam_game_t g;uint16_t seed,strips[2]={0,0},boards[2]={0,0};
+    int16_t ahead[2];uint8_t k,t,frozen[2];
+    /* Speed spread: half steps, 2 + SPEED/2 a step on average. */
+    jam_init(&g);
+    for(k=0;k<6;k++){g.setup.roster[0]=k;g.tick=0;t=jam_move_speed(&g,0,0);g.tick=1;t+=jam_move_speed(&g,0,0);
+        assert(t==4+jam_roster[k].ratings.speed);}
+    /* On the hardest level a CPU BAMBI is half a step faster, still a full
+       step slower than MATUS. */
+    handle_fixture(&g,0,2,JAM_WINNERS_STAY,1);
+    g.tick=0;t=jam_move_speed(&g,2,0);g.tick=1;t+=jam_move_speed(&g,2,0);assert(t==9);
+    /* First step: up for a moment, then a sharp cut right. MATUS (HANDLE 10)
+       freezes BAMBI; MAGIC (HANDLE 3) does not. */
+    for(k=0;k<2;k++) {
+        handle_fixture(&g,k?1:0,2,JAM_PICKUP,1);
+        step(&g,6,JAM_MOVE_UP);
+        jam_update(&g,JAM_MOVE_RIGHT);
+        frozen[k]=jam_beaten(&g,2);
+        step(&g,24,JAM_MOVE_RIGHT);
+        ahead[k]=g.players[0].x-g.players[2].x;
+        assert(!g.players[2].stun && g.mode==JAM_HELD && g.owner==0);
+    }
+    assert(frozen[0] && !frozen[1] && ahead[0]>0 && ahead[1]<0);
+    /* Wiggling does not chain: within the cooldown a second turn does nothing. */
+    handle_fixture(&g,0,2,JAM_PICKUP,1);
+    step(&g,6,JAM_MOVE_UP);jam_update(&g,JAM_MOVE_RIGHT);
+    for(t=0;t<20;t++)jam_update(&g,0);
+    assert(!jam_beaten(&g,2));
+    step(&g,4,JAM_MOVE_DOWN);jam_update(&g,JAM_MOVE_LEFT);
+    assert(!jam_beaten(&g,2));
+    /* HANDLE guards the ball: the same CPU reach strips MAGIC more often.
+       The human (slot 1) idles far away; CPU slot 0 carries; CPU slot 3
+       reaches from in front. Count the first reach only. */
+    for(k=0;k<2;k++)for(seed=1;seed<=256;seed++) {
+        handle_fixture(&g,k?1:0,3,JAM_WINNERS_STAY,seed);
+        g.controlled=1;g.grace=0;g.players[0].cooldown=255;
+        g.players[1].x=60*4;g.players[1].y=50*4;g.players[2].x=60*4;g.players[2].y=120*4;
+        g.players[0].x=150*4;g.players[0].y=80*4;g.players[0].heading=JAM_FACE_RIGHT;
+        g.players[3].x=158*4;g.players[3].y=80*4;g.players[3].cooldown=0;
+        for(t=0;t<16 && !g.steal_attempts;t++)jam_update(&g,0);
+        assert(g.steal_attempts==1);
+        strips[k]+=g.owner==3;
+    }
+    assert(strips[1]>strips[0]+strips[0]/4);
+    /* REBOUND: an equal race to a missed shot goes to MAGIC over MATUS. */
+    for(k=0;k<2;k++)for(seed=1;seed<=32;seed++) {
+        handle_fixture(&g,0,1,JAM_PICKUP,seed);
+        g.mode=JAM_LOOSE;g.owner=-1;g.loose_rebound=k;g.flight=0;g.height=4;
+        g.ball_x=200*4;g.ball_y=88*4;
+        g.players[0].x=188*4;g.players[0].y=88*4;g.players[2].x=212*4;g.players[2].y=88*4;
+        jam_update(&g,0);
+        boards[k]+=g.owner==2;
+    }
+    assert(boards[1]==32 && boards[0]==0); /* a loose ball off a fumble: no edge */
+    printf("PASS: ball handling; half-step speeds, MATUS first step on BAMBI %d px ahead vs MAGIC %d, no chained wiggles, strips MATUS %u vs MAGIC %u /256, MAGIC wins %u/32 equal rebound races\n",
+        ahead[0]/4,ahead[1]/4,strips[0],strips[1],boards[1]);
 }
 int main(void) {
     court_edges();
@@ -1424,6 +1608,8 @@ int main(void) {
     jump_shot_blocks();
     contact_holds_not_pushes();
     deep_shots_and_dunk_cam();
+    offball_play();
+    ball_handling_and_rebounds();
     shooting_motion();
     pump_fake_and_travel();
     shooting_accuracy();

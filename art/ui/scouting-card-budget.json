@@ -8,14 +8,14 @@
         "bank1": 40
       },
       {
-        "tiles": 59,
-        "bank0": 59,
-        "bank1": 0
+        "tiles": 90,
+        "bank0": 64,
+        "bank1": 26
       },
       {
-        "tiles": 64,
+        "tiles": 97,
         "bank0": 64,
-        "bank1": 0
+        "bank1": 33
       }
     ]
   },
@@ -28,14 +28,14 @@
         "bank1": 45
       },
       {
-        "tiles": 58,
-        "bank0": 58,
-        "bank1": 0
+        "tiles": 96,
+        "bank0": 64,
+        "bank1": 32
       },
       {
-        "tiles": 61,
-        "bank0": 61,
-        "bank1": 0
+        "tiles": 94,
+        "bank0": 64,
+        "bank1": 30
       }
     ]
   },
@@ -48,14 +48,14 @@
         "bank1": 46
       },
       {
-        "tiles": 62,
-        "bank0": 62,
-        "bank1": 0
+        "tiles": 101,
+        "bank0": 64,
+        "bank1": 37
       },
       {
-        "tiles": 63,
-        "bank0": 63,
-        "bank1": 0
+        "tiles": 101,
+        "bank0": 64,
+        "bank1": 37
       }
     ]
   },
@@ -68,14 +68,14 @@
         "bank1": 41
       },
       {
-        "tiles": 62,
-        "bank0": 62,
-        "bank1": 0
+        "tiles": 96,
+        "bank0": 64,
+        "bank1": 32
       },
       {
-        "tiles": 62,
-        "bank0": 62,
-        "bank1": 0
+        "tiles": 93,
+        "bank0": 64,
+        "bank1": 29
       }
     ]
   },
@@ -88,14 +88,14 @@
         "bank1": 46
       },
       {
-        "tiles": 58,
-        "bank0": 58,
-        "bank1": 0
+        "tiles": 97,
+        "bank0": 64,
+        "bank1": 33
       },
       {
-        "tiles": 63,
-        "bank0": 63,
-        "bank1": 0
+        "tiles": 96,
+        "bank0": 64,
+        "bank1": 32
       }
     ]
   },
@@ -108,14 +108,14 @@
         "bank1": 45
       },
       {
-        "tiles": 60,
-        "bank0": 60,
-        "bank1": 0
+        "tiles": 95,
+        "bank0": 64,
+        "bank1": 31
       },
       {
-        "tiles": 60,
-        "bank0": 60,
-        "bank1": 0
+        "tiles": 92,
+        "bank0": 64,
+        "bank1": 28
       }
     ]
   }

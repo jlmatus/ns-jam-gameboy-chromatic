@@ -139,13 +139,19 @@ def card(stage, player=matus_source, source=portrait):
         text(im, 144 if value >= 10 else 150, y, str(value), G)
         for b in range(10):
             d.rectangle((107+b*5, y+9, 110+b*5, y+12), fill=G if b<value else T)
+    # A gold key under the featured stats says how to see all ten ratings;
+    # the footer hint alone was easy to miss.
+    # Teal, so it reads apart from the gold ribbon below.
+    d.rectangle((104, 110, 159, 126), fill=T)
+    for line, y in (('SELECT', 111), ('ALL STATS', 119)):
+        text(im, 104 + (56 - (len(line)*6-1))//2, y, line, I)
     # A full-width specialty ribbon keeps long labels out of the 56px stat
     # column. The approved portrait remains at (3, 28), exactly 96 x 96.
     style=player['playstyle']
     assert len(style)*6 <= 156
     d.rectangle((0, 128, 159, 135), fill=G)
     text(im, (160-len(style)*6)//2, 129, style, N)
-    text(im, 5, 137, 'A PICK B BACK SELECT STATS', I)
+    text(im, (160-len('A PICK   B BACK')*6)//2, 137, 'A PICK   B BACK', I)
     text(im, 0, 13, '<', I)
     text(im, 96, 13, '>', I)
     return im

@@ -61,13 +61,24 @@ uint8_t jam_cpu_shot_choice(jam_game_t *g,uint8_t p) JAM_BANKED {
 }
 uint8_t jam_cpu_carrier(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BANKED {
     jam_player_t *a=&g->players[p];
-    uint8_t d,close=4,team=p>>1,mate=p^1,ahead;
+    uint8_t d,close=4,cover=4,team=p>>1,mate=p^1,ahead;
     int16_t press=0x7fff,open=0x7fff,n;
     for(d=0;d<4;d++) if((d>>1)!=team && !g->players[d].stun) {
         n=near(g,d,p);if(n<press){press=n;close=d;}
-        n=near(g,d,mate);if(n<open)open=n;
+        n=near(g,d,mate);if(n<open){open=n;cover=d;}
     }
     ahead=close<4 && (team ? g->players[close].x<a->x : g->players[close].x>a->x);
+    /* Hit a teammate who is open at the rim, as after a back-door cut. */
+    {
+        const jam_player_t *m=&g->players[mate];
+        int16_t rim=(team?JAM_RIM_LEFT:JAM_RIM_RIGHT)*4;
+        /* Open: nobody within 20 pixels, or he has beaten his man toward the rim. */
+        uint8_t ready=open>80 || cover>3 || gap(g->players[cover].x,rim)>gap(m->x,rim)+16;
+        if(!a->cooldown && !m->stun && gap(m->x,rim)<40*4 && gap(m->y,JAM_RIM_Y*4)<24*4 && ready &&
+           gap(a->x,rim)>gap(m->x,rim)+64 && lane(g,team,a->x,a->y,m->x,m->y) && jam_roll_percent(g)<50) {
+            jam_pass(g,p,mate);a->cooldown=50;return 1;
+        }
+    }
     if(close<4 && press<JAM_CPU_PRESSURE) {
         if(!a->cooldown && open>press+64 && lane(g,team,a->x,a->y,g->players[mate].x,g->players[mate].y) && jam_roll_percent(g)<62) {
             jam_pass(g,p,mate);a->cooldown=50;return 1;

@@ -193,6 +193,126 @@ Summaries come from `analyze.py` and `possession_ends.py`.
 
 **What works:** all five matches ran from tipoff through four quarters, the breaks and the final results pages. Nothing stalled: there were no stuck loose balls, inbounds or held balls.
 
+## HANDLE and REBOUND, wider speeds — follow-up
+
+MATUS (speed 7) couldn't get past BAMBI (speed 4):
+- the old speed formula `3 + speed / 3` made them 5 and 4 quarter pixels a step, and equal on Winners Stay;
+- a diagonal step around a defender (3 a step sideways) was slower than his straight slide (4);
+- BAMBI's body (power 10 + heavy build) stopped MATUS dead.
+
+**New ratings,** values set by the user on 2026-11-05 (MAGIC and BAMBI keep the proposed values):
+
+| | MATUS | MAGIC | BAMBI | CHRUX | CHOMPA | MEAT |
+|---|---|---|---|---|---|---|
+| HANDLE | 10 | 3 | 4 | 7 | 7 | 5 |
+| REBOUND | 3 | 9 | 8 | 5 | 8 | 5 |
+
+**Rule changes** (`jam_handle.c`, `jam_contact.c`, `jam_sim.c`; formulas in [ratings](../design/ratings.md)):
+- **Speed:** `2 + speed / 2` quarter pixels a step on average (4 / 5.5 / 7 at 4 / 7 / 10). The CPU level bonus is half a step instead of a whole one.
+- **First step:** a sharp turn by a carrier who out-handles a CPU defender (HANDLE + SPEED against SPEED + STEAL) freezes that defender briefly. Once per 45 updates.
+- **Slide:** that carrier runs around a stronger body instead of stopping. No knockdown without turbo.
+- **Ball security:** reaches subtract `3 × HANDLE` instead of `2 × PASSING + POWER`.
+- **Rebounds:** REBOUND gives reach and first claim on missed and blocked shots.
+
+**Cards:** each ratings page now shows five rows. The main card has a teal `SELECT / ALL STATS` key under the featured stats, because the footer hint was easy to miss. Captured from the ROM: [rating pages](five-matches/handle-ab/cards.png) and [main cards](five-matches/handle-ab/main-cards.png).
+
+**New rules tests:**
+- half-step speeds for all six players; a CPU BAMBI on Winners Stay is still a step slower than MATUS;
+- after a sharp turn MATUS is 12 px past BAMBI; MAGIC, doing the same, stays 13 px behind him; quick wiggles don't chain;
+- the same CPU reach strips MAGIC 188 of 256 times and MATUS 136;
+- MAGIC wins 32 of 32 equal races to a missed shot against MATUS;
+- MATUS slides past BAMBI and CHOMPA 64 of 64 times without turbo and never knocks either down; MAGIC is held.
+
+**A/B on the same seeds:** the off-ball build (ROM `b1022c12…`) against this build (ROM `77c84426…`), three seeds per lineup. Summaries and the table are in `five-matches/handle-ab/`; `handle_ab.py` makes the table.
+
+| # | Lineup (you, CPU teammate vs two CPUs), level | Player | Points | Rebounds | Steals | Field goals |
+|---|---|---|---|---|---|---|
+| 1 | MATUS, MAGIC vs BAMBI, CHRUX, Pickup | MATUS | 133 → 117 | 14 → 22 | 35 → 25 | 52/87 → 44/75 |
+| | | MAGIC | 56 → 60 | 32 → 37 | 7 → 5 | 26/58 → 28/79 |
+| | | BAMBI | 48 → 50 | 36 → 53 | 14 → 16 | 24/49 → 25/54 |
+| | | CHRUX | 92 → 124 | 43 → 57 | 11 → 13 | 46/82 → 62/121 |
+| 2 | BAMBI, CHOMPA vs MEAT, MATUS, Pickup | BAMBI | 64 → 60 | 26 → 46 | 24 → 1 | 30/59 → 27/52 |
+| | | CHOMPA | 121 → 131 | 28 → 40 | 27 → 3 | 50/83 → 56/116 |
+| | | MEAT | 50 → 100 | 47 → 71 | 22 → 17 | 25/58 → 50/108 |
+| | | MATUS | 38 → 121 | 31 → 19 | 6 → 18 | 14/52 → 44/84 |
+| 3 | CHRUX, MEAT vs MAGIC, CHOMPA, Winners Stay | CHRUX | 67 → 110 | 67 → 76 | 23 → 42 | 31/82 → 54/122 |
+| | | MEAT | 99 → 111 | 59 → 40 | 27 → 32 | 48/108 → 55/110 |
+| | | MAGIC | 47 → 35 | 52 → 68 | 14 → 3 | 21/54 → 16/42 |
+| | | CHOMPA | 101 → 105 | 38 → 43 | 30 → 8 | 40/114 → 38/117 |
+| 4 | CHOMPA, MATUS vs CHRUX, BAMBI, Warm-up | CHOMPA | 79 → 73 | 18 → 37 | 19 → 9 | 34/63 → 30/62 |
+| | | MATUS | 126 → 159 | 23 → 19 | 42 → 43 | 50/89 → 60/113 |
+| | | CHRUX | 38 → 78 | 58 → 62 | 1 → 5 | 19/53 → 39/80 |
+| | | BAMBI | 14 → 46 | 18 → 37 | 0 → 1 | 7/23 → 23/52 |
+| 5 | MEAT, BAMBI vs MATUS, MAGIC, Winners Stay | MEAT | 67 → 76 | 58 → 56 | 55 → 57 | 33/101 → 36/98 |
+| | | BAMBI | 90 → 81 | 18 → 42 | 26 → 47 | 43/104 → 39/117 |
+| | | MATUS | 84 → 86 | 71 → 34 | 34 → 46 | 33/72 → 33/73 |
+| | | MAGIC | 35 → 34 | 41 → 69 | 6 → 2 | 15/37 → 16/37 |
+
+**Results:**
+- **More open basketball:** 775 baskets against 641; the CPU scored 779 points against 547, and your side won 11 of 15 (before: 14).
+- **The CPU's MATUS is a scorer now:** in lineup 2 he went from 38 to 121 points. He gets past defenders instead of walking into them.
+- **Bigs win the boards:** MAGIC 125 → 174 rebounds over his lineups, BAMBI 98 → 178; MATUS 139 → 94.
+- **Steals follow HANDLE:** reaches on MATUS and CHRUX come up empty more often; total steals 423 → 393.
+- **Runovers rose,** 533 → 781: carriers who slide past keep driving and reach the rim with turbo more often. Worth watching in play.
+
+**Not measured:** the script's carrier doesn't make deliberate crossovers, so these matches don't count first steps. The rules test covers it.
+
+## Off-ball players: spacing, cuts and help defense — follow-up
+
+This addresses item 5 below. The new logic lives in `jam_offball.c`; `jam_carrier.c` adds the pass to a cutter.
+
+**Your CPU teammate, and the CPU's second attacker, off the ball:**
+- **Spacing:** they go to a spot on the half away from the ball. Shooters (three-point 7+, MATUS and CHOMPA) take the arc wing; the others take the short corner by the baseline.
+- **Back-door cut:** a player cuts to the far side of the rim when his defender trails toward half court or turns to help on the ball. He also cuts now and then on his own; CHRUX (speed 10) does it most.
+  - At the rim, he waits briefly as a target, then clears out.
+- **Lift:** when the carrier is pressed and his teammate is far away, the teammate comes back toward half court as an outlet.
+- **CPU carriers pass to an open teammate at the rim,** including one who has beaten his man by a step.
+
+**CPU defenders:**
+- **One takes the ball and the other takes the other attacker.** Before, when the opponent's second player had the ball, both CPU defenders followed him and left your player alone.
+- **The defender on the ball switches** only when the other one is clearly closer.
+- **The off-ball defender stays between his man and the rim,** at most 12 px toward it (before: a third of the way, up to about 30 px).
+- **Help:** when the carrier drives past his defender inside 72 px, the off-ball defender steps up to stop him.
+- **A cut beats him by a step:** he reacts 24, 16 or 8 updates late (Warm-up, Pickup, Winners Stay), or 16 for your CPU teammate.
+- **Your CPU teammate** guards the attacker you're not guarding, and only takes the ball when you're far from it.
+
+**New rules test:**
+- **Back-door cut:** 64 of 64 players cut when their defender trails, and 9 of 64 when he's covering.
+- **Pass to a teammate open at the rim:** 64 of 64.
+- **Cutter with his man close behind:** 36 of 64 get the pass when a step ahead, and 0 of 64 with the man between him and the rim.
+- **Help defense:** 32 of 32. No help when the carrier is far from the rim.
+- **Defender split:** 32 of 32.
+- **Lift:** 16 of 16.
+- **Spacing:** the teammate goes to the half away from the ball.
+
+**A/B on the same seeds:** the previous commit (`67cf1bd`, ROM `2f3ad604…`) against this build (ROM `b1022c12…`), three seeds per lineup. The summaries are in `five-matches/offball-ab/`. `offball_ab.py` measures:
+- **spacing:** the distance between the carrier and his teammate;
+- **coverage:** how close the nearest defender is to the off-ball attacker;
+- **pile-ups:** two or more players within 16 px of the carrier;
+- **feeds:** passes to a teammate within 32 px of the rim.
+
+| # | Build | Teammate spacing (median px) | Off-ball man's nearest defender (median px) | Pile-ups (% of held samples) | Teammate at the rim (%) | Passes | Feeds to the rim (scored) | Steals | Scores |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | before | 56 | 36 | 5.1 | 3.0 | 270 | 1 (0) | 89 | 90–20, 75–28, 68–18 |
+| 1 | after | 65 | 18 | 3.6 | 3.1 | 253 | 2 (0) | 67 | 66–44, 68–52, 55–44 |
+| 2 | before | 81 | 50 | 3.9 | 3.0 | 210 | 2 (0) | 97 | 64–46, 82–17, 48–26 |
+| 2 | after | 67 | 17 | 3.4 | 4.0 | 203 | 1 (0) | 79 | 62–23, 56–29, 67–36 |
+| 3 | before | 48 | 21 | 15.4 | 5.1 | 309 | 23 (2) | 128 | 39–43, 58–22, 43–45 |
+| 3 | after | 49 | 17 | 10.7 | 5.5 | 283 | 10 (0) | 94 | 54–41, 50–42, 62–65 |
+| 4 | before | 54 | 28 | 4.1 | 4.2 | 335 | 9 (1) | 78 | 86–28, 83–14, 82–24 |
+| 4 | after | 56 | 19 | 2.8 | 3.7 | 247 | 0 (0) | 62 | 58–16, 65–14, 82–22 |
+| 5 | before | 46 | 28 | 12.3 | 4.7 | 296 | 12 (0) | 153 | 40–42, 51–36, 47–55 |
+| 5 | after | 62 | 17 | 9.6 | 5.5 | 233 | 7 (1) | 121 | 39–38, 56–41, 62–40 |
+
+**Results:**
+- **Every attacker is now guarded:** the off-ball man's nearest defender is a median 17–19 px away (before: 21–50).
+- **Fewer pile-ups in all five lineups,** for example 15.4% → 10.7% in lineup 3 and 12.3% → 9.6% in lineup 5.
+- **Fewer steals:** 545 → 423, because your CPU teammate no longer doubles the ball.
+- **Closer games:** the CPU scored 547 points against 464 before; your side won 14 of 15, against 11 before.
+- **Passes to a cutter at the rim stay rare** (20, against 47 before). The script never passes to a cutter on purpose, and the defense is tighter now. A person sees the cut and can pass to it; the script's numbers can't show that.
+
+**Not refreshed:** the `gN/` folders and `buzzer-b/` still hold an older build's run.
+
 ## Dunk Cam only for big dunks, and deep shots a gamble — follow-up
 
 This addresses items 2 and 6 below.

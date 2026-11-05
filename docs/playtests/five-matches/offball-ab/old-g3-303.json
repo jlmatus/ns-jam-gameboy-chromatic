@@ -1,0 +1,902 @@
+{
+ "lineup": [
+  "CHRUX",
+  "MEAT",
+  "MAGIC",
+  "CHOMPA"
+ ],
+ "difficulty": "Winners Stay",
+ "periods": 4,
+ "seed": 303,
+ "frames": 57314,
+ "final_score": [
+  43,
+  45
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "CHRUX": {
+   "points": 33,
+   "field_made": 16,
+   "field_attempted": 41,
+   "three_made": 1,
+   "three_attempted": 8,
+   "rebounds": 28,
+   "steals": 12,
+   "blocks": 13,
+   "dunks": 9
+  },
+  "MEAT": {
+   "points": 10,
+   "field_made": 5,
+   "field_attempted": 27,
+   "three_made": 0,
+   "three_attempted": 12,
+   "rebounds": 19,
+   "steals": 6,
+   "blocks": 6,
+   "dunks": 4
+  },
+  "MAGIC": {
+   "points": 22,
+   "field_made": 10,
+   "field_attempted": 28,
+   "three_made": 2,
+   "three_attempted": 5,
+   "rebounds": 22,
+   "steals": 6,
+   "blocks": 17,
+   "dunks": 0
+  },
+  "CHOMPA": {
+   "points": 23,
+   "field_made": 10,
+   "field_attempted": 25,
+   "three_made": 3,
+   "three_attempted": 13,
+   "rebounds": 11,
+   "steals": 13,
+   "blocks": 9,
+   "dunks": 1
+  }
+ },
+ "totals": {
+  "passes": 90,
+  "steals": 37,
+  "shots": 121,
+  "rebounds": 80,
+  "baskets": 41,
+  "blocks": 45,
+  "steal_attempts": 121,
+  "shoves": 3,
+  "runovers": 34,
+  "dunk_attempts": 30,
+  "dunks": 14
+ },
+ "dunk_cam": {
+  "dunk_frames": 5179,
+  "cam_frames": 4086,
+  "dunks": [
+   {
+    "frame": 1647,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 2277,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 4187,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 5703,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 6809,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 7144,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 8533,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 14317,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 16211,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 17219,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 19693,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 19974,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 21634,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 23427,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 28651,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 30553,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 30890,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 31354,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 31982,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 32996,
+    "team": 1,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 35645,
+    "team": 1,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 38683,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 39830,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 40283,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 44105,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 47736,
+    "team": 0,
+    "cam": 0,
+    "cam_end": 0
+   },
+   {
+    "frame": 49093,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 49972,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 50526,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   },
+   {
+    "frame": 51429,
+    "team": 0,
+    "cam": 1,
+    "cam_end": 1
+   }
+  ],
+  "shots": [
+   {
+    "frame": 2051,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 107,
+    "made": 0
+   },
+   {
+    "frame": 2748,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 94,
+    "made": 1
+   },
+   {
+    "frame": 3388,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 83,
+    "made": 0
+   },
+   {
+    "frame": 3710,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 128,
+    "made": 0
+   },
+   {
+    "frame": 4670,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 103,
+    "made": 0
+   },
+   {
+    "frame": 4847,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 28,
+    "made": 1
+   },
+   {
+    "frame": 5472,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 127,
+    "made": 0
+   },
+   {
+    "frame": 6013,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 108,
+    "made": 0
+   },
+   {
+    "frame": 6192,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 20,
+    "made": 0
+   },
+   {
+    "frame": 6584,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 7972,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 106,
+    "made": 0
+   },
+   {
+    "frame": 8376,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 109,
+    "made": 0
+   },
+   {
+    "frame": 8856,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 9104,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 5,
+    "made": 0
+   },
+   {
+    "frame": 9546,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 58,
+    "made": 1
+   },
+   {
+    "frame": 10093,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 57,
+    "made": 0
+   },
+   {
+    "frame": 10495,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 86,
+    "made": 1
+   },
+   {
+    "frame": 10995,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 37,
+    "made": 0
+   },
+   {
+    "frame": 11229,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 5,
+    "made": 1
+   },
+   {
+    "frame": 11711,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 38,
+    "made": 1
+   },
+   {
+    "frame": 12194,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 44,
+    "made": 1
+   },
+   {
+    "frame": 12944,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 58,
+    "made": 1
+   },
+   {
+    "frame": 13884,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 62,
+    "made": 0
+   },
+   {
+    "frame": 14058,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 220,
+    "made": 0
+   },
+   {
+    "frame": 15288,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 122,
+    "made": 0
+   },
+   {
+    "frame": 15687,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 56,
+    "made": 0
+   },
+   {
+    "frame": 16057,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 108,
+    "made": 0
+   },
+   {
+    "frame": 16716,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 86,
+    "made": 0
+   },
+   {
+    "frame": 17970,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 132,
+    "made": 1
+   },
+   {
+    "frame": 18452,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 18,
+    "made": 1
+   },
+   {
+    "frame": 19071,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 63,
+    "made": 1
+   },
+   {
+    "frame": 20966,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 104,
+    "made": 1
+   },
+   {
+    "frame": 22394,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 120,
+    "made": 0
+   },
+   {
+    "frame": 22799,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 55,
+    "made": 1
+   },
+   {
+    "frame": 24377,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 101,
+    "made": 0
+   },
+   {
+    "frame": 24862,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 106,
+    "made": 0
+   },
+   {
+    "frame": 25114,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 7,
+    "made": 1
+   },
+   {
+    "frame": 26052,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 58,
+    "made": 0
+   },
+   {
+    "frame": 26223,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 14,
+    "made": 0
+   },
+   {
+    "frame": 26497,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 111,
+    "made": 0
+   },
+   {
+    "frame": 26669,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 11,
+    "made": 0
+   },
+   {
+    "frame": 27635,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 58,
+    "made": 1
+   },
+   {
+    "frame": 28158,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 64,
+    "made": 0
+   },
+   {
+    "frame": 29894,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 43,
+    "made": 0
+   },
+   {
+    "frame": 30205,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 124,
+    "made": 0
+   },
+   {
+    "frame": 31586,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 118,
+    "made": 0
+   },
+   {
+    "frame": 32516,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 126,
+    "made": 0
+   },
+   {
+    "frame": 32792,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 11,
+    "made": 0
+   },
+   {
+    "frame": 33613,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 38,
+    "made": 1
+   },
+   {
+    "frame": 34322,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 92,
+    "made": 0
+   },
+   {
+    "frame": 34515,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 20,
+    "made": 0
+   },
+   {
+    "frame": 34842,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 127,
+    "made": 0
+   },
+   {
+    "frame": 35426,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 68,
+    "made": 0
+   },
+   {
+    "frame": 35911,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 0,
+    "made": 1
+   },
+   {
+    "frame": 36171,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 217,
+    "made": 0
+   },
+   {
+    "frame": 36794,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 124,
+    "made": 0
+   },
+   {
+    "frame": 37122,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 108,
+    "made": 0
+   },
+   {
+    "frame": 37297,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 22,
+    "made": 0
+   },
+   {
+    "frame": 37677,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 84,
+    "made": 1
+   },
+   {
+    "frame": 38195,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 37,
+    "made": 0
+   },
+   {
+    "frame": 39517,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 57,
+    "made": 0
+   },
+   {
+    "frame": 40552,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 119,
+    "made": 0
+   },
+   {
+    "frame": 40964,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 95,
+    "made": 0
+   },
+   {
+    "frame": 41151,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 23,
+    "made": 1
+   },
+   {
+    "frame": 41868,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 111,
+    "made": 1
+   },
+   {
+    "frame": 42444,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 99,
+    "made": 0
+   },
+   {
+    "frame": 42670,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 23,
+    "made": 0
+   },
+   {
+    "frame": 44782,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 130,
+    "made": 0
+   },
+   {
+    "frame": 45475,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 59,
+    "made": 0
+   },
+   {
+    "frame": 45695,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 15,
+    "made": 0
+   },
+   {
+    "frame": 46132,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 100,
+    "made": 0
+   },
+   {
+    "frame": 46728,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 67,
+    "made": 0
+   },
+   {
+    "frame": 46971,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 5,
+    "made": 1
+   },
+   {
+    "frame": 47239,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 217,
+    "made": 0
+   },
+   {
+    "frame": 47985,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 119,
+    "made": 0
+   },
+   {
+    "frame": 48253,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 11,
+    "made": 1
+   },
+   {
+    "frame": 48797,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 94,
+    "made": 0
+   },
+   {
+    "frame": 48965,
+    "who": "MEAT",
+    "team": 0,
+    "dist": 26,
+    "made": 0
+   },
+   {
+    "frame": 49605,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 87,
+    "made": 0
+   },
+   {
+    "frame": 50355,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 59,
+    "made": 0
+   },
+   {
+    "frame": 51058,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 85,
+    "made": 0
+   },
+   {
+    "frame": 52218,
+    "who": "CHOMPA",
+    "team": 1,
+    "dist": 117,
+    "made": 1
+   },
+   {
+    "frame": 52763,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 31,
+    "made": 0
+   },
+   {
+    "frame": 52997,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 6,
+    "made": 1
+   },
+   {
+    "frame": 53594,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 58,
+    "made": 1
+   },
+   {
+    "frame": 54477,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 79,
+    "made": 0
+   },
+   {
+    "frame": 54641,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 205,
+    "made": 0
+   },
+   {
+    "frame": 54991,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 61,
+    "made": 0
+   },
+   {
+    "frame": 55314,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 60,
+    "made": 0
+   },
+   {
+    "frame": 55482,
+    "who": "CHRUX",
+    "team": 0,
+    "dist": 27,
+    "made": 1
+   },
+   {
+    "frame": 56277,
+    "who": "MAGIC",
+    "team": 1,
+    "dist": 108,
+    "made": 1
+   }
+  ]
+ }
+}
