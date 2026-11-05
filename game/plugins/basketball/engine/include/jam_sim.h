@@ -93,6 +93,10 @@
    pressure inside this Manhattan distance (quarter pixels). */
 #define JAM_HUMAN_SWIPE_DELAY 30
 #define JAM_CPU_PRESSURE 112
+/* Dunk Cam plays for dunks in the last seconds of a period; jump shots lose
+   accuracy quickly beyond this many pixels from the rim. */
+#define JAM_CAM_LATE_SECONDS 30
+#define JAM_DEEP_RANGE 130
 
 #define JAM_ROSTER_COUNT 6
 #define JAM_WARM_UP 0
@@ -167,6 +171,9 @@ typedef struct {
     /* Pump fake: picked_up counts frames since the human ended the dribble;
        bitten marks defenders committed to the fake until bite_time ends. */
     uint8_t picked_up, fake_time, bitten, bite_time;
+    /* Dunk Cam: dunk_cam selects the close-up for the current dunk;
+       cam_seen marks teams whose first dunk this period already had one. */
+    uint8_t dunk_cam, cam_seen;
 } jam_game_t;
 
 void jam_init(jam_game_t *g) JAM_BANKED;
@@ -185,6 +192,7 @@ uint8_t jam_dunk_range(const jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_dunk_chance(const jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED;
 uint8_t jam_dunk_jump(const jam_game_t *g) JAM_BANKED;
+uint8_t jam_dunk_wants_cam(const jam_game_t *g,uint8_t who) JAM_BANKED;
 void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED;
 uint8_t jam_cpu_carrier(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BANKED;
 uint8_t jam_cpu_rim_lane(const jam_game_t *g,uint8_t p) JAM_BANKED;

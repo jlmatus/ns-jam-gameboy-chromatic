@@ -521,8 +521,10 @@ static void pump_fake_and_travel(void) {
         assert(g.players[2].block_time==18 && g.bite_time==JAM_BITE_FRAMES);
         if(checked++)continue;
         /* A bitten defender stays in the air, stops contesting, and cannot block. */
-        open=g;open.bitten=0;
-        assert(jam_shot_chance(&g,0,24)>jam_shot_chance(&open,0,24));
+        /* Compare inside shooting range so neither chance sits at the floor. */
+        open=g;open.players[0].x=(JAM_RIM_RIGHT-100)*4;open.players[2].x=open.players[0].x+40;
+        before=open;open.bitten=0;
+        assert(jam_shot_chance(&before,0,24)>jam_shot_chance(&open,0,24));
         x=g.players[2].x;step(&g,8,JAM_B);assert(g.players[2].x==x);
         step(&g,14,JAM_B);jam_update(&g,0);
         assert(g.mode==JAM_SHOT && (g.block_attempts&4));
@@ -1341,6 +1343,41 @@ static void jump_shot_blocks(void) {
 /* Body contact: driving into a stronger defender (BAMBI, CHOMPA) holds you
    up instead of sliding you sideways, and contact never pushes anyone off
    the court, even from right beside a sideline. */
+static void deep_shots_and_dunk_cam(void) {
+    jam_game_t g;
+    uint8_t at100,at130,at150,average,t;
+    /* MATUS keeps his arc range, but a heave past 130 pixels is a gamble. */
+    selected(&g,0);isolate(&g);g.setup.difficulty=JAM_WARM_UP;g.players[0].y=88*4;
+    g.players[0].x=(JAM_RIM_RIGHT-100)*4;at100=jam_shot_chance(&g,0,24);
+    g.players[0].x=(JAM_RIM_RIGHT-130)*4;at130=jam_shot_chance(&g,0,24);
+    g.players[0].x=(JAM_RIM_RIGHT-150)*4;at150=jam_shot_chance(&g,0,24);
+    assert(at100==82 && at130==72 && at150==36);
+    selected(&g,1);isolate(&g);g.setup.difficulty=JAM_WARM_UP;g.players[0].y=88*4;
+    g.players[0].x=(JAM_RIM_RIGHT-150)*4;average=jam_shot_chance(&g,0,24);
+    assert(average<=5);
+    /* A team's first dunk of the period gets the close-up; a later dunk
+       with a comfortable lead plays on the court. */
+    dunk_fixture(&g,2,0,7);g.clock_seconds=JAM_QUARTER_SECONDS;
+    g.score[0]=20;g.score[1]=10;
+    assert(jam_try_dunk(&g,0) && g.dunk_cam && g.cam_seen==1);
+    dunk_fixture(&g,2,0,7);g.clock_seconds=JAM_QUARTER_SECONDS;g.cam_seen=1;
+    g.score[0]=20;g.score[1]=10;
+    assert(jam_try_dunk(&g,0) && !g.dunk_cam);
+    for(t=1;t<=JAM_DUNK_END;t++)jam_update(&g,0);
+    assert(g.mode!=JAM_DUNK && g.score[0]+g.score[1]>=30);
+    /* Tying or go-ahead dunks and late dunks still get it. */
+    dunk_fixture(&g,2,0,7);g.clock_seconds=JAM_QUARTER_SECONDS;g.cam_seen=3;
+    g.score[0]=10;g.score[1]=12;assert(jam_dunk_wants_cam(&g,0));
+    g.score[0]=10;g.score[1]=13;assert(!jam_dunk_wants_cam(&g,0));
+    g.score[0]=20;g.score[1]=10;assert(!jam_dunk_wants_cam(&g,0));
+    g.clock_seconds=JAM_CAM_LATE_SECONDS;assert(jam_dunk_wants_cam(&g,0));
+    /* A skips the close-up without changing the dunk itself. */
+    dunk_fixture(&g,2,0,7);g.clock_seconds=JAM_QUARTER_SECONDS;
+    assert(jam_try_dunk(&g,0) && g.dunk_cam);
+    jam_update(&g,0);jam_update(&g,JAM_A);
+    assert(g.mode==JAM_DUNK && !g.dunk_cam && g.dunk_time==2);
+    printf("PASS: MATUS deep shots %u/%u/%u at 100/130/150 px, average %u; Dunk Cam selection and A skip\n",at100,at130,at150,average);
+}
 static void contact_holds_not_pushes(void) {
     static const uint8_t strong[2]={2,4};
     jam_game_t g;uint16_t seed;uint8_t k,t;
@@ -1386,6 +1423,7 @@ int main(void) {
     cpu_shot_choice();
     jump_shot_blocks();
     contact_holds_not_pushes();
+    deep_shots_and_dunk_cam();
     shooting_motion();
     pump_fake_and_travel();
     shooting_accuracy();

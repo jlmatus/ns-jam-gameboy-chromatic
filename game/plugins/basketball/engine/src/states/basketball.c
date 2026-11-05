@@ -475,7 +475,7 @@ void basketball_update(void) BANKED {
         return;
     }
     draw_players();
-    if(jam.mode==JAM_DUNK){
+    if(jam.mode==JAM_DUNK && jam.dunk_cam){
         if(!jam_cam_active){jam_dunk_cam_begin(&jam);for(buttons=0;buttons<40;buttons++)previous_hud[buttons]=255;}
         jam_dunk_cam_render(&jam);draw_hud();
     }else{

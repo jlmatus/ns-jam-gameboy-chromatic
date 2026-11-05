@@ -14,6 +14,10 @@ The shooter travels from the actual launch position toward the rim. Ball coordin
 
 Other players and the possession timer stay still during the cinematic. SELECT freezes the dunk, ball, result and random state. A/B cannot interrupt it into a pass or another shot. The existing paused B action returns to the picker.
 
+## When the close-up plays
+
+The Dunk Cam close-up plays for a team's first dunk of each period, for a dunk that would tie the game or take the lead, and for any dunk in the last 30 seconds of a period (`jam_dunk_wants_cam`). Other dunks run the same 64-update simulation on the court, using the court dunk poses. Pressing A during a close-up skips it, and the dunk finishes on the court with the same result. See the [Dunk Cam A/B](../playtests/five-matches.md).
+
 ## Native rendering
 
 The close-up uses deliberately authored 24×56 crew cels with crouch, cock-back, scissoring legs, reach, swinging rim hang and landing. `scripts/dunk-poses.mjs` owns the joint keyframes; `scripts/create-dunk-art.mjs` generates banked data and the manifest in `art/dunks-v3/` (v1 and v2 studies are preserved). Each player has a signature dunk on the shared timeline: MATUS cradle jam, MAGIC windmill, BAMBI two-hand power slam, CHRUX reverse jam, CHOMPA two-hand rim hang, MEAT 360 spin. See [dunk styles](../playtests/dunk-styles.md). Zoom and framing follow the cinematic phase, with entry/exit wipes. Left-basket maps turn the action while precompensating jersey digits.

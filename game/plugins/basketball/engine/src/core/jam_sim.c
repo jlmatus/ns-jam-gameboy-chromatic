@@ -124,6 +124,8 @@ uint8_t jam_shot_chance(const jam_game_t *g,uint8_t who,uint8_t charge) JAM_BANK
         /* Specialists separate from average shooters; deep heaves cost range. */
         chance=12+r->three_point*3+(r->three_point*r->three_point*3)/10;
         if(d>100)chance-=(d-100)/3;
+        /* Past 130 pixels a heave is a gamble, even for specialists. */
+        if(d>JAM_DEEP_RANGE)chance-=(d-JAM_DEEP_RANGE)*3/2;
     /* Close shots use INSIDE; mid-range blends INSIDE and three-point. */
     } else chance=d<48 ? 60+r->dunk*3 : 52+r->dunk+r->three_point;
     if(charge>=18 && charge<=36) chance+=10;

@@ -193,6 +193,46 @@ Summaries come from `analyze.py` and `possession_ends.py`.
 
 **What works:** all five matches ran from tipoff through four quarters, the breaks and the final results pages. Nothing stalled: there were no stuck loose balls, inbounds or held balls.
 
+## Dunk Cam only for big dunks, and deep shots a gamble — follow-up
+
+This addresses items 2 and 6 below.
+
+**Dunk Cam** (`jam_dunk.c`, `basketball.c`):
+- **The close-up plays only for dunks that matter:**
+  - a team's first dunk of each period;
+  - a dunk that would tie the game or take the lead;
+  - any dunk in the last 30 seconds of a period.
+- **Other dunks finish on the court.** It's the same jump, timing, blocks and result, without the close-up ([on-court dunk frames](five-matches/cam-ab/court-dunk.png)).
+- **A skips the close-up.** The dunk finishes on the court, and its result doesn't change.
+
+**Deep shots** (`jam_sim.c`): beyond 130 pixels from the rim, a jump shot loses another 1.5 points per pixel, on top of the existing drop past 100.
+
+| Distance from rim | 100 px | 130 px | 150 px |
+|---|---|---|---|
+| MATUS, timed (Warm-up) | 82% | 72% | 36% (was 66%) |
+| MAGIC, timed | 44% | 34% | 5% |
+
+**New rules test:** MATUS at 100/130/150 pixels; MAGIC at 150; the close-up choice (first of the period, tying or go-ahead, the last 30 seconds, a comfortable lead); and A skipping the close-up mid-dunk.
+
+**A/B on the same seeds:** the previous commit (`9c3ddae`, ROM `7458ef0a…`) against this build (ROM `2f3ad604…`), three seeds per lineup. The script now also counts frames shown in the close-up and every jump shot's distance. Summaries are in `five-matches/cam-ab/`, and `cam_ab.py` tabulates them.
+
+| # | Close-up share of all frames | Close-ups / dunks | Shots from 130+ px made | Previous scores | This build's scores |
+|---|---|---|---|---|---|
+| 1 | 7.7% → 3.9% | 55/55 → 28/61 | 6/10 → 7/16 | 84–28, 69–26, 75–22 | 90–20, 75–28, 68–18 |
+| 2 | 10.7% → 5.4% | 79/79 → 39/82 | 2/7 → 0/6 | 51–40, 68–29, 59–39 | 64–46, 82–17, 48–26 |
+| 3 | 15.0% → 6.2% | 120/120 → 47/113 | 5/16 → 1/17 | 61–39, 68–48, 67–37 | 39–43, 58–22, 43–45 |
+| 4 | 8.4% → 3.5% | 61/61 → 27/54 | 2/6 → 0/4 | 79–26, 80–22, 88–18 | 86–28, 83–14, 82–24 |
+| 5 | 14.1% → 7.5% | 113/113 → 58/115 | 27/61 → 13/57 | 72–64, 58–44, 63–78 | 40–42, 51–36, 47–55 |
+
+**Results:**
+- **Dunk Cam fell from 11.3% to 5.3% of all frames.** 199 of 425 dunks got the close-up (47%). An on-court dunk takes about 90 frames; a close-up about 230.
+- **Matches are about 5% shorter** in real time (866,882 vs 914,836 frames for 15 matches).
+- **Shots from 130+ pixels went from 42 of 100 to 21 of 100.** Opponent MATUS in lineup 5 is most of them: 37 of 68 before, 18 of 61 now.
+- **Winners Stay got closer:** the CPU won two of three in lineup 3 and two of three in lineup 5. Part of this is the script: it doesn't adapt to the new falloff and keeps taking deep shots, and its controlled player changes with each catch. A person would stop heaving.
+- **The script pressed A during 8 close-ups** while doing something else, which skipped them.
+
+**Not refreshed:** the `gN/` folders and `buzzer-b/` still hold the previous build's run.
+
 ## What could be improved, most important first
 
 ### 1. The CPU can't keep the ball, so matches aren't contests

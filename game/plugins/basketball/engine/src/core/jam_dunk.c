@@ -32,6 +32,16 @@ uint8_t jam_dunk_chance(const jam_game_t *g,uint8_t who) JAM_BANKED {
     if(chance>ceiling)chance=ceiling;
     return (uint8_t)chance;
 }
+/* The close-up is for dunks that matter: a team's first of the period, one
+   that can tie or take the lead, or one late in the period. Others play on
+   the court so dunks don't take over the match. */
+uint8_t jam_dunk_wants_cam(const jam_game_t *g,uint8_t who) JAM_BANKED {
+    uint8_t t=who>>1;
+    uint16_t own=g->score[t],other=g->score[t^1];
+    if(!(g->cam_seen&(1u<<t)))return 1;
+    if(own<=other && own+2>=other)return 1;
+    return g->clock_seconds<=JAM_CAM_LATE_SECONDS;
+}
 uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED {
     jam_player_t *p;
     uint8_t i;
@@ -49,6 +59,8 @@ uint8_t jam_try_dunk(jam_game_t *g,uint8_t who) JAM_BANKED {
         if(g->players[i].y<JAM_TOP*4)g->players[i].y=JAM_TOP*4;
         if(g->players[i].y>JAM_BOTTOM*4)g->players[i].y=JAM_BOTTOM*4;
     }
+    g->dunk_cam=jam_dunk_wants_cam(g,who);
+    g->cam_seen|=1u<<(who>>1);
     g->from_x=p->x;g->from_y=p->y;
     g->mode=JAM_DUNK;g->passer=who;g->owner=-1;
     g->shot_team=who>>1;g->shot_points=2;g->shot_good=g->scored=0;
@@ -79,6 +91,8 @@ void jam_dunk_update(jam_game_t *g,uint8_t pressed) JAM_BANKED {
     uint8_t t=++g->dunk_time,i,p=g->passer,travel;
     jam_player_t *a=&g->players[p];
     int16_t end=hoop(p)+(p<2?-32:32),reach;
+    /* A skips the close-up; the dunk finishes on the court. */
+    if(pressed&JAM_A)g->dunk_cam=0;
     for(i=0;i<4;i++){
         g->players[i].vx=g->players[i].vy=0;
         if(g->players[i].block_time)g->players[i].block_time--;

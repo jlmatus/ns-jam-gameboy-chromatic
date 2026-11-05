@@ -30,7 +30,7 @@ static void next_period(jam_game_t *g) {
         g->quarter++;
         g->clock_seconds=JAM_QUARTER_SECONDS;
     }
-    g->clock_fraction=0;g->match_phase=JAM_MATCH_LIVE;
+    g->clock_fraction=0;g->match_phase=JAM_MATCH_LIVE;g->cam_seen=0;
     memset(g->players,0,sizeof(g->players));
     jam_tipoff(g);
     g->ball_x=g->players[next_team*2].x;g->ball_y=g->players[next_team*2].y;

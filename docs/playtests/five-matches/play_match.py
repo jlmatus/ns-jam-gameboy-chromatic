@@ -91,6 +91,10 @@ import os
 TRACE = [] if os.environ.get('JAM_TRACE') else None
 DEBUG_FROM = int(os.environ.get('JAM_DEBUG_FROM', '0'))
 BUZZER_B = bool(os.environ.get('JAM_BUZZER_B'))
+# Builds with selective Dunk Cam expose jam.dunk_cam at offset 257; older builds show every dunk close up.
+CAM_FLAG = bool(os.environ.get('JAM_CAM_FLAG'))
+SHOT_AT = {int(v) for v in os.environ.get('JAM_SHOT_AT', '').split(',') if v}
+cam = {"dunk_frames": 0, "cam_frames": 0, "dunks": [], "shots": []}
 prev = state(); seen_msgs = {}; long_mode = {"mode": None, "since": n, "flagged": False}
 fake_wait = 0; hold_b = 0; swipe_cd = 0; request_cd = 0
 def name_of(i): return NAMES[lineup[i]] if 0 <= i < 4 else "-"
@@ -200,6 +204,17 @@ while n < limit:
         long_mode = {"mode": s["mode"], "since": n, "flagged": False}
     elif not long_mode["flagged"] and n - long_mode["since"] > {0: 1500, 3: 400, 6: 400, 4: 400}.get(s["mode"], 900) and not s["paused"]:
         long_mode["flagged"] = True; log_event("LONG_" + MODES[s["mode"]], s, {"frames": n - long_mode["since"]}); shot("long-" + MODES[s["mode"]].lower())
+    if s["mode"] == 7:
+        on = u8(257) if CAM_FLAG else 1
+        cam["dunk_frames"] += 1; cam["cam_frames"] += 1 if on else 0
+        if prev["mode"] != 7: cam["dunks"].append({"frame": n, "team": 0 if s["passer"] < 2 else 1, "cam": on, "cam_end": on})
+        else: cam["dunks"][-1]["cam_end"] = on
+    if s["mode"] == 2 and prev["mode"] != 2 and 0 <= s["passer"] < 4:
+        x = s["pos"][s["passer"]][0]; d = abs((RIM_R if s["passer"] < 2 else RIM_L) - x) // 4
+        cam["shots"].append({"frame": n, "who": name_of(s["passer"]), "team": 0 if s["passer"] < 2 else 1, "dist": d, "made": 0})
+    if s["score"] != prev["score"] and cam["shots"] and n - cam["shots"][-1]["frame"] < 240:
+        team = 0 if s["score"][0] != prev["score"][0] else 1
+        if cam["shots"][-1]["team"] == team and prev["mode"] in (2, 5): cam["shots"][-1]["made"] = 1
     team_has = None if s["owner"] < 0 else (0 if s["owner"] < 2 else 1)
     if s["mode"] == 0 and team_has is not None and team_has != poss_team:
         if poss_team is not None: possessions.append({"team": poss_team, "start": poss_start, "end": n, "frames": n - poss_start})
@@ -208,6 +223,7 @@ while n < limit:
         samples.append({"frame": n, "mode": s["mode"], "owner": s["owner"], "ctrl": s["ctrl"], "pos": s["pos"], "ball": s["ball"],
                         "turbo": s["turbo"], "clock": s["clock"], "q": s["quarter"], "score": s["score"]})
     if n % 1800 == 0: shot("periodic")
+    if n in SHOT_AT: shot("at")
     if TRACE is not None:  # per-frame camera and bodies, for jitter analysis
         TRACE.append([n, pb.memory[0xFF43], s["mode"], s["owner"], s["ctrl"], *[v for pos in s["pos"] for v in pos], *s["ball"],
                       *[P(i, "stun") for i in range(4)], *[pb.memory[JAM + i * 19 + 17] for i in range(4)], *[pb.memory[JAM + i * 19 + 18] for i in range(4)]])
@@ -223,7 +239,7 @@ tick((), 240); shot("results")
 for k in range(3): tick(["right"], 2); tick((), 60); shot(f"results-page{k+1}")
 summary = {"lineup": [NAMES[i] for i in lineup], "difficulty": ["Warm-up", "Pickup", "Winners Stay"][difficulty],
            "periods": periods, "seed": seed, "frames": n, "final_score": s["score"], "phase": s["phase"], "quarter": s["quarter"],
-           "players": {name_of(i): per[i] for i in range(4)}, "totals": tot}
+           "players": {name_of(i): per[i] for i in range(4)}, "totals": tot, "dunk_cam": cam}
 json.dump(summary, open(out / "summary.json", "w"), indent=1)
 json.dump(events, open(out / "events.json", "w"))
 json.dump(possessions, open(out / "possessions.json", "w"))
