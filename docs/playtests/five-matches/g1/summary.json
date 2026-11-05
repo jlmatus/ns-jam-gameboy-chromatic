@@ -8,70 +8,70 @@
  "difficulty": "Pickup",
  "periods": 4,
  "seed": 11,
- "frames": 55744,
+ "frames": 59602,
  "final_score": [
-  52,
-  48
+  91,
+  20
  ],
  "phase": 3,
  "quarter": 4,
  "players": {
   "MATUS": {
-   "points": 42,
-   "field_made": 15,
-   "field_attempted": 35,
-   "three_made": 12,
-   "three_attempted": 22,
+   "points": 82,
+   "field_made": 34,
+   "field_attempted": 50,
+   "three_made": 14,
+   "three_attempted": 20,
    "rebounds": 12,
-   "steals": 19,
-   "blocks": 1,
-   "dunks": 0
+   "steals": 26,
+   "blocks": 2,
+   "dunks": 2
   },
   "MAGIC": {
-   "points": 10,
-   "field_made": 5,
-   "field_attempted": 18,
-   "three_made": 0,
-   "three_attempted": 11,
-   "rebounds": 2,
-   "steals": 1,
-   "blocks": 11,
-   "dunks": 3
+   "points": 9,
+   "field_made": 4,
+   "field_attempted": 10,
+   "three_made": 1,
+   "three_attempted": 5,
+   "rebounds": 6,
+   "steals": 4,
+   "blocks": 14,
+   "dunks": 2
   },
   "BAMBI": {
-   "points": 20,
-   "field_made": 10,
-   "field_attempted": 15,
+   "points": 18,
+   "field_made": 9,
+   "field_attempted": 27,
    "three_made": 0,
    "three_attempted": 0,
-   "rebounds": 20,
-   "steals": 5,
-   "blocks": 4,
-   "dunks": 1
+   "rebounds": 24,
+   "steals": 4,
+   "blocks": 3,
+   "dunks": 4
   },
   "CHRUX": {
-   "points": 28,
-   "field_made": 14,
-   "field_attempted": 25,
+   "points": 2,
+   "field_made": 1,
+   "field_attempted": 6,
    "three_made": 0,
    "three_attempted": 0,
-   "rebounds": 15,
-   "steals": 0,
-   "blocks": 5,
-   "dunks": 2
+   "rebounds": 3,
+   "steals": 1,
+   "blocks": 0,
+   "dunks": 0
   }
  },
  "totals": {
-  "passes": 117,
-  "steals": 25,
+  "passes": 90,
+  "steals": 35,
   "shots": 93,
-  "rebounds": 49,
-  "baskets": 44,
-  "blocks": 21,
-  "steal_attempts": 109,
-  "shoves": 5,
-  "runovers": 62,
-  "dunk_attempts": 13,
-  "dunks": 6
+  "rebounds": 45,
+  "baskets": 48,
+  "blocks": 19,
+  "steal_attempts": 121,
+  "shoves": 15,
+  "runovers": 40,
+  "dunk_attempts": 20,
+  "dunks": 8
  }
 }

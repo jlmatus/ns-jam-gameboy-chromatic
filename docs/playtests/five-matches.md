@@ -137,6 +137,49 @@ Every match is four three-minute quarters. Seeds make each match reproducible.
 - **Match 3 still has many blocks** (49): MAGIC and CHOMPA are the CPU's two best blockers, and dunk blocks are unchanged.
 - **Dunk Cam takes 6–17% of play.**
 
+## Body contact: held up, never pushed out — follow-up
+
+**What you noticed:** BAMBI pushes you toward the lines.
+
+**Confirmed in a rules experiment:** you (MATUS) drive right along the upper half of the court with one CPU defender in front.
+- With BAMBI or CHOMPA defending, you ended up out of bounds in 32 of 32 runs, pushed up to 20 pixels toward the top sideline.
+- With CHRUX or MEAT defending, you were pushed 0 times.
+
+**Cause:**
+1. When two bodies overlap, the weaker one moves. Strength is power plus build, and BAMBI is the strongest player.
+2. The move was almost always sideways, even when you ran straight into the defender.
+3. CPU defenders sit slightly below the carrier, so the push usually went up.
+4. Nothing stopped a push or knockback at the line.
+
+**Changes** (`jam_contact.c`):
+- **Separation follows the shallower overlap,** up to 2 pixels per update. Running into a stronger defender now stops you ("BODY HELD GROUND") instead of sliding you.
+- **Separation never moves a player from the court across a line.** If the weaker body has no room, the stronger one gives way.
+- **Shove and runover knockbacks** (`jam_knockback_step`) stop at the line.
+- **Unchanged:** BAMBI still wins contact, through his turbo runover and his shove.
+
+**New rules test:** driving into BAMBI or CHOMPA, in mid-court and beside the sideline:
+- you stay on the court;
+- you're held within 4 pixels of your lane;
+- a knockback toward the line stops at it.
+
+**A/B on the same seeds:** the previous commit (`ecfd61f`) against this build (ROM `7458ef0a…a8e7`), three seeds per lineup. Summaries are in `five-matches/contact-ab/`.
+
+| # | Level | Lineup | Previous build | This build | Out-of-bounds calls (3 matches) |
+|---|---|---|---|---|---|
+| 1 | Pickup | MATUS+MAGIC vs BAMBI+CHRUX | 48–50, 77–38, 74–36 | 84–28, 69–26, 75–22 | 2 → 0 |
+| 2 | Pickup | BAMBI+CHOMPA vs MEAT+MATUS | 51–62, 40–64, 62–59 | 51–40, 68–29, 59–39 | 2 → 5 |
+| 3 | Winners Stay | CHRUX+MEAT vs MAGIC+CHOMPA | 57–36, 68–15, 55–26 | 61–39, 68–48, 67–37 | 5 → 1 |
+| 4 | Warm-up | CHOMPA+MATUS vs CHRUX+BAMBI | 80–14, 93–14, 110–20 | 79–26, 80–22, 88–18 | 40 → 2 |
+| 5 | Winners Stay | MEAT+BAMBI vs MATUS+MAGIC | 52–47, 51–53, 65–50 | 72–64, 58–44, 63–78 | 2 → 0 |
+
+**Results:**
+- **Out-of-bounds calls fell from 51 to 8** across the 15 matches.
+- **Against a CPU BAMBI** (lineup 1), the CPU now scores less, because pushing you out had been part of its "defense".
+- **Lineups 2 and 3 moved in opposite directions.**
+- **Winners Stay is still close,** and the CPU won one.
+
+**Shake check:** the `gN/` folders and `buzzer-b/` hold this build's single-seed run. The buzzer case still completes all four quarters.
+
 The rest of this page is the original analysis of the first run.
 
 Each `five-matches/gN/` folder (now holding the after-fix run) contains:

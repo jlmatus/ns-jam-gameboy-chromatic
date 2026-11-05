@@ -8,70 +8,70 @@
  "difficulty": "Warm-up",
  "periods": 4,
  "seed": 44,
- "frames": 62893,
+ "frames": 58703,
  "final_score": [
-  107,
-  14
+  97,
+  28
  ],
  "phase": 3,
  "quarter": 4,
  "players": {
   "CHOMPA": {
-   "points": 51,
-   "field_made": 22,
-   "field_attempted": 36,
-   "three_made": 7,
-   "three_attempted": 15,
+   "points": 40,
+   "field_made": 18,
+   "field_attempted": 30,
+   "three_made": 4,
+   "three_attempted": 8,
    "rebounds": 7,
-   "steals": 21,
-   "blocks": 2,
-   "dunks": 10
+   "steals": 9,
+   "blocks": 5,
+   "dunks": 3
   },
   "MATUS": {
-   "points": 56,
+   "points": 57,
    "field_made": 22,
-   "field_attempted": 35,
-   "three_made": 12,
-   "three_attempted": 20,
-   "rebounds": 3,
-   "steals": 15,
+   "field_attempted": 32,
+   "three_made": 13,
+   "three_attempted": 19,
+   "rebounds": 5,
+   "steals": 12,
    "blocks": 0,
-   "dunks": 5
+   "dunks": 3
   },
   "CHRUX": {
-   "points": 10,
-   "field_made": 5,
-   "field_attempted": 8,
+   "points": 28,
+   "field_made": 14,
+   "field_attempted": 25,
    "three_made": 0,
    "three_attempted": 0,
-   "rebounds": 18,
+   "rebounds": 19,
    "steals": 1,
    "blocks": 3,
    "dunks": 2
   },
   "BAMBI": {
-   "points": 4,
-   "field_made": 2,
-   "field_attempted": 4,
+   "points": 0,
+   "field_made": 0,
+   "field_attempted": 2,
    "three_made": 0,
    "three_attempted": 0,
    "rebounds": 4,
    "steals": 0,
-   "blocks": 2,
-   "dunks": 1
+   "blocks": 0,
+   "dunks": 0
   }
  },
  "totals": {
-  "passes": 130,
-  "steals": 37,
-  "shots": 83,
-  "rebounds": 32,
-  "baskets": 51,
-  "blocks": 7,
-  "steal_attempts": 101,
-  "shoves": 17,
-  "runovers": 68,
-  "dunk_attempts": 24,
-  "dunks": 18
+  "passes": 120,
+  "steals": 22,
+  "shots": 89,
+  "rebounds": 35,
+  "baskets": 54,
+  "blocks": 8,
+  "steal_attempts": 66,
+  "shoves": 19,
+  "runovers": 60,
+  "dunk_attempts": 16,
+  "dunks": 8
  }
 }

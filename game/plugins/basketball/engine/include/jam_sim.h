@@ -190,6 +190,7 @@ uint8_t jam_cpu_carrier(jam_game_t *g,uint8_t p,int16_t *tx,int16_t *ty) JAM_BAN
 uint8_t jam_cpu_rim_lane(const jam_game_t *g,uint8_t p) JAM_BANKED;
 uint8_t jam_cpu_shot_choice(jam_game_t *g,uint8_t p) JAM_BANKED;
 uint8_t jam_cpu_attack_rim(jam_game_t *g,uint8_t p) JAM_BANKED;
+void jam_knockback_step(jam_game_t *g,uint8_t i) JAM_BANKED;
 int16_t jam_dunk_view_x(const jam_game_t *g,int16_t world_x,int16_t avatar_q8) JAM_BANKED;
 int16_t jam_dunk_view_y(const jam_game_t *g,int16_t world_y,uint8_t height) JAM_BANKED;
 /* Each caller uses its own ROM-bank-local constant table. */

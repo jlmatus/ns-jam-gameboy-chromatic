@@ -1,0 +1,77 @@
+{
+ "lineup": [
+  "CHOMPA",
+  "MATUS",
+  "CHRUX",
+  "BAMBI"
+ ],
+ "difficulty": "Warm-up",
+ "periods": 4,
+ "seed": 101,
+ "frames": 59174,
+ "final_score": [
+  79,
+  26
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "CHOMPA": {
+   "points": 45,
+   "field_made": 21,
+   "field_attempted": 26,
+   "three_made": 3,
+   "three_attempted": 4,
+   "rebounds": 7,
+   "steals": 11,
+   "blocks": 6,
+   "dunks": 9
+  },
+  "MATUS": {
+   "points": 34,
+   "field_made": 13,
+   "field_attempted": 27,
+   "three_made": 8,
+   "three_attempted": 15,
+   "rebounds": 10,
+   "steals": 10,
+   "blocks": 0,
+   "dunks": 3
+  },
+  "CHRUX": {
+   "points": 24,
+   "field_made": 12,
+   "field_attempted": 28,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 15,
+   "steals": 4,
+   "blocks": 4,
+   "dunks": 2
+  },
+  "BAMBI": {
+   "points": 2,
+   "field_made": 1,
+   "field_attempted": 5,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 7,
+   "steals": 0,
+   "blocks": 1,
+   "dunks": 1
+  }
+ },
+ "totals": {
+  "passes": 109,
+  "steals": 25,
+  "shots": 86,
+  "rebounds": 39,
+  "baskets": 47,
+  "blocks": 11,
+  "steal_attempts": 88,
+  "shoves": 7,
+  "runovers": 56,
+  "dunk_attempts": 24,
+  "dunks": 15
+ }
+}

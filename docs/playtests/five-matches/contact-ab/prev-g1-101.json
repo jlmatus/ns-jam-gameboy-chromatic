@@ -1,0 +1,77 @@
+{
+ "lineup": [
+  "MATUS",
+  "MAGIC",
+  "BAMBI",
+  "CHRUX"
+ ],
+ "difficulty": "Pickup",
+ "periods": 4,
+ "seed": 101,
+ "frames": 58146,
+ "final_score": [
+  48,
+  50
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "MATUS": {
+   "points": 34,
+   "field_made": 13,
+   "field_attempted": 23,
+   "three_made": 8,
+   "three_attempted": 13,
+   "rebounds": 6,
+   "steals": 10,
+   "blocks": 1,
+   "dunks": 2
+  },
+  "MAGIC": {
+   "points": 14,
+   "field_made": 7,
+   "field_attempted": 27,
+   "three_made": 0,
+   "three_attempted": 12,
+   "rebounds": 12,
+   "steals": 4,
+   "blocks": 6,
+   "dunks": 4
+  },
+  "BAMBI": {
+   "points": 16,
+   "field_made": 8,
+   "field_attempted": 14,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 11,
+   "steals": 6,
+   "blocks": 4,
+   "dunks": 2
+  },
+  "CHRUX": {
+   "points": 34,
+   "field_made": 17,
+   "field_attempted": 31,
+   "three_made": 0,
+   "three_attempted": 0,
+   "rebounds": 19,
+   "steals": 6,
+   "blocks": 1,
+   "dunks": 4
+  }
+ },
+ "totals": {
+  "passes": 139,
+  "steals": 26,
+  "shots": 95,
+  "rebounds": 48,
+  "baskets": 45,
+  "blocks": 12,
+  "steal_attempts": 105,
+  "shoves": 6,
+  "runovers": 56,
+  "dunk_attempts": 24,
+  "dunks": 12
+ }
+}

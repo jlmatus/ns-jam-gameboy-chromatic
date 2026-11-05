@@ -87,13 +87,34 @@ void jam_contact(jam_game_t *g,uint8_t i,uint8_t j) JAM_BANKED {
             }
         }
     }
-    /* Resolve overlap gradually. The old eight-pixel teleport defeated swipes. */
+    /* Resolve overlap gradually along the shallower axis, so running into a
+       stronger body stops you instead of sliding you sideways toward a line.
+       The old eight-pixel teleport defeated swipes; 2 pixels per update
+       matches top running speed. Nobody is pushed off the court: if the
+       weaker body has no room, the stronger one gives way instead. */
     yield=strength(g,i)>=strength(g,j)?j:i;hold=yield==i?j:i;
-    if(dy>4 || dx<8) {
-        amount=depth-dy;if(amount>4)amount=4;
-        g->players[yield].y+=g->players[yield].y<g->players[hold].y?-(int8_t)amount:amount;
-    } else {
-        amount=radius-dx;if(amount>4)amount=4;
-        g->players[yield].x+=g->players[yield].x<g->players[hold].x?-(int8_t)amount:amount;
+    {
+        jam_player_t *y=&g->players[yield],*h=&g->players[hold];
+        int16_t mx=0,my=0;
+        if(radius-dx<depth-dy) {
+            amount=radius-dx;if(amount>8)amount=8;
+            mx=y->x<h->x?-(int16_t)amount:amount;
+        } else {
+            amount=depth-dy;if(amount>8)amount=8;
+            my=y->y<h->y?-(int16_t)amount:amount;
+        }
+        if(!jam_court_contains(y->x+mx,y->y+my) && jam_court_contains(y->x,y->y)) {
+            if(jam_court_contains(h->x-mx,h->y-my) || !jam_court_contains(h->x,h->y)){h->x-=mx;h->y-=my;}
+        } else {y->x+=mx;y->y+=my;}
     }
+}
+/* One update of a shove/runover knockback. A knockback never carries a
+   player from the court across a line; it stops at the edge instead. */
+void jam_knockback_step(jam_game_t *g,uint8_t i) JAM_BANKED {
+    jam_player_t *a=&g->players[i];
+    if(jam_court_contains(a->x,a->y) && !jam_court_contains(a->x+a->push_x,a->y+a->push_y))
+        a->push_x=a->push_y=0;
+    a->x+=a->push_x;a->y+=a->push_y;
+    if(a->push_x)a->push_x+=a->push_x<0?1:-1;
+    if(a->push_y)a->push_y+=a->push_y<0?1:-1;
 }

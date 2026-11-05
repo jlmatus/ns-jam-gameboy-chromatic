@@ -402,12 +402,7 @@ void jam_update(jam_game_t *g,uint8_t input) JAM_BANKED {
         a->vx=a->vy=0;a->turbo=0;
         if(a->contact_cooldown)a->contact_cooldown--;
         if(a->reach_time)a->reach_time--;
-        if(a->stun) {
-            a->x+=a->push_x;a->y+=a->push_y;
-            if(a->push_x)a->push_x+=a->push_x<0?1:-1;
-            if(a->push_y)a->push_y+=a->push_y<0?1:-1;
-            a->stun--;
-        }
+        if(a->stun){jam_knockback_step(g,i);a->stun--;}
         if(g->players[i].cooldown) g->players[i].cooldown--;
         if(g->players[i].action) g->players[i].action--;
         if(g->players[i].block_time) g->players[i].block_time--;

@@ -1338,6 +1338,36 @@ static void jump_shot_blocks(void) {
     assert(front>110 && front<170 && !behind && !far);
     printf("PASS: jump-shot blocks; MAGIC in front %u/256, behind %u, out of reach %u\n",front,behind,far);
 }
+/* Body contact: driving into a stronger defender (BAMBI, CHOMPA) holds you
+   up instead of sliding you sideways, and contact never pushes anyone off
+   the court, even from right beside a sideline. */
+static void contact_holds_not_pushes(void) {
+    static const uint8_t strong[2]={2,4};
+    jam_game_t g;uint16_t seed;uint8_t k,t;
+    for(k=0;k<2;k++)for(seed=1;seed<=32;seed++) {
+        jam_setup_t s={{0,1,2,3},JAM_PICKUP,4};int16_t y0,lane;
+        s.roster[2]=strong[k];s.roster[3]=strong[k]==2?3:2;
+        for(lane=0;lane<2;lane++) {
+            assert(jam_init_lineup(&g,&s));
+            g.owner=0;g.controlled=0;g.mode=JAM_HELD;g.grace=255;g.possession_time=60;g.rng=seed;
+            g.players[0].x=120*4;g.players[0].y=(lane?44:60)*4;y0=g.players[0].y;
+            g.players[2].x=150*4;g.players[2].y=(lane?50:66)*4;g.players[2].cooldown=255;
+            g.players[1].x=60*4;g.players[1].y=110*4;g.players[3].x=60*4;g.players[3].y=120*4;g.players[3].cooldown=255;
+            for(t=0;t<90 && g.mode==JAM_HELD && g.owner==0;t++) {
+                jam_update(&g,JAM_MOVE_RIGHT);
+                assert(jam_court_contains(g.players[0].x,g.players[0].y));
+            }
+            assert(g.message!=JAM_MSG_OUT);
+            /* Held up: not slid more than 4 pixels toward a line. */
+            assert(y0-g.players[0].y<=16 && g.players[0].y-y0<=16);
+        }
+    }
+    /* A knockback stops at the line instead of carrying a player out. */
+    jam_init(&g);g.players[0].x=150*4;g.players[0].y=43*4;g.players[0].stun=10;g.players[0].push_x=0;g.players[0].push_y=-8;
+    g.mode=JAM_HELD;g.owner=1;g.grace=255;
+    step(&g,10,0);assert(jam_court_contains(g.players[0].x,g.players[0].y));
+    puts("PASS: driving into BAMBI/CHOMPA holds the carrier; contact never pushes a carrier out, even beside the sideline; knockbacks stop at the line");
+}
 int main(void) {
     court_edges();
     boundary_violations();
@@ -1355,6 +1385,7 @@ int main(void) {
     cpu_ball_security();
     cpu_shot_choice();
     jump_shot_blocks();
+    contact_holds_not_pushes();
     shooting_motion();
     pump_fake_and_travel();
     shooting_accuracy();

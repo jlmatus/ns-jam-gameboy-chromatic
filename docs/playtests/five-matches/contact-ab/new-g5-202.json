@@ -1,0 +1,77 @@
+{
+ "lineup": [
+  "MEAT",
+  "BAMBI",
+  "MATUS",
+  "MAGIC"
+ ],
+ "difficulty": "Winners Stay",
+ "periods": 4,
+ "seed": 202,
+ "frames": 61920,
+ "final_score": [
+  58,
+  44
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "MEAT": {
+   "points": 41,
+   "field_made": 20,
+   "field_attempted": 46,
+   "three_made": 1,
+   "three_attempted": 9,
+   "rebounds": 26,
+   "steals": 22,
+   "blocks": 6,
+   "dunks": 9
+  },
+  "BAMBI": {
+   "points": 17,
+   "field_made": 8,
+   "field_attempted": 35,
+   "three_made": 1,
+   "three_attempted": 11,
+   "rebounds": 13,
+   "steals": 10,
+   "blocks": 1,
+   "dunks": 6
+  },
+  "MATUS": {
+   "points": 42,
+   "field_made": 15,
+   "field_attempted": 30,
+   "three_made": 12,
+   "three_attempted": 20,
+   "rebounds": 21,
+   "steals": 12,
+   "blocks": 3,
+   "dunks": 0
+  },
+  "MAGIC": {
+   "points": 2,
+   "field_made": 1,
+   "field_attempted": 6,
+   "three_made": 0,
+   "three_attempted": 2,
+   "rebounds": 12,
+   "steals": 2,
+   "blocks": 28,
+   "dunks": 0
+  }
+ },
+ "totals": {
+  "passes": 94,
+  "steals": 46,
+  "shots": 117,
+  "rebounds": 72,
+  "baskets": 44,
+  "blocks": 38,
+  "steal_attempts": 124,
+  "shoves": 14,
+  "runovers": 23,
+  "dunk_attempts": 35,
+  "dunks": 15
+ }
+}

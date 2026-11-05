@@ -1,0 +1,77 @@
+{
+ "lineup": [
+  "CHRUX",
+  "MEAT",
+  "MAGIC",
+  "CHOMPA"
+ ],
+ "difficulty": "Winners Stay",
+ "periods": 4,
+ "seed": 202,
+ "frames": 65388,
+ "final_score": [
+  68,
+  48
+ ],
+ "phase": 3,
+ "quarter": 4,
+ "players": {
+  "CHRUX": {
+   "points": 35,
+   "field_made": 17,
+   "field_attempted": 43,
+   "three_made": 1,
+   "three_attempted": 10,
+   "rebounds": 20,
+   "steals": 26,
+   "blocks": 3,
+   "dunks": 11
+  },
+  "MEAT": {
+   "points": 33,
+   "field_made": 16,
+   "field_attempted": 34,
+   "three_made": 1,
+   "three_attempted": 3,
+   "rebounds": 17,
+   "steals": 10,
+   "blocks": 6,
+   "dunks": 9
+  },
+  "MAGIC": {
+   "points": 30,
+   "field_made": 14,
+   "field_attempted": 19,
+   "three_made": 2,
+   "three_attempted": 3,
+   "rebounds": 15,
+   "steals": 10,
+   "blocks": 18,
+   "dunks": 1
+  },
+  "CHOMPA": {
+   "points": 18,
+   "field_made": 6,
+   "field_attempted": 17,
+   "three_made": 6,
+   "three_attempted": 12,
+   "rebounds": 7,
+   "steals": 8,
+   "blocks": 8,
+   "dunks": 0
+  }
+ },
+ "totals": {
+  "passes": 129,
+  "steals": 54,
+  "shots": 113,
+  "rebounds": 59,
+  "baskets": 53,
+  "blocks": 35,
+  "steal_attempts": 112,
+  "shoves": 3,
+  "runovers": 40,
+  "dunk_attempts": 43,
+  "dunks": 21
+ }
+}
